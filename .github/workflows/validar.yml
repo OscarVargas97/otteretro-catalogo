@@ -1,0 +1,23 @@
+name: Validar el catálogo
+
+on:
+  pull_request:
+
+jobs:
+  validar:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Pruebas
+        run: dotnet test
+
+      - name: Revisar lo publicado
+        run: dotnet run --project src/Otteretro -- catalogo validar catalogo
+
+      - name: Compila
+        run: dotnet run --project src/Otteretro -- catalogo compilar catalogo salida/catalogo.db.gz

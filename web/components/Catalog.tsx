@@ -69,18 +69,15 @@ export function GameTile({ game }: { game: GameCard }) {
   const t = useTranslations("catalog");
   const id = Number(game.id);
   return (
-    <Link className={`ot-game${game.owned ? "" : " is-missing"}${game.platforms.length === 0 ? " is-unplayable" : ""}`} href={`/game/?id=${id}`} style={{ textDecoration: "none", color: "var(--ink)" }}>
+    <Link className={`ot-game${game.platforms.length === 0 ? " is-unplayable" : ""}`} href={`/game/?id=${id}`} style={{ textDecoration: "none", color: "var(--ink)" }}>
       <Cover gameId={id} name={game.name} hasCover={game.hasCover} platform={game.platforms[0]} />
       <p className="ot-game-name" title={game.name}>{game.name}</p>
       <div className="ot-game-meta">
         <Platforms ids={game.platforms} />
         {game.year && <span>{game.year}</span>}
-        {game.stores.length > 0 && <span>{game.stores.map((s) => t(`store.${s as "steam"}`)).join(" · ")}</span>}
-        {Number(game.playtime) > 0 && <span>{hours(game.playtime)}</span>}
       </div>
       <div className="ot-game-badges">
-        {game.platforms.length === 0 ? <span className="ot-badge">{t("noConsole")}</span> : game.owned ? <span className="ot-badge ot-badge-have">{t("owned")}</span> : <span className="ot-badge">{t("missing")}</span>}
-        {game.status && game.status !== "pending" && <span className="ot-badge ot-badge-info">{t(`status.${game.status as "playing"}`)}</span>}
+        {game.platforms.length === 0 && <span className="ot-badge">{t("noConsole")}</span>}
       </div>
     </Link>
   );
@@ -110,16 +107,12 @@ export function SagaTile({ saga }: { saga: SagaCard }) {
         {/* Insignias (#170): ★, Icónica y Exclusiva de la empresa. La fila está siempre, así todas las tarjetas miden lo mismo. */}
         <div className="ot-saga-badges">
           {id === 0 && <span className="ot-badge">{t("noSaga")}</span>}
-          {saga.favorite && <span className="ot-badge ot-fav">★ {t("favorite")}</span>}
           {saga.iconic && <span className="ot-badge ot-badge-iconic">{t("iconic")}</span>}
           {saga.exclusive && <span className="ot-badge ot-badge-info">{t("exclusiveOf", { company: saga.exclusive })}</span>}
-          {saga.following && <span className="ot-badge">{t("following")}</span>}
         </div>
         <div className="ot-saga-stats">
           <span>{t("games", { count: Number(saga.games) })}</span>
-          {Number(saga.playtime) > 0 && <span>{hours(saga.playtime)}</span>}
         </div>
-        <Progress done={Number(saga.owned)} total={Number(saga.games)} label={t("ownedCount", { count: Number(saga.owned) })} />
         <div className="chips" style={{ gap: 4 }}><Platforms ids={saga.platforms} /></div>
       </div>
     </Link>

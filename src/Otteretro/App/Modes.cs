@@ -51,8 +51,10 @@ public static class CliMode
             [--consola X]          una consola (snes, n64, switch, ps2…),
             [--saga X]             una saga (zelda, half-life…; PC se carga así)
             [--pc-populares]       o los 1.500 juegos de PC más calificados. Lo hace la app abierta.
-          catalogo exportar <archivo>  Escribe el catálogo comprimido, sin correcciones ni reglas de Claude.
           catalogo importar <base>     Trae una copia de un catalogo.db a este catálogo vacío.
+          catalogo publicar <carpeta>  Escribe el catálogo como un JSON por saga.
+          catalogo validar <carpeta>   Revisa lo publicado (corre en cada PR).
+          catalogo compilar <carpeta> <archivo>  Genera la base que baja la app y su manifiesto.
           catalogo depurar       Claude revisa las sagas dudosas del catálogo (repetidos, juegos que no son de la saga,
                                  sueltos que sí lo son) de noche y aplica los cambios solo; lo hace la app abierta.
             [--contar]             Solo cuenta los casos y estima el gasto, sin llamar a Claude.
@@ -101,16 +103,26 @@ public static class CliMode
             case ["catalogo", "importar", var from]:
                 return WithData(output, db => output.WriteLine(Catalog.InitialCatalog.Import(db, Path.GetFullPath(from))
                     ? "Catálogo importado." : "Este catálogo ya tiene juegos: no se tocó."));
-            case ["catalogo", "exportar", var file]:
-                // Solo lee el catálogo: no hace falta poner al día la base propia.
-                if (AppConfig.Load(AppConfig.DefaultPath).DataFolder is not { } folder || !DataFolder.IsReady(folder))
+            case ["catalogo", "publicar", var folder]:
+                return WithData(output, db =>
                 {
-                    output.WriteLine("Todavía no hay carpeta de datos: abre la app y elige una.");
-                    return 1;
-                }
-                Catalog.InitialCatalog.Export(DataFolder.Open(folder), Path.GetFullPath(file));
-                output.WriteLine($"Listo: {file}");
+                    Catalog.Published.Write(db, Path.GetFullPath(folder));
+                    output.WriteLine($"Publicado en {folder}");
+                });
+            case ["catalogo", "validar", var folder]:
+            {
+                var errors = Catalog.Published.Validate(Path.GetFullPath(folder));
+                foreach (var error in errors) output.WriteLine(error);
+                output.WriteLine(errors.Count == 0 ? "Sin errores." : $"{errors.Count} errores.");
+                return errors.Count == 0 ? 0 : 1;
+            }
+            case ["catalogo", "compilar", var folder, var file]:
+            {
+                var manifest = Catalog.Published.Compile(Path.GetFullPath(folder), Path.GetFullPath(file));
+                File.WriteAllText(Path.GetFullPath(file) + ".json", System.Text.Json.JsonSerializer.Serialize(manifest, System.Text.Json.JsonSerializerOptions.Web));
+                output.WriteLine($"{manifest.Sagas} sagas, {manifest.Games} juegos, {manifest.Versions} versiones. SHA-256: {manifest.Sha256}");
                 return 0;
+            }
             case ["catalogo", "depurar", "--contar"]:
                 return WithData(output, db =>
                 {

@@ -4,7 +4,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Suspense, useState } from "react";
-import { Cover, Progress, ShortPlatforms, useConsoleName, useConsoles, useIdParam } from "@/components/Catalog";
+import { Cover, ShortPlatforms, useConsoleName, useConsoles, useIdParam } from "@/components/Catalog";
 import { Tabs } from "@/components/Tabs";
 import { useHeroArt } from "@/components/HeroArt";
 import { Empty } from "@/components/Shell";
@@ -34,14 +34,6 @@ function Saga() {
   // La tabla sigue por tramos al bajar (#177): «Emulación» tiene miles de juegos; la ficha trae los primeros 60.
   const hero = useHeroArt(saga.data?.heroGameId == null ? null : Number(saga.data.heroGameId));
   const more = usePaged(["saga", id, "games"], (offset) => `/api/sagas/${id}/games?offset=${offset}`, (p: GamePage) => ({ items: p.items, total: Number(p.total) }), id !== null);
-  const flags = useMutation({
-    mutationFn: (body: { favorite?: boolean; following?: boolean }) => request<SagaDetail>(`/api/sagas/${id}`, { method: "PUT", body: JSON.stringify(body) }),
-    ...optimistic(cache, ["saga", id], (d: SagaDetail, body: { favorite?: boolean; following?: boolean }) => ({ ...d, saga: { ...d.saga, ...body } })),
-    onSuccess: (data) => {
-      cache.setQueryData(["saga", id], data);
-      cache.invalidateQueries({ queryKey: ["sagas"] });
-    },
-  });
 
   if (id === null) return <div className="content"><Empty title={t("saga.noneTitle")} text={t("saga.noneText")}><Link className="ot-btn ot-btn-primary" href="/sagas/">{t("goToSagas")}</Link></Empty></div>;
   if (saga.isError) return <div className="content"><p className="error" role="alert">{describe(saga.error)}</p><Link href="/sagas/">{t("saga.back")}</Link></div>;
@@ -58,14 +50,13 @@ function Saga() {
       <section className="hero">
         {hero.art}
         <div className="hero-main">
-          <span className="small muted">{[...companies, span, t("games", { count: Number(s.games) }), t("ownedCount", { count: Number(s.owned) })].filter(Boolean).join(" · ")}</span>
+          <span className="small muted">{[...companies, span, t("games", { count: Number(s.games) })].filter(Boolean).join(" · ")}</span>
           <h2 className="hero-title">{emulation ? t("emulation") : s.name}</h2>
           {!emulation && (
             <div className="hero-actions">
               <MoreActions sagaId={String(s.id)} />
             </div>
           )}
-          {flags.error && <p className="error small" role="alert">{describe(flags.error)}</p>}
         </div>
       </section>
       <div className="content">
@@ -83,8 +74,7 @@ function Saga() {
                     <td><span className="chips" style={{ gap: 4, flexWrap: "nowrap" }}><ShortPlatforms ids={g.platforms} /></span></td>
                     <td>
                       <span className="chips" style={{ gap: 4 }}>
-                        {g.platforms.length === 0 ? <span className="ot-badge">{t("noConsole")}</span> : g.owned ? <span className="ot-badge ot-badge-have">{t("owned")}</span> : <span className="ot-badge">{t("missing")}</span>}
-                        {g.status && g.status !== "pending" && <span className="ot-badge ot-badge-info">{t(`status.${g.status as "playing"}`)}</span>}
+                        {g.platforms.length === 0 && <span className="ot-badge">{t("noConsole")}</span>}
                       </span>
                     </td>
                   </tr>
@@ -134,39 +124,27 @@ function Routes({ sagaId }: { sagaId: string }) {
   const consoleName = useConsoleName();
   const cache = useQueryClient();
   const routes = useQuery(routesQuery(sagaId));
-  const choose = useMutation({
-    mutationFn: (routeId: number | null) => request<RoutesPage>(`/api/sagas/${sagaId}/route`, { method: "PUT", body: JSON.stringify({ routeId }) }),
-    ...optimistic(cache, ["saga", sagaId, "routes"], (d: RoutesPage, routeId: number | null) => ({ ...d, chosenRoute: routeId })),
-    onSuccess: (data) => {
-      cache.setQueryData(["saga", sagaId, "routes"], data);
-      cache.invalidateQueries({ queryKey: ["saga", sagaId] });
-      cache.invalidateQueries({ queryKey: ["home"] });
-    },
-  });
+  const [picked, setPicked] = useState<string | null>(null);
 
   if (!routes.data) return routes.isError ? <p className="error" role="alert">{describe(routes.error)}</p> : null;
   const list = routes.data.routes;
-  const chosen = list.find((r) => String(r.id) === String(routes.data.chosenRoute)) ?? list.find((r) => r.kind === "community") ?? list[0];
+  const chosen = list.find((r) => String(r.id) === picked) ?? list.find((r) => r.kind === "community") ?? list[0];
   if (!chosen) return <section className="sec"><div className="sec-h"><h2>{t("saga.route")}</h2></div><p className="small muted">{t("saga.noRoutes")}</p></section>;
 
-  const done = chosen.steps.filter((s) => DONE.includes(s.status ?? "")).length;
   return (
     <section className="sec">
       <div className="sec-h route-head">
         <h2>{t("saga.route")}</h2>
         <div className="route-tabs">
           <Tabs tabs={list.map((r) => ({ id: String(r.id), label: t(`route.${r.kind as "release"}`) }))} current={String(chosen.id)}
-            onSelect={(rid) => choose.mutate(Number(rid))} label={t("saga.route")} panel="route-panel" />
+            onSelect={(rid) => setPicked(rid)} label={t("saga.route")} panel="route-panel" />
         </div>
-        <div className="route-progress"><Progress done={done} total={chosen.steps.length} label={t("saga.progressLabel", { done, total: chosen.steps.length })} /></div>
       </div>
-      {choose.error && <span className="error small" role="alert">{describe(choose.error)}</span>}
       <div id="route-panel" role="tabpanel" aria-labelledby={`tab-${chosen.id}`} className="sec">
         <ol className="timeline">
           {chosen.steps.map((s) => {
-            const played = DONE.includes(s.status ?? "");
             return (
-              <li key={s.position} className={played ? "is-played" : undefined}>
+              <li key={s.position}>
                 <Link href={`/game/?id=${s.gameId}`} className="step-link">
                   <span className="step-cover">
                     <Cover gameId={s.gameId} name={s.name} hasCover={s.hasCover} platform={s.versionPlatform} />
@@ -174,11 +152,6 @@ function Routes({ sagaId }: { sagaId: string }) {
                   </span>
                   <p className="ot-game-name" title={s.name}><span className="sr-only">{Number(s.position)}. </span>{s.name}</p>
                 </Link>
-                <span className="chips" style={{ gap: 4 }}>
-                  {played ? <span className="ot-badge ot-badge-have">{t(`status.${s.status as "finished"}`)}</span>
-                    : s.status && s.status !== "pending" ? <span className="ot-badge ot-badge-info">{t(`status.${s.status as "playing"}`)}</span> : null}
-                  {s.owned ? <span className="ot-badge ot-badge-have">{t("owned")}</span> : <span className="ot-badge">{t("missing")}</span>}
-                </span>
                 {s.versionPlatform && <p className="small" style={{ margin: "4px 0 0" }}>{t("saga.recommends", { platform: consoleName(s.versionPlatform) })}</p>}
                 {s.reason && <p className="small muted" style={{ margin: "2px 0 0" }}>{s.reason}</p>}
               </li>

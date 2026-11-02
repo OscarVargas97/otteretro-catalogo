@@ -282,6 +282,8 @@ public static partial class CatalogCleanup
             c.Execute("UPDATE version SET game_id = @keep WHERE game_id = @id", new { keep, id }, t);
             if (hasProgress) c.Execute("UPDATE progress SET game_id = @keep WHERE game_id = @id", new { keep, id }, t);
             c.Execute("DELETE FROM field_value WHERE entity = 'game' AND entity_id = @id; DELETE FROM game WHERE id = @id", new { id }, t);
+            // Se publica: la app pasa lo de cada persona al juego que queda (#3).
+            c.Execute("INSERT OR REPLACE INTO replaced (kind, old_id, new_id) VALUES ('game', @id, @keep)", new { id, keep }, t);
             SteamGridDb.Forget(db, id); // sus imágenes (caché) no deben quedar para otro juego que reciba el id
             saved.Add(new MergedGame(id, g.SagaId, g.NameEs, g.OriginalName, g.Year, g.IgdbId, versions, hasProgress, fields));
         }

@@ -160,7 +160,7 @@ function Versions({ game, compare }: { game: GameDetail; compare: VersionCompare
       <div className="panel table-wrap" style={{ padding: 0 }}>
         <table className="t">
           <thead>
-            <tr><th>{t("game.version")}</th><th>{t("game.have")}</th>{rated && CRITERIA.map((c) => <th key={c}>{t(`game.criterion.${c}`)}</th>)}</tr>
+            <tr><th>{t("game.version")}</th>{rated && CRITERIA.map((c) => <th key={c}>{t(`game.criterion.${c}`)}</th>)}</tr>
           </thead>
           <tbody>
             {game.versions.map((v) => {
@@ -168,7 +168,6 @@ function Versions({ game, compare }: { game: GameDetail; compare: VersionCompare
               return (
                 <tr key={v.id}>
                   <td><b>{consoleName(v.platform)}</b> · {t(`kind.${v.kind as "original"}`)}{v.year ? ` · ${v.year}` : ""}{cmp?.best && <span className="ot-badge ot-badge-have" style={{ marginLeft: 6 }}>{t("game.best")}</span>}</td>
-                  <td>{v.stores.length ? <span className="ot-badge ot-badge-have">{v.stores.map((s) => t(`store.${s.store as "steam"}`)).join(" · ")}</span> : v.files.length ? <span className="ot-badge ot-badge-have">{t("owned")}</span> : <span className="ot-badge">{t("missing")}</span>}</td>
                   {rated && CRITERIA.map((k) => {
                     const c = cmp?.criteria.find((x) => x.criterion === k);
                     const value = Number(c?.value ?? 0);

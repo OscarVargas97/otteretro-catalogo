@@ -11,7 +11,7 @@ import { usePaged } from "@/lib/paged";
 import { sagasUrl } from "@/lib/queries";
 import type { SagaPage } from "@/lib/types";
 
-const FILTERS = ["all", "favorite", "following", "iconic", "exclusive", "owned", "pc"] as const;
+const FILTERS = ["all", "iconic", "exclusive", "pc"] as const;
 const COMPANIES = ["Nintendo", "Sony", "Microsoft"];
 const SORTS = ["recognized", "name", "played", "activity"] as const;
 
