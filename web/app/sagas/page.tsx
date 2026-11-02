@@ -9,6 +9,7 @@ import { Empty } from "@/components/Shell";
 import { useDescribeError } from "@/lib/i18n";
 import { Tiles } from "@/components/Skeleton";
 import { usePaged } from "@/lib/paged";
+import { PublishButton } from "@/components/Publish";
 import { sagasUrl } from "@/lib/queries";
 import type { SagaPage } from "@/lib/types";
 
@@ -58,6 +59,8 @@ export default function Sagas() {
             </select>
           </label>
           <NewSaga />
+          {/* #41: lo que cambió una tarea grande (por ejemplo, completar imágenes) va en un solo PR. */}
+          <PublishButton kind="all" id={0} />
           <span className="small muted tabular toolbar-total" aria-live="polite">{sagas.data ? t("total", { count: sagas.total }) : ""}</span>
         </div>
       )}

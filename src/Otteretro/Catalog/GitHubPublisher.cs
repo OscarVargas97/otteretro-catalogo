@@ -11,7 +11,7 @@ using Otteretro.Data;
 
 namespace Otteretro.Catalog;
 
-/// <param name="Kind">saga o game.</param>
+/// <param name="Kind">saga, game o all (todo lo que cambió respecto de main, #41; el id no se usa).</param>
 public record PublishRequest(string Kind, long Id);
 /// <param name="Change">added, modified o deleted.</param>
 /// <param name="Details">Qué cambia, como códigos que traduce el front (publish.change.*).</param>
@@ -88,21 +88,20 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         if (plan.Conflicts.Count > 0) throw new TaskException(ApiError.Of("publish.conflict", ("files", string.Join(", ", plan.Conflicts))));
 
         var (owner, target) = await Target(createFork: true, ct);
-        var baseTree = (await Must(HttpMethod.Get, $"repos/{Repo}/git/commits/{plan.Head}", null, ct))["tree"]!["sha"]!.GetValue<string>();
-        var tree = new List<object>();
-        foreach (var (change, local) in plan.Files)
+        var tree = (await Must(HttpMethod.Get, $"repos/{Repo}/git/commits/{plan.Head}", null, ct))["tree"]!["sha"]!.GetValue<string>();
+        // El contenido va dentro del árbol, de a tandas (#41): «Publicar todo» puede tocar miles de archivos, y un pedido por archivo
+        // tardaría mucho y gastaría el límite de GitHub. Cada tanda parte del árbol de la anterior.
+        foreach (var chunk in plan.Files.Chunk(TreeChunk))
         {
-            var path = $"{Folder}/{change.Path}";
-            if (local is null) tree.Add(new { path, mode = "100644", type = "blob", sha = (string?)null });
-            else
-            {
-                var blob = await Must(HttpMethod.Post, $"repos/{target}/git/blobs", new { content = await File.ReadAllTextAsync(local, ct), encoding = "utf-8" }, ct);
-                tree.Add(new { path, mode = "100644", type = "blob", sha = blob["sha"]!.GetValue<string>() });
-            }
+            var entries = new List<object>();
+            foreach (var (change, local) in chunk)
+                entries.Add(local is null
+                    ? new { path = $"{Folder}/{change.Path}", mode = "100644", type = "blob", sha = (string?)null }
+                    : new { path = $"{Folder}/{change.Path}", mode = "100644", type = "blob", content = await File.ReadAllTextAsync(local, ct) });
+            tree = (await Must(HttpMethod.Post, $"repos/{target}/git/trees", new { base_tree = tree, tree = entries }, ct))["sha"]!.GetValue<string>();
         }
-        var newTree = await Must(HttpMethod.Post, $"repos/{target}/git/trees", new { base_tree = baseTree, tree }, ct);
         var commit = await Must(HttpMethod.Post, $"repos/{target}/git/commits",
-            new { message = $"feat(catalogo): {plan.Title}", tree = newTree["sha"]!.GetValue<string>(), parents = new[] { plan.Head } }, ct);
+            new { message = $"feat(catalogo): {plan.Title}", tree, parents = new[] { plan.Head } }, ct);
         var sha = commit["sha"]!.GetValue<string>();
         // Publicar otra vez lo mismo mueve la rama al commit nuevo: el PR abierto se actualiza solo.
         if (await Get($"repos/{target}/git/ref/heads/{plan.Branch}", ct) is null)
@@ -122,8 +121,13 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         return new(pr["html_url"]!.GetValue<string>(), false);
     }
 
+    /// <summary>Archivos por pedido al armar el árbol: unos 200 archivos de saga son 1 a 2 MB.</summary>
+    const int TreeChunk = 200;
+    /// <summary>Con más archivos que esto, el cuerpo del PR no los lista: el resumen de cambios lo comenta la revisión del PR (#32).</summary>
+    const int ListedFiles = 100;
+
     static string Body(Plan plan) =>
-        $"Publicado desde Otteretro Catálogo.\n\n{string.Join("\n", plan.Files.Select(f => $"- `{Folder}/{f.Change.Path}`: {f.Change.Change}"))}\n\nDatos de juegos: [IGDB.com](https://www.igdb.com).";
+        $"Publicado desde Otteretro Catálogo.\n\n{(plan.Files.Count > ListedFiles ? $"{plan.Files.Count} archivos." : string.Join("\n", plan.Files.Select(f => $"- `{Folder}/{f.Change.Path}`: {f.Change.Change}")))}\n\nDatos de juegos: [IGDB.com](https://www.igdb.com).";
 
     async Task<string?> OpenPr(string owner, string branch, CancellationToken ct) =>
         (await Get($"repos/{Repo}/pulls?state=open&head={owner}:{Uri.EscapeDataString(branch)}", ct))?.AsArray().FirstOrDefault()?["html_url"]?.GetValue<string>();
@@ -151,9 +155,10 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
 
     async Task<Plan> MakePlan(PublishRequest request, CancellationToken ct)
     {
-        if (request.Kind is not ("saga" or "game")) throw new TaskException(ApiError.Of("publish.kind"));
+        if (request.Kind is not ("saga" or "game" or "all")) throw new TaskException(ApiError.Of("publish.kind"));
         using var c = db.Open();
-        var title = request.Kind == "saga"
+        var title = request.Kind == "all" ? "todo lo cambiado"
+            : request.Kind == "saga"
             ? c.ExecuteScalar<string?>("SELECT name FROM saga WHERE id = @Id", request)
             : c.ExecuteScalar<string?>("SELECT name_es FROM game WHERE id = @Id", request)
               ?? c.ExecuteScalar<string?>("SELECT 'juego ' || old_id FROM replaced WHERE kind = 'game' AND old_id = @Id", request);
@@ -200,7 +205,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
                 .Select(f => f!["filename"]!.GetValue<string>()).ToHashSet() ?? [];
             conflicts = files.Select(f => $"{Folder}/{f.Item1.Path}").Where(changed.Contains).ToList();
         }
-        return new(head, title, $"catalogo/{request.Kind}-{request.Id}", files, errors, conflicts, baseSha is not null);
+        return new(head, title, request.Kind == "all" ? "catalogo/todo" : $"catalogo/{request.Kind}-{request.Id}", files, errors, conflicts, baseSha is not null);
     }
 
     /// <summary>
@@ -209,8 +214,15 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     /// </summary>
     static HashSet<string> Affected(PublishRequest request, string main, string local)
     {
-        var (mainGames, localGames) = (Published.GameFiles(main), Published.GameFiles(local));
         var paths = new HashSet<string>(StringComparer.Ordinal);
+        // Todo (#41): cada archivo de main y de acá; los que no cambiaron se descartan al comparar.
+        if (request.Kind == "all")
+        {
+            foreach (var folder in new[] { main, local })
+                paths.UnionWith(Directory.GetFiles(folder, "*.json", SearchOption.AllDirectories).Select(f => Path.GetRelativePath(folder, f).Replace('\\', '/')));
+            return paths;
+        }
+        var (mainGames, localGames) = (Published.GameFiles(main), Published.GameFiles(local));
         var games = new HashSet<long>();
         if (request.Kind == "saga")
             foreach (var folder in new[] { main, local })
