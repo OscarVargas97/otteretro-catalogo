@@ -1,0 +1,26 @@
+{
+  "name": "otteretro-web",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "tipos": "node scripts/tipos.mjs",
+    "revisar": "node scripts/check-messages.mjs && tsc --noEmit",
+    "e2e": "next build && dotnet build ../src/Otteretro -p:SkipWeb=true && playwright test"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.104.2",
+    "next": "^16.4.1",
+    "next-intl": "^4.14.9",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "openapi-typescript": "^7.13.0",
+    "typescript": "^5.9.3"
+  }
+}

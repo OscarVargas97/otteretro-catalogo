@@ -1,0 +1,161 @@
+
+/* Base */
+body { margin: 0; font-family: var(--font-sans); font-size: 16px; line-height: 22px; background: var(--bg); color: var(--ink); }
+.ot-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: flex-start; padding: var(--space-4); }
+.ot-col { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-4); }
+:where(button, a, [tabindex]):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* Button */
+.ot-btn { font: inherit; font-weight: 700; display: inline-flex; align-items: center; gap: var(--space-2); justify-content: center; position: relative; min-width: 96px; height: 36px; padding: 0 var(--space-4); border-radius: var(--radius-md); border: 1px solid var(--line); background: var(--surface-raised); color: var(--ink); cursor: pointer; }
+/* Mientras carga, el texto sigue ocupando su lugar (invisible) y la ruedita va al centro: el ancho no cambia (#20). */
+.ot-btn[aria-busy="true"] { color: transparent; }
+.ot-btn[aria-busy="true"] > .spinner { position: absolute; inset: 0; margin: auto; }
+/* Contador dentro de un botón: con el fondo del botón no se distinguiría. */
+.ot-btn .ot-count { background: var(--line); }
+.ot-btn:hover { border-color: var(--ink-muted); }
+.ot-btn-primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.ot-btn-primary:hover { border-color: var(--focus); }
+.ot-btn-ghost { background: transparent; border-color: transparent; color: var(--ink-muted); }
+.ot-btn-ghost:hover { color: var(--ink); border-color: var(--line); }
+.ot-btn-danger { background: transparent; border-color: var(--danger); color: var(--danger); }
+/* Dos tamaños en toda la app (#108): normal, de la altura de los campos, y chico para acciones dentro de una fila. */
+.ot-btn-sm { height: 28px; min-width: 0; padding: 0 var(--space-3); font-size: 14px; }
+.ot-btn[disabled] { opacity: .45; cursor: not-allowed; }
+.ot-play::before { content: ""; width: 0; height: 0; border-left: 9px solid currentColor; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+
+/* Badge e insignias */
+.ot-badge { display: inline-flex; align-items: center; gap: var(--space-1); font-size: 12px; line-height: 20px; font-weight: 700; padding: 0 var(--space-2); border-radius: var(--radius-sm); background: var(--surface-raised); color: var(--ink-muted); white-space: nowrap; }
+.ot-badge-have { background: var(--have-soft); color: var(--have); }
+.ot-badge-review { background: var(--review-soft); color: var(--review); }
+.ot-badge-danger { background: var(--danger-soft); color: var(--danger); }
+.ot-badge-info { background: var(--info-soft); color: var(--info); }
+.ot-badge-have::before { content: "✓"; }
+.ot-badge-review::before { content: "!"; }
+.ot-badge-danger::before { content: "×"; }
+
+/* Chip de consola (retro) */
+.ot-console { display: inline-block; font-size: 12px; line-height: 18px; padding: 0 6px; border-radius: var(--radius-sm); border: 1px solid var(--line); color: var(--ink-muted); white-space: nowrap; }
+
+/* Portada (marcador de posición hasta que llega el arte de SteamGridDB) */
+.ot-cover { position: relative; aspect-ratio: 2 / 3; max-width: 100%; border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-raised); display: flex; align-items: flex-end; padding: var(--space-3); box-sizing: border-box; font-family: var(--font-display); font-weight: 700; font-size: 16px; line-height: 20px; color: var(--ink); }
+
+/* GameCard */
+.ot-game { width: 176px; display: flex; flex-direction: column; gap: var(--space-2); border-radius: var(--radius-lg); padding-bottom: var(--space-2); }
+.ot-game:hover .ot-cover { box-shadow: var(--shadow-float); outline: 1px solid var(--line); }
+.ot-game-name { font-weight: 700; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ot-game-meta { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-2); align-items: center; font-size: 14px; line-height: 18px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.ot-game-badges { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.ot-game.is-missing .ot-cover { filter: grayscale(1) brightness(.6); }
+/* Sin ninguna consola del catálogo (Game & Watch, CD-i…): está en la saga, pero no se puede jugar ni tener (#58). */
+.ot-game.is-unplayable, tr.is-unplayable { opacity: .55; }
+
+/* Progreso */
+.ot-progress { height: 4px; border-radius: var(--radius-sm); background: var(--line); overflow: hidden; }
+.ot-progress > span { display: block; height: 100%; background: var(--accent); }
+
+/* SagaCard */
+.ot-saga { width: 260px; border-radius: var(--radius-lg); background: var(--surface); overflow: hidden; display: flex; flex-direction: column; }
+.ot-saga-art { height: 120px; background: var(--surface-raised); display: flex; align-items: flex-end; padding: var(--space-3); box-sizing: border-box; font-family: var(--font-display); font-weight: 700; font-size: 20px; line-height: 24px; }
+.ot-saga-body { padding: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2); }
+.ot-saga-stats { display: flex; justify-content: space-between; font-size: 14px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.ot-fav { color: var(--accent); }
+
+/* NavItem (barra lateral) */
+.ot-nav { width: 220px; background: var(--surface); padding: var(--space-2); display: flex; flex-direction: column; gap: 2px; border-radius: var(--radius-md); }
+.ot-nav-item { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); color: var(--ink-muted); text-decoration: none; font-weight: 700; }
+.ot-nav-item:hover { color: var(--ink); background: var(--surface-raised); }
+.ot-nav-item[aria-current="page"] { color: var(--ink); background: var(--accent-soft); box-shadow: inset 2px 0 0 var(--accent); }
+.ot-count { font-family: var(--font-pixel); font-size: 12px; line-height: 16px; min-width: 20px; text-align: center; padding: 0 4px; border-radius: var(--radius-sm); background: var(--surface-raised); color: var(--ink); }
+.ot-count-review { background: var(--review); color: var(--on-accent); }
+.ot-nav-sep { height: 1px; background: var(--line); margin: var(--space-2) var(--space-3); }
+
+/* RouteStep (línea de tiempo de una ruta) */
+.ot-route { display: flex; gap: var(--space-4); overflow-x: auto; padding: var(--space-4); }
+.ot-step { width: 120px; flex: none; display: flex; flex-direction: column; gap: var(--space-2); }
+.ot-step .ot-cover { font-size: 14px; line-height: 18px; }
+.ot-step-dot { display: flex; align-items: center; gap: var(--space-1); font-size: 12px; font-weight: 700; color: var(--ink-muted); }
+.ot-step-dot::before { content: ""; width: 10px; height: 10px; border-radius: 2px; border: 2px solid var(--line); box-sizing: border-box; }
+.ot-step.is-done .ot-step-dot { color: var(--have); }
+.ot-step.is-done .ot-step-dot::before { background: var(--have); border-color: var(--have); }
+.ot-step.is-current .ot-cover { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ot-step.is-current .ot-step-dot { color: var(--accent); }
+.ot-step.is-current .ot-step-dot::before { border-color: var(--accent); }
+.ot-step.is-dropped .ot-step-dot { color: var(--danger); }
+.ot-step-why { font-size: 12px; line-height: 16px; color: var(--ink-muted); }
+
+/* TaskRow (panel de tareas) */
+.ot-tasks { width: 340px; background: var(--surface-raised); border-radius: var(--radius-md); box-shadow: var(--shadow-float); padding: var(--space-2); display: flex; flex-direction: column; gap: 2px; }
+.ot-task { display: grid; grid-template-columns: 1fr auto; gap: 2px var(--space-2); padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); }
+.ot-task-title { font-weight: 700; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ot-task-state { font-size: 12px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.ot-task-detail { grid-column: 1 / -1; font-size: 14px; line-height: 18px; color: var(--ink-muted); }
+.ot-task .ot-progress { grid-column: 1 / -1; }
+.ot-task.is-error .ot-task-state { color: var(--danger); }
+.ot-task.is-paused .ot-task-state { color: var(--review); }
+
+/* EmptyState */
+.ot-empty { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-3); padding: var(--space-8) var(--space-6); max-width: 360px; margin: 0 auto; }
+.ot-empty img { width: 64px; height: 64px; image-rendering: pixelated; }
+.ot-empty h3 { margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 24px; }
+.ot-empty p { margin: 0; color: var(--ink-muted); }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ===== Mando (§12.5) ===== */
+/* La app pone data-input="pad" en <html> al tocar el mando y "mouse" al mover el ratón. */
+
+/* Foco con mando: más grueso y la tarjeta sube; con ratón no hay anillo ni barra */
+[data-input="pad"] :where(button, a, [tabindex]):focus-visible, [data-input="pad"] .is-focus { outline: 3px solid var(--focus); outline-offset: 3px; }
+[data-input="pad"] :where(.ot-game, .ot-saga):where(:focus-visible, .is-focus) { outline: none; }
+[data-input="pad"] .ot-game:where(:focus-visible, .is-focus) .ot-cover,
+[data-input="pad"] .ot-saga:where(:focus-visible, .is-focus) { outline: 3px solid var(--focus); outline-offset: 3px; box-shadow: var(--shadow-float); transform: translateY(-4px); }
+[data-input="pad"] .ot-game:where(:focus-visible, .is-focus) .ot-game-name { color: var(--ink); }
+.ot-game .ot-cover, .ot-saga { transition: transform .12s ease-out, box-shadow .12s ease-out; }
+[data-input="mouse"] .ot-padbar { display: none; }
+
+/* Glifo de botón: por función, con la forma de cada mando */
+.ot-glyph { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; flex: none; border-radius: 50%; background: var(--ink); color: var(--bg); font-family: var(--font-sans); font-size: 14px; line-height: 1; font-weight: 700; }
+.ot-glyph-pill { width: auto; min-width: 24px; padding: 0 var(--space-2); border-radius: 12px; font-size: 12px; letter-spacing: .02em; }
+.ot-glyph-sm { width: 20px; height: 20px; font-size: 12px; }
+
+/* Barra de botones: abajo, fija, solo con mando */
+.ot-padbar { display: flex; justify-content: flex-end; align-items: center; gap: var(--space-6); padding: var(--space-3) var(--space-6); background: var(--surface); border-top: 1px solid var(--line); }
+.ot-padbar-hint { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--ink); font-weight: 700; white-space: nowrap; }
+.ot-padbar-start { margin-right: auto; color: var(--ink-muted); font-size: 14px; }
+
+/* Menú rápido del botón Guía: panel a la izquierda sobre el velo */
+.ot-scrim { position: relative; background: var(--scrim); display: flex; }
+.ot-quick { width: 320px; background: var(--surface-raised); box-shadow: var(--shadow-float); display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-4); box-sizing: border-box; }
+.ot-quick-head { display: flex; align-items: center; gap: var(--space-3); padding-bottom: var(--space-3); border-bottom: 1px solid var(--line); }
+.ot-quick-head img { width: 32px; height: 32px; image-rendering: pixelated; }
+.ot-quick-now { display: flex; flex-direction: column; min-width: 0; }
+.ot-quick-now strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ot-quick-now span { font-size: 14px; line-height: 18px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.ot-quick-item { font: inherit; font-weight: 700; display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); height: 48px; padding: 0 var(--space-3); border: 0; border-radius: var(--radius-md); background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
+.ot-quick-item:hover, .ot-quick-item.is-focus { background: var(--surface); }
+.ot-quick-item small { font-weight: 400; color: var(--ink-muted); }
+.ot-quick-item.is-danger { color: var(--danger); }
+.ot-quick-foot { margin-top: auto; display: flex; gap: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--line); font-size: 14px; font-weight: 700; }
+.ot-quick-foot span { display: inline-flex; align-items: center; gap: var(--space-1); }
+
+/* Teclado en pantalla (fuera de la sesión de Steam) */
+.ot-osk { width: 640px; max-width: 100%; background: var(--surface-raised); border-radius: var(--radius-lg) var(--radius-lg) 0 0; box-shadow: var(--shadow-float); padding: var(--space-4); box-sizing: border-box; display: flex; flex-direction: column; gap: var(--space-3); }
+.ot-osk-field { display: flex; align-items: center; height: 44px; padding: 0 var(--space-3); border-radius: var(--radius-md); background: var(--bg); border: 1px solid var(--line); font-size: 16px; }
+.ot-osk-field::after { content: ""; width: 2px; height: 22px; margin-left: 2px; background: var(--accent); }
+.ot-osk-field:empty::before { content: attr(data-placeholder); color: var(--ink-muted); }
+.ot-osk-keys { display: grid; grid-template-columns: repeat(10, 1fr); gap: var(--space-1); }
+.ot-key { font: inherit; font-weight: 700; height: 44px; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); color: var(--ink); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-1); }
+.ot-key:hover { border-color: var(--ink-muted); }
+.ot-key.is-focus { outline: 3px solid var(--focus); outline-offset: 2px; position: relative; z-index: 1; }
+.ot-key-wide { grid-column: span 2; font-size: 14px; }
+.ot-key-space { grid-column: span 4; }
+.ot-key-done { grid-column: span 2; background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.ot-key.is-on { background: var(--accent-soft); border-color: var(--accent); }
+.ot-osk-foot { display: flex; justify-content: flex-end; gap: var(--space-4); font-size: 14px; font-weight: 700; }
+.ot-osk-foot span { display: inline-flex; align-items: center; gap: var(--space-1); }
+
+/* Esqueleto (#105): mismo tamaño que lo que llega; brillo suave salvo con movimiento reducido. */
+.ot-skel { display: inline-block; color: transparent !important; border-color: transparent !important; border-radius: var(--radius-sm); background: linear-gradient(90deg, var(--surface-raised) 25%, var(--surface) 50%, var(--surface-raised) 75%); background-size: 200% 100%; animation: ot-skel 1.4s linear infinite; user-select: none; }
+div.ot-skel { display: block; }
+@keyframes ot-skel { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+@media (prefers-reduced-motion: reduce) { .ot-skel { animation: none; } }
