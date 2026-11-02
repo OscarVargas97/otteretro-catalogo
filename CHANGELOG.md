@@ -2,7 +2,7 @@
 
 ## Sin publicar
 
-`feat/2-generador` · #1, #2, #3, #4: el catálogo de Otteretro pasa a ser un proyecto aparte.
+`feat/2-generador`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr` y `feat/9-imagenes-compartidas` · #1 a #28: el catálogo de Otteretro pasa a ser un proyecto aparte.
 
 ### Nuevo
 - **Administración** (#2): un programa con la misma interfaz de Otteretro para generar y revisar el catálogo, con sus claves. Tiene su propia carpeta y nunca abre los datos personales de Otteretro.
