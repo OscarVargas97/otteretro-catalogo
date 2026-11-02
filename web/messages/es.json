@@ -565,6 +565,31 @@
       "routeKind": "Ese tipo de ruta no existe.",
       "emptyRoute": "La ruta necesita al menos un paso.",
       "sameGame": "Elige otro juego para fusionar."
+    },
+    "publish": {
+      "noKey": "Falta la clave de GitHub: pégala en Ajustes › Cuentas y claves.",
+      "badToken": "GitHub no aceptó la clave: revisa que el token siga vigente.",
+      "forbidden": "La clave no tiene permiso para esto: hace falta public_repo.",
+      "failed": "GitHub respondió con un error ({status}).",
+      "offline": "No se pudo conectar con GitHub.",
+      "kind": "Solo se publica una saga o un juego.",
+      "nothingChanged": "No hay cambios que publicar.",
+      "invalid": "Lo publicado no pasa la validación ({count} errores).",
+      "conflict": "Cambiaron en GitHub: {files}. No se publica para no pisarlo.",
+      "change": {
+        "replaced": "{count} juegos o versiones pasan a reemplazados",
+        "sagaAdded": "Saga nueva: {name}",
+        "sagaRemoved": "Se quita la saga {name}",
+        "name": "Nombre: «{from}» → «{to}»",
+        "iconicOn": "Pasa a ser icónica",
+        "iconicOff": "Deja de ser icónica",
+        "routeAdded": "Ruta nueva ({kind})",
+        "routeRemoved": "Se quita la ruta ({kind})",
+        "routeChanged": "Cambia la ruta ({kind})",
+        "gameAdded": "Entra {name}",
+        "gameRemoved": "Sale {name}",
+        "gameChanged": "Cambia {name}"
+      }
     }
   },
   "credentials": {
@@ -609,7 +634,7 @@
     "configure": "Configurar",
     "close": "Cerrar",
     "purpose": {
-      "github": "Respaldo de tus partidas en un repositorio privado tuyo.",
+      "github": "Publicar tus cambios del catálogo como un PR. Token clásico con el permiso public_repo.",
       "steam": "Lo que tienes en Steam, con sus horas.",
       "igdb": "Sagas, juegos y versiones del catálogo.",
       "screenscraper": "Identificar ROMs que no coinciden con los DAT.",
@@ -1245,5 +1270,30 @@
       "site": "Verificado por el sitio",
       "none": "Sin verificar"
     }
+  },
+  "publish": {
+    "button": "Publicar",
+    "title": "Publicar como PR",
+    "titleOf": "Publicar «{name}» como PR",
+    "comparing": "Comparando con lo publicado en GitHub…",
+    "noKey": "Para publicar hace falta tu clave de GitHub: un token clásico con el permiso public_repo. Con él, el programa crea un fork en tu cuenta (si no puedes escribir en el repo), sube una rama y abre el PR.",
+    "openCredentials": "Ir a Cuentas y claves",
+    "nothing": "No hay cambios respecto de lo publicado.",
+    "change": {
+      "added": "Nuevo",
+      "modified": "Cambia",
+      "deleted": "Se quita"
+    },
+    "invalid": "No pasa la validación",
+    "conflictTitle": "Cambió en GitHub",
+    "conflict": "Alguien cambió {files} después de la versión de la que parte tu catálogo. No se publica para no pisarlo.",
+    "unknownBase": "No se sabe de qué versión parte tu catálogo, así que no se pueden detectar cambios de otros: revisa que la lista sea solo lo tuyo.",
+    "openPr": "Ya hay un PR abierto para esto:",
+    "opened": "PR abierto:",
+    "updated": "PR actualizado:",
+    "noMerge": "Solo propone el cambio: el PR lo revisa y fusiona quien administra el catálogo.",
+    "close": "Cerrar",
+    "open": "Abrir PR",
+    "update": "Actualizar PR"
   }
 }

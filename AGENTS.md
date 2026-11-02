@@ -32,6 +32,7 @@ Desde el espacio `game-system`, con el plugin `otter`: un worktree por rama en `
 | Pruebas de interfaz | `npm --prefix web run e2e` |
 | Regenerar los tipos del front tras cambiar la API | `cd web && npm run tipos` |
 | Programa listo para abrir | `./scripts/publicar.ps1 -OutputDir <carpeta>` |
+| De qué commit de `main` parte el catálogo local (para avisar de conflictos al publicar) | `OtteretroCatalogo catalogo base <sha>` |
 | Traer una copia de un `catalogo.db` a un catálogo vacío | `OtteretroCatalogo catalogo importar <base.db>` |
 | Escribir el catálogo comprimido, sin correcciones ni reglas de Claude | `OtteretroCatalogo catalogo exportar <archivo>` |
 | Probar sin tocar la config real | `OTTERETRO_CONFIG=<ruta>/config.json OtteretroCatalogo servidor` |
