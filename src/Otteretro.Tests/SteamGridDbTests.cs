@@ -17,6 +17,7 @@ public class SteamGridDbTests
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
         {
             var url = request.RequestUri!.AbsoluteUri;
+            OnRequest?.Invoke(url);
             // IGDB (respaldo de la portada, #61): el token y la carátula del juego 3.
             if (url == Igdb.TokenUrl)
                 return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("""{ "access_token": "token", "expires_in": 3600 }""") });
@@ -24,7 +25,7 @@ public class SteamGridDbTests
                 return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("""[ { "id": 1, "image_id": "co3nada" } ]""") });
             if (url.StartsWith("https://cdn2.steamgriddb.com/") || url.StartsWith(SteamGridDb.IgdbImageUrl))
             {
-                OnDownload?.Invoke(url);
+                Downloads++;
                 // a.png es una imagen de verdad y grande (#64); lo demás no se puede leer como imagen y queda tal cual.
                 return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent(url.EndsWith("/a.png") ? Png(1200, 1800) : [1, 2, 3]) });
             }
@@ -95,7 +96,7 @@ public class SteamGridDbTests
         File.WriteAllBytes(Path.Combine(folder, "1-cover.png"), Png(1200, 1800));
         File.WriteAllBytes(Path.Combine(folder, "1-hero.png"), [1, 2, 3]);
         File.WriteAllBytes(Path.Combine(folder, "9-cover.png"), Png(10, 10));
-        OnDownload = url => throw new InvalidOperationException("no se descarga nada");
+        OnRequest = url => throw new InvalidOperationException("no se descarga nada");
 
         SteamGridDb.EnqueueConvert(f.Db);
         SteamGridDb.EnqueueConvert(f.Db); // ya hay una esperando: no se duplica
@@ -112,13 +113,21 @@ public class SteamGridDbTests
         Assert.Equal((600, 900), (cover.Width, cover.Height));
     }
 
-    /// <summary>Para simular algo que pasa mientras se baja una imagen.</summary>
-    static Action<string>? OnDownload;
+    /// <summary>Para simular algo que pasa mientras se consulta SteamGridDB.</summary>
+    static Action<string>? OnRequest;
+    static int Downloads;
 
     public SteamGridDbTests()
     {
-        SteamGridDb.Handler = new FakeSteamGridDb();
-        OnDownload = null;
+        SteamGridDb.Handler = ImageRefs.Handler = new FakeSteamGridDb();
+        OnRequest = null;
+        Downloads = 0;
+    }
+
+    static List<(long, string, string)> Refs(Fixture f)
+    {
+        using var c = f.Db.Open();
+        return c.Query<(long, string, string)>("SELECT game_id, kind, url FROM catalog.image ORDER BY game_id, kind").ToList();
     }
 
     /// <summary>#59: si el juego se borra (fusión) mientras se baja su imagen, la imagen no queda para el próximo juego con ese id.</summary>
@@ -128,13 +137,13 @@ public class SteamGridDbTests
         await using var f = new Fixture(("steamgriddb.apiKey", "clave"));
         using (var c = f.Db.Open())
             c.Execute("INSERT INTO game (id, name_es, original_name) VALUES (2, 'Zelda Classic', 'Zelda Classic')");
-        OnDownload = url =>
+        OnRequest = url =>
         {
             using var c = f.Db.Open();
             c.Execute("DELETE FROM game WHERE id = 2");
         };
         Assert.Equal("done", (await f.Run(SteamGridDb.Enqueue(f.Db))).Status);
-        Assert.NotNull(SteamGridDb.Find(f.Db, 2, "cover")); // #9: en el ★ de Otteretro no se borra nada
+        Assert.Null(SteamGridDb.Find(f.Db, 2, "cover")); // la tarea solo guarda referencias (#6): no baja nada
     }
 
     /// <summary>#78: un juego que entra mientras se bajan portadas queda para otra pasada que empieza después del último de la lista.</summary>
@@ -144,7 +153,7 @@ public class SteamGridDbTests
         await using var f = new Fixture(("steamgriddb.apiKey", "clave"));
         using (var c = f.Db.Open())
             c.Execute("INSERT INTO game (id, name_es, original_name) VALUES (2, 'Zelda Classic', 'Zelda Classic')");
-        OnDownload = url =>
+        OnRequest = url =>
         {
             using var c = f.Db.Open();
             c.Execute("INSERT OR IGNORE INTO game (id, name_es, original_name) VALUES (5, 'Nada', 'Nada')");
@@ -157,7 +166,7 @@ public class SteamGridDbTests
         Assert.True(System.Text.Json.JsonSerializer.Deserialize<SteamGridDb.Job>(next, System.Text.Json.JsonSerializerOptions.Web)!.After >= 2);
     }
 
-    /// <summary>Listo cuando de F1.7: las portadas 2:3 quedan en la caché y la API las sirve.</summary>
+    /// <summary>#6: el generador guarda de dónde sale cada imagen, sin bajarla; la API la baja la primera vez que se pide y después la sirve de la carpeta.</summary>
     [Fact]
     public async Task CoversGoToTheCacheAndTheApiServesThem()
     {
@@ -170,8 +179,10 @@ public class SteamGridDbTests
 
         var task = await f.Run(SteamGridDb.Enqueue(f.Db));
         Assert.Equal(("done", 100), (task.Status, task.Progress));
-        var files = Directory.GetFiles(SteamGridDb.Folder(f.Db)!).Select(Path.GetFileName).Order();
-        Assert.Equal(["1-cover.webp", "1-logo.webp", "2-cover.jpg"], files);
+        Assert.Equal([(1L, "cover", "https://cdn2.steamgriddb.com/grid/a.png"), (1L, "logo", "https://cdn2.steamgriddb.com/logo/c.webp"),
+            (2L, "cover", "https://cdn2.steamgriddb.com/grid/b.jpg")], Refs(f));
+        Assert.Equal(0, Downloads);
+        Assert.Equal(2, SteamGridDb.Status(f.Db, true).Have); // con referencia ya cuentan como portada
 
         var app = LocalServer.Create(f.Session, b => b.WebHost.UseTestServer());
         await app.StartAsync();
@@ -180,6 +191,9 @@ public class SteamGridDbTests
         var cover = await http.GetAsync($"/api/images/1/cover?key={f.Session.Key}");
         Assert.Equal(HttpStatusCode.OK, cover.StatusCode);
         Assert.Equal("image/webp", cover.Content.Headers.ContentType!.MediaType);
+        Assert.Equal(HttpStatusCode.OK, (await http.GetAsync($"/api/images/1/cover?key={f.Session.Key}")).StatusCode);
+        Assert.Equal(1, Downloads); // la segunda vez sale de la carpeta
+        Assert.Equal(["1-cover.webp"], Directory.GetFiles(SteamGridDb.Folder(f.Db)!).Select(Path.GetFileName));
         Assert.Equal(HttpStatusCode.NotFound, (await http.GetAsync($"/api/images/3/cover?key={f.Session.Key}")).StatusCode);
         Assert.Equal(HttpStatusCode.NotFound, (await http.GetAsync($"/api/images/1/..%2F..%2Fdata?key={f.Session.Key}")).StatusCode);
         await app.StopAsync();
@@ -202,8 +216,7 @@ public class SteamGridDbTests
                 """);
 
         Assert.Equal("done", (await f.Run(SteamGridDb.Enqueue(f.Db))).Status);
-        var files = Directory.GetFiles(SteamGridDb.Folder(f.Db)!).Select(Path.GetFileName).Order();
-        Assert.Equal(["3-cover.jpg", "4-cover.jpg"], files);
+        Assert.Equal([(3L, "cover", SteamGridDb.IgdbImageUrl + "co3nada.jpg"), (4L, "cover", "https://cdn2.steamgriddb.com/grid/b.jpg")], Refs(f));
     }
 
     [Fact]

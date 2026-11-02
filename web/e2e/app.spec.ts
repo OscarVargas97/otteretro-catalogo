@@ -40,7 +40,7 @@ test("el asistente elige la carpeta de datos y pide las claves del catálogo", a
   await expect(page.getByRole("group", { name: es.settings.images.title }).getByRole("button").first()).toBeVisible();
   await page.getByRole("button", { name: es.welcome.done }).click();
   await expect(page).toHaveURL(/\/\?|\/$/);
-  await expect(page.getByRole("heading", { name: es.home.review })).toBeVisible();
+  await expect(page.getByRole("heading", { name: es.home.review, exact: true })).toBeVisible();
 });
 
 test("cada pantalla abre, y lo que era de cada persona ya no está en el menú", async () => {
