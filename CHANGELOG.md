@@ -2,10 +2,11 @@
 
 ## Sin publicar
 
-`feat/6-referencias-imagenes` · #6: las imágenes van por referencia.
+`feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr` y `feat/9-imagenes-compartidas` · #6, #9, #12, #17 y #22: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
 
 ### Nuevo
 - **Referencias de imágenes** (#6): cada juego publica de dónde se baja su portada, su fondo y su logo (SteamGridDB, o la carátula de IGDB si no hay portada), sin copias ni claves. Otteretro y la administración bajan cada imagen la primera vez que se ve. `catalogo validar` rechaza una dirección que no sea de SteamGridDB o IGDB y cuenta cuántos juegos tienen cada tipo.
+- **Instalador y actualizaciones** (#12): la administración se instala con `OtteretroCatalogo-win-Setup.exe` y se actualiza sola, con los mismos canales que Otteretro (Estable, Pruebas, Local y Otro origen) en Ajustes › General. Como en Otteretro, «Local» no pide carpeta: busca los paquetes en `<disco>\Otteretro\Paquetes\OtteretroCatalogo`, donde los deja `scripts/empaquetar.ps1`. Cada PR del programa publica una versión de Pruebas y cada fusión en `main`, una estable.
 
 ### Cambios
 - «Buscar imágenes en SteamGridDB e IGDB» guarda las direcciones en vez de bajar las imágenes, y vuelve a consultarlas para traer las que cambiaron.

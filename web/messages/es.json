@@ -254,14 +254,14 @@
       "local": "Local",
       "custom": "Otro origen",
       "stableHint": "Las versiones publicadas en GitHub: probadas y con su lista de novedades.",
-      "testingHint": "Lo último en desarrollo, antes de publicarse. Puede traer errores.",
-      "localHint": "Los paquetes que armas en este equipo con scripts/empaquetar.ps1. Se buscan solos en la carpeta Otteretro\\Paquetes de tus discos.",
-      "customHint": "Una carpeta, una dirección web o el repo de GitHub de quien arma su propia versión de Otteretro.",
+      "testingHint": "Lo último de los PR abiertos, antes de fusionarse. Puede traer errores.",
+      "localHint": "Los paquetes que armas en este equipo con scripts/empaquetar.ps1. Se buscan solos en tus discos de Otteretro, como en Otteretro.",
+      "customHint": "Una carpeta, una dirección web o el repo de GitHub de quien arma su propia versión de Otteretro Catálogo.",
       "origin": "Origen de las actualizaciones",
-      "originPlaceholder": "D:\\paquetes o https://github.com/usuario/otteretro",
+      "originPlaceholder": "D:\\paquetes o https://github.com/usuario/otteretro-catalogo",
       "use": "Usar",
-      "localFound": "Paquetes en {path}",
-      "localNone": "Ningún disco tiene paquetes en Otteretro\\Paquetes."
+      "localFound": "Paquetes encontrados en {path}.",
+      "localNone": "Ninguno de tus discos de Otteretro tiene paquetes en Otteretro\\Paquetes\\OtteretroCatalogo."
     },
     "taskTitle": "Actualización de Otteretro",
     "checking": "Buscando…",
@@ -280,15 +280,14 @@
     "readyText": "Se instalará al cerrar la app, o ahora mismo si reinicias.",
     "restartNow": "Reiniciar ahora",
     "check": "Buscar actualización",
-    "notice": "<b>Otteretro {version} está lista.</b> Se instalará cuando cierres la app, o ahora mismo si reinicias.",
+    "notice": "<b>Otteretro Catálogo {version} está lista.</b> Se instalará cuando cierres la app, o ahora mismo si reinicias.",
     "reason": {
       "noSource": "No hay un origen de actualizaciones configurado.",
       "notInstalled": "Las actualizaciones solo funcionan en la app instalada.",
       "failed": "No se pudo buscar o descargar la actualización. El detalle está en el registro.",
       "withSystem": "Se actualiza con el sistema: llega con la próxima actualización de PlayOS o NixOS."
     },
-    "withSystemBadge": "Con el sistema",
-    "attribution": "Datos de juegos: IGDB.com"
+    "withSystemBadge": "Con el sistema"
   },
   "errors": {
     "http": "La app respondió con un error ({status}).",

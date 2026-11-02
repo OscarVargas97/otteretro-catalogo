@@ -23,6 +23,7 @@ public static class AppMode
         var app = LocalServer.Create(session);
         app.StartAsync().GetAwaiter().GetResult();
         var api = LocalServer.Address(app);
+        _ = app.Services.GetRequiredService<Updater>().Check();
 
         // En desarrollo la interfaz viene de `next dev` y se le dice dónde está la API.
         var web = Environment.GetEnvironmentVariable("OTTERETRO_DEV_WEB");
