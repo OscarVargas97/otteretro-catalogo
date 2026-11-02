@@ -150,12 +150,12 @@ public class IgdbImportTests
         Assert.Equal("done", (await f.Run(IgdbImport.EnqueuePlatform(f.Db, "3ds"))).Status);
         long loose;
         using (var c0 = f.Db.Open()) loose = c0.ExecuteScalar<long>("SELECT id FROM game WHERE igdb_id = 1030");
-        Directory.CreateDirectory(SteamGridDb.Folder(f.Db));
-        File.WriteAllText(Path.Combine(SteamGridDb.Folder(f.Db), $"{loose}-cover.jpg"), "portada del remake suelto");
+        Directory.CreateDirectory(SteamGridDb.Folder(f.Db)!);
+        File.WriteAllText(Path.Combine(SteamGridDb.Folder(f.Db)!, $"{loose}-cover.jpg"), "portada del remake suelto");
         using (var c0 = f.Db.Open()) c0.Execute("INSERT INTO progress (game_id, status, notes) VALUES (@loose, 'playing', 'en 3DS')", new { loose });
         var task = await f.Run(IgdbImport.EnqueueSaga(f.Db, "zelda"));
         // El juego suelto se fusionó: su portada no queda para el próximo juego que reciba ese id (#58).
-        Assert.Null(SteamGridDb.Find(f.Db, loose, "cover"));
+        Assert.NotNull(SteamGridDb.Find(f.Db, loose, "cover")); // #9: en el ★ de Otteretro no se borra nada
         // Y su seguimiento pasó al original, sin dejar un juego vacío (#59).
         using (var c1 = f.Db.Open())
         {

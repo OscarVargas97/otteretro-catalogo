@@ -81,14 +81,19 @@ public static class SteamGridDb
             TaskQueue.Enqueue(db, "sgdb.webp");
     }
 
-    static string[] Unconverted(Database db) => Directory.Exists(Folder(db))
-        ? Directory.GetFiles(Folder(db)).Where(f => Path.GetExtension(f) != ".webp" && !Path.GetFileName(f).StartsWith('.')).Order().ToArray()
+    /// <summary>Lo que falta convertir a WebP. Con el ★ de Otteretro no se convierte aquí: es Otteretro quien lo hace (#9).</summary>
+    static string[] Unconverted(Database db) => ImageHome.Info(db) is { ManagedByOtteretro: false, Available: true, Folder: { } folder } && Directory.Exists(folder)
+        ? Directory.GetFiles(folder).Where(f => Path.GetExtension(f) != ".webp" && !Path.GetFileName(f).StartsWith('.')).Order().ToArray()
         : [];
 
-    public static string Folder(Database db) => Path.Combine(Path.GetDirectoryName(db.CatalogPath)!, "imagenes"); // van con el catálogo (#167)
+    /// <summary>La carpeta de imágenes: `catalogo\imagenes` del disco ★ (#9), o null si todavía no hay ★.</summary>
+    public static string? Folder(Database db) => ImageHome.Folder(db);
 
-    /// <summary>Borra las imágenes de un juego que ya no existe. Sus referencias quedan, pero no se publican: solo salen las de juegos que existen.</summary>
-    public static void Forget(Database db, long gameId) => ImageRefs.Forget(db, Kinds.Select(k => (gameId, k)));
+    /// <summary>
+    /// Las imágenes de un juego que deja de existir se quedan (#9): la carpeta es la de Otteretro, que todavía puede tener ese juego
+    /// hasta que recibe el catálogo nuevo, y los ids publicados no se reutilizan.
+    /// </summary>
+    public static void Forget(Database db, long gameId) { }
 
     static void Save(Database db, long gameId, string kind, string url)
     {
@@ -99,7 +104,7 @@ public static class SteamGridDb
 
     /// <summary>La imagen guardada de un juego, o null si todavía no hay.</summary>
     public static string? Find(Database db, long gameId, string kind) =>
-        Directory.Exists(Folder(db)) ? Directory.EnumerateFiles(Folder(db), $"{gameId}-{kind}.*").FirstOrDefault() : null;
+        Folder(db) is { } folder && Directory.Exists(folder) ? Directory.EnumerateFiles(folder, $"{gameId}-{kind}.*").FirstOrDefault() : null;
 
     public static async Task Images(TaskRun run, CancellationToken ct)
     {

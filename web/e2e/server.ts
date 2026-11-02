@@ -13,7 +13,7 @@ export default async function startServer() {
   process.env.OTTERETRO_E2E_DIR = work;
 
   const exe = resolve("../src/Otteretro/bin/Debug/net10.0", process.platform === "win32" ? "OtteretroCatalogo.exe" : "OtteretroCatalogo");
-  const server = spawn(exe, ["servidor"], { env: { ...process.env, OTTERETRO_CONFIG: config, OTTERETRO_E2E: "1" } });
+  const server = spawn(exe, ["servidor"], { env: { ...process.env, OTTERETRO_CONFIG: config, OTTERETRO_APP_CONFIG: join(work, "sin-otteretro.json"), OTTERETRO_E2E: "1" } });
 
   process.env.OTTERETRO_E2E_URL = await new Promise<string>((done, fail) => {
     const timer = setTimeout(() => fail(new Error("El servidor no arrancó en 30 s")), 30_000);

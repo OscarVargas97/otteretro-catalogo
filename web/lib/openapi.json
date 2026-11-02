@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:64946/"
+      "url": "http://127.0.0.1:52519/"
     }
   ],
   "paths": {
@@ -256,6 +256,82 @@
                   "items": {
                     "$ref": "#/components/schemas/Drive"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/images-folder": {
+      "get": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImagesFolderInfo"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StarRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImagesFolderInfo"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3921,6 +3997,53 @@
           }
         }
       },
+      "ImageHomeInfo": {
+        "required": [
+          "star",
+          "folder",
+          "managedByOtteretro",
+          "available"
+        ],
+        "type": "object",
+        "properties": {
+          "star": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "folder": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "managedByOtteretro": {
+            "type": "boolean"
+          },
+          "available": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ImagesFolderInfo": {
+        "required": [
+          "home",
+          "disks"
+        ],
+        "type": "object",
+        "properties": {
+          "home": {
+            "$ref": "#/components/schemas/ImageHomeInfo"
+          },
+          "disks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StarDisk"
+            }
+          }
+        }
+      },
       "LanguageRequest": {
         "required": [
           "language"
@@ -4945,6 +5068,48 @@
           },
           "url": {
             "type": "string"
+          }
+        }
+      },
+      "StarDisk": {
+        "required": [
+          "name",
+          "folder",
+          "hasOtteretro",
+          "free"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "folder": {
+            "type": "string"
+          },
+          "hasOtteretro": {
+            "type": "boolean"
+          },
+          "free": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int64"
+          }
+        }
+      },
+      "StarRequest": {
+        "required": [
+          "star"
+        ],
+        "type": "object",
+        "properties": {
+          "star": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },

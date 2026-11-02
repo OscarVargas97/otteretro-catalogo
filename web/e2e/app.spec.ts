@@ -35,6 +35,9 @@ test("el asistente elige la carpeta de datos y pide las claves del catálogo", a
   await page.getByLabel(es.welcome.otherPath).fill(dataDir("data"));
   await page.getByRole("button", { name: /^Usar / }).click();
   await expect(page.getByRole("heading", { name: es.welcome.accountsTitle })).toBeVisible();
+  // Sin Otteretro se elige el disco ★ de las imágenes (#9). No se elige: crearía la carpeta en un disco real.
+  await expect(page.getByText(es.settings.images.choose)).toBeVisible();
+  await expect(page.getByRole("group", { name: es.settings.images.title }).getByRole("button").first()).toBeVisible();
   await page.getByRole("button", { name: es.welcome.done }).click();
   await expect(page).toHaveURL(/\/\?|\/$/);
   await expect(page.getByRole("heading", { name: es.home.review, exact: true })).toBeVisible();

@@ -29,6 +29,12 @@ public record Drive(string Name, long Free, long Total, string Folder, bool Sugg
 /// <param name="Used">Null mientras se mide por primera vez.</param>
 public record FolderInfo(string? Path, long? Used, long FreeOnDrive);
 
+/// <summary>Ajustes › General › Imágenes (#9): el disco ★ donde están y, sin Otteretro, los discos donde se puede poner.</summary>
+public record ImagesFolderInfo(Catalog.ImageHomeInfo Home, List<Catalog.StarDisk> Disks);
+
+/// <param name="Star">La carpeta del ★ (`&lt;disco&gt;\Otteretro`).</param>
+public record StarRequest(string? Star);
+
 /// <param name="Origin">Con custom: carpeta, URL o repo de GitHub.</param>
 /// <param name="Local">La carpeta que encontró en tus discos el canal Local; null si ninguno tiene paquetes.</param>
 public record UpdateChannelInfo(string Channel, string? Origin, string? Local = null);
@@ -97,6 +103,17 @@ public static class Endpoints
                 .Where(d => d.IsReady && (!OperatingSystem.IsWindows() || d.DriveType == DriveType.Fixed))
                 .Select(d => (d.Name, d.DriveFormat, d.TotalFreeSpace, d.TotalSize)),
             Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), OperatingSystem.IsWindows()));
+
+        api.MapGet("/images-folder", Results<Ok<ImagesFolderInfo>, Conflict<ApiError>> (AppSession s) =>
+            DataFolder.IsReady(s.Config.DataFolder) ? TypedResults.Ok(ImagesFolder(DataFolder.Open(s.Config.DataFolder!))) : TypedResults.Conflict(ApiError.Of("move.noDataFolder")));
+
+        // Sin Otteretro: preparar el ★ como lo haría Otteretro, o cambiarlo (lleva las imágenes).
+        api.MapPut("/images-folder", Results<Ok<ImagesFolderInfo>, BadRequest<ApiError>, Conflict<ApiError>> (StarRequest request, AppSession s) =>
+        {
+            if (!DataFolder.IsReady(s.Config.DataFolder)) return TypedResults.Conflict(ApiError.Of("move.noDataFolder"));
+            var db = DataFolder.Open(s.Config.DataFolder!);
+            return Catalog.ImageHome.SetStar(db, request.Star) is { } error ? TypedResults.BadRequest(error) : TypedResults.Ok(ImagesFolder(db));
+        });
 
         api.MapGet("/update", (Updater u) => u.State);
 
@@ -205,6 +222,9 @@ public static class Endpoints
             return false;
         }
     }
+
+    static ImagesFolderInfo ImagesFolder(Data.Database db) => new(Catalog.ImageHome.Info(db), Catalog.ImageHome.Disks(DriveInfo.GetDrives()
+        .Where(d => d.IsReady && (!OperatingSystem.IsWindows() || d.DriveType == DriveType.Fixed)).Select(d => (d.Name, d.AvailableFreeSpace))));
 
     static string ImageType(string file) => Path.GetExtension(file).ToLowerInvariant() switch
     {

@@ -346,6 +346,91 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/images-folder": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ImagesFolderInfo"];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        put: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["StarRequest"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ImagesFolderInfo"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/update": {
         parameters: {
             query?: never;
@@ -3474,6 +3559,16 @@ export interface components {
         IconicRequest: {
             iconic: boolean;
         };
+        ImageHomeInfo: {
+            star: null | string;
+            folder: null | string;
+            managedByOtteretro: boolean;
+            available: boolean;
+        };
+        ImagesFolderInfo: {
+            home: components["schemas"]["ImageHomeInfo"];
+            disks: components["schemas"]["StarDisk"][];
+        };
         LanguageRequest: {
             language: string;
         };
@@ -3689,6 +3784,16 @@ export interface components {
         SourceRef: {
             title: string;
             url: string;
+        };
+        StarDisk: {
+            name: string;
+            folder: string;
+            hasOtteretro: boolean;
+            /** Format: int64 */
+            free: number | string;
+        };
+        StarRequest: {
+            star: null | string;
         };
         StoreEntry: {
             store: string;

@@ -47,7 +47,8 @@ public static class ImageRefs
             var http = Handler is null ? Shared : new HttpClient(Handler);
             var bytes = await http.GetByteArrayAsync(url);
             var webp = SteamGridDb.ToWebp(bytes, kind);
-            var folder = SteamGridDb.Folder(db);
+            // Sin ★, o con su disco desconectado, no se baja: no se crea una carpeta nueva vacía en otro lado (#9).
+            if (ImageHome.Info(db) is not { Available: true, Folder: { } folder }) return null;
             Directory.CreateDirectory(folder);
             var path = Path.Combine(folder, $"{gameId}-{kind}{(webp is null ? Path.GetExtension(new Uri(url).AbsolutePath) : ".webp")}");
             SteamGridDb.Write(path, webp ?? bytes);

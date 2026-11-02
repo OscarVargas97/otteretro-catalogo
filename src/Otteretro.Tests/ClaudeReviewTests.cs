@@ -94,7 +94,7 @@ public class ClaudeReviewTests : IAsyncDisposable
     public void SagaHeroComesFromTheLatestIconicGame()
     {
         Assert.Null(Catalog.CatalogQueries.Saga(f.Db, 1)!.HeroGameId); // sin héroes, el fondo de siempre
-        var folder = Catalog.SteamGridDb.Folder(f.Db);
+        var folder = Catalog.SteamGridDb.Folder(f.Db)!;
         Directory.CreateDirectory(folder);
         foreach (var id in new[] { 10, 11 }) File.WriteAllText(Path.Combine(folder, $"{id}-hero.webp"), "héroe");
         Directory.SetLastWriteTimeUtc(folder, DateTime.UtcNow.AddSeconds(1)); // lo recordado se vuelve a leer

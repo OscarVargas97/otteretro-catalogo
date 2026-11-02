@@ -119,7 +119,7 @@ public static class CatalogQueries
             return c.Query<long>("SELECT game_id FROM catalog.image WHERE kind = @kind AND game_id IN (SELECT id FROM catalog.game)", new { kind }).ToHashSet();
         }
         var folder = SteamGridDb.Folder(db);
-        if (!Directory.Exists(folder)) return Refs();
+        if (folder is null || !Directory.Exists(folder)) return Refs();
         var stamp = Directory.GetLastWriteTimeUtc(folder);
         lock (imageCache)
             if (imageCache.TryGetValue(kind, out var hit) && hit.Folder == folder && hit.Stamp == stamp) return [.. hit.Ids, .. Refs()];

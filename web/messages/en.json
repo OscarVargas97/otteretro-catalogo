@@ -94,7 +94,8 @@
     "done": "Done",
     "accountsTitle": "The keys to generate the catalog",
     "accountsText": "IGDB brings the game data and SteamGridDB the images. You can add them later in Settings › Accounts and keys.",
-    "next": "Next"
+    "next": "Next",
+    "imagesTitle": "Images"
   },
   "settings": {
     "dataFolder": "Data folder",
@@ -216,7 +217,18 @@
       }
     },
     "storage": "Storage",
-    "attribution": "Game data: IGDB.com"
+    "attribution": "Game data: IGDB.com",
+    "images": {
+      "title": "Images",
+      "current": "The images are in {path}.",
+      "managed": "It's Otteretro's ★ disk: what either program downloads works for the other. If you change the ★ in Otteretro, this program follows it.",
+      "choose": "Otteretro isn't installed. Choose the ★ disk: it's prepared just like in Otteretro, and if you install it later, it recognizes it as its own.",
+      "chooseOther": "Otteretro isn't installed. If you change the ★ disk, the images are moved to the new one.",
+      "hasOtteretro": "already has Otteretro",
+      "moves": "When you change it, the images move and aren't downloaded again.",
+      "missing": "The ★ disk ({path}) isn't connected. Connect it to see and download images.",
+      "preparing": "Preparing the disk and moving the images…"
+    }
   },
   "dataFolder": {
     "dismiss": "Dismiss",
@@ -556,6 +568,11 @@
       "corrupt": "{file} arrived damaged three times: the link may be bad. Download it again or find it elsewhere.",
       "archiveBroken": "{file} arrived damaged: it failed its CRC when extracting. Nothing was deleted; download it again.",
       "badParallel": "That number is over the site's limit for your account."
+    },
+    "images": {
+      "folderMissing": "The images ★ disk ({path}) isn't connected.",
+      "noStar": "There's no ★ disk for the images yet: choose it in Settings › General.",
+      "managedByOtteretro": "Otteretro manages the ★ disk: change it from Otteretro."
     },
     "edit": {
       "noSaga": "The saga doesn't exist.",

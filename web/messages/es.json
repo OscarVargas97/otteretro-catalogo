@@ -94,7 +94,8 @@
     "done": "Listo",
     "accountsTitle": "Las claves para generar el catálogo",
     "accountsText": "IGDB trae los datos de juegos y SteamGridDB, las imágenes. Puedes agregarlas después en Ajustes › Cuentas y claves.",
-    "next": "Siguiente"
+    "next": "Siguiente",
+    "imagesTitle": "Las imágenes"
   },
   "settings": {
     "dataFolder": "Carpeta de datos",
@@ -216,7 +217,18 @@
       }
     },
     "storage": "Almacenamiento",
-    "attribution": "Datos de juegos: IGDB.com"
+    "attribution": "Datos de juegos: IGDB.com",
+    "images": {
+      "title": "Imágenes",
+      "current": "Las imágenes están en {path}.",
+      "managed": "Es el disco ★ de Otteretro: lo que baje cualquiera de los dos programas le sirve al otro. Si cambias el ★ en Otteretro, este programa lo sigue solo.",
+      "choose": "Otteretro no está instalado. Elige el disco ★: se prepara igual que en Otteretro, y si después lo instalas, lo reconoce como suyo.",
+      "chooseOther": "Otteretro no está instalado. Si cambias el disco ★, las imágenes se llevan al nuevo.",
+      "hasOtteretro": "ya tiene Otteretro",
+      "moves": "Al cambiarlo, las imágenes se mudan y no se vuelven a bajar.",
+      "missing": "El disco ★ ({path}) no está conectado. Conéctalo para ver y bajar imágenes.",
+      "preparing": "Preparando el disco y llevando las imágenes…"
+    }
   },
   "dataFolder": {
     "dismiss": "Cerrar aviso",
@@ -556,6 +568,11 @@
       "corrupt": "{file} llegó dañado tres veces: el enlace puede estar mal. Vuelve a bajarlo o búscalo en otro lado.",
       "archiveBroken": "{file} llegó dañado: no pasó su CRC al descomprimirlo. No se borró nada; vuelve a bajarlo.",
       "badParallel": "Ese número pasa el tope del sitio con tu cuenta."
+    },
+    "images": {
+      "folderMissing": "El disco ★ de las imágenes ({path}) no está conectado.",
+      "noStar": "Todavía no hay disco ★ para las imágenes: elígelo en Ajustes › General.",
+      "managedByOtteretro": "El disco ★ lo maneja Otteretro: cámbialo desde Otteretro."
     },
     "edit": {
       "noSaga": "La saga no existe.",

@@ -18,6 +18,9 @@ public static class Startup
         DataFolder.Upgrade(folder);
         var db = DataFolder.Open(folder);
         var applied = Migrations.Apply(db);
+        // Si el ★ cambió (o es la primera vez después de #9), las imágenes que quedaron atrás se llevan al ★.
+        try { Catalog.ImageHome.Migrate(db); }
+        catch (Exception e) when (e is IOException or UnauthorizedAccessException) { FileLog.Write(LogLevel.Warning, "Images", e.Message); }
         Migrations.RegisterMachine(db, config.MachineId);
         Catalog.IgdbImport.EnqueuePopularity(db);
         FolderMove.RememberedSize(folder); // empieza a medirla, para que Ajustes no espere
