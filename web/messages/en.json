@@ -94,7 +94,8 @@
     "done": "Done",
     "accountsTitle": "The keys to generate the catalog",
     "accountsText": "IGDB brings the game data and SteamGridDB the images. You can add them later in Settings › Accounts and keys.",
-    "next": "Next"
+    "next": "Next",
+    "imagesTitle": "Images"
   },
   "settings": {
     "dataFolder": "Data folder",
@@ -219,16 +220,14 @@
     "attribution": "Game data: IGDB.com",
     "images": {
       "title": "Images",
-      "text": "Choose the Otteretro folder so the same image isn't downloaded twice. What either program downloads works for the other.",
-      "own": "This program's own folder",
-      "disk": "Otteretro on {disk}",
-      "hasImages": "Has images",
-      "noImages": "No images: Otteretro doesn't keep its data on this disk",
-      "noDisks": "Otteretro wasn't found on this computer.",
-      "other": "Another folder",
-      "use": "Use",
-      "current": "In use: {path}",
-      "missing": "The folder {path} isn't available. Is the disk connected?"
+      "current": "The images are in {path}.",
+      "managed": "It's Otteretro's ★ disk: what either program downloads works for the other. If you change the ★ in Otteretro, this program follows it.",
+      "choose": "Otteretro isn't installed. Choose the ★ disk: it's prepared just like in Otteretro, and if you install it later, it recognizes it as its own.",
+      "chooseOther": "Otteretro isn't installed. If you change the ★ disk, the images are moved to the new one.",
+      "hasOtteretro": "already has Otteretro",
+      "moves": "When you change it, the images move and aren't downloaded again.",
+      "missing": "The ★ disk ({path}) isn't connected. Connect it to see and download images.",
+      "preparing": "Preparing the disk and moving the images…"
     }
   },
   "dataFolder": {
@@ -572,7 +571,9 @@
       "badParallel": "That number is over the site's limit for your account."
     },
     "images": {
-      "folderMissing": "The images folder {path} isn't available. Is the disk connected?"
+      "folderMissing": "The images ★ disk ({path}) isn't connected.",
+      "noStar": "There's no ★ disk for the images yet: choose it in Settings › General.",
+      "managedByOtteretro": "Otteretro manages the ★ disk: change it from Otteretro."
     }
   },
   "credentials": {

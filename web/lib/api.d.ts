@@ -391,7 +391,7 @@ export interface paths {
             };
             requestBody: {
                 content: {
-                    "application/json": components["schemas"]["ImagesFolderRequest"];
+                    "application/json": components["schemas"]["StarRequest"];
                 };
             };
             responses: {
@@ -2871,14 +2871,15 @@ export interface components {
             /** Format: int32 */
             total: number | string;
         };
-        ImagesFolderInfo: {
-            path: string;
-            shared: boolean;
+        ImageHomeInfo: {
+            star: null | string;
+            folder: null | string;
+            managedByOtteretro: boolean;
             available: boolean;
-            disks: components["schemas"]["OtteretroDisk"][];
         };
-        ImagesFolderRequest: {
-            path: null | string;
+        ImagesFolderInfo: {
+            home: components["schemas"]["ImageHomeInfo"];
+            disks: components["schemas"]["StarDisk"][];
         };
         LanguageRequest: {
             language: string;
@@ -2923,11 +2924,6 @@ export interface components {
             destination: null | string;
             error: null | components["schemas"]["ApiError"];
             warning: null | components["schemas"]["ApiError"];
-        };
-        OtteretroDisk: {
-            name: string;
-            folder: string;
-            hasImages: boolean;
         };
         PlatformInfo: {
             /** Format: int64 */
@@ -3052,6 +3048,16 @@ export interface components {
         SourceRef: {
             title: string;
             url: string;
+        };
+        StarDisk: {
+            name: string;
+            folder: string;
+            hasOtteretro: boolean;
+            /** Format: int64 */
+            free: number | string;
+        };
+        StarRequest: {
+            star: null | string;
         };
         StoreEntry: {
             store: string;

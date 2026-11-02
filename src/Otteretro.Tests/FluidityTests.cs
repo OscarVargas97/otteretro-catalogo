@@ -62,7 +62,7 @@ public class FluidityTests(ITestOutputHelper output) : IAsyncLifetime
                 """);
         }
         // 25.000 portadas (vacías: solo cuenta que existan).
-        var images = SteamGridDb.Folder(f.Db);
+        var images = SteamGridDb.Folder(f.Db)!;
         Directory.CreateDirectory(images);
         for (var id = 1; id <= 25000; id++) File.Create(Path.Combine(images, $"{id * 2}-cover.png")).Dispose();
 

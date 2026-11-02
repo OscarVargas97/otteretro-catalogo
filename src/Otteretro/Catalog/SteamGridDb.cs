@@ -82,59 +82,23 @@ public static class SteamGridDb
             TaskQueue.Enqueue(db, "sgdb.webp");
     }
 
-    // La carpeta común la convierte Otteretro: convertir aquí borraría originales que no son de este programa (#9).
-    static string[] Unconverted(Database db) => SharedFolder(db) is null && Directory.Exists(Folder(db))
-        ? Directory.GetFiles(Folder(db)).Where(f => Path.GetExtension(f) != ".webp" && !Path.GetFileName(f).StartsWith('.')).Order().ToArray()
+    /// <summary>Lo que falta convertir a WebP. Con el ★ de Otteretro no se convierte aquí: es Otteretro quien lo hace (#9).</summary>
+    static string[] Unconverted(Database db) => ImageHome.Info(db) is { ManagedByOtteretro: false, Available: true, Folder: { } folder } && Directory.Exists(folder)
+        ? Directory.GetFiles(folder).Where(f => Path.GetExtension(f) != ".webp" && !Path.GetFileName(f).StartsWith('.')).Order().ToArray()
         : [];
 
-    /// <summary>La carpeta de imágenes: la elegida en Ajustes (#9) o, sin ella, la propia, que va con el catálogo (#167).</summary>
-    public static string Folder(Database db) => SharedFolder(db) ?? Path.Combine(Path.GetDirectoryName(db.CatalogPath)!, "imagenes");
-
-    /// <summary>La ruta elegida va en un archivo junto al catálogo: se muda con él y nunca entra en lo publicado.</summary>
-    static string SharedFile(Database db) => Path.Combine(Path.GetDirectoryName(db.CatalogPath)!, "imagenes-compartidas.txt");
-
-    static readonly System.Collections.Concurrent.ConcurrentDictionary<string, string?> sharedFolders = new();
-
-    /// <summary>La carpeta común con Otteretro (#9), o null si se usa la propia. Se recuerda: se consulta por cada imagen.</summary>
-    public static string? SharedFolder(Database db) => sharedFolders.GetOrAdd(SharedFile(db),
-        file => File.Exists(file) && File.ReadAllText(file).Trim() is { Length: > 0 } path ? path : null);
-
-    public static void SetSharedFolder(Database db, string? folder)
-    {
-        var file = SharedFile(db);
-        if (folder is null) File.Delete(file);
-        else
-        {
-            Directory.CreateDirectory(Path.GetDirectoryName(file)!);
-            File.WriteAllText(file, folder);
-        }
-        sharedFolders[file] = folder;
-    }
-
-    /// <summary>Un disco con Otteretro instalado (#9): lleva su marca `otteretro-ubicacion.json` o, si guarda los datos, `catalogo`.</summary>
-    public record OtteretroDisk(string Name, string Folder, bool HasImages);
-
-    public static List<OtteretroDisk> OtteretroDisks(IEnumerable<string> roots) => roots
-        .Select(root => (Root: root, Install: Path.Combine(root, "Otteretro")))
-        .Where(d => File.Exists(Path.Combine(d.Install, "otteretro-ubicacion.json")) || Directory.Exists(Path.Combine(d.Install, "catalogo")))
-        .Select(d => (d.Root, Images: Path.Combine(d.Install, "catalogo", "imagenes")))
-        .Select(d => new OtteretroDisk(d.Root, d.Images, Directory.Exists(d.Images) && Directory.EnumerateFileSystemEntries(d.Images).Any()))
-        .ToList();
+    /// <summary>La carpeta de imágenes: `catalogo\imagenes` del disco ★ (#9), o null si todavía no hay ★.</summary>
+    public static string? Folder(Database db) => ImageHome.Folder(db);
 
     /// <summary>
-    /// Borra las imágenes de un juego que ya no existe. En la carpeta común no borra nada (#9): Otteretro todavía puede tener ese
-    /// juego, porque recibe el cambio recién cuando se publica, y los ids publicados no se reutilizan.
+    /// Las imágenes de un juego que deja de existir se quedan (#9): la carpeta es la de Otteretro, que todavía puede tener ese juego
+    /// hasta que recibe el catálogo nuevo, y los ids publicados no se reutilizan.
     /// </summary>
-    public static void Forget(Database db, long gameId)
-    {
-        if (SharedFolder(db) is not null) return;
-        foreach (var kind in Kinds)
-            while (Find(db, gameId, kind) is { } file) File.Delete(file);
-    }
+    public static void Forget(Database db, long gameId) { }
 
     /// <summary>La imagen guardada de un juego, o null si todavía no hay.</summary>
     public static string? Find(Database db, long gameId, string kind) =>
-        Directory.Exists(Folder(db)) ? Directory.EnumerateFiles(Folder(db), $"{gameId}-{kind}.*").FirstOrDefault() : null;
+        Folder(db) is { } folder && Directory.Exists(folder) ? Directory.EnumerateFiles(folder, $"{gameId}-{kind}.*").FirstOrDefault() : null;
 
     public static async Task Images(TaskRun run, CancellationToken ct)
     {
@@ -144,9 +108,10 @@ public static class SteamGridDb
 
         var api = new ApiClient(run.Db, Handler);
         var http = Handler is null ? Shared : new HttpClient(Handler);
-        var folder = Folder(run.Db);
+        var home = ImageHome.Info(run.Db);
+        if (home.Folder is not { } folder) throw new TaskException(ApiError.Of("images.noStar"));
         // Un disco desconectado no se reemplaza por una carpeta nueva vacía (#9).
-        if (SharedFolder(run.Db) is not null && !Directory.Exists(folder)) throw new TaskException(ApiError.Of("images.folderMissing", ("path", folder)));
+        if (!home.Available) throw new TaskException(ApiError.Of("images.folderMissing", ("path", home.Star!)));
         Directory.CreateDirectory(folder);
         EnqueueConvert(run.Db);
 

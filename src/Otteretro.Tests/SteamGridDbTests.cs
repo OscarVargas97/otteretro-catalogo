@@ -90,7 +90,7 @@ public class SteamGridDbTests
         await using var f = new Fixture();
         using (var c = f.Db.Open())
             c.Execute("INSERT INTO game (id, name_es, original_name) VALUES (1, 'Zelda', 'Zelda')");
-        var folder = SteamGridDb.Folder(f.Db);
+        var folder = SteamGridDb.Folder(f.Db)!;
         Directory.CreateDirectory(folder);
         File.WriteAllBytes(Path.Combine(folder, "1-cover.png"), Png(1200, 1800));
         File.WriteAllBytes(Path.Combine(folder, "1-hero.png"), [1, 2, 3]);
@@ -134,7 +134,7 @@ public class SteamGridDbTests
             c.Execute("DELETE FROM game WHERE id = 2");
         };
         Assert.Equal("done", (await f.Run(SteamGridDb.Enqueue(f.Db))).Status);
-        Assert.Null(SteamGridDb.Find(f.Db, 2, "cover"));
+        Assert.NotNull(SteamGridDb.Find(f.Db, 2, "cover")); // #9: en el ★ de Otteretro no se borra nada
     }
 
     /// <summary>#78: un juego que entra mientras se bajan portadas queda para otra pasada que empieza después del último de la lista.</summary>
@@ -170,7 +170,7 @@ public class SteamGridDbTests
 
         var task = await f.Run(SteamGridDb.Enqueue(f.Db));
         Assert.Equal(("done", 100), (task.Status, task.Progress));
-        var files = Directory.GetFiles(SteamGridDb.Folder(f.Db)).Select(Path.GetFileName).Order();
+        var files = Directory.GetFiles(SteamGridDb.Folder(f.Db)!).Select(Path.GetFileName).Order();
         Assert.Equal(["1-cover.webp", "1-logo.webp", "2-cover.jpg"], files);
 
         var app = LocalServer.Create(f.Session, b => b.WebHost.UseTestServer());
@@ -202,7 +202,7 @@ public class SteamGridDbTests
                 """);
 
         Assert.Equal("done", (await f.Run(SteamGridDb.Enqueue(f.Db))).Status);
-        var files = Directory.GetFiles(SteamGridDb.Folder(f.Db)).Select(Path.GetFileName).Order();
+        var files = Directory.GetFiles(SteamGridDb.Folder(f.Db)!).Select(Path.GetFileName).Order();
         Assert.Equal(["3-cover.jpg", "4-cover.jpg"], files);
     }
 
@@ -219,9 +219,9 @@ public class SteamGridDbTests
     {
         await using var f = new Fixture();
         using (var c = f.Db.Open()) c.Execute("INSERT INTO game (id, name_es, original_name) VALUES (1, 'A', 'A'), (2, 'B', 'B'), (99, 'C', 'C')");
-        Directory.CreateDirectory(SteamGridDb.Folder(f.Db));
-        File.WriteAllBytes(Path.Combine(SteamGridDb.Folder(f.Db), "1-cover.webp"), [1]);
-        File.WriteAllBytes(Path.Combine(SteamGridDb.Folder(f.Db), "500-cover.webp"), [1]); // de un juego que ya no está: no cuenta
+        Directory.CreateDirectory(SteamGridDb.Folder(f.Db)!);
+        File.WriteAllBytes(Path.Combine(SteamGridDb.Folder(f.Db)!, "1-cover.webp"), [1]);
+        File.WriteAllBytes(Path.Combine(SteamGridDb.Folder(f.Db)!, "500-cover.webp"), [1]); // de un juego que ya no está: no cuenta
 
         Assert.Equal(new SteamGridDb.CoversInfo(1, 3, false, false), SteamGridDb.Request(f.Db, hasKey: false));
         Assert.True(SteamGridDb.Request(f.Db, hasKey: true).Running);
@@ -231,68 +231,94 @@ public class SteamGridDbTests
     }
 }
 
-/// <summary>#9: la carpeta de imágenes común con Otteretro.</summary>
-public class SharedImagesTests
+/// <summary>#9: las imágenes van en el disco ★ de Otteretro y lo siguen.</summary>
+public class ImageHomeTests : IDisposable
 {
-    static Otteretro.Data.Database Db(TempDir tmp) => new(Path.Combine(tmp.Path, "data", "otteretro.db"), Path.Combine(tmp.Path, "catalogo", "catalogo.db"));
+    readonly TempDir tmp = new();
+    readonly string previous = ImageHome.OtteretroConfig;
+    public void Dispose()
+    {
+        ImageHome.OtteretroConfig = previous;
+        tmp.Dispose();
+    }
+
+    Otteretro.Data.Database Db() => new(Path.Combine(tmp.Path, "datos", "data", "otteretro.db"), Path.Combine(tmp.Path, "datos", "catalogo", "catalogo.db"));
+
+    void OtteretroOn(string dataFolder)
+    {
+        Directory.CreateDirectory(tmp["otteretro"]);
+        ImageHome.OtteretroConfig = Path.Combine(tmp["otteretro"], "config.json");
+        File.WriteAllText(ImageHome.OtteretroConfig, $$"""{ "carpetaDatos": {{System.Text.Json.JsonSerializer.Serialize(dataFolder)}}, "equipoId": "x" }""");
+        File.SetLastWriteTimeUtc(ImageHome.OtteretroConfig, DateTime.UtcNow.AddSeconds(Random.Shared.Next(1, 1000))); // lo recordado se vuelve a leer
+    }
 
     [Fact]
-    public void AnImageInTheSharedFolderIsFoundAndNeverDeleted()
+    public void WithOtteretroTheImagesAreThoseOfItsStarAndFollowItWhenItChanges()
     {
-        using var tmp = new TempDir();
-        var db = Db(tmp);
-        var shared = Directory.CreateDirectory(Path.Combine(tmp.Path, "Otteretro", "catalogo", "imagenes")).FullName;
-        var image = Path.Combine(shared, "7-cover.webp");
-        File.WriteAllText(image, "portada");
+        var db = Db();
+        ImageHome.OtteretroConfig = tmp["no-existe.json"];
+        Assert.Null(SteamGridDb.Folder(db)!); // sin ★ no hay carpeta propia
 
-        Assert.Null(SteamGridDb.Find(db, 7, "cover")); // la carpeta propia no la tiene
-        SteamGridDb.SetSharedFolder(db, shared);
-        Assert.Equal(image, SteamGridDb.Find(db, 7, "cover"));
+        var d = Directory.CreateDirectory(Path.Combine(tmp.Path, "D", "Otteretro", "catalogo", "imagenes")).FullName;
+        File.WriteAllText(Path.Combine(d, "7-cover.webp"), "portada");
+        OtteretroOn(Path.Combine(tmp.Path, "D", "Otteretro"));
+        Assert.Equal(Path.Combine(d, "7-cover.webp"), SteamGridDb.Find(db, 7, "cover"));
+        Assert.True(ImageHome.Info(db).ManagedByOtteretro);
+        Assert.Equal("images.managedByOtteretro", ImageHome.SetStar(db, tmp["E"])!.Code);
 
+        // Otteretro muda el ★ a E: con sus imágenes; la administración lo sigue sin hacer nada.
+        Directory.Move(Path.Combine(tmp.Path, "D", "Otteretro"), Directory.CreateDirectory(tmp["E"]).FullName + "/Otteretro");
+        OtteretroOn(Path.Combine(tmp.Path, "E", "Otteretro"));
+        Assert.Equal(Path.Combine(tmp.Path, "E", "Otteretro", "catalogo", "imagenes", "7-cover.webp"), SteamGridDb.Find(db, 7, "cover"));
+        Assert.Equal(0, ImageHome.Migrate(db));
+    }
+
+    [Fact]
+    public void WithoutOtteretroTheStarIsPreparedLikeOtteretroAndChangingItBringsTheImages()
+    {
+        var db = Db();
+        ImageHome.OtteretroConfig = tmp["no-existe.json"];
+        // Lo que había en la carpeta propia de antes de #9 se lleva al ★.
+        var own = Directory.CreateDirectory(Path.Combine(tmp.Path, "datos", "catalogo", "imagenes")).FullName;
+        File.WriteAllText(Path.Combine(own, "1-cover.webp"), "vieja");
+
+        var d = Path.Combine(tmp.Path, "D", "Otteretro");
+        Assert.Null(ImageHome.SetStar(db, d));
+        Assert.True(File.Exists(Path.Combine(d, ImageHome.MarkerFile)));
+        Assert.Contains("\"contenido\": \"disk\"", File.ReadAllText(Path.Combine(d, ImageHome.MarkerFile)));
+        foreach (var folder in new[] { "Juegos", "Emuladores", "Ports", "Complementos", "Sistema" }) Assert.True(Directory.Exists(Path.Combine(d, folder)));
+        Assert.Equal(Path.Combine(d, "catalogo", "imagenes", "1-cover.webp"), SteamGridDb.Find(db, 1, "cover"));
+        Assert.False(Directory.Exists(own));
+
+        // Cambiar el ★ lleva las imágenes, sin pisar las que ya estaban en el nuevo.
+        var e = Path.Combine(tmp.Path, "E", "Otteretro");
+        Directory.CreateDirectory(Path.Combine(e, "catalogo", "imagenes"));
+        File.WriteAllText(Path.Combine(e, "catalogo", "imagenes", "1-cover.webp"), "la del nuevo");
+        File.WriteAllText(Path.Combine(d, "catalogo", "imagenes", "2-cover.webp"), "otra");
+        Assert.Null(ImageHome.SetStar(db, e));
+        Assert.Equal("la del nuevo", File.ReadAllText(Path.Combine(e, "catalogo", "imagenes", "1-cover.webp")));
+        Assert.True(File.Exists(Path.Combine(e, "catalogo", "imagenes", "2-cover.webp")));
+
+        // Y si después se instala Otteretro en ese disco, es el mismo ★.
+        OtteretroOn(e);
+        Assert.Equal(Path.Combine(e, "catalogo", "imagenes", "2-cover.webp"), SteamGridDb.Find(db, 2, "cover"));
+    }
+
+    [Fact]
+    public void ImagesAreNeverDeletedAndADisconnectedStarIsNotRecreated()
+    {
+        var db = Db();
+        ImageHome.OtteretroConfig = tmp["no-existe.json"];
+        var d = Path.Combine(tmp.Path, "D", "Otteretro");
+        Assert.Null(ImageHome.SetStar(db, d));
+        File.WriteAllText(Path.Combine(d, "catalogo", "imagenes", "7-cover.webp"), "portada");
         SteamGridDb.Forget(db, 7);
-        Assert.True(File.Exists(image)); // fusionar o depurar no le quita imágenes a Otteretro
+        Assert.NotNull(SteamGridDb.Find(db, 7, "cover"));
 
-        SteamGridDb.SetSharedFolder(db, null);
+        Directory.Delete(d, true); // el disco se desconectó
+        Assert.False(ImageHome.Info(db).Available);
         Assert.Null(SteamGridDb.Find(db, 7, "cover"));
-        Assert.True(File.Exists(image));
-    }
-
-    [Fact]
-    public void OwnFolderStillDeletesImagesOfAGameThatIsGone()
-    {
-        using var tmp = new TempDir();
-        var db = Db(tmp);
-        Directory.CreateDirectory(SteamGridDb.Folder(db));
-        var image = Path.Combine(SteamGridDb.Folder(db), "7-cover.webp");
-        File.WriteAllText(image, "portada");
-        SteamGridDb.Forget(db, 7);
-        Assert.False(File.Exists(image));
-    }
-
-    [Fact]
-    public void TheChosenFolderSurvivesARestart()
-    {
-        using var tmp = new TempDir();
-        SteamGridDb.SetSharedFolder(Db(tmp), tmp.Path);
-        Assert.Equal(tmp.Path, SteamGridDb.SharedFolder(Db(tmp)));
-    }
-
-    [Fact]
-    public void ListsOnlyDisksWithOtteretroAndSaysWhichHasImages()
-    {
-        using var tmp = new TempDir();
-        var disk = (string name) => Directory.CreateDirectory(Path.Combine(tmp.Path, name)).FullName;
-        var (withImages, onlyMark, empty) = (disk("d"), disk("e"), disk("f"));
-        Directory.CreateDirectory(Path.Combine(withImages, "Otteretro", "catalogo", "imagenes"));
-        File.WriteAllText(Path.Combine(withImages, "Otteretro", "catalogo", "imagenes", "1-cover.webp"), "x");
-        Directory.CreateDirectory(Path.Combine(onlyMark, "Otteretro"));
-        File.WriteAllText(Path.Combine(onlyMark, "Otteretro", "otteretro-ubicacion.json"), "{}");
-
-        var disks = SteamGridDb.OtteretroDisks([withImages, onlyMark, empty]);
-
-        Assert.Equal([withImages, onlyMark], disks.Select(d => d.Name));
-        Assert.True(disks[0].HasImages);
-        Assert.Equal(Path.Combine(withImages, "Otteretro", "catalogo", "imagenes"), disks[0].Folder);
-        Assert.False(disks[1].HasImages);
+        Assert.Equal(0, ImageHome.Migrate(db));
+        Assert.False(Directory.Exists(d));
     }
 }

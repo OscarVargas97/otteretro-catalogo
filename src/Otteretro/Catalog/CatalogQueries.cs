@@ -113,7 +113,7 @@ public static class CatalogQueries
     internal static HashSet<long> Images(Database db, string kind)
     {
         var folder = SteamGridDb.Folder(db);
-        if (!Directory.Exists(folder)) return [];
+        if (folder is null || !Directory.Exists(folder)) return [];
         var stamp = Directory.GetLastWriteTimeUtc(folder);
         lock (imageCache)
             if (imageCache.TryGetValue(kind, out var hit) && hit.Folder == folder && hit.Stamp == stamp) return hit.Ids;

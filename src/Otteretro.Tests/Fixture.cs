@@ -20,6 +20,7 @@ sealed class Fixture : IAsyncDisposable
         config = new AppConfig { DataFolder = Tmp["datos"] };
         Assert.Null(DataFolder.Prepare(config.DataFolder));
         Db = Startup.PrepareData(config);
+        Assert.Null(Catalog.ImageHome.SetStar(Db, Tmp["disco-estrella"])); // el ★ de esta prueba (#9)
         var credentials = new Credentials(Db, config.MachineId, box);
         foreach (var (id, value) in keys) credentials.Save(id, value);
         var session = Session = new AppSession(config, Tmp["config.json"], "k");

@@ -29,13 +29,12 @@ public record Drive(string Name, long Free, long Total, string Folder, bool Sugg
 /// <param name="Used">Null mientras se mide por primera vez.</param>
 public record FolderInfo(string? Path, long? Used, long FreeOnDrive);
 
-/// <summary>Ajustes › General › Imágenes (#9).</summary>
-/// <param name="Shared">Usa una carpeta común y no la propia.</param>
-/// <param name="Available">La carpeta en uso existe; con un disco desconectado, no.</param>
-public record ImagesFolderInfo(string Path, bool Shared, bool Available, List<Catalog.SteamGridDb.OtteretroDisk> Disks);
+/// <summary>Ajustes › General › Imágenes (#9): el disco ★ donde están y, sin Otteretro, los discos donde se puede poner.</summary>
+public record ImagesFolderInfo(Catalog.ImageHomeInfo Home, List<Catalog.StarDisk> Disks);
 
-/// <param name="Path">La carpeta común; null vuelve a la propia.</param>
-public record ImagesFolderRequest(string? Path);
+/// <param name="Star">La carpeta del ★ (`&lt;disco&gt;\Otteretro`).</param>
+public record StarRequest(string? Star);
+
 
 /// <summary>Endpoints base de F0. Cada módulo añadirá los suyos.</summary>
 public static class Endpoints
@@ -105,15 +104,12 @@ public static class Endpoints
         api.MapGet("/images-folder", Results<Ok<ImagesFolderInfo>, Conflict<ApiError>> (AppSession s) =>
             DataFolder.IsReady(s.Config.DataFolder) ? TypedResults.Ok(ImagesFolder(DataFolder.Open(s.Config.DataFolder!))) : TypedResults.Conflict(ApiError.Of("move.noDataFolder")));
 
-        api.MapPut("/images-folder", Results<Ok<ImagesFolderInfo>, BadRequest<ApiError>, Conflict<ApiError>> (ImagesFolderRequest request, AppSession s) =>
+        // Sin Otteretro: preparar el ★ como lo haría Otteretro, o cambiarlo (lleva las imágenes).
+        api.MapPut("/images-folder", Results<Ok<ImagesFolderInfo>, BadRequest<ApiError>, Conflict<ApiError>> (StarRequest request, AppSession s) =>
         {
             if (!DataFolder.IsReady(s.Config.DataFolder)) return TypedResults.Conflict(ApiError.Of("move.noDataFolder"));
-            var path = string.IsNullOrWhiteSpace(request.Path) ? null : request.Path.Trim();
-            if (path is not null && (!Path.IsPathFullyQualified(path) || !Directory.Exists(path)))
-                return TypedResults.BadRequest(ApiError.Of("images.folderMissing", ("path", path)));
             var db = DataFolder.Open(s.Config.DataFolder!);
-            Catalog.SteamGridDb.SetSharedFolder(db, path);
-            return TypedResults.Ok(ImagesFolder(db));
+            return Catalog.ImageHome.SetStar(db, request.Star) is { } error ? TypedResults.BadRequest(error) : TypedResults.Ok(ImagesFolder(db));
         });
 
         // Ajustes › General › Actualizaciones (#180): el canal y, con «custom», el origen. Al cambiarlo se busca de inmediato.
@@ -199,14 +195,8 @@ public static class Endpoints
         }
     }
 
-    static ImagesFolderInfo ImagesFolder(Data.Database db)
-    {
-        var folder = Catalog.SteamGridDb.Folder(db);
-        var roots = DriveInfo.GetDrives().Where(d => d.IsReady && (!OperatingSystem.IsWindows() || d.DriveType == DriveType.Fixed)).Select(d => d.Name);
-        // En Linux, Otteretro suele quedar en la carpeta personal (#114), que no es un montaje.
-        if (!OperatingSystem.IsWindows()) roots = roots.Append(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
-        return new(folder, Catalog.SteamGridDb.SharedFolder(db) is not null, Directory.Exists(folder), Catalog.SteamGridDb.OtteretroDisks(roots.Distinct()));
-    }
+    static ImagesFolderInfo ImagesFolder(Data.Database db) => new(Catalog.ImageHome.Info(db), Catalog.ImageHome.Disks(DriveInfo.GetDrives()
+        .Where(d => d.IsReady && (!OperatingSystem.IsWindows() || d.DriveType == DriveType.Fixed)).Select(d => (d.Name, d.AvailableFreeSpace))));
 
     static string ImageType(string file) => Path.GetExtension(file).ToLowerInvariant() switch
     {

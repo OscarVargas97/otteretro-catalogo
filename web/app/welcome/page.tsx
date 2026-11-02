@@ -1,6 +1,7 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { ImagesFolder } from "@/components/ImagesFolder";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -128,6 +129,8 @@ function AccountsStep({ onBack }: { onBack: () => void }) {
     <>
       <h1>{t("accountsTitle")}</h1>
       <p className="small muted">{t("accountsText")}</p>
+      {/* El disco ★ de las imágenes (#9): con Otteretro, el suyo; sin él, se elige aquí como en Otteretro. */}
+      <section className="panel"><h2>{t("imagesTitle")}</h2><ImagesFolder /></section>
       <CredentialsSettings only={["igdb", "steamgriddb", "rawg"]} />
       <div style={{ display: "flex", gap: 8 }}>
         <button className="ot-btn" type="button" onClick={onBack}>{t("back")}</button>

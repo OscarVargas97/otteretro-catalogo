@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:60281/"
+      "url": "http://127.0.0.1:51416/"
     }
   ],
   "paths": {
@@ -299,7 +299,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ImagesFolderRequest"
+                "$ref": "#/components/schemas/StarRequest"
               }
             }
           },
@@ -3347,43 +3347,50 @@
           }
         }
       },
-      "ImagesFolderInfo": {
+      "ImageHomeInfo": {
         "required": [
-          "path",
-          "shared",
-          "available",
-          "disks"
+          "star",
+          "folder",
+          "managedByOtteretro",
+          "available"
         ],
         "type": "object",
         "properties": {
-          "path": {
-            "type": "string"
-          },
-          "shared": {
-            "type": "boolean"
-          },
-          "available": {
-            "type": "boolean"
-          },
-          "disks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OtteretroDisk"
-            }
-          }
-        }
-      },
-      "ImagesFolderRequest": {
-        "required": [
-          "path"
-        ],
-        "type": "object",
-        "properties": {
-          "path": {
+          "star": {
             "type": [
               "null",
               "string"
             ]
+          },
+          "folder": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "managedByOtteretro": {
+            "type": "boolean"
+          },
+          "available": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ImagesFolderInfo": {
+        "required": [
+          "home",
+          "disks"
+        ],
+        "type": "object",
+        "properties": {
+          "home": {
+            "$ref": "#/components/schemas/ImageHomeInfo"
+          },
+          "disks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StarDisk"
+            }
           }
         }
       },
@@ -3613,25 +3620,6 @@
                 "$ref": "#/components/schemas/ApiError"
               }
             ]
-          }
-        }
-      },
-      "OtteretroDisk": {
-        "required": [
-          "name",
-          "folder",
-          "hasImages"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "folder": {
-            "type": "string"
-          },
-          "hasImages": {
-            "type": "boolean"
           }
         }
       },
@@ -4213,6 +4201,48 @@
           },
           "url": {
             "type": "string"
+          }
+        }
+      },
+      "StarDisk": {
+        "required": [
+          "name",
+          "folder",
+          "hasOtteretro",
+          "free"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "folder": {
+            "type": "string"
+          },
+          "hasOtteretro": {
+            "type": "boolean"
+          },
+          "free": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int64"
+          }
+        }
+      },
+      "StarRequest": {
+        "required": [
+          "star"
+        ],
+        "type": "object",
+        "properties": {
+          "star": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
