@@ -254,14 +254,14 @@
       "local": "Local",
       "custom": "Other source",
       "stableHint": "The versions published on GitHub: tested and with their release notes.",
-      "testingHint": "The latest in development, before it is published. It may have bugs.",
-      "localHint": "The packages you build on this computer with scripts/empaquetar.ps1. They are found on their own in the Otteretro\\Paquetes folder of your disks.",
-      "customHint": "A folder, a web address or the GitHub repo of someone who builds their own Otteretro.",
+      "testingHint": "The latest from open PRs, before they are merged. It may have bugs.",
+      "localHint": "The packages you build on this computer with scripts/empaquetar.ps1. They are found on your Otteretro disks, just like in Otteretro.",
+      "customHint": "A folder, a web address or the GitHub repo of someone who builds their own Otteretro Catálogo.",
       "origin": "Update source",
-      "originPlaceholder": "D:\\packages or https://github.com/user/otteretro",
+      "originPlaceholder": "D:\\packages or https://github.com/user/otteretro-catalogo",
       "use": "Use",
-      "localFound": "Packages in {path}",
-      "localNone": "None of your disks has packages in Otteretro\\Paquetes."
+      "localFound": "Packages found in {path}.",
+      "localNone": "None of your Otteretro disks has packages in Otteretro\\Paquetes\\OtteretroCatalogo."
     },
     "taskTitle": "Otteretro update",
     "checking": "Checking…",
@@ -280,15 +280,14 @@
     "readyText": "It will be installed when you close the app, or right now if you restart.",
     "restartNow": "Restart now",
     "check": "Check for updates",
-    "notice": "<b>Otteretro {version} is ready.</b> It will be installed when you close the app, or right now if you restart.",
+    "notice": "<b>Otteretro Catálogo {version} is ready.</b> It will be installed when you close the app, or right now if you restart.",
     "reason": {
       "noSource": "No update source is configured.",
       "notInstalled": "Updates only work in the installed app.",
       "failed": "Could not check for or download the update. The details are in the log.",
       "withSystem": "Updated with the system: it arrives with the next PlayOS or NixOS update."
     },
-    "withSystemBadge": "With the system",
-    "attribution": "Game data: IGDB.com"
+    "withSystemBadge": "With the system"
   },
   "errors": {
     "http": "The app responded with an error ({status}).",

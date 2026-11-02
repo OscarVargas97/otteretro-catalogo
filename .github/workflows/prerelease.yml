@@ -1,0 +1,60 @@
+# Publica una prerelease con Velopack en cada PR del programa hacia main (#12): la versión que sigue, con -pr<n>.<corrida>,
+# en el canal «dev» de Velopack. La administración la toma solo con el canal Pruebas; las estables la ignoran.
+# Los PR desde un fork no tienen permiso para publicar: no corre.
+name: Prerelease
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ["src/**", "web/**", "scripts/**", "VERSION", "global.json", "Directory.Build.props"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Versión (la que sigue, -pr<n>.<corrida>)
+        id: version
+        shell: pwsh
+        run: |
+          $fase, $n = (./scripts/version.ps1) -split '\.(?=\d+$)'
+          "valor=$fase.$([int]$n + 1)-pr${{ github.event.number }}.${{ github.run_number }}" >> $env:GITHUB_OUTPUT
+
+      - name: Pruebas
+        run: dotnet test -c Release
+
+      - name: Instalar vpk
+        run: dotnet tool install -g vpk
+
+      - name: Empaquetar
+        shell: pwsh
+        run: ./scripts/empaquetar.ps1 -Version ${{ steps.version.outputs.valor }} -Channel dev
+
+      - name: Subir a GitHub Releases
+        run: vpk upload github --repoUrl https://github.com/${{ github.repository }} --token ${{ secrets.GITHUB_TOKEN }} --outputDir artefactos/paquetes --channel dev --pre --publish --releaseName "Otteretro Catálogo ${{ steps.version.outputs.valor }}" --tag v${{ steps.version.outputs.valor }}
+
+      - name: Conservar solo las últimas 3 prereleases
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Velopack solo mira las últimas 10 releases del repo (#12): lo viejo no debe tapar las versiones del programa.
+          gh release list --limit 100 --json tagName,createdAt | ConvertFrom-Json | Where-Object { $_.tagName -like 'v*-pr*' } |
+            Sort-Object createdAt -Descending | Select-Object -Skip 3 | ForEach-Object { gh release delete $_.tagName --yes --cleanup-tag }
