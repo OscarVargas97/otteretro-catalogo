@@ -9,4 +9,5 @@
 - **Catálogo publicado** (#3): un archivo JSON por saga, con ids permanentes. `catalogo publicar`, `catalogo validar` y `catalogo compilar` lo escriben, lo revisan y generan la base que baja la app.
 - **Publicación automática** (#3): cada cambio de datos en `main` publica una versión.
 - **Rutas, comparativas y sagas icónicas** (#7): se revisaron las 621 propuestas pendientes de Claude. Entraron 604: 36 sagas con rutas, 40 evaluadas como icónicas, 499 comparativas de versiones y 29 clasificaciones corregidas. Se rechazaron 17, por juegos sin lanzar, sin datos o con la ficha mezclada.
+- **Editar sagas y rutas** (#17): en una saga, «Editar» permite cambiar su nombre y si es icónica, crear, ordenar o borrar sus rutas, y agregar, mover, fusionar o eliminar juegos; en Sagas, «Nueva saga». Lo fusionado o eliminado queda en `reemplazados.json`, y ni IGDB ni Claude pisan lo editado a mano.
 - **Aportes** (#4): una guía para proponer cambios, con la validación corriendo sola en cada PR.

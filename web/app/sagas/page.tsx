@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { SagaTile, useConsoles } from "@/components/Catalog";
+import { NewSaga } from "@/components/SagaEditing";
 import Link from "next/link";
 import { Empty } from "@/components/Shell";
 import { useDescribeError } from "@/lib/i18n";
@@ -56,6 +57,7 @@ export default function Sagas() {
               {SORTS.map((s) => <option key={s} value={s}>{t(`sort.${s}`)}</option>)}
             </select>
           </label>
+          <NewSaga />
           <span className="small muted tabular toolbar-total" aria-live="polite">{sagas.data ? t("total", { count: sagas.total }) : ""}</span>
         </div>
       )}

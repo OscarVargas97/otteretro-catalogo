@@ -9,6 +9,12 @@ namespace Otteretro.Api;
 
 public record SagaFlagsRequest(bool? Favorite, bool? Following);
 public record FieldRequest(string? Value);
+public record IconicRequest(bool Iconic);
+public record NewSagaRequest(string? Name);
+public record NewSagaResponse(long Id);
+/// <param name="SagaId">Null: sin saga («Emulación»).</param>
+public record MoveGameRequest(long? SagaId);
+public record MergeGameRequest(long IntoId);
 
 /// <summary>Una consola o un juego (#179).</summary>
 public record VerifyRequest(string? Console, long? GameId);
@@ -106,6 +112,28 @@ public static class CatalogEndpoints
             using (var c = db.Open()) FieldValues.Clear(c, "game", id, field, FieldValues.Manual);
             return TypedResults.Ok(CatalogQueries.Game(db, id)!);
         });
+
+        // Editar a mano (#17): lo que se cambia acá ni IGDB ni Claude lo pisan, y se publica con su saga.
+        api.MapPut("/sagas/{id:long}/routes/{kind}", Results<Ok<Claude.RoutesPage>, BadRequest<ApiError>, Conflict<ApiError>> (long id, string kind, RouteEdit request, AppSession s) =>
+            Db(s) is not { } db ? NoData() : Editing.SaveRoute(db, id, kind, request) is { } e ? TypedResults.BadRequest(e) : TypedResults.Ok(Claude.ClaudeReview.Routes(db, id)));
+        api.MapDelete("/sagas/{id:long}/routes/{kind}", Results<Ok<Claude.RoutesPage>, BadRequest<ApiError>, Conflict<ApiError>> (long id, string kind, AppSession s) =>
+            Db(s) is not { } db ? NoData() : Editing.DeleteRoute(db, id, kind) is { } e ? TypedResults.BadRequest(e) : TypedResults.Ok(Claude.ClaudeReview.Routes(db, id)));
+        api.MapPut("/sagas/{id:long}/name", Results<Ok<SagaDetail>, BadRequest<ApiError>, Conflict<ApiError>> (long id, FieldRequest request, AppSession s) =>
+            Db(s) is not { } db ? NoData() : Editing.RenameSaga(db, id, request.Value) is { } e ? TypedResults.BadRequest(e) : TypedResults.Ok(CatalogQueries.Saga(db, id)!));
+        api.MapPut("/sagas/{id:long}/iconic", Results<Ok<SagaDetail>, BadRequest<ApiError>, Conflict<ApiError>> (long id, IconicRequest request, AppSession s) =>
+            Db(s) is not { } db ? NoData() : Editing.SetIconic(db, id, request.Iconic) is { } e ? TypedResults.BadRequest(e) : TypedResults.Ok(CatalogQueries.Saga(db, id)!));
+        api.MapPost("/sagas", Results<Ok<NewSagaResponse>, BadRequest<ApiError>, Conflict<ApiError>> (NewSagaRequest request, AppSession s) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            var (id, error) = Editing.CreateSaga(db, request.Name);
+            return error is not null ? TypedResults.BadRequest(error) : TypedResults.Ok(new NewSagaResponse(id!.Value));
+        });
+        api.MapPut("/games/{id:long}/saga", Results<Ok, BadRequest<ApiError>, Conflict<ApiError>> (long id, MoveGameRequest request, AppSession s) =>
+            Db(s) is not { } db ? NoData() : Editing.MoveGame(db, id, request.SagaId) is { } e ? TypedResults.BadRequest(e) : TypedResults.Ok());
+        api.MapPost("/games/{id:long}/merge", Results<Ok, BadRequest<ApiError>, Conflict<ApiError>> (long id, MergeGameRequest request, AppSession s) =>
+            Db(s) is not { } db ? NoData() : Editing.MergeGame(db, id, request.IntoId) is { } e ? TypedResults.BadRequest(e) : TypedResults.Ok());
+        api.MapDelete("/games/{id:long}", Results<Ok, BadRequest<ApiError>, Conflict<ApiError>> (long id, AppSession s) =>
+            Db(s) is not { } db ? NoData() : Editing.DeleteGame(db, id) is { } e ? TypedResults.BadRequest(e) : TypedResults.Ok());
 
         api.MapGet("/search", Results<Ok<SearchResults>, Conflict<ApiError>> (AppSession s, string? q) =>
         {

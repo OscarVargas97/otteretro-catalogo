@@ -2,9 +2,11 @@
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Suspense, useState } from "react";
 import { Cover, ShortPlatforms, useConsoleName, useConsoles, useIdParam } from "@/components/Catalog";
+import { AddGame, GameActions, ROUTE_KINDS, RouteEditor, SagaDataEditor, type RouteKind } from "@/components/SagaEditing";
 import { Tabs } from "@/components/Tabs";
 import { useHeroArt } from "@/components/HeroArt";
 import { Empty } from "@/components/Shell";
@@ -14,7 +16,7 @@ import { PageSkeleton, Rows } from "@/components/Skeleton";
 import { usePaged } from "@/lib/paged";
 import { optimistic } from "@/lib/optimistic";
 import { routesQuery, sagaQuery } from "@/lib/queries";
-import type { GamePage, RoutesPage, SagaDetail } from "@/lib/types";
+import type { GameCard, GamePage } from "@/lib/types";
 
 // El detalle de una saga se abre como /saga/?id=… (0 = Emulación).
 export default function SagaPage() {
@@ -34,6 +36,8 @@ function Saga() {
   // La tabla sigue por tramos al bajar (#177): «Emulación» tiene miles de juegos; la ficha trae los primeros 60.
   const hero = useHeroArt(saga.data?.heroGameId == null ? null : Number(saga.data.heroGameId));
   const more = usePaged(["saga", id, "games"], (offset) => `/api/sagas/${id}/games?offset=${offset}`, (p: GamePage) => ({ items: p.items, total: Number(p.total) }), id !== null);
+  // Editar a mano (#17); una saga recién creada abre así.
+  const [editing, setEditing] = useState(useSearchParams().get("edit") === "1");
 
   if (id === null) return <div className="content"><Empty title={t("saga.noneTitle")} text={t("saga.noneText")}><Link className="ot-btn ot-btn-primary" href="/sagas/">{t("goToSagas")}</Link></Empty></div>;
   if (saga.isError) return <div className="content"><p className="error" role="alert">{describe(saga.error)}</p><Link href="/sagas/">{t("saga.back")}</Link></div>;
@@ -52,22 +56,23 @@ function Saga() {
         <div className="hero-main">
           <span className="small muted">{[...companies, span, t("games", { count: Number(s.games) })].filter(Boolean).join(" · ")}</span>
           <h2 className="hero-title">{emulation ? t("emulation") : s.name}</h2>
-          {!emulation && (
-            <div className="hero-actions">
-              <MoreActions sagaId={String(s.id)} />
-            </div>
-          )}
+          <div className="hero-actions">
+            <button className="ot-btn" type="button" aria-pressed={editing} onClick={() => setEditing(!editing)}>{editing ? t("edit.done") : t("edit.edit")}</button>
+            {!emulation && <MoreActions sagaId={String(s.id)} />}
+          </div>
         </div>
       </section>
       <div className="content">
-        {!emulation && <Routes sagaId={String(s.id)} />}
+        {editing && !emulation && <SagaDataEditor key={`${s.name}|${s.iconic}`} sagaId={String(s.id)} name={s.name} iconic={!!s.iconic} />}
+        {!emulation && <Routes sagaId={String(s.id)} editing={editing} games={more.data ? more.items : games} />}
         <section className="sec">
           <div className="sec-h"><h2>{t("saga.allGames")}</h2><span className="small muted">{t("games", { count: Number(s.games) })}</span></div>
+          {editing && !emulation && <AddGame sagaId={String(s.id)} />}
           <div className="panel table-wrap" style={{ padding: 0 }}>
             <table className="t">
-              <thead><tr><th>{t("saga.game")}</th><th>{t("saga.year")}</th><th>{t("saga.platforms")}</th><th>{t("saga.state")}</th></tr></thead>
+              <thead><tr><th>{t("saga.game")}</th><th>{t("saga.year")}</th><th>{t("saga.platforms")}</th><th>{t("saga.state")}</th>{editing && <th>{t("edit.actions")}</th>}</tr></thead>
               <tbody>
-                {(more.data ? more.items : games).map((g) => (
+                {(more.data ? more.items : games).map((g, _, all) => (
                   <tr key={g.id} className={g.platforms.length === 0 ? "is-unplayable" : undefined}>
                     <td><Link href={`/game/?id=${g.id}`}>{g.name}</Link></td>
                     <td>{g.year ?? "—"}</td>
@@ -77,9 +82,10 @@ function Saga() {
                         {g.platforms.length === 0 && <span className="ot-badge">{t("noConsole")}</span>}
                       </span>
                     </td>
+                    {editing && <td><GameActions game={g} sagaId={String(s.id)} games={all} /></td>}
                   </tr>
                 ))}
-                {(more.data ? more.hasNextPage : Number(s.games) > games.length) && <Rows cols={4} count={4} />}
+                {(more.data ? more.hasNextPage : Number(s.games) > games.length) && <Rows cols={editing ? 5 : 4} count={4} />}
               </tbody>
             </table>
             <div ref={more.end} aria-hidden="true" />
@@ -118,18 +124,31 @@ function MoreActions({ sagaId }: { sagaId: string }) {
 const DONE = ["finished", "completed"];
 
 /** La ruta elegida (§3.2, #170): pestañas junto al título con el avance al lado, los pasos unidos por una línea y el porqué con fuentes. */
-function Routes({ sagaId }: { sagaId: string }) {
+function Routes({ sagaId, editing, games }: { sagaId: string; editing: boolean; games: GameCard[] }) {
   const t = useTranslations("catalog");
   const describe = useDescribeError();
   const consoleName = useConsoleName();
-  const cache = useQueryClient();
   const routes = useQuery(routesQuery(sagaId));
   const [picked, setPicked] = useState<string | null>(null);
+  const [editor, setEditor] = useState<RouteKind | null>(null);
 
   if (!routes.data) return routes.isError ? <p className="error" role="alert">{describe(routes.error)}</p> : null;
   const list = routes.data.routes;
   const chosen = list.find((r) => String(r.id) === picked) ?? list.find((r) => r.kind === "community") ?? list[0];
-  if (!chosen) return <section className="sec"><div className="sec-h"><h2>{t("saga.route")}</h2></div><p className="small muted">{t("saga.noRoutes")}</p></section>;
+  // Editar (#17): un botón por tipo de ruta, para cambiar la que hay o crear la que falta.
+  const editBar = editing && (
+    <div className="chips">
+      {ROUTE_KINDS.map((k) => (
+        <button key={k} className="chip" type="button" aria-pressed={editor === k} onClick={() => setEditor(editor === k ? null : k)}>
+          {t(list.some((r) => r.kind === k) ? "edit.routeEdit" : "edit.routeCreate", { kind: t(`route.${k}`) })}
+        </button>
+      ))}
+    </div>
+  );
+  const routeEditor = editing && editor && (
+    <RouteEditor key={editor} sagaId={sagaId} kind={editor} route={list.find((r) => r.kind === editor)} games={games} onDone={() => setEditor(null)} />
+  );
+  if (!chosen) return <section className="sec"><div className="sec-h"><h2>{t("saga.route")}</h2></div>{editBar}{routeEditor || <p className="small muted">{t("saga.noRoutes")}</p>}</section>;
 
   return (
     <section className="sec">
@@ -140,6 +159,8 @@ function Routes({ sagaId }: { sagaId: string }) {
             onSelect={(rid) => setPicked(rid)} label={t("saga.route")} panel="route-panel" />
         </div>
       </div>
+      {editBar}
+      {routeEditor}
       <div id="route-panel" role="tabpanel" aria-labelledby={`tab-${chosen.id}`} className="sec">
         <ol className="timeline">
           {chosen.steps.map((s) => {
