@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:55898/"
+      "url": "http://127.0.0.1:60281/"
     }
   ],
   "paths": {
@@ -256,6 +256,82 @@
                   "items": {
                     "$ref": "#/components/schemas/Drive"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/images-folder": {
+      "get": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImagesFolderInfo"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ImagesFolderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImagesFolderInfo"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3271,6 +3347,46 @@
           }
         }
       },
+      "ImagesFolderInfo": {
+        "required": [
+          "path",
+          "shared",
+          "available",
+          "disks"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "shared": {
+            "type": "boolean"
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "disks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OtteretroDisk"
+            }
+          }
+        }
+      },
+      "ImagesFolderRequest": {
+        "required": [
+          "path"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
       "LanguageRequest": {
         "required": [
           "language"
@@ -3497,6 +3613,25 @@
                 "$ref": "#/components/schemas/ApiError"
               }
             ]
+          }
+        }
+      },
+      "OtteretroDisk": {
+        "required": [
+          "name",
+          "folder",
+          "hasImages"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "folder": {
+            "type": "string"
+          },
+          "hasImages": {
+            "type": "boolean"
           }
         }
       },

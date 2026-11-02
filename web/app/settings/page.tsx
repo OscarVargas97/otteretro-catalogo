@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { ClaudeSettings } from "@/components/ClaudeSettings";
 import { ConsoleSettings } from "@/components/ConsoleSettings";
 import { CredentialsSettings } from "@/components/Credentials";
+import { ImagesFolder } from "@/components/ImagesFolder";
 import { LanguagePicker } from "@/components/LanguagePicker";
 import { useAppState } from "@/components/Shell";
 import { Tabs } from "@/components/Tabs";
@@ -52,6 +53,7 @@ function Panel({ section }: { section: Section }) {
     case "general": return (
       <div className="settings-blocks">
         <section className="panel"><h2>{t("language")}</h2><LanguagePicker /></section>
+        <section className="panel"><h2>{t("images.title")}</h2><ImagesFolder /></section>
         <section className="panel"><span>Otteretro Catálogo {data?.version}</span><span className="small muted">{t("attribution")}</span></section>
       </div>
     );

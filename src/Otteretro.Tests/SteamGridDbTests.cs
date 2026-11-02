@@ -230,3 +230,69 @@ public class SteamGridDbTests
         Assert.Equal(1, check.ExecuteScalar<long>("SELECT count(*) FROM task WHERE kind = 'sgdb.images'"));
     }
 }
+
+/// <summary>#9: la carpeta de imágenes común con Otteretro.</summary>
+public class SharedImagesTests
+{
+    static Otteretro.Data.Database Db(TempDir tmp) => new(Path.Combine(tmp.Path, "data", "otteretro.db"), Path.Combine(tmp.Path, "catalogo", "catalogo.db"));
+
+    [Fact]
+    public void AnImageInTheSharedFolderIsFoundAndNeverDeleted()
+    {
+        using var tmp = new TempDir();
+        var db = Db(tmp);
+        var shared = Directory.CreateDirectory(Path.Combine(tmp.Path, "Otteretro", "catalogo", "imagenes")).FullName;
+        var image = Path.Combine(shared, "7-cover.webp");
+        File.WriteAllText(image, "portada");
+
+        Assert.Null(SteamGridDb.Find(db, 7, "cover")); // la carpeta propia no la tiene
+        SteamGridDb.SetSharedFolder(db, shared);
+        Assert.Equal(image, SteamGridDb.Find(db, 7, "cover"));
+
+        SteamGridDb.Forget(db, 7);
+        Assert.True(File.Exists(image)); // fusionar o depurar no le quita imágenes a Otteretro
+
+        SteamGridDb.SetSharedFolder(db, null);
+        Assert.Null(SteamGridDb.Find(db, 7, "cover"));
+        Assert.True(File.Exists(image));
+    }
+
+    [Fact]
+    public void OwnFolderStillDeletesImagesOfAGameThatIsGone()
+    {
+        using var tmp = new TempDir();
+        var db = Db(tmp);
+        Directory.CreateDirectory(SteamGridDb.Folder(db));
+        var image = Path.Combine(SteamGridDb.Folder(db), "7-cover.webp");
+        File.WriteAllText(image, "portada");
+        SteamGridDb.Forget(db, 7);
+        Assert.False(File.Exists(image));
+    }
+
+    [Fact]
+    public void TheChosenFolderSurvivesARestart()
+    {
+        using var tmp = new TempDir();
+        SteamGridDb.SetSharedFolder(Db(tmp), tmp.Path);
+        Assert.Equal(tmp.Path, SteamGridDb.SharedFolder(Db(tmp)));
+    }
+
+    [Fact]
+    public void ListsOnlyDisksWithOtteretroAndSaysWhichHasImages()
+    {
+        using var tmp = new TempDir();
+        var disk = (string name) => Directory.CreateDirectory(Path.Combine(tmp.Path, name)).FullName;
+        var (withImages, onlyMark, empty) = (disk("d"), disk("e"), disk("f"));
+        Directory.CreateDirectory(Path.Combine(withImages, "Otteretro", "catalogo", "imagenes"));
+        File.WriteAllText(Path.Combine(withImages, "Otteretro", "catalogo", "imagenes", "1-cover.webp"), "x");
+        Directory.CreateDirectory(Path.Combine(onlyMark, "Otteretro"));
+        File.WriteAllText(Path.Combine(onlyMark, "Otteretro", "otteretro-ubicacion.json"), "{}");
+
+        var disks = SteamGridDb.OtteretroDisks([withImages, onlyMark, empty]);
+
+        Assert.Equal([withImages, onlyMark], disks.Select(d => d.Name));
+        Assert.True(disks[0].HasImages);
+        Assert.Equal(Path.Combine(withImages, "Otteretro", "catalogo", "imagenes"), disks[0].Folder);
+        Assert.False(disks[1].HasImages);
+    }
+}
