@@ -23,7 +23,8 @@ public record PublishedConsole(string Id, string Name, string? Company, string? 
 /// <param name="NewId">Con qué se reemplazó; null si se quitó sin reemplazo.</param>
 public record PublishedReplacement(string Kind, long OldId, long? NewId);
 /// <param name="Sha256">Lo que verifica la app antes de usar la base.</param>
-public record PublishedManifest(string Sha256, int Sagas, int Games, int Versions);
+/// <param name="Content">Hash de los datos, fila por fila y en orden (#44): igual si los datos son iguales, aunque el archivo comprimido no lo sea.</param>
+public record PublishedManifest(string Sha256, int Sagas, int Games, int Versions, string? Content = null);
 
 /// <summary>
 /// El catálogo publicado (#3, decisiones 253 y 254): un JSON por saga, que se puede revisar en un PR, y la base compilada que baja la app. Los ids son permanentes:
@@ -166,6 +167,32 @@ public static partial class Published
         return errors;
     }
 
+    static readonly string[] ContentTables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced"];
+
+    /// <summary>
+    /// SHA-256 de todas las filas publicadas, tabla por tabla y ordenadas por todas sus columnas (#44). La base comprimida no sale igual byte a
+    /// byte de una compilación a otra; esto sí, si los datos son los mismos.
+    /// </summary>
+    static string ContentHash(Microsoft.Data.Sqlite.SqliteConnection c)
+    {
+        using var hash = IncrementalHash.CreateHash(HashAlgorithmName.SHA256);
+        foreach (var table in ContentTables)
+        {
+            var columns = c.Query<string>($"SELECT name FROM pragma_table_info('{table}', 'catalog') ORDER BY cid").ToList();
+            if (columns.Count == 0) continue;
+            hash.AppendData(Encoding.UTF8.GetBytes($"#{table}\n"));
+            using var reader = c.ExecuteReader($"SELECT {string.Join(", ", columns)} FROM catalog.{table} ORDER BY {string.Join(", ", columns)}");
+            while (reader.Read())
+            {
+                var row = new StringBuilder();
+                // Separadores que no aparecen en los datos: NUL para un valor vacío, US entre columnas y salto de línea entre filas.
+                for (var i = 0; i < reader.FieldCount; i++) row.Append(reader.IsDBNull(i) ? "\u0000" : Convert.ToString(reader.GetValue(i), System.Globalization.CultureInfo.InvariantCulture)).Append('\u001f');
+                hash.AppendData(Encoding.UTF8.GetBytes(row.Append('\n').ToString()));
+            }
+        }
+        return Convert.ToHexStringLower(hash.GetHashAndReset());
+    }
+
     /// <summary>
     /// Genera la base que baja la app y su manifiesto. Parte siempre de los archivos y de una base nueva, nunca de la del generador: lo que no
     /// esté en lo publicado no puede colarse en lo que reciben las personas.
@@ -227,14 +254,19 @@ public static partial class Published
                 t.Commit();
             }
             var plain = Path.Combine(work, "publicado.db");
-            using (var c = db.Open()) c.Execute("VACUUM catalog INTO @plain", new { plain });
+            string content;
+            using (var c = db.Open())
+            {
+                content = ContentHash(c);
+                c.Execute("VACUUM catalog INTO @plain", new { plain });
+            }
             Microsoft.Data.Sqlite.SqliteConnection.ClearAllPools();
             Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(output))!);
             using (var input = File.OpenRead(plain))
             using (var gz = new GZipStream(File.Create(output), CompressionLevel.SmallestSize))
                 input.CopyTo(gz);
             using var stream = File.OpenRead(output);
-            return new(Convert.ToHexStringLower(SHA256.HashData(stream)), all.Sagas.Count, games.Count, games.Sum(g => g.Game.Versions.Count));
+            return new(Convert.ToHexStringLower(SHA256.HashData(stream)), all.Sagas.Count, games.Count, games.Sum(g => g.Game.Versions.Count), content);
         }
         finally
         {

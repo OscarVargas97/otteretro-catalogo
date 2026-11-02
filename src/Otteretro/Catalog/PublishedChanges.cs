@@ -9,7 +9,8 @@ namespace Otteretro.Catalog;
 public record PublishedChange(string Version, string Kind, string Change, long Id, string? Name = null, string? From = null, long? Into = null);
 
 /// <summary>`cambios.json` (#31, decisiones 260 y 262): todas las versiones y todos los cambios, porque `publicar.yml` conserva solo las 3 últimas releases.</summary>
-public record PublishedHistory(List<string> Versions, List<PublishedChange> Entries);
+/// <param name="Images">Cuántos juegos cambiaron de imagen en cada versión (#44): una versión que solo trae imágenes no dice «sin cambios».</param>
+public record PublishedHistory(List<string> Versions, List<PublishedChange> Entries, Dictionary<string, int>? Images = null);
 
 public static partial class Published
 {
@@ -46,6 +47,14 @@ public static partial class Published
         return list;
     }
 
+    /// <summary>Cuántos juegos tienen alguna imagen nueva, cambiada o quitada de <paramref name="before"/> a <paramref name="after"/> (#44).</summary>
+    public static int ImageChanges(string before, string after)
+    {
+        var old = GamesWithSaga(Read(before));
+        static string Key(PublishedGame g) => string.Join('|', (g.Images ?? []).OrderBy(i => i.Key, StringComparer.Ordinal).Select(i => $"{i.Key}={i.Value}"));
+        return GamesWithSaga(Read(after)).Count(n => Key(n.Value.Game) != (old.TryGetValue(n.Key, out var o) ? Key(o.Game) : ""));
+    }
+
     static Dictionary<long, (PublishedGame Game, long? SagaId)> GamesWithSaga(Everything all) =>
         all.Sagas.SelectMany(s => s.Games.Select(g => (g, (long?)s.Id))).Concat(all.Loose.Select(g => (g, (long?)null))).ToDictionary(x => x.g.Id);
 
@@ -53,12 +62,14 @@ public static partial class Published
     /// El historial con la versión nueva. Sin historial anterior (la primera vez que se publica), arranca desde la versión anterior: así una app que
     /// tenga esa versión ya encuentra la suya.
     /// </summary>
-    public static PublishedHistory Extend(PublishedHistory? previous, string? previousVersion, List<PublishedChange> changes, string version)
+    public static PublishedHistory Extend(PublishedHistory? previous, string? previousVersion, List<PublishedChange> changes, string version, int images = 0)
     {
         var versions = previous?.Versions.ToList() ?? (previousVersion is null ? [] : [previousVersion]);
         if (versions.Contains(version)) return previous!;
         versions.Add(version);
-        return new(versions, [.. previous?.Entries ?? [], .. changes]);
+        var counts = new Dictionary<string, int>(previous?.Images ?? []);
+        if (images > 0) counts[version] = images;
+        return new(versions, [.. previous?.Entries ?? [], .. changes], counts);
     }
 
     public static PublishedHistory? ReadHistory(string file) => File.Exists(file) ? Load<PublishedHistory>(file) : null;

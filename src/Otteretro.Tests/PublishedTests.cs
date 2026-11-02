@@ -159,6 +159,26 @@ public class PublishedTests
         Assert.Same(second, Published.Extend(second, "catalogo-3", [], "catalogo-3")); // publicar dos veces la misma no duplica
     }
 
+    /// <summary>#44: los mismos datos dan el mismo hash de contenido aunque el archivo comprimido cambie; las imágenes cuentan como cambio.</summary>
+    [Fact]
+    public async Task SameDataSameContentAndImagesCountAsChanges()
+    {
+        await using var f = new Fixture();
+        Fill(f);
+        var before = Written(f);
+        var (one, two) = (Published.Compile(before, f.Tmp["uno.gz"]), Published.Compile(before, f.Tmp["dos.gz"]));
+        Assert.Equal(one.Content, two.Content);
+        Assert.NotNull(one.Content);
+
+        using (var c = f.Db.Open()) c.Execute("INSERT INTO catalog.image (game_id, kind, url) VALUES (11, 'cover', 'https://images.igdb.com/igdb/image/upload/t_cover_big/tetris.jpg')");
+        var after = f.Tmp["con-imagen"];
+        Published.Write(f.Db, after);
+        Assert.NotEqual(one.Content, Published.Compile(after, f.Tmp["tres.gz"]).Content);
+        Assert.Empty(Published.Changes(before, after, "v2")); // ni sagas ni juegos cambian…
+        Assert.Equal(1, Published.ImageChanges(before, after)); // …pero un juego trae imagen
+        Assert.Equal(1, Published.Extend(null, "v1", [], "v2", images: 1).Images!["v2"]);
+    }
+
     /// <summary>#32 (decisión 261): un PR no puede perder un id sin reemplazo ni reutilizar uno que en main es otra cosa; lleva su resumen.</summary>
     [Fact]
     public async Task APullRequestCannotLoseOrReuseIds()

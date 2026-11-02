@@ -27,12 +27,37 @@ jobs:
       - name: Compilar el catálogo
         run: src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo compilar catalogo salida/catalogo.db.gz
 
+      # #44: un cambio que no cambia la base compilada (formato, código) no es una versión nueva: Otteretro no la lista.
+      - name: ¿Cambió la base?
+        id: base
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $previous = gh release list --limit 100 --json tagName,createdAt | ConvertFrom-Json | Where-Object { $_.tagName -like 'catalogo-*' } |
+            Sort-Object createdAt -Descending | Select-Object -First 1
+          $changed = $true
+          if ($previous) {
+            gh release download $previous.tagName -p catalogo.db.gz.json -D manifiesto-anterior
+            if ($LASTEXITCODE -eq 0) {
+              # El hash de los datos, no el del archivo: comprimir dos veces lo mismo no da los mismos bytes. Las versiones de antes de #44 no lo tienen.
+              $before = (Get-Content manifiesto-anterior/catalogo.db.gz.json | ConvertFrom-Json).content
+              $now = (Get-Content salida/catalogo.db.gz.json | ConvertFrom-Json).content
+              $changed = -not $before -or $before -ne $now
+            }
+            $global:LASTEXITCODE = 0
+          }
+          if (-not $changed) { "La base es igual a la de $($previous.tagName): no se publica." }
+          "changed=$($changed.ToString().ToLower())" >> $env:GITHUB_OUTPUT
+
       - name: Versión
+        if: steps.base.outputs.changed == 'true'
         shell: pwsh
         run: '"TAG=catalogo-$(Get-Date -AsUTC -Format ''yyyyMMdd-HHmm'')-$("${{ github.sha }}".Substring(0, 7))" >> $env:GITHUB_ENV'
 
       # #31: cambios.json lleva todo el historial (la app puede venir de cualquier versión) y lo que cambió desde la anterior.
       - name: Cambios desde la versión anterior
+        if: steps.base.outputs.changed == 'true'
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
@@ -53,6 +78,7 @@ jobs:
           src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo cambios catalogo $env:TAG salida/cambios.json @extra
 
       - name: Publicar
+        if: steps.base.outputs.changed == 'true'
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
