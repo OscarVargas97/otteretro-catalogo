@@ -17,11 +17,13 @@ export function PublishButton({ kind, id }: PublishRequest) {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <button className="ot-btn" type="button" aria-expanded={open} onClick={() => setOpen(!open)}>{t("button")}</button>
+      <button className="ot-btn" type="button" aria-expanded={open} onClick={() => setOpen(!open)}>{kind === "all" ? t("buttonAll") : t("button")}</button>
       {open && <PublishPanel kind={kind} id={id} onClose={() => setOpen(false)} />}
     </>
   );
 }
+
+const SHOWN = 200;
 
 function PublishPanel({ kind, id, onClose }: PublishRequest & { onClose: () => void }) {
   const t = useTranslations("publish");
@@ -55,13 +57,15 @@ function PublishPanel({ kind, id, onClose }: PublishRequest & { onClose: () => v
           <>
             {p.files.length === 0 && <p className="small muted">{t("nothing")}</p>}
             <ul className="publish-files">
-              {p.files.map((f) => (
+              {/* «Publicar todo» puede tocar miles de archivos: se listan los primeros y el total. */}
+              {p.files.slice(0, SHOWN).map((f) => (
                 <li key={f.path}>
                   <span className={`ot-badge${f.change === "deleted" ? " ot-badge-danger" : f.change === "added" ? " ot-badge-have" : ""}`}>{t(`change.${f.change as "added"}`)}</span>{" "}
                   <code className="small">catalogo/{f.path}</code>
                   {f.details.length > 0 && <ul className="small muted">{f.details.map((d, i) => <li key={i}>{describe(d)}</li>)}</ul>}
                 </li>
               ))}
+              {p.files.length > SHOWN && <li className="small muted">{t("more", { count: p.files.length - SHOWN })}</li>}
             </ul>
             {p.errors.length > 0 && (
               <div className="result" role="alert">

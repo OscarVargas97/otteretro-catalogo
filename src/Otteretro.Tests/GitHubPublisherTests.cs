@@ -36,7 +36,6 @@ public class GitHubPublisherTests
                 $"POST repos/{Repo}/forks" => Fork2(),
                 $"POST repos/{Fork}/merge-upstream" => new { },
                 $"GET repos/{Repo}/git/commits/head1" => new { tree = new { sha = "tree1" } },
-                _ when call.StartsWith("POST ") && call.EndsWith("/git/blobs") => new { sha = "blob" },
                 _ when call.StartsWith("POST ") && call.EndsWith("/git/trees") => new { sha = "tree2" },
                 _ when call.StartsWith("POST ") && call.EndsWith("/git/commits") => new { sha = "commit2" },
                 _ when call.StartsWith("GET ") && call.Contains("/git/ref/heads/catalogo/") => BranchExists ? new { } : null,
@@ -153,7 +152,30 @@ public class GitHubPublisherTests
         Assert.Equal([SagaFile], preview.Conflicts);
         var error = await Assert.ThrowsAsync<App.TaskException>(() => publisher.Publish(new("saga", 33)));
         Assert.Equal("publish.conflict", error.Error.Code);
-        Assert.DoesNotContain(github.Calls, c => c.Contains("/git/blobs"));
+        Assert.DoesNotContain(github.Calls, c => c.Contains("/git/trees"));
+    }
+
+    /// <summary>#41: «Publicar todo» lleva en un solo PR todo lo que cambió respecto de main, y el árbol se arma de a tandas.</summary>
+    [Fact]
+    public async Task PublishingEverythingTakesEveryChangedFileInOnePrBuiltInChunks()
+    {
+        var (f, github, publisher) = Setup(canPush: true, f =>
+        {
+            Assert.Null(Editing.SetIconic(f.Db, 33, true));
+            using var c = f.Db.Open();
+            // 250 sagas nuevas: más de una tanda (200 archivos por pedido).
+            c.Execute("WITH RECURSIVE n(i) AS (SELECT 1 UNION ALL SELECT i + 1 FROM n WHERE i < 250) INSERT INTO catalog.saga (id, name) SELECT 1000 + i, 'Saga ' || i FROM n");
+        });
+        await using var _ = f;
+        var preview = await publisher.Preview(new("all", 0));
+        Assert.Equal(251, preview.Files.Count);
+        Assert.Contains(preview.Files, x => x.Path == "sagas/00033-final-fantasy.json" && x.Change == "modified");
+        Assert.DoesNotContain(preview.Files, x => x.Path == "sagas/00040-zelda.json"); // lo que no cambió no va
+
+        await publisher.Publish(new("all", 0));
+        Assert.Equal(2, github.Calls.Count(c => c == $"POST repos/{Repo}/git/trees"));
+        Assert.Contains($"GET repos/{Repo}/git/ref/heads/catalogo/todo", github.Calls);
+        Assert.Contains($"POST repos/{Repo}/pulls", github.Calls);
     }
 
     [Fact]

@@ -2,7 +2,7 @@
 
 ## Sin publicar
 
-`feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam`, `feat/30-cambios-publicados` y `feat/40-completar-imagenes` · #6, #9, #12, #17, #22, #30 y #40: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
+`feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam`, `feat/30-cambios-publicados`, `feat/40-completar-imagenes` y `feat/41-publicar-todo` · #6, #9, #12, #17, #22, #30, #40 y #41: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
 
 ### Nuevo
 - **Referencias de imágenes** (#6): cada juego publica de dónde se baja su portada, su fondo y su logo (SteamGridDB, o la carátula de IGDB si no hay portada), sin copias ni claves. Otteretro y la administración bajan cada imagen la primera vez que se ve. `catalogo validar` rechaza una dirección que no sea de SteamGridDB o IGDB y cuenta cuántos juegos tienen cada tipo.
@@ -15,6 +15,8 @@
 - **Cada PR se revisa contra `main`** (#32): falla si una saga, un juego o una versión desaparece sin entrada en `reemplazados.json`, o si usa un id que en `main` ya se retiró o es otra cosa. El PR recibe un comentario con el resumen de lo que cambia. `reemplazados.json` ahora también acepta sagas.
 
 - **Completar las imágenes que faltan** (#40): en Ajustes › Consolas › Portadas, «Completar las que faltan» busca solo los juegos sin portada, fondo o logo, y sigue donde quedó si se corta. Al terminar dice cuántos juegos encontraron imagen y cuántos siguen sin portada. «Revisar todas» sigue para traer también las que cambiaron.
+
+- **Publicar todo** (#41): en Sagas, «Publicar todo» lleva en un solo PR todo lo que cambió respecto de `main`, por ejemplo lo que encontró «Completar las que faltan». Muestra los archivos antes de publicar y, si alguien cambió lo mismo en GitHub, avisa y no lo pisa. Funciona aunque sean miles de archivos.
 
 ### Cambios
 - «Buscar imágenes en SteamGridDB e IGDB» guarda las direcciones en vez de bajar las imágenes, y vuelve a consultarlas para traer las que cambiaron.
