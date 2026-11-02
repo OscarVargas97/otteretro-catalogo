@@ -14,6 +14,27 @@ public sealed class AppConfig
     [JsonPropertyName("carpetaDatos")]
     public string? DataFolder { get; set; }
 
+    /// <summary>Con el canal «custom»: una carpeta, una URL o el repo de GitHub de quien tiene su propia versión (#12).</summary>
+    [JsonPropertyName("origenActualizaciones")]
+    public string? UpdateSource { get; set; }
+
+    /// <summary>Con el canal «local»: la carpeta donde `scripts/empaquetar.ps1` deja los paquetes de este equipo.</summary>
+    [JsonPropertyName("carpetaActualizacionesLocal")]
+    public string? LocalUpdateFolder { get; set; }
+
+    /// <summary>De dónde se actualiza (#12): «stable» (releases de main), «testing» (prereleases de los PR), «local» o «custom».</summary>
+    [JsonPropertyName("canalActualizaciones")]
+    public string? UpdateChannel { get; set; }
+
+    public static readonly string[] UpdateChannels = ["stable", "testing", "local", "custom"];
+
+    /// <summary>El origen del canal en uso: la carpeta local o el otro origen.</summary>
+    [JsonIgnore]
+    public string? EffectiveUpdateOrigin => EffectiveUpdateChannel == "local" ? LocalUpdateFolder : UpdateSource;
+
+    [JsonIgnore]
+    public string EffectiveUpdateChannel => UpdateChannel is { } c && UpdateChannels.Contains(c) ? c : string.IsNullOrEmpty(UpdateSource) ? "stable" : "custom";
+
     [JsonPropertyName("equipoId")]
     public string MachineId { get; set; } = Guid.NewGuid().ToString();
 

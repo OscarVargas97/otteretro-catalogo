@@ -7,6 +7,7 @@ import { ClaudeSettings } from "@/components/ClaudeSettings";
 import { ConsoleSettings } from "@/components/ConsoleSettings";
 import { CredentialsSettings } from "@/components/Credentials";
 import { LanguagePicker } from "@/components/LanguagePicker";
+import { UpdateChannel, VersionAndUpdate } from "@/components/Update";
 import { useAppState } from "@/components/Shell";
 import { Tabs } from "@/components/Tabs";
 
@@ -52,7 +53,9 @@ function Panel({ section }: { section: Section }) {
     case "general": return (
       <div className="settings-blocks">
         <section className="panel"><h2>{t("language")}</h2><LanguagePicker /></section>
-        <section className="panel"><span>Otteretro Catálogo {data?.version}</span><span className="small muted">{t("attribution")}</span></section>
+        <VersionAndUpdate version={data?.version} />
+        <UpdateChannel />
+        <p className="small muted" style={{ margin: 0 }}>{t("attribution")}</p>
       </div>
     );
   }
