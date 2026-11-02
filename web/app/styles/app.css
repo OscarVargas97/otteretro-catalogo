@@ -140,7 +140,10 @@ input:not([type="checkbox"], [type="radio"], [type="range"]), select { height: 3
 .toolbar { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; justify-content: space-between; }
 .toolbar-end, .toolbar-label { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
 .tabular { font-variant-numeric: tabular-nums; }
-.saga-art-name { text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+.saga-art-name { position: relative; text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+/* La imagen pedida al verse (#6) cubre la portada o la tarjeta de saga; debajo queda el color de la consola. */
+.lazy-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ot-saga-art { position: relative; overflow: hidden; }
 .hero { background: var(--accent-soft); padding: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-6); align-items: flex-end; }
 .hero-main { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
 .hero-title { margin: 0; font-family: var(--font-display); font-size: 40px; line-height: 48px; font-weight: 700; }

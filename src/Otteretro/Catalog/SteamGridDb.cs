@@ -38,7 +38,6 @@ public static class SteamGridDb
     };
 
     static readonly TimeSpan Ttl = TimeSpan.FromDays(30);
-    static readonly HttpClient Shared = new() { Timeout = TimeSpan.FromSeconds(60) };
 
     /// <summary>Para las pruebas: el manejador HTTP falso de SteamGridDB y su CDN.</summary>
     public static HttpMessageHandler? Handler { get; set; }
@@ -88,11 +87,14 @@ public static class SteamGridDb
 
     public static string Folder(Database db) => Path.Combine(Path.GetDirectoryName(db.CatalogPath)!, "imagenes"); // van con el catálogo (#167)
 
-    /// <summary>Borra las imágenes de un juego que ya no existe.</summary>
-    public static void Forget(Database db, long gameId)
+    /// <summary>Borra las imágenes de un juego que ya no existe. Sus referencias quedan, pero no se publican: solo salen las de juegos que existen.</summary>
+    public static void Forget(Database db, long gameId) => ImageRefs.Forget(db, Kinds.Select(k => (gameId, k)));
+
+    static void Save(Database db, long gameId, string kind, string url)
     {
-        foreach (var kind in Kinds)
-            while (Find(db, gameId, kind) is { } file) File.Delete(file);
+        using var c = db.Open();
+        c.Execute("INSERT INTO catalog.image (game_id, kind, url) VALUES (@gameId, @kind, @url) ON CONFLICT (game_id, kind) DO UPDATE SET url = excluded.url",
+            new { gameId, kind, url });
     }
 
     /// <summary>La imagen guardada de un juego, o null si todavía no hay.</summary>
@@ -106,10 +108,6 @@ public static class SteamGridDb
         if (string.IsNullOrEmpty(key)) throw new TaskException(ApiError.Of("tasks.sgdb.noKey"));
 
         var api = new ApiClient(run.Db, Handler);
-        var http = Handler is null ? Shared : new HttpClient(Handler);
-        var folder = Folder(run.Db);
-        Directory.CreateDirectory(folder);
-        EnqueueConvert(run.Db);
 
         var igdb = !string.IsNullOrEmpty(run.Credentials.Read("igdb.clientId")) && !string.IsNullOrEmpty(run.Credentials.Read("igdb.clientSecret"))
             ? new Igdb(api, run.Credentials, Handler) : null;
@@ -120,24 +118,29 @@ public static class SteamGridDb
                 SELECT g.id, COALESCE(g.original_name, g.name_es), (SELECT max(steam_app_id) FROM version v WHERE v.game_id = g.id), g.year, g.igdb_id
                 FROM game g WHERE g.id > @After ORDER BY g.id
                 """, job).ToList();
+        // Todos, también los que ya tienen: así una versión nueva trae las referencias que cambiaron. Lo consultado hace menos de 30 días sale de la caché.
         var last = games.Count > 0 ? games[^1].Id : job.After;
-        games = games.Where(g => Find(run.Db, g.Id, "cover") is null).ToList();
 
         for (var i = 0; i < games.Count; i++)
         {
             var (id, name, steam, year, igdbId) = games[i];
-            var got = new List<(string Kind, int Bytes)>();
+            var got = new Dictionary<string, string>();
             var sgdbId = await GameId(api, key, name, year, steam, ct);
             if (sgdbId is not null)
                 foreach (var kind in Kinds)
-                    if (Find(run.Db, id, kind) is null && await First(api, key, string.Format(Queries[kind], sgdbId), ct) is { } url)
-                        got.Add((kind, await Download(http, url, folder, id, kind, ct)));
+                    if (await First(api, key, string.Format(Queries[kind], sgdbId), ct) is { } url && ImageRefs.IsAllowed(url)) got[kind] = url;
             // ponytail: una consulta a IGDB por juego sin portada; de a 500 si la carga completa se hace lenta.
-            if (Find(run.Db, id, "cover") is null && igdb is not null && igdbId is not null
+            if (!got.ContainsKey("cover") && igdb is not null && igdbId is not null
                 && (await igdb.Query<IgdbCover>("covers", $"fields image_id; where game = {igdbId}; limit 1;", ct)).FirstOrDefault()?.ImageId is { } image)
-                got.Add(("cover", await Download(http, IgdbImageUrl + image + ".jpg", folder, id, "cover", ct)));
+                got["cover"] = IgdbImageUrl + image + ".jpg";
+            foreach (var (kind, url) in got)
+                if (ImageRefs.Url(run.Db, id, kind) != url)
+                {
+                    Save(run.Db, id, kind, url);
+                    ImageRefs.Forget(run.Db, [(id, kind)]); // lo bajado antes era de la referencia vieja
+                }
             run.Log(got.Count == 0 ? ApiError.Of("tasks.log.noImages", ("game", name))
-                : ApiError.Of("tasks.log.images", ("game", name), ("kinds", string.Join(", ", got.Select(g => g.Kind))), ("kb", (got.Sum(g => g.Bytes) / 1024).ToString())));
+                : ApiError.Of("tasks.log.images", ("game", name), ("kinds", string.Join(", ", got.Keys))));
             // La carga corre a la par: si el juego se fusionó y se borró mientras bajaba, su imagen no queda para el próximo id (#59).
             using (var c = run.Db.Open())
                 if (c.ExecuteScalar<long?>("SELECT id FROM game WHERE id = @id", new { id }) is null) Forget(run.Db, id);
@@ -187,18 +190,8 @@ public static class SteamGridDb
         }
     }
 
-    /// <summary>Baja la imagen y la guarda en WebP reducida; si no se puede leer como imagen, tal como vino (#64).</summary>
-    /// <returns>Lo que pesa en disco.</returns>
-    static async Task<int> Download(HttpClient http, string url, string folder, long id, string kind, CancellationToken ct)
-    {
-        var bytes = await http.GetByteArrayAsync(url, ct);
-        var webp = ToWebp(bytes, kind);
-        Write(Path.Combine(folder, $"{id}-{kind}{(webp is null ? Path.GetExtension(new Uri(url).AbsolutePath) : ".webp")}"), webp ?? bytes);
-        return (webp ?? bytes).Length;
-    }
-
     /// <summary>Escribe a un temporal y lo renombra al final: un corte no deja una imagen rota.</summary>
-    static void Write(string path, byte[] bytes)
+    internal static void Write(string path, byte[] bytes)
     {
         var temp = Path.Combine(Path.GetDirectoryName(path)!, "." + Path.GetFileName(path) + ".part");
         File.WriteAllBytes(temp, bytes);

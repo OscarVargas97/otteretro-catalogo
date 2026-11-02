@@ -115,6 +115,8 @@ public static class CliMode
                 var errors = Catalog.Published.Validate(Path.GetFullPath(folder));
                 foreach (var error in errors) output.WriteLine(error);
                 output.WriteLine(errors.Count == 0 ? "Sin errores." : $"{errors.Count} errores.");
+                if (errors.Count == 0)
+                    output.WriteLine("Juegos con imagen: " + string.Join(", ", Catalog.Published.ImageCounts(Path.GetFullPath(folder)).Select(i => $"{i.Key} {i.Value}")));
                 return errors.Count == 0 ? 0 : 1;
             }
             case ["catalogo", "compilar", var folder, var file]:
