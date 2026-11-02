@@ -18,8 +18,9 @@ Remove-Item $publicado -Recurse -Force -ErrorAction SilentlyContinue
 dotnet publish (Join-Path $raiz 'src\Otteretro') -c Release -r win-x64 --self-contained -p:Version=$Version -o $publicado
 if ($LASTEXITCODE) { throw 'dotnet publish falló' }
 
-# Su propio packId: se instala aparte de Otteretro y conviven (#12).
-vpk pack --packId OtteretroCatalogo --packVersion $Version --packTitle 'Otteretro Catálogo' --packDir $publicado `
+# Su propio packId: se instala aparte de Otteretro y conviven (#12). La á va por su código: Windows PowerShell 5.1 lee
+# este archivo como ANSI y el nombre del acceso directo saldría roto.
+vpk pack --packId OtteretroCatalogo --packVersion $Version --packTitle "Otteretro Cat$([char]0xE1)logo" --packDir $publicado `
     --channel $Channel --mainExe OtteretroCatalogo.exe --icon (Join-Path $raiz 'src\Otteretro\nutria.ico') --outputDir $paquetes
 if ($LASTEXITCODE) { throw 'vpk pack falló' }
 
