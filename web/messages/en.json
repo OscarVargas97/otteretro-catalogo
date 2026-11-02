@@ -564,6 +564,31 @@
       "routeKind": "That route type doesn't exist.",
       "emptyRoute": "The route needs at least one step.",
       "sameGame": "Choose another game to merge."
+    },
+    "publish": {
+      "noKey": "The GitHub key is missing: paste it in Settings › Accounts and keys.",
+      "badToken": "GitHub didn't accept the key: check the token is still valid.",
+      "forbidden": "The key isn't allowed to do this: it needs public_repo.",
+      "failed": "GitHub answered with an error ({status}).",
+      "offline": "Couldn't connect to GitHub.",
+      "kind": "Only a saga or a game can be published.",
+      "nothingChanged": "There's nothing to publish.",
+      "invalid": "What would be published doesn't pass validation ({count} errors).",
+      "conflict": "Changed on GitHub: {files}. It isn't published so as not to overwrite it.",
+      "change": {
+        "replaced": "{count} games or versions become replaced",
+        "sagaAdded": "New saga: {name}",
+        "sagaRemoved": "Saga {name} is removed",
+        "name": "Name: “{from}” → “{to}”",
+        "iconicOn": "Becomes iconic",
+        "iconicOff": "No longer iconic",
+        "routeAdded": "New route ({kind})",
+        "routeRemoved": "Route removed ({kind})",
+        "routeChanged": "Route changes ({kind})",
+        "gameAdded": "{name} comes in",
+        "gameRemoved": "{name} goes out",
+        "gameChanged": "{name} changes"
+      }
     }
   },
   "credentials": {
@@ -608,7 +633,7 @@
     "configure": "Set up",
     "close": "Close",
     "purpose": {
-      "github": "Backs up your saves to a private repository of yours.",
+      "github": "Publish your catalog changes as a PR. Classic token with the public_repo scope.",
       "steam": "What you own on Steam, with your hours.",
       "igdb": "Series, games and versions for the catalog.",
       "screenscraper": "Identifies ROMs that don’t match the DATs.",
@@ -1244,5 +1269,30 @@
       "site": "Verified by the site",
       "none": "Not verified"
     }
+  },
+  "publish": {
+    "button": "Publish",
+    "title": "Publish as a PR",
+    "titleOf": "Publish “{name}” as a PR",
+    "comparing": "Comparing with what's published on GitHub…",
+    "noKey": "Publishing needs your GitHub key: a classic token with the public_repo scope. With it, the program creates a fork in your account (if you can't write to the repo), pushes a branch and opens the PR.",
+    "openCredentials": "Go to Accounts and keys",
+    "nothing": "Nothing changed compared with what's published.",
+    "change": {
+      "added": "New",
+      "modified": "Changes",
+      "deleted": "Removed"
+    },
+    "invalid": "Doesn't pass validation",
+    "conflictTitle": "Changed on GitHub",
+    "conflict": "Someone changed {files} after the version your catalog comes from. It isn't published so as not to overwrite it.",
+    "unknownBase": "It's unknown which version your catalog comes from, so changes by others can't be detected: check the list is only yours.",
+    "openPr": "There's already an open PR for this:",
+    "opened": "PR opened:",
+    "updated": "PR updated:",
+    "noMerge": "It only proposes the change: whoever manages the catalog reviews and merges the PR.",
+    "close": "Close",
+    "open": "Open PR",
+    "update": "Update PR"
   }
 }

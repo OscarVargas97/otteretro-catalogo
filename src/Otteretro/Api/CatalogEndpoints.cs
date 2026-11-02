@@ -135,6 +135,24 @@ public static class CatalogEndpoints
         api.MapDelete("/games/{id:long}", Results<Ok, BadRequest<ApiError>, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : Editing.DeleteGame(db, id) is { } e ? TypedResults.BadRequest(e) : TypedResults.Ok());
 
+        // Publicar tu versión como un PR (#22). Solo propone: nada acá fusiona.
+        api.MapPost("/publish/preview", async Task<Results<Ok<PublishPreview>, Conflict<ApiError>>> (PublishRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            if (Publisher(db, s, box) is not { } publisher) return TypedResults.Conflict(ApiError.Of("publish.noKey"));
+            try { return TypedResults.Ok(await publisher.Preview(request, ct)); }
+            catch (TaskException e) { return TypedResults.Conflict(e.Error); }
+            catch (HttpRequestException) { return TypedResults.Conflict(ApiError.Of("publish.offline")); }
+        });
+        api.MapPost("/publish", async Task<Results<Ok<PublishResult>, Conflict<ApiError>>> (PublishRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            if (Publisher(db, s, box) is not { } publisher) return TypedResults.Conflict(ApiError.Of("publish.noKey"));
+            try { return TypedResults.Ok(await publisher.Publish(request, ct)); }
+            catch (TaskException e) { return TypedResults.Conflict(e.Error); }
+            catch (HttpRequestException) { return TypedResults.Conflict(ApiError.Of("publish.offline")); }
+        });
+
         api.MapGet("/search", Results<Ok<SearchResults>, Conflict<ApiError>> (AppSession s, string? q) =>
         {
             if (Db(s) is not { } db) return NoData();
@@ -158,6 +176,9 @@ public static class CatalogEndpoints
 
     static Igdb IgdbFor(Database db, AppSession s, SecretBox box) =>
         new(new ApiClient(db, IgdbImport.Handler), new Credentials(db, s.Config.MachineId, box), IgdbImport.Handler);
+
+    static GitHubPublisher? Publisher(Database db, AppSession s, SecretBox box) =>
+        new Credentials(db, s.Config.MachineId, box).Read("github.token") is { Length: > 0 } token ? new(db, token) : null;
 
     static bool HasSgdbKey(Database db, AppSession s, SecretBox box) =>
         new Credentials(db, s.Config.MachineId, box).List().Any(c => c.Id == "steamgriddb.apiKey" && c.Saved);

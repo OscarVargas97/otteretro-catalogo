@@ -53,6 +53,7 @@ public static class CliMode
             [--saga X]             una saga (zelda, half-life…; PC se carga así)
             [--pc-populares]       o los 1.500 juegos de PC más calificados. Lo hace la app abierta.
           catalogo importar <base>     Trae una copia de un catalogo.db a este catálogo vacío.
+          catalogo base <sha>          De qué commit de main parte el catálogo local: publicar avisa si alguien cambió lo mismo después.
           catalogo publicar <carpeta>  Escribe el catálogo como un JSON por saga.
           catalogo validar <carpeta>   Revisa lo publicado (corre en cada PR).
           catalogo compilar <carpeta> <archivo>  Genera la base que baja la app y su manifiesto.
@@ -100,6 +101,12 @@ public static class CliMode
                     output.WriteLine(Claude.InitialLoad.Enqueue(db, part) is { } id
                         ? $"Tarea {id} encolada; la app abierta la toma y Claude trabaja en su horario."
                         : $"Parte desconocida: {part}. Partes: {string.Join(", ", Claude.InitialLoad.Parts.Select(x => x.Id))}.");
+                });
+            case ["catalogo", "base", var sha]:
+                return WithData(output, db =>
+                {
+                    Catalog.GitHubPublisher.SetBase(db, sha);
+                    output.WriteLine($"El catálogo parte de {sha}.");
                 });
             case ["catalogo", "importar", var from]:
                 return WithData(output, db => output.WriteLine(Catalog.InitialCatalog.Import(db, Path.GetFullPath(from))

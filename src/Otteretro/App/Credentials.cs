@@ -25,7 +25,8 @@ public sealed class Credentials(Database db, string machineId, SecretBox box)
     // ponytail: las tiendas de PC se suman cuando su fase diga cuáles son y qué piden.
     public static readonly CredentialKind[] Kinds =
     [
-        new("github", "token", "https://github.com/settings/personal-access-tokens", 5),
+        // Publicar con un PR (#22): un token clásico con public_repo alcanza para crear el fork, la rama y el PR.
+        new("github", "token", "https://github.com/settings/tokens/new?scopes=public_repo&description=Otteretro%20Catalogo", 1),
         new("igdb", "clientId", "https://dev.twitch.tv/console/apps", 1),
         new("igdb", "clientSecret", "https://dev.twitch.tv/console/apps", 1),
         new("steamgriddb", "apiKey", "https://www.steamgriddb.com/profile/preferences/api", 1),
