@@ -3,7 +3,7 @@
   "name": "Supersonic Acrobatic Rocket-Powered Battle-Cars",
   "igdbKind": "collection",
   "igdbId": 4455,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2015,
       "igdbId": 11198,
       "popularity": 1244,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "17582",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Rocket League",
@@ -48,7 +54,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 11198,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido y juego cruzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Excelente con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Hasta 120 fps."
+            }
+          ]
         },
         {
           "id": 17581,
@@ -56,7 +83,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 11198,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido y juego cruzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Excelente con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "60 fps estables."
+            }
+          ]
         },
         {
           "id": 17582,
@@ -65,7 +113,28 @@
           "year": 2015,
           "igdbId": 11198,
           "steamAppId": 252950,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido y juego cruzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando o teclado, con herramientas extra."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta fluidez y resolución."
+            }
+          ]
         },
         {
           "id": 17583,
@@ -73,7 +142,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 11198,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido y juego cruzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Excelente con mando y háptica."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Hasta 120 fps."
+            }
+          ]
         },
         {
           "id": 17584,
@@ -81,7 +171,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 11198,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido y juego cruzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Excelente con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "60 fps estables."
+            }
+          ]
         },
         {
           "id": 17585,
@@ -89,7 +200,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 11198,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido y juego cruzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución y fluidez menores."
+            }
+          ]
         }
       ]
     },
@@ -133,5 +265,63 @@
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 76,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento: 2008 y 2015.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40140,
+          "recommendedVersionId": 96060,
+          "reason": "Predecesor original, solo en PS3."
+        },
+        {
+          "position": 2,
+          "gameId": 8728,
+          "recommendedVersionId": 17582,
+          "reason": "Secuela y juego principal. PC admite más opciones."
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "kind": "story",
+      "rationale": "No tiene historia: es un juego competitivo sin trama. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40140,
+          "recommendedVersionId": 96060,
+          "reason": "Primer juego de la saga."
+        },
+        {
+          "position": 2,
+          "gameId": 8728,
+          "recommendedVersionId": 17582,
+          "reason": "Secuela."
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "kind": "community",
+      "rationale": "Hoy se juega directamente Rocket League. Battle-Cars es una curiosidad histórica que solo existe en PS3, y la comunidad suele omitirlo. Sin fuentes verificadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8728,
+          "recommendedVersionId": 17582,
+          "reason": "Es el juego vigente, con jugadores activos y juego cruzado. Elijo PC, aunque la plataforma da igual."
+        }
+      ]
+    }
+  ]
 }

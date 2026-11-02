@@ -9,7 +9,7 @@ using Otteretro.Data;
 namespace Otteretro.Catalog;
 
 public record PublishedField(string Field, string? Value, string Source, bool Manual);
-public record PublishedCriterion(string Criterion, double? Value, string? Text);
+public record PublishedCriterion(string Criterion, string? Value, string? Text);
 public record PublishedVersion(long Id, string Platform, string Kind, int? Year, long? IgdbId, long? SteamAppId, List<PublishedCriterion> Criteria);
 public record PublishedGame(long Id, string NameEs, string? OriginalName, int? Year, long? IgdbId, long? Popularity, bool Iconic, List<PublishedField> Fields, List<PublishedVersion> Versions);
 public record PublishedStep(int Position, long GameId, long? RecommendedVersionId, string? Reason);
@@ -57,7 +57,7 @@ public static partial class Published
         var fields = c.Query<(string Entity, long EntityId, string Field, string? Value, string Source, bool Manual)>(
                 "SELECT entity, entity_id AS EntityId, field, value, source, manual FROM field_value ORDER BY entity, entity_id, field, source")
             .ToLookup(f => (f.Entity, f.EntityId), f => new PublishedField(f.Field, f.Value, f.Source, f.Manual));
-        var criteria = c.Query<(long VersionId, string Criterion, double? Value, string? Text)>(
+        var criteria = c.Query<(long VersionId, string Criterion, string? Value, string? Text)>(
                 "SELECT version_id AS VersionId, criterion, value, text FROM version_criterion ORDER BY version_id, criterion")
             .ToLookup(k => k.VersionId, k => new PublishedCriterion(k.Criterion, k.Value, k.Text));
         var versions = c.Query<(long Id, long GameId, string Platform, string Kind, long? Year, long? IgdbId, long? SteamAppId)>(
