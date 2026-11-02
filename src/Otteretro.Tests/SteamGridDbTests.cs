@@ -219,6 +219,31 @@ public class SteamGridDbTests
         Assert.Equal([(3L, "cover", SteamGridDb.IgdbImageUrl + "co3nada.jpg"), (4L, "cover", "https://cdn2.steamgriddb.com/grid/b.jpg")], Refs(f));
     }
 
+    /// <summary>#40: «Completar las que faltan» no consulta los juegos que ya tienen portada, fondo y logo, y dice cuántas encontró.</summary>
+    [Fact]
+    public async Task FillingInSkipsGamesThatHaveEverything()
+    {
+        await using var f = new Fixture(("steamgriddb.apiKey", "clave"));
+        using (var c = f.Db.Open())
+            c.Execute("""
+                INSERT INTO game (id, name_es, original_name) VALUES (1, 'Zelda PC', 'Zelda PC'), (2, 'Zelda Classic', 'Zelda Classic');
+                INSERT INTO version (game_id, platform, steam_app_id) VALUES (1, 'pc', 70);
+                INSERT INTO catalog.image (game_id, kind, url) VALUES (1, 'cover', 'https://cdn2.steamgriddb.com/grid/1.png'),
+                    (1, 'hero', 'https://cdn2.steamgriddb.com/hero/1.png'), (1, 'logo', 'https://cdn2.steamgriddb.com/logo/1.png');
+                """);
+        var asked = new List<string>();
+        OnRequest = url => { lock (asked) asked.Add(url); };
+
+        var task = await f.Run(SteamGridDb.Enqueue(f.Db, missing: true));
+        Assert.Equal("done", task.Status);
+        Assert.DoesNotContain(asked, u => u.Contains("games/steam/70")); // Zelda PC ya tiene todo
+        Assert.Contains((2L, "cover", "https://cdn2.steamgriddb.com/grid/b.jpg"), Refs(f));
+        using var check = f.Db.Open();
+        Assert.Equal(1, check.ExecuteScalar<int>("SELECT count(*) FROM task WHERE kind = 'sgdb.images'")); // sin pasadas vacías
+        var log = check.Query<string>("SELECT message FROM task_log WHERE task_id = @Id", new { task.Id }).ToList();
+        Assert.Contains(log, m => m.Contains("tasks.log.imagesDone") && m.Contains("\"found\":\"1\""));
+    }
+
     [Fact]
     public async Task WithoutKeyTheTaskSaysWhy()
     {

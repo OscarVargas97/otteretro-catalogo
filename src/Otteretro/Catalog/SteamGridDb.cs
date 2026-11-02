@@ -42,7 +42,8 @@ public static class SteamGridDb
     /// <summary>Para las pruebas: el manejador HTTP falso de SteamGridDB y su CDN.</summary>
     public static HttpMessageHandler? Handler { get; set; }
 
-    public record Job(long After = 0);
+    /// <param name="Missing">«Completar las que faltan» (#40): solo los juegos a los que les falta portada, fondo o logo.</param>
+    public record Job(long After = 0, bool Missing = false);
     record Found(long Id, string? Name = null, [property: JsonPropertyName("release_date")] long? ReleaseDate = null);
     record IgdbCover(string? ImageId);
 
@@ -62,15 +63,15 @@ public static class SteamGridDb
         return new(CatalogQueries.Covers(db).Count(games.Contains), games.Count, running, hasKey);
     }
 
-    /// <summary>«Bajar portadas»: encola la descarga desde el principio (salta los que ya tienen), salvo que ya haya una.</summary>
-    public static CoversInfo Request(Database db, bool hasKey)
+    /// <summary>«Revisar todas» o «Completar las que faltan» (#40): encola la búsqueda desde el principio, salvo que ya haya una.</summary>
+    public static CoversInfo Request(Database db, bool hasKey, bool missing = false)
     {
-        if (hasKey && !Status(db, hasKey).Running) Enqueue(db);
+        if (hasKey && !Status(db, hasKey).Running) Enqueue(db, missing: missing);
         return Status(db, hasKey);
     }
 
-    public static long Enqueue(Database db, long after = 0) =>
-        TaskQueue.Enqueue(db, "sgdb.images", JsonSerializer.Serialize(new Job(after), JsonSerializerOptions.Web));
+    public static long Enqueue(Database db, long after = 0, bool missing = false) =>
+        TaskQueue.Enqueue(db, "sgdb.images", JsonSerializer.Serialize(new Job(after, missing), JsonSerializerOptions.Web));
 
     /// <summary>Encola la conversión a WebP si quedan imágenes en otro formato y no hay una esperando.</summary>
     public static void EnqueueConvert(Database db)
@@ -121,8 +122,11 @@ public static class SteamGridDb
         using (var c = run.Db.Open())
             games = c.Query<(long, string, long?, long?, long?)>("""
                 SELECT g.id, COALESCE(g.original_name, g.name_es), (SELECT max(steam_app_id) FROM version v WHERE v.game_id = g.id), g.year, g.igdb_id
-                FROM game g WHERE g.id > @After ORDER BY g.id
+                FROM game g WHERE g.id > @After
+                  AND (NOT @Missing OR (SELECT count(*) FROM catalog.image i WHERE i.game_id = g.id) < 3)
+                ORDER BY g.id
                 """, job).ToList();
+        var found = 0;
         // Todos, también los que ya tienen: así una versión nueva trae las referencias que cambiaron. Lo consultado hace menos de 30 días sale de la caché.
         var last = games.Count > 0 ? games[^1].Id : job.After;
 
@@ -139,8 +143,9 @@ public static class SteamGridDb
                 && (await igdb.Query<IgdbCover>("covers", $"fields image_id; where game = {igdbId}; limit 1;", ct)).FirstOrDefault()?.ImageId is { } image)
                 got["cover"] = IgdbImageUrl + image + ".jpg";
             foreach (var (kind, url) in got)
-                if (ImageRefs.Url(run.Db, id, kind) != url)
+                if (ImageRefs.Url(run.Db, id, kind) is var before && before != url)
                 {
+                    if (before is null) found++;
                     Save(run.Db, id, kind, url);
                     ImageRefs.Forget(run.Db, [(id, kind)]); // lo bajado antes era de la referencia vieja
                 }
@@ -155,9 +160,17 @@ public static class SteamGridDb
 
         // Lo que cargó IGDB mientras esta corría (#78): otra pasada solo desde el último juego de la lista.
         using (var c = run.Db.Open())
-            if (c.ExecuteScalar<long>("SELECT count(*) FROM game WHERE id > @last", new { last }) > 0
+            // Con el mismo filtro: en «completar», los completos de más arriba no cuentan (si contaran, encolaría pasadas vacías sin fin).
+            if (c.ExecuteScalar<long>("""
+                    SELECT count(*) FROM game g WHERE g.id > @last
+                      AND (NOT @Missing OR (SELECT count(*) FROM catalog.image i WHERE i.game_id = g.id) < 3)
+                    """, new { last, job.Missing }) > 0
                 && c.ExecuteScalar<long>("SELECT count(*) FROM task WHERE kind = 'sgdb.images' AND status = 'queued'") == 0)
-                Enqueue(run.Db, last);
+                Enqueue(run.Db, last, job.Missing);
+        // Lo que encontró esta pasada y lo que sigue faltando (#40), para saber si vale la pena publicar.
+        using (var c = run.Db.Open())
+            run.Log(ApiError.Of("tasks.log.imagesDone", ("found", found.ToString()),
+                ("missing", c.ExecuteScalar<long>("SELECT count(*) FROM game g WHERE NOT EXISTS (SELECT 1 FROM catalog.image i WHERE i.game_id = g.id AND i.kind = 'cover')").ToString())));
     }
 
     /// <summary>
