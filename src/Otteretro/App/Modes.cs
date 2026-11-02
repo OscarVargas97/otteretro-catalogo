@@ -133,10 +133,11 @@ public static class CliMode
             case ["catalogo", "cambios", var folder, var version, var file, .. var previous] when previous is [] or [_, _] or [_, _, _]:
             {
                 var changes = previous is [var before, _, ..] ? Catalog.Published.Changes(Path.GetFullPath(before), Path.GetFullPath(folder), version) : [];
+                var images = previous is [var old2, _, ..] ? Catalog.Published.ImageChanges(Path.GetFullPath(old2), Path.GetFullPath(folder)) : 0;
                 var history = Catalog.Published.Extend(previous is [_, _, var old] ? Catalog.Published.ReadHistory(Path.GetFullPath(old)) : null,
-                    previous is [_, var previousVersion, ..] ? previousVersion : null, changes, version);
+                    previous is [_, var previousVersion, ..] ? previousVersion : null, changes, version, images);
                 Catalog.Published.SaveHistory(Path.GetFullPath(file), history);
-                output.WriteLine($"{changes.Count} cambios en {version}; el historial tiene {history.Versions.Count} versiones y {history.Entries.Count} cambios.");
+                output.WriteLine($"{changes.Count} cambios y {images} juegos con imágenes distintas en {version}; el historial tiene {history.Versions.Count} versiones.");
                 return 0;
             }
             // #32: lo que revisa cada PR contra main, con el resumen que se comenta en el PR.
