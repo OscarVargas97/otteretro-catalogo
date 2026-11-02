@@ -112,15 +112,21 @@ public static class CatalogQueries
     /// <summary>Los juegos con una imagen de ese tipo (cover, hero o logo), recordados como <see cref="Covers"/>.</summary>
     internal static HashSet<long> Images(Database db, string kind)
     {
+        // Las que tienen referencia (#6) se bajan al mostrarse: cuentan como si ya estuvieran.
+        HashSet<long> Refs()
+        {
+            using var c = db.Open();
+            return c.Query<long>("SELECT game_id FROM catalog.image WHERE kind = @kind AND game_id IN (SELECT id FROM catalog.game)", new { kind }).ToHashSet();
+        }
         var folder = SteamGridDb.Folder(db);
-        if (!Directory.Exists(folder)) return [];
+        if (!Directory.Exists(folder)) return Refs();
         var stamp = Directory.GetLastWriteTimeUtc(folder);
         lock (imageCache)
-            if (imageCache.TryGetValue(kind, out var hit) && hit.Folder == folder && hit.Stamp == stamp) return hit.Ids;
+            if (imageCache.TryGetValue(kind, out var hit) && hit.Folder == folder && hit.Stamp == stamp) return [.. hit.Ids, .. Refs()];
         var ids = Directory.EnumerateFiles(folder, $"*-{kind}.*")
             .Select(f => long.TryParse(Path.GetFileName(f).Split('-')[0], out var id) ? id : 0).ToHashSet();
         lock (imageCache) imageCache[kind] = (folder, stamp, ids);
-        return ids;
+        return [.. ids, .. Refs()];
     }
 
     static readonly Dictionary<string, (string Folder, DateTime Stamp, HashSet<long> Ids)> imageCache = [];
