@@ -59,7 +59,7 @@ export function ConsoleSettings() {
   // Portadas a pedido (#132): mientras hay una descarga, el total se refresca solo.
   const covers = useQuery({ queryKey: ["covers"], queryFn: () => request<CoversInfo>("/api/covers"), refetchInterval: (q) => (q.state.data?.running ? 5_000 : false) });
   const downloadCovers = useMutation({
-    mutationFn: () => request<CoversInfo>("/api/covers", { method: "POST" }),
+    mutationFn: (missing: boolean) => request<CoversInfo>(`/api/covers${missing ? "?missing=true" : ""}`, { method: "POST" }),
     onSuccess: (data) => { cache.setQueryData(["covers"], data); cache.invalidateQueries({ queryKey: ["tasks"] }); },
   });
 
@@ -116,9 +116,12 @@ export function ConsoleSettings() {
               <span className="small muted tabular">{t("covers.count", { have: Number(covers.data.have), total: Number(covers.data.total) })}</span>
             </div>
             {!covers.data.hasKey ? <Link className="ot-btn" href="/settings/?s=credentials">{t("covers.noKey")}</Link>
-              : <button className="ot-btn" type="button" disabled={covers.data.running || downloadCovers.isPending} onClick={() => downloadCovers.mutate()}>
-                  {covers.data.running ? t("covers.running") : t("covers.download")}
-                </button>}
+              : covers.data.running ? <button className="ot-btn" type="button" disabled>{t("covers.running")}</button>
+              : <div className="sentence">
+                  {/* #40: lo que falta primero; revisar todas trae también las que cambiaron. */}
+                  <button className="ot-btn ot-btn-primary" type="button" disabled={downloadCovers.isPending} onClick={() => downloadCovers.mutate(true)}>{t("covers.missing")}</button>
+                  <button className="ot-btn" type="button" disabled={downloadCovers.isPending} onClick={() => downloadCovers.mutate(false)}>{t("covers.download")}</button>
+                </div>}
           </div>
           {downloadCovers.error && <p className="error small" role="alert">{describe(downloadCovers.error)}</p>}
         </section>

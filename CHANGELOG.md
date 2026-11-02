@@ -2,7 +2,7 @@
 
 ## Sin publicar
 
-`feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam` y `feat/30-cambios-publicados` · #6, #9, #12, #17, #22 y #30: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
+`feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam`, `feat/30-cambios-publicados` y `feat/40-completar-imagenes` · #6, #9, #12, #17, #22, #30 y #40: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
 
 ### Nuevo
 - **Referencias de imágenes** (#6): cada juego publica de dónde se baja su portada, su fondo y su logo (SteamGridDB, o la carátula de IGDB si no hay portada), sin copias ni claves. Otteretro y la administración bajan cada imagen la primera vez que se ve. `catalogo validar` rechaza una dirección que no sea de SteamGridDB o IGDB y cuenta cuántos juegos tienen cada tipo.
@@ -13,6 +13,8 @@
 
 - **Cada versión dice qué cambió** (#31): junto con la base se publica `cambios.json`, con todo el historial: renombrados, fusionados, quitados, nuevos y juegos que cambian de saga, cada uno con su versión. Otteretro lo usa para verificar lo que te muestra antes de aceptar una versión, aunque vengas de una versión de hace meses.
 - **Cada PR se revisa contra `main`** (#32): falla si una saga, un juego o una versión desaparece sin entrada en `reemplazados.json`, o si usa un id que en `main` ya se retiró o es otra cosa. El PR recibe un comentario con el resumen de lo que cambia. `reemplazados.json` ahora también acepta sagas.
+
+- **Completar las imágenes que faltan** (#40): en Ajustes › Consolas › Portadas, «Completar las que faltan» busca solo los juegos sin portada, fondo o logo, y sigue donde quedó si se corta. Al terminar dice cuántos juegos encontraron imagen y cuántos siguen sin portada. «Revisar todas» sigue para traer también las que cambiaron.
 
 ### Cambios
 - «Buscar imágenes en SteamGridDB e IGDB» guarda las direcciones en vez de bajar las imágenes, y vuelve a consultarlas para traer las que cambiaron.
