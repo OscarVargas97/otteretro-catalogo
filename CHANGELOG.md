@@ -2,6 +2,16 @@
 
 ## Sin publicar
 
+`feat/6-referencias-imagenes` · #6: las imágenes van por referencia.
+
+### Nuevo
+- **Referencias de imágenes** (#6): cada juego publica de dónde se baja su portada, su fondo y su logo (SteamGridDB, o la carátula de IGDB si no hay portada), sin copias ni claves. Otteretro y la administración bajan cada imagen la primera vez que se ve. `catalogo validar` rechaza una dirección que no sea de SteamGridDB o IGDB y cuenta cuántos juegos tienen cada tipo.
+
+### Cambios
+- «Buscar imágenes en SteamGridDB e IGDB» guarda las direcciones en vez de bajar las imágenes, y vuelve a consultarlas para traer las que cambiaron.
+
+## feat/2-generador · fusionado
+
 `feat/2-generador` · #1, #2, #3, #4: el catálogo de Otteretro pasa a ser un proyecto aparte.
 
 ### Nuevo
