@@ -22,7 +22,8 @@ El catálogo son archivos de texto en [`catalogo/`](catalogo). Un cambio es un P
 ## Antes de enviar
 
 ```powershell
-dotnet run --project src/Otteretro -- catalogo validar catalogo
+dotnet build src/Otteretro -p:OutputType=Exe
+src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo validar catalogo
 ```
 
 La misma revisión corre sola en cada PR, y un dato inválido no pasa.

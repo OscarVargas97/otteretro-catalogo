@@ -19,8 +19,11 @@ jobs:
         with:
           global-json-file: global.json
 
-      - name: Compilar
-        run: dotnet run --project src/Otteretro -- catalogo compilar catalogo salida/catalogo.db.gz
+      - name: Compilar la herramienta
+        run: dotnet build src/Otteretro -p:OutputType=Exe
+
+      - name: Compilar el catálogo
+        run: src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo compilar catalogo salida/catalogo.db.gz
 
       - name: Publicar
         shell: pwsh

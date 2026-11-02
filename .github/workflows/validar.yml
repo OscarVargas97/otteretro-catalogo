@@ -17,8 +17,12 @@ jobs:
       - name: Pruebas
         run: dotnet test --filter "FullyQualifiedName!~FluidityTests"
 
+      # Como programa de consola: así se ven los errores y usa esta carpeta.
+      - name: Compilar la herramienta
+        run: dotnet build src/Otteretro -p:OutputType=Exe
+
       - name: Revisar lo publicado
-        run: dotnet run --project src/Otteretro -- catalogo validar catalogo
+        run: src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo validar catalogo
 
       - name: Compila
-        run: dotnet run --project src/Otteretro -- catalogo compilar catalogo salida/catalogo.db.gz
+        run: src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo compilar catalogo salida/catalogo.db.gz
