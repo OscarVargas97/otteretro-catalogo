@@ -1,0 +1,224 @@
+using System.IO.Compression;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using Dapper;
+using Otteretro.Data;
+
+namespace Otteretro.Catalog;
+
+public record PublishedField(string Field, string? Value, string Source, bool Manual);
+public record PublishedCriterion(string Criterion, string? Value, string? Text);
+public record PublishedVersion(long Id, string Platform, string Kind, int? Year, long? IgdbId, long? SteamAppId, List<PublishedCriterion> Criteria);
+public record PublishedGame(long Id, string NameEs, string? OriginalName, int? Year, long? IgdbId, long? Popularity, bool Iconic, List<PublishedField> Fields, List<PublishedVersion> Versions);
+public record PublishedStep(int Position, long GameId, long? RecommendedVersionId, string? Reason);
+public record PublishedRoute(long Id, string Kind, string? Rationale, string? Sources, bool Approved, List<PublishedStep> Steps);
+public record PublishedSaga(long Id, string Name, string? IgdbKind, long? IgdbId, bool Iconic, List<PublishedField> Fields, List<PublishedGame> Games, List<PublishedRoute> Routes);
+public record PublishedLooseGames(List<PublishedGame> Games);
+public record PublishedConsole(string Id, string Name, string? Company, string? EmulationStatus, List<long> IgdbPlatforms);
+/// <param name="Kind">game o version.</param>
+/// <param name="NewId">Con qué se reemplazó; null si se quitó sin reemplazo.</param>
+public record PublishedReplacement(string Kind, long OldId, long? NewId);
+/// <param name="Sha256">Lo que verifica la app antes de usar la base.</param>
+public record PublishedManifest(string Sha256, int Sagas, int Games, int Versions);
+
+/// <summary>
+/// El catálogo publicado (#3, decisiones 253 y 254): un JSON por saga, que se puede revisar en un PR, y la base compilada que baja la app. Los ids son permanentes:
+/// lo fusionado o quitado queda en `replaced.json`, para que la app pase lo de cada persona al juego que lo reemplaza.
+/// </summary>
+public static partial class Published
+{
+    const string SagasFolder = "sagas", LooseFolder = "sin-saga", ConsolesFile = "consolas.json", ReplacedFile = "reemplazados.json";
+    /// <summary>Los juegos sin saga son unos 30.000: de a mil por archivo, para que un cambio no sea un archivo gigante.</summary>
+    const int LoosePerFile = 1000;
+
+    static readonly JsonSerializerOptions Json = new(JsonSerializerDefaults.Web)
+    {
+        WriteIndented = true,
+        Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+        DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+    };
+
+    static void Save(string path, object value)
+    {
+        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+        File.WriteAllText(path, JsonSerializer.Serialize(value, value.GetType(), Json).ReplaceLineEndings("\n") + "\n", new UTF8Encoding(false));
+    }
+
+    static T Load<T>(string path) => JsonSerializer.Deserialize<T>(File.ReadAllText(path), Json)!;
+
+    /// <summary>Escribe el catálogo como archivos. Mismo catálogo, mismos bytes: en un PR solo se ve lo que cambió.</summary>
+    public static void Write(Database db, string folder)
+    {
+        using var c = db.Open();
+        foreach (var old in new[] { SagasFolder, LooseFolder }.Select(f => Path.Combine(folder, f)).Where(Directory.Exists)) Directory.Delete(old, true);
+
+        var fields = c.Query<(string Entity, long EntityId, string Field, string? Value, string Source, bool Manual)>(
+                "SELECT entity, entity_id AS EntityId, field, value, source, manual FROM field_value ORDER BY entity, entity_id, field, source")
+            .ToLookup(f => (f.Entity, f.EntityId), f => new PublishedField(f.Field, f.Value, f.Source, f.Manual));
+        var criteria = c.Query<(long VersionId, string Criterion, string? Value, string? Text)>(
+                "SELECT version_id AS VersionId, criterion, value, text FROM version_criterion ORDER BY version_id, criterion")
+            .ToLookup(k => k.VersionId, k => new PublishedCriterion(k.Criterion, k.Value, k.Text));
+        var versions = c.Query<(long Id, long GameId, string Platform, string Kind, long? Year, long? IgdbId, long? SteamAppId)>(
+                "SELECT id, game_id AS GameId, platform, kind, year, igdb_id AS IgdbId, steam_app_id AS SteamAppId FROM version ORDER BY id")
+            .ToLookup(v => v.GameId, v => new PublishedVersion(v.Id, v.Platform, v.Kind, (int?)v.Year, v.IgdbId, v.SteamAppId, criteria[v.Id].ToList()));
+        var games = c.Query<(long Id, long? SagaId, string NameEs, string? OriginalName, long? Year, long? IgdbId, long? Popularity, bool Iconic)>(
+                "SELECT id, saga_id AS SagaId, name_es AS NameEs, original_name AS OriginalName, year, igdb_id AS IgdbId, popularity, iconic FROM game ORDER BY id")
+            .ToLookup(g => g.SagaId, g => new PublishedGame(g.Id, g.NameEs, g.OriginalName, (int?)g.Year, g.IgdbId, g.Popularity, g.Iconic, fields[("game", g.Id)].ToList(), versions[g.Id].ToList()));
+        var steps = c.Query<(long RouteId, long Position, long GameId, long? VersionId, string? Reason)>(
+                "SELECT route_id AS RouteId, position, game_id AS GameId, recommended_version_id AS VersionId, reason FROM route_step ORDER BY route_id, position")
+            .ToLookup(s => s.RouteId, s => new PublishedStep((int)s.Position, s.GameId, s.VersionId, s.Reason));
+        var routes = c.Query<(long Id, long SagaId, string Kind, string? Rationale, string? Sources, bool Approved)>(
+                "SELECT id, saga_id AS SagaId, kind, rationale, sources, approved FROM route ORDER BY id")
+            .ToLookup(r => r.SagaId, r => new PublishedRoute(r.Id, r.Kind, r.Rationale, r.Sources, r.Approved, steps[r.Id].ToList()));
+
+        foreach (var s in c.Query<(long Id, string Name, string? IgdbKind, long? IgdbId, bool Iconic)>("SELECT id, name, igdb_kind AS IgdbKind, igdb_id AS IgdbId, iconic FROM saga ORDER BY id"))
+            Save(Path.Combine(folder, SagasFolder, $"{s.Id:D5}-{Slug(s.Name)}.json"),
+                new PublishedSaga(s.Id, s.Name, s.IgdbKind, s.IgdbId, s.Iconic, fields[("saga", s.Id)].ToList(), games[s.Id].ToList(), routes[s.Id].ToList()));
+        foreach (var part in games[null].GroupBy(g => g.Id / LoosePerFile))
+            Save(Path.Combine(folder, LooseFolder, $"{part.Key:D5}.json"), new PublishedLooseGames(part.ToList()));
+
+        var platforms = c.Query<(long IgdbId, string ConsoleId)>("SELECT igdb_id AS IgdbId, console_id AS ConsoleId FROM console_platform ORDER BY igdb_id").ToLookup(p => p.ConsoleId, p => p.IgdbId);
+        Save(Path.Combine(folder, ConsolesFile), c.Query<(string Id, string Name, string? Company, string? Status)>("SELECT id, name, company, emulation_status AS Status FROM console ORDER BY rowid")
+            .Select(k => new PublishedConsole(k.Id, k.Name, k.Company, k.Status, platforms[k.Id].ToList())).ToList());
+        Save(Path.Combine(folder, ReplacedFile), c.Query<(string Kind, long OldId, long? NewId)>("SELECT kind, old_id AS OldId, new_id AS NewId FROM replaced ORDER BY kind, old_id")
+            .Select(r => new PublishedReplacement(r.Kind, r.OldId, r.NewId)).ToList());
+    }
+
+    static string Slug(string name)
+    {
+        var plain = new string(name.Normalize(NormalizationForm.FormD).Where(ch => char.IsAsciiLetterOrDigit(ch) || ch == ' ' || ch == '-').ToArray()).Trim().ToLowerInvariant();
+        var slug = string.Join('-', plain.Split([' ', '-'], StringSplitOptions.RemoveEmptyEntries));
+        return slug.Length == 0 ? "saga" : slug[..Math.Min(slug.Length, 60)].TrimEnd('-');
+    }
+
+    sealed record Everything(List<PublishedSaga> Sagas, List<PublishedGame> Loose, List<PublishedConsole> Consoles, List<PublishedReplacement> Replaced);
+
+    static Everything Read(string folder)
+    {
+        var sagaFiles = Directory.Exists(Path.Combine(folder, SagasFolder)) ? Directory.GetFiles(Path.Combine(folder, SagasFolder), "*.json") : [];
+        var looseFiles = Directory.Exists(Path.Combine(folder, LooseFolder)) ? Directory.GetFiles(Path.Combine(folder, LooseFolder), "*.json") : [];
+        return new(sagaFiles.Select(Load<PublishedSaga>).ToList(), looseFiles.SelectMany(f => Load<PublishedLooseGames>(f).Games).ToList(),
+            Load<List<PublishedConsole>>(Path.Combine(folder, ConsolesFile)), Load<List<PublishedReplacement>>(Path.Combine(folder, ReplacedFile)));
+    }
+
+    static readonly string[] VersionKinds = ["original", "remaster", "remake"];
+
+    /// <summary>Lo que está mal en lo publicado; vacía si se puede compilar. Corre en cada PR.</summary>
+    public static List<string> Validate(string folder)
+    {
+        Everything all;
+        try { all = Read(folder); }
+        catch (Exception e) when (e is JsonException or IOException or NullReferenceException or ArgumentNullException) { return [$"No se puede leer: {e.Message}"]; }
+
+        var errors = new List<string>();
+        void Repeated(string what, IEnumerable<long> ids)
+        {
+            foreach (var id in ids.GroupBy(i => i).Where(g => g.Count() > 1)) errors.Add($"{what} {id.Key} está repetido.");
+        }
+        var games = all.Sagas.SelectMany(s => s.Games).Concat(all.Loose).ToList();
+        var versions = games.SelectMany(g => g.Versions.Select(v => (Game: g, Version: v))).ToList();
+        Repeated("La saga", all.Sagas.Select(s => s.Id));
+        Repeated("El juego", games.Select(g => g.Id));
+        Repeated("La versión", versions.Select(v => v.Version.Id));
+        var (gameIds, versionIds, consoles) = (games.Select(g => g.Id).ToHashSet(), versions.Select(v => v.Version.Id).ToHashSet(), all.Consoles.Select(k => k.Id).ToHashSet());
+
+        foreach (var s in all.Sagas.Where(s => string.IsNullOrWhiteSpace(s.Name))) errors.Add($"La saga {s.Id} no tiene nombre.");
+        foreach (var g in games.Where(g => string.IsNullOrWhiteSpace(g.NameEs))) errors.Add($"El juego {g.Id} no tiene nombre.");
+        foreach (var (g, v) in versions)
+        {
+            if (!consoles.Contains(v.Platform)) errors.Add($"La versión {v.Id} de «{g.NameEs}» usa una consola que no existe: {v.Platform}.");
+            if (!VersionKinds.Contains(v.Kind)) errors.Add($"La versión {v.Id} de «{g.NameEs}» tiene un tipo desconocido: {v.Kind}.");
+        }
+        foreach (var r in all.Sagas.SelectMany(s => s.Routes))
+            foreach (var step in r.Steps)
+            {
+                if (!gameIds.Contains(step.GameId)) errors.Add($"La ruta {r.Id} apunta a un juego que no existe: {step.GameId}.");
+                if (step.RecommendedVersionId is { } v && !versionIds.Contains(v)) errors.Add($"La ruta {r.Id} recomienda una versión que no existe: {v}.");
+            }
+        foreach (var r in all.Replaced)
+        {
+            var known = r.Kind == "game" ? gameIds : r.Kind == "version" ? versionIds : null;
+            if (known is null) errors.Add($"Reemplazo de tipo desconocido: {r.Kind}.");
+            else if (known.Contains(r.OldId)) errors.Add($"{r.Kind} {r.OldId} figura como reemplazado, pero sigue en el catálogo.");
+            else if (r.NewId is { } to && !known.Contains(to)) errors.Add($"{r.Kind} {r.OldId} se reemplaza por algo que no existe: {to}.");
+        }
+        return errors;
+    }
+
+    /// <summary>
+    /// Genera la base que baja la app y su manifiesto. Parte siempre de los archivos y de una base nueva, nunca de la del generador: lo que no
+    /// esté en lo publicado no puede colarse en lo que reciben las personas.
+    /// </summary>
+    public static PublishedManifest Compile(string folder, string output)
+    {
+        if (Validate(folder) is { Count: > 0 } errors) throw new InvalidDataException(string.Join('\n', errors));
+        var all = Read(folder);
+        var work = Directory.CreateTempSubdirectory("otteretro-compilar").FullName;
+        try
+        {
+            var db = new Database(Path.Combine(work, "propia.db"), Path.Combine(work, "catalogo.db"));
+            Migrations.Apply(db);
+            var games = all.Sagas.SelectMany(s => s.Games.Select(g => (SagaId: (long?)s.Id, Game: g))).Concat(all.Loose.Select(g => (SagaId: (long?)null, Game: g))).ToList();
+            using (var c = db.Open())
+            using (var t = c.BeginTransaction())
+            {
+                foreach (var k in all.Consoles)
+                {
+                    c.Execute("INSERT OR REPLACE INTO catalog.console (id, name, company, emulation_status) VALUES (@Id, @Name, @Company, @EmulationStatus)", k, t);
+                    foreach (var p in k.IgdbPlatforms) c.Execute("INSERT OR REPLACE INTO catalog.console_platform (igdb_id, console_id) VALUES (@p, @Id)", new { p, k.Id }, t);
+                }
+                void Fields(string entity, long id, List<PublishedField> list)
+                {
+                    foreach (var f in list)
+                        c.Execute("INSERT INTO catalog.field_value (entity, entity_id, field, value, source, manual) VALUES (@entity, @id, @Field, @Value, @Source, @Manual)",
+                            new { entity, id, f.Field, f.Value, f.Source, f.Manual }, t);
+                }
+                foreach (var s in all.Sagas)
+                {
+                    c.Execute("INSERT INTO catalog.saga (id, name, igdb_kind, igdb_id, iconic) VALUES (@Id, @Name, @IgdbKind, @IgdbId, @Iconic)", s, t);
+                    Fields("saga", s.Id, s.Fields);
+                }
+                foreach (var (sagaId, g) in games)
+                {
+                    c.Execute("INSERT INTO catalog.game (id, saga_id, name_es, original_name, year, igdb_id, popularity, iconic) VALUES (@Id, @sagaId, @NameEs, @OriginalName, @Year, @IgdbId, @Popularity, @Iconic)",
+                        new { g.Id, sagaId, g.NameEs, g.OriginalName, g.Year, g.IgdbId, g.Popularity, g.Iconic }, t);
+                    Fields("game", g.Id, g.Fields);
+                    foreach (var v in g.Versions)
+                    {
+                        c.Execute("INSERT INTO catalog.version (id, game_id, platform, kind, year, igdb_id, steam_app_id) VALUES (@Id, @GameId, @Platform, @Kind, @Year, @IgdbId, @SteamAppId)",
+                            new { v.Id, GameId = g.Id, v.Platform, v.Kind, v.Year, v.IgdbId, v.SteamAppId }, t);
+                        foreach (var k in v.Criteria)
+                            c.Execute("INSERT INTO catalog.version_criterion (version_id, criterion, value, text) VALUES (@VersionId, @Criterion, @Value, @Text)", new { VersionId = v.Id, k.Criterion, k.Value, k.Text }, t);
+                    }
+                }
+                foreach (var s in all.Sagas)
+                    foreach (var r in s.Routes)
+                    {
+                        c.Execute("INSERT INTO catalog.route (id, saga_id, kind, rationale, sources, approved) VALUES (@Id, @SagaId, @Kind, @Rationale, @Sources, @Approved)",
+                            new { r.Id, SagaId = s.Id, r.Kind, r.Rationale, r.Sources, r.Approved }, t);
+                        foreach (var step in r.Steps)
+                            c.Execute("INSERT INTO catalog.route_step (route_id, position, game_id, recommended_version_id, reason) VALUES (@RouteId, @Position, @GameId, @RecommendedVersionId, @Reason)",
+                                new { RouteId = r.Id, step.Position, step.GameId, step.RecommendedVersionId, step.Reason }, t);
+                    }
+                foreach (var r in all.Replaced) c.Execute("INSERT INTO catalog.replaced (kind, old_id, new_id) VALUES (@Kind, @OldId, @NewId)", r, t);
+                t.Commit();
+            }
+            var plain = Path.Combine(work, "publicado.db");
+            using (var c = db.Open()) c.Execute("VACUUM catalog INTO @plain", new { plain });
+            Microsoft.Data.Sqlite.SqliteConnection.ClearAllPools();
+            Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(output))!);
+            using (var input = File.OpenRead(plain))
+            using (var gz = new GZipStream(File.Create(output), CompressionLevel.SmallestSize))
+                input.CopyTo(gz);
+            using var stream = File.OpenRead(output);
+            return new(Convert.ToHexStringLower(SHA256.HashData(stream)), all.Sagas.Count, games.Count, games.Sum(g => g.Game.Versions.Count));
+        }
+        finally
+        {
+            Microsoft.Data.Sqlite.SqliteConnection.ClearAllPools();
+            Directory.Delete(work, true);
+        }
+    }
+}

@@ -1,0 +1,34 @@
+name: Publicar el catálogo
+
+# Cada cambio de datos en main es una versión: Otteretro baja la más reciente cuyo tag empieza con `catalogo-`.
+on:
+  push:
+    branches: [main]
+    paths: ["catalogo/**"]
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Compilar la herramienta
+        run: dotnet build src/Otteretro -p:OutputType=Exe
+
+      - name: Compilar el catálogo
+        run: src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo compilar catalogo salida/catalogo.db.gz
+
+      - name: Publicar
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = "catalogo-$(Get-Date -AsUTC -Format 'yyyyMMdd-HHmm')-$("${{ github.sha }}".Substring(0, 7))"
+          gh release create $tag salida/catalogo.db.gz salida/catalogo.db.gz.json --title $tag --notes "Datos de juegos: IGDB.com" --latest=false

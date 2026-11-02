@@ -1,0 +1,2 @@
+-- Separa el catálogo de lo propio (#167). La hace Migrations.SplitCatalog en C#: necesita las claves foráneas apagadas,
+-- que no se pueden cambiar dentro de una transacción. Las migraciones siguientes crean las tablas del catálogo con `catalog.`.

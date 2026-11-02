@@ -1,0 +1,28 @@
+name: Validar el catálogo
+
+on:
+  pull_request:
+
+jobs:
+  validar:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      # La de fluidez mide tiempos: en un servidor compartido falla sin que haya nada mal.
+      - name: Pruebas
+        run: dotnet test --filter "FullyQualifiedName!~FluidityTests"
+
+      # Como programa de consola: así se ven los errores y usa esta carpeta.
+      - name: Compilar la herramienta
+        run: dotnet build src/Otteretro -p:OutputType=Exe
+
+      - name: Revisar lo publicado
+        run: src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo validar catalogo
+
+      - name: Compila
+        run: src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo compilar catalogo salida/catalogo.db.gz

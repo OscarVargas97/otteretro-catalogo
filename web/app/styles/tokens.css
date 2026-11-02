@@ -1,0 +1,65 @@
+/* Tokens y estructura de pantallas de Otteretro (del sistema de diseño y del prototipo aprobado). Las fuentes las define app/layout.tsx. */
+:root {
+  /* Escala de letras (#99): 12 etiquetas · 14 secundario · 16 texto · 20 títulos de sección · 28 título de pantalla · 40 héroe. Ningún otro tamaño. */
+  --bg: #0e1418; --surface: #151d22; --surface-raised: #1d272e; --line: #2a363e;
+  --ink: #e9eef0; --ink-muted: #9aa9b1;
+  --accent: #ef9a5b; --accent-soft: #3a2618; --on-accent: #22140a;
+  --have: #57c49a; --have-soft: #173328; --review: #e8c35a; --review-soft: #3a311a;
+  --danger: #f07a74; --danger-soft: #3d1d1c; --info: #7fb2ec; --info-soft: #1b2a3d;
+  --focus: #f2f5f6;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-6: 24px; --space-8: 32px;
+  --radius-sm: 3px; --radius-md: 6px; --radius-lg: 10px;
+  --shadow-float: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --scrim: rgba(5, 8, 10, 0.72);
+  color-scheme: dark;
+}
+/* Barras de scroll delgadas y oscuras; la de la página deja su lugar reservado, así nada cambia de ancho al aparecer (#98). */
+html { scrollbar-gutter: stable; }
+* { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+*:hover { scrollbar-color: #3b4952 transparent; }
+/* Estructura común de las pantallas */
+.app { display: flex; flex-wrap: wrap; min-height: 900px; background: var(--bg); color: var(--ink); font-family: var(--font-sans); font-size: 16px; line-height: 24px; }
+.app-main { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; }
+.top { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); padding: var(--space-3) var(--space-6); border-bottom: 1px solid var(--line); }
+.top .search { margin-left: auto; }
+.top h1 { margin: 0; font-family: var(--font-display); font-size: 28px; line-height: 32px; font-weight: 700; flex: 1 1 auto; }
+.search { display: flex; align-items: center; gap: var(--space-2); width: 320px; max-width: 100%; height: 36px; padding: 0 var(--space-3); border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); color: var(--ink-muted); font: inherit; font-size: 14px; box-sizing: border-box; white-space: nowrap; overflow: hidden; text-align: left; }
+.search-text { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.search svg, .search .kbd { flex: none; }
+.kbd { font-family: var(--font-pixel); font-size: 12px; padding: 0 4px; border: 1px solid var(--line); border-radius: var(--radius-sm); margin-left: auto; }
+.tasks-btn { position: relative; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.content { padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-8); }
+.sec { display: flex; flex-direction: column; gap: var(--space-3); }
+.sec-h { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
+.sec-h h2 { margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 24px; font-weight: 600; }
+.muted { color: var(--ink-muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* Volver (#99): legible, en color de texto, sin subrayado. */
+.back { align-self: flex-start; display: inline-flex; align-items: center; gap: var(--space-1); font-size: 14px; line-height: 20px; font-weight: 700; color: var(--ink); text-decoration: none; padding: var(--space-1) var(--space-2); margin-left: calc(-1 * var(--space-2)); border-radius: var(--radius-md); }
+.back:hover { background: rgba(255, 255, 255, 0.06); }
+table.t a { text-decoration: none; color: var(--ink); font-weight: 700; }
+table.t a:hover { text-decoration: underline; }
+.small { font-size: 14px; line-height: 20px; }
+.grid-cards { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+.panel { background: var(--surface); border-radius: var(--radius-lg); padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-3); min-width: 0; }
+.tabs { display: flex; flex-wrap: wrap; gap: var(--space-1); border-bottom: 1px solid var(--line); }
+.tab { padding: var(--space-2) var(--space-3); color: var(--ink-muted); font: inherit; font-weight: 700; text-decoration: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer; white-space: nowrap; }
+.tab[aria-current="page"], .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+/* Una sola línea, sin barra (#108): lo que no cabe va a «Más ▾» (components/Tabs.tsx). */
+.tabs-row { position: relative; }
+.tabs-line { flex-wrap: nowrap; overflow: visible; }
+.tabs-ruler { position: absolute; top: 0; left: 0; visibility: hidden; pointer-events: none; border: 0; }
+.tabs-more { position: relative; }
+.tabs-more-scrim { position: fixed; inset: 0; z-index: 30; }
+.tabs-more-menu { position: absolute; right: 0; top: calc(100% + 4px); z-index: 31; min-width: 200px; display: flex; flex-direction: column; padding: var(--space-1); background: var(--surface-raised); border-radius: var(--radius-md); box-shadow: var(--shadow-float); }
+.tabs-more-item { font: inherit; text-align: left; padding: var(--space-2) var(--space-3); border: 0; border-radius: var(--radius-sm); background: none; color: var(--ink); cursor: pointer; white-space: nowrap; }
+.tabs-more-item:hover, .tabs-more-item:focus-visible { background: var(--accent-soft); }
+.table-wrap { overflow-x: auto; }
+table.t { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.t th { text-align: left; font-weight: 700; color: var(--ink-muted); font-size: 12px; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.t td { padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line); vertical-align: middle; font-variant-numeric: tabular-nums; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.chip { display: inline-flex; align-items: center; height: 28px; padding: 0 var(--space-3); border-radius: 999px; border: 1px solid var(--line); color: var(--ink-muted); font-size: 14px; font-weight: 700; text-decoration: none; background: transparent; font-family: inherit; }
+.chip[aria-pressed="true"] { border-color: var(--accent); color: var(--ink); background: var(--accent-soft); }
+a { color: var(--ink); }
