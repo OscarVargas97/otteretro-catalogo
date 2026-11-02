@@ -35,6 +35,9 @@ public record ImagesFolderInfo(Catalog.ImageHomeInfo Home, List<Catalog.StarDisk
 /// <param name="Star">La carpeta del ★ (`&lt;disco&gt;\Otteretro`).</param>
 public record StarRequest(string? Star);
 
+/// <param name="Origin">Con custom: carpeta, URL o repo de GitHub.</param>
+/// <param name="Local">La carpeta que encontró en tus discos el canal Local; null si ninguno tiene paquetes.</param>
+public record UpdateChannelInfo(string Channel, string? Origin, string? Local = null);
 
 /// <summary>Endpoints base de F0. Cada módulo añadirá los suyos.</summary>
 public static class Endpoints
@@ -112,7 +115,32 @@ public static class Endpoints
             return Catalog.ImageHome.SetStar(db, request.Star) is { } error ? TypedResults.BadRequest(error) : TypedResults.Ok(ImagesFolder(db));
         });
 
-        // Ajustes › General › Actualizaciones (#180): el canal y, con «custom», el origen. Al cambiarlo se busca de inmediato.
+        api.MapGet("/update", (Updater u) => u.State);
+
+        // Responde cuando termina la comprobación; si hay descarga, su progreso llega por el evento "update".
+        api.MapPost("/update/check", async (Updater u) =>
+        {
+            await u.Check();
+            return u.State;
+        });
+
+        // Ajustes › General › Actualizaciones (#12): el canal y, con «custom», el origen. Al cambiarlo se busca de inmediato.
+        static UpdateChannelInfo ChannelOf(AppConfig c) => new(c.EffectiveUpdateChannel, c.UpdateSource, Updater.NewestPackages());
+        api.MapGet("/update/channel", (AppSession s) => ChannelOf(s.Config));
+        api.MapPut("/update/channel", async Task<Results<Ok<UpdateChannelInfo>, BadRequest<ApiError>>> (UpdateChannelInfo request, AppSession s, Updater u) =>
+        {
+            if (!AppConfig.UpdateChannels.Contains(request.Channel)) return TypedResults.BadRequest(ApiError.Of("update.channel"));
+            if (request.Channel == "custom" && string.IsNullOrWhiteSpace(request.Origin)) return TypedResults.BadRequest(ApiError.Of("update.noOrigin"));
+            s.Config.UpdateChannel = request.Channel;
+            if (request.Channel == "custom") s.Config.UpdateSource = request.Origin!.Trim();
+            s.Config.Save(s.ConfigPath);
+            u.Forget();
+            _ = u.Check();
+            return TypedResults.Ok(ChannelOf(s.Config));
+        });
+
+        api.MapPost("/update/restart", Results<Ok, Conflict<ApiError>> (Updater u) =>
+            u.RestartNow() ? TypedResults.Ok() : TypedResults.Conflict(ApiError.Of("update.nothingDownloaded")));
 
         // Ajustes › Cuentas y claves (§5.6): nunca se devuelve un valor, solo si está guardado.
         api.MapGet("/credentials", Results<Ok<List<CredentialStatus>>, Conflict<ApiError>> (AppSession s, SecretBox box) =>

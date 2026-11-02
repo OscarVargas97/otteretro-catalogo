@@ -380,7 +380,7 @@ public static class IgdbImport
 
         // La saga se elige una vez; recargar otra saga no mueve el juego (Hyrule Warriors sigue en Zelda).
         if (c.ExecuteScalar<long?>("SELECT saga_id FROM game WHERE id = @id", new { id }, t) is null && SagaOf(g, preferred) is { } saga)
-            c.Execute("UPDATE game SET saga_id = @saga WHERE id = @id", new { id, saga = UpsertSaga(c, t, saga) }, t);
+            c.Execute($"UPDATE game SET saga_id = @saga WHERE id = @id AND {Editing.NotMovedByHand}", new { id, saga = UpsertSaga(c, t, saga) }, t);
         return id;
     }
 

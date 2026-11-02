@@ -266,14 +266,14 @@
       "local": "Local",
       "custom": "Other source",
       "stableHint": "The versions published on GitHub: tested and with their release notes.",
-      "testingHint": "The latest in development, before it is published. It may have bugs.",
-      "localHint": "The packages you build on this computer with scripts/empaquetar.ps1. They are found on their own in the Otteretro\\Paquetes folder of your disks.",
-      "customHint": "A folder, a web address or the GitHub repo of someone who builds their own Otteretro.",
+      "testingHint": "The latest from open PRs, before they are merged. It may have bugs.",
+      "localHint": "The packages you build on this computer with scripts/empaquetar.ps1. They are found on your Otteretro disks, just like in Otteretro.",
+      "customHint": "A folder, a web address or the GitHub repo of someone who builds their own Otteretro Catálogo.",
       "origin": "Update source",
-      "originPlaceholder": "D:\\packages or https://github.com/user/otteretro",
+      "originPlaceholder": "D:\\packages or https://github.com/user/otteretro-catalogo",
       "use": "Use",
-      "localFound": "Packages in {path}",
-      "localNone": "None of your disks has packages in Otteretro\\Paquetes."
+      "localFound": "Packages found in {path}.",
+      "localNone": "None of your Otteretro disks has packages in Otteretro\\Paquetes\\OtteretroCatalogo."
     },
     "taskTitle": "Otteretro update",
     "checking": "Checking…",
@@ -292,15 +292,14 @@
     "readyText": "It will be installed when you close the app, or right now if you restart.",
     "restartNow": "Restart now",
     "check": "Check for updates",
-    "notice": "<b>Otteretro {version} is ready.</b> It will be installed when you close the app, or right now if you restart.",
+    "notice": "<b>Otteretro Catálogo {version} is ready.</b> It will be installed when you close the app, or right now if you restart.",
     "reason": {
       "noSource": "No update source is configured.",
       "notInstalled": "Updates only work in the installed app.",
       "failed": "Could not check for or download the update. The details are in the log.",
       "withSystem": "Updated with the system: it arrives with the next PlayOS or NixOS update."
     },
-    "withSystemBadge": "With the system",
-    "attribution": "Game data: IGDB.com"
+    "withSystemBadge": "With the system"
   },
   "errors": {
     "http": "The app responded with an error ({status}).",
@@ -574,6 +573,39 @@
       "folderMissing": "The images ★ disk ({path}) isn't connected.",
       "noStar": "There's no ★ disk for the images yet: choose it in Settings › General.",
       "managedByOtteretro": "Otteretro manages the ★ disk: change it from Otteretro."
+    },
+    "edit": {
+      "noSaga": "The saga doesn't exist.",
+      "noGame": "Game {id} doesn't exist.",
+      "badVersion": "Version {id} doesn't belong to that game.",
+      "routeKind": "That route type doesn't exist.",
+      "emptyRoute": "The route needs at least one step.",
+      "sameGame": "Choose another game to merge."
+    },
+    "publish": {
+      "noKey": "The GitHub key is missing: paste it in Settings › Accounts and keys.",
+      "badToken": "GitHub didn't accept the key: check the token is still valid.",
+      "forbidden": "The key isn't allowed to do this: it needs public_repo.",
+      "failed": "GitHub answered with an error ({status}).",
+      "offline": "Couldn't connect to GitHub.",
+      "kind": "Only a saga or a game can be published.",
+      "nothingChanged": "There's nothing to publish.",
+      "invalid": "What would be published doesn't pass validation ({count} errors).",
+      "conflict": "Changed on GitHub: {files}. It isn't published so as not to overwrite it.",
+      "change": {
+        "replaced": "{count} games or versions become replaced",
+        "sagaAdded": "New saga: {name}",
+        "sagaRemoved": "Saga {name} is removed",
+        "name": "Name: “{from}” → “{to}”",
+        "iconicOn": "Becomes iconic",
+        "iconicOff": "No longer iconic",
+        "routeAdded": "New route ({kind})",
+        "routeRemoved": "Route removed ({kind})",
+        "routeChanged": "Route changes ({kind})",
+        "gameAdded": "{name} comes in",
+        "gameRemoved": "{name} goes out",
+        "gameChanged": "{name} changes"
+      }
     }
   },
   "credentials": {
@@ -618,7 +650,7 @@
     "configure": "Set up",
     "close": "Close",
     "purpose": {
-      "github": "Backs up your saves to a private repository of yours.",
+      "github": "Publish your catalog changes as a PR. Classic token with the public_repo scope.",
       "steam": "What you own on Steam, with your hours.",
       "igdb": "Series, games and versions for the catalog.",
       "screenscraper": "Identifies ROMs that don’t match the DATs.",
@@ -943,7 +975,47 @@
     "openCredentials": "Open Accounts and keys",
     "iconic": "Iconic",
     "exclusiveOf": "{company} exclusive",
-    "ofTotal": "{done} of {total}"
+    "ofTotal": "{done} of {total}",
+    "edit": {
+      "edit": "Edit",
+      "done": "Done",
+      "name": "Saga name",
+      "save": "Save",
+      "cancel": "Cancel",
+      "iconic": "Iconic saga",
+      "manualNote": "What you change here isn't overwritten by IGDB or Claude, and it's published with the saga.",
+      "routeEdit": "Edit route: {kind}",
+      "routeCreate": "Create route: {kind}",
+      "routeDelete": "Delete this route",
+      "routeDeleteConfirm": "Delete it? Claude won't propose it again.",
+      "confirm": "Confirm",
+      "rationale": "Why this route",
+      "step": "Step {n}",
+      "game": "Game",
+      "version": "Recommended version",
+      "noVersion": "No recommended version",
+      "reason": "Reason (optional)",
+      "up": "Move up",
+      "down": "Move down",
+      "removeStep": "Remove step",
+      "addStep": "Add step",
+      "actions": "Actions",
+      "move": "Move to another saga",
+      "takeOut": "Take out of the saga",
+      "merge": "Merge with another game",
+      "delete": "Delete from the catalog",
+      "deleteConfirm": "It's deleted with its versions and recorded as removed.",
+      "mergeInto": "Merge into…",
+      "mergeHint": "Its versions and route steps go to the chosen game.",
+      "searchSaga": "Search for the saga",
+      "searchGame": "Search for a game to add to this saga",
+      "addGame": "Add",
+      "typeMore": "Type at least 2 letters.",
+      "noResults": "No results.",
+      "newSaga": "New saga",
+      "newSagaName": "Name of the new saga",
+      "create": "Create"
+    }
   },
   "notices": {
     "title": "Notices",
@@ -1214,5 +1286,30 @@
       "site": "Verified by the site",
       "none": "Not verified"
     }
+  },
+  "publish": {
+    "button": "Publish",
+    "title": "Publish as a PR",
+    "titleOf": "Publish “{name}” as a PR",
+    "comparing": "Comparing with what's published on GitHub…",
+    "noKey": "Publishing needs your GitHub key: a classic token with the public_repo scope. With it, the program creates a fork in your account (if you can't write to the repo), pushes a branch and opens the PR.",
+    "openCredentials": "Go to Accounts and keys",
+    "nothing": "Nothing changed compared with what's published.",
+    "change": {
+      "added": "New",
+      "modified": "Changes",
+      "deleted": "Removed"
+    },
+    "invalid": "Doesn't pass validation",
+    "conflictTitle": "Changed on GitHub",
+    "conflict": "Someone changed {files} after the version your catalog comes from. It isn't published so as not to overwrite it.",
+    "unknownBase": "It's unknown which version your catalog comes from, so changes by others can't be detected: check the list is only yours.",
+    "openPr": "There's already an open PR for this:",
+    "opened": "PR opened:",
+    "updated": "PR updated:",
+    "noMerge": "It only proposes the change: whoever manages the catalog reviews and merges the PR.",
+    "close": "Close",
+    "open": "Open PR",
+    "update": "Update PR"
   }
 }

@@ -1,0 +1,48 @@
+# Publica una release estable con Velopack al fusionar en main un cambio del programa (#12): 0.FASE.N, como Otteretro.
+# La administración la toma del canal Estable. Los cambios que son solo datos van por publicar.yml.
+name: Release
+
+on:
+  push:
+    branches: [main]
+    paths: ["src/**", "web/**", "scripts/**", "VERSION", "global.json", "Directory.Build.props"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Versión (0.FASE.N)
+        id: version
+        shell: pwsh
+        run: |
+          "valor=$(./scripts/version.ps1)" >> $env:GITHUB_OUTPUT
+
+      - name: Pruebas
+        run: dotnet test -c Release
+
+      - name: Instalar vpk
+        run: dotnet tool install -g vpk
+
+      - name: Empaquetar
+        shell: pwsh
+        run: ./scripts/empaquetar.ps1 -Version ${{ steps.version.outputs.valor }}
+
+      - name: Subir a GitHub Releases
+        run: vpk upload github --repoUrl https://github.com/${{ github.repository }} --token ${{ secrets.GITHUB_TOKEN }} --outputDir artefactos/paquetes --publish --releaseName "Otteretro Catálogo ${{ steps.version.outputs.valor }}" --tag v${{ steps.version.outputs.valor }}

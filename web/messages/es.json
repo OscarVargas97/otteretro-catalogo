@@ -266,14 +266,14 @@
       "local": "Local",
       "custom": "Otro origen",
       "stableHint": "Las versiones publicadas en GitHub: probadas y con su lista de novedades.",
-      "testingHint": "Lo último en desarrollo, antes de publicarse. Puede traer errores.",
-      "localHint": "Los paquetes que armas en este equipo con scripts/empaquetar.ps1. Se buscan solos en la carpeta Otteretro\\Paquetes de tus discos.",
-      "customHint": "Una carpeta, una dirección web o el repo de GitHub de quien arma su propia versión de Otteretro.",
+      "testingHint": "Lo último de los PR abiertos, antes de fusionarse. Puede traer errores.",
+      "localHint": "Los paquetes que armas en este equipo con scripts/empaquetar.ps1. Se buscan solos en tus discos de Otteretro, como en Otteretro.",
+      "customHint": "Una carpeta, una dirección web o el repo de GitHub de quien arma su propia versión de Otteretro Catálogo.",
       "origin": "Origen de las actualizaciones",
-      "originPlaceholder": "D:\\paquetes o https://github.com/usuario/otteretro",
+      "originPlaceholder": "D:\\paquetes o https://github.com/usuario/otteretro-catalogo",
       "use": "Usar",
-      "localFound": "Paquetes en {path}",
-      "localNone": "Ningún disco tiene paquetes en Otteretro\\Paquetes."
+      "localFound": "Paquetes encontrados en {path}.",
+      "localNone": "Ninguno de tus discos de Otteretro tiene paquetes en Otteretro\\Paquetes\\OtteretroCatalogo."
     },
     "taskTitle": "Actualización de Otteretro",
     "checking": "Buscando…",
@@ -292,15 +292,14 @@
     "readyText": "Se instalará al cerrar la app, o ahora mismo si reinicias.",
     "restartNow": "Reiniciar ahora",
     "check": "Buscar actualización",
-    "notice": "<b>Otteretro {version} está lista.</b> Se instalará cuando cierres la app, o ahora mismo si reinicias.",
+    "notice": "<b>Otteretro Catálogo {version} está lista.</b> Se instalará cuando cierres la app, o ahora mismo si reinicias.",
     "reason": {
       "noSource": "No hay un origen de actualizaciones configurado.",
       "notInstalled": "Las actualizaciones solo funcionan en la app instalada.",
       "failed": "No se pudo buscar o descargar la actualización. El detalle está en el registro.",
       "withSystem": "Se actualiza con el sistema: llega con la próxima actualización de PlayOS o NixOS."
     },
-    "withSystemBadge": "Con el sistema",
-    "attribution": "Datos de juegos: IGDB.com"
+    "withSystemBadge": "Con el sistema"
   },
   "errors": {
     "http": "La app respondió con un error ({status}).",
@@ -574,6 +573,39 @@
       "folderMissing": "El disco ★ de las imágenes ({path}) no está conectado.",
       "noStar": "Todavía no hay disco ★ para las imágenes: elígelo en Ajustes › General.",
       "managedByOtteretro": "El disco ★ lo maneja Otteretro: cámbialo desde Otteretro."
+    },
+    "edit": {
+      "noSaga": "La saga no existe.",
+      "noGame": "El juego {id} no existe.",
+      "badVersion": "La versión {id} no es de ese juego.",
+      "routeKind": "Ese tipo de ruta no existe.",
+      "emptyRoute": "La ruta necesita al menos un paso.",
+      "sameGame": "Elige otro juego para fusionar."
+    },
+    "publish": {
+      "noKey": "Falta la clave de GitHub: pégala en Ajustes › Cuentas y claves.",
+      "badToken": "GitHub no aceptó la clave: revisa que el token siga vigente.",
+      "forbidden": "La clave no tiene permiso para esto: hace falta public_repo.",
+      "failed": "GitHub respondió con un error ({status}).",
+      "offline": "No se pudo conectar con GitHub.",
+      "kind": "Solo se publica una saga o un juego.",
+      "nothingChanged": "No hay cambios que publicar.",
+      "invalid": "Lo publicado no pasa la validación ({count} errores).",
+      "conflict": "Cambiaron en GitHub: {files}. No se publica para no pisarlo.",
+      "change": {
+        "replaced": "{count} juegos o versiones pasan a reemplazados",
+        "sagaAdded": "Saga nueva: {name}",
+        "sagaRemoved": "Se quita la saga {name}",
+        "name": "Nombre: «{from}» → «{to}»",
+        "iconicOn": "Pasa a ser icónica",
+        "iconicOff": "Deja de ser icónica",
+        "routeAdded": "Ruta nueva ({kind})",
+        "routeRemoved": "Se quita la ruta ({kind})",
+        "routeChanged": "Cambia la ruta ({kind})",
+        "gameAdded": "Entra {name}",
+        "gameRemoved": "Sale {name}",
+        "gameChanged": "Cambia {name}"
+      }
     }
   },
   "credentials": {
@@ -618,7 +650,7 @@
     "configure": "Configurar",
     "close": "Cerrar",
     "purpose": {
-      "github": "Respaldo de tus partidas en un repositorio privado tuyo.",
+      "github": "Publicar tus cambios del catálogo como un PR. Token clásico con el permiso public_repo.",
       "steam": "Lo que tienes en Steam, con sus horas.",
       "igdb": "Sagas, juegos y versiones del catálogo.",
       "screenscraper": "Identificar ROMs que no coinciden con los DAT.",
@@ -943,7 +975,47 @@
     "openCredentials": "Abrir Cuentas y claves",
     "iconic": "Icónica",
     "exclusiveOf": "Exclusiva de {company}",
-    "ofTotal": "{done} de {total}"
+    "ofTotal": "{done} de {total}",
+    "edit": {
+      "edit": "Editar",
+      "done": "Listo",
+      "name": "Nombre de la saga",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "iconic": "Saga icónica",
+      "manualNote": "Lo que cambies acá no lo pisan IGDB ni Claude, y se publica con la saga.",
+      "routeEdit": "Editar ruta: {kind}",
+      "routeCreate": "Crear ruta: {kind}",
+      "routeDelete": "Borrar esta ruta",
+      "routeDeleteConfirm": "¿Borrarla? Claude no la volverá a proponer.",
+      "confirm": "Confirmar",
+      "rationale": "Por qué esta ruta",
+      "step": "Paso {n}",
+      "game": "Juego",
+      "version": "Versión recomendada",
+      "noVersion": "Sin versión recomendada",
+      "reason": "Motivo (opcional)",
+      "up": "Subir",
+      "down": "Bajar",
+      "removeStep": "Quitar paso",
+      "addStep": "Agregar paso",
+      "actions": "Acciones",
+      "move": "Mover a otra saga",
+      "takeOut": "Quitar de la saga",
+      "merge": "Fusionar con otro juego",
+      "delete": "Eliminar del catálogo",
+      "deleteConfirm": "Se elimina con sus versiones y queda registrado como quitado.",
+      "mergeInto": "Fusionar en…",
+      "mergeHint": "Sus versiones y sus pasos de ruta pasan al juego elegido.",
+      "searchSaga": "Buscar la saga",
+      "searchGame": "Buscar un juego para agregar a esta saga",
+      "addGame": "Agregar",
+      "typeMore": "Escribe al menos 2 letras.",
+      "noResults": "Sin resultados.",
+      "newSaga": "Nueva saga",
+      "newSagaName": "Nombre de la saga nueva",
+      "create": "Crear"
+    }
   },
   "notices": {
     "title": "Avisos",
@@ -1214,5 +1286,30 @@
       "site": "Verificado por el sitio",
       "none": "Sin verificar"
     }
+  },
+  "publish": {
+    "button": "Publicar",
+    "title": "Publicar como PR",
+    "titleOf": "Publicar «{name}» como PR",
+    "comparing": "Comparando con lo publicado en GitHub…",
+    "noKey": "Para publicar hace falta tu clave de GitHub: un token clásico con el permiso public_repo. Con él, el programa crea un fork en tu cuenta (si no puedes escribir en el repo), sube una rama y abre el PR.",
+    "openCredentials": "Ir a Cuentas y claves",
+    "nothing": "No hay cambios respecto de lo publicado.",
+    "change": {
+      "added": "Nuevo",
+      "modified": "Cambia",
+      "deleted": "Se quita"
+    },
+    "invalid": "No pasa la validación",
+    "conflictTitle": "Cambió en GitHub",
+    "conflict": "Alguien cambió {files} después de la versión de la que parte tu catálogo. No se publica para no pisarlo.",
+    "unknownBase": "No se sabe de qué versión parte tu catálogo, así que no se pueden detectar cambios de otros: revisa que la lista sea solo lo tuyo.",
+    "openPr": "Ya hay un PR abierto para esto:",
+    "opened": "PR abierto:",
+    "updated": "PR actualizado:",
+    "noMerge": "Solo propone el cambio: el PR lo revisa y fusiona quien administra el catálogo.",
+    "close": "Cerrar",
+    "open": "Abrir PR",
+    "update": "Actualizar PR"
   }
 }

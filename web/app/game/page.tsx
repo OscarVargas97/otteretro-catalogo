@@ -8,6 +8,7 @@ import { Suspense, useEffect, useState } from "react";
 import { size } from "@/lib/format";
 import { Cover, hours, Platforms, useConsoleName, useConsoles, useIdParam } from "@/components/Catalog";
 import { useHeroArt } from "@/components/HeroArt";
+import { PublishButton } from "@/components/Publish";
 import { Empty } from "@/components/Shell";
 import { request } from "@/lib/client";
 import { PageSkeleton } from "@/components/Skeleton";
@@ -57,6 +58,7 @@ function Game() {
             <Platforms ids={platforms} />
             {g.year && <span>{g.year}</span>}
           </div>
+          <div className="hero-actions"><PublishButton kind="game" id={Number(g.id)} /></div>
         </div>
       </section>
       <div className="content">

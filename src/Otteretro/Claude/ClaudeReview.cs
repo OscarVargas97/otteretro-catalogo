@@ -179,6 +179,8 @@ public static class ClaudeReview
                 var proposed = result.Deserialize<List<SagaAnalysis.Route>>(Web)!;
                 foreach (var route in editedRoutes is null ? proposed : Edited(proposed, editedRoutes))
                 {
+                    // Una ruta editada o borrada a mano (#17) no se reemplaza.
+                    if (Catalog.Editing.IsMarked(c, t, "saga", r.EntityId, Catalog.Editing.RouteMark(route.Kind))) continue;
                     c.Execute("DELETE FROM route WHERE saga_id = @EntityId AND kind = @Kind", new { r.EntityId, route.Kind }, t);
                     var routeId = c.ExecuteScalar<long>("""
                         INSERT INTO route (saga_id, kind, rationale, sources, approved) VALUES (@EntityId, @Kind, @Rationale, @sources, 1) RETURNING id
@@ -200,6 +202,7 @@ public static class ClaudeReview
                 break;
             case SagaAnalysis.Iconic:
                 var iconic = result.Deserialize<SagaAnalysis.SagaIconic>(Web)!;
+                if (Catalog.Editing.IsMarked(c, t, "saga", r.EntityId, "iconic")) break; // se marcó a mano (#17)
                 c.Execute("UPDATE saga SET iconic = @Iconic WHERE id = @EntityId", new { iconic.Iconic, r.EntityId }, t);
                 // Sus juegos icónicos (#112): de ellos sale la imagen de la saga. Solo los de esta saga.
                 c.Execute("UPDATE game SET iconic = (@Iconic AND id IN (SELECT value FROM json_each(@ids))) WHERE saga_id = @EntityId",

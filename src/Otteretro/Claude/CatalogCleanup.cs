@@ -261,7 +261,8 @@ public static partial class CatalogCleanup
         long? created = null;
         if (target is null && !string.IsNullOrWhiteSpace(change.NewSagaName))
             target = created = c.ExecuteScalar<long>("INSERT INTO saga (name) VALUES (@name) RETURNING id", new { name = change.NewSagaName.Trim() }, t);
-        c.Execute("UPDATE game SET saga_id = @target WHERE id IN @ids", new { target, ids }, t);
+        // Lo que se movió a mano (#17) se queda donde está.
+        c.Execute($"UPDATE game SET saga_id = @target WHERE id IN @ids AND {Catalog.Editing.NotMovedByHand}", new { target, ids }, t);
         return new MoveBefore(before, created);
     }
 
