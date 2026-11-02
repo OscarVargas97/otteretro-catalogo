@@ -105,7 +105,7 @@ public static class ExtraSources
             var existing = names.Select(n => sagas.FirstOrDefault(s => string.Equals(s.Name, n, StringComparison.OrdinalIgnoreCase))).FirstOrDefault(s => s.Id != 0);
             var sagaId = existing.Id != 0 ? existing.Id : c.ExecuteScalar<long>("INSERT INTO saga (name) VALUES (@name) RETURNING id", new { name = names[0] }, t);
             if (existing.Id == 0) sagas.Add((sagaId, names[0]));
-            c.Execute("UPDATE game SET saga_id = @sagaId WHERE id = @Id AND saga_id IS NULL", new { sagaId, g.Id }, t);
+            c.Execute($"UPDATE game SET saga_id = @sagaId WHERE id = @Id AND saga_id IS NULL AND {Editing.NotMovedByHand}", new { sagaId, g.Id }, t);
         }
         t.Commit();
     }
