@@ -10,6 +10,7 @@ import { useDescribeError } from "@/lib/i18n";
 import type { AppState } from "@/lib/types";
 import { CATALOGS, isLocale, systemLocale } from "@/messages";
 import { Sidebar } from "./Sidebar";
+import { UpdateNotice } from "./Update";
 import { TopBar } from "./TopBar";
 
 // Clave del título (nav.*) de cada pantalla.
@@ -82,6 +83,7 @@ function Content({ children }: { children: ReactNode }) {
       <main className="app-main">
         {/* En Saga y Juego el título es el del héroe; la barra lleva el camino (#169). */}
         <TopBar title={title ? t(`nav.${title}`) : "Otteretro Catálogo"} crumbs={path === "/saga" || path === "/game" ? path : undefined} />
+        <UpdateNotice />
         {/* El marco va primero (#105); la pantalla, cuando se sabe que hay carpeta de datos (sin ella sus consultas fallan). */}
         {state.data?.configured && children}
       </main>

@@ -10,6 +10,7 @@ import { useDescribeError } from "@/lib/i18n";
 import type { SearchResults } from "@/lib/types";
 import { gameQuery, sagaQuery } from "@/lib/queries";
 import { useIdParam } from "./Catalog";
+import { UpdateTask, useUpdate } from "./Update";
 import { MoveTask, useMove } from "./DataFolder";
 import { ClearTasks, TaskRows, upsertTask, useTasks } from "./Tasks";
 import { Empty, useAppState } from "./Shell";
@@ -22,11 +23,12 @@ export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/
   const connected = useEvents();
   const fullscreen = !!useAppState().data?.fullscreen;
   const describe = useDescribeError();
+  const update = useUpdate();
   const move = useMove();
   const tasks = useTasks();
   const moving = !!move?.running;
-  const hasTasks = tasks.length > 0 || (!!move && (move.running || ["done", "error"].includes(move.step)));
-  const active = Number(moving)
+  const hasTasks = tasks.length > 0 || (!!update && ["Checking", "Downloading", "Ready", "Error"].includes(update.phase)) || (!!move && (move.running || ["done", "error"].includes(move.step)));
+  const active = Number(update?.phase === "Checking" || update?.phase === "Downloading") + Number(moving)
     + tasks.filter((t) => t.status === "queued" || t.status === "running").length;
   const busy = active > 0;
   // Su alto, para que lo fijo de cada pantalla (filtros de Sagas) quede justo debajo (#170).
@@ -77,6 +79,7 @@ export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/
 
       {tasksOpen && (
         <div className="ot-tasks tasks-panel" role="dialog" aria-label={t("tasksPanel")}>
+          <UpdateTask />
           <MoveTask />
           <TaskRows />
           <ClearTasks />
@@ -176,6 +179,7 @@ function useEvents() {
     const source = new EventSource(eventsUrl());
     source.onopen = () => setConnected(true);
     source.onerror = () => setConnected(false);
+    source.addEventListener("update", (e) => cache.setQueryData(["update"], JSON.parse(e.data)));
     source.addEventListener("move", (e) => cache.setQueryData(["move"], JSON.parse(e.data)));
     source.addEventListener("task", (e) => upsertTask(cache, JSON.parse(e.data)));
     // Al reconectar (por ejemplo, tras reiniciar la app) se vuelve a pedir la lista.

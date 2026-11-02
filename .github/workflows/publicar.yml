@@ -32,3 +32,12 @@ jobs:
         run: |
           $tag = "catalogo-$(Get-Date -AsUTC -Format 'yyyyMMdd-HHmm')-$("${{ github.sha }}".Substring(0, 7))"
           gh release create $tag salida/catalogo.db.gz salida/catalogo.db.gz.json --title $tag --notes "Datos de juegos: IGDB.com" --latest=false
+
+      - name: Conservar solo las últimas 3 versiones de datos
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Velopack solo mira las últimas 10 releases del repo (#12): lo viejo no debe tapar las versiones del programa.
+          gh release list --limit 100 --json tagName,createdAt | ConvertFrom-Json | Where-Object { $_.tagName -like 'catalogo-*' } |
+            Sort-Object createdAt -Descending | Select-Object -Skip 3 | ForEach-Object { gh release delete $_.tagName --yes --cleanup-tag }

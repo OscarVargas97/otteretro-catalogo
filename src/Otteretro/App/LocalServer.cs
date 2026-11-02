@@ -35,6 +35,7 @@ public static class LocalServer
         builder.Services.AddSingleton<Events>();
         builder.Services.AddSingleton<FolderMoveService>();
         builder.Services.AddSingleton<TaskQueue>();
+        builder.Services.AddSingleton<Updater>();
         builder.Services.AddHostedService(sp => sp.GetRequiredService<TaskQueue>());
         builder.Services.AddSingleton(new SecretBox());
 
