@@ -18,19 +18,14 @@ public sealed class AppConfig
     [JsonPropertyName("origenActualizaciones")]
     public string? UpdateSource { get; set; }
 
-    /// <summary>Con el canal «local»: la carpeta donde `scripts/empaquetar.ps1` deja los paquetes de este equipo.</summary>
-    [JsonPropertyName("carpetaActualizacionesLocal")]
-    public string? LocalUpdateFolder { get; set; }
-
-    /// <summary>De dónde se actualiza (#12): «stable» (releases de main), «testing» (prereleases de los PR), «local» o «custom».</summary>
+    /// <summary>
+    /// De dónde se actualiza (#12): «stable» (releases de main), «testing» (prereleases de los PR), «local» (los paquetes de tus discos,
+    /// como en Otteretro) o «custom».
+    /// </summary>
     [JsonPropertyName("canalActualizaciones")]
     public string? UpdateChannel { get; set; }
 
     public static readonly string[] UpdateChannels = ["stable", "testing", "local", "custom"];
-
-    /// <summary>El origen del canal en uso: la carpeta local o el otro origen.</summary>
-    [JsonIgnore]
-    public string? EffectiveUpdateOrigin => EffectiveUpdateChannel == "local" ? LocalUpdateFolder : UpdateSource;
 
     [JsonIgnore]
     public string EffectiveUpdateChannel => UpdateChannel is { } c && UpdateChannels.Contains(c) ? c : string.IsNullOrEmpty(UpdateSource) ? "stable" : "custom";

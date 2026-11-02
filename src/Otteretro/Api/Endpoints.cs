@@ -30,7 +30,7 @@ public record Drive(string Name, long Free, long Total, string Folder, bool Sugg
 public record FolderInfo(string? Path, long? Used, long FreeOnDrive);
 
 /// <param name="Origin">Con custom: carpeta, URL o repo de GitHub.</param>
-/// <param name="Local">La carpeta del canal Local, guardada aunque se use otro canal.</param>
+/// <param name="Local">La carpeta que encontró en tus discos el canal Local; null si ninguno tiene paquetes.</param>
 public record UpdateChannelInfo(string Channel, string? Origin, string? Local = null);
 
 /// <summary>Endpoints base de F0. Cada módulo añadirá los suyos.</summary>
@@ -108,19 +108,14 @@ public static class Endpoints
         });
 
         // Ajustes › General › Actualizaciones (#12): el canal y, con «custom», el origen. Al cambiarlo se busca de inmediato.
-        static UpdateChannelInfo ChannelOf(AppConfig c) => new(c.EffectiveUpdateChannel, c.UpdateSource, c.LocalUpdateFolder);
+        static UpdateChannelInfo ChannelOf(AppConfig c) => new(c.EffectiveUpdateChannel, c.UpdateSource, Updater.NewestPackages());
         api.MapGet("/update/channel", (AppSession s) => ChannelOf(s.Config));
         api.MapPut("/update/channel", async Task<Results<Ok<UpdateChannelInfo>, BadRequest<ApiError>>> (UpdateChannelInfo request, AppSession s, Updater u) =>
         {
             if (!AppConfig.UpdateChannels.Contains(request.Channel)) return TypedResults.BadRequest(ApiError.Of("update.channel"));
             if (request.Channel == "custom" && string.IsNullOrWhiteSpace(request.Origin)) return TypedResults.BadRequest(ApiError.Of("update.noOrigin"));
-            // Local: la carpeta que llega o la que ya estaba guardada.
-            var local = string.IsNullOrWhiteSpace(request.Origin) ? s.Config.LocalUpdateFolder : request.Origin.Trim();
-            if (request.Channel == "local" && (string.IsNullOrWhiteSpace(local) || !Path.IsPathFullyQualified(local)))
-                return TypedResults.BadRequest(ApiError.Of("update.noOrigin"));
             s.Config.UpdateChannel = request.Channel;
             if (request.Channel == "custom") s.Config.UpdateSource = request.Origin!.Trim();
-            if (request.Channel == "local") s.Config.LocalUpdateFolder = local;
             s.Config.Save(s.ConfigPath);
             u.Forget();
             _ = u.Check();

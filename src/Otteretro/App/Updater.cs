@@ -40,7 +40,7 @@ public sealed class Updater(AppSession session, Events events)
         var downloading = false;
         try
         {
-            if (SourceFor(session.Config.EffectiveUpdateChannel, session.Config.EffectiveUpdateOrigin) is not { } found)
+            if (SourceFor(session.Config.EffectiveUpdateChannel, Origin(session)) is not { } found)
             {
                 Set(UpdatePhase.Unavailable, null, 0, "noSource");
                 return;
@@ -99,6 +99,23 @@ public sealed class Updater(AppSession session, Events events)
     }
 
     public const string Repo = "https://github.com/OscarVargas97/otteretro-catalogo";
+
+    /// <summary>
+    /// Donde `scripts/empaquetar.ps1` deja los paquetes en cada disco de Otteretro: la misma carpeta `Paquetes` que usa Otteretro
+    /// (decisión 244 de Otteretro), en una subcarpeta propia, porque el índice de Velopack se llama igual para los dos programas.
+    /// </summary>
+    public static readonly string PackagesFolder = Path.Combine("Otteretro", "Paquetes", "OtteretroCatalogo");
+
+    /// <summary>La carpeta de paquetes más reciente de los discos de Otteretro conectados; null si ninguno tiene.</summary>
+    public static string? NewestPackages(IEnumerable<string>? roots = null) =>
+        (roots ?? DriveInfo.GetDrives().Where(d => d.IsReady && d.DriveType == DriveType.Fixed).Select(d => d.Name))
+            .Where(r => File.Exists(Path.Combine(r, "Otteretro", "otteretro-ubicacion.json")))
+            .Select(r => Path.Combine(r, PackagesFolder))
+            .Where(f => File.Exists(Path.Combine(f, "releases.win.json")))
+            .OrderByDescending(f => File.GetLastWriteTimeUtc(Path.Combine(f, "releases.win.json"))).FirstOrDefault();
+
+    /// <summary>La carpeta del canal Local sale de tus discos, como en Otteretro; la de Otro origen, de lo que escribiste.</summary>
+    static string? Origin(AppSession session) => session.Config.EffectiveUpdateChannel == "local" ? NewestPackages() : session.Config.UpdateSource;
 
     /// <summary>
     /// El origen de cada canal (#180) y el canal de Velopack que busca: «win» las releases de main, «dev» las prereleases

@@ -36,6 +36,32 @@ public class UpdaterTests
         Assert.Equal("stable", new AppConfig { UpdateSource = Folder, UpdateChannel = "stable" }.EffectiveUpdateChannel);
     }
 
+    /// <summary>El canal Local busca los paquetes en los discos de Otteretro, como Otteretro (#12); el más reciente gana.</summary>
+    [Fact]
+    public void LocalFindsTheNewestPackagesOnOtteretroDisks()
+    {
+        using var tmp = new TempDir();
+        string Disk(string name, bool marker, DateTime? packages)
+        {
+            var root = Directory.CreateDirectory(tmp[name]).FullName;
+            if (marker) File.WriteAllText(Path.Combine(Directory.CreateDirectory(Path.Combine(root, "Otteretro")).FullName, "otteretro-ubicacion.json"), "{}");
+            if (packages is { } at)
+            {
+                var feed = Path.Combine(Directory.CreateDirectory(Path.Combine(root, Updater.PackagesFolder)).FullName, "releases.win.json");
+                File.WriteAllText(feed, "{}");
+                File.SetLastWriteTimeUtc(feed, at);
+            }
+            return root;
+        }
+        var old = Disk("d", true, DateTime.UtcNow.AddDays(-1));
+        var newest = Disk("e", true, DateTime.UtcNow);
+        var notOtteretro = Disk("f", false, DateTime.UtcNow.AddDays(1)); // sin marcador no es un disco de Otteretro
+        var empty = Disk("g", true, null);
+
+        Assert.Equal(Path.Combine(newest, Updater.PackagesFolder), Updater.NewestPackages([old, newest, notOtteretro, empty, tmp["desconectado"]]));
+        Assert.Null(Updater.NewestPackages([empty, notOtteretro]));
+    }
+
     static readonly string Folder = Path.GetTempPath();
 
     static (string, Type)? Kind((IUpdateSource Source, string Channel)? found) => found is { } f ? (f.Channel, f.Source.GetType()) : null;
