@@ -14,6 +14,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # para leer el catálogo de la versión anterior
 
       - uses: actions/setup-dotnet@v4
         with:
@@ -25,13 +27,36 @@ jobs:
       - name: Compilar el catálogo
         run: src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo compilar catalogo salida/catalogo.db.gz
 
-      - name: Publicar
+      - name: Versión
+        shell: pwsh
+        run: '"TAG=catalogo-$(Get-Date -AsUTC -Format ''yyyyMMdd-HHmm'')-$("${{ github.sha }}".Substring(0, 7))" >> $env:GITHUB_ENV'
+
+      # #31: cambios.json lleva todo el historial (la app puede venir de cualquier versión) y lo que cambió desde la anterior.
+      - name: Cambios desde la versión anterior
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          $tag = "catalogo-$(Get-Date -AsUTC -Format 'yyyyMMdd-HHmm')-$("${{ github.sha }}".Substring(0, 7))"
-          gh release create $tag salida/catalogo.db.gz salida/catalogo.db.gz.json --title $tag --notes "Datos de juegos: IGDB.com" --latest=false
+          $previous = gh release list --limit 100 --json tagName,createdAt | ConvertFrom-Json | Where-Object { $_.tagName -like 'catalogo-*' } |
+            Sort-Object createdAt -Descending | Select-Object -First 1
+          $extra = @()
+          if ($previous) {
+            $sha = $previous.tagName.Split('-')[-1]
+            New-Item -ItemType Directory anterior | Out-Null
+            git archive -o anterior.tar $sha catalogo
+            tar -xf anterior.tar -C anterior
+            gh release download $previous.tagName -p cambios.json -D historial
+            if ($LASTEXITCODE -ne 0) { $global:LASTEXITCODE = 0 } # las versiones de antes de #31 no lo tienen
+            $extra = @("anterior/catalogo", $previous.tagName)
+            if (Test-Path historial/cambios.json) { $extra += "historial/cambios.json" }
+          }
+          src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo cambios catalogo $env:TAG salida/cambios.json @extra
+
+      - name: Publicar
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create $env:TAG salida/catalogo.db.gz salida/catalogo.db.gz.json salida/cambios.json --title $env:TAG --notes "Datos de juegos: IGDB.com" --latest=false
 
       - name: Conservar solo las últimas 3 versiones de datos
         shell: pwsh

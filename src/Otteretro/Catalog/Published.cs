@@ -19,7 +19,7 @@ public record PublishedRoute(long Id, string Kind, string? Rationale, string? So
 public record PublishedSaga(long Id, string Name, string? IgdbKind, long? IgdbId, bool Iconic, List<PublishedField> Fields, List<PublishedGame> Games, List<PublishedRoute> Routes);
 public record PublishedLooseGames(List<PublishedGame> Games);
 public record PublishedConsole(string Id, string Name, string? Company, string? EmulationStatus, List<long> IgdbPlatforms);
-/// <param name="Kind">game o version.</param>
+/// <param name="Kind">saga, game o version.</param>
 /// <param name="NewId">Con qué se reemplazó; null si se quitó sin reemplazo.</param>
 public record PublishedReplacement(string Kind, long OldId, long? NewId);
 /// <param name="Sha256">Lo que verifica la app antes de usar la base.</param>
@@ -135,6 +135,7 @@ public static partial class Published
         Repeated("El juego", games.Select(g => g.Id));
         Repeated("La versión", versions.Select(v => v.Version.Id));
         var (gameIds, versionIds, consoles) = (games.Select(g => g.Id).ToHashSet(), versions.Select(v => v.Version.Id).ToHashSet(), all.Consoles.Select(k => k.Id).ToHashSet());
+        var sagaIds = all.Sagas.Select(s => s.Id).ToHashSet();
 
         foreach (var s in all.Sagas.Where(s => string.IsNullOrWhiteSpace(s.Name))) errors.Add($"La saga {s.Id} no tiene nombre.");
         foreach (var g in games.Where(g => string.IsNullOrWhiteSpace(g.NameEs))) errors.Add($"El juego {g.Id} no tiene nombre.");
@@ -157,7 +158,7 @@ public static partial class Published
             }
         foreach (var r in all.Replaced)
         {
-            var known = r.Kind == "game" ? gameIds : r.Kind == "version" ? versionIds : null;
+            var known = r.Kind switch { "game" => gameIds, "version" => versionIds, "saga" => sagaIds, _ => null };
             if (known is null) errors.Add($"Reemplazo de tipo desconocido: {r.Kind}.");
             else if (known.Contains(r.OldId)) errors.Add($"{r.Kind} {r.OldId} figura como reemplazado, pero sigue en el catálogo.");
             else if (r.NewId is { } to && !known.Contains(to)) errors.Add($"{r.Kind} {r.OldId} se reemplaza por algo que no existe: {to}.");

@@ -3,11 +3,17 @@ name: Validar el catálogo
 on:
   pull_request:
 
+permissions:
+  contents: read
+  pull-requests: write # el comentario con el resumen (#32)
+
 jobs:
   validar:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # para comparar con la rama base
 
       - uses: actions/setup-dotnet@v4
         with:
@@ -26,3 +32,22 @@ jobs:
 
       - name: Compila
         run: src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo compilar catalogo salida/catalogo.db.gz
+
+      # #32 (decisión 261): falla si se pierde un id sin reemplazo o se reutiliza uno de main, y deja el resumen de lo que cambia.
+      - name: Comparar con la rama base
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory base | Out-Null
+          git archive -o base.tar "origin/${{ github.base_ref }}" catalogo
+          tar -xf base.tar -C base
+          src/Otteretro/bin/Debug/net10.0/OtteretroCatalogo.exe catalogo revisar-pr base/catalogo catalogo resumen.md
+          $code = $LASTEXITCODE
+          Get-Content resumen.md | Add-Content $env:GITHUB_STEP_SUMMARY
+          exit $code
+
+      # Un PR desde un fork tiene un token sin permiso de escribir: ahí el resumen queda solo en la página de la ejecución.
+      - name: Comentar el resumen
+        if: always() && hashFiles('resumen.md') != '' && github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment ${{ github.event.pull_request.number }} --body-file resumen.md --edit-last --create-if-none

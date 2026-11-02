@@ -57,6 +57,9 @@ public static class CliMode
           catalogo publicar <carpeta>  Escribe el catálogo como un JSON por saga.
           catalogo validar <carpeta>   Revisa lo publicado (corre en cada PR).
           catalogo compilar <carpeta> <archivo>  Genera la base que baja la app y su manifiesto.
+          catalogo cambios <carpeta> <versión> <archivo> [<anterior> <versión anterior> [<historial>]]
+                                 Escribe cambios.json: el historial de la versión anterior más lo que cambió (#31).
+          catalogo revisar-pr <main> <carpeta> <resumen.md>  Falla si el PR pierde o reutiliza ids, y escribe el resumen (#32).
           catalogo depurar       Claude revisa las sagas dudosas del catálogo (repetidos, juegos que no son de la saga,
                                  sueltos que sí lo son) de noche y aplica los cambios solo; lo hace la app abierta.
             [--contar]             Solo cuenta los casos y estima el gasto, sin llamar a Claude.
@@ -124,6 +127,26 @@ public static class CliMode
                 output.WriteLine(errors.Count == 0 ? "Sin errores." : $"{errors.Count} errores.");
                 if (errors.Count == 0)
                     output.WriteLine("Juegos con imagen: " + string.Join(", ", Catalog.Published.ImageCounts(Path.GetFullPath(folder)).Select(i => $"{i.Key} {i.Value}")));
+                return errors.Count == 0 ? 0 : 1;
+            }
+            // #31: el historial de cambios que publica cada versión. Sin versión anterior, empieza desde esta.
+            case ["catalogo", "cambios", var folder, var version, var file, .. var previous] when previous is [] or [_, _] or [_, _, _]:
+            {
+                var changes = previous is [var before, _, ..] ? Catalog.Published.Changes(Path.GetFullPath(before), Path.GetFullPath(folder), version) : [];
+                var history = Catalog.Published.Extend(previous is [_, _, var old] ? Catalog.Published.ReadHistory(Path.GetFullPath(old)) : null,
+                    previous is [_, var previousVersion, ..] ? previousVersion : null, changes, version);
+                Catalog.Published.SaveHistory(Path.GetFullPath(file), history);
+                output.WriteLine($"{changes.Count} cambios en {version}; el historial tiene {history.Versions.Count} versiones y {history.Entries.Count} cambios.");
+                return 0;
+            }
+            // #32: lo que revisa cada PR contra main, con el resumen que se comenta en el PR.
+            case ["catalogo", "revisar-pr", var main, var folder, var summary]:
+            {
+                var (before, after) = (Path.GetFullPath(main), Path.GetFullPath(folder));
+                var errors = Catalog.Published.CheckPullRequest(before, after);
+                File.WriteAllText(Path.GetFullPath(summary), Catalog.Published.Summary(Catalog.Published.Changes(before, after, "pr"), errors));
+                foreach (var error in errors) output.WriteLine(error);
+                output.WriteLine(errors.Count == 0 ? "Sin problemas respecto de main." : $"{errors.Count} problemas respecto de main.");
                 return errors.Count == 0 ? 0 : 1;
             }
             case ["catalogo", "compilar", var folder, var file]:
