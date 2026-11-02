@@ -43,7 +43,6 @@ public static class CatalogEndpoints
     [
         ("igdb", ["igdb.clientId", "igdb.clientSecret"]),
         ("steamgriddb", ["steamgriddb.apiKey"]),
-        ("steam", ["steam.apiKey"]),
     ];
 
     public static void Map(RouteGroupBuilder api)

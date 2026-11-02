@@ -130,6 +130,6 @@ public class CatalogApiTests : IAsyncLifetime
         Assert.Empty((await Get<SearchResults>("/api/search?q=z"))!.Games);
 
         var notices = (await Get<List<ApiError>>("/api/notices"))!;
-        Assert.Equal(["igdb", "steamgriddb", "steam"], notices.Select(n => n.Params!["service"]));
+        Assert.Equal(["igdb", "steamgriddb"], notices.Select(n => n.Params!["service"])); // #33: Steam es de Otteretro
     }
 }
