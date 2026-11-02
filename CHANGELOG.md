@@ -2,7 +2,7 @@
 
 ## Sin publicar
 
-`feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr` , `feat/9-imagenes-compartidas` y `fix/33-sin-clave-steam` · #6, #9, #12, #17 y #22: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
+`feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas` y `fix/33-sin-clave-steam` · #6, #9, #12, #17 y #22: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
 
 ### Nuevo
 - **Referencias de imágenes** (#6): cada juego publica de dónde se baja su portada, su fondo y su logo (SteamGridDB, o la carátula de IGDB si no hay portada), sin copias ni claves. Otteretro y la administración bajan cada imagen la primera vez que se ve. `catalogo validar` rechaza una dirección que no sea de SteamGridDB o IGDB y cuenta cuántos juegos tienen cada tipo.
