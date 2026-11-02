@@ -178,13 +178,13 @@ public static class Endpoints
         api.MapDelete("/tasks/{id:long}", Results<Ok<int>, Conflict<ApiError>> (long id, AppSession s) =>
             CatalogEndpoints.Db(s) is { } db ? TypedResults.Ok(TaskQueue.Clear(db, id)) : CatalogEndpoints.NoData());
 
-        // Portada, héroe o logo de un juego desde catalogo/imagenes. Va en <img src>, así que la clave llega en ?key=.
-        api.MapGet("/images/{gameId:long}/{kind}", Results<PhysicalFileHttpResult, NotFound> (long gameId, string kind, AppSession s, HttpResponse response) =>
+        // Portada, héroe o logo de un juego desde catalogo/imagenes; si no está, se baja de su referencia (#6). Va en <img src>, así que la clave llega en ?key=.
+        api.MapGet("/images/{gameId:long}/{kind}", async Task<Results<PhysicalFileHttpResult, NotFound>> (long gameId, string kind, AppSession s, HttpResponse response, CancellationToken ct) =>
         {
             // La ventana pregunta siempre (con ETag): si la imagen cambió, no se queda con la vieja (#58).
             response.Headers.CacheControl = "no-cache";
             if (!Catalog.SteamGridDb.Kinds.Contains(kind) || !DataFolder.IsReady(s.Config.DataFolder)) return TypedResults.NotFound();
-            var file = Catalog.SteamGridDb.Find(DataFolder.Open(s.Config.DataFolder!), gameId, kind);
+            var file = await Catalog.ImageRefs.File(DataFolder.Open(s.Config.DataFolder!), gameId, kind, ct);
             return file is null ? TypedResults.NotFound() : TypedResults.PhysicalFile(file, ImageType(file), enableRangeProcessing: false);
         });
 

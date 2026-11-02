@@ -20,6 +20,7 @@ public class PublishedTests
             INSERT INTO catalog.route_step (route_id, position, game_id, recommended_version_id, reason) VALUES (1, 1, 10, 20, 'El mejor punto de partida');
             INSERT INTO catalog.replaced (kind, old_id, new_id) VALUES ('game', 99, 10);
             INSERT INTO catalog.learning (kind, content, created_at) VALUES ('rule', 'REGLA-INTERNA', '2026-01-01');
+            INSERT INTO catalog.image (game_id, kind, url) VALUES (10, 'cover', 'https://cdn2.steamgriddb.com/grid/ffx.png'), (77, 'cover', 'https://cdn2.steamgriddb.com/grid/borrado.png');
             """);
     }
 
@@ -71,6 +72,9 @@ public class PublishedTests
             Assert.Equal(10, c.ExecuteScalar<long>("SELECT new_id FROM replaced WHERE old_id = 99"));
             Assert.Equal(1, c.ExecuteScalar<long>("SELECT manual FROM field_value WHERE entity_id = 10"));
             Assert.Equal(0, c.ExecuteScalar<long>("SELECT count(*) FROM learning"));
+            // #6: la referencia viaja; la de un juego que ya no existe, no.
+            Assert.Equal("https://cdn2.steamgriddb.com/grid/ffx.png", c.ExecuteScalar<string>("SELECT url FROM image WHERE game_id = 10 AND kind = 'cover'"));
+            Assert.Equal(1, c.ExecuteScalar<long>("SELECT count(*) FROM image"));
         }
     }
 
@@ -81,6 +85,8 @@ public class PublishedTests
     [InlineData("\"recommendedVersionId\": 20", "\"recommendedVersionId\": 12345", "versión que no existe")]
     [InlineData("\"nameEs\": \"Final Fantasy X\"", "\"nameEs\": \" \"", "no tiene nombre")]
     [InlineData("\"id\": 20", "\"id\": 21", "repetido")]
+    [InlineData("https://cdn2.steamgriddb.com/grid/ffx.png", "http://sitio.test/x.png", "no es de SteamGridDB ni de IGDB")]
+    [InlineData("\"cover\": \"https", "\"fondo\": \"https", "imagen de tipo desconocido")]
     public async Task InvalidDataDoesNotPass(string from, string to, string expected)
     {
         await using var f = new Fixture();

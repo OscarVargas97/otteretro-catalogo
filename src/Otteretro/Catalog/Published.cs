@@ -11,7 +11,9 @@ namespace Otteretro.Catalog;
 public record PublishedField(string Field, string? Value, string Source, bool Manual);
 public record PublishedCriterion(string Criterion, string? Value, string? Text);
 public record PublishedVersion(long Id, string Platform, string Kind, int? Year, long? IgdbId, long? SteamAppId, List<PublishedCriterion> Criteria);
-public record PublishedGame(long Id, string NameEs, string? OriginalName, int? Year, long? IgdbId, long? Popularity, bool Iconic, List<PublishedField> Fields, List<PublishedVersion> Versions);
+/// <param name="Images">De dónde se baja cada imagen (#6): cover, hero o logo → dirección en SteamGridDB o IGDB.</param>
+public record PublishedGame(long Id, string NameEs, string? OriginalName, int? Year, long? IgdbId, long? Popularity, bool Iconic, List<PublishedField> Fields, List<PublishedVersion> Versions,
+    Dictionary<string, string>? Images = null);
 public record PublishedStep(int Position, long GameId, long? RecommendedVersionId, string? Reason);
 public record PublishedRoute(long Id, string Kind, string? Rationale, string? Sources, bool Approved, List<PublishedStep> Steps);
 public record PublishedSaga(long Id, string Name, string? IgdbKind, long? IgdbId, bool Iconic, List<PublishedField> Fields, List<PublishedGame> Games, List<PublishedRoute> Routes);
@@ -63,9 +65,11 @@ public static partial class Published
         var versions = c.Query<(long Id, long GameId, string Platform, string Kind, long? Year, long? IgdbId, long? SteamAppId)>(
                 "SELECT id, game_id AS GameId, platform, kind, year, igdb_id AS IgdbId, steam_app_id AS SteamAppId FROM version ORDER BY id")
             .ToLookup(v => v.GameId, v => new PublishedVersion(v.Id, v.Platform, v.Kind, (int?)v.Year, v.IgdbId, v.SteamAppId, criteria[v.Id].ToList()));
+        var images = c.Query<(long GameId, string Kind, string Url)>("SELECT game_id AS GameId, kind, url FROM image WHERE game_id IN (SELECT id FROM game) ORDER BY game_id, kind")
+            .GroupBy(i => i.GameId).ToDictionary(g => g.Key, g => g.ToDictionary(i => i.Kind, i => i.Url));
         var games = c.Query<(long Id, long? SagaId, string NameEs, string? OriginalName, long? Year, long? IgdbId, long? Popularity, bool Iconic)>(
                 "SELECT id, saga_id AS SagaId, name_es AS NameEs, original_name AS OriginalName, year, igdb_id AS IgdbId, popularity, iconic FROM game ORDER BY id")
-            .ToLookup(g => g.SagaId, g => new PublishedGame(g.Id, g.NameEs, g.OriginalName, (int?)g.Year, g.IgdbId, g.Popularity, g.Iconic, fields[("game", g.Id)].ToList(), versions[g.Id].ToList()));
+            .ToLookup(g => g.SagaId, g => new PublishedGame(g.Id, g.NameEs, g.OriginalName, (int?)g.Year, g.IgdbId, g.Popularity, g.Iconic, fields[("game", g.Id)].ToList(), versions[g.Id].ToList(), images.GetValueOrDefault(g.Id)));
         var steps = c.Query<(long RouteId, long Position, long GameId, long? VersionId, string? Reason)>(
                 "SELECT route_id AS RouteId, position, game_id AS GameId, recommended_version_id AS VersionId, reason FROM route_step ORDER BY route_id, position")
             .ToLookup(s => s.RouteId, s => new PublishedStep((int)s.Position, s.GameId, s.VersionId, s.Reason));
@@ -91,6 +95,14 @@ public static partial class Published
         var plain = new string(name.Normalize(NormalizationForm.FormD).Where(ch => char.IsAsciiLetterOrDigit(ch) || ch == ' ' || ch == '-').ToArray()).Trim().ToLowerInvariant();
         var slug = string.Join('-', plain.Split([' ', '-'], StringSplitOptions.RemoveEmptyEntries));
         return slug.Length == 0 ? "saga" : slug[..Math.Min(slug.Length, 60)].TrimEnd('-');
+    }
+
+    /// <summary>Cuántos juegos tienen cada tipo de imagen: el informe de `catalogo validar`.</summary>
+    public static Dictionary<string, int> ImageCounts(string folder)
+    {
+        var all = Read(folder);
+        var images = all.Sagas.SelectMany(s => s.Games).Concat(all.Loose).SelectMany(g => g.Images?.Keys ?? Enumerable.Empty<string>()).ToList();
+        return SteamGridDb.Kinds.ToDictionary(k => k, k => images.Count(i => i == k));
     }
 
     sealed record Everything(List<PublishedSaga> Sagas, List<PublishedGame> Loose, List<PublishedConsole> Consoles, List<PublishedReplacement> Replaced);
@@ -131,6 +143,12 @@ public static partial class Published
             if (!consoles.Contains(v.Platform)) errors.Add($"La versión {v.Id} de «{g.NameEs}» usa una consola que no existe: {v.Platform}.");
             if (!VersionKinds.Contains(v.Kind)) errors.Add($"La versión {v.Id} de «{g.NameEs}» tiene un tipo desconocido: {v.Kind}.");
         }
+        foreach (var g in games)
+            foreach (var (kind, url) in g.Images ?? [])
+            {
+                if (!SteamGridDb.Kinds.Contains(kind)) errors.Add($"El juego {g.Id} tiene una imagen de tipo desconocido: {kind}.");
+                if (!ImageRefs.IsAllowed(url)) errors.Add($"La imagen {kind} del juego {g.Id} no es de SteamGridDB ni de IGDB: {url}.");
+            }
         foreach (var r in all.Sagas.SelectMany(s => s.Routes))
             foreach (var step in r.Steps)
             {
@@ -185,6 +203,8 @@ public static partial class Published
                     c.Execute("INSERT INTO catalog.game (id, saga_id, name_es, original_name, year, igdb_id, popularity, iconic) VALUES (@Id, @sagaId, @NameEs, @OriginalName, @Year, @IgdbId, @Popularity, @Iconic)",
                         new { g.Id, sagaId, g.NameEs, g.OriginalName, g.Year, g.IgdbId, g.Popularity, g.Iconic }, t);
                     Fields("game", g.Id, g.Fields);
+                    foreach (var (kind, url) in g.Images ?? [])
+                        c.Execute("INSERT INTO catalog.image (game_id, kind, url) VALUES (@Id, @kind, @url)", new { g.Id, kind, url }, t);
                     foreach (var v in g.Versions)
                     {
                         c.Execute("INSERT INTO catalog.version (id, game_id, platform, kind, year, igdb_id, steam_app_id) VALUES (@Id, @GameId, @Platform, @Kind, @Year, @IgdbId, @SteamAppId)",

@@ -35,13 +35,23 @@ const CONSOLE_HUE: Record<string, number> = {
   ps1: 220, ps2: 228, psp: 232, ps3: 215, vita: 205, ps4: 222, ps5: 212, xbox: 110, x360: 100, xone: 120, xseries: 125, pc: 30, pcvr: 30,
 };
 
-/** Portada 2:3. Sin imagen de SteamGridDB, el nombre sobre un degradado del color de su consola. */
+/** La imagen de un juego, pedida solo cuando llega a la pantalla (#6). Si no se puede bajar, desaparece y queda lo de debajo. */
+export function LazyArt({ src, position }: { src: string; position?: string }) {
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img className="lazy-art" src={src} alt="" loading="lazy" decoding="async" style={position ? { objectPosition: position } : undefined}
+    onError={(e) => { e.currentTarget.style.display = "none"; }} />;
+}
+
+/** Portada 2:3, sobre el nombre en un degradado del color de su consola: eso se ve mientras no hay imagen o si no se pudo bajar. */
 export function Cover({ gameId, name, hasCover, platform, style }: { gameId: number | string; name: string; hasCover: boolean; platform?: string | null; style?: React.CSSProperties }) {
-  if (hasCover)
-    return <div className="ot-cover" style={{ backgroundImage: `url("${imageUrl(gameId, "cover")}")`, backgroundSize: "cover", backgroundPosition: "center", ...style }} role="img" aria-label={name} />;
   const hue = platform ? CONSOLE_HUE[platform] : undefined;
   const tint = hue === undefined ? undefined : { background: `linear-gradient(160deg, hsl(${hue} 45% 34%), hsl(${hue} 35% 14%))` };
-  return <div className="ot-cover" style={{ ...tint, ...style }}>{name}</div>;
+  return (
+    <div className="ot-cover" style={{ ...tint, ...style }} role={hasCover ? "img" : undefined} aria-label={hasCover ? name : undefined}>
+      {name}
+      {hasCover && <LazyArt src={imageUrl(gameId, "cover")} />}
+    </div>
+  );
 }
 
 // Nombre corto de cada consola para las tablas (#170); el nombre completo va en el título.
@@ -99,10 +109,12 @@ export function SagaTile({ saga }: { saga: SagaCard }) {
   const t = useTranslations("catalog");
   const id = Number(saga.id);
   const name = id === 0 ? t("emulation") : saga.name;
-  const cover = saga.coverGameId ? { backgroundImage: `url("${imageUrl(saga.coverGameId, "cover")}")`, backgroundSize: "cover", backgroundPosition: "center 20%" } : undefined;
   return (
     <Link className="ot-saga" href={`/saga/?id=${id}`} style={{ textDecoration: "none", color: "var(--ink)" }}>
-      <div className="ot-saga-art" style={cover}><span className="saga-art-name">{name}</span></div>
+      <div className="ot-saga-art">
+        {saga.coverGameId && <LazyArt src={imageUrl(saga.coverGameId, "cover")} position="center 20%" />}
+        <span className="saga-art-name">{name}</span>
+      </div>
       <div className="ot-saga-body">
         {/* Insignias (#170): ★, Icónica y Exclusiva de la empresa. La fila está siempre, así todas las tarjetas miden lo mismo. */}
         <div className="ot-saga-badges">
