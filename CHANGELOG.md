@@ -2,7 +2,7 @@
 
 ## Sin publicar
 
-`feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas` y `fix/33-sin-clave-steam` · #6, #9, #12, #17 y #22: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
+`feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam` y `feat/30-cambios-publicados` · #6, #9, #12, #17, #22 y #30: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
 
 ### Nuevo
 - **Referencias de imágenes** (#6): cada juego publica de dónde se baja su portada, su fondo y su logo (SteamGridDB, o la carátula de IGDB si no hay portada), sin copias ni claves. Otteretro y la administración bajan cada imagen la primera vez que se ve. `catalogo validar` rechaza una dirección que no sea de SteamGridDB o IGDB y cuenta cuántos juegos tienen cada tipo.
@@ -10,6 +10,9 @@
 - **Editar sagas y rutas** (#17): en una saga, «Editar» permite cambiar su nombre y si es icónica, crear, ordenar o borrar sus rutas, y agregar, mover, fusionar o eliminar juegos; en Sagas, «Nueva saga». Lo fusionado o eliminado queda en `reemplazados.json`, y ni IGDB ni Claude pisan lo editado a mano.
 - **Publicar con un PR** (#22): «Publicar» en una saga o un juego muestra qué cambia respecto de lo publicado y abre un PR, o actualiza el que ya está abierto. Con permiso de escritura usa una rama del repo; sin él, un fork en tu cuenta. Lo inválido no se publica, y si alguien cambió lo mismo en GitHub, avisa y no lo pisa. Necesita un token de GitHub con `public_repo` en Ajustes › Cuentas y claves; el programa nunca fusiona.
 - **Imágenes en el disco ★ de Otteretro** (#9): no hay carpeta de imágenes propia. Van en `catalogo\imagenes` del disco ★ de Otteretro y lo siguen cuando Otteretro lo cambia, así lo que baja un programa le sirve al otro. Sin Otteretro, el asistente y Ajustes › General preparan el ★ como lo haría Otteretro, y cambiarlo lleva las imágenes. Fusionar o depurar juegos no borra imágenes.
+
+- **Cada versión dice qué cambió** (#31): junto con la base se publica `cambios.json`, con todo el historial: renombrados, fusionados, quitados, nuevos y juegos que cambian de saga, cada uno con su versión. Otteretro lo usa para verificar lo que te muestra antes de aceptar una versión, aunque vengas de una versión de hace meses.
+- **Cada PR se revisa contra `main`** (#32): falla si una saga, un juego o una versión desaparece sin entrada en `reemplazados.json`, o si usa un id que en `main` ya se retiró o es otra cosa. El PR recibe un comentario con el resumen de lo que cambia. `reemplazados.json` ahora también acepta sagas.
 
 ### Cambios
 - «Buscar imágenes en SteamGridDB e IGDB» guarda las direcciones en vez de bajar las imágenes, y vuelve a consultarlas para traer las que cambiaron.

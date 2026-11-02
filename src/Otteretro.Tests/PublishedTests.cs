@@ -114,4 +114,77 @@ public class PublishedTests
         File.WriteAllText(replaced, "{ esto no es JSON");
         Assert.Contains(Published.Validate(folder), e => e.Contains("No se puede leer"));
     }
+
+    /// <summary>La versión siguiente de <see cref="Fill"/>: renombra la saga, fusiona Tetris con un juego nuevo, quita una versión y suma un juego a la saga.</summary>
+    static string Next(Fixture f, bool withReplacements = true)
+    {
+        using (var c = f.Db.Open())
+        {
+            c.Execute("PRAGMA foreign_keys = OFF"); // se borra como lo haría una edición: lo que apunte a Tetris no importa aquí
+            c.Execute("""
+                UPDATE catalog.saga SET name = 'Final Fantasy (serie)' WHERE id = 33;
+                INSERT INTO catalog.game (id, saga_id, name_es, year) VALUES (12, 33, 'Final Fantasy XII', 2006), (13, NULL, 'Tetris DX', 1998);
+                INSERT INTO catalog.version (id, game_id, platform, kind) VALUES (22, 12, 'ps2', 'original'), (23, 13, 'gbc', 'original');
+                DELETE FROM catalog.version WHERE game_id = 11; DELETE FROM catalog.game WHERE id = 11;
+                """);
+            if (withReplacements) c.Execute("INSERT INTO catalog.replaced (kind, old_id, new_id) VALUES ('game', 11, 13), ('version', 21, 23)");
+        }
+        var folder = f.Tmp[$"publicado-{Guid.NewGuid():N}"];
+        Published.Write(f.Db, folder);
+        return folder;
+    }
+
+    /// <summary>#31 (decisiones 260 y 262): lo que cambia entre dos versiones, por id, y el historial que lo acumula.</summary>
+    [Fact]
+    public async Task ChangesBetweenVersionsAreFoundByIdAndAccumulated()
+    {
+        await using var f = new Fixture();
+        Fill(f);
+        var before = Written(f);
+        var after = Next(f);
+        var changes = Published.Changes(before, after, "catalogo-2");
+        Assert.Contains(changes, c => c is { Kind: "saga", Change: "renamed", Id: 33, From: "Final Fantasy", Name: "Final Fantasy (serie)" });
+        Assert.Contains(changes, c => c is { Kind: "game", Change: "merged", Id: 11, Name: "Tetris", Into: 13 });
+        Assert.Contains(changes, c => c is { Kind: "game", Change: "added", Id: 12 });
+        Assert.All(changes, c => Assert.Equal("catalogo-2", c.Version));
+
+        // La primera vez arranca desde la versión anterior; después solo suma.
+        var first = Published.Extend(null, "catalogo-1", changes, "catalogo-2");
+        Assert.Equal(["catalogo-1", "catalogo-2"], first.Versions);
+        var file = f.Tmp["cambios.json"];
+        Published.SaveHistory(file, first);
+        var second = Published.Extend(Published.ReadHistory(file), "catalogo-2", [new("catalogo-3", "game", "renamed", 12, "FF XII", "Final Fantasy XII")], "catalogo-3");
+        Assert.Equal(["catalogo-1", "catalogo-2", "catalogo-3"], second.Versions);
+        Assert.Equal(changes.Count + 1, second.Entries.Count);
+        Assert.Same(second, Published.Extend(second, "catalogo-3", [], "catalogo-3")); // publicar dos veces la misma no duplica
+    }
+
+    /// <summary>#32 (decisión 261): un PR no puede perder un id sin reemplazo ni reutilizar uno que en main es otra cosa; lleva su resumen.</summary>
+    [Fact]
+    public async Task APullRequestCannotLoseOrReuseIds()
+    {
+        await using var f = new Fixture();
+        Fill(f);
+        var main = Written(f);
+        var next = Next(f);
+        Assert.Empty(Published.CheckPullRequest(main, next));
+
+        await using var g = new Fixture();
+        Fill(g);
+        var lost = Published.CheckPullRequest(main, Next(g, withReplacements: false));
+        Assert.Contains(lost, e => e.Contains("El juego 11") && e.Contains("reemplazados.json"));
+        Assert.Contains(lost, e => e.Contains("La versión 21"));
+
+        // El 99 ya se retiró en main (Fill lo reemplazó por el 10): no se puede volver a usar.
+        await using var h = new Fixture();
+        Fill(h);
+        using (var c = h.Db.Open()) c.Execute("INSERT INTO catalog.game (id, saga_id, name_es) VALUES (99, NULL, 'Otro juego'); INSERT INTO catalog.version (id, game_id, platform, kind) VALUES (99, 99, 'gb', 'original'); DELETE FROM catalog.replaced");
+        var reused = h.Tmp["reusado"];
+        Published.Write(h.Db, reused);
+        Assert.Contains(Published.CheckPullRequest(main, reused), e => e.Contains("El juego 99") && e.Contains("retiró"));
+
+        var summary = Published.Summary(Published.Changes(main, next, "pr"), lost);
+        Assert.Contains("problemas que impiden fusionar", summary);
+        Assert.Contains("**Fusionados: 1**", summary);
+    }
 }
