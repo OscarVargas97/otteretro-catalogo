@@ -88,6 +88,9 @@ public static class CatalogEndpoints
         api.MapPost("/covers", Results<Ok<SteamGridDb.CoversInfo>, Conflict<ApiError>> (AppSession s, SecretBox box, bool missing = false) =>
             Db(s) is { } db ? TypedResults.Ok(SteamGridDb.Request(db, HasSgdbKey(db, s, box), missing)) : NoData());
 
+        // «Completar códigos» (#46): el TitleID o el serial de cada versión, para que Otteretro reconozca por ID.
+        api.MapPost("/codes", Results<Ok<long>, Conflict<ApiError>> (AppSession s) => Db(s) is { } db ? TypedResults.Ok(GameCodes.Enqueue(db)) : NoData());
+
         api.MapGet("/games/{id:long}", Results<Ok<GameDetail>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : CatalogQueries.Game(db, id) is { } game ? TypedResults.Ok(game) : TypedResults.NotFound());
 
