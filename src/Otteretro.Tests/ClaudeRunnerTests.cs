@@ -288,15 +288,19 @@ public class ClaudeRunnerTests : IDisposable
         Assert.Equal(4, calls.Count);
     }
 
-    /// <summary>F2.9: «Ejecutar ahora» lanza la carga; al empezar el horario se lanza sola, una vez por noche.</summary>
+    /// <summary>F2.9 y #58: «Ejecutar ahora» lanza las tareas encendidas; al empezar el horario se lanzan solas, una vez por noche.</summary>
     [Fact]
     public void RunNowAndTheScheduleLaunchTheLoad()
     {
         now = Local(12);
         Assert.Null(ClaudeBudget.AutoStart(db)); // fuera del horario
-        var load = ClaudeBudget.RunNow(db);
-        Assert.Equal((InitialLoad.Kind, "queued"), (ClaudeBudget.Status(db).Task!.Kind, ClaudeBudget.Status(db).Task!.Status));
+        ClaudeBudget.RunNow(db);
+        Assert.Equal((CatalogCleanup.Kind, "queued"), (ClaudeBudget.Status(db).Task!.Kind, ClaudeBudget.Status(db).Task!.Status)); // depurar va primero
+        var load = ClaudeBudget.Status(db).Task!.Id;
+        long Count() { using var c = db.Open(); return c.ExecuteScalar<long>("SELECT count(*) FROM task"); }
+        var queued = Count();
         Assert.Equal(load, ClaudeBudget.RunNow(db)); // no encola otra
+        Assert.Equal(queued, Count());
 
         using (var c = db.Open()) c.Execute("UPDATE task SET status = 'done'");
         now = Local(0, days: 1).AddMinutes(1);

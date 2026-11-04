@@ -41,7 +41,9 @@ public sealed class TaskQueue(AppSession session, Events events, FolderMoveServi
     };
 
     /// <summary>Tipos que no corren a la vez aunque sean distintos: mover y adoptar tocan las mismas carpetas (§5.3).</summary>
-    static string LockOf(string kind) => kind.StartsWith("library.", StringComparison.Ordinal) ? "library" : kind;
+    // Las de Claude van de a una y en orden (#58): depurar antes que rutas, y así con cada paso de la noche.
+    static string LockOf(string kind) => kind.StartsWith("library.", StringComparison.Ordinal) ? "library"
+        : kind.StartsWith("claude.", StringComparison.Ordinal) ? "claude" : kind;
 
     /// <summary>Las que duran más que esto avisan con una notificación del sistema al terminar.</summary>
     public static readonly TimeSpan LongTask = TimeSpan.FromMinutes(1);

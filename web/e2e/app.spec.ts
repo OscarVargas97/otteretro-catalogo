@@ -103,9 +103,16 @@ test("se crea una saga, se le agregan juegos, se arma su ruta y se fusiona un ju
   await page.getByRole("button", { name: es.publish.close }).click();
 });
 
-test("Ajustes tiene claves, consolas, Claude y general", async () => {
+test("Ajustes tiene claves, consolas, tareas y general", async () => {
   await page.goto(`${base()}/settings/`);
   await expect(page.getByRole("tab")).toHaveCount(4);
+  // #58: la pestaña Claude pasó a ser Tareas (el enlace viejo lleva ahí), con cada tarea en su grupo y su «Ejecutar».
+  await page.goto(`${base()}/settings/?s=claude`);
+  await expect(page.getByRole("tab", { name: es.settings.claude.title })).toHaveAttribute("aria-selected", "true");
+  const group = (name: string) => page.locator("section.panel", { has: page.getByRole("heading", { name, exact: true }) });
+  await expect(group(es.settings.claude.groupClaude).getByRole("switch")).toHaveCount(5);
+  await expect(group(es.settings.claude.groupScript).getByRole("switch")).toHaveCount(3);
+  await expect(group(es.settings.claude.groupClaude).getByText(es.settings.claude.task.routes.name, { exact: true })).toBeVisible();
   await page.getByRole("tab", { name: es.settings.general }).click();
   await expect(page.getByText(es.settings.attribution)).toBeVisible();
   await page.getByRole("button", { name: en.languageName }).click();
