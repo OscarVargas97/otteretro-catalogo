@@ -72,14 +72,16 @@ public class InitialLoadTests : IAsyncDisposable
             return Task.FromResult(Reply(value));
         };
 
+        // Historia y comunidad solo para las icónicas (#54): Gran Turismo y Half-Life lo son.
+        using (var c0 = f.Db.Open()) c0.Execute("UPDATE saga SET iconic = 1 WHERE id IN (2, 3)");
         var task = await f.Run((long)InitialLoad.Enqueue(f.Db)!);
 
         Assert.Equal("done", task.Status);
         // Crash tiene un juego en Switch: va con Nintendo, en el mismo lote que Zelda. Microsoft no tiene sagas.
         Assert.Equal([
-            "cleanup:zelda", "routes:zelda+crash", "iconic:zelda+crash", // Zelda tiene repetidos posibles: se depura primero
-            "routes:gt", "routes:gt", "iconic:gt", // se cortó por el límite y siguió desde ahí
-            "routes:hl", "iconic:hl",
+            "cleanup:zelda", "iconic:zelda+crash", // Zelda tiene repetidos posibles: se depura primero; ninguna es icónica, sin rutas
+            "iconic:gt", "routes:gt", "routes:gt", // se cortó por el límite y siguió desde ahí
+            "iconic:hl", "routes:hl",
         ], calls);
         using var c = f.Db.Open();
         Assert.Equal(1, c.ExecuteScalar<long>("SELECT count(*) FROM claude_usage WHERE result = 'limit'"));

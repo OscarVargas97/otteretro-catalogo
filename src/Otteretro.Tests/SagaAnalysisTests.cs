@@ -88,21 +88,51 @@ public class SagaAnalysisTests : IAsyncDisposable
 
         Assert.Equal("done", (await f.Run(SagaAnalysis.Enqueue(f.Db))).Status);
 
-        Assert.Equal(4, calls.Count); // la clase de cada versión ya la puso IGDB: no se le pregunta a Claude (#50)
+        // La clase de cada versión ya la puso IGDB (#50) y la saga no es icónica: sin rutas de Claude (#54).
+        Assert.Equal(3, calls.Count);
         Assert.Equal([
-            ("saga", 1, SagaAnalysis.Routes),
             ("saga", 1, SagaAnalysis.Iconic),        // la saga 99 no venía: se descarta
             ("game", 10, SagaAnalysis.BestVersion),  // Majora tiene una sola versión: no se compara
             ("game", 10, SagaAnalysis.Translate),
         ], Pending());
+        Assert.Equal([10L, 11L], ReleaseSteps()); // la de lanzamiento, por año y sin Claude
 
         // Sin cambios en los datos, otra pasada no llama a Claude; con un juego nuevo, solo lo de su saga.
         Assert.Equal("done", (await f.Run(SagaAnalysis.Enqueue(f.Db))).Status);
-        Assert.Equal(4, calls.Count);
+        Assert.Equal(3, calls.Count);
         using (var c = f.Db.Open())
             c.Execute("INSERT INTO game (id, saga_id, name_es, year) VALUES (12, 1, 'Wind Waker', 2002)");
         Assert.Equal("done", (await f.Run(SagaAnalysis.Enqueue(f.Db, [1]))).Status);
-        Assert.Equal(6, calls.Count); // rutas e icónico; las versiones y la descripción no cambiaron
-        Assert.Equal(4, Pending().Count); // los nuevos reemplazan a los abiertos
+        Assert.Equal(4, calls.Count); // icónico; las versiones y la descripción no cambiaron
+        Assert.Equal(3, Pending().Count); // los nuevos reemplazan a los abiertos
+        Assert.Equal([10L, 11L, 12L], ReleaseSteps()); // la del script se rehace con el juego nuevo
+    }
+
+    List<long> ReleaseSteps()
+    {
+        using var c = f.Db.Open();
+        return c.Query<long>("SELECT st.game_id FROM route_step st JOIN route r ON r.id = st.route_id WHERE r.saga_id = 1 AND r.kind = 'release' ORDER BY st.position").ToList();
+    }
+
+    /// <summary>#54: a una saga icónica se le piden historia y comunidad; la de lanzamiento de Claude se ignora y la tuya no se toca.</summary>
+    [Fact]
+    public async Task IconicSagasGetStoryAndCommunityFromClaude()
+    {
+        Fake();
+        using (var c = f.Db.Open())
+            c.Execute($"""
+                UPDATE saga SET iconic = 1 WHERE id = 1;
+                INSERT INTO route (saga_id, kind, rationale, sources, approved) VALUES (1, 'release', 'Mi orden', '[]', 1);
+                """);
+
+        Assert.Equal("done", (await f.Run(SagaAnalysis.EnqueueStep(f.Db, SagaAnalysis.Routes))).Status);
+
+        Assert.Single(calls);
+        using var c2 = f.Db.Open();
+        var proposed = c2.ExecuteScalar<string>("SELECT json_extract(data, '$.result') FROM review_item WHERE json_extract(data, '$.prompt') = 'ruta-saga'");
+        Assert.DoesNotContain("\"release\"", proposed); // la de lanzamiento la pone el script
+        Assert.Contains("\"community\"", proposed);
+        Assert.Equal("Mi orden", c2.ExecuteScalar<string>("SELECT rationale FROM route WHERE saga_id = 1 AND kind = 'release'"));
+        Assert.Empty(ReleaseSteps()); // la que ya estaba, sin tocar
     }
 }

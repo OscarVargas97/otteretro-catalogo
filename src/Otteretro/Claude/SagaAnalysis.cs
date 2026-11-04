@@ -49,7 +49,7 @@ public static class SagaAnalysis
 
     record Version(long Id, long GameId, string Platform, string Kind, long? Year);
     record Game(long Id, long SagaId, string Name, long? Year, List<Version> Versions, string? Summary);
-    record Saga(long Id, string Name, List<Game> Games);
+    record Saga(long Id, string Name, List<Game> Games, bool Iconic = false);
 
     /// <summary>Un resultado para Revisar.</summary>
     record Item(string Entity, long EntityId, object Result);
@@ -110,8 +110,15 @@ public static class SagaAnalysis
             var multi = games.Where(g => g.Versions.Count > 1).ToList(); // con una sola versión no hay nada que comparar
 
             bool Wants(string prompt) => job.Prompts is null || job.Prompts.Contains(prompt);
-            if (Wants(Routes)) await Step<Saga, RoutesReply>(run, Routes, "sonnet", 3, sagas.Where(s => s.Games.Count > 1), s => $"saga:{s.Id}", SagaInput, RouteItems, ct);
+            // Lo icónico va antes que las rutas: de eso depende a qué sagas se les piden historia y comunidad (#54).
             if (Wants(Iconic)) await Step<Saga, IconicReply>(run, Iconic, "sonnet", 20, sagas, s => $"saga:{s.Id}", SagaInput, IconicItems, ct);
+            if (Wants(Routes))
+            {
+                // La de lanzamiento sale del año, sin Claude, para todas; historia y comunidad, con Sonnet, solo para las icónicas
+                // (#54, decisión 279).
+                ReleaseRoutes(run.Db, sagas);
+                await Step<Saga, RoutesReply>(run, Routes, "sonnet", 3, sagas.Where(s => s.Games.Count > 1 && s.Iconic), s => $"saga:{s.Id}", SagaInput, RouteItems, ct);
+            }
             if (Wants(BestVersion)) await Step<Game, BestReply>(run, BestVersion, "sonnet", 30, multi, g => $"game:{g.Id}", VersionInput, BestItems, ct);
             // La clase de cada versión la pone la carga de IGDB (remake 8, remaster 9, ports y ediciones con su original): en la pasada
             // normal Claude ya no la revisa (#50, decisión 279). Solo si se pide a propósito.
@@ -186,6 +193,44 @@ public static class SagaAnalysis
         return saved;
     }
 
+    /// <summary>Con esto se reconoce la ruta de lanzamiento que puso el script: la de Claude o la editada a mano no se tocan.</summary>
+    public const string ScriptRationale = "Orden de lanzamiento, por año.";
+
+    /// <summary>
+    /// La ruta de lanzamiento de cada saga con más de un juego, por año (#54). Respeta lo ya analizado: no toca una ruta que
+    /// propuso Claude o que editaste, ni una saga con rutas esperando en Revisar. La del script se rehace si cambian sus juegos.
+    /// </summary>
+    static void ReleaseRoutes(Database db, List<Saga> sagas)
+    {
+        using var c = db.Open();
+        using var t = c.BeginTransaction();
+        foreach (var saga in sagas.Where(s => s.Games.Count > 1))
+        {
+            if (Catalog.Editing.IsMarked(c, t, "saga", saga.Id, Catalog.Editing.RouteMark("release"))) continue;
+            var existing = c.QueryFirstOrDefault<(long Id, string? Rationale)?>(
+                "SELECT id, rationale FROM route WHERE saga_id = @Id AND kind = 'release'", new { saga.Id }, t);
+            if (existing is { } e && e.Rationale != ScriptRationale) continue; // de Claude o tuya
+            if (c.ExecuteScalar<long>("""
+                SELECT count(*) FROM review_item WHERE kind = 'pending_approval' AND status = 'open' AND entity = 'saga' AND entity_id = @Id
+                  AND json_extract(data, '$.prompt') = @Routes
+                """, new { saga.Id, Routes }, t) > 0) continue; // lo que propuso Claude espera en Revisar
+            var games = saga.Games.Select(g => g.Id).ToList(); // ya vienen por año (los sin año al final)
+            if (existing is { } old)
+            {
+                if (c.Query<long>("SELECT game_id FROM route_step WHERE route_id = @Id ORDER BY position", new { old.Id }, t).SequenceEqual(games)) continue;
+                c.Execute("DELETE FROM route_step WHERE route_id = @Id; DELETE FROM route WHERE id = @Id", new { old.Id }, t);
+            }
+            var routeId = c.ExecuteScalar<long>("""
+                INSERT INTO route (saga_id, kind, rationale, sources, approved) VALUES (@Id, 'release', @ScriptRationale, '[]', 1) RETURNING id
+                """, new { saga.Id, ScriptRationale }, t);
+            var position = 0;
+            foreach (var game in saga.Games)
+                c.Execute("INSERT INTO route_step (route_id, position, game_id, reason) VALUES (@routeId, @position, @Id, @year)",
+                    new { routeId, position = ++position, game.Id, year = game.Year?.ToString() }, t);
+        }
+        t.Commit();
+    }
+
     static object SagaInput(Saga s) => new
     {
         id = s.Id,
@@ -203,11 +248,13 @@ public static class SagaAnalysis
     static IEnumerable<Item?> RouteItems(List<Saga> batch, RoutesReply reply) => reply.Sagas.Select(r =>
     {
         var saga = batch.FirstOrDefault(s => s.Id == r.SagaId);
-        var ok = saga is not null && r.Routes.Count > 0 && r.Routes.All(route =>
-            route.Kind is "release" or "story" or "community" && route.Steps.Count > 0 && route.Steps.All(step =>
+        // La de lanzamiento la pone el script (#54): si Claude la manda igual, se ignora.
+        var routes = r.Routes.Where(route => route.Kind != "release").ToList();
+        var ok = saga is not null && routes.Count > 0 && routes.All(route =>
+            route.Kind is "story" or "community" && route.Steps.Count > 0 && route.Steps.All(step =>
                 saga.Games.FirstOrDefault(g => g.Id == step.GameId) is { } game
                 && (step.VersionId is null || game.Versions.Any(v => v.Id == step.VersionId))));
-        return ok ? new Item("saga", r.SagaId, r.Routes) : null;
+        return ok ? new Item("saga", r.SagaId, routes) : null;
     });
 
     static IEnumerable<Item?> IconicItems(List<Saga> batch, IconicReply reply) => reply.Sagas.Select(r =>
@@ -252,7 +299,7 @@ public static class SagaAnalysis
             SELECT id, saga_id, COALESCE(original_name, name_es), year FROM game WHERE saga_id IN @ids ORDER BY year IS NULL, year, id
             """, new { ids }).Select(g => new Game(g.Id, g.SagaId, g.Name, g.Year, versions[g.Id].ToList(), summaries.GetValueOrDefault(g.Id)))
             .ToLookup(g => g.SagaId);
-        var names = c.Query<(long Id, string Name)>("SELECT id, name FROM saga WHERE id IN @ids", new { ids }).ToDictionary(s => s.Id, s => s.Name);
-        return ids.Where(names.ContainsKey).Select(id => new Saga(id, names[id], games[id].ToList())).Where(s => s.Games.Count > 0).ToList();
+        var names = c.Query<(long Id, string Name, bool Iconic)>("SELECT id, name, iconic FROM saga WHERE id IN @ids", new { ids }).ToDictionary(s => s.Id);
+        return ids.Where(names.ContainsKey).Select(id => new Saga(id, names[id].Name, games[id].ToList(), names[id].Iconic)).Where(s => s.Games.Count > 0).ToList();
     }
 }
