@@ -311,7 +311,11 @@ public static class ClaudeReview
     public static List<VersionCompare> Compare(Database db, long gameId)
     {
         using var c = db.Open();
-        var best = c.ExecuteScalar<string?>("SELECT value FROM field_value WHERE entity = 'game' AND entity_id = @gameId AND field = 'best_version' AND source = 'claude'", new { gameId });
+        // Lo de Claude manda; si no la vio, la de las reglas (#51).
+        var best = c.ExecuteScalar<string?>("""
+            SELECT value FROM field_value WHERE entity = 'game' AND entity_id = @gameId AND field = 'best_version' AND source IN ('claude', 'script')
+            ORDER BY source = 'claude' DESC LIMIT 1
+            """, new { gameId });
         var criteria = c.Query<(long VersionId, string Criterion, string? Value, string? Text)>(
             "SELECT k.version_id, k.criterion, k.value, k.text FROM version_criterion k JOIN version v ON v.id = k.version_id WHERE v.game_id = @gameId", new { gameId })
             .ToLookup(k => k.VersionId);

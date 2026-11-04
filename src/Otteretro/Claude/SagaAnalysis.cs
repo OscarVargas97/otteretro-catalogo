@@ -120,7 +120,8 @@ public static class SagaAnalysis
                 ReleaseRoutes(run.Db, sagas);
                 await Step<Saga, RoutesReply>(run, Routes, "sonnet", 3, sagas.Where(s => s.Games.Count > 1 && s.Iconic), s => $"saga:{s.Id}", SagaInput, RouteItems, ct);
             }
-            if (Wants(BestVersion)) await Step<Game, BestReply>(run, BestVersion, "sonnet", 30, multi, g => $"game:{g.Id}", VersionInput, BestItems, ct);
+            // Lo claro lo resuelven reglas, sin Claude; solo lo disputado va a Sonnet (#51).
+            if (Wants(BestVersion)) await Step<Game, BestReply>(run, BestVersion, "sonnet", 30, BestByRules(run.Db, multi), g => $"game:{g.Id}", VersionInput, BestItems, ct);
             // La clase de cada versión la pone la carga de IGDB (remake 8, remaster 9, ports y ediciones con su original): en la pasada
             // normal Claude ya no la revisa (#50, decisión 279). Solo si se pide a propósito.
             if (job.Prompts?.Contains(Classify) == true)
@@ -236,6 +237,56 @@ public static class SagaAnalysis
         }
         t.Commit();
         return unclear;
+    }
+
+    /// <summary>
+    /// La mejor versión de lo claro, sin Claude (#51), y devuelve lo disputado para Sonnet. Reglas, en orden:
+    /// <list type="bullet">
+    /// <item>Con remake, se discute (original o remake): a Claude.</item>
+    /// <item>Con remasters, el más reciente: el mismo juego con mejoras técnicas.</item>
+    /// <item>Todas originales y del mismo año (salió a la vez en varias consolas): la de PC o, sin PC, la de la consola más nueva.</item>
+    /// <item>Originales de años distintos (un port posterior puede sumar o quitar): a Claude.</item>
+    /// </list>
+    /// Medido en el catálogo real (2026-11-04): ~19.000 de ~28.500 juegos con más de una versión salen por reglas. Respeta lo ya
+    /// analizado: lo que Claude ya vio (huella) o espera en Revisar sigue por Claude. Queda en `field_value` con fuente `script`.
+    /// </summary>
+    static List<Game> BestByRules(Database db, List<Game> games)
+    {
+        var disputed = new List<Game>();
+        using var c = db.Open();
+        using var t = c.BeginTransaction();
+        // Lo nueva que es una consola: el año de su primer juego en el catálogo.
+        var launch = c.Query<(string Platform, long Year)>("SELECT platform, min(year) FROM version WHERE year IS NOT NULL GROUP BY platform", transaction: t)
+            .ToDictionary(p => p.Platform, p => p.Year);
+        foreach (var game in games)
+        {
+            var claude = c.ExecuteScalar<long>("SELECT count(*) FROM claude_fingerprint WHERE prompt = @BestVersion AND key = @key", new { BestVersion, key = $"game:{game.Id}" }, t) > 0
+                || c.ExecuteScalar<long>("""
+                    SELECT count(*) FROM review_item WHERE kind = 'pending_approval' AND status = 'open' AND entity = 'game' AND entity_id = @Id
+                      AND json_extract(data, '$.prompt') = @BestVersion
+                    """, new { game.Id, BestVersion }, t) > 0;
+            if (claude || BestByRule(game, launch) is not { } best)
+            {
+                disputed.Add(game);
+                continue;
+            }
+            c.Execute("""
+                INSERT INTO field_value (entity, entity_id, field, value, source) VALUES ('game', @Id, 'best_version', @best, 'script')
+                ON CONFLICT (entity, entity_id, field, source) DO UPDATE SET value = excluded.value
+                """, new { game.Id, best = best.ToString() }, t);
+        }
+        t.Commit();
+        return disputed;
+    }
+
+    static long? BestByRule(Game game, Dictionary<string, long> launch)
+    {
+        var v = game.Versions;
+        if (v.Any(x => x.Kind == "remake")) return null;
+        if (v.Where(x => x.Kind == "remaster").OrderByDescending(x => x.Year ?? 0).ThenByDescending(x => x.Id).FirstOrDefault() is { } remaster) return remaster.Id;
+        var years = v.Select(x => x.Year).OfType<long>().ToList();
+        if (years.Count != v.Count || years.Max() - years.Min() > 1) return null;
+        return (v.FirstOrDefault(x => x.Platform == "pc") ?? v.OrderByDescending(x => launch.GetValueOrDefault(x.Platform)).ThenBy(x => x.Id).First()).Id;
     }
 
     /// <summary>Con esto se reconoce la ruta de lanzamiento que puso el script: la de Claude o la editada a mano no se tocan.</summary>
