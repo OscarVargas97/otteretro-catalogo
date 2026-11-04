@@ -161,4 +161,30 @@ public class SagaAnalysisTests : IAsyncDisposable
         Assert.Equal([(2L, true), (3L, false)], c2.Query<(long, bool)>("SELECT id, iconic FROM saga WHERE id IN (2, 3) ORDER BY id"));
         Assert.Equal([20L, 21L], c2.Query<long>("SELECT id FROM game WHERE saga_id = 2 AND iconic ORDER BY id")); // los más votados, no Advance
     }
+
+    /// <summary>#51: lo claro sale por reglas y sin Claude; lo disputado (remake, ports de otro año) sigue por Claude.</summary>
+    [Fact]
+    public async Task ClearBestVersionsFollowRules()
+    {
+        Fake();
+        using (var c = f.Db.Open())
+            c.Execute("""
+                INSERT INTO saga (id, name) VALUES (5, 'Varias');
+                INSERT INTO game (id, saga_id, name_es, year) VALUES (50, 5, 'Multi', 2015), (51, 5, 'Consolas', 2015), (52, 5, 'Remaster', 2001), (53, 5, 'Remake', 1997);
+                INSERT INTO version (id, game_id, platform, kind, year) VALUES
+                  (500, 50, 'ps4', 'original', 2015), (501, 50, 'pc', 'original', 2015),
+                  (510, 51, 'ps3', 'original', 2015), (511, 51, 'ps4', 'original', 2015),
+                  (520, 52, 'ps2', 'original', 2001), (521, 52, 'ps3', 'remaster', 2011), (522, 52, 'ps4', 'remaster', 2017),
+                  (530, 53, 'ps1', 'original', 1997), (531, 53, 'ps4', 'remake', 2020);
+                """);
+
+        Assert.Equal("done", (await f.Run(SagaAnalysis.EnqueueStep(f.Db, SagaAnalysis.BestVersion))).Status);
+
+        Assert.Single(calls); // Remake y Ocarina (n64 1998 y 3ds 2011) van a Claude en una llamada
+        using var c2 = f.Db.Open();
+        Assert.Equal([(50L, "501"), (51L, "511"), (52L, "522")], // PC; la consola más nueva (en el catálogo, PS3 aparece en 2011 y PS4 en 2015); el remaster más reciente
+            c2.Query<(long, string)>("SELECT entity_id, value FROM field_value WHERE field = 'best_version' AND source = 'script' ORDER BY entity_id"));
+        Assert.True(ClaudeReview.Compare(f.Db, 50).Single(v => v.VersionId == 501).Best);
+        Assert.Equal([10L], c2.Query<long>("SELECT entity_id FROM review_item WHERE json_extract(data, '$.prompt') = 'mejor-version'")); // lo inventado se descarta
+    }
 }
