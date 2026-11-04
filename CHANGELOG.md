@@ -5,7 +5,7 @@
 `feat/46-codigos-de-juego`, `feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam`, `feat/30-cambios-publicados`, `feat/40-completar-imagenes`, `feat/41-publicar-todo` y `feat/44-publicar-si-cambia` · #6, #9, #12, #17, #22, #30, #40, #41 y #44: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
 
 ### Nuevo
-- **Códigos de cada juego** (#46): en Ajustes › Consolas, «Completar códigos» arma sin IA el TitleID o el serial de cada versión con tablas públicas: titledb (Switch), Switchbrew (Switch 2) y el serial de los DAT de libretro (PS1, PS2, PSP, PS3, Vita, 3DS, DS, GBA, N64, GameCube, Wii). Se publican con cada juego (`codes`) y llegan en la base: Otteretro reconoce por ese ID antes que por el nombre.
+- **Códigos de cada juego** (#46): la puesta al día del catálogo con IGDB completa sola, sin IA, el TitleID o el serial de lo nuevo; también se puede lanzar con «Completar códigos» en Ajustes › Consolas o con `catalogo codigos`. el TitleID o el serial de cada versión con tablas públicas: titledb (Switch), Switchbrew (Switch 2) y el serial de los DAT de libretro (PS1, PS2, PSP, PS3, Vita, 3DS, DS, GBA, N64, GameCube, Wii). Se publican con cada juego (`codes`) y llegan en la base: Otteretro reconoce por ese ID antes que por el nombre.
 - **Referencias de imágenes** (#6): cada juego publica de dónde se baja su portada, su fondo y su logo (SteamGridDB, o la carátula de IGDB si no hay portada), sin copias ni claves. Otteretro y la administración bajan cada imagen la primera vez que se ve. `catalogo validar` rechaza una dirección que no sea de SteamGridDB o IGDB y cuenta cuántos juegos tienen cada tipo.
 - **Instalador y actualizaciones** (#12): la administración se instala con `OtteretroCatalogo-win-Setup.exe` y se actualiza sola, con los mismos canales que Otteretro (Estable, Pruebas, Local y Otro origen) en Ajustes › General. Como en Otteretro, «Local» no pide carpeta: busca los paquetes en `<disco>\Otteretro\Paquetes\OtteretroCatalogo`, donde los deja `scripts/empaquetar.ps1`. Cada PR del programa publica una versión de Pruebas y cada fusión en `main`, una estable.
 - **Editar sagas y rutas** (#17): en una saga, «Editar» permite cambiar su nombre y si es icónica, crear, ordenar o borrar sus rutas, y agregar, mover, fusionar o eliminar juegos; en Sagas, «Nueva saga». Lo fusionado o eliminado queda en `reemplazados.json`, y ni IGDB ni Claude pisan lo editado a mano.
@@ -24,6 +24,7 @@
 - «Buscar imágenes en SteamGridDB e IGDB» guarda las direcciones en vez de bajar las imágenes, y vuelve a consultarlas para traer las que cambiaron.
 
 ### Arreglos
+- **Importar un catálogo trae todo** (#46): `catalogo importar` copia también las referencias de imágenes, los reemplazos y los códigos; antes, volver a escribir lo importado perdía las imágenes.
 - **Sin aviso de Steam** (#33): Inicio ya no pide la clave de Steam Web API, que el catálogo no usa: Steam es de Otteretro.
 
 ## feat/2-generador · fusionado

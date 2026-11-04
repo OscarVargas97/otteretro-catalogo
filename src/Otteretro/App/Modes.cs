@@ -57,6 +57,7 @@ public static class CliMode
           catalogo publicar <carpeta>  Escribe el catálogo como un JSON por saga.
           catalogo validar <carpeta>   Revisa lo publicado (corre en cada PR).
           catalogo compilar <carpeta> <archivo>  Genera la base que baja la app y su manifiesto.
+          catalogo codigos             Completa el TitleID o el serial de cada versión con tablas públicas (#46).
           catalogo cambios <carpeta> <versión> <archivo> [<anterior> <versión anterior> [<historial>]]
                                  Escribe cambios.json: el historial de la versión anterior más lo que cambió (#31).
           catalogo revisar-pr <main> <carpeta> <resumen.md>  Falla si el PR pierde o reutiliza ids, y escribe el resumen (#32).
@@ -114,6 +115,15 @@ public static class CliMode
             case ["catalogo", "importar", var from]:
                 return WithData(output, db => output.WriteLine(Catalog.InitialCatalog.Import(db, Path.GetFullPath(from))
                     ? "Catálogo importado." : "Este catálogo ya tiene juegos: no se tocó."));
+            // #46: el mapeo de códigos sin abrir la app; después, `catalogo publicar` los escribe en los archivos.
+            case ["catalogo", "codigos"]:
+                return WithData(output, db =>
+                {
+                    var (versions, codes) = Catalog.GameCodes.Map(db, (_, _) => { },
+                        (message, _) => output.WriteLine($"{message.Code} {string.Join(", ", (message.Params ?? []).Select(p => $"{p.Key}={p.Value}"))}"),
+                        CancellationToken.None).GetAwaiter().GetResult();
+                    output.WriteLine($"{versions} versiones con {codes} códigos nuevos.");
+                });
             case ["catalogo", "publicar", var folder]:
                 return WithData(output, db =>
                 {

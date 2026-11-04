@@ -41,14 +41,22 @@ public static partial class GameCodes
     /// <summary>Para las pruebas: responde en lugar de GitHub y Switchbrew.</summary>
     public static HttpMessageHandler? Handler { get; set; }
 
+    /// <summary>Las pruebas lo apagan: sin <see cref="Handler"/> no se baja nada (titledb pesa 90 MB).</summary>
+    public static bool Download { get; set; } = true;
+
     public static long Enqueue(Database db)
     {
         using var c = db.Open();
         return c.ExecuteScalar<long?>("SELECT id FROM task WHERE kind = @Kind AND status IN ('queued', 'running') LIMIT 1", new { Kind }) ?? TaskQueue.Enqueue(db, Kind);
     }
 
-    public static async Task Fill(TaskRun run, CancellationToken ct)
+    public static Task Fill(TaskRun run, CancellationToken ct) =>
+        Map(run.Db, (progress, detail) => run.Report(progress, detail), (message, level) => run.Log(message, level), ct);
+
+    /// <summary>El mapeo, para la tarea y para `catalogo codigos` (#46): cada tabla, su consola y cuántas versiones quedaron con código.</summary>
+    public static async Task<(int Versions, int Codes)> Map(Database db, Action<int, ApiError> report, Action<ApiError, string> log, CancellationToken ct)
     {
+        if (!Download && Handler is null) return (0, 0);
         using var http = Handler is null ? new HttpClient() : new HttpClient(Handler);
         http.Timeout = TimeSpan.FromMinutes(10);
         http.DefaultRequestHeaders.UserAgent.ParseAdd("OtteretroCatalogo");
@@ -66,7 +74,7 @@ public static partial class GameCodes
         for (var i = 0; i < sources.Count; i++)
         {
             var (console, url, read) = sources[i];
-            run.Report(i * 100 / sources.Count, ApiError.Of("codes.reading", ("console", console)));
+            report(i * 100 / sources.Count, ApiError.Of("codes.reading", ("console", console)));
             List<(string Name, string Code)> rows;
             try
             {
@@ -75,15 +83,16 @@ public static partial class GameCodes
             }
             catch (Exception e) when (e is HttpRequestException or JsonException or IOException)
             {
-                run.Log(ApiError.Of("codes.log.unreachable", ("console", console)), "warn");
+                log(ApiError.Of("codes.log.unreachable", ("console", console)), "warn");
                 continue;
             }
-            var (matched, codes) = Save(run.Db, console, rows);
+            var (matched, codes) = Save(db, console, rows);
             found += matched;
             total += codes;
-            run.Log(ApiError.Of("codes.log.console", ("console", console), ("versions", matched.ToString()), ("codes", codes.ToString())));
+            log(ApiError.Of("codes.log.console", ("console", console), ("versions", matched.ToString()), ("codes", codes.ToString())), "info");
         }
-        run.Log(ApiError.Of("codes.log.done", ("versions", found.ToString()), ("codes", total.ToString())));
+        log(ApiError.Of("codes.log.done", ("versions", found.ToString()), ("codes", total.ToString())), "info");
+        return (found, total);
     }
 
     /// <summary>Cruza los nombres con las versiones de la consola (solo si el nombre es de un juego) y guarda sus códigos.</summary>
