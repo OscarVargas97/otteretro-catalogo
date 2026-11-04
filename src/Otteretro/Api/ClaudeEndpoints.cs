@@ -79,8 +79,16 @@ public static class ClaudeEndpoints
         api.MapGet("/claude", Results<Ok<ClaudeStatus>, Conflict<ApiError>> (AppSession s) =>
             Db(s) is { } db ? TypedResults.Ok(ClaudeBudget.Status(db)) : NoData());
 
-        api.MapGet("/claude/usage", Results<Ok<UsagePage>, Conflict<ApiError>> (AppSession s, int page = 1) =>
-            Db(s) is { } db ? TypedResults.Ok(ClaudeBudget.Usage(db, page)) : NoData());
+        api.MapGet("/claude/usage", Results<Ok<UsagePage>, Conflict<ApiError>> (AppSession s, int page = 1, string? prompt = null) =>
+            Db(s) is { } db ? TypedResults.Ok(ClaudeBudget.Usage(db, page, prompt)) : NoData());
+
+        // Ajustes › Tareas (#58): cada tarea del catálogo, su interruptor del horario y «Ejecutar».
+        api.MapGet("/catalog-tasks", Results<Ok<List<CatalogTaskInfo>>, Conflict<ApiError>> (AppSession s) =>
+            Db(s) is { } db ? TypedResults.Ok(CatalogTasks.List(db)) : NoData());
+        api.MapPut("/catalog-tasks/{id}", Results<Ok<List<CatalogTaskInfo>>, NotFound, Conflict<ApiError>> (string id, CatalogTaskRequest request, AppSession s) =>
+            Db(s) is not { } db ? NoData() : CatalogTasks.Save(db, id, request) ? TypedResults.Ok(CatalogTasks.List(db)) : TypedResults.NotFound());
+        api.MapPost("/catalog-tasks/{id}/run", Results<Ok<List<CatalogTaskInfo>>, NotFound, Conflict<ApiError>> (string id, AppSession s, string? console) =>
+            Db(s) is not { } db ? NoData() : CatalogTasks.Run(db, id, console) ? TypedResults.Ok(CatalogTasks.List(db)) : TypedResults.NotFound());
 
         api.MapPut("/claude", Results<Ok<ClaudeStatus>, BadRequest<ApiError>, Conflict<ApiError>> (ClaudeSettingsRequest request, AppSession s) =>
         {

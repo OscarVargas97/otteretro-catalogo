@@ -106,7 +106,7 @@
     "credentials": "Cuentas y claves",
     "sections": "Secciones de Ajustes",
     "claude": {
-      "title": "Claude",
+      "title": "Tareas",
       "schedule": "Horario",
       "runsFrom": "Corre de",
       "runsTo": "a",
@@ -152,7 +152,55 @@
       "automationTimes": "{count, plural, one {# vez} other {# veces}}",
       "createIssue": "Crear issue",
       "issueCreated": "Issue creado",
-      "pageTotal": "En esta página: {calls, plural, one {# llamada} other {# llamadas}} · {input} de entrada · {output} de salida · {cost}"
+      "pageTotal": "En esta página: {calls, plural, one {# llamada} other {# llamadas}} · {input} de entrada · {output} de salida · {cost}",
+      "groupClaude": "Con Claude",
+      "groupScript": "Sin Claude",
+      "auto": "Corre sola en el horario",
+      "every": "cada",
+      "everyDays": "Cada cuántos días",
+      "days": "días",
+      "last": "Última: {status}, {ago}",
+      "never": "Nunca corrió",
+      "month": "este mes: {calls, plural, one {# llamada} other {# llamadas}} · {cost}",
+      "covers": "{have} de {total} con portada",
+      "noKey": "Falta la clave de SteamGridDB",
+      "run": "Ejecutar",
+      "usageFilter": "Filtrar por tarea",
+      "usageAll": "Todas las tareas",
+      "task": {
+        "igdb": {
+          "name": "Poner al día con IGDB",
+          "text": "Trae de IGDB los juegos nuevos y lo que cambió de las consolas habilitadas. Al terminar encola códigos e imágenes de lo nuevo."
+        },
+        "codes": {
+          "name": "Códigos de juego",
+          "text": "Completa el TitleID o el serial de cada versión con tablas públicas (titledb, Switchbrew y los DAT de libretro), para que Otteretro reconozca por ID."
+        },
+        "cleanup": {
+          "name": "Depurar sagas",
+          "text": "Revisa que cada juego esté en su saga: mueve, une y renombra. Lo que cambia queda en Revisar › Aprendizajes."
+        },
+        "routes": {
+          "name": "Rutas",
+          "text": "Prepara las rutas de cada saga (lanzamiento, historia y comunidad), con fuentes. Quedan en Revisar para aprobar."
+        },
+        "iconic": {
+          "name": "Icónico",
+          "text": "Decide qué sagas y juegos son icónicos; de ahí sale la imagen de la saga. Con una consola elegida, reevalúa solo esas sagas."
+        },
+        "best": {
+          "name": "Mejor versión",
+          "text": "Compara las versiones de cada juego (contenido, jugabilidad, técnica y original) y propone la mejor. Queda en Revisar."
+        },
+        "translate": {
+          "name": "Traducir descripciones",
+          "text": "Traduce al español la descripción de cada juego. Queda en Revisar."
+        },
+        "images": {
+          "name": "Imágenes que faltan",
+          "text": "Busca en SteamGridDB la portada, el fondo y el logo de los juegos que no los tienen."
+        }
+      }
     },
     "consoles": {
       "title": "Consolas",

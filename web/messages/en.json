@@ -106,7 +106,7 @@
     "credentials": "Accounts and keys",
     "sections": "Settings sections",
     "claude": {
-      "title": "Claude",
+      "title": "Tasks",
       "schedule": "Schedule",
       "runsFrom": "Runs from",
       "runsTo": "to",
@@ -152,7 +152,55 @@
       "automationTimes": "{count, plural, one {# time} other {# times}}",
       "createIssue": "Create issue",
       "issueCreated": "Issue created",
-      "pageTotal": "On this page: {calls, plural, one {# call} other {# calls}} · {input} in · {output} out · {cost}"
+      "pageTotal": "On this page: {calls, plural, one {# call} other {# calls}} · {input} in · {output} out · {cost}",
+      "groupClaude": "With Claude",
+      "groupScript": "Without Claude",
+      "auto": "Runs on its own in the schedule",
+      "every": "every",
+      "everyDays": "How many days",
+      "days": "days",
+      "last": "Last: {status}, {ago}",
+      "never": "Never ran",
+      "month": "this month: {calls, plural, one {# call} other {# calls}} · {cost}",
+      "covers": "{have} of {total} with a cover",
+      "noKey": "SteamGridDB key missing",
+      "run": "Run",
+      "usageFilter": "Filter by task",
+      "usageAll": "All tasks",
+      "task": {
+        "igdb": {
+          "name": "Update from IGDB",
+          "text": "Brings new games and changes from IGDB for the enabled consoles. When done, it queues codes and images for what is new."
+        },
+        "codes": {
+          "name": "Game codes",
+          "text": "Fills the TitleID or serial of each version from public tables (titledb, Switchbrew and libretro DATs), so Otteretro recognizes by ID."
+        },
+        "cleanup": {
+          "name": "Clean up sagas",
+          "text": "Checks each game is in its saga: moves, merges and renames. Changes go to Review › Learnings."
+        },
+        "routes": {
+          "name": "Routes",
+          "text": "Prepares each saga's routes (release, story and community), with sources. They wait in Review for approval."
+        },
+        "iconic": {
+          "name": "Iconic",
+          "text": "Decides which sagas and games are iconic; the saga image comes from them. With a console picked, it re-evaluates only those sagas."
+        },
+        "best": {
+          "name": "Best version",
+          "text": "Compares each game's versions (content, gameplay, technical and original) and proposes the best one. It waits in Review."
+        },
+        "translate": {
+          "name": "Translate descriptions",
+          "text": "Translates each game's description into Spanish. It waits in Review."
+        },
+        "images": {
+          "name": "Missing images",
+          "text": "Looks up the cover, background and logo on SteamGridDB for games that lack them."
+        }
+      }
     },
     "consoles": {
       "title": "Consoles",

@@ -6,25 +6,23 @@ import { useState } from "react";
 import { request } from "@/lib/client";
 import { useDescribeError } from "@/lib/i18n";
 import { optimistic } from "@/lib/optimistic";
-import type { AutomationSuggestion, ClaudeSettingsRequest, ClaudeStatus, ConsolesPage, UsagePage } from "@/lib/types";
+import Link from "next/link";
+import type { AutomationSuggestion, CatalogTaskInfo, ClaudeSettingsRequest, ClaudeStatus, ConsolesPage, CoversInfo, UsagePage } from "@/lib/types";
+
+/** Los prompts de cada tarea de Claude, para filtrar el registro de uso (#58). */
+const PROMPTS: Record<string, string> = { cleanup: "depurar-sagas", routes: "ruta-saga", iconic: "iconico", best: "mejor-version", translate: "traducir-descripcion" };
 
 /**
- * Ajustes › Claude (§10, #110) en tres bloques: Horario (en una frase, se guarda solo), Ahora (estado, «Ejecutar ahora» y
- * reevaluar icónicas) y Uso (registro y sugerencias de automatizar).
+ * Ajustes › Tareas (#58, decisiones 283 a 285; antes «Claude», #110): el horario común, cada tarea del catálogo en dos grupos
+ * (con Claude y sin Claude) con qué hace, su interruptor del horario y «Ejecutar», y abajo el registro de uso plegado.
  */
-export function ClaudeSettings() {
+export function TaskSettings() {
   const t = useTranslations("settings.claude");
   const describe = useDescribeError();
   const format = useFormatter();
   const cache = useQueryClient();
   const status = useQuery({ queryKey: ["claude"], queryFn: () => request<ClaudeStatus>("/api/claude"), refetchInterval: (q) => (q.state.data?.task ? 5_000 : 30_000) });
   const [share, setShare] = useState<number | null>(null);
-  const [platform, setPlatform] = useState("");
-  const consoles = useQuery({ queryKey: ["consoles", "settings"], queryFn: () => request<ConsolesPage>("/api/consoles/settings") });
-  const iconic = useMutation({
-    mutationFn: () => request<number>(`/api/claude/iconic${platform ? `?console=${encodeURIComponent(platform)}` : ""}`, { method: "POST" }),
-    onSuccess: () => cache.invalidateQueries({ queryKey: ["tasks"] }),
-  });
   const done = (data: ClaudeStatus) => cache.setQueryData(["claude"], data);
   // Cada cambio se ve al tocar y se guarda solo (#107, #110).
   const save = useMutation({
@@ -32,10 +30,6 @@ export function ClaudeSettings() {
     ...optimistic(cache, ["claude"], (d: ClaudeStatus, body: Partial<ClaudeSettingsRequest>) =>
       ({ ...d, ...Object.fromEntries(Object.entries(body).filter(([, v]) => v != null)) })),
     onSuccess: done,
-  });
-  const runNow = useMutation({
-    mutationFn: () => request<ClaudeStatus>("/api/claude/run-now", { method: "POST" }),
-    onSuccess: (data) => { done(data); cache.invalidateQueries({ queryKey: ["tasks"] }); },
   });
 
   if (!status.data) return status.isError ? <p className="error" role="alert">{describe(status.error)}</p> : null;
@@ -83,25 +77,17 @@ export function ClaudeSettings() {
             : task.resumeAt ? t("taskWaiting", { id: Number(task.id), at: at(task.resumeAt) })
               : t("taskQueued", { id: Number(task.id) })}</>}
         </p>
-        <div className="sentence">
-          <button className="ot-btn ot-btn-primary" type="button" disabled={runNow.isPending || task?.status === "running"} onClick={() => runNow.mutate()}>{t("runNow")}</button>
-          <span style={{ flex: 1 }} />
-          <select aria-label={t("iconicScope")} value={platform} onChange={(e) => setPlatform(e.target.value)}>
-            <option value="">{t("iconicAll")}</option>
-            {consoles.data?.consoles.filter((c) => Number(c.games) > 0).map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
-          </select>
-          <button className="ot-btn" type="button" disabled={iconic.isPending} onClick={() => iconic.mutate()}>{t("iconic")}</button>
-        </div>
-        {iconic.isSuccess && <span className="small muted">{t("iconicQueued")}</span>}
-        {iconic.isError && <span className="small muted">{t("iconicNone")}</span>}
-        {runNow.error && <p className="error small" role="alert">{describe(runNow.error)}</p>}
       </section>
 
-      <section className="panel">
-        <h2>{t("use")}</h2>
+      <TaskGroup claude />
+      <TaskGroup claude={false} />
+
+      {/* El registro completo, plegado y con filtro por tarea (decisión 285). */}
+      <details className="panel">
+        <summary><h2 style={{ display: "inline" }}>{t("use")}</h2></summary>
         <UsageLog stamp={status.dataUpdatedAt} />
         <AutomationSuggestions />
-      </section>
+      </details>
     </div>
   );
 }
@@ -111,13 +97,24 @@ function UsageLog({ stamp }: { stamp: number }) {
   const t = useTranslations("settings.claude");
   const format = useFormatter();
   const [page, setPage] = useState(1);
-  const usage = useQuery({ queryKey: ["claude", "usage", page, stamp], queryFn: () => request<UsagePage>(`/api/claude/usage?page=${page}`), placeholderData: (previous) => previous });
+  const [prompt, setPrompt] = useState("");
+  const usage = useQuery({
+    queryKey: ["claude", "usage", page, prompt, stamp],
+    queryFn: () => request<UsagePage>(`/api/claude/usage?page=${page}${prompt ? `&prompt=${prompt}` : ""}`), placeholderData: (previous) => previous,
+  });
   const u = usage.data;
   if (!u) return null;
+  const filter = (
+    <select aria-label={t("usageFilter")} value={prompt} onChange={(e) => { setPrompt(e.target.value); setPage(1); }}>
+      <option value="">{t("usageAll")}</option>
+      {Object.entries(PROMPTS).map(([id, p]) => <option key={id} value={p}>{t(`task.${id as "routes"}.name`)}</option>)}
+    </select>
+  );
   const at = Number(u.page), pages = Number(u.pages);
   const num = (n: number | string) => format.number(Number(n));
   return (
     <>
+      {filter}
       {u.rows.length > 0 && (
         // El total de la página, arriba del registro (#172).
         <p className="small usage-total" style={{ margin: 0 }}>
@@ -184,5 +181,108 @@ function AutomationSuggestions() {
       ))}
       {create.error && <p className="error small" role="alert">{describe(create.error)}</p>}
     </>
+  );
+}
+
+const IDS = { claude: ["cleanup", "routes", "iconic", "best", "translate"], script: ["igdb", "codes", "images"] } as const;
+
+/** Un grupo de tareas (decisión 283): con Claude o sin Claude, en el orden en que corren de noche. */
+function TaskGroup({ claude }: { claude: boolean }) {
+  const t = useTranslations("settings.claude");
+  const describe = useDescribeError();
+  const cache = useQueryClient();
+  const tasks = useQuery({
+    queryKey: ["catalog-tasks"], queryFn: () => request<CatalogTaskInfo[]>("/api/catalog-tasks"),
+    refetchInterval: (q) => (q.state.data?.some((x) => x.lastStatus === "queued" || x.lastStatus === "running") ? 5_000 : 30_000),
+  });
+  const done = (data: CatalogTaskInfo[]) => {
+    cache.setQueryData(["catalog-tasks"], data);
+    cache.invalidateQueries({ queryKey: ["tasks"] });
+    cache.invalidateQueries({ queryKey: ["claude"] });
+  };
+  type Change = { id: string; auto?: boolean; days?: number };
+  const save = useMutation({
+    mutationFn: ({ id, ...body }: Change) => request<CatalogTaskInfo[]>(`/api/catalog-tasks/${id}`, { method: "PUT", body: JSON.stringify(body) }),
+    ...optimistic(cache, ["catalog-tasks"], (d: CatalogTaskInfo[], v: Change) =>
+      d.map((x) => (x.id === v.id ? { ...x, ...(v.auto != null && { auto: v.auto }), ...(v.days != null && { days: v.days }) } : x))),
+    onSuccess: done,
+  });
+  const run = useMutation({
+    mutationFn: ({ id, console }: { id: string; console?: string }) =>
+      request<CatalogTaskInfo[]>(`/api/catalog-tasks/${id}/run${console ? `?console=${encodeURIComponent(console)}` : ""}`, { method: "POST" }),
+    onSuccess: done,
+  });
+  const ids: readonly string[] = claude ? IDS.claude : IDS.script;
+  const list = ids.map((id) => tasks.data?.find((x) => x.id === id)).filter((x): x is CatalogTaskInfo => !!x);
+  const error = save.error ?? run.error;
+  return (
+    <section className="panel">
+      <h2>{t(claude ? "groupClaude" : "groupScript")}</h2>
+      {tasks.isError && <p className="error small" role="alert">{describe(tasks.error)}</p>}
+      {list.map((task) => (
+        <TaskRow key={task.id} task={task} busy={run.isPending}
+          onAuto={(auto) => save.mutate({ id: task.id, auto })} onDays={(days) => save.mutate({ id: task.id, days })}
+          onRun={(console) => run.mutate({ id: task.id, console })} />
+      ))}
+      {error && <p className="error small" role="alert">{describe(error)}</p>}
+    </section>
+  );
+}
+
+/** Una tarea: qué hace, si corre sola en el horario, su última ejecución, lo del mes y «Ejecutar». */
+function TaskRow({ task, busy, onAuto, onDays, onRun }: {
+  task: CatalogTaskInfo; busy: boolean; onAuto: (auto: boolean) => void; onDays: (days: number) => void; onRun: (console?: string) => void;
+}) {
+  const t = useTranslations("settings.claude");
+  const ts = useTranslations("tasks.status");
+  const format = useFormatter();
+  const [days, setDays] = useState<number | null>(null);
+  const [platform, setPlatform] = useState("");
+  const id = task.id as "routes";
+  const consoles = useQuery({ queryKey: ["consoles", "settings"], queryFn: () => request<ConsolesPage>("/api/consoles/settings"), enabled: task.id === "iconic" });
+  const covers = useQuery({ queryKey: ["covers"], queryFn: () => request<CoversInfo>("/api/covers"), enabled: task.id === "images" });
+  const status = (task.lastStatus ?? null) as "queued" | null;
+  const pending = ["queued", "running", "paused"].includes(task.lastStatus ?? "");
+  const commitDays = () => { if (days != null && days >= 1 && days !== Number(task.days)) onDays(days); setDays(null); };
+  const money = (n: number | string) => format.number(Number(n), { style: "currency", currency: "USD", maximumFractionDigits: 2 });
+  return (
+    <div className="version-row" style={{ alignItems: "flex-start" }}>
+      <div style={{ flex: 1 }}>
+        <strong>{t(`task.${id}.name`)}</strong> {task.model && <span className="ot-badge">{task.model}</span>}
+        <p className="small muted" style={{ margin: "2px 0" }}>{t(`task.${id}.text`)}</p>
+        <div className="sentence small">
+          <label className="sentence">
+            <input type="checkbox" role="switch" checked={task.auto} onChange={(e) => onAuto(e.target.checked)} />
+            {t("auto")}
+          </label>
+          {task.days != null && (
+            <>
+              <span>· {t("every")}</span>
+              <input type="number" min={1} max={365} style={{ width: 64 }} aria-label={t("everyDays")} value={days ?? Number(task.days)}
+                onChange={(e) => setDays(Number(e.target.value))} onBlur={commitDays} onKeyDown={(e) => { if (e.key === "Enter") commitDays(); }} />
+              <span>{t("days")}</span>
+            </>
+          )}
+        </div>
+        <p className="small muted" style={{ margin: 0 }}>
+          {status && task.lastAt ? t("last", { status: ts(status, { progress: "…" }), ago: format.relativeTime(new Date(task.lastAt), new Date()) }) : t("never")}
+          {task.model && <> · {t("month", { calls: Number(task.monthCalls), cost: money(task.monthCost) })}</>}
+          {task.id === "images" && covers.data && <> · {t("covers", { have: Number(covers.data.have), total: Number(covers.data.total) })}</>}
+        </p>
+      </div>
+      <div className="sentence">
+        {task.id === "iconic" && (
+          // «Reevaluar sagas icónicas» (F2.15): de una consola, olvida lo dicho y lo vuelve a pedir.
+          <select aria-label={t("iconicScope")} value={platform} onChange={(e) => setPlatform(e.target.value)}>
+            <option value="">{t("iconicAll")}</option>
+            {consoles.data?.consoles.filter((c) => Number(c.games) > 0).map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+          </select>
+        )}
+        {task.id === "images" && covers.data && !covers.data.hasKey
+          ? <Link className="ot-btn" href="/settings/?s=credentials">{t("noKey")}</Link>
+          : <button className="ot-btn ot-btn-primary" type="button" disabled={busy || pending} onClick={() => onRun(platform || undefined)}>
+              {pending && status ? ts(status, { progress: "…" }) : t("run")}</button>}
+      </div>
+    </div>
   );
 }

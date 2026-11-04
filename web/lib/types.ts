@@ -45,6 +45,7 @@ export type RouteInfo = Schemas["RouteInfo"];
 export type RouteStepInfo = Schemas["RouteStepInfo"];
 export type VersionCompare = Schemas["VersionCompare"];
 export type ClaudeStatus = Schemas["ClaudeStatus"];
+export type CatalogTaskInfo = Schemas["CatalogTaskInfo"];
 export type UsagePage = Schemas["UsagePage"];
 export type ClaudeSettingsRequest = Schemas["ClaudeSettingsRequest"];
 export type ConsolesPage = Schemas["ConsolesPage"];

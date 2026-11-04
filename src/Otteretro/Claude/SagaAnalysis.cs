@@ -79,6 +79,21 @@ public static class SagaAnalysis
         return TaskQueue.Enqueue(db, Kind, JsonSerializer.Serialize(new Job(ids, ids.Count, [Iconic]), JsonSerializerOptions.Web));
     }
 
+    /// <summary>Un solo paso sobre todo el catálogo (#58): rutas, icónico, mejor versión o traducir, como tarea propia.</summary>
+    public static long EnqueueStep(Database db, string prompt)
+    {
+        var ids = Start(db, null).Pending;
+        return TaskQueue.Enqueue(db, Kind, JsonSerializer.Serialize(new Job(ids, ids.Count, [prompt]), JsonSerializerOptions.Web));
+    }
+
+    /// <summary>Si una tarea `claude.sagas` es solo ese paso, según su punto de control.</summary>
+    public static bool IsStep(string? data, string prompt)
+    {
+        if (data is null) return false;
+        try { return JsonSerializer.Deserialize<Job>(data, JsonSerializerOptions.Web)?.Prompts is [var only] && only == prompt; }
+        catch (JsonException) { return false; }
+    }
+
     public static Task Run(TaskRun run, CancellationToken ct) =>
         Process(run, run.Data, null, (progress, detail, data) => run.Report(progress, detail, data), ct);
 

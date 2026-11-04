@@ -132,17 +132,19 @@ public static partial class ClaudeBudget
     public const int UsagePageSize = 10;
 
     /// <summary>La página <paramref name="page"/> (desde 1) del registro de uso; una fuera de rango da la última.</summary>
-    public static UsagePage Usage(Database db, int page)
+    /// <param name="prompt">Solo las llamadas de ese prompt: el filtro por tarea de Ajustes › Tareas (#58).</param>
+    public static UsagePage Usage(Database db, int page, string? prompt = null)
     {
         using var c = db.Open();
-        var pages = Math.Max(1, (int)Math.Ceiling(c.ExecuteScalar<long>("SELECT count(*) FROM claude_usage") / (double)UsagePageSize));
+        const string Where = "WHERE @prompt IS NULL OR prompt = @prompt";
+        var pages = Math.Max(1, (int)Math.Ceiling(c.ExecuteScalar<long>($"SELECT count(*) FROM claude_usage {Where}", new { prompt }) / (double)UsagePageSize));
         page = Math.Clamp(page, 1, pages);
         // Con propiedades (no el registro): una suma sin filas no tiene tipo y Dapper no encuentra el constructor.
-        var rows = c.Query<UsageRead>("""
+        var rows = c.Query<UsageRead>($"""
             SELECT prompt, model, duration_ms AS DurationMs, result, input_tokens + cache_read_tokens + cache_creation_tokens AS InputTokens,
                    output_tokens AS OutputTokens, cost_usd AS CostUsd, created_at AS CreatedAt
-            FROM claude_usage ORDER BY id DESC LIMIT @size OFFSET @skip
-            """, new { size = UsagePageSize, skip = (page - 1) * UsagePageSize })
+            FROM claude_usage {Where} ORDER BY id DESC LIMIT @size OFFSET @skip
+            """, new { prompt, size = UsagePageSize, skip = (page - 1) * UsagePageSize })
             .Select(u => new UsageRow(u.Prompt, u.Model, u.DurationMs, u.Result, u.InputTokens, u.OutputTokens, u.CostUsd, u.CreatedAt)).ToList();
         return new UsagePage(rows, page, pages);
     }
@@ -192,34 +194,43 @@ public static partial class ClaudeBudget
     /// </summary>
     public static long RunNow(Database db)
     {
-        var now = UtcNow();
+        AllowNow(db);
+        return Launch(db);
+    }
+
+    /// <summary>Salta el horario hasta que empiece el siguiente (lo usa «Ejecutar» de cada tarea, #58).</summary>
+    public static void AllowNow(Database db)
+    {
         using var c = db.Open();
-        var s = Settings(c);
-        Set(c, RunNowUntil, NextScheduleStart(s, now).ToString("O"));
+        Set(c, RunNowUntil, NextScheduleStart(Settings(c), UtcNow()).ToString("O"));
         // Lo que esperaba el horario o el tope sale ya; lo que espera el límite, no.
         c.Execute($"UPDATE task SET resume_at = NULL WHERE {Pending} AND status = 'queued' AND detail NOT LIKE '%tasks.claude.limit%'");
-        return Launch(c, db);
     }
 
     /// <summary>
-    /// Al empezar el horario, una vez por noche: si no hay nada de Claude en la cola, encola la carga (F2.9). Lo que no cambió
-    /// se salta sin llamar a Claude, así que sin cambios termina en segundos. La cola lo llama en cada vuelta.
+    /// Al empezar el horario, una vez por noche, encola las tareas encendidas en Ajustes › Tareas (#58, decisión 284). Lo que no
+    /// cambió se salta sin llamar a Claude, así que sin cambios termina en segundos. La cola lo llama en cada vuelta.
     /// </summary>
     public static long? AutoStart(Database db)
     {
         var now = UtcNow();
-        using var c = db.Open();
-        var s = Settings(c);
-        if (!InSchedule(s, now)) return null;
-        var opened = NextScheduleStart(s, now).AddDays(-1); // cuándo empezó este horario
-        if (Date(s, LastAuto) >= opened) return null;
-        Set(c, LastAuto, now.ToString("O"));
-        Catalog.IgdbImport.RefreshIfDue(db, now); // F2.14: el catálogo al día, cada semana
-        return Launch(c, db);
+        using (var c = db.Open())
+        {
+            var s = Settings(c);
+            if (!InSchedule(s, now)) return null;
+            var opened = NextScheduleStart(s, now).AddDays(-1); // cuándo empezó este horario
+            if (Date(s, LastAuto) >= opened) return null;
+            Set(c, LastAuto, now.ToString("O"));
+        }
+        return Launch(db);
     }
 
-    static long Launch(System.Data.IDbConnection c, Database db) =>
-        c.ExecuteScalar<long?>($"SELECT id FROM task WHERE {Pending} ORDER BY id LIMIT 1") ?? InitialLoad.Enqueue(db)!.Value;
+    static long Launch(Database db)
+    {
+        using (var c = db.Open())
+            if (c.ExecuteScalar<long?>($"SELECT id FROM task WHERE {Pending} ORDER BY id LIMIT 1") is { } waiting) return waiting;
+        return Catalog.CatalogTasks.Nightly(db) ?? 0;
+    }
 
     static Dictionary<string, string> Settings(System.Data.IDbConnection c) =>
         c.Query<(string Name, string Value)>("SELECT name, value FROM setting WHERE machine_id = '' AND name LIKE 'claude.%'")
