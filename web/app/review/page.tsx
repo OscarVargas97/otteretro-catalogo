@@ -59,6 +59,11 @@ function Review() {
   if (page.isError) return <div className="content"><p className="error" role="alert">{describe(page.error)}</p></div>;
   if (!page.data) return <div className="content" aria-busy="true"><Panels count={3} /></div>;
   const { pending, activeLearnings, files } = page.data;
+  const pendingItem = (item: ReviewItem) => (
+    <Pending key={item.id} item={item} busy={act.isPending}
+      approve={(routes) => act.mutate(routes ? { path: `/api/review/${item.id}/approve-edited`, body: { routes } } : { path: `/api/review/${item.id}/approve` })}
+      reject={() => act.mutate({ path: `/api/review/${item.id}/reject` })} />
+  );
   const count = (k: Tab) => k === "pending" ? pending.length : k === "learnings" ? Number(activeLearnings) : files.filter((f) => f.kind === k).length;
 
   return (
@@ -70,11 +75,27 @@ function Review() {
 
       {tab === "pending" && (pending.length === 0
         ? <Empty title={t("pendingEmptyTitle")} text={t("pendingEmptyText")}><Link className="ot-btn" href="/settings/?s=claude">{t("openClaude")}</Link></Empty>
-        : pending.map((item) => (
-          <Pending key={item.id} item={item} busy={act.isPending}
-            approve={(routes) => act.mutate(routes ? { path: `/api/review/${item.id}/approve-edited`, body: { routes } } : { path: `/api/review/${item.id}/approve` })}
-            reject={() => act.mutate({ path: `/api/review/${item.id}/reject` })} />
-        )))}
+        : <>
+          <div className="hero-actions">
+            <button className="ot-btn ot-btn-primary" type="button" disabled={act.isPending}
+              onClick={() => confirm(t("approveAllConfirm", { count: pending.length })) && act.mutate({ path: "/api/review/approve-all" })}>
+              {t("approveAll", { count: pending.length })}</button>
+          </div>
+          {/* Lo que no es de saga (mejor versión, clasificar, traducir) va agrupado por tipo y plegado (#56). */}
+          {Object.entries(Object.groupBy(pending.filter((i) => i.entity !== "saga"), (i) => i.prompt)).map(([prompt, items = []]) => (
+            <details key={prompt} className="panel">
+              <summary className="sec-h">
+                <h2>{t(`prompt.${prompt as "ruta-saga"}`)}</h2>
+                <span className="small muted">{t("groupHint", { count: items.length })}</span>
+                <button className="ot-btn ot-btn-primary" type="button" disabled={act.isPending}
+                  onClick={(e) => { e.preventDefault(); act.mutate({ path: `/api/review/approve-all?prompt=${encodeURIComponent(prompt)}` }); }}>
+                  {t("approveAll", { count: items.length })}</button>
+              </summary>
+              {items.map(pendingItem)}
+            </details>
+          ))}
+          {pending.filter((i) => i.entity === "saga").map(pendingItem)}
+        </>)}
 
       {(tab === "doubtful" || tab === "unidentified") && (count(tab) === 0
         ? <Empty title={t(`files.${tab}EmptyTitle`)} text={t(`files.${tab}EmptyText`)}><Link className="ot-btn" href="/collection/">{t("files.openCollection")}</Link></Empty>

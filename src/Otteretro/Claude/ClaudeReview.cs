@@ -233,6 +233,18 @@ public static class ClaudeReview
         return true;
     }
 
+    /// <summary>«Aprobar todas» (#56): aplica cada pendiente como su botón Aprobar; <paramref name="prompt"/> limita a un tipo. Cuántas aplicó.</summary>
+    public static int ApproveAll(Database db, string? prompt)
+    {
+        List<long> ids;
+        using (var c = db.Open())
+            ids = c.Query<long>("""
+                SELECT id FROM review_item WHERE kind = 'pending_approval' AND status = 'open'
+                  AND (@prompt IS NULL OR json_extract(data, '$.prompt') = @prompt) ORDER BY id
+                """, new { prompt }).ToList();
+        return ids.Count(id => Approve(db, id));
+    }
+
     static IEnumerable<SagaAnalysis.Route> Edited(List<SagaAnalysis.Route> proposed, List<SagaAnalysis.Route> edited) =>
         proposed.Select(p => edited.FirstOrDefault(e => e.Kind == p.Kind) is { } e
             ? p with { Steps = e.Steps.Select(s => p.Steps.FirstOrDefault(x => x.GameId == s.GameId)).OfType<SagaAnalysis.RouteStep>().DistinctBy(s => s.GameId).ToList() }

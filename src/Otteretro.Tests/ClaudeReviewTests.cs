@@ -89,6 +89,23 @@ public class ClaudeReviewTests : IAsyncDisposable
         Assert.Equal(0, Scalar<long>("SELECT count(*) FROM field_value WHERE entity_id = 11 AND field = 'summary_es'"));
     }
 
+    /// <summary>#56: «Aprobar todas» de un tipo aplica solo ese tipo; sin tipo, todo lo pendiente.</summary>
+    [Fact]
+    public void ApproveAllAppliesOneKindOrEverything()
+    {
+        Item(A.Translate, "game", 10, new { text = "Link despierta." });
+        Item(A.Translate, "game", 11, new { text = "La luna cae." });
+        Item(A.Iconic, "saga", 1, new A.SagaIconic(1, true, [10], "Cambió el 3D", []));
+
+        Assert.Equal(2, ClaudeReview.ApproveAll(f.Db, A.Translate));
+        Assert.Equal(A.Iconic, Assert.Single(ClaudeReview.Page(f.Db).Pending).Prompt);
+        Assert.Equal(2, Scalar<long>("SELECT count(*) FROM field_value WHERE field = 'summary_es'"));
+
+        Assert.Equal(1, ClaudeReview.ApproveAll(f.Db, null));
+        Assert.Empty(ClaudeReview.Page(f.Db).Pending);
+        Assert.Equal(1, Scalar<long>("SELECT iconic FROM saga WHERE id = 1"));
+    }
+
     /// <summary>#178: la imagen de la saga sale del icónico más reciente con héroe; sin icónicos, del más reciente con héroe.</summary>
     [Fact]
     public void SagaHeroComesFromTheLatestIconicGame()
