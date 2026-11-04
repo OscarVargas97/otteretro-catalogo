@@ -168,6 +168,14 @@ public static partial class CatalogCleanup
         }
         foreach (var generic in loose.Where(l => l.Value.Count > MaxLoose).Select(l => l.Key).ToList()) loose.Remove(generic);
 
+        // Sagas que se llaman igual (#53): suele ser la colección y la franquicia de IGDB de lo mismo, repartida en dos. Se marcan
+        // todas las del grupo, aunque alguna sea de un solo juego, para que Claude pueda pasar los juegos a una. Si Claude ya vio
+        // todas las del grupo, no se repite (lo ya analizado no se reprocesa).
+        var analyzed = c.Query<string>("SELECT key FROM claude_fingerprint WHERE prompt = @PromptName", new { PromptName }).ToHashSet();
+        var sameName = sagas.Values.Where(s => sizes.ContainsKey(s.Id)).GroupBy(s => SameKey(s.Name))
+            .Where(g => g.Count() > 1 && g.Any(s => !analyzed.Contains($"saga:{s.Id}")))
+            .SelectMany(g => g.Select(s => (s.Id, g.Key))).ToDictionary(x => x.Id, x => x.Key);
+
         var cases = new List<(SagaCase Case, bool Owned, bool Iconic, int Size)>();
         foreach (var group in games.Where(g => g.SagaId is not null).GroupBy(g => g.SagaId!.Value))
         {
@@ -176,7 +184,8 @@ public static partial class CatalogCleanup
             var list = group.ToList();
             var looseHere = loose.GetValueOrDefault(group.Key) ?? [];
             var rulesHere = rules.GetValueOrDefault(group.Key) ?? [];
-            if (list.Count < 2 && looseHere.Count == 0 && rulesHere.Count == 0) continue; // una saga de un juego no tiene nada que ordenar
+            var duplicated = sameName.ContainsKey(group.Key);
+            if (list.Count < 2 && looseHere.Count == 0 && rulesHere.Count == 0 && !duplicated) continue; // una saga de un juego no tiene nada que ordenar
 
             var reasons = new List<string>();
             if (list.GroupBy(g => BaseKey(g.Name)).Any(k => k.Count() > 1)) reasons.Add("similarNames");
@@ -184,19 +193,28 @@ public static partial class CatalogCleanup
             if (list.Any(g => g.Year is null || g.Platforms is null)) reasons.Add("missingData");
             if (looseHere.Count > 0) reasons.Add("looseCandidates");
             if (rulesHere.Count > 0) reasons.Add("personRules");
+            if (duplicated) reasons.Add("sameName");
             if (reasons.Count == 0) continue;
 
             cases.Add((new SagaCase(saga.Id, saga.Name, reasons, list.OrderBy(g => g.Year ?? 9999).Select(g => new GameLine(g.Id, Line(g))).ToList(), looseHere, rulesHere),
                 owned.Contains(saga.Id), saga.Iconic, list.Count));
         }
-        return cases.OrderByDescending(x => x.Owned).ThenByDescending(x => x.Iconic).ThenByDescending(x => x.Size).ThenBy(x => x.Case.Id)
+        var ordered = cases.OrderByDescending(x => x.Owned).ThenByDescending(x => x.Iconic).ThenByDescending(x => x.Size).ThenBy(x => x.Case.Id)
             .Select(x => x.Case).ToList();
+        // Las que se llaman igual van juntas, en el lugar de la primera: así caen en el mismo lote y Claude puede unirlas.
+        var rank = ordered.Select((x, i) => (x, i)).GroupBy(p => sameName.GetValueOrDefault(p.x.Id) ?? $"#{p.x.Id}")
+            .ToDictionary(g => g.Key, g => g.Min(p => p.i));
+        return ordered.Select((x, i) => (x, i)).OrderBy(p => rank[sameName.GetValueOrDefault(p.x.Id) ?? $"#{p.x.Id}"]).ThenBy(p => p.i).Select(p => p.x).ToList();
     }
 
     const int MaxLoose = 15;
 
     /// <summary>El nombre en palabras: minúsculas, solo letras y números, separadas por un espacio.</summary>
     static string WordKey(string name) => string.Join(' ', Regex.Split(name.ToLowerInvariant(), @"[^\p{L}\p{N}]+").Where(w => w.Length > 0));
+
+    /// <summary>Para comparar nombres de sagas: sin tildes, mayúsculas ni signos («Okamí» y «Okami» son el mismo).</summary>
+    static string SameKey(string name) => IgdbImport.NameKey(new string(name.Normalize(System.Text.NormalizationForm.FormD)
+        .Where(ch => System.Globalization.CharUnicodeInfo.GetUnicodeCategory(ch) != System.Globalization.UnicodeCategory.NonSpacingMark).ToArray()));
 
     /// <summary>El nombre sin ediciones ni subtítulos de plataforma, para encontrar posibles repetidos.</summary>
     static string BaseKey(string name) => IgdbImport.NameKey(EditionWords().Replace(name, ""));

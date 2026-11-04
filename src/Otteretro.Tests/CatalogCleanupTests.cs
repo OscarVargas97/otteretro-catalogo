@@ -83,6 +83,25 @@ public class CatalogCleanupTests : IAsyncDisposable
         Assert.Equal(42000, CatalogCleanup.Measure(f.Db).Tokens);
     }
 
+    /// <summary>#53: dos sagas que se llaman igual (la colección y la franquicia de IGDB) se marcan juntas, aunque una tenga un solo juego.</summary>
+    [Fact]
+    public void SagasWithTheSameNameAreMarkedTogether()
+    {
+        using (var c = f.Db.Open())
+            c.Execute("""
+                INSERT INTO saga (id, name) VALUES (4, 'Okamí'), (5, 'Half Life');
+                INSERT INTO game (id, saga_id, name_es, year) VALUES (41, 4, 'Okamiden', 2010), (50, 5, 'Half-Life: Alyx', 2020);
+                INSERT INTO claude_fingerprint (prompt, key, input_hash, updated_at) VALUES ('depurar-sagas', 'saga:2', 'x', '2026-11-01'), ('depurar-sagas', 'saga:5', 'x', '2026-11-01');
+                """);
+
+        var cases = CatalogCleanup.Cases(f.Db, null);
+
+        // Okami (1 juego) y Okamí van juntas; Half-Life y Half Life ya las vio Claude: no se repiten.
+        Assert.Equal([1L, 3L, 4L], cases.Select(x => x.Id));
+        Assert.Contains("sameName", cases.Single(x => x.Id == 3).Reasons);
+        Assert.DoesNotContain("sameName", cases.Single(x => x.Id == 1).Reasons);
+    }
+
     [Fact]
     public async Task ChangesAreAppliedNotRepeatedAndUndone()
     {
