@@ -26,6 +26,13 @@ public static class ClaudeEndpoints
         api.MapPost("/review/{id:long}/approve", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : ClaudeReview.Approve(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
 
+        api.MapPost("/review/approve-all", Results<Ok<ReviewPage>, Conflict<ApiError>> (AppSession s, string? prompt) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            ClaudeReview.ApproveAll(db, prompt);
+            return TypedResults.Ok(ClaudeReview.Page(db));
+        });
+
         api.MapPost("/review/{id:long}/approve-edited", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, ApproveRoutesRequest request, AppSession s) =>
             Db(s) is not { } db ? NoData() : ClaudeReview.Approve(db, id, request.Routes) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
 
