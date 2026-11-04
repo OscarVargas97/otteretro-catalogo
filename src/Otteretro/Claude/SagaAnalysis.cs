@@ -48,7 +48,7 @@ public static class SagaAnalysis
     record Job(List<long> Pending, int Total, List<string>? Prompts = null);
 
     record Version(long Id, long GameId, string Platform, string Kind, long? Year);
-    record Game(long Id, long SagaId, string Name, long? Year, List<Version> Versions, string? Summary);
+    record Game(long Id, long SagaId, string Name, long? Year, List<Version> Versions, string? Summary, long Popularity = 0);
     record Saga(long Id, string Name, List<Game> Games, bool Iconic = false);
 
     /// <summary>Un resultado para Revisar.</summary>
@@ -111,7 +111,8 @@ public static class SagaAnalysis
 
             bool Wants(string prompt) => job.Prompts is null || job.Prompts.Contains(prompt);
             // Lo icónico va antes que las rutas: de eso depende a qué sagas se les piden historia y comunidad (#54).
-            if (Wants(Iconic)) await Step<Saga, IconicReply>(run, Iconic, "sonnet", 20, sagas, s => $"saga:{s.Id}", SagaInput, IconicItems, ct);
+            // Lo evidente lo decide un puntaje, sin Claude; solo la franja del medio va a Sonnet (#52).
+            if (Wants(Iconic)) await Step<Saga, IconicReply>(run, Iconic, "sonnet", 20, IconicByScore(run.Db, sagas), s => $"saga:{s.Id}", SagaInput, IconicItems, ct);
             if (Wants(Routes))
             {
                 // La de lanzamiento sale del año, sin Claude, para todas; historia y comunidad, con Sonnet, solo para las icónicas
@@ -191,6 +192,50 @@ public static class SagaAnalysis
         }
         t.Commit();
         return saved;
+    }
+
+    /// <summary>
+    /// Sobre esto (lo que más votos tiene en IGDB, `total_rating_count`), la saga es icónica sin preguntar: GTA, Zelda, Portal.
+    /// Bajo <see cref="NotIconicBelow"/> y con menos de <see cref="NotIconicGames"/> juegos, claramente no lo es. Medido en el
+    /// catálogo real (2026-11-04): ~80 sagas arriba, ~5.200 abajo y ~490 en el medio, de 5.785; ninguna de las 21 que Claude
+    /// marcó icónicas cae abajo.
+    /// </summary>
+    // ponytail: umbrales fijos; si la popularidad de IGDB cambia mucho de escala, se vuelven a medir.
+    public const long IconicFrom = 1000, NotIconicBelow = 200;
+    public const int NotIconicGames = 10;
+
+    /// <summary>
+    /// Decide lo evidente de lo icónico (#52) y devuelve lo dudoso, para Sonnet. Respeta lo ya analizado: lo que Claude ya vio
+    /// (huella) o espera en Revisar sigue por Claude, y lo que marcaste a mano no se toca. En una saga icónica por puntaje, sus
+    /// juegos icónicos son los que pasan el umbral (al menos el más votado, hasta 5).
+    /// </summary>
+    static List<Saga> IconicByScore(Database db, List<Saga> sagas)
+    {
+        var unclear = new List<Saga>();
+        using var c = db.Open();
+        using var t = c.BeginTransaction();
+        foreach (var saga in sagas)
+        {
+            if (Catalog.Editing.IsMarked(c, t, "saga", saga.Id, "iconic")) continue;
+            var claude = c.ExecuteScalar<long>("SELECT count(*) FROM claude_fingerprint WHERE prompt = @Iconic AND key = @key", new { Iconic, key = $"saga:{saga.Id}" }, t) > 0
+                || c.ExecuteScalar<long>("""
+                    SELECT count(*) FROM review_item WHERE kind = 'pending_approval' AND status = 'open' AND entity = 'saga' AND entity_id = @Id
+                      AND json_extract(data, '$.prompt') = @Iconic
+                    """, new { saga.Id, Iconic }, t) > 0;
+            var top = saga.Games.Max(g => g.Popularity);
+            if (claude || (top < IconicFrom && (top >= NotIconicBelow || saga.Games.Count >= NotIconicGames)))
+            {
+                unclear.Add(saga);
+                continue;
+            }
+            var iconic = top >= IconicFrom;
+            var games = iconic ? saga.Games.OrderByDescending(g => g.Popularity).Where((g, i) => i == 0 || g.Popularity >= IconicFrom).Take(5).Select(g => g.Id).ToList() : [];
+            c.Execute("UPDATE saga SET iconic = @iconic WHERE id = @Id", new { iconic, saga.Id }, t);
+            c.Execute("UPDATE game SET iconic = (id IN (SELECT value FROM json_each(@ids))) WHERE saga_id = @Id",
+                new { ids = JsonSerializer.Serialize(games), saga.Id }, t);
+        }
+        t.Commit();
+        return unclear;
     }
 
     /// <summary>Con esto se reconoce la ruta de lanzamiento que puso el script: la de Claude o la editada a mano no se tocan.</summary>
@@ -295,9 +340,9 @@ public static class SagaAnalysis
             WHERE f.entity = 'game' AND f.field = 'summary' AND f.source = 'igdb' AND g.saga_id IN @ids
               AND NOT EXISTS (SELECT 1 FROM field_value e WHERE e.entity = 'game' AND e.entity_id = f.entity_id AND e.field = 'summary_es')
             """, new { ids }).ToDictionary(s => s.Id, s => s.Text);
-        var games = c.Query<(long Id, long SagaId, string Name, long? Year)>("""
-            SELECT id, saga_id, COALESCE(original_name, name_es), year FROM game WHERE saga_id IN @ids ORDER BY year IS NULL, year, id
-            """, new { ids }).Select(g => new Game(g.Id, g.SagaId, g.Name, g.Year, versions[g.Id].ToList(), summaries.GetValueOrDefault(g.Id)))
+        var games = c.Query<(long Id, long SagaId, string Name, long? Year, long? Popularity)>("""
+            SELECT id, saga_id, COALESCE(original_name, name_es), year, popularity FROM game WHERE saga_id IN @ids ORDER BY year IS NULL, year, id
+            """, new { ids }).Select(g => new Game(g.Id, g.SagaId, g.Name, g.Year, versions[g.Id].ToList(), summaries.GetValueOrDefault(g.Id), g.Popularity ?? 0))
             .ToLookup(g => g.SagaId);
         var names = c.Query<(long Id, string Name, bool Iconic)>("SELECT id, name, iconic FROM saga WHERE id IN @ids", new { ids }).ToDictionary(s => s.Id);
         return ids.Where(names.ContainsKey).Select(id => new Saga(id, names[id].Name, games[id].ToList(), names[id].Iconic)).Where(s => s.Games.Count > 0).ToList();

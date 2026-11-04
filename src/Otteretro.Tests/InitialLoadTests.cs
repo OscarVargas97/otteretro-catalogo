@@ -36,6 +36,7 @@ public class InitialLoadTests : IAsyncDisposable
             INSERT INTO version (game_id, platform, year, igdb_id) VALUES
               (10, 'n64', 1998, 1), (11, '3ds', 2011, 2), (20, 'ps1', 1997, 3), (21, 'ps1', 1999, 4),
               (30, 'pc', 1998, 5), (31, 'pc', 2004, 6), (40, 'ps1', 1996, 7), (41, 'switch', 2018, 8);
+            UPDATE game SET popularity = 500; -- la franja dudosa: lo icónico va a Claude (#52)
             """);
     }
 

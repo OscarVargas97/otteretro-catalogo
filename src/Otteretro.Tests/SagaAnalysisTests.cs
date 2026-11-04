@@ -25,6 +25,7 @@ public class SagaAnalysisTests : IAsyncDisposable
             INSERT INTO version (id, game_id, platform, kind, year, igdb_id) VALUES
               (100, 10, 'n64', 'original', 1998, 1), (101, 10, '3ds', 'original', 2011, 2), (110, 11, 'n64', 'original', 2000, 3);
             INSERT INTO field_value (entity, entity_id, field, value, source) VALUES ('game', 10, 'summary', 'Link wakes up.', 'igdb');
+            UPDATE game SET popularity = 500; -- la franja dudosa: lo icónico va a Claude (#52)
             """);
     }
 
@@ -134,5 +135,30 @@ public class SagaAnalysisTests : IAsyncDisposable
         Assert.Contains("\"community\"", proposed);
         Assert.Equal("Mi orden", c2.ExecuteScalar<string>("SELECT rationale FROM route WHERE saga_id = 1 AND kind = 'release'"));
         Assert.Empty(ReleaseSteps()); // la que ya estaba, sin tocar
+    }
+
+    /// <summary>#52: lo evidente lo decide la popularidad de IGDB sin Claude; lo dudoso y lo que Claude ya vio siguen por Claude.</summary>
+    [Fact]
+    public async Task ObviousIconicSagasSkipClaude()
+    {
+        Fake();
+        using (var c = f.Db.Open())
+            c.Execute("""
+                INSERT INTO saga (id, name) VALUES (2, 'Grand Theft Auto'), (3, 'Juego chico'), (4, 'Ya vista');
+                INSERT INTO game (id, saga_id, name_es, year, popularity) VALUES
+                  (20, 2, 'GTA III', 2001, 1500), (21, 2, 'GTA V', 2013, 6000), (22, 2, 'GTA Advance', 2004, 90),
+                  (30, 3, 'Uno', 2001, 10), (31, 3, 'Dos', 2003, 5),
+                  (40, 4, 'Cuatro', 2001, 10);
+                INSERT INTO claude_fingerprint (prompt, key, input_hash, updated_at) VALUES ('iconico', 'saga:4', 'x', '2026-11-01');
+                UPDATE saga SET iconic = 1 WHERE id = 3; -- un resto de antes: el puntaje lo corrige
+                """);
+
+        Assert.Equal("done", (await f.Run(SagaAnalysis.EnqueueStep(f.Db, SagaAnalysis.Iconic))).Status);
+
+        // Zelda (500, el medio) y «Ya vista» (Claude ya la vio, cambió) van a Claude, en una llamada; GTA y «Juego chico», no.
+        Assert.Contains("iconic", Assert.Single(calls));
+        using var c2 = f.Db.Open();
+        Assert.Equal([(2L, true), (3L, false)], c2.Query<(long, bool)>("SELECT id, iconic FROM saga WHERE id IN (2, 3) ORDER BY id"));
+        Assert.Equal([20L, 21L], c2.Query<long>("SELECT id FROM game WHERE saga_id = 2 AND iconic ORDER BY id")); // los más votados, no Advance
     }
 }
