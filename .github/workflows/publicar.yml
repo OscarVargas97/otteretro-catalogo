@@ -5,6 +5,7 @@ on:
   push:
     branches: [main]
     paths: ["catalogo/**"]
+  workflow_dispatch: # para publicar a mano lo que no salió (#67)
 
 permissions:
   contents: write
@@ -82,7 +83,9 @@ jobs:
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create $env:TAG salida/catalogo.db.gz salida/catalogo.db.gz.json salida/cambios.json --title $env:TAG --notes "Datos de juegos: IGDB.com" --latest=false
+        # En bloque: «Datos de juegos: IGDB.com» suelto es YAML inválido por el «: » (#67).
+        run: |
+          gh release create $env:TAG salida/catalogo.db.gz salida/catalogo.db.gz.json salida/cambios.json --title $env:TAG --notes "Datos de juegos: IGDB.com" --latest=false
 
       - name: Conservar solo las últimas 3 versiones de datos
         shell: pwsh

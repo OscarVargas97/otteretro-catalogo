@@ -2,7 +2,7 @@
 
 ## Sin publicar
 
-`feat/53-depurar-candidatos`, `feat/51-mejor-version-por-reglas`, `feat/52-iconico-por-puntaje`, `feat/54-rutas-por-script`, `feat/58-tareas`, `feat/56-aprobar-todas`, `feat/50-clasificar-sin-claude`, `feat/46-codigos-de-juego`, `feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam`, `feat/30-cambios-publicados`, `feat/40-completar-imagenes`, `feat/41-publicar-todo` y `feat/44-publicar-si-cambia` · #6, #9, #12, #17, #22, #30, #40, #41 y #44: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
+`fix/259-version-squash`, `feat/53-depurar-candidatos`, `feat/51-mejor-version-por-reglas`, `feat/52-iconico-por-puntaje`, `feat/54-rutas-por-script`, `feat/58-tareas`, `feat/56-aprobar-todas`, `feat/50-clasificar-sin-claude`, `feat/46-codigos-de-juego`, `feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam`, `feat/30-cambios-publicados`, `feat/40-completar-imagenes`, `feat/41-publicar-todo` y `feat/44-publicar-si-cambia` · #6, #9, #12, #17, #22, #30, #40, #41 y #44: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
 
 ### Nuevo
 - **Ajustes › Tareas** (#58 a #61; antes «Claude»): cada tarea del catálogo por separado, en dos grupos. Con Claude: depurar sagas, rutas, icónico, mejor versión y traducir descripciones (la carga que antes iba toda junta, ahora un paso por tarea). Sin Claude: poner al día con IGDB, códigos de juego e imágenes que faltan. Cada una dice qué hace, se lanza sola con «Ejecutar», elige si corre en el horario de la noche (IGDB, además, cada cuántos días) y muestra su última ejecución y lo que gastó este mes. Lo ya analizado por Claude no se vuelve a pedir. El registro de uso queda abajo, plegado y con filtro por tarea. «Reevaluar sagas icónicas» va en la tarea Icónico, y la puesta al día, las imágenes y los códigos salen de Consolas.
@@ -31,6 +31,7 @@
 - «Buscar imágenes en SteamGridDB e IGDB» guarda las direcciones en vez de bajar las imágenes, y vuelve a consultarlas para traer las que cambiaron.
 
 ### Arreglos
+- **Las versiones vuelven a salir** (#259, #67): lo fusionado hoy con *squash* no subía el número de versión y la publicación fallaba al repetirlo. Ahora cuentan los PRs fusionados de las dos formas. La versión de datos del catálogo tampoco salía desde el 2 de noviembre, porque `publicar.yml` tenía un error de formato: ya está corregido y además se puede lanzar a mano desde Actions.
 - **Importar un catálogo trae todo** (#46): `catalogo importar` copia también las referencias de imágenes, los reemplazos y los códigos; antes, volver a escribir lo importado perdía las imágenes.
 - **Sin aviso de Steam** (#33): Inicio ya no pide la clave de Steam Web API, que el catálogo no usa: Steam es de Otteretro.
 

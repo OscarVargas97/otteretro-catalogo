@@ -12,5 +12,6 @@ foreach ($c in git -C $raiz log --format=%H $Rev -- VERSION) {
     if ((Fase $c) -ne $fase) { break }
     $base = $c
 }
-$n = [int](git -C $raiz rev-list --count --merges --first-parent "$base..$Rev")
+# Los PRs fusionados por su asunto, con commit de fusión («Merge pull request #n») o con squash («… (#n)», #259).
+$n = @(git -C $raiz log --first-parent --format=%s "$base..$Rev" | Where-Object { $_ -match '^Merge pull request #\d+|\(#\d+\)$' }).Count
 "$fase.$n"
