@@ -28,16 +28,19 @@ public static class CatalogTasks
     static Def Step(string id, string prompt, string model) =>
         new(id, model, [prompt], (db, _) => SagaAnalysis.EnqueueStep(db, prompt), (kind, data) => kind == SagaAnalysis.Kind && SagaAnalysis.IsStep(data, prompt));
 
-    /// <summary>Todas, en el orden de la noche: IGDB → códigos → depurar → rutas → icónico → mejor versión → traducir → imágenes.</summary>
+    /// <summary>
+    /// Todas, en el orden de la noche: IGDB → códigos → depurar → icónico → rutas → mejor versión → traducir → imágenes. Icónico va
+    /// antes que rutas porque historia y comunidad se piden solo para las icónicas (#54).
+    /// </summary>
     static readonly Def[] All =
     [
         new("igdb", null, [], (db, _) => IgdbImport.EnqueueRefresh(db), (kind, _) => kind == "igdb.refresh"),
         new("codes", null, [], (db, _) => GameCodes.Enqueue(db), (kind, _) => kind == GameCodes.Kind),
         new("cleanup", "haiku", [CatalogCleanup.PromptName], (db, _) => CatalogCleanup.Enqueue(db), (kind, _) => kind == CatalogCleanup.Kind),
-        Step("routes", SagaAnalysis.Routes, "sonnet"),
         // Con consola, «Reevaluar sagas icónicas» (F2.15): olvida lo dicho de esas sagas y lo vuelve a pedir.
         new("iconic", "sonnet", [SagaAnalysis.Iconic], (db, console) => console is null ? SagaAnalysis.EnqueueStep(db, SagaAnalysis.Iconic) : SagaAnalysis.EnqueueIconic(db, console),
             (kind, data) => kind == SagaAnalysis.Kind && SagaAnalysis.IsStep(data, SagaAnalysis.Iconic)),
+        Step("routes", SagaAnalysis.Routes, "sonnet"),
         Step("best", SagaAnalysis.BestVersion, "sonnet"),
         Step("translate", SagaAnalysis.Translate, "haiku"),
         new("images", null, [], (db, _) => SteamGridDb.Enqueue(db, missing: true), (kind, _) => kind == "sgdb.images"),

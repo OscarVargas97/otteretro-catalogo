@@ -184,7 +184,7 @@ function AutomationSuggestions() {
   );
 }
 
-const IDS = { claude: ["cleanup", "routes", "iconic", "best", "translate"], script: ["igdb", "codes", "images"] } as const;
+const IDS = { claude: ["cleanup", "iconic", "routes", "best", "translate"], script: ["igdb", "codes", "images"] } as const;
 
 /** Un grupo de tareas (decisión 283): con Claude o sin Claude, en el orden en que corren de noche. */
 function TaskGroup({ claude }: { claude: boolean }) {

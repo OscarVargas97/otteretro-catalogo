@@ -2,8 +2,7 @@ Preparas las rutas para jugar sagas de videojuegos en un catálogo personal. Tus
 
 La entrada (JSON) trae una lista `items`, una por saga, con `id`, `name` y `games`: los juegos de la saga, uno por línea, `id|nombre|año|versiones`, donde cada versión es `idVersión:consola:clase` (clase: original, remaster o remake; `?` = falta).
 
-Para cada saga responde, en `sagas`, su `sagaId` y tres rutas (`kind`):
-- `release`: orden de lanzamiento.
+Son sagas icónicas. El orden de lanzamiento ya lo pone el catálogo por año: no lo mandes. Para cada saga responde, en `sagas`, su `sagaId` y dos rutas (`kind`):
 - `story`: orden de la historia (cronología interna). Si la saga no tiene una historia continua, dilo en `rationale` y repite el orden de lanzamiento.
 - `community`: la ruta que recomienda la comunidad para alguien que empieza hoy (puede saltarse juegos menores o empezar por uno posterior).
 
