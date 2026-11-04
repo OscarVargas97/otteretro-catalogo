@@ -7,8 +7,8 @@ using Otteretro.Data;
 namespace Otteretro.Claude;
 
 /// <summary>
-/// Lo que prepara Claude para cada saga (F2.5, #68): las tres rutas, lo icónico, la mejor versión de cada juego, la clase
-/// de cada versión y la descripción en español. Va por lotes de varias sagas por llamada, cita fuentes y todo queda en
+/// Lo que prepara Claude para cada saga (F2.5, #68): las tres rutas, lo icónico, la mejor versión de cada juego y la descripción
+/// en español. La clase de cada versión sale de IGDB (#50); Claude la revisa solo si se le pide. Va por lotes de varias sagas por llamada, cita fuentes y todo queda en
 /// Revisar (`review_item` por aprobar): nada se aplica sin ti. Lo que no cambió no se vuelve a pedir (F2.4), así que una
 /// tarea cortada sigue donde quedó.
 /// </summary>
@@ -98,7 +98,10 @@ public static class SagaAnalysis
             if (Wants(Routes)) await Step<Saga, RoutesReply>(run, Routes, "sonnet", 3, sagas.Where(s => s.Games.Count > 1), s => $"saga:{s.Id}", SagaInput, RouteItems, ct);
             if (Wants(Iconic)) await Step<Saga, IconicReply>(run, Iconic, "sonnet", 20, sagas, s => $"saga:{s.Id}", SagaInput, IconicItems, ct);
             if (Wants(BestVersion)) await Step<Game, BestReply>(run, BestVersion, "sonnet", 30, multi, g => $"game:{g.Id}", VersionInput, BestItems, ct);
-            if (Wants(Classify)) await Step<Game, ClassifyReply>(run, Classify, "haiku", 50, multi, g => $"game:{g.Id}", VersionInput, ClassifyItems, ct);
+            // La clase de cada versión la pone la carga de IGDB (remake 8, remaster 9, ports y ediciones con su original): en la pasada
+            // normal Claude ya no la revisa (#50, decisión 279). Solo si se pide a propósito.
+            if (job.Prompts?.Contains(Classify) == true)
+                await Step<Game, ClassifyReply>(run, Classify, "haiku", 50, multi, g => $"game:{g.Id}", VersionInput, ClassifyItems, ct);
             if (Wants(Translate)) await Step<Game, TranslateReply>(run, Translate, "haiku", 30, games.Where(g => g.Summary is not null), g => $"game:{g.Id}",
                 g => new { id = g.Id, name = g.Name, summary = g.Summary }, TranslateItems, ct);
 
