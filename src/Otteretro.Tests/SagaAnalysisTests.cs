@@ -88,22 +88,21 @@ public class SagaAnalysisTests : IAsyncDisposable
 
         Assert.Equal("done", (await f.Run(SagaAnalysis.Enqueue(f.Db))).Status);
 
-        Assert.Equal(5, calls.Count);
+        Assert.Equal(4, calls.Count); // la clase de cada versión ya la puso IGDB: no se le pregunta a Claude (#50)
         Assert.Equal([
             ("saga", 1, SagaAnalysis.Routes),
             ("saga", 1, SagaAnalysis.Iconic),        // la saga 99 no venía: se descarta
             ("game", 10, SagaAnalysis.BestVersion),  // Majora tiene una sola versión: no se compara
-            ("version", 101, SagaAnalysis.Classify), // la 100 ya era original: no es un cambio
             ("game", 10, SagaAnalysis.Translate),
         ], Pending());
 
         // Sin cambios en los datos, otra pasada no llama a Claude; con un juego nuevo, solo lo de su saga.
         Assert.Equal("done", (await f.Run(SagaAnalysis.Enqueue(f.Db))).Status);
-        Assert.Equal(5, calls.Count);
+        Assert.Equal(4, calls.Count);
         using (var c = f.Db.Open())
             c.Execute("INSERT INTO game (id, saga_id, name_es, year) VALUES (12, 1, 'Wind Waker', 2002)");
         Assert.Equal("done", (await f.Run(SagaAnalysis.Enqueue(f.Db, [1]))).Status);
-        Assert.Equal(7, calls.Count); // rutas e icónico; las versiones y la descripción no cambiaron
-        Assert.Equal(5, Pending().Count); // los nuevos reemplazan a los abiertos
+        Assert.Equal(6, calls.Count); // rutas e icónico; las versiones y la descripción no cambiaron
+        Assert.Equal(4, Pending().Count); // los nuevos reemplazan a los abiertos
     }
 }
