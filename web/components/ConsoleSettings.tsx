@@ -63,6 +63,12 @@ export function ConsoleSettings() {
     onSuccess: (data) => { cache.setQueryData(["covers"], data); cache.invalidateQueries({ queryKey: ["tasks"] }); },
   });
 
+  // #46: los TitleID y seriales de cada versión, de tablas públicas, para que Otteretro reconozca por ID.
+  const fillCodes = useMutation({
+    mutationFn: () => request<number>("/api/codes", { method: "POST" }),
+    onSuccess: () => cache.invalidateQueries({ queryKey: ["tasks"] }),
+  });
+
   const router = useRouter();
   const chosen = useSearchParams().get("c");
 
@@ -124,6 +130,10 @@ export function ConsoleSettings() {
                 </div>}
           </div>
           {downloadCovers.error && <p className="error small" role="alert">{describe(downloadCovers.error)}</p>}
+          <div className="version-row">
+            <span className="small muted">{t("codes.help")}</span>
+            <button className="ot-btn" type="button" disabled={fillCodes.isPending} onClick={() => fillCodes.mutate()}>{t("codes.fill")}</button>
+          </div>
         </section>
       )}
 

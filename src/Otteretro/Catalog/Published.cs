@@ -10,7 +10,9 @@ namespace Otteretro.Catalog;
 
 public record PublishedField(string Field, string? Value, string Source, bool Manual);
 public record PublishedCriterion(string Criterion, string? Value, string? Text);
-public record PublishedVersion(long Id, string Platform, string Kind, int? Year, long? IgdbId, long? SteamAppId, List<PublishedCriterion> Criteria);
+/// <param name="Codes">Su TitleID o serial (#46): con ellos Otteretro la reconoce por ID. Null si no tiene.</param>
+public record PublishedVersion(long Id, string Platform, string Kind, int? Year, long? IgdbId, long? SteamAppId, List<PublishedCriterion> Criteria,
+    List<string>? Codes = null);
 /// <param name="Images">De dónde se baja cada imagen (#6): cover, hero o logo → dirección en SteamGridDB o IGDB.</param>
 public record PublishedGame(long Id, string NameEs, string? OriginalName, int? Year, long? IgdbId, long? Popularity, bool Iconic, List<PublishedField> Fields, List<PublishedVersion> Versions,
     Dictionary<string, string>? Images = null);
@@ -63,9 +65,11 @@ public static partial class Published
         var criteria = c.Query<(long VersionId, string Criterion, string? Value, string? Text)>(
                 "SELECT version_id AS VersionId, criterion, value, text FROM version_criterion ORDER BY version_id, criterion")
             .ToLookup(k => k.VersionId, k => new PublishedCriterion(k.Criterion, k.Value, k.Text));
+        var codes = c.Query<(long VersionId, string Code)>("SELECT version_id, code FROM version_code").ToLookup(x => x.VersionId, x => x.Code);
         var versions = c.Query<(long Id, long GameId, string Platform, string Kind, long? Year, long? IgdbId, long? SteamAppId)>(
                 "SELECT id, game_id AS GameId, platform, kind, year, igdb_id AS IgdbId, steam_app_id AS SteamAppId FROM version ORDER BY id")
-            .ToLookup(v => v.GameId, v => new PublishedVersion(v.Id, v.Platform, v.Kind, (int?)v.Year, v.IgdbId, v.SteamAppId, criteria[v.Id].ToList()));
+            .ToLookup(v => v.GameId, v => new PublishedVersion(v.Id, v.Platform, v.Kind, (int?)v.Year, v.IgdbId, v.SteamAppId, criteria[v.Id].ToList(),
+                codes[v.Id].Any() ? codes[v.Id].Order(StringComparer.Ordinal).ToList() : null));
         var images = c.Query<(long GameId, string Kind, string Url)>("SELECT game_id AS GameId, kind, url FROM image WHERE game_id IN (SELECT id FROM game) ORDER BY game_id, kind")
             .GroupBy(i => i.GameId).ToDictionary(g => g.Key, g => g.ToDictionary(i => i.Kind, i => i.Url));
         var games = c.Query<(long Id, long? SagaId, string NameEs, string? OriginalName, long? Year, long? IgdbId, long? Popularity, bool Iconic)>(
@@ -167,7 +171,7 @@ public static partial class Published
         return errors;
     }
 
-    static readonly string[] ContentTables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced"];
+    static readonly string[] ContentTables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced", "version_code"];
 
     /// <summary>
     /// SHA-256 de todas las filas publicadas, tabla por tabla y ordenadas por todas sus columnas (#44). La base comprimida no sale igual byte a
@@ -237,6 +241,8 @@ public static partial class Published
                     {
                         c.Execute("INSERT INTO catalog.version (id, game_id, platform, kind, year, igdb_id, steam_app_id) VALUES (@Id, @GameId, @Platform, @Kind, @Year, @IgdbId, @SteamAppId)",
                             new { v.Id, GameId = g.Id, v.Platform, v.Kind, v.Year, v.IgdbId, v.SteamAppId }, t);
+                        foreach (var code in v.Codes ?? [])
+                            c.Execute("INSERT OR IGNORE INTO catalog.version_code (version_id, code) VALUES (@Id, @code)", new { v.Id, code }, t);
                         foreach (var k in v.Criteria)
                             c.Execute("INSERT INTO catalog.version_criterion (version_id, criterion, value, text) VALUES (@VersionId, @Criterion, @Value, @Text)", new { VersionId = v.Id, k.Criterion, k.Value, k.Text }, t);
                     }
