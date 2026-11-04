@@ -31,6 +31,33 @@ public class PublishedTests
         return folder;
     }
 
+    /// <summary>
+    /// #46: compilar, importar en una administración vacía y volver a escribir da los mismos archivos, con imágenes, reemplazos y
+    /// códigos. Así se puede trabajar sobre lo publicado (`catalogo importar`) sin perder nada.
+    /// </summary>
+    [Fact]
+    public async Task CompilingAndImportingKeepsEverythingPublished()
+    {
+        await using var f = new Fixture();
+        Fill(f);
+        using (var c = f.Db.Open()) c.Execute("INSERT INTO catalog.version_code (version_id, code) VALUES (20, 'SLUS-20963')");
+        var before = Written(f);
+        var gz = f.Tmp["ida.db.gz"];
+        Published.Compile(before, gz);
+        var plain = f.Tmp["ida.db"];
+        using (var input = new GZipStream(File.OpenRead(gz), CompressionMode.Decompress))
+        using (var output = File.Create(plain)) input.CopyTo(output);
+
+        await using var g = new Fixture();
+        Assert.True(InitialCatalog.Import(g.Db, plain));
+        var after = g.Tmp["vuelta"];
+        Published.Write(g.Db, after);
+        foreach (var file in Directory.GetFiles(before, "*.json", SearchOption.AllDirectories))
+            Assert.Equal(File.ReadAllText(file), File.ReadAllText(Path.Combine(after, Path.GetRelativePath(before, file))));
+        Assert.Contains("SLUS-20963", File.ReadAllText(Path.Combine(after, "sagas", "00033-final-fantasy.json")));
+        Assert.Contains("ffx.png", File.ReadAllText(Path.Combine(after, "sagas", "00033-final-fantasy.json")));
+    }
+
     [Fact]
     public async Task EachSagaIsAFileAndWritingTwiceGivesTheSameBytes()
     {

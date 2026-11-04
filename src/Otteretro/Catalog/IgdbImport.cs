@@ -237,7 +237,7 @@ public static class IgdbImport
 
     record SteamLink(long Game, string Uid);
 
-    /// <summary>Al terminar una carga: las portadas de lo nuevo y lo que completan Wikidata y RAWG (si no están ya esperando).</summary>
+    /// <summary>Al terminar una carga: las portadas y los códigos de lo nuevo, y lo que completan Wikidata y RAWG (si no están ya esperando).</summary>
     static void QueueFollowUps(Database db)
     {
         bool Waiting(string kind)
@@ -248,6 +248,8 @@ public static class IgdbImport
         }
         if (!Waiting("sgdb.images")) SteamGridDb.Enqueue(db);
         if (!Waiting("catalog.extra")) ExtraSources.Enqueue(db);
+        // Los códigos de lo nuevo (#46): sin IA, con tablas públicas. Así la puesta al día los completa sola, sin apretar nada.
+        if (!Waiting(GameCodes.Kind)) GameCodes.Enqueue(db);
     }
 
     static void Report<T>(TaskRun run, long done, long total, ApiError detail, T job) =>
