@@ -2,7 +2,7 @@
 
 ## Sin publicar
 
-`feat/46-codigos-de-juego`, `feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam`, `feat/30-cambios-publicados`, `feat/40-completar-imagenes`, `feat/41-publicar-todo` y `feat/44-publicar-si-cambia` · #6, #9, #12, #17, #22, #30, #40, #41 y #44: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
+`feat/50-clasificar-sin-claude`, `feat/46-codigos-de-juego`, `feat/6-referencias-imagenes`, `feat/12-actualizaciones`, `feat/17-editar-sagas-rutas`, `feat/22-publicar-pr`, `feat/9-imagenes-compartidas`, `fix/33-sin-clave-steam`, `feat/30-cambios-publicados`, `feat/40-completar-imagenes`, `feat/41-publicar-todo` y `feat/44-publicar-si-cambia` · #6, #9, #12, #17, #22, #30, #40, #41 y #44: imágenes por referencia y en el disco ★ de Otteretro, instalador, edición a mano y publicar con un PR.
 
 ### Nuevo
 - **Códigos de cada juego** (#46): la puesta al día del catálogo con IGDB completa sola, sin IA, el TitleID o el serial de lo nuevo; también se puede lanzar con «Completar códigos» en Ajustes › Consolas o con `catalogo codigos`. el TitleID o el serial de cada versión con tablas públicas: titledb (Switch), Switchbrew (Switch 2) y el serial de los DAT de libretro (PS1, PS2, PSP, PS3, Vita, 3DS, DS, GBA, N64, GameCube, Wii). Se publican con cada juego (`codes`) y llegan en la base: Otteretro reconoce por ese ID antes que por el nombre.
@@ -20,6 +20,7 @@
 - **Publicar todo** (#41): en Sagas, «Publicar todo» lleva en un solo PR todo lo que cambió respecto de `main`, por ejemplo lo que encontró «Completar las que faltan». Muestra los archivos antes de publicar y, si alguien cambió lo mismo en GitHub, avisa y no lo pisa. Funciona aunque sean miles de archivos.
 
 ### Cambios
+- **Menos Claude: la clase de cada versión sale de IGDB** (#50): original, remaster, remake o port ya lo pone la carga de IGDB, así que el análisis por sagas deja de pedirle a Claude (Haiku) que lo revise juego por juego. Solo lo hace si se pide a propósito. Lo ya analizado queda como estaba.
 - **Una versión solo si cambian los datos** (#44): fusionar un cambio que no toca los datos (formato o código) ya no publica una versión nueva, así Otteretro no lista versiones iguales. El manifiesto lleva un hash de los datos para saberlo, y `cambios.json` cuenta también los juegos con imágenes nuevas o cambiadas.
 - «Buscar imágenes en SteamGridDB e IGDB» guarda las direcciones en vez de bajar las imágenes, y vuelve a consultarlas para traer las que cambiaron.
 
