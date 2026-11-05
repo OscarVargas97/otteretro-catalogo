@@ -13,9 +13,18 @@ public record PublishedCriterion(string Criterion, string? Value, string? Text);
 /// <param name="Codes">Su TitleID o serial (#46): con ellos Otteretro la reconoce por ID. Null si no tiene.</param>
 public record PublishedVersion(long Id, string Platform, string Kind, int? Year, long? IgdbId, long? SteamAppId, List<PublishedCriterion> Criteria,
     List<string>? Codes = null);
+/// <summary>Un port nativo de PC del juego (#69): lo que Otteretro muestra en Novedades y ofrece instalar.</summary>
+/// <param name="Platform">La consola de la que sale el juego.</param>
+/// <param name="Kind">decomp, recomp, remake, port, native-layer o engine.</param>
+/// <param name="Status">complete, playable, beta o experimental.</param>
+/// <param name="Added">Cuándo entró al catálogo (AAAA-MM-DD).</param>
+/// <param name="EmulatorLevel">Cómo corre el juego en <paramref name="Emulator"/>: 3 perfecto, 2 jugable, 1 parcial, 0 no funciona; null sin dato.</param>
+public record PublishedPort(long Id, string Platform, string Project, string Kind, string? Toolchain, string Status, bool Abandoned, string Link, string Source,
+    string Added, string? Emulator, int? EmulatorLevel);
 /// <param name="Images">De dónde se baja cada imagen (#6): cover, hero o logo → dirección en SteamGridDB o IGDB.</param>
+/// <param name="Ports">Sus ports (#69); null si no tiene.</param>
 public record PublishedGame(long Id, string NameEs, string? OriginalName, int? Year, long? IgdbId, long? Popularity, bool Iconic, List<PublishedField> Fields, List<PublishedVersion> Versions,
-    Dictionary<string, string>? Images = null);
+    Dictionary<string, string>? Images = null, List<PublishedPort>? Ports = null);
 public record PublishedStep(int Position, long GameId, long? RecommendedVersionId, string? Reason);
 public record PublishedRoute(long Id, string Kind, string? Rationale, string? Sources, bool Approved, List<PublishedStep> Steps);
 public record PublishedSaga(long Id, string Name, string? IgdbKind, long? IgdbId, bool Iconic, List<PublishedField> Fields, List<PublishedGame> Games, List<PublishedRoute> Routes);
@@ -72,9 +81,17 @@ public static partial class Published
                 codes[v.Id].Any() ? codes[v.Id].Order(StringComparer.Ordinal).ToList() : null));
         var images = c.Query<(long GameId, string Kind, string Url)>("SELECT game_id AS GameId, kind, url FROM image WHERE game_id IN (SELECT id FROM game) ORDER BY game_id, kind")
             .GroupBy(i => i.GameId).ToDictionary(g => g.Key, g => g.ToDictionary(i => i.Kind, i => i.Url));
+        // Solo los ports que cruzaron con un juego (#69): los que quedan sin juego no salen.
+        var ports = c.Query<(long Id, long GameId, string Console, string Project, string Kind, string? Toolchain, string Status, bool Abandoned, string Link, string Source,
+                string Added, string? Emulator, long? Level)>("""
+                SELECT id, game_id, console, project, kind, toolchain, status, abandoned, link, source, added, emulator, emulator_level FROM port
+                WHERE game_id IN (SELECT id FROM game) ORDER BY game_id, id
+                """)
+            .ToLookup(p => p.GameId, p => new PublishedPort(p.Id, p.Console, p.Project, p.Kind, p.Toolchain, p.Status, p.Abandoned, p.Link, p.Source, p.Added, p.Emulator, (int?)p.Level));
         var games = c.Query<(long Id, long? SagaId, string NameEs, string? OriginalName, long? Year, long? IgdbId, long? Popularity, bool Iconic)>(
                 "SELECT id, saga_id AS SagaId, name_es AS NameEs, original_name AS OriginalName, year, igdb_id AS IgdbId, popularity, iconic FROM game ORDER BY id")
-            .ToLookup(g => g.SagaId, g => new PublishedGame(g.Id, g.NameEs, g.OriginalName, (int?)g.Year, g.IgdbId, g.Popularity, g.Iconic, fields[("game", g.Id)].ToList(), versions[g.Id].ToList(), images.GetValueOrDefault(g.Id)));
+            .ToLookup(g => g.SagaId, g => new PublishedGame(g.Id, g.NameEs, g.OriginalName, (int?)g.Year, g.IgdbId, g.Popularity, g.Iconic, fields[("game", g.Id)].ToList(), versions[g.Id].ToList(), images.GetValueOrDefault(g.Id),
+                ports[g.Id].Any() ? ports[g.Id].ToList() : null));
         var steps = c.Query<(long RouteId, long Position, long GameId, long? VersionId, string? Reason)>(
                 "SELECT route_id AS RouteId, position, game_id AS GameId, recommended_version_id AS VersionId, reason FROM route_step ORDER BY route_id, position")
             .ToLookup(s => s.RouteId, s => new PublishedStep((int)s.Position, s.GameId, s.VersionId, s.Reason));
@@ -121,6 +138,8 @@ public static partial class Published
     }
 
     static readonly string[] VersionKinds = ["original", "remaster", "remake"];
+    static readonly string[] PortKinds = ["decomp", "recomp", "remake", "port", "native-layer", "engine"];
+    static readonly string[] PortStatuses = ["complete", "playable", "beta", "experimental"];
 
     /// <summary>Lo que está mal en lo publicado; vacía si se puede compilar. Corre en cada PR.</summary>
     public static List<string> Validate(string folder)
@@ -155,6 +174,17 @@ public static partial class Published
                 if (!SteamGridDb.Kinds.Contains(kind)) errors.Add($"El juego {g.Id} tiene una imagen de tipo desconocido: {kind}.");
                 if (!ImageRefs.IsAllowed(url)) errors.Add($"La imagen {kind} del juego {g.Id} no es de SteamGridDB ni de IGDB: {url}.");
             }
+        Repeated("El port", games.SelectMany(g => g.Ports ?? []).Select(p => p.Id));
+        foreach (var g in games)
+            foreach (var p in g.Ports ?? [])
+            {
+                if (!consoles.Contains(p.Platform)) errors.Add($"El port {p.Id} de «{g.NameEs}» usa una consola que no existe: {p.Platform}.");
+                if (!PortKinds.Contains(p.Kind)) errors.Add($"El port {p.Id} de «{g.NameEs}» tiene un tipo desconocido: {p.Kind}.");
+                if (!PortStatuses.Contains(p.Status)) errors.Add($"El port {p.Id} de «{g.NameEs}» tiene un estado desconocido: {p.Status}.");
+                if (!Uri.TryCreate(p.Link, UriKind.Absolute, out var u) || u.Scheme != Uri.UriSchemeHttps && u.Scheme != Uri.UriSchemeHttp)
+                    errors.Add($"El enlace del port {p.Id} de «{g.NameEs}» no es una dirección web: {p.Link}.");
+                if (p.EmulatorLevel is < 0 or > 3) errors.Add($"El port {p.Id} de «{g.NameEs}» tiene un nivel de emulador fuera de 0 a 3.");
+            }
         foreach (var r in all.Sagas.SelectMany(s => s.Routes))
             foreach (var step in r.Steps)
             {
@@ -171,7 +201,7 @@ public static partial class Published
         return errors;
     }
 
-    static readonly string[] ContentTables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced", "version_code"];
+    static readonly string[] ContentTables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced", "version_code", "port"];
 
     /// <summary>
     /// SHA-256 de todas las filas publicadas, tabla por tabla y ordenadas por todas sus columnas (#44). La base comprimida no sale igual byte a
@@ -237,6 +267,11 @@ public static partial class Published
                     Fields("game", g.Id, g.Fields);
                     foreach (var (kind, url) in g.Images ?? [])
                         c.Execute("INSERT INTO catalog.image (game_id, kind, url) VALUES (@Id, @kind, @url)", new { g.Id, kind, url }, t);
+                    foreach (var p in g.Ports ?? [])
+                        c.Execute("""
+                            INSERT INTO catalog.port (id, console, game, project, kind, toolchain, status, abandoned, link, source, added, emulator, emulator_level, game_id)
+                            VALUES (@Id, @Platform, @NameEs, @Project, @Kind, @Toolchain, @Status, @Abandoned, @Link, @Source, @Added, @Emulator, @EmulatorLevel, @GameId)
+                            """, new { p.Id, p.Platform, g.NameEs, p.Project, p.Kind, p.Toolchain, p.Status, p.Abandoned, p.Link, p.Source, p.Added, p.Emulator, p.EmulatorLevel, GameId = g.Id }, t);
                     foreach (var v in g.Versions)
                     {
                         c.Execute("INSERT INTO catalog.version (id, game_id, platform, kind, year, igdb_id, steam_app_id) VALUES (@Id, @GameId, @Platform, @Kind, @Year, @IgdbId, @SteamAppId)",

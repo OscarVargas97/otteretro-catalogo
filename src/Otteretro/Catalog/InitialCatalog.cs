@@ -9,7 +9,7 @@ namespace Otteretro.Catalog;
 public static class InitialCatalog
 {
     /// <summary>Lo que se trae, con cada tabla antes de las que apuntan a ella. `claude_fingerprint` evita que Claude vuelva a juzgar lo ya juzgado.</summary>
-    static readonly string[] Shared = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "claude_fingerprint", "image", "replaced", "version_code"]; // todo lo publicado (#6, #17, #46)
+    static readonly string[] Shared = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "claude_fingerprint", "image", "replaced", "version_code", "port"]; // todo lo publicado (#6, #17, #46, #69)
 
     /// <summary>Lo que se conserva al traer un catálogo existente, además de lo publicado: el historial y las reglas de Claude son del generador.</summary>
     static readonly string[] Editor = [.. Shared, "learning", "saga_rule"];

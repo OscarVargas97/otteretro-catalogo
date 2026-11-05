@@ -3182,6 +3182,107 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/ports": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["PortsPage"];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/ports/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: number;
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["AssignPortRequest"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["PortsPage"];
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/claude/run-now": {
         parameters: {
             query?: never;
@@ -3607,6 +3708,10 @@ export interface components {
             fullscreen: boolean;
             menuCollapsed: boolean;
         };
+        AssignPortRequest: {
+            /** Format: int64 */
+            gameId: null | number | string;
+        };
         AutomationSuggestion: {
             key: string;
             change: string;
@@ -3902,6 +4007,28 @@ export interface components {
             abbreviation: null | string;
             company: null | string;
             consoleId: null | string;
+        };
+        PortInfo: {
+            /** Format: int64 */
+            id: number | string;
+            console: string;
+            game: string;
+            project: string;
+            kind: string;
+            status: string;
+            link: string;
+            source: string;
+            /** Format: int64 */
+            gameId: null | number | string;
+            gameName: null | string;
+            manual: boolean;
+        };
+        PortsPage: {
+            /** Format: int32 */
+            total: number | string;
+            /** Format: int32 */
+            matched: number | string;
+            unmatched: components["schemas"]["PortInfo"][];
         };
         ProgressInfo: {
             status: string;

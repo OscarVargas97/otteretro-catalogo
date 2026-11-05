@@ -7,10 +7,11 @@ import { request } from "@/lib/client";
 import { useDescribeError } from "@/lib/i18n";
 import { optimistic } from "@/lib/optimistic";
 import Link from "next/link";
-import type { AutomationSuggestion, CatalogTaskInfo, ClaudeSettingsRequest, ClaudeStatus, ConsolesPage, CoversInfo, UsagePage } from "@/lib/types";
+import type { AutomationSuggestion, CatalogTaskInfo, ClaudeSettingsRequest, ClaudeStatus, ConsolesPage, CoversInfo, PortInfo, PortsPage, UsagePage } from "@/lib/types";
+import { useSearch } from "./SagaEditing";
 
 /** Los prompts de cada tarea de Claude, para filtrar el registro de uso (#58). */
-const PROMPTS: Record<string, string> = { cleanup: "depurar-sagas", routes: "ruta-saga", iconic: "iconico", best: "mejor-version", translate: "traducir-descripcion" };
+const PROMPTS: Record<string, string> = { portSearch: "verificar-port", cleanup: "depurar-sagas", routes: "ruta-saga", iconic: "iconico", best: "mejor-version", translate: "traducir-descripcion" };
 
 /**
  * Ajustes › Tareas (#58, decisiones 283 a 285; antes «Claude», #110): el horario común, cada tarea del catálogo en dos grupos
@@ -184,7 +185,7 @@ function AutomationSuggestions() {
   );
 }
 
-const IDS = { claude: ["cleanup", "iconic", "routes", "best", "translate"], script: ["igdb", "codes", "images"] } as const;
+const IDS = { claude: ["portSearch", "cleanup", "iconic", "routes", "best", "translate"], script: ["igdb", "codes", "ports", "images"] } as const;
 
 /** Un grupo de tareas (decisión 283): con Claude o sin Claude, en el orden en que corren de noche. */
 function TaskGroup({ claude }: { claude: boolean }) {
@@ -269,6 +270,7 @@ function TaskRow({ task, busy, onAuto, onDays, onRun }: {
           {task.model && <> · {t("month", { calls: Number(task.monthCalls), cost: money(task.monthCost) })}</>}
           {task.id === "images" && covers.data && <> · {t("covers", { have: Number(covers.data.have), total: Number(covers.data.total) })}</>}
         </p>
+        {task.id === "ports" && <UnmatchedPorts />}
       </div>
       <div className="sentence">
         {task.id === "iconic" && (
@@ -283,6 +285,45 @@ function TaskRow({ task, busy, onAuto, onDays, onRun }: {
           : <button className="ot-btn ot-btn-primary" type="button" disabled={busy || pending} onClick={() => onRun(platform || undefined)}>
               {pending && status ? ts(status, { progress: "…" }) : t("run")}</button>}
       </div>
+    </div>
+  );
+}
+
+/** Los ports que no cruzaron con un juego (#69, decisión 300): quedan en la lista y se asignan a mano. */
+function UnmatchedPorts() {
+  const t = useTranslations("settings.claude.ports");
+  const ports = useQuery({ queryKey: ["ports"], queryFn: () => request<PortsPage>("/api/ports") });
+  const p = ports.data;
+  if (!p || Number(p.total) === 0) return null;
+  return (
+    <details>
+      <summary className="small muted">{t("summary", { total: Number(p.total), matched: Number(p.matched), unmatched: p.unmatched.length })}</summary>
+      {p.unmatched.map((port) => <UnmatchedPort key={port.id} port={port} />)}
+    </details>
+  );
+}
+
+/** Un port sin juego: buscar su juego y asignarlo. Lo asignado a mano el cruce no lo cambia. */
+function UnmatchedPort({ port }: { port: PortInfo }) {
+  const t = useTranslations("settings.claude.ports");
+  const describe = useDescribeError();
+  const cache = useQueryClient();
+  const [text, setText] = useState("");
+  const search = useSearch(text);
+  const assign = useMutation({
+    mutationFn: (gameId: number | string) => request<PortsPage>(`/api/ports/${port.id}`, { method: "PUT", body: JSON.stringify({ gameId: Number(gameId) }) }),
+    onSuccess: (data) => cache.setQueryData(["ports"], data),
+  });
+  return (
+    <div className="field-editor">
+      <span className="small"><b>{port.game}</b> · {port.console} · <a href={port.link} target="_blank" rel="noreferrer">{port.project}</a></span>
+      <input aria-label={t("search")} placeholder={t("search")} value={text} onChange={(e) => setText(e.target.value)} />
+      <div className="chips">
+        {search.data?.games.map((g) => (
+          <button key={g.id} className="chip" type="button" disabled={assign.isPending} onClick={() => assign.mutate(g.id)}>{t("assign", { name: g.name })}</button>
+        ))}
+      </div>
+      {assign.error && <p className="error small" role="alert">{describe(assign.error)}</p>}
     </div>
   );
 }

@@ -199,7 +199,20 @@
         "images": {
           "name": "Imágenes que faltan",
           "text": "Busca en SteamGridDB la portada, el fondo y el logo de los juegos que no los tienen."
+        },
+        "ports": {
+          "name": "Ports",
+          "text": "Baja la lista de ports nativos de PC de Recompendium, suma los extras del catálogo, consulta cómo corre cada juego en las listas de compatibilidad de los emuladores y cruza cada port con su juego."
+        },
+        "portSearch": {
+          "name": "Buscar ports nuevos",
+          "text": "Lee el RSS de Recompendium y listas conocidas (Read Only Memo). Lo que el script no puede confirmar lo verifica Claude en su fuente primaria, una sola vez por enlace. Solo agrega ports: nunca cambia los que ya están."
         }
+      },
+      "ports": {
+        "summary": "{total} ports: {matched} con juego y {unmatched} sin juego",
+        "search": "Buscar su juego",
+        "assign": "Asignar a {name}"
       }
     },
     "consoles": {
@@ -668,6 +681,24 @@
         "console": "{console}: {versions} versiones con {codes} códigos nuevos.",
         "done": "Listo: {versions} versiones con {codes} códigos nuevos."
       }
+    },
+    "ports": {
+      "reading": "Bajando la lista de Recompendium",
+      "compat": "Consultando la compatibilidad en los emuladores",
+      "matching": "Cruzando los ports con los juegos",
+      "search": {
+        "reading": "Leyendo el RSS de Recompendium y las listas conocidas",
+        "verifying": "Claude verifica {done} de {total} candidatos"
+      },
+      "log": {
+        "list": "Recompendium: {count} ports; {added} nuevos en la lista y {removed} quitados.",
+        "done": "Listo: {matched} de {total} ports con juego.",
+        "compatFailed": "No se pudo consultar la compatibilidad de {game} ({console}).",
+        "unreachable": "No se pudo leer {source}: se sigue con lo demás.",
+        "added": "Nuevo: {game} ({console}), {link}.",
+        "rejected": "Descartado: {link}. {reason}",
+        "search": "Listo: {added} ports nuevos y {rejected} descartados; {matched} de {total} con juego."
+      }
     }
   },
   "credentials": {
@@ -770,6 +801,10 @@
       },
       "codes": {
         "fill": "Completar códigos de juego"
+      },
+      "ports": {
+        "refresh": "Bajar la lista de ports",
+        "search": "Buscar ports nuevos"
       }
     },
     "status": {

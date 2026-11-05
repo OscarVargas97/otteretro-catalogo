@@ -90,6 +90,12 @@ public static class ClaudeEndpoints
         api.MapPost("/catalog-tasks/{id}/run", Results<Ok<List<CatalogTaskInfo>>, NotFound, Conflict<ApiError>> (string id, AppSession s, string? console) =>
             Db(s) is not { } db ? NoData() : CatalogTasks.Run(db, id, console) ? TypedResults.Ok(CatalogTasks.List(db)) : TypedResults.NotFound());
 
+        // Los ports (#69): cuántos cruzaron y los que quedaron sin juego, para asignarlos a mano.
+        api.MapGet("/ports", Results<Ok<PortsPage>, Conflict<ApiError>> (AppSession s) =>
+            Db(s) is { } db ? TypedResults.Ok(Ports.Page(db)) : NoData());
+        api.MapPut("/ports/{id:long}", Results<Ok<PortsPage>, NotFound, Conflict<ApiError>> (long id, AssignPortRequest request, AppSession s) =>
+            Db(s) is not { } db ? NoData() : Ports.Assign(db, id, request.GameId) ? TypedResults.Ok(Ports.Page(db)) : TypedResults.NotFound());
+
         api.MapPut("/claude", Results<Ok<ClaudeStatus>, BadRequest<ApiError>, Conflict<ApiError>> (ClaudeSettingsRequest request, AppSession s) =>
         {
             if (Db(s) is not { } db) return NoData();

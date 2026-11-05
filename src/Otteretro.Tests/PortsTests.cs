@@ -1,0 +1,243 @@
+using System.Diagnostics;
+using System.Formats.Tar;
+using System.IO.Compression;
+using System.Net;
+using System.Text;
+using System.Text.Json;
+using Dapper;
+using Microsoft.Data.Sqlite;
+using Otteretro.App;
+using Otteretro.Catalog;
+using Otteretro.Claude;
+
+namespace Otteretro.Tests;
+
+/// <summary>#69 a #72 sin red: la lista de ports, su cruce con los juegos, la compatibilidad, la búsqueda de nuevos y lo publicado.</summary>
+[Collection(nameof(ClaudeRunnerTests))] // comparten ClaudeRunner.Launch, ClaudeBudget.UtcNow y Ports.Handler
+public class PortsTests : IAsyncDisposable
+{
+    readonly Fixture f = new();
+    readonly List<string> calls = [];
+    readonly Func<ProcessStartInfo, string, CancellationToken, Task<ProcessOutput>> real = ClaudeRunner.Launch;
+    readonly Func<DateTime> realNow = ClaudeBudget.UtcNow;
+
+    /// <summary>Lo que responde la red: el tar de Recompendium, las listas de compatibilidad, el RSS y Read Only Memo.</summary>
+    sealed class Net(Dictionary<string, string> yaml) : HttpMessageHandler
+    {
+        public string Rss = "", Memo = "";
+
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
+        {
+            var url = Uri.UnescapeDataString(request.RequestUri!.ToString());
+            if (url.Contains("codeload.github.com")) return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent(Tar(yaml)) });
+            string? body = url switch
+            {
+                _ when url.Contains("dolphin-emu") && url.Contains("Category:5_stars") => """{"query":{"categorymembers":[{"title":"Metroid Prime (GC)"}]}}""",
+                _ when url.Contains("dolphin-emu") => """{"query":{"categorymembers":[]}}""",
+                _ when url.Contains("api.github.com/search/issues") && url.Contains("Banjo-Kazooie") =>
+                    """{"items":[{"title":"4D5307ED - Banjo-Kazooie: Nuts & Bolts","labels":[{"name":"state-playable"}]}]}""",
+                _ when url.Contains("api.github.com/search/issues") => """{"items":[]}""",
+                _ when url.Contains("rss.xml") => Rss,
+                _ when url.Contains("readonlymemo") => Memo,
+                _ => null,
+            };
+            return Task.FromResult(body is null ? new HttpResponseMessage(HttpStatusCode.NotFound) : new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(body, Encoding.UTF8) });
+        }
+
+        static byte[] Tar(Dictionary<string, string> files)
+        {
+            using var output = new MemoryStream();
+            using (var gz = new GZipStream(output, CompressionLevel.Fastest, leaveOpen: true))
+            using (var tar = new TarWriter(gz))
+                foreach (var (path, text) in files)
+                    tar.WriteEntry(new PaxTarEntry(TarEntryType.RegularFile, $"unricopie-abc/src/data/{path}") { DataStream = new MemoryStream(Encoding.UTF8.GetBytes(text)) });
+            return output.ToArray();
+        }
+    }
+
+    readonly Dictionary<string, string> yaml = new()
+    {
+        // Mismo enlace que un extra: queda el de Recompendium.
+        ["recomps/zelda-majoras-mask.yaml"] = "name: \"The Legend of Zelda: Majora's Mask\"\nconsole: n64\nstatus: fully\nrepo: Zelda64Recomp/Zelda64Recomp\ntoolchain: N64Recomp\ndesc:\n  es: \"x\"\n",
+        // En un port, `name` es el proyecto: el juego sale del mapa de `catalogo.mjs`.
+        ["ports/2ship2harkinian.yaml"] = "name: 2 Ship 2 Harkinian\ncategory: decomp-port\nconsole: n64\nstatus: fully\nrepo: HarbourMasters/2ship2harkinian\n",
+        ["recomps/metroid-prime.yaml"] = "name: Metroid Prime\nconsole: gamecube\nstatus: playable\nrepo: a/prime-recomp\ntoolchain: Wiicompiled\n",
+        ["recomps/banjo.yaml"] = "name: \"Banjo-Kazooie: Nuts & Bolts\"\nconsole: x360\nstatus: experimental\nrepo: b/nb-recomp\ntoolchain: ReXGlue\n",
+        ["recomps/rush.yaml"] = "name: Rush 2049\nconsole: arcade\nstatus: beta\nabandoned: true\nrepo: c/rush\n",
+        ["decomps/sm64.yaml"] = "name: Super Mario 64\nconsole: n64\nrepo: n64decomp/sm64\n", // una decompilación sin port no es un port
+    };
+
+    readonly Net net;
+
+    public PortsTests()
+    {
+        net = new Net(yaml);
+        Ports.Handler = net;
+        ClaudeBudget.UtcNow = () => TimeZoneInfo.ConvertTimeToUtc(DateTime.Today.AddHours(3), TimeZoneInfo.Local); // de noche
+        using var c = f.Db.Open();
+        c.Execute("""
+            INSERT INTO catalog.saga (id, name) VALUES (1, 'The Legend of Zelda');
+            INSERT INTO catalog.game (id, saga_id, name_es, original_name) VALUES (10, 1, 'The Legend of Zelda: Majora''s Mask', NULL),
+                (11, NULL, 'Metroid Prime', NULL), (12, NULL, 'Banjo-Kazooie: Baches y cachivaches', 'Banjo-Kazooie: Nuts & Bolts'),
+                (13, NULL, 'Super Metroid', NULL), (14, NULL, 'Doom', NULL), (15, NULL, 'Doom', NULL);
+            INSERT INTO catalog.version (id, game_id, platform, kind) VALUES (20, 10, 'n64', 'original'), (21, 11, 'gc', 'original'),
+                (22, 12, 'x360', 'original'), (23, 13, 'snes', 'original'), (24, 14, 'ps1', 'original'), (25, 15, 'ps1', 'original');
+            """);
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        Ports.Handler = null;
+        ClaudeRunner.Launch = real;
+        ClaudeBudget.UtcNow = realNow;
+        await f.DisposeAsync();
+    }
+
+    T Scalar<T>(string sql)
+    {
+        using var c = f.Db.Open();
+        return c.ExecuteScalar<T>(sql)!;
+    }
+
+    async Task Done(long id)
+    {
+        var task = await f.Run(id);
+        Assert.True(task.Status == "done", $"{task.Status}: {JsonSerializer.Serialize(task.Detail)}");
+    }
+
+    long PortId(string project) => Scalar<long>($"SELECT id FROM port WHERE project = '{project}'");
+
+    /// <summary>#70: la lista sale de Recompendium y los extras, con su compatibilidad; el cruce va aparte y deja visible lo que no cruzó.</summary>
+    [Fact]
+    public async Task TheListIsRefreshedAndMatchedWithTheGames()
+    {
+        await Done(Ports.Enqueue(f.Db));
+
+        Assert.Equal(26, Scalar<long>("SELECT count(*) FROM port")); // 5 de Recompendium y 21 extras (uno ya estaba)
+        Assert.Equal("recompendium", Scalar<string>("SELECT source FROM port WHERE link = 'https://github.com/Zelda64Recomp/Zelda64Recomp'"));
+        using (var c = f.Db.Open())
+        {
+            var matched = c.Query<(string, long)>("SELECT project, game_id FROM port WHERE game_id IS NOT NULL ORDER BY lower(project)").ToList();
+            // Por nombre y consola, también por el nombre original; los dos «Doom» de PS1 no se adivinan.
+            Assert.Equal([("2ship2harkinian", 10L), ("nb-recomp", 12L), ("prime-recomp", 11L), ("Super Metroid Launcher", 13L), ("Zelda64Recomp", 10L)], matched);
+            var compat = c.Query<(string, string?, long?)>("SELECT project, emulator, emulator_level FROM port WHERE project IN ('prime-recomp', 'nb-recomp', 'Zelda64Recomp') ORDER BY lower(project)").ToList();
+            Assert.Equal([("nb-recomp", "Xenia Canary", 2L), ("prime-recomp", "Dolphin", 3L), ("Zelda64Recomp", "ares / simple64", null)], compat);
+            Assert.Equal(("recomp", "N64Recomp", "complete"), c.QuerySingle<(string, string, string)>("SELECT kind, toolchain, status FROM port WHERE project = 'Zelda64Recomp'"));
+            Assert.Equal(("decomp", true), c.QuerySingle<(string, bool)>("SELECT kind, abandoned = 0 FROM port WHERE project = '2ship2harkinian'"));
+        }
+        var page = Ports.Page(f.Db);
+        Assert.Equal((26, 5), (page.Total, page.Matched));
+        Assert.Contains(page.Unmatched, p => p.Project == "PsyDoom");
+        Assert.Contains(page.Unmatched, p => p.Console == "arcade");
+
+        // A mano: el cruce no lo cambia y, si el juego se fusiona, sigue al que lo reemplazó.
+        Assert.True(Ports.Assign(f.Db, PortId("PsyDoom"), 14));
+        Assert.False(Ports.Assign(f.Db, PortId("PsyDoom"), 999));
+        using (var c = f.Db.Open())
+            c.Execute("DELETE FROM version WHERE game_id = 14; DELETE FROM game WHERE id = 14; INSERT INTO replaced (kind, old_id, new_id) VALUES ('game', 14, 15)");
+        Ports.Match(f.Db);
+        Assert.Equal(15, Scalar<long>("SELECT game_id FROM port WHERE project = 'PsyDoom'"));
+
+        // Actualizar: lo que Recompendium ya no tiene se quita; lo demás y su cruce siguen.
+        yaml.Remove("recomps/rush.yaml");
+        await Done(Ports.Enqueue(f.Db));
+        Assert.Equal(0, Scalar<long>("SELECT count(*) FROM port WHERE project = 'rush'"));
+        Assert.Equal(6, Ports.Page(f.Db).Matched);
+        Assert.Equal(15, Scalar<long>("SELECT game_id FROM port WHERE project = 'PsyDoom'"));
+    }
+
+    /// <summary>#72: cada juego publica sus ports, la base compilada los trae y un cambio de ports cambia el hash de contenido.</summary>
+    [Fact]
+    public async Task PortsArePublishedWithTheirGameAndCompiled()
+    {
+        await Done(Ports.Enqueue(f.Db));
+        var folder = f.Tmp["publicado"];
+        Published.Write(f.Db, folder);
+        var saga = File.ReadAllText(Directory.GetFiles(Path.Combine(folder, "sagas"))[0]);
+        Assert.Contains("\"ports\"", saga);
+        Assert.Contains("\"project\": \"2ship2harkinian\"", saga);
+        Assert.DoesNotContain("PsyDoom", string.Concat(Directory.GetFiles(Path.Combine(folder, "sin-saga")).Select(File.ReadAllText))); // sin juego no sale
+        Assert.Empty(Published.Validate(folder));
+
+        var first = Published.Compile(folder, f.Tmp["a.db.gz"]);
+        var plain = f.Tmp["compilado.db"];
+        using (var gz = new GZipStream(File.OpenRead(f.Tmp["a.db.gz"]), CompressionMode.Decompress))
+        using (var file = File.Create(plain)) gz.CopyTo(file);
+        using (var compiled = new SqliteConnection($"Data Source={plain};Pooling=false"))
+        {
+            compiled.Open();
+            Assert.Equal(5, compiled.ExecuteScalar<long>("SELECT count(*) FROM port WHERE game_id IS NOT NULL"));
+            Assert.Equal(3, compiled.ExecuteScalar<long>("SELECT emulator_level FROM port WHERE project = 'prime-recomp'"));
+        }
+
+        Assert.True(Ports.Assign(f.Db, PortId("PsyDoom"), 14));
+        Published.Write(f.Db, folder);
+        Assert.NotEqual(first.Content, Published.Compile(folder, f.Tmp["b.db.gz"]).Content);
+    }
+
+    /// <summary>#71: el RSS entra por script; lo dudoso va a Claude (Sonnet), una sola vez por enlace, y nunca cambia lo que ya está.</summary>
+    [Fact]
+    public async Task NewPortsComeFromTheScriptAndClaudeOnlyVerifiesTheDoubtful()
+    {
+        await Done(Ports.Enqueue(f.Db));
+        net.Rss = """
+            <rss><channel>
+              <item><title>Super Metroid (otro)</title><category>Recomp</category><pubDate>Wed, 04 Nov 2026 15:23:41 GMT</pubDate>
+                <description>SNES · Fully playable · d/sm-recomp. Una recompilación.</description></item>
+              <item><title>Metroid Prime</title><category>Recomp</category><description>GameCube · Experimental · a/prime-recomp. Ya está.</description></item>
+              <item><title>Kart Native</title><category>Port</category><description>Native layer · Playable · e/kartnative. Algo.</description></item>
+              <item><title>NxLibrary</title><category>Tool</category><description>Launcher · Experimental · f/nx. Una herramienta.</description></item>
+            </channel></rss>
+            """;
+        net.Memo = """
+            <h3 id="snes">SNES</h3><a href="https://github.com/N64Recomp/N64Recomp">Github</a><a href="https://github.com/g/smw">Super Mario World</a>
+            <h2>Completed decomps without ports</h2><a href="https://github.com/h/nope">Sin port</a>
+            """;
+        ClaudeRunner.Launch = (start, stdin, ct) =>
+        {
+            calls.Add(stdin);
+            Assert.Contains(PortSearch.Model, start.ArgumentList);
+            var reply = new PortSearch.Reply([
+                new("https://github.com/e/kartnative", false, "", "", "", "port", null, "experimental", "Es una capa para Mac de un juego de Switch, sin build."),
+                new("https://github.com/g/smw", true, "snes", "Super Mario World", "SMW PC", "decomp", null, "playable", "El README dice que se juega con fallos."),
+            ]);
+            return Task.FromResult(new ProcessOutput(0, JsonSerializer.Serialize(new
+            {
+                is_error = false, structured_output = reply, total_cost_usd = 0.01,
+                usage = new { input_tokens = 100, output_tokens = 10, cache_read_input_tokens = 0, cache_creation_input_tokens = 0 },
+            }, JsonSerializerOptions.Web), ""));
+        };
+        using (var c = f.Db.Open()) c.Execute("INSERT INTO game (id, name_es) VALUES (16, 'Super Mario World'); INSERT INTO version (id, game_id, platform, kind) VALUES (26, 16, 'snes', 'original')");
+
+        await Done(PortSearch.Enqueue(f.Db));
+        var input = Assert.Single(calls);
+        Assert.Contains("e/kartnative", input);
+        Assert.DoesNotContain("sm-recomp", input); // el script ya lo sabía
+        Assert.DoesNotContain("h/nope", input);
+        Assert.DoesNotContain("N64Recomp/N64Recomp", input);
+        using (var c = f.Db.Open())
+        {
+            Assert.Equal(("snes", "complete", "2026-11-04"), c.QuerySingle<(string, string, string)>("SELECT console, status, added FROM port WHERE project = 'sm-recomp'"));
+            Assert.Equal(16, c.ExecuteScalar<long>("SELECT game_id FROM port WHERE project = 'SMW PC'"));
+            Assert.Equal(0, c.ExecuteScalar<long>("SELECT count(*) FROM port WHERE link LIKE '%kartnative%'"));
+            Assert.Equal("playable", c.ExecuteScalar<string>("SELECT status FROM port WHERE project = 'prime-recomp'")); // el RSS no lo cambia
+        }
+
+        // Lo ya verificado (entrara o no) no se vuelve a pedir.
+        await Done(PortSearch.Enqueue(f.Db));
+        Assert.Single(calls);
+    }
+
+    [Fact]
+    public void TitlesAreComparedLikeTheScript()
+    {
+        Assert.Equal("super mario odyssey", PortCompat.Norm("Super Mario Odyssey™"));
+        Assert.Equal("pokemon snap", PortCompat.Norm("Pokémon Snap"));
+        Assert.True(PortCompat.Same("Ninja Gaiden II", "Ninja Gaiden 2"));
+        Assert.True(PortCompat.Same("The Legend of Zelda: Twilight Princess", "Legend of Zelda: Twilight Princess (GC)"));
+        Assert.True(PortCompat.Same("Fable II (himdo)", "Fable II"));
+        Assert.False(PortCompat.Same("Halo 3", "Halo: Combat Evolved"));
+        Assert.False(PortCompat.Same("Crackdown", "Crackdown 2"));
+        Assert.Equal(22, Ports.Extras("2026-01-01").Count);
+    }
+}

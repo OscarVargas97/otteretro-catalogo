@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:58166/"
+      "url": "http://127.0.0.1:50465/"
     }
   ],
   "paths": {
@@ -2897,6 +2897,89 @@
         }
       }
     },
+    "/api/ports": {
+      "get": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortsPage"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ports/{id}": {
+      "put": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignPortRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortsPage"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/claude/run-now": {
       "post": {
         "tags": [
@@ -3283,6 +3366,23 @@
           },
           "menuCollapsed": {
             "type": "boolean"
+          }
+        }
+      },
+      "AssignPortRequest": {
+        "required": [
+          "gameId"
+        ],
+        "type": "object",
+        "properties": {
+          "gameId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int64"
           }
         }
       },
@@ -4686,6 +4786,103 @@
               "null",
               "string"
             ]
+          }
+        }
+      },
+      "PortInfo": {
+        "required": [
+          "id",
+          "console",
+          "game",
+          "project",
+          "kind",
+          "status",
+          "link",
+          "source",
+          "gameId",
+          "gameName",
+          "manual"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int64"
+          },
+          "console": {
+            "type": "string"
+          },
+          "game": {
+            "type": "string"
+          },
+          "project": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "gameId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int64"
+          },
+          "gameName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "manual": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PortsPage": {
+        "required": [
+          "total",
+          "matched",
+          "unmatched"
+        ],
+        "type": "object",
+        "properties": {
+          "total": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "matched": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "unmatched": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PortInfo"
+            }
           }
         }
       },

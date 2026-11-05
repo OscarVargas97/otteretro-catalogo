@@ -26,7 +26,7 @@ function useRefresh() {
   };
 }
 
-function useSearch(text: string) {
+export function useSearch(text: string) {
   const query = useDeferredValue(text.trim());
   return useQuery({
     queryKey: ["search", query],
