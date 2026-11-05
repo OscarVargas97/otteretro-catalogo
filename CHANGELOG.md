@@ -32,6 +32,7 @@
 - «Buscar imágenes en SteamGridDB e IGDB» guarda las direcciones en vez de bajar las imágenes, y vuelve a consultarlas para traer las que cambiaron.
 
 ### Arreglos
+- **«database is locked» con dos tareas a la vez** (#69): mientras la puesta al día con IGDB guardaba una página, otra tarea (imágenes, el avance de la misma tarea) fallaba a los 5 segundos. Ahora espera hasta un minuto a que termine.
 - **Las versiones vuelven a salir** (#259, #67): lo fusionado hoy con *squash* no subía el número de versión y la publicación fallaba al repetirlo. Ahora cuentan los PRs fusionados de las dos formas. La versión de datos del catálogo tampoco salía desde el 2 de noviembre, porque `publicar.yml` tenía un error de formato: ya está corregido y además se puede lanzar a mano desde Actions.
 - **Importar un catálogo trae todo** (#46): `catalogo importar` copia también las referencias de imágenes, los reemplazos y los códigos; antes, volver a escribir lo importado perdía las imágenes.
 - **Sin aviso de Steam** (#33): Inicio ya no pide la clave de Steam Web API, que el catálogo no usa: Steam es de Otteretro.

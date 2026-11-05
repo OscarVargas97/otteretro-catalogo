@@ -21,7 +21,9 @@ public sealed class Database(string filePath, string? catalogPath = null)
         {
             DataSource = FilePath,
             ForeignKeys = true,
-            DefaultTimeout = 5,
+            // Con el catálogo adjunto, toda transacción toma la escritura de los dos archivos: una página de IGDB bloquea también
+            // el avance de las demás tareas. Se espera hasta un minuto en vez de fallar con «database is locked» a los 5 s.
+            DefaultTimeout = 60,
         }.ToString());
         connection.Open();
         // Las conexiones vuelven del pool con el catálogo ya adjunto.
@@ -30,7 +32,7 @@ public sealed class Database(string filePath, string? catalogPath = null)
             Directory.CreateDirectory(Path.GetDirectoryName(CatalogPath)!);
             connection.Execute("ATTACH DATABASE @path AS catalog", new { path = CatalogPath });
         }
-        connection.Execute("PRAGMA journal_mode=WAL; PRAGMA catalog.journal_mode=WAL; PRAGMA busy_timeout=5000;");
+        connection.Execute("PRAGMA journal_mode=WAL; PRAGMA catalog.journal_mode=WAL; PRAGMA busy_timeout=60000;");
         return connection;
     }
 }

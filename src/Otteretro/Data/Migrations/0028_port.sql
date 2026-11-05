@@ -11,12 +11,8 @@ CREATE TABLE catalog.port (
     kind TEXT NOT NULL CHECK (kind IN ('decomp', 'recomp', 'remake', 'port', 'native-layer', 'engine')),
     -- La herramienta de un recomp (N64Recomp, ReXGlue…).
     toolchain TEXT,
-    -- complete: 100 % jugable de principio a fin; playable: jugable con fallos; beta; experimental; no-port: hay decompilación,
-    -- pero todavía no un port (se muestra, no se instala).
-    status TEXT NOT NULL CHECK (status IN ('complete', 'playable', 'beta', 'experimental', 'no-port')),
+    status TEXT NOT NULL CHECK (status IN ('complete', 'playable', 'beta', 'experimental')),
     abandoned INTEGER NOT NULL DEFAULT 0,
-    -- Su fuente ya no lo lista: se conserva y se sigue publicando con esa marca.
-    delisted INTEGER NOT NULL DEFAULT 0,
     link TEXT NOT NULL,
     -- recompendium, extra o la página donde lo encontró la búsqueda.
     source TEXT NOT NULL,
