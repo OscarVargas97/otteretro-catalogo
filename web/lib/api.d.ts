@@ -4029,6 +4029,9 @@ export interface components {
             /** Format: int32 */
             matched: number | string;
             unmatched: components["schemas"]["PortInfo"][];
+            byStatus: {
+                [key: string]: number | string;
+            };
         };
         ProgressInfo: {
             status: string;

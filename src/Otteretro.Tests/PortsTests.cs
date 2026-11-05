@@ -64,7 +64,8 @@ public class PortsTests : IAsyncDisposable
         ["recomps/metroid-prime.yaml"] = "name: Metroid Prime\nconsole: gamecube\nstatus: playable\nrepo: a/prime-recomp\ntoolchain: Wiicompiled\n",
         ["recomps/banjo.yaml"] = "name: \"Banjo-Kazooie: Nuts & Bolts\"\nconsole: x360\nstatus: experimental\nrepo: b/nb-recomp\ntoolchain: ReXGlue\n",
         ["recomps/rush.yaml"] = "name: Rush 2049\nconsole: arcade\nstatus: beta\nabandoned: true\nrepo: c/rush\n",
-        ["decomps/sm64.yaml"] = "name: Super Mario 64\nconsole: n64\nrepo: n64decomp/sm64\n", // una decompilación sin port no es un port
+        ["decomps/sm64.yaml"] = "name: Super Mario 64\nconsole: n64\nrepo: n64decomp/sm64\n", // entra como «sin port todavía»
+        ["decomps/sin-consola.yaml"] = "name: Algo\nrepo: x/algo\n", // sin consola no entra
     };
 
     readonly Net net;
@@ -79,9 +80,9 @@ public class PortsTests : IAsyncDisposable
             INSERT INTO catalog.saga (id, name) VALUES (1, 'The Legend of Zelda');
             INSERT INTO catalog.game (id, saga_id, name_es, original_name) VALUES (10, 1, 'The Legend of Zelda: Majora''s Mask', NULL),
                 (11, NULL, 'Metroid Prime', NULL), (12, NULL, 'Banjo-Kazooie: Baches y cachivaches', 'Banjo-Kazooie: Nuts & Bolts'),
-                (13, NULL, 'Super Metroid', NULL), (14, NULL, 'Doom', NULL), (15, NULL, 'Doom', NULL);
+                (13, NULL, 'Super Metroid', NULL), (14, NULL, 'Doom', NULL), (15, NULL, 'Doom', NULL), (17, NULL, 'Super Mario 64', NULL);
             INSERT INTO catalog.version (id, game_id, platform, kind) VALUES (20, 10, 'n64', 'original'), (21, 11, 'gc', 'original'),
-                (22, 12, 'x360', 'original'), (23, 13, 'snes', 'original'), (24, 14, 'ps1', 'original'), (25, 15, 'ps1', 'original');
+                (22, 12, 'x360', 'original'), (23, 13, 'snes', 'original'), (24, 14, 'ps1', 'original'), (25, 15, 'ps1', 'original'), (27, 17, 'n64', 'original');
             """);
     }
 
@@ -113,20 +114,24 @@ public class PortsTests : IAsyncDisposable
     {
         await Done(Ports.Enqueue(f.Db));
 
-        Assert.Equal(26, Scalar<long>("SELECT count(*) FROM port")); // 5 de Recompendium y 21 extras (uno ya estaba)
+        Assert.Equal(27, Scalar<long>("SELECT count(*) FROM port")); // 5 ports y 1 decompilación de Recompendium, y 21 extras (uno ya estaba)
         Assert.Equal("recompendium", Scalar<string>("SELECT source FROM port WHERE link = 'https://github.com/Zelda64Recomp/Zelda64Recomp'"));
         using (var c = f.Db.Open())
         {
             var matched = c.Query<(string, long)>("SELECT project, game_id FROM port WHERE game_id IS NOT NULL ORDER BY lower(project)").ToList();
             // Por nombre y consola, también por el nombre original; los dos «Doom» de PS1 no se adivinan.
-            Assert.Equal([("2ship2harkinian", 10L), ("nb-recomp", 12L), ("prime-recomp", 11L), ("Super Metroid Launcher", 13L), ("Zelda64Recomp", 10L)], matched);
+            Assert.Equal([("2ship2harkinian", 10L), ("nb-recomp", 12L), ("prime-recomp", 11L), ("sm64", 17L), ("sm64coopdx (multijugador)", 17L), ("SM64Plus", 17L), ("Super Metroid Launcher", 13L), ("Zelda64Recomp", 10L)], matched);
+            Assert.Equal(("decomp", "no-port"), c.QuerySingle<(string, string)>("SELECT kind, status FROM port WHERE project = 'sm64'"));
             var compat = c.Query<(string, string?, long?)>("SELECT project, emulator, emulator_level FROM port WHERE project IN ('prime-recomp', 'nb-recomp', 'Zelda64Recomp') ORDER BY lower(project)").ToList();
             Assert.Equal([("nb-recomp", "Xenia Canary", 2L), ("prime-recomp", "Dolphin", 3L), ("Zelda64Recomp", "ares / simple64", null)], compat);
             Assert.Equal(("recomp", "N64Recomp", "complete"), c.QuerySingle<(string, string, string)>("SELECT kind, toolchain, status FROM port WHERE project = 'Zelda64Recomp'"));
             Assert.Equal(("decomp", true), c.QuerySingle<(string, bool)>("SELECT kind, abandoned = 0 FROM port WHERE project = '2ship2harkinian'"));
         }
         var page = Ports.Page(f.Db);
-        Assert.Equal((26, 5), (page.Total, page.Matched));
+        Assert.Equal((27, 8), (page.Total, page.Matched));
+        Assert.Equal(Ports.Statuses, page.ByStatus.Keys); // «100 % jugable» primero, aparte de lo jugable con fallos
+        Assert.Equal(1, page.ByStatus["no-port"]);
+        Assert.Equal(Scalar<long>("SELECT count(*) FROM port WHERE status = 'complete'"), page.ByStatus["complete"]);
         Assert.Contains(page.Unmatched, p => p.Project == "PsyDoom");
         Assert.Contains(page.Unmatched, p => p.Console == "arcade");
 
@@ -138,12 +143,23 @@ public class PortsTests : IAsyncDisposable
         Ports.Match(f.Db);
         Assert.Equal(15, Scalar<long>("SELECT game_id FROM port WHERE project = 'PsyDoom'"));
 
-        // Actualizar: lo que Recompendium ya no tiene se quita; lo demás y su cruce siguen.
+        // Actualizar: lo que Recompendium ya no tiene se conserva marcado «ya no listado»; lo demás y su cruce siguen. La decompilación
+        // que ahora tiene port (mismo enlace) pasa a port con la fecha de hoy: es una novedad.
         yaml.Remove("recomps/rush.yaml");
+        yaml.Remove("decomps/sm64.yaml");
+        yaml["ports/sm64-port.yaml"] = "name: SM64 Port\ncategory: decomp-port\nconsole: n64\nstatus: playable\nrepo: n64decomp/sm64\n";
+        using (var c = f.Db.Open()) c.Execute("UPDATE port SET added = '2020-01-01' WHERE project = 'sm64'");
         await Done(Ports.Enqueue(f.Db));
-        Assert.Equal(0, Scalar<long>("SELECT count(*) FROM port WHERE project = 'rush'"));
-        Assert.Equal(6, Ports.Page(f.Db).Matched);
+        Assert.Equal(1, Scalar<long>("SELECT delisted FROM port WHERE project = 'rush'"));
+        Assert.Equal(9, Ports.Page(f.Db).Matched);
         Assert.Equal(15, Scalar<long>("SELECT game_id FROM port WHERE project = 'PsyDoom'"));
+        using (var c = f.Db.Open())
+            Assert.Equal(("playable", Ports.Today(), 17L), c.QuerySingle<(string, string, long)>("SELECT status, added, game_id FROM port WHERE link = 'https://github.com/n64decomp/sm64'"));
+
+        // Si vuelve a aparecer, deja de estar marcado.
+        yaml["recomps/rush.yaml"] = "name: Rush 2049\nconsole: arcade\nstatus: beta\nrepo: c/rush\n";
+        await Done(Ports.Enqueue(f.Db));
+        Assert.Equal(0, Scalar<long>("SELECT delisted FROM port WHERE project = 'rush'"));
     }
 
     /// <summary>#72: cada juego publica sus ports, la base compilada los trae y un cambio de ports cambia el hash de contenido.</summary>
@@ -157,6 +173,8 @@ public class PortsTests : IAsyncDisposable
         Assert.Contains("\"ports\"", saga);
         Assert.Contains("\"project\": \"2ship2harkinian\"", saga);
         Assert.DoesNotContain("PsyDoom", string.Concat(Directory.GetFiles(Path.Combine(folder, "sin-saga")).Select(File.ReadAllText))); // sin juego no sale
+        Assert.Contains("\"fullyPlayable\": true", saga); // 2ship2harkinian es 100 % jugable: Otteretro no interpreta el estado
+        Assert.Contains("\"status\": \"no-port\"", string.Concat(Directory.GetFiles(Path.Combine(folder, "sin-saga")).Select(File.ReadAllText)));
         Assert.Empty(Published.Validate(folder));
 
         var first = Published.Compile(folder, f.Tmp["a.db.gz"]);
@@ -166,13 +184,26 @@ public class PortsTests : IAsyncDisposable
         using (var compiled = new SqliteConnection($"Data Source={plain};Pooling=false"))
         {
             compiled.Open();
-            Assert.Equal(5, compiled.ExecuteScalar<long>("SELECT count(*) FROM port WHERE game_id IS NOT NULL"));
+            Assert.Equal(8, compiled.ExecuteScalar<long>("SELECT count(*) FROM port WHERE game_id IS NOT NULL"));
+            Assert.Equal(1, compiled.ExecuteScalar<long>("SELECT count(*) FROM port WHERE status = 'no-port'"));
             Assert.Equal(3, compiled.ExecuteScalar<long>("SELECT emulator_level FROM port WHERE project = 'prime-recomp'"));
         }
 
         Assert.True(Ports.Assign(f.Db, PortId("PsyDoom"), 14));
         Published.Write(f.Db, folder);
         Assert.NotEqual(first.Content, Published.Compile(folder, f.Tmp["b.db.gz"]).Content);
+
+        // Un port ya no listado se sigue publicando, con su marca.
+        yaml.Remove("recomps/metroid-prime.yaml");
+        await Done(Ports.Enqueue(f.Db));
+        Published.Write(f.Db, folder);
+        Assert.Contains("\"delisted\": true", string.Concat(Directory.GetFiles(Path.Combine(folder, "sin-saga")).Select(File.ReadAllText)));
+        Assert.Empty(Published.Validate(folder));
+
+        // Lo inválido no se publica: un 100 % jugable que no está completo, o un «sin port todavía» que no es una decompilación.
+        var sagaFile = Directory.GetFiles(Path.Combine(folder, "sagas"))[0];
+        File.WriteAllText(sagaFile, File.ReadAllText(sagaFile).Replace("\"fullyPlayable\": true", "\"fullyPlayable\": false"));
+        Assert.Contains(Published.Validate(folder), e => e.Contains("100 % jugable"));
     }
 
     /// <summary>#71: el RSS entra por script; lo dudoso va a Claude (Sonnet), una sola vez por enlace, y nunca cambia lo que ya está.</summary>

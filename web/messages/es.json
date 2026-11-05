@@ -212,7 +212,14 @@
       "ports": {
         "summary": "{total} ports: {matched} con juego y {unmatched} sin juego",
         "search": "Buscar su juego",
-        "assign": "Asignar a {name}"
+        "assign": "Asignar a {name}",
+        "status": {
+          "complete": "100 % jugable",
+          "playable": "Jugable con fallos",
+          "beta": "Beta",
+          "experimental": "Experimental",
+          "no-port": "Sin port todavía"
+        }
       }
     },
     "consoles": {
@@ -691,7 +698,7 @@
         "verifying": "Claude verifica {done} de {total} candidatos"
       },
       "log": {
-        "list": "Recompendium: {count} ports; {added} nuevos en la lista y {removed} quitados.",
+        "list": "Recompendium: {count} ports y decompilaciones; {added} nuevos en la lista y {delisted} ya no listados (se conservan).",
         "done": "Listo: {matched} de {total} ports con juego.",
         "compatFailed": "No se pudo consultar la compatibilidad de {game} ({console}).",
         "unreachable": "No se pudo leer {source}: se sigue con lo demás.",

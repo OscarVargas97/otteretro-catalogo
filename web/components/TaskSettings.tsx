@@ -298,6 +298,12 @@ function UnmatchedPorts() {
   return (
     <details>
       <summary className="small muted">{t("summary", { total: Number(p.total), matched: Number(p.matched), unmatched: p.unmatched.length })}</summary>
+      {/* «100 % jugable» va aparte de lo jugable con fallos (pedido de la persona, #69). */}
+      <div className="chips">
+        {Object.entries(p.byStatus).map(([status, count]) => (
+          <span key={status} className="ot-badge">{t(`status.${status as "complete"}`)}: {Number(count)}</span>
+        ))}
+      </div>
       {p.unmatched.map((port) => <UnmatchedPort key={port.id} port={port} />)}
     </details>
   );
@@ -316,7 +322,7 @@ function UnmatchedPort({ port }: { port: PortInfo }) {
   });
   return (
     <div className="field-editor">
-      <span className="small"><b>{port.game}</b> · {port.console} · <a href={port.link} target="_blank" rel="noreferrer">{port.project}</a></span>
+      <span className="small"><b>{port.game}</b> · {port.console} · <a href={port.link} target="_blank" rel="noreferrer">{port.project}</a> · <span className="ot-badge">{t(`status.${port.status as "complete"}`)}</span></span>
       <input aria-label={t("search")} placeholder={t("search")} value={text} onChange={(e) => setText(e.target.value)} />
       <div className="chips">
         {search.data?.games.map((g) => (

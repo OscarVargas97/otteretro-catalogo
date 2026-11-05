@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:50465/"
+      "url": "http://127.0.0.1:51539/"
     }
   ],
   "paths": {
@@ -4858,7 +4858,8 @@
         "required": [
           "total",
           "matched",
-          "unmatched"
+          "unmatched",
+          "byStatus"
         ],
         "type": "object",
         "properties": {
@@ -4882,6 +4883,17 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PortInfo"
+            }
+          },
+          "byStatus": {
+            "type": "object",
+            "additionalProperties": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
             }
           }
         }

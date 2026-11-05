@@ -14,7 +14,8 @@ namespace Otteretro.Catalog;
 public record PortInfo(long Id, string Console, string Game, string Project, string Kind, string Status, string Link, string Source, long? GameId, string? GameName, bool Manual);
 
 /// <param name="Unmatched">Los que quedaron sin juego, para asignarlos a mano.</param>
-public record PortsPage(int Total, int Matched, List<PortInfo> Unmatched);
+/// <param name="ByStatus">Cuántos hay de cada estado (complete es «100 % jugable»), en el orden de <see cref="Ports.Statuses"/>.</param>
+public record PortsPage(int Total, int Matched, List<PortInfo> Unmatched, Dictionary<string, int> ByStatus);
 
 /// <param name="GameId">El juego; null lo deja otra vez en manos del cruce.</param>
 public record AssignPortRequest(long? GameId);
@@ -61,9 +62,9 @@ public static partial class Ports
         List<Entry> list;
         await using (var stream = await http.GetStreamAsync(Recompendium, ct))
             list = await ReadRecompendium(stream, today, ct);
-        var (added, removed) = Save(run.Db, list, "recompendium");
+        var (added, delisted) = Save(run.Db, list, "recompendium");
         var (extras, _) = Save(run.Db, Extras(today), null);
-        run.Log(ApiError.Of("ports.log.list", ("count", list.Count.ToString()), ("added", (added + extras).ToString()), ("removed", removed.ToString())));
+        run.Log(ApiError.Of("ports.log.list", ("count", list.Count.ToString()), ("added", (added + extras).ToString()), ("delisted", delisted.ToString())));
 
         run.Report(30, ApiError.Of("ports.compat"));
         await PortCompat.Fill(run.Db, http, run.Credentials.Read("github.token"), (m, l) => run.Log(m, l), ct);
@@ -73,7 +74,7 @@ public static partial class Ports
         run.Log(ApiError.Of("ports.log.done", ("total", total.ToString()), ("matched", matched.ToString())));
     }
 
-    internal static string Today() => DateTime.UtcNow.ToString("yyyy-MM-dd");
+    public static string Today() => DateTime.UtcNow.ToString("yyyy-MM-dd");
 
     static string Key(string link) => link.Trim().TrimEnd('/').ToLowerInvariant();
 
@@ -87,14 +88,15 @@ public static partial class Ports
 
     /// <summary>
     /// Suma a la lista lo que no estaba (por enlace) y pone al día lo que es de la misma fuente; lo de otra fuente no se toca. Con
-    /// <paramref name="replace"/>, lo de esa fuente que ya no viene se quita. Nunca toca el cruce.
+    /// <paramref name="replace"/>, lo de esa fuente que ya no viene no se quita: queda marcado «ya no listado» y vuelve si reaparece.
+    /// Una decompilación que pasa a tener port toma la fecha de hoy: es una novedad. Nunca toca el cruce.
     /// </summary>
-    internal static (int Added, int Removed) Save(Database db, List<Entry> entries, string? replace)
+    internal static (int Added, int Delisted) Save(Database db, List<Entry> entries, string? replace)
     {
         using var c = db.Open();
         var existing = c.Query<(long Id, string Link, string Source)>("SELECT id, link, source FROM port").ToDictionary(r => Key(r.Link));
         var seen = new HashSet<string>();
-        int added = 0, removed = 0;
+        int added = 0, delisted = 0;
         using var t = c.BeginTransaction();
         foreach (var e in entries)
         {
@@ -111,14 +113,16 @@ public static partial class Ports
             else if (row.Source == e.Source)
                 c.Execute("""
                     UPDATE port SET console = @Console, game = @Game, project = @Project, kind = @Kind, toolchain = @Toolchain, status = @Status,
-                        abandoned = @Abandoned, link = @Link, igdb_id = @IgdbId WHERE id = @Id
-                    """, new { e.Console, e.Game, e.Project, e.Kind, e.Toolchain, e.Status, e.Abandoned, e.Link, e.IgdbId, row.Id }, t);
+                        abandoned = @Abandoned, link = @Link, igdb_id = @IgdbId, delisted = 0,
+                        added = CASE WHEN status = 'no-port' AND @Status <> 'no-port' THEN @Added ELSE added END
+                    WHERE id = @Id
+                    """, new { e.Console, e.Game, e.Project, e.Kind, e.Toolchain, e.Status, e.Abandoned, e.Link, e.IgdbId, e.Added, row.Id }, t);
         }
         if (replace is not null && entries.Count > 0)
             foreach (var (key, row) in existing.Where(x => x.Value.Source == replace && !seen.Contains(x.Key)))
-                removed += c.Execute("DELETE FROM port WHERE id = @Id", new { row.Id }, t);
+                delisted += c.Execute("UPDATE port SET delisted = 1 WHERE id = @Id AND delisted = 0", new { row.Id }, t);
         t.Commit();
-        return (added, removed);
+        return (added, delisted);
     }
 
     record ExtraEntry(string Console, string Game, string Project, string Kind, string? Toolchain, string Status, string Link, string Source, string? Added);
@@ -141,6 +145,13 @@ public static partial class Ports
         "genesis" => "megadrive",
         _ => key,
     };
+
+    /// <summary>
+    /// Los estados, de mejor a peor. <see cref="Complete"/> es «100 % jugable»: se juega de principio a fin sin problemas importantes.
+    /// playable es jugable con fallos; <see cref="NoPort"/>, una decompilación sin port todavía (se muestra, no se instala).
+    /// </summary>
+    public const string Complete = "complete", NoPort = "no-port";
+    public static readonly string[] Statuses = [Complete, "playable", "beta", "experimental", NoPort];
 
     internal static string Status(string? status) => status?.ToLowerInvariant() switch
     {
@@ -186,7 +197,10 @@ public static partial class Ports
 
     static readonly Dictionary<string, string> PortKind = new() { ["decomp-port"] = "decomp", ["fan-remake"] = "remake", ["native-layer"] = "native-layer" };
 
-    /// <summary>El tar de `Nio03/unricopie`: cada YAML de `src/data/ports` y `src/data/recomps` es un port.</summary>
+    /// <summary>
+    /// El tar de `Nio03/unricopie`: cada YAML de `src/data/ports` y `src/data/recomps` es un port, y cada decompilación de `src/data/decomps`
+    /// con consola entra como «sin port todavía». Las decompilaciones van al final: si comparten enlace con un port, gana el port.
+    /// </summary>
     internal static async Task<List<Entry>> ReadRecompendium(Stream gz, string today, CancellationToken ct)
     {
         var list = new List<Entry>();
@@ -199,6 +213,14 @@ public static partial class Ports
             var (isPort, slug) = (m.Groups[1].Value == "ports", m.Groups[2].Value);
             var name = y.GetValueOrDefault("name") ?? slug;
             var repo = y.GetValueOrDefault("repo");
+            if (m.Groups[1].Value == "decomps")
+            {
+                var decomp = y.GetValueOrDefault("repoUrl") ?? (repo is { Length: > 0 } ? $"https://github.com/{repo}" : null) ?? y.GetValueOrDefault("homepage");
+                if (y.GetValueOrDefault("console") is { } console && decomp is not null)
+                    list.Add(new Entry(ConsoleId(console), name, (repo ?? slug).Split('/')[^1], "decomp", null, NoPort, y.GetValueOrDefault("abandoned") == "true",
+                        decomp, "recompendium", today));
+                continue;
+            }
             var link = y.GetValueOrDefault("repoUrl") ?? (repo is { Length: > 0 } ? $"https://github.com/{repo}" : null) ?? y.GetValueOrDefault("homepage")
                 ?? $"{RecompendiumSite}{(isPort ? "port" : "recomp")}/{slug}";
             var project = isPort ? PortProject.GetValueOrDefault(slug) ?? (repo is { Length: > 0 } ? repo.Split('/')[^1] : name) : (repo ?? slug).Split('/')[^1];
@@ -206,7 +228,7 @@ public static partial class Ports
                 isPort ? PortKind.GetValueOrDefault(y.GetValueOrDefault("category") ?? "", "port") : "recomp", isPort ? null : y.GetValueOrDefault("toolchain"),
                 Status(y.GetValueOrDefault("status")), y.GetValueOrDefault("abandoned") == "true", link, "recompendium", today));
         }
-        return list;
+        return list.OrderBy(e => e.Status == NoPort).ToList();
     }
 
     /// <summary>Solo las claves escalares de primer nivel, como `catalogo.mjs`.</summary>
@@ -270,7 +292,9 @@ public static partial class Ports
         var unmatched = c.Query<(long Id, string Console, string Game, string Project, string Kind, string Status, string Link, string Source, bool Manual)>(
                 "SELECT id, console, game, project, kind, status, link, source, manual FROM port WHERE game_id IS NULL ORDER BY console, game, project")
             .Select(p => new PortInfo(p.Id, p.Console, p.Game, p.Project, p.Kind, p.Status, p.Link, p.Source, null, null, p.Manual)).ToList();
-        return new((int)c.ExecuteScalar<long>("SELECT count(*) FROM port"), (int)c.ExecuteScalar<long>("SELECT count(*) FROM port WHERE game_id IS NOT NULL"), unmatched);
+        var counts = c.Query<(string Status, long Count)>("SELECT status, count(*) FROM port GROUP BY status").ToDictionary(r => r.Status, r => (int)r.Count);
+        return new((int)c.ExecuteScalar<long>("SELECT count(*) FROM port"), (int)c.ExecuteScalar<long>("SELECT count(*) FROM port WHERE game_id IS NOT NULL"), unmatched,
+            Statuses.ToDictionary(s => s, s => counts.GetValueOrDefault(s)));
     }
 
     /// <summary>Asignar a mano (o soltar, con null): false si el port o el juego no existen.</summary>
@@ -285,7 +309,7 @@ public static partial class Ports
         return true;
     }
 
-    [GeneratedRegex(@"/src/data/(ports|recomps)/([^/]+)\.yaml$")]
+    [GeneratedRegex(@"/src/data/(ports|recomps|decomps)/([^/]+)\.yaml$")]
     private static partial Regex DataFile();
 
     [GeneratedRegex(@"^([A-Za-z]+):[ \t]*(.*?)\r?$", RegexOptions.Multiline)]
