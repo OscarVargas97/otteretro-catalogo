@@ -33,6 +33,8 @@ public sealed class TaskQueue(AppSession session, Events events, FolderMoveServi
         ["igdb.popularity"] = Catalog.IgdbImport.Popularity,
         ["sgdb.images"] = Catalog.SteamGridDb.Images,
         [Catalog.GameCodes.Kind] = Catalog.GameCodes.Fill,
+        [Catalog.Ports.Kind] = Catalog.Ports.Refresh,
+        [Catalog.PortSearch.Kind] = Catalog.PortSearch.Run,
         ["sgdb.webp"] = Catalog.SteamGridDb.Convert,
         ["catalog.extra"] = Catalog.ExtraSources.Run,
         [Claude.CatalogCleanup.Kind] = Claude.CatalogCleanup.Run,

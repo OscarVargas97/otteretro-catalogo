@@ -199,6 +199,26 @@
         "images": {
           "name": "Missing images",
           "text": "Looks up the cover, background and logo on SteamGridDB for games that lack them."
+        },
+        "ports": {
+          "name": "Ports",
+          "text": "Downloads the list of native PC ports from Recompendium, adds the catalog extras, checks how each game runs in the emulators' compatibility lists and matches each port with its game."
+        },
+        "portSearch": {
+          "name": "Find new ports",
+          "text": "Reads the Recompendium RSS and known lists (Read Only Memo). What the script cannot confirm, Claude verifies at its primary source, once per link. It only adds ports: it never changes existing ones."
+        }
+      },
+      "ports": {
+        "summary": "{total} ports: {matched} with a game and {unmatched} without one",
+        "search": "Find its game",
+        "assign": "Assign to {name}",
+        "status": {
+          "complete": "100% playable",
+          "playable": "Playable with issues",
+          "beta": "Beta",
+          "experimental": "Experimental",
+          "no-port": "No port yet"
         }
       }
     },
@@ -668,6 +688,24 @@
         "console": "{console}: {versions} versions with {codes} new codes.",
         "done": "Done: {versions} versions with {codes} new codes."
       }
+    },
+    "ports": {
+      "reading": "Downloading the Recompendium list",
+      "compat": "Checking emulator compatibility",
+      "matching": "Matching ports with games",
+      "search": {
+        "reading": "Reading the Recompendium RSS and the known lists",
+        "verifying": "Claude is verifying {done} of {total} candidates"
+      },
+      "log": {
+        "list": "Recompendium: {count} ports and decompilations; {added} new in the list and {delisted} no longer listed (kept).",
+        "done": "Done: {matched} of {total} ports with a game.",
+        "compatFailed": "Could not check the compatibility of {game} ({console}).",
+        "unreachable": "Could not read {source}: continuing with the rest.",
+        "added": "New: {game} ({console}), {link}.",
+        "rejected": "Rejected: {link}. {reason}",
+        "search": "Done: {added} new ports and {rejected} rejected; {matched} of {total} with a game."
+      }
     }
   },
   "credentials": {
@@ -770,6 +808,10 @@
       },
       "codes": {
         "fill": "Fill in game codes"
+      },
+      "ports": {
+        "refresh": "Download the port list",
+        "search": "Find new ports"
       }
     },
     "status": {

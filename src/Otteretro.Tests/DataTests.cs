@@ -239,3 +239,61 @@ public class DataTests
         Assert.Contains(c.EffectiveLanguage, AppConfig.Languages);
     }
 }
+
+/// <summary>#69: una base que ya aplicó la 0028 de ports conserva sus filas al pasar por la 0029 (no-port y delisted).</summary>
+public class PortMigrationTests
+{
+    [Fact]
+    public void ThePortTableKeepsItsRowsAndGainsTheNewColumns()
+    {
+        using var tmp = new TempDir();
+        var db = new Database(tmp["otteretro.db"]);
+        Migrations.Apply(db, until: "0028_port.sql");
+        using (var c = db.Open())
+            c.Execute("""
+                INSERT INTO port (id, console, game, project, kind, status, link, source, added, emulator, emulator_level, game_id, manual)
+                VALUES (7, 'n64', 'Super Mario 64', 'sm64coopdx', 'decomp', 'complete', 'https://github.com/coop-deluxe/sm64coopdx', 'extra', '2026-10-14', 'ares', NULL, 42, 1)
+                """);
+
+        Assert.Equal(1, Migrations.Apply(db));
+
+        using var after = db.Open();
+        Assert.Equal(("sm64coopdx", "complete", 42L, true, false), after.QuerySingle<(string, string, long, bool, bool)>(
+            "SELECT project, status, game_id, manual, delisted FROM port WHERE id = 7"));
+        after.Execute("""
+            INSERT INTO port (console, game, project, kind, status, link, source, added, delisted)
+            VALUES ('n64', 'Super Mario 64', 'sm64', 'decomp', 'no-port', 'https://github.com/n64decomp/sm64', 'recompendium', '2026-11-05', 1)
+            """);
+        Assert.Equal(1, after.ExecuteScalar<long>("SELECT count(*) FROM catalog.sqlite_master WHERE type = 'index' AND name = 'port_game'"));
+    }
+}
+
+/// <summary>
+/// Un cambio largo del catálogo (una página de IGDB) bloquea también la base propia: en una conexión con el catálogo adjunto, toda
+/// transacción toma la escritura de los dos archivos. Las demás tareas esperan a que termine en vez de fallar con «database is locked».
+/// </summary>
+public class LockTests
+{
+    [Fact]
+    public async Task AWriterWaitsForALongCatalogTransaction()
+    {
+        using var tmp = new TempDir();
+        var db = new Database(tmp["otteretro.db"]);
+        Migrations.Apply(db);
+        var hold = TimeSpan.FromSeconds(6); // más que los 5 s de antes
+        var started = new TaskCompletionSource();
+        var writer = Task.Run(() =>
+        {
+            using var c = db.Open();
+            using var t = c.BeginTransaction();
+            c.Execute("INSERT INTO catalog.saga (name) VALUES ('Larga')", transaction: t);
+            started.SetResult();
+            Thread.Sleep(hold);
+            t.Commit();
+        });
+        await started.Task;
+        using (var other = db.Open())
+            other.Execute("INSERT INTO task (kind, status, progress, created_at) VALUES ('demo', 'queued', 0, '2026-11-05')"); // la base propia
+        await writer;
+    }
+}
