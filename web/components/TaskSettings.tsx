@@ -244,12 +244,26 @@ function TaskRow({ task, busy, onAuto, onDays, onRun }: {
   const covers = useQuery({ queryKey: ["covers"], queryFn: () => request<CoversInfo>("/api/covers"), enabled: task.id === "images" });
   const status = (task.lastStatus ?? null) as "queued" | null;
   const pending = ["queued", "running", "paused"].includes(task.lastStatus ?? "");
+  const ago = task.lastAt ? format.relativeTime(new Date(task.lastAt), new Date()) : "";
+  // Cuánto le queda (#76): al día, N pendientes o, en IGDB, cuándo le toca según su intervalo.
+  const due = task.dueAt ? Math.ceil((new Date(task.dueAt).getTime() - Date.now()) / 86_400_000) : 0;
+  const hasWork = task.pending != null ? Number(task.pending) > 0 : task.days != null && due <= 0;
+  const left = task.pending != null
+    ? (Number(task.pending) > 0 ? t(`pending.${id as "translate"}`, { count: Number(task.pending) }) : t("upToDate"))
+    : task.days != null ? (due > 0 ? t("dueIn", { days: due }) : t("dueToday")) : null;
+  const last = task.lastStatus == null || !task.lastAt ? t("never")
+    : pending ? t("last", { status: ts(status!, { progress: "…" }), ago })
+      : t(`lastRun.${(task.lastStatus === "done" ? "done" : task.lastStatus === "error" ? "error" : "canceled")}`, { ago });
   const commitDays = () => { if (days != null && days >= 1 && days !== Number(task.days)) onDays(days); setDays(null); };
   const money = (n: number | string) => format.number(Number(n), { style: "currency", currency: "USD", maximumFractionDigits: 2 });
   return (
     <div className="version-row" style={{ alignItems: "flex-start" }}>
-      <div style={{ flex: 1 }}>
-        <strong>{t(`task.${id}.name`)}</strong> {task.model && <span className="ot-badge">{task.model}</span>}
+      <details style={{ flex: 1 }}>
+        <summary>
+          <strong>{t(`task.${id}.name`)}</strong> {task.model && <span className="ot-badge">{task.model}</span>}
+          {left && <span className="small"> · {left}</span>}
+          <span className={`small ${task.lastStatus === "error" ? "error" : "muted"}`}> · {last}</span>
+        </summary>
         <p className="small muted" style={{ margin: "2px 0" }}>{t(`task.${id}.text`)}</p>
         <div className="sentence small">
           <label className="sentence">
@@ -266,12 +280,11 @@ function TaskRow({ task, busy, onAuto, onDays, onRun }: {
           )}
         </div>
         <p className="small muted" style={{ margin: 0 }}>
-          {status && task.lastAt ? t("last", { status: ts(status, { progress: "…" }), ago: format.relativeTime(new Date(task.lastAt), new Date()) }) : t("never")}
-          {task.model && <> · {t("month", { calls: Number(task.monthCalls), cost: money(task.monthCost) })}</>}
+          {task.model ? t("month", { calls: Number(task.monthCalls), cost: money(task.monthCost) }) : null}
           {task.id === "images" && covers.data && <> · {t("covers", { have: Number(covers.data.have), total: Number(covers.data.total) })}</>}
         </p>
         {task.id === "ports" && <UnmatchedPorts />}
-      </div>
+      </details>
       <div className="sentence">
         {task.id === "iconic" && (
           // «Reevaluar sagas icónicas» (F2.15): de una consola, olvida lo dicho y lo vuelve a pedir.
@@ -282,7 +295,7 @@ function TaskRow({ task, busy, onAuto, onDays, onRun }: {
         )}
         {task.id === "images" && covers.data && !covers.data.hasKey
           ? <Link className="ot-btn" href="/settings/?s=credentials">{t("noKey")}</Link>
-          : <button className="ot-btn ot-btn-primary" type="button" disabled={busy || pending} onClick={() => onRun(platform || undefined)}>
+          : <button className={hasWork ? "ot-btn ot-btn-primary" : "ot-btn"} type="button" disabled={busy || pending} onClick={() => onRun(platform || undefined)}>
               {pending && status ? ts(status, { progress: "…" }) : t("run")}</button>}
       </div>
     </div>

@@ -271,6 +271,7 @@ public sealed class TaskQueue(AppSession session, Events events, FolderMoveServi
             c.Execute($"UPDATE task SET status = @status, attempts = MAX(attempts - 1, 0), finished_at = {(status == "canceled" ? "@now" : "NULL")} WHERE id = @id",
                 new { id, status, now = Now() });
         Log(db, id, ApiError.Of($"tasks.log.{status}"));
+        if (status == "canceled") Catalog.CatalogTasks.RecordLast(db, id, status, null);
         Publish(db, id);
     }
 
@@ -324,6 +325,7 @@ public sealed class TaskQueue(AppSession session, Events events, FolderMoveServi
         using (var c = db.Open())
             c.Execute("UPDATE task SET status = @status, detail = COALESCE(@detail, detail), progress = CASE WHEN @status = 'done' THEN 100 ELSE progress END, finished_at = @now WHERE id = @id",
                 new { id, status, detail = detail is null ? null : JsonSerializer.Serialize(detail, JsonSerializerOptions.Web), now = Now() });
+        Catalog.CatalogTasks.RecordLast(db, id, status, elapsed);
         Publish(db, id);
         if (elapsed >= LongTask) Notify.TaskFinished(session.Config.EffectiveLanguage, status == "error");
     }
