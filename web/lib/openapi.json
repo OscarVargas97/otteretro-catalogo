@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:51539/"
+      "url": "http://127.0.0.1:50165/"
     }
   ],
   "paths": {
@@ -3489,6 +3489,21 @@
               "string"
             ],
             "format": "double"
+          },
+          "pending": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "dueAt": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },

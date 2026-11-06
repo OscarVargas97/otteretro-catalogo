@@ -3733,6 +3733,9 @@ export interface components {
             monthCalls: number | string;
             /** Format: double */
             monthCost: number | string;
+            /** Format: int32 */
+            pending?: null | number | string;
+            dueAt?: null | string;
         };
         CatalogTaskRequest: {
             auto?: null | boolean;
