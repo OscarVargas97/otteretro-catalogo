@@ -37,7 +37,7 @@ public record PublishedConsole(string Id, string Name, string? Company, string? 
 public record PublishedReplacement(string Kind, long OldId, long? NewId);
 /// <param name="Sha256">Lo que verifica la app antes de usar la base.</param>
 /// <param name="Content">Hash de los datos, fila por fila y en orden (#44): igual si los datos son iguales, aunque el archivo comprimido no lo sea.</param>
-public record PublishedManifest(string Sha256, int Sagas, int Games, int Versions, string? Content = null);
+public record PublishedManifest(string Sha256, int Sagas, int Games, int Versions, string? Content = null, string[]? Schema = null);
 
 /// <summary>
 /// El catálogo publicado (#3, decisiones 253 y 254): un JSON por saga, que se puede revisar en un PR, y la base compilada que baja la app. Los ids son permanentes:
@@ -301,9 +301,13 @@ public static partial class Published
             }
             var plain = Path.Combine(work, "publicado.db");
             string content;
+            string[] schema;
             using (var c = db.Open())
             {
                 content = ContentHash(c);
+                // #79: "tabla.columna" de cada tabla de la base publicada, ordenadas (ordinal); no cuenta sqlite_* ni catalog_migration.
+                schema = c.Query<string>("SELECT m.name || '.' || p.name FROM catalog.sqlite_master m, pragma_table_info(m.name, 'catalog') p WHERE m.type = 'table' AND substr(m.name, 1, 7) <> 'sqlite_' AND m.name <> 'catalog_migration'")
+                    .Order(StringComparer.Ordinal).ToArray();
                 c.Execute("VACUUM catalog INTO @plain", new { plain });
             }
             Microsoft.Data.Sqlite.SqliteConnection.ClearAllPools();
@@ -312,7 +316,7 @@ public static partial class Published
             using (var gz = new GZipStream(File.Create(output), CompressionLevel.SmallestSize))
                 input.CopyTo(gz);
             using var stream = File.OpenRead(output);
-            return new(Convert.ToHexStringLower(SHA256.HashData(stream)), all.Sagas.Count, games.Count, games.Sum(g => g.Game.Versions.Count), content);
+            return new(Convert.ToHexStringLower(SHA256.HashData(stream)), all.Sagas.Count, games.Count, games.Sum(g => g.Game.Versions.Count), content, schema);
         }
         finally
         {
