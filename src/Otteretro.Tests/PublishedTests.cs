@@ -102,6 +102,13 @@ public class PublishedTests
             // #6: la referencia viaja; la de un juego que ya no existe, no.
             Assert.Equal("https://cdn2.steamgriddb.com/grid/ffx.png", c.ExecuteScalar<string>("SELECT url FROM image WHERE game_id = 10 AND kind = 'cover'"));
             Assert.Equal(1, c.ExecuteScalar<long>("SELECT count(*) FROM image"));
+            // #79: el manifiesto lista, ordenadas, las "tabla.columna" de la base publicada (sin catalog_migration).
+            Assert.Contains("game.id", manifest.Schema!);
+            Assert.Contains("image.url", manifest.Schema!);
+            Assert.DoesNotContain(manifest.Schema!, x => x.StartsWith("catalog_migration.") || x.StartsWith("sqlite_"));
+            Assert.Equal(manifest.Schema!.Order(StringComparer.Ordinal), manifest.Schema);
+            Assert.Equal(c.Query<string>("SELECT m.name || '.' || p.name FROM sqlite_master m, pragma_table_info(m.name) p WHERE m.type = 'table' AND m.name NOT LIKE 'sqlite%' AND m.name <> 'catalog_migration'").Order(StringComparer.Ordinal), manifest.Schema);
+            Assert.Contains("\"schema\":[\"", System.Text.Json.JsonSerializer.Serialize(manifest, System.Text.Json.JsonSerializerOptions.Web));
         }
     }
 
