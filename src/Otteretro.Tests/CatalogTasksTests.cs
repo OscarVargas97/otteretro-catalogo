@@ -93,4 +93,36 @@ public class CatalogTasksTests : IAsyncDisposable
         Assert.NotNull(images.LastAt);
         Assert.Null(CatalogTasks.List(f.Db).Single(t => t.Id == "translate").LastStatus);
     }
+
+    /// <summary>#76: cada tarea cuenta lo que le falta con el criterio de lo que encola; sin pendiente contable, null.</summary>
+    [Fact]
+    public void EachTaskCountsWhatIsMissing()
+    {
+        using (var c = f.Db.Open())
+            c.Execute("""
+                INSERT INTO saga (id, name) VALUES (1, 'Zelda');
+                INSERT INTO game (id, saga_id, name_es, original_name, year, popularity) VALUES (10, 1, 'Ocarina', 'Ocarina of Time', 1998, 500), (11, 1, 'Majora', 'Majora', 2000, 500);
+                INSERT INTO version (id, game_id, platform, kind, year) VALUES (100, 10, 'n64', 'original', 1998), (101, 10, '3ds', 'original', 2011), (110, 11, 'n64', 'original', 2000);
+                INSERT INTO field_value (entity, entity_id, field, value, source) VALUES ('game', 10, 'summary', 'Link wakes up.', 'igdb');
+                INSERT INTO version_code (version_id, code) VALUES (110, 'NUS-NZSE');
+                INSERT INTO catalog.image (game_id, kind, url) VALUES (11, 'cover', 'x'), (11, 'hero', 'x'), (11, 'logo', 'x');
+                INSERT INTO port (console, game, project, kind, status, link, source, added) VALUES ('n64', 'Ocarina', 'Shipwright', 'decomp', 'complete', 'https://x', 'extra', '2026-11-01');
+                """);
+        int? Pending(string id) => CatalogTasks.List(f.Db).Single(t => t.Id == id).Pending;
+
+        Assert.Equal(2, Pending("codes")); // 3 versiones, 1 con código
+        Assert.Equal(1, Pending("ports"));
+        Assert.Equal(1, Pending("images")); // el juego 11 tiene las 3
+        Assert.Equal(1, Pending("translate"));
+        Assert.Equal(1, Pending("iconic")); // popularidad en la franja dudosa: va a Claude
+        Assert.Equal(1, Pending("best")); // originales de años distintos: se discute
+        Assert.Equal(0, Pending("routes")); // la saga no es icónica
+        Assert.Null(Pending("igdb"));
+        Assert.Null(Pending("portSearch"));
+        Assert.Null(Pending("cleanup"));
+
+        ClaudeFingerprint.Save(f.Db, SagaAnalysis.Translate, "game:10", new { id = 10L, name = "Ocarina of Time", summary = "Link wakes up." });
+        Assert.Equal(0, Pending("translate")); // «Al día»
+        Assert.Null(CatalogTasks.List(f.Db).Single(t => t.Id == "igdb").DueAt); // nunca se actualizó: toca ya
+    }
 }

@@ -13,7 +13,10 @@ namespace Otteretro.Catalog;
 /// <param name="Days">Solo IGDB: cada cuántos días se pone al día.</param>
 /// <param name="LastStatus">queued, running, paused, done, error o canceled de su última ejecución; null si nunca corrió.</param>
 /// <param name="MonthCalls">Llamadas a Claude de este mes (decisión 285).</param>
-public record CatalogTaskInfo(string Id, string? Model, bool Auto, int? Days, string? LastStatus, string? LastAt, int MonthCalls, double MonthCost);
+/// <param name="Pending">Cuánto le falta (juegos, versiones, sagas o ports según la tarea; 0 = al día); null si no tiene un pendiente contable.</param>
+/// <param name="DueAt">Solo IGDB: cuándo le toca según su intervalo (pasada o hoy = toca ya).</param>
+public record CatalogTaskInfo(string Id, string? Model, bool Auto, int? Days, string? LastStatus, string? LastAt, int MonthCalls, double MonthCost,
+    int? Pending = null, string? DueAt = null);
 
 public record CatalogTaskRequest(bool? Auto = null, int? Days = null);
 
@@ -24,10 +27,18 @@ public record CatalogTaskRequest(bool? Auto = null, int? Days = null);
 public static class CatalogTasks
 {
     /// <param name="Prompts">Los prompts de Claude que usa: para su gasto del mes y para reconocer sus ejecuciones.</param>
-    record Def(string Id, string? Model, string[] Prompts, Func<Database, string?, long?> Enqueue, Func<string, string?, bool> Is);
+    /// <param name="Count">Lo que le falta, con el mismo criterio de «falta» que lo que encola; null si no tiene un pendiente contable.</param>
+    record Def(string Id, string? Model, string[] Prompts, Func<Database, string?, long?> Enqueue, Func<string, string?, bool> Is, Func<Database, int>? Count = null);
 
     static Def Step(string id, string prompt, string model) =>
-        new(id, model, [prompt], (db, _) => SagaAnalysis.EnqueueStep(db, prompt), (kind, data) => kind == SagaAnalysis.Kind && SagaAnalysis.IsStep(data, prompt));
+        new(id, model, [prompt], (db, _) => SagaAnalysis.EnqueueStep(db, prompt), (kind, data) => kind == SagaAnalysis.Kind && SagaAnalysis.IsStep(data, prompt),
+            db => SagaAnalysis.CountPending(db, prompt));
+
+    static int Scalar(Database db, string sql)
+    {
+        using var c = db.Open();
+        return (int)c.ExecuteScalar<long>(sql);
+    }
 
     /// <summary>
     /// Todas, en el orden de la noche: IGDB → códigos → ports → buscar ports → depurar → icónico → rutas → mejor versión → traducir → imágenes. Icónico va
@@ -36,18 +47,22 @@ public static class CatalogTasks
     static readonly Def[] All =
     [
         new("igdb", null, [], (db, _) => IgdbImport.EnqueueRefresh(db), (kind, _) => kind == "igdb.refresh"),
-        new("codes", null, [], (db, _) => GameCodes.Enqueue(db), (kind, _) => kind == GameCodes.Kind),
+        new("codes", null, [], (db, _) => GameCodes.Enqueue(db), (kind, _) => kind == GameCodes.Kind, GameCodes.Missing),
         // Ports (#69): la lista y su cruce con los juegos, después de IGDB; la búsqueda de nuevos solo pide a Claude lo dudoso.
-        new("ports", null, [], (db, _) => Ports.Enqueue(db), (kind, _) => kind == Ports.Kind),
+        new("ports", null, [], (db, _) => Ports.Enqueue(db), (kind, _) => kind == Ports.Kind,
+            db => Scalar(db, "SELECT count(*) FROM port WHERE game_id IS NULL")), // «ports sin juego», como Ports.Page
         new("portSearch", PortSearch.Model, [PortSearch.PromptName], (db, _) => PortSearch.Enqueue(db), (kind, _) => kind == PortSearch.Kind),
         new("cleanup", "haiku", [CatalogCleanup.PromptName], (db, _) => CatalogCleanup.Enqueue(db), (kind, _) => kind == CatalogCleanup.Kind),
         // Con consola, «Reevaluar sagas icónicas» (F2.15): olvida lo dicho de esas sagas y lo vuelve a pedir.
         new("iconic", "sonnet", [SagaAnalysis.Iconic], (db, console) => console is null ? SagaAnalysis.EnqueueStep(db, SagaAnalysis.Iconic) : SagaAnalysis.EnqueueIconic(db, console),
-            (kind, data) => kind == SagaAnalysis.Kind && SagaAnalysis.IsStep(data, SagaAnalysis.Iconic)),
+            (kind, data) => kind == SagaAnalysis.Kind && SagaAnalysis.IsStep(data, SagaAnalysis.Iconic),
+            db => SagaAnalysis.CountPending(db, SagaAnalysis.Iconic)),
         Step("routes", SagaAnalysis.Routes, "sonnet"),
         Step("best", SagaAnalysis.BestVersion, "sonnet"),
         Step("translate", SagaAnalysis.Translate, "haiku"),
-        new("images", null, [], (db, _) => SteamGridDb.Enqueue(db, missing: true), (kind, _) => kind == "sgdb.images"),
+        new("images", null, [], (db, _) => SteamGridDb.Enqueue(db, missing: true), (kind, _) => kind == "sgdb.images",
+            // Los mismos juegos que recorre con missing: menos de 3 imágenes.
+            db => Scalar(db, "SELECT count(*) FROM game g WHERE (SELECT count(*) FROM catalog.image i WHERE i.game_id = g.id) < 3")),
     ];
 
     static string Setting(string id) => $"task.auto.{id}";
@@ -86,7 +101,8 @@ public static class CatalogTasks
                 : stored.TryGetValue(LastSetting(t.Id), out var json) && JsonSerializer.Deserialize<LastRun>(json, JsonSerializerOptions.Web) is { } r ? (r.Status, r.At)
                 : ((string?)null, (string?)null);
             return new CatalogTaskInfo(t.Id, t.Model, !off.Contains(Setting(t.Id)), t.Id == "igdb" ? days : null, last.Item1, last.Item2,
-                (int)t.Prompts.Sum(p => usage.GetValueOrDefault(p).Calls), t.Prompts.Sum(p => usage.GetValueOrDefault(p).Cost));
+                (int)t.Prompts.Sum(p => usage.GetValueOrDefault(p).Calls), t.Prompts.Sum(p => usage.GetValueOrDefault(p).Cost),
+                t.Count?.Invoke(db), t.Id == "igdb" ? IgdbImport.DueAt(db, days) : null);
         }).ToList();
     }
 

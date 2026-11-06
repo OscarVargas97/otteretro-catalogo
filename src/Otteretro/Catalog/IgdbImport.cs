@@ -154,6 +154,15 @@ public static class IgdbImport
 
     public const string RefreshDays = "catalog.refreshDays", LastRefresh = "catalog.lastRefresh";
 
+    /// <summary>Cuándo le toca la próxima actualización: la última (o la carga de una consola) más los días; null si nunca hubo (toca ya).</summary>
+    public static string? DueAt(Database db, int days)
+    {
+        using var c = db.Open();
+        var last = c.ExecuteScalar<string?>("SELECT value FROM setting WHERE machine_id = '' AND name = @LastRefresh", new { LastRefresh })
+            ?? c.ExecuteScalar<string?>("SELECT max(refreshed_at) FROM console");
+        return last is null ? null : DateTime.Parse(last, null, System.Globalization.DateTimeStyles.AdjustToUniversal).AddDays(days).ToString("O");
+    }
+
     /// <summary>Encola la actualización si pasaron los días configurados (7 por defecto) y no hay una pendiente. La lanza el horario de noche.</summary>
     public static long? RefreshIfDue(Database db, DateTime nowUtc)
     {

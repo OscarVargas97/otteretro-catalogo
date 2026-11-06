@@ -136,6 +136,31 @@ public static class SagaAnalysis
         }
     }
 
+    /// <summary>
+    /// Cuánto le queda a un paso (#76): lo mismo que `Step` mandaría a Claude, con el mismo criterio de «cambió» (huella), sin escribir nada.
+    /// Lo que deciden las reglas o el puntaje (icónico evidente, mejor versión clara) no cuenta: no es trabajo de Claude.
+    /// </summary>
+    // ponytail: carga el catálogo entero en tandas de 500 sagas; si Ajustes se pone lento, cachear el conteo.
+    public static int CountPending(Database db, string prompt)
+    {
+        var n = 0;
+        foreach (var ids in Start(db, null).Pending.Chunk(500))
+        {
+            var sagas = Load(db, ids.ToList());
+            n += prompt switch
+            {
+                Iconic => IconicByScore(db, sagas, apply: false).Count(s => ClaudeFingerprint.Changed(db, Iconic, $"saga:{s.Id}", SagaInput(s))),
+                Routes => sagas.Count(s => s.Games.Count > 1 && s.Iconic && ClaudeFingerprint.Changed(db, Routes, $"saga:{s.Id}", SagaInput(s))),
+                BestVersion => BestByRules(db, sagas.SelectMany(s => s.Games).Where(g => g.Versions.Count > 1).ToList(), apply: false)
+                    .Count(g => ClaudeFingerprint.Changed(db, BestVersion, $"game:{g.Id}", VersionInput(g))),
+                Translate => sagas.SelectMany(s => s.Games).Count(g => g.Summary is not null
+                    && ClaudeFingerprint.Changed(db, Translate, $"game:{g.Id}", new { id = g.Id, name = g.Name, summary = g.Summary })),
+                _ => 0,
+            };
+        }
+        return n;
+    }
+
     static Job Start(Database db, HashSet<long>? only)
     {
         using var c = db.Open();
@@ -210,7 +235,7 @@ public static class SagaAnalysis
     /// (huella) o espera en Revisar sigue por Claude, y lo que marcaste a mano no se toca. En una saga icónica por puntaje, sus
     /// juegos icónicos son los que pasan el umbral (al menos el más votado, hasta 5).
     /// </summary>
-    static List<Saga> IconicByScore(Database db, List<Saga> sagas)
+    static List<Saga> IconicByScore(Database db, List<Saga> sagas, bool apply = true)
     {
         var unclear = new List<Saga>();
         using var c = db.Open();
@@ -229,6 +254,7 @@ public static class SagaAnalysis
                 unclear.Add(saga);
                 continue;
             }
+            if (!apply) continue;
             var iconic = top >= IconicFrom;
             var games = iconic ? saga.Games.OrderByDescending(g => g.Popularity).Where((g, i) => i == 0 || g.Popularity >= IconicFrom).Take(5).Select(g => g.Id).ToList() : [];
             c.Execute("UPDATE saga SET iconic = @iconic WHERE id = @Id", new { iconic, saga.Id }, t);
@@ -250,7 +276,7 @@ public static class SagaAnalysis
     /// Medido en el catálogo real (2026-11-04): ~19.000 de ~28.500 juegos con más de una versión salen por reglas. Respeta lo ya
     /// analizado: lo que Claude ya vio (huella) o espera en Revisar sigue por Claude. Queda en `field_value` con fuente `script`.
     /// </summary>
-    static List<Game> BestByRules(Database db, List<Game> games)
+    static List<Game> BestByRules(Database db, List<Game> games, bool apply = true)
     {
         var disputed = new List<Game>();
         using var c = db.Open();
@@ -270,6 +296,7 @@ public static class SagaAnalysis
                 disputed.Add(game);
                 continue;
             }
+            if (!apply) continue;
             c.Execute("""
                 INSERT INTO field_value (entity, entity_id, field, value, source) VALUES ('game', @Id, 'best_version', @best, 'script')
                 ON CONFLICT (entity, entity_id, field, source) DO UPDATE SET value = excluded.value

@@ -44,6 +44,15 @@ public static partial class GameCodes
     /// <summary>Las pruebas lo apagan: sin <see cref="Handler"/> no se baja nada (titledb pesa 90 MB).</summary>
     public static bool Download { get; set; } = true;
 
+    /// <summary>Versiones de las consolas que `Map` cruza (titledb, Switchbrew y los DAT) que todavía no tienen código (#76).</summary>
+    public static int Missing(Database db)
+    {
+        using var c = db.Open();
+        return (int)c.ExecuteScalar<long>("""
+            SELECT count(*) FROM version v WHERE v.platform IN @consoles AND NOT EXISTS (SELECT 1 FROM version_code vc WHERE vc.version_id = v.id)
+            """, new { consoles = Dats.Keys.Append("switch").Append("switch2").ToArray() });
+    }
+
     public static long Enqueue(Database db)
     {
         using var c = db.Open();
