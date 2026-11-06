@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Text.Json;
 using Dapper;
 using Otteretro.App;
 using Otteretro.Claude;
@@ -50,6 +51,19 @@ public static class CatalogTasks
     ];
 
     static string Setting(string id) => $"task.auto.{id}";
+    static string LastSetting(string id) => $"task.last.{id}";
+
+    /// <summary>La última ejecución de cada tarea (#75, decisión D3): aparte de la cola, así «Limpiar terminadas» no la borra.</summary>
+    record LastRun(string Status, string At, double? Seconds, int Progress);
+
+    /// <summary>Al terminar una tarea (hecha, con error o cancelada), la anota como la última de su tarea del catálogo. Una que no es del catálogo no se anota.</summary>
+    public static void RecordLast(Database db, long taskId, string status, TimeSpan? elapsed)
+    {
+        using var c = db.Open();
+        if (c.QuerySingleOrDefault<(string Kind, string? Data, long Progress, string? At)>("SELECT kind, data, progress, finished_at FROM task WHERE id = @taskId", new { taskId }) is not { Kind: not null } row) return;
+        if (All.FirstOrDefault(t => t.Is(row.Kind, row.Data)) is not { } task) return;
+        ClaudeBudget.Set(c, LastSetting(task.Id), JsonSerializer.Serialize(new LastRun(status, row.At ?? DateTime.UtcNow.ToString("O"), elapsed?.TotalSeconds, (int)row.Progress), JsonSerializerOptions.Web));
+    }
 
     public static List<CatalogTaskInfo> List(Database db)
     {
@@ -62,13 +76,16 @@ public static class CatalogTasks
         var usage = c.Query<(string Prompt, long Calls, double Cost)>(
             "SELECT prompt, count(*), COALESCE(SUM(cost_usd), 0.0) FROM claude_usage WHERE created_at >= @month GROUP BY prompt", new { month })
             .ToDictionary(u => u.Prompt);
-        // ponytail: las últimas 1.000 tareas alcanzan para hallar la última de cada una; si no aparece, «nunca corrió».
-        var tasks = c.Query<(string Kind, string? Data, string Status, string At)>(
-            "SELECT kind, data, status, coalesce(finished_at, created_at) FROM task ORDER BY id DESC LIMIT 1000").ToList();
+        var stored = c.Query<(string Name, string Value)>("SELECT name, value FROM setting WHERE machine_id = '' AND name LIKE 'task.last.%'").ToDictionary(x => x.Name, x => x.Value);
+        // Lo que está en la cola o corriendo manda sobre la última ejecución guardada.
+        var active = c.Query<(string Kind, string? Data, string Status, string At)>(
+            "SELECT kind, data, status, created_at FROM task WHERE status IN ('queued', 'running', 'paused') ORDER BY id DESC").ToList();
         return All.Select(t =>
         {
-            var last = tasks.FirstOrDefault(x => t.Is(x.Kind, x.Data));
-            return new CatalogTaskInfo(t.Id, t.Model, !off.Contains(Setting(t.Id)), t.Id == "igdb" ? days : null, last.Status, last.At,
+            var last = active.FirstOrDefault(x => t.Is(x.Kind, x.Data)) is { Status: not null } a ? (a.Status, a.At)
+                : stored.TryGetValue(LastSetting(t.Id), out var json) && JsonSerializer.Deserialize<LastRun>(json, JsonSerializerOptions.Web) is { } r ? (r.Status, r.At)
+                : ((string?)null, (string?)null);
+            return new CatalogTaskInfo(t.Id, t.Model, !off.Contains(Setting(t.Id)), t.Id == "igdb" ? days : null, last.Item1, last.Item2,
                 (int)t.Prompts.Sum(p => usage.GetValueOrDefault(p).Calls), t.Prompts.Sum(p => usage.GetValueOrDefault(p).Cost));
         }).ToList();
     }

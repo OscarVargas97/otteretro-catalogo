@@ -1,4 +1,5 @@
 using Dapper;
+using Otteretro.App;
 using Otteretro.Catalog;
 using Otteretro.Claude;
 
@@ -74,5 +75,22 @@ public class CatalogTasksTests : IAsyncDisposable
         var routes = CatalogTasks.List(f.Db).Single(t => t.Id == "routes");
         Assert.Equal((2, 0.75), (routes.MonthCalls, routes.MonthCost));
         Assert.Equal(0, CatalogTasks.List(f.Db).Single(t => t.Id == "iconic").MonthCalls);
+    }
+
+    /// <summary>#75: la última ejecución vive aparte de la cola; «Limpiar terminadas» no la borra.</summary>
+    [Fact]
+    public async Task TheLastRunSurvivesClearingTheQueue()
+    {
+        CatalogTasks.Run(f.Db, "images");
+        long id;
+        using (var c = f.Db.Open()) id = c.ExecuteScalar<long>("SELECT id FROM task WHERE kind = 'sgdb.images'");
+        var done = await f.Run(id); // sin clave de SteamGridDB termina con error
+        Assert.Equal("error", done.Status);
+
+        Assert.Equal(1, TaskQueue.Clear(f.Db));
+        var images = CatalogTasks.List(f.Db).Single(t => t.Id == "images");
+        Assert.Equal("error", images.LastStatus);
+        Assert.NotNull(images.LastAt);
+        Assert.Null(CatalogTasks.List(f.Db).Single(t => t.Id == "translate").LastStatus);
     }
 }
