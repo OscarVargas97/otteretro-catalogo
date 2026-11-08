@@ -2,7 +2,7 @@
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useFormatter, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { request } from "@/lib/client";
 import { useDescribeError } from "@/lib/i18n";
 import { optimistic } from "@/lib/optimistic";
@@ -187,15 +187,40 @@ function AutomationSuggestions() {
 
 const IDS = { claude: ["portSearch", "cleanup", "iconic", "routes", "best", "translate"], script: ["igdb", "codes", "ports", "images"] } as const;
 
+const ACTIVE = ["queued", "running", "paused"];
+
+/** La lista de tareas, liviana (#83): se refresca cada 5 s si algo corre y cada 30 s si no. */
+function useCatalogTasks() {
+  return useQuery({
+    queryKey: ["catalog-tasks"], queryFn: () => request<CatalogTaskInfo[]>("/api/catalog-tasks"),
+    refetchInterval: (q) => (q.state.data?.some((x) => x.lastStatus === "queued" || x.lastStatus === "running") ? 5_000 : 30_000),
+  });
+}
+
+/**
+ * Cuánto le falta a cada tarea (#83): recorre el catálogo, así que va aparte de la lista y fuera de su refresco. Se pide al abrir
+ * la sección y otra vez cuando una tarea deja la cola (terminó, falló o se canceló).
+ */
+function usePendingCounts(tasks: CatalogTaskInfo[] | undefined) {
+  const counts = useQuery({ queryKey: ["catalog-tasks-pending"], queryFn: () => request<Record<string, number>>("/api/catalog-tasks/pending") });
+  const active = tasks?.filter((x) => ACTIVE.includes(x.lastStatus ?? "")).map((x) => x.id).join(",");
+  const before = useRef(active);
+  const { refetch } = counts;
+  useEffect(() => {
+    const left = before.current?.split(",").some((id) => id && !active?.split(",").includes(id));
+    before.current = active;
+    if (left) refetch();
+  }, [active, refetch]);
+  return counts;
+}
+
 /** Un grupo de tareas (decisión 283): con Claude o sin Claude, en el orden en que corren de noche. */
 function TaskGroup({ claude }: { claude: boolean }) {
   const t = useTranslations("settings.claude");
   const describe = useDescribeError();
   const cache = useQueryClient();
-  const tasks = useQuery({
-    queryKey: ["catalog-tasks"], queryFn: () => request<CatalogTaskInfo[]>("/api/catalog-tasks"),
-    refetchInterval: (q) => (q.state.data?.some((x) => x.lastStatus === "queued" || x.lastStatus === "running") ? 5_000 : 30_000),
-  });
+  const tasks = useCatalogTasks();
+  const counts = usePendingCounts(tasks.data);
   const done = (data: CatalogTaskInfo[]) => {
     cache.setQueryData(["catalog-tasks"], data);
     cache.invalidateQueries({ queryKey: ["tasks"] });
@@ -221,7 +246,7 @@ function TaskGroup({ claude }: { claude: boolean }) {
       <h2>{t(claude ? "groupClaude" : "groupScript")}</h2>
       {tasks.isError && <p className="error small" role="alert">{describe(tasks.error)}</p>}
       {list.map((task) => (
-        <TaskRow key={task.id} task={task} busy={run.isPending}
+        <TaskRow key={task.id} task={task} pendingCount={counts.data?.[task.id]} busy={run.isPending}
           onAuto={(auto) => save.mutate({ id: task.id, auto })} onDays={(days) => save.mutate({ id: task.id, days })}
           onRun={(console) => run.mutate({ id: task.id, console })} />
       ))}
@@ -231,8 +256,8 @@ function TaskGroup({ claude }: { claude: boolean }) {
 }
 
 /** Una tarea: qué hace, si corre sola en el horario, su última ejecución, lo del mes y «Ejecutar». */
-function TaskRow({ task, busy, onAuto, onDays, onRun }: {
-  task: CatalogTaskInfo; busy: boolean; onAuto: (auto: boolean) => void; onDays: (days: number) => void; onRun: (console?: string) => void;
+function TaskRow({ task, pendingCount, busy, onAuto, onDays, onRun }: {
+  task: CatalogTaskInfo; pendingCount?: number | string; busy: boolean; onAuto: (auto: boolean) => void; onDays: (days: number) => void; onRun: (console?: string) => void;
 }) {
   const t = useTranslations("settings.claude");
   const ts = useTranslations("tasks.status");
@@ -243,13 +268,12 @@ function TaskRow({ task, busy, onAuto, onDays, onRun }: {
   const consoles = useQuery({ queryKey: ["consoles", "settings"], queryFn: () => request<ConsolesPage>("/api/consoles/settings"), enabled: task.id === "iconic" });
   const covers = useQuery({ queryKey: ["covers"], queryFn: () => request<CoversInfo>("/api/covers"), enabled: task.id === "images" });
   const status = (task.lastStatus ?? null) as "queued" | null;
-  const pending = ["queued", "running", "paused"].includes(task.lastStatus ?? "");
+  const pending = ACTIVE.includes(task.lastStatus ?? "");
   const ago = task.lastAt ? format.relativeTime(new Date(task.lastAt), new Date()) : "";
   // Cuánto le queda (#76): al día, N pendientes o, en IGDB, cuándo le toca según su intervalo.
   const due = task.dueAt ? Math.ceil((new Date(task.dueAt).getTime() - Date.now()) / 86_400_000) : 0;
-  const hasWork = task.pending != null ? Number(task.pending) > 0 : task.days != null && due <= 0;
-  const left = task.pending != null
-    ? (Number(task.pending) > 0 ? t(`pending.${id as "translate"}`, { count: Number(task.pending) }) : t("upToDate"))
+  const left = pendingCount != null
+    ? (Number(pendingCount) > 0 ? t(`pending.${id as "translate"}`, { count: Number(pendingCount) }) : t("upToDate"))
     : task.days != null ? (due > 0 ? t("dueIn", { days: due }) : t("dueToday")) : null;
   const last = task.lastStatus == null || !task.lastAt ? t("never")
     : pending ? t("last", { status: ts(status!, { progress: "…" }), ago })
@@ -295,7 +319,7 @@ function TaskRow({ task, busy, onAuto, onDays, onRun }: {
         )}
         {task.id === "images" && covers.data && !covers.data.hasKey
           ? <Link className="ot-btn" href="/settings/?s=credentials">{t("noKey")}</Link>
-          : <button className={hasWork ? "ot-btn ot-btn-primary" : "ot-btn"} type="button" disabled={busy || pending} onClick={() => onRun(platform || undefined)}>
+          : <button className="ot-btn" type="button" disabled={busy || pending} onClick={() => onRun(platform || undefined)}>
               {pending && status ? ts(status, { progress: "…" }) : t("run")}</button>}
       </div>
     </div>

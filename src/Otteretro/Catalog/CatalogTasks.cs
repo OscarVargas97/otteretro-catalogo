@@ -13,10 +13,9 @@ namespace Otteretro.Catalog;
 /// <param name="Days">Solo IGDB: cada cuántos días se pone al día.</param>
 /// <param name="LastStatus">queued, running, paused, done, error o canceled de su última ejecución; null si nunca corrió.</param>
 /// <param name="MonthCalls">Llamadas a Claude de este mes (decisión 285).</param>
-/// <param name="Pending">Cuánto le falta (juegos, versiones, sagas o ports según la tarea; 0 = al día); null si no tiene un pendiente contable.</param>
 /// <param name="DueAt">Solo IGDB: cuándo le toca según su intervalo (pasada o hoy = toca ya).</param>
 public record CatalogTaskInfo(string Id, string? Model, bool Auto, int? Days, string? LastStatus, string? LastAt, int MonthCalls, double MonthCost,
-    int? Pending = null, string? DueAt = null);
+    string? DueAt = null);
 
 public record CatalogTaskRequest(bool? Auto = null, int? Days = null);
 
@@ -61,8 +60,12 @@ public static class CatalogTasks
         Step("best", SagaAnalysis.BestVersion, "sonnet"),
         Step("translate", SagaAnalysis.Translate, "haiku"),
         new("images", null, [], (db, _) => SteamGridDb.Enqueue(db, missing: true), (kind, _) => kind == "sgdb.images",
-            // Los mismos juegos que recorre con missing: menos de 3 imágenes.
-            db => Scalar(db, "SELECT count(*) FROM game g WHERE (SELECT count(*) FROM catalog.image i WHERE i.game_id = g.id) < 3")),
+            // Los mismos juegos que recorre con missing: menos de 3 imágenes. Un GROUP BY, no una subconsulta por juego (#83).
+            db => Scalar(db, """
+                SELECT count(*) FROM game g
+                LEFT JOIN (SELECT game_id, count(*) AS n FROM catalog.image GROUP BY game_id) i ON i.game_id = g.id
+                WHERE COALESCE(i.n, 0) < 3
+                """)),
     ];
 
     static string Setting(string id) => $"task.auto.{id}";
@@ -102,15 +105,22 @@ public static class CatalogTasks
                 : ((string?)null, (string?)null);
             return new CatalogTaskInfo(t.Id, t.Model, !off.Contains(Setting(t.Id)), t.Id == "igdb" ? days : null, last.Item1, last.Item2,
                 (int)t.Prompts.Sum(p => usage.GetValueOrDefault(p).Calls), t.Prompts.Sum(p => usage.GetValueOrDefault(p).Cost),
-                t.Count?.Invoke(db), t.Id == "igdb" ? IgdbImport.DueAt(db, days) : null);
+                t.Id == "igdb" ? IgdbImport.DueAt(db, days) : null);
         }).ToList();
     }
+
+    /// <summary>
+    /// Cuánto le falta a cada tarea con un pendiente contable (juegos, versiones, sagas o ports; 0 = al día), aparte de <see cref="List"/>
+    /// porque recorre el catálogo (#83): la lista llega al instante y esto se pide al abrir y al terminar una tarea.
+    /// </summary>
+    public static Dictionary<string, int> PendingCounts(Database db) =>
+        All.Where(t => t.Count is not null).ToDictionary(t => t.Id, t => t.Count!(db));
 
     /// <summary>«Ejecutar» (decisión 283): la lanza ya, también fuera del horario. False si no existe.</summary>
     public static bool Run(Database db, string id, string? console = null)
     {
         if (All.FirstOrDefault(t => t.Id == id) is not { } task) return false;
-        if (Pending(db, task)) return true; // ya está en la cola
+        if (Queued(db, task)) return true; // ya está en la cola
         if (task.Model is not null) ClaudeBudget.AllowNow(db);
         task.Enqueue(db, console);
         return true;
@@ -137,14 +147,14 @@ public static class CatalogTasks
         {
             using (var c = db.Open())
                 if (c.ExecuteScalar<string?>("SELECT value FROM setting WHERE machine_id = '' AND name = @name", new { name = Setting(task.Id) }) == "0") continue;
-            if (Pending(db, task)) continue;
+            if (Queued(db, task)) continue;
             var id = task.Id == "igdb" ? IgdbImport.RefreshIfDue(db, ClaudeBudget.UtcNow()) : task.Enqueue(db, null);
             first ??= id;
         }
         return first;
     }
 
-    static bool Pending(Database db, Def task)
+    static bool Queued(Database db, Def task)
     {
         using var c = db.Open();
         return c.Query<(string Kind, string? Data)>("SELECT kind, data FROM task WHERE status IN ('queued', 'running', 'paused')")

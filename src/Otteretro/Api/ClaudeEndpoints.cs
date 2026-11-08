@@ -85,6 +85,8 @@ public static class ClaudeEndpoints
         // Ajustes › Tareas (#58): cada tarea del catálogo, su interruptor del horario y «Ejecutar».
         api.MapGet("/catalog-tasks", Results<Ok<List<CatalogTaskInfo>>, Conflict<ApiError>> (AppSession s) =>
             Db(s) is { } db ? TypedResults.Ok(CatalogTasks.List(db)) : NoData());
+        api.MapGet("/catalog-tasks/pending", Results<Ok<Dictionary<string, int>>, Conflict<ApiError>> (AppSession s) =>
+            Db(s) is { } db ? TypedResults.Ok(CatalogTasks.PendingCounts(db)) : NoData());
         api.MapPut("/catalog-tasks/{id}", Results<Ok<List<CatalogTaskInfo>>, NotFound, Conflict<ApiError>> (string id, CatalogTaskRequest request, AppSession s) =>
             Db(s) is not { } db ? NoData() : CatalogTasks.Save(db, id, request) ? TypedResults.Ok(CatalogTasks.List(db)) : TypedResults.NotFound());
         api.MapPost("/catalog-tasks/{id}/run", Results<Ok<List<CatalogTaskInfo>>, NotFound, Conflict<ApiError>> (string id, AppSession s, string? console) =>

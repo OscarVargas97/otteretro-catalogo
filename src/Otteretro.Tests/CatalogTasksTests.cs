@@ -108,7 +108,7 @@ public class CatalogTasksTests : IAsyncDisposable
                 INSERT INTO catalog.image (game_id, kind, url) VALUES (11, 'cover', 'x'), (11, 'hero', 'x'), (11, 'logo', 'x');
                 INSERT INTO port (console, game, project, kind, status, link, source, added) VALUES ('n64', 'Ocarina', 'Shipwright', 'decomp', 'complete', 'https://x', 'extra', '2026-11-01');
                 """);
-        int? Pending(string id) => CatalogTasks.List(f.Db).Single(t => t.Id == id).Pending;
+        int? Pending(string id) => CatalogTasks.PendingCounts(f.Db).TryGetValue(id, out var n) ? n : null;
 
         Assert.Equal(2, Pending("codes")); // 3 versiones, 1 con código
         Assert.Equal(1, Pending("ports"));

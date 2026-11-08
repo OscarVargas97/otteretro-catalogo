@@ -110,11 +110,13 @@ test("Ajustes tiene claves, consolas, tareas y general", async () => {
   await page.goto(`${base()}/settings/?s=claude`);
   await expect(page.getByRole("tab", { name: es.settings.claude.title })).toHaveAttribute("aria-selected", "true");
   const group = (name: string) => page.locator("section.panel", { has: page.getByRole("heading", { name, exact: true }) });
-  // #77: cada tarea es una fila plegada; el interruptor aparece al expandirla.
-  await page.locator("section.panel details").evaluateAll((all) => all.forEach((d) => d.setAttribute("open", "")));
-  await expect(group(es.settings.claude.groupClaude).getByRole("switch")).toHaveCount(5);
-  await expect(group(es.settings.claude.groupScript).getByRole("switch")).toHaveCount(3);
+  // #77: cada tarea es una fila plegada; el interruptor aparece al expandirla (cuando las filas ya llegaron).
   await expect(group(es.settings.claude.groupClaude).getByText(es.settings.claude.task.routes.name, { exact: true })).toBeVisible();
+  await page.locator("section.panel details").evaluateAll((all) => all.forEach((d) => d.setAttribute("open", "")));
+  await expect(group(es.settings.claude.groupClaude).getByRole("switch")).toHaveCount(6);
+  await expect(group(es.settings.claude.groupScript).getByRole("switch")).toHaveCount(4);
+  // #83: todos los «Ejecutar» con el mismo estilo.
+  await expect(page.locator("section.panel button.ot-btn-primary", { hasText: es.settings.claude.run })).toHaveCount(0);
   await page.getByRole("tab", { name: es.settings.general }).click();
   await expect(page.getByText(es.settings.attribution)).toBeVisible();
   await page.getByRole("button", { name: en.languageName }).click();
