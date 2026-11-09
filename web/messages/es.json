@@ -207,7 +207,7 @@
       "dueIn": "toca en {days, plural, one {# día} other {# días}}",
       "dueToday": "toca hoy",
       "lastRun": {"done": "{ago} · terminó bien", "error": "{ago} · con error", "canceled": "{ago} · cancelada"},
-      "pending": {"codes": "{count, plural, one {# versión sin código} other {# versiones sin código}}", "ports": "{count, plural, one {# port sin juego} other {# ports sin juego}}", "images": "{count, plural, one {# juego con imágenes incompletas} other {# juegos con imágenes incompletas}}", "translate": "{count, plural, one {# juego sin traducir} other {# juegos sin traducir}}", "iconic": "{count, plural, one {# saga por analizar} other {# sagas por analizar}}", "routes": "{count, plural, one {# saga sin rutas} other {# sagas sin rutas}}", "best": "{count, plural, one {# juego sin mejor versión} other {# juegos sin mejor versión}}"},
+      "pending": {"codes": "{count, plural, one {# versión sin código} other {# versiones sin código}}", "ports": "{count, plural, one {# port sin juego} other {# ports sin juego}}", "images": "{count, plural, one {# juego con imágenes incompletas} other {# juegos con imágenes incompletas}}", "translate": "{count, plural, one {# juego sin traducir} other {# juegos sin traducir}}", "iconic": "{count, plural, one {# saga por analizar} other {# sagas por analizar}}", "routes": "{count, plural, one {# saga sin rutas} other {# sagas sin rutas}}", "best": "{count, plural, one {# juego sin mejor versión} other {# juegos sin mejor versión}}", "emulators": "{count, plural, one {# en Revisar} other {# en Revisar}}"},
       "never": "Nunca corrió",
       "month": "este mes: {calls, plural, one {# llamada} other {# llamadas}} · {cost}",
       "covers": "{have} de {total} con portada",
@@ -255,6 +255,10 @@
         "portSearch": {
           "name": "Buscar ports nuevos",
           "text": "Lee el RSS de Recompendium y listas conocidas (Read Only Memo). Lo que el script no puede confirmar lo verifica Claude en su fuente primaria, una sola vez por enlace. Solo agrega ports: nunca cambia los que ya están."
+        },
+        "emulators": {
+          "name": "Emuladores",
+          "text": "Revisa cada receta: una release nueva que calza con su patrón se aplica sola y queda sin publicar; un patrón que ya no calza o un repo archivado, movido o desaparecido va a Revisar. Después busca forks (los del repo, por nombre en GitHub y en listas conocidas) y los filtra por API: release para Windows de los últimos 6 meses, commits propios y al menos 10 estrellas. Solo lo dudoso lo verifica Sonnet, una vez por repo."
         }
       },
       "ports": {
@@ -427,19 +431,51 @@
     "localHint": "Recetas de Otteretro de este equipo: Publicar las ofrece como un cambio.",
     "repoUrl": "Dirección del repo",
     "repoPlaceholder": "https://github.com/dueño/repo",
-    "fromRepo": "Crear desde su repo",
+    "fromRepo": "Agregar una receta",
+    "addFind": "Buscar releases",
+    "addPick": "Elige el archivo de Windows de una release: el patrón se arma con su nombre, cambiando la versión por un comodín.",
+    "addWindows": "Windows",
+    "addUse": "Usar este archivo",
+    "addNoDate": "Sin fecha",
     "total": "{count, plural, one {# receta} other {# recetas}}",
     "empty": "Todavía no hay recetas en este catálogo.",
     "importMain": "Traer las recetas de main",
+    "tabsLabel": "Tipos de receta",
+    "tabs": { "emulator": "Emuladores", "port": "Ports", "complement": "Complementos", "tool": "Herramientas" },
+    "noConsole": "Sin consola",
+    "emptyTab": "No hay recetas de este tipo.",
+    "card": {
+      "edit": "Editar", "duplicate": "Duplicar", "openRepo": "Abrir el repo", "discard": "Descartar cambios", "test": "Probar la descarga", "testing": "Descargando…",
+      "discardConfirm": "¿Descartar lo no publicado de {id}? Vuelve a la de main; si no está en main, se borra de este catálogo.",
+      "testResult": "{file} · {size} MB · versión {tag}", "testFound": "Detecta {detect} dentro del archivo.", "testNotFound": "No se encontró {detect} dentro del archivo.", "testUnknown": "No se puede mirar dentro de este archivo; se esperaba {detect}.", "copySuffix": "-copia", "copyName": "{name} (copia)", "latest": "Última release", "matches": "Calza", "noMatch": "No calza",
+      "forkOf": "Fork de {name}", "forks": "Forks: {names}",
+      "noMatchHint": "El patrón del archivo no calza con ningún archivo de la última release.",
+      "published": "Publicada", "changed": "Sin publicar", "changedHint": "Cambió y todavía no está en main: Publicar la lleva al PR."
+    },
     "newTitle": "Receta nueva",
     "editTitle": "Receta {id}",
-    "commas": "separadas por comas",
-    "others": "Los demás campos, en JSON",
     "checkNote": "Al guardar se revisa el esquema y que la fuente tenga una release con un archivo que calce con «asset». Publicar la lleva al PR.",
-    "badOthers": "Los demás campos no son un JSON válido.",
     "cancel": "Cancelar",
     "save": "Guardar",
     "checking": "Revisando…",
+    "sectionsLabel": "Secciones de la receta",
+    "sections": { "basic": "Básico", "download": "Descarga", "consoles": "Consolas y formatos", "perGame": "Configuración por juego", "options": "Opciones" },
+    "jsonView": "Vista avanzada (JSON)",
+    "jsonHint": "Vista avanzada: la receta entera. Lo que cambies acá se ve en las demás secciones.",
+    "badJson": "El JSON no es válido: corrígelo para guardar.",
+    "addRow": "Agregar",
+    "remove": "Quitar",
+    "removeRow": "Quitar la fila {n} de {name}",
+    "chipAdd": "Agregar…",
+    "removeChip": "Quitar {value}",
+    "noConsoles": "Primero elige sus consolas.",
+    "assetNoRepo": "Con la fuente y el repo se prueba el patrón contra la última release.",
+    "assetLoading": "Buscando la última release…",
+    "assetNoRelease": "El repo no tiene releases publicadas.",
+    "assetBadPattern": "El patrón no es una expresión regular válida.",
+    "assetFiles": "Archivos de {tag}: {files}",
+    "assetMatches": "Calza con {files} de {tag}.",
+    "assetNoMatch": "No calza con ningún archivo de {tag}: {files}",
     "kinds": { "emulator": "Emulador", "port": "Port", "complement": "Complemento", "tool": "Herramienta" },
     "sources": { "github": "GitHub", "forgejo": "Forgejo o Gitea", "dolphin": "Dolphin" },
     "versionFrom": { "exe": "Del ejecutable", "date": "Fecha de la release", "fixed": "Fija" },
@@ -448,12 +484,43 @@
       "game": "Juego", "link": "Enlace", "license": "Licencia", "asset": "Archivo de la release (patrón)", "saveAs": "Guardar como",
       "consoles": "Consolas", "baseFor": "Base de", "formats": "Formatos", "saves": "Partidas", "config": "Configuración", "content": "Contenido",
       "version": "Versión", "versionValue": "Valor de la versión", "source": "Fuente", "repo": "Repo", "host": "Servidor",
-      "dev": "Versión de desarrollo", "experimental": "Experimental", "devOnly": "Solo desarrollo"
+      "dev": "Versión de desarrollo", "experimental": "Experimental", "devOnly": "Solo desarrollo",
+      "forkOf": "Fork de (id de la original)", "recommendedFor": "Recomendado para",
+      "portable": "Portable", "gamePaths": "Rutas de juegos", "settings": "Valores", "perGame": "Por juego", "install": "Instalar contenido", "options": "Opciones",
+      "optionsUpTo": "Opciones revisadas hasta", "optionFlags": "Formato de opciones", "contentPaths": "Rutas de contenido", "input": "Mandos", "downloads": "Descargas", "updates": "Actualizaciones",
+      "type": "Tipo", "path": "Ruta", "from": "Desde", "system": "Sistema", "file": "Archivo", "format": "Formato",
+      "key": "Clave", "section": "Sección", "value": "Valor", "devRepo": "Repo de desarrollo", "devPattern": "Tags de desarrollo (patrón)", "apply": "Cómo se aplica",
+      "mods": "Mods", "args": "Argumentos", "idCase": "Mayúsculas del TitleID", "full": "Copia completa de la global", "files": "Otros archivos", "modsArg": "Argumento de mods",
+      "modsEnable": "Valores que activan los mods", "since": "Desde la versión", "gameSection": "Sección en el juego", "profiles": "Perfiles", "arg": "Argumento", "keys": "Claves",
+      "url": "URL", "hash": "Hash"
     }
   },
   "errors": {
+    "emulators": {
+      "checking": "Revisando la receta {done} de {total}",
+      "searching": "Buscando forks en los repos, GitHub y las listas conocidas",
+      "filtering": "Filtrando {done} de {total} posibles forks",
+      "verifying": "Claude verifica {done} de {total} posibles forks",
+      "log": {
+        "failed": "No se pudo revisar {repo}: {detail}",
+        "rateLimited": "GitHub llegó a su límite de consultas: los forks que faltan se buscan la próxima vez.",
+        "done": "Listo: {updated} recetas con su release nueva, {problems} a Revisar y {forks} forks nuevos a Revisar.",
+        "updated": "{recipe}: suma la release {tag}, sin publicar.",
+        "gone": "{recipe}: el repo {repo} ya no existe. Va a Revisar.",
+        "moved": "{recipe}: el repo {repo} se movió a {to}. Va a Revisar.",
+        "archived": "{recipe}: el repo {repo} está archivado. Va a Revisar.",
+        "noRelease": "{recipe}: {repo} no tiene releases. Va a Revisar.",
+        "noAsset": "{recipe}: ningún archivo de la release {tag} calza con {pattern}. Va a Revisar.",
+        "unreachable": "No se pudo leer {source}: se sigue con lo demás.",
+        "rejected": "Descartado: {repo}. {reason}",
+        "candidate": "Posible fork de {recipe}: {repo}. Va a Revisar."
+      }
+    },
     "http": "La app respondió con un error ({status}).",
     "unknown": "Algo salió mal ({code}).",
+    "review": {
+      "noOriginal": "La receta original {recipe} ya no existe."
+    },
     "recipes": {
       "badJson": "La receta no es un JSON válido: {detail}",
       "schema": "La receta no cumple el esquema: {problems}",
@@ -463,7 +530,9 @@
       "noRelease": "{repo} no tiene releases publicadas.",
       "noAsset": "Ninguna release de {repo} tiene un archivo que calce con {pattern}.",
       "sourceFailed": "No se pudo consultar {repo}: {detail}",
-      "badRepo": "Esa dirección no es un repo de GitHub, Forgejo o Gitea."
+      "badRepo": "Esa dirección no es un repo de GitHub, Forgejo o Gitea.",
+      "notFound": "No hay una receta {id}.",
+      "noMain": "No se pudo leer main: sin eso no se sabe a qué volver."
     },
     "path": {
       "notAbsolute": "La ruta tiene que ser completa, por ejemplo E:\\Otteretro.",
@@ -857,6 +926,9 @@
   },
   "tasks": {
     "kind": {
+      "emulators": {
+        "check": "Revisar emuladores"
+      },
       "demo": "Tarea de prueba",
       "igdb": {
         "saga": "Cargar una saga de IGDB",
@@ -1232,7 +1304,28 @@
       "pending": "Por aprobar ({count})",
       "doubtful": "Dudosas ({count})",
       "unidentified": "Sin identificar ({count})",
-      "learnings": "Aprendizajes ({count})"
+      "learnings": "Aprendizajes ({count})",
+      "forks": "Forks ({count})",
+      "recipes": "Recetas ({count})"
+    },
+    "forksEmptyTitle": "Sin forks por revisar",
+    "forksEmptyText": "La tarea Emuladores deja aquí los forks que pasaron los filtros.",
+    "recipesEmptyTitle": "Sin avisos de recetas",
+    "recipesEmptyText": "La tarea Emuladores avisa aquí si el patrón de una receta no calza o su repo cambió.",
+    "fork": {
+      "of": "Fork de {recipe}", "stars": "{count} estrellas", "release": "Release {tag} con {file}", "isFork": "Fork en GitHub", "found": "Encontrado por {how}",
+      "recommended": "Recomendado para", "noRecommended": "Sin juegos recomendados todavía.", "claude": "Claude: {reason}",
+      "accept": "Aceptar y crear la receta", "reject": "Rechazar", "openRepo": "Abrir el repo"
+    },
+    "notice": {
+      "title": "{recipe}",
+      "gone": "El repo {repo} ya no existe.",
+      "moved": "El repo {repo} se movió a {to}.",
+      "archived": "El repo {repo} está archivado.",
+      "noRelease": "El repo {repo} no tiene releases.",
+      "noAsset": "Ningún archivo de la release {tag} calza con {pattern}.",
+      "proposed": "Patrón propuesto: {pattern}",
+      "openEditor": "Abrir el editor", "dismiss": "Descartar el aviso"
     },
     "pendingEmptyTitle": "Nada por aprobar",
     "pendingEmptyText": "Cuando Claude prepare rutas, lo icónico o la mejor versión de una saga, aparecerán aquí para que los apruebes.",

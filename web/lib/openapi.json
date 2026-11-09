@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:56784/"
+      "url": "http://127.0.0.1:53270/"
     }
   ],
   "paths": {
@@ -1835,6 +1835,25 @@
         }
       }
     },
+    "/api/recipes/schema": {
+      "get": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipeText"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/recipes/{id}": {
       "get": {
         "tags": [
@@ -1863,6 +1882,36 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
           },
           "409": {
             "description": "Conflict",
@@ -1945,6 +1994,77 @@
         }
       }
     },
+    "/api/recipes/status": {
+      "get": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecipeStatus"
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/recipes/{id}/test": {
+      "post": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipeTest"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/recipes/import": {
       "post": {
         "tags": [
@@ -2001,6 +2121,58 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RecipeText"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/recipes/releases": {
+      "get": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RepoRelease"
+                  }
                 }
               }
             }
@@ -2742,6 +2914,104 @@
       }
     },
     "/api/review/{id}/reject": {
+      "post": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReviewPage"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/review/{id}/fork/accept": {
+      "post": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReviewPage"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/review/{id}/dismiss": {
       "post": {
         "tags": [
           "OtteretroCatalogo"
@@ -4920,6 +5190,105 @@
           }
         }
       },
+      "ForkCandidate": {
+        "required": [
+          "id",
+          "repo",
+          "url",
+          "recipe",
+          "recipeName",
+          "foundBy",
+          "reason",
+          "stars",
+          "tag",
+          "publishedAt",
+          "file",
+          "isFork",
+          "recommendedFor"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int64"
+          },
+          "repo": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "recipe": {
+            "type": "string"
+          },
+          "recipeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "foundBy": {
+            "type": "string"
+          },
+          "reason": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "stars": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "tag": {
+            "type": "string"
+          },
+          "publishedAt": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "file": {
+            "type": "string"
+          },
+          "isFork": {
+            "type": "boolean"
+          },
+          "recommendedFor": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ForkGame"
+            }
+          }
+        }
+      },
+      "ForkGame": {
+        "required": [
+          "game",
+          "source"
+        ],
+        "type": "object",
+        "properties": {
+          "game": {
+            "type": "string"
+          },
+          "source": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
       "GameCard": {
         "required": [
           "id",
@@ -5850,6 +6219,155 @@
           "local": {
             "type": "boolean",
             "default": false
+          },
+          "url": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "forkOf": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "RecipeNotice": {
+        "required": [
+          "id",
+          "recipe",
+          "recipeName",
+          "reason",
+          "repo",
+          "to",
+          "tag",
+          "pattern",
+          "proposed"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int64"
+          },
+          "recipe": {
+            "type": "string"
+          },
+          "recipeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "repo": {
+            "type": "string"
+          },
+          "to": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tag": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pattern": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "proposed": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "RecipeStatus": {
+        "required": [
+          "id",
+          "tag",
+          "publishedAt",
+          "matches",
+          "state"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tag": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "publishedAt": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "matches": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "state": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "RecipeTest": {
+        "required": [
+          "tag",
+          "file",
+          "size",
+          "detect",
+          "found"
+        ],
+        "type": "object",
+        "properties": {
+          "tag": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string"
+          },
+          "size": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int64"
+          },
+          "detect": {
+            "type": "string"
+          },
+          "found": {
+            "type": [
+              "null",
+              "boolean"
+            ]
           }
         }
       },
@@ -5880,6 +6398,50 @@
           }
         }
       },
+      "RepoFile": {
+        "required": [
+          "name",
+          "windows",
+          "pattern"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "windows": {
+            "type": "boolean"
+          },
+          "pattern": {
+            "type": "string"
+          }
+        }
+      },
+      "RepoRelease": {
+        "required": [
+          "tag",
+          "publishedAt",
+          "files"
+        ],
+        "type": "object",
+        "properties": {
+          "tag": {
+            "type": "string"
+          },
+          "publishedAt": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RepoFile"
+            }
+          }
+        }
+      },
       "RepoRequest": {
         "required": [
           "url"
@@ -5888,6 +6450,12 @@
         "properties": {
           "url": {
             "type": "string"
+          },
+          "file": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
@@ -5940,7 +6508,9 @@
         "required": [
           "pending",
           "activeLearnings",
-          "files"
+          "files",
+          "forks",
+          "notices"
         ],
         "type": "object",
         "properties": {
@@ -5962,6 +6532,18 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/FileReview"
+            }
+          },
+          "forks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ForkCandidate"
+            }
+          },
+          "notices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecipeNotice"
             }
           }
         }

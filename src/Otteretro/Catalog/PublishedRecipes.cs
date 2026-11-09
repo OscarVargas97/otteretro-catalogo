@@ -57,11 +57,17 @@ public static partial class Published
         }
     }
 
+    /// <summary>El esquema de las recetas que trae el programa: lo usa la validación y el editor de «Emuladores» (#111).</summary>
+    public static string RecipeSchema()
+    {
+        using var stream = typeof(Published).Assembly.GetManifestResourceStream(RecipeSchemaFile)!;
+        return new StreamReader(stream).ReadToEnd();
+    }
+
     /// <summary>Lo que no cumple el esquema de una receta, con el que trae el programa (#95: «Emuladores» la revisa al guardarla).</summary>
     public static List<string> CheckRecipe(JsonElement recipe)
     {
-        using var stream = typeof(Published).Assembly.GetManifestResourceStream(RecipeSchemaFile)!;
-        using var schema = JsonDocument.Parse(stream);
+        using var schema = JsonDocument.Parse(RecipeSchema());
         var problems = new List<string>();
         CheckSchema(schema.RootElement, schema.RootElement, recipe, "", problems);
         return problems;

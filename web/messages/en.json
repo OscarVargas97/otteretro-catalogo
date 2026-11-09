@@ -207,7 +207,7 @@
       "dueIn": "due in {days, plural, one {# day} other {# days}}",
       "dueToday": "due today",
       "lastRun": {"done": "{ago} · finished fine", "error": "{ago} · failed", "canceled": "{ago} · canceled"},
-      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}"},
+      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}", "emulators": "{count, plural, one {# in Review} other {# in Review}}"},
       "never": "Never ran",
       "month": "this month: {calls, plural, one {# call} other {# calls}} · {cost}",
       "covers": "{have} of {total} with a cover",
@@ -255,6 +255,10 @@
         "portSearch": {
           "name": "Find new ports",
           "text": "Reads the Recompendium RSS and known lists (Read Only Memo). What the script cannot confirm, Claude verifies at its primary source, once per link. It only adds ports: it never changes existing ones."
+        },
+        "emulators": {
+          "name": "Emulators",
+          "text": "Checks every recipe: a new release that matches its pattern is applied automatically and left unpublished; a pattern that no longer matches or an archived, moved or missing repo goes to Review. Then it looks for forks (the repo's own, by name on GitHub and in known lists) and filters them through the API: a Windows release from the last 6 months, their own commits and at least 10 stars. Only the doubtful ones are checked by Sonnet, once per repo."
         }
       },
       "ports": {
@@ -427,19 +431,51 @@
     "localHint": "Otteretro recipe from this computer: Publish offers it as a change.",
     "repoUrl": "Repo address",
     "repoPlaceholder": "https://github.com/owner/repo",
-    "fromRepo": "Create from its repo",
+    "fromRepo": "Add a recipe",
+    "addFind": "Find releases",
+    "addPick": "Pick the Windows file of a release: the pattern is built from its name, replacing the version with a wildcard.",
+    "addWindows": "Windows",
+    "addUse": "Use this file",
+    "addNoDate": "No date",
     "total": "{count, plural, one {# recipe} other {# recipes}}",
     "empty": "This catalog has no recipes yet.",
     "importMain": "Bring the recipes from main",
+    "tabsLabel": "Recipe types",
+    "tabs": { "emulator": "Emulators", "port": "Ports", "complement": "Add-ons", "tool": "Tools" },
+    "noConsole": "No console",
+    "emptyTab": "There are no recipes of this type.",
+    "card": {
+      "edit": "Edit", "duplicate": "Duplicate", "openRepo": "Open the repo", "discard": "Discard changes", "test": "Test the download", "testing": "Downloading…",
+      "discardConfirm": "Discard what is unpublished in {id}? It goes back to main's; if it is not in main, it is deleted from this catalog.",
+      "testResult": "{file} · {size} MB · version {tag}", "testFound": "Detects {detect} inside the file.", "testNotFound": "{detect} was not found inside the file.", "testUnknown": "Cannot look inside this file; {detect} was expected.", "copySuffix": "-copy", "copyName": "{name} (copy)", "latest": "Latest release", "matches": "Matches", "noMatch": "No match",
+      "forkOf": "Fork of {name}", "forks": "Forks: {names}",
+      "noMatchHint": "The file pattern matches no file in the latest release.",
+      "published": "Published", "changed": "Unpublished", "changedHint": "Changed and not in main yet: Publish takes it to the PR."
+    },
     "newTitle": "New recipe",
     "editTitle": "Recipe {id}",
-    "commas": "comma separated",
-    "others": "Other fields, as JSON",
     "checkNote": "Saving checks the schema and that the source has a release with a file matching “asset”. Publish takes it to the PR.",
-    "badOthers": "The other fields are not valid JSON.",
     "cancel": "Cancel",
     "save": "Save",
     "checking": "Checking…",
+    "sectionsLabel": "Recipe sections",
+    "sections": { "basic": "Basics", "download": "Download", "consoles": "Consoles and formats", "perGame": "Per-game settings", "options": "Options" },
+    "jsonView": "Advanced view (JSON)",
+    "jsonHint": "Advanced view: the whole recipe. What you change here shows in the other sections.",
+    "badJson": "The JSON isn't valid: fix it to save.",
+    "addRow": "Add",
+    "remove": "Remove",
+    "removeRow": "Remove row {n} of {name}",
+    "chipAdd": "Add…",
+    "removeChip": "Remove {value}",
+    "noConsoles": "Pick its consoles first.",
+    "assetNoRepo": "With a source and repo, the pattern is tested against the latest release.",
+    "assetLoading": "Looking up the latest release…",
+    "assetNoRelease": "The repo has no published releases.",
+    "assetBadPattern": "The pattern isn't a valid regular expression.",
+    "assetFiles": "Files in {tag}: {files}",
+    "assetMatches": "Matches {files} in {tag}.",
+    "assetNoMatch": "Matches no file in {tag}: {files}",
     "kinds": { "emulator": "Emulator", "port": "Port", "complement": "Add-on", "tool": "Tool" },
     "sources": { "github": "GitHub", "forgejo": "Forgejo or Gitea", "dolphin": "Dolphin" },
     "versionFrom": { "exe": "From the executable", "date": "Release date", "fixed": "Fixed" },
@@ -448,12 +484,43 @@
       "game": "Game", "link": "Link", "license": "License", "asset": "Release file (pattern)", "saveAs": "Save as",
       "consoles": "Consoles", "baseFor": "Base for", "formats": "Formats", "saves": "Saves", "config": "Config", "content": "Content",
       "version": "Version", "versionValue": "Version value", "source": "Source", "repo": "Repo", "host": "Server",
-      "dev": "Development build", "experimental": "Experimental", "devOnly": "Development only"
+      "dev": "Development build", "experimental": "Experimental", "devOnly": "Development only",
+      "forkOf": "Fork of (original id)", "recommendedFor": "Recommended for",
+      "portable": "Portable", "gamePaths": "Game paths", "settings": "Settings", "perGame": "Per game", "install": "Install content", "options": "Options",
+      "optionsUpTo": "Options checked up to", "optionFlags": "Options format", "contentPaths": "Content paths", "input": "Controllers", "downloads": "Downloads", "updates": "Updates",
+      "type": "Type", "path": "Path", "from": "From", "system": "System", "file": "File", "format": "Format",
+      "key": "Key", "section": "Section", "value": "Value", "devRepo": "Development repo", "devPattern": "Development tags (pattern)", "apply": "How it applies",
+      "mods": "Mods", "args": "Arguments", "idCase": "TitleID case", "full": "Full copy of the global one", "files": "Other files", "modsArg": "Mods argument",
+      "modsEnable": "Settings that enable mods", "since": "Since version", "gameSection": "Game section", "profiles": "Profiles", "arg": "Argument", "keys": "Keys",
+      "url": "URL", "hash": "Hash"
     }
   },
   "errors": {
+    "emulators": {
+      "checking": "Checking recipe {done} of {total}",
+      "searching": "Looking for forks in the repos, GitHub and known lists",
+      "filtering": "Filtering {done} of {total} possible forks",
+      "verifying": "Claude is checking {done} of {total} possible forks",
+      "log": {
+        "failed": "Could not check {repo}: {detail}",
+        "rateLimited": "GitHub hit its rate limit: the remaining forks will be searched next time.",
+        "done": "Done: {updated} recipes with their new release, {problems} sent to Review and {forks} new forks sent to Review.",
+        "updated": "{recipe}: adds release {tag}, unpublished.",
+        "gone": "{recipe}: the repo {repo} no longer exists. Sent to Review.",
+        "moved": "{recipe}: the repo {repo} moved to {to}. Sent to Review.",
+        "archived": "{recipe}: the repo {repo} is archived. Sent to Review.",
+        "noRelease": "{recipe}: {repo} has no releases. Sent to Review.",
+        "noAsset": "{recipe}: no file in release {tag} matches {pattern}. Sent to Review.",
+        "unreachable": "Could not read {source}: moving on.",
+        "rejected": "Discarded: {repo}. {reason}",
+        "candidate": "Possible fork of {recipe}: {repo}. Sent to Review."
+      }
+    },
     "http": "The app responded with an error ({status}).",
     "unknown": "Something went wrong ({code}).",
+    "review": {
+      "noOriginal": "The original recipe {recipe} no longer exists."
+    },
     "recipes": {
       "badJson": "The recipe is not valid JSON: {detail}",
       "schema": "The recipe does not match the schema: {problems}",
@@ -463,7 +530,9 @@
       "noRelease": "{repo} has no published releases.",
       "noAsset": "No release of {repo} has a file matching {pattern}.",
       "sourceFailed": "Could not query {repo}: {detail}",
-      "badRepo": "That address is not a GitHub, Forgejo or Gitea repo."
+      "badRepo": "That address is not a GitHub, Forgejo or Gitea repo.",
+      "notFound": "There is no recipe {id}.",
+      "noMain": "Could not read main: without it there is nothing to go back to."
     },
     "path": {
       "notAbsolute": "The path must be complete, for example E:\\Otteretro.",
@@ -857,6 +926,9 @@
   },
   "tasks": {
     "kind": {
+      "emulators": {
+        "check": "Check emulators"
+      },
       "demo": "Test task",
       "igdb": {
         "saga": "Load a saga from IGDB",
@@ -1232,7 +1304,28 @@
       "pending": "To approve ({count})",
       "doubtful": "Doubtful ({count})",
       "unidentified": "Unidentified ({count})",
-      "learnings": "Learnings ({count})"
+      "learnings": "Learnings ({count})",
+      "forks": "Forks ({count})",
+      "recipes": "Recipes ({count})"
+    },
+    "forksEmptyTitle": "No forks to review",
+    "forksEmptyText": "The Emulators task leaves here the forks that passed the filters.",
+    "recipesEmptyTitle": "No recipe notices",
+    "recipesEmptyText": "The Emulators task warns here when a recipe's pattern no longer matches or its repo changed.",
+    "fork": {
+      "of": "Fork of {recipe}", "stars": "{count} stars", "release": "Release {tag} with {file}", "isFork": "GitHub fork", "found": "Found by {how}",
+      "recommended": "Recommended for", "noRecommended": "No recommended games yet.", "claude": "Claude: {reason}",
+      "accept": "Accept and create the recipe", "reject": "Reject", "openRepo": "Open the repo"
+    },
+    "notice": {
+      "title": "{recipe}",
+      "gone": "The repo {repo} no longer exists.",
+      "moved": "The repo {repo} moved to {to}.",
+      "archived": "The repo {repo} is archived.",
+      "noRelease": "The repo {repo} has no releases.",
+      "noAsset": "No file in release {tag} matches {pattern}.",
+      "proposed": "Suggested pattern: {pattern}",
+      "openEditor": "Open the editor", "dismiss": "Dismiss the notice"
     },
     "pendingEmptyTitle": "Nothing to approve",
     "pendingEmptyText": "When Claude prepares a saga's routes, what's iconic or the best version, they'll show up here for you to approve.",

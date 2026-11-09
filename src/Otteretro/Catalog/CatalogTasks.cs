@@ -7,7 +7,7 @@ using Otteretro.Data;
 
 namespace Otteretro.Catalog;
 
-/// <param name="Id">igdb, codes, ports, portSearch, cleanup, routes, iconic, best, translate o images.</param>
+/// <param name="Id">igdb, codes, ports, portSearch, emulators, cleanup, routes, iconic, best, translate o images.</param>
 /// <param name="Model">El modelo de Claude que usa; null si es un script.</param>
 /// <param name="Auto">Si corre sola en el horario (decisión 284).</param>
 /// <param name="Days">Solo IGDB: cada cuántos días se pone al día.</param>
@@ -40,7 +40,7 @@ public static class CatalogTasks
     }
 
     /// <summary>
-    /// Todas, en el orden de la noche: IGDB → códigos → ports → buscar ports → depurar → icónico → rutas → mejor versión → traducir → imágenes. Icónico va
+    /// Todas, en el orden de la noche: IGDB → códigos → ports → buscar ports → emuladores → depurar → icónico → rutas → mejor versión → traducir → imágenes. Icónico va
     /// antes que rutas porque historia y comunidad se piden solo para las icónicas (#54).
     /// </summary>
     static readonly Def[] All =
@@ -51,6 +51,9 @@ public static class CatalogTasks
         new("ports", null, [], (db, _) => Ports.Enqueue(db), (kind, _) => kind == Ports.Kind,
             db => Scalar(db, "SELECT count(*) FROM port WHERE game_id IS NULL")), // «ports sin juego», como Ports.Page
         new("portSearch", PortSearch.Model, [PortSearch.PromptName], (db, _) => PortSearch.Enqueue(db), (kind, _) => kind == PortSearch.Kind),
+        // Emuladores (#97, decisiones 357 y 371): una sola tarea revisa las recetas y busca forks; el contador es lo que espera en Revisar.
+        new("emulators", EmulatorCheck.Model, [EmulatorCheck.PromptName], (db, _) => EmulatorCheck.Enqueue(db), (kind, _) => kind == EmulatorCheck.Kind,
+            EmulatorCheck.Pending),
         new("cleanup", "haiku", [CatalogCleanup.PromptName], (db, _) => CatalogCleanup.Enqueue(db), (kind, _) => kind == CatalogCleanup.Kind),
         // Con consola, «Reevaluar sagas icónicas» (F2.15): olvida lo dicho de esas sagas y lo vuelve a pedir.
         new("iconic", "sonnet", [SagaAnalysis.Iconic], (db, console) => console is null ? SagaAnalysis.EnqueueStep(db, SagaAnalysis.Iconic) : SagaAnalysis.EnqueueIconic(db, console),

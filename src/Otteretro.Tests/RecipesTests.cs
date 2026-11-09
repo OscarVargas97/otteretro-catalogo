@@ -5,16 +5,18 @@ using Otteretro.Catalog;
 namespace Otteretro.Tests;
 
 /// <summary>#95: «Emuladores» guarda una receta solo si cumple el esquema y su fuente tiene una release con un archivo que calce.</summary>
+[Collection(nameof(ClaudeRunnerTests))] // comparte Recipes.Http con EmulatorCheckTests
 public class RecipesTests
 {
     /// <summary>Releases falsas por URL pedida; lo que no está es un 404.</summary>
-    sealed class FakeReleases(Dictionary<string, string> bodies) : HttpMessageHandler
+    sealed class FakeReleases(Dictionary<string, string> bodies, Dictionary<string, byte[]>? files = null) : HttpMessageHandler
     {
         public readonly List<string> Calls = [];
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
         {
             var url = request.RequestUri!.ToString();
             Calls.Add(url);
+            if (files?.TryGetValue(url, out var bytes) == true) return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent(bytes) });
             return Task.FromResult(bodies.TryGetValue(url, out var body)
                 ? new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(body, Encoding.UTF8, "application/json") }
                 : new HttpResponseMessage(HttpStatusCode.NotFound));
@@ -100,5 +102,77 @@ public class RecipesTests
 
         Assert.Equal("recipes.badRepo", (await Recipes.Draft("no es un repo", token: null)).Error!.Code);
         Assert.Equal(("forgejo", "eden-emu/eden", "git.eden-emu.dev"), Recipes.Source("https://git.eden-emu.dev/eden-emu/eden.git"));
+    }
+
+    /// <summary>#110: el patrón de un archivo calza con la versión siguiente, y el repo lista sus releases con archivos para elegir.</summary>
+    [Fact]
+    public async Task ThePatternMatchesTheNextVersionAndReleasesListTheirFiles()
+    {
+        var pattern = Recipes.AssetPattern("flycast-win64-2.4.zip");
+        Assert.Matches(pattern, "flycast-win64-2.5.zip");
+        Assert.Matches(pattern, "flycast-win64-2.10.1.zip");
+        Assert.DoesNotMatch(pattern, "flycast-linux-2.5.zip");
+
+        Recipes.Http = new HttpClient(new FakeReleases(new() { [Releases] = MgbaReleases }));
+        var (list, error) = await Recipes.RepoReleases("github.com/mgba-emu/mgba", token: null);
+        Assert.Null(error);
+        var release = Assert.Single(list!);
+        Assert.Equal([false, true], release.Files.Select(f => f.Windows));
+        var (json, _) = await Recipes.Draft("github.com/mgba-emu/mgba", token: null, chosen: "mGBA-0.10.5-macos.dmg");
+        Assert.Contains("macos", json);
+    }
+
+    /// <summary>#108: la tarjeta sabe la última release, si el patrón calza con ella y si la receta está publicada; la release se guarda un rato.</summary>
+    [Fact]
+    public async Task TheStatusComparesTheLatestReleaseAndMain()
+    {
+        await using var f = new Fixture();
+        var fake = new FakeReleases(new() { [Releases] = MgbaReleases });
+        Recipes.Http = new HttpClient(fake);
+        Assert.Null(await Recipes.Save(f.Db, "mgba", Recipe("^mGBA-[0-9.]+-win64\\\\.7z$"), create: true, token: null));
+        var main = Directory.CreateDirectory(Path.Combine(f.Tmp["main"], Published.RecipesFolder)).FullName;
+        var none = f.Tmp["sin-otteretro"];
+
+        Assert.Equal(new RecipeStatus("mgba", "0.10.5", "2026-01-01", true, "changed"), Assert.Single(await Recipes.Status(f.Db, main, token: null, local: none)));
+        File.WriteAllText(Path.Combine(main, "mgba.json"), Recipes.Get(f.Db, "mgba")!.Replace("\n", " "));
+        Assert.Equal("published", Assert.Single(await Recipes.Status(f.Db, main, token: null, local: none)).State);
+        Assert.Null(Assert.Single(await Recipes.Status(f.Db, null, token: null, local: none)).State);
+        Assert.Equal(2, fake.Calls.Count); // la de Save y una de Status: las otras dos la tomaron de lo guardado
+
+        // Una release nueva sin el archivo de siempre: el patrón calza con una vieja (se puede guardar), pero no con la última.
+        Recipes.Http = new HttpClient(new FakeReleases(new() { [Releases] = """
+            [
+              { "tag_name": "0.11", "draft": false, "published_at": "2026-10-01", "assets": [{ "name": "mGBA-0.11-win64.zip" }] },
+              { "tag_name": "0.10.5", "draft": false, "published_at": "2026-01-01", "assets": [{ "name": "mGBA-0.10.5-win64.7z" }] }
+            ]
+            """ }));
+        Assert.Equal(new RecipeStatus("mgba", "0.11", "2026-10-01", false, "published"), Assert.Single(await Recipes.Status(f.Db, main, token: null, local: none)));
+    }
+
+    /// <summary>#109: probar la descarga baja la última release que calza, informa y no deja nada en el disco; descartar vuelve a main o borra.</summary>
+    [Fact]
+    public async Task TestDownloadsAndCleansUpAndDiscardRestores()
+    {
+        await using var f = new Fixture();
+        const string url = "https://example.test/mGBA-0.10.5-win64.zip";
+        var zip = new MemoryStream();
+        using (var a = new System.IO.Compression.ZipArchive(zip, System.IO.Compression.ZipArchiveMode.Create, true))
+            a.CreateEntry("mGBA-0.10.5/mGBA.exe");
+        var bodies = new Dictionary<string, string> { [Releases] = $$"""[{ "tag_name": "0.10.5", "published_at": "2026-01-01", "assets": [{ "name": "mGBA-0.10.5-win64.zip", "browser_download_url": "{{url}}" }] }]""" };
+        Recipes.Http = new HttpClient(new FakeReleases(bodies, new() { [url] = zip.ToArray() }));
+        Assert.Null(await Recipes.Save(f.Db, "mgba", Recipe("^mGBA-[0-9.]+-win64\\\\.zip$"), create: true, token: null));
+        var before = Directory.GetDirectories(Path.GetTempPath(), "otteretro-catalogo-test-*").Length;
+
+        var (result, error) = await Recipes.Test(f.Db, "mgba", token: null);
+        Assert.Null(error);
+        Assert.Equal(("0.10.5", "mGBA-0.10.5-win64.zip", true), (result!.Tag, result.File, result.Found));
+        Assert.True(result.Size > 0);
+        Assert.Equal(before, Directory.GetDirectories(Path.GetTempPath(), "otteretro-catalogo-test-*").Length);
+
+        // Sin main que leer no se descarta; con main sin la receta, se borra.
+        Assert.False(Recipes.Discard(f.Db, "mgba", null));
+        var main = Directory.CreateDirectory(Path.Combine(f.Tmp["main2"], Published.RecipesFolder)).FullName;
+        Assert.True(Recipes.Discard(f.Db, "mgba", main));
+        Assert.Empty(Recipes.List(f.Db));
     }
 }

@@ -144,8 +144,35 @@ public static class CatalogEndpoints
         // «Emuladores» (#95): las recetas en la base local, como las sagas; Publicar lleva al PR las que cambiaron.
         api.MapGet("/recipes", Results<Ok<List<RecipeInfo>>, Conflict<ApiError>> (AppSession s) =>
             Db(s) is { } db ? TypedResults.Ok(Recipes.List(db)) : NoData());
+        // El editor de recetas (#111) se arma con el esquema: el mismo que valida al guardar.
+        api.MapGet("/recipes/schema", () => TypedResults.Ok(new RecipeText(Published.RecipeSchema())));
         api.MapGet("/recipes/{id}", Results<Ok<RecipeText>, NotFound, Conflict<ApiError>> (string id, AppSession s) =>
             Db(s) is not { } db ? NoData() : Recipes.Get(db, id) is { } json ? TypedResults.Ok(new RecipeText(json)) : TypedResults.NotFound());
+        // Lo de cada tarjeta (#108): última release, si el patrón calza y si está publicada. Sin la clave o sin red, main queda sin leer.
+        api.MapGet("/recipes/status", async Task<Results<Ok<List<RecipeStatus>>, Conflict<ApiError>>> (AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            string? main = null;
+            if (Publisher(db, s, box) is { } publisher)
+                try { main = await publisher.MainRecipes(ct); }
+                catch (Exception e) when (e is TaskException or HttpRequestException) { }
+            return TypedResults.Ok(await Recipes.Status(db, main, GitHubToken(db, s, box), ct: ct));
+        });
+        // Descartar lo no publicado (#109): vuelve a la de main; si main no la tiene, se borra de la base local.
+        api.MapDelete("/recipes/{id}", async Task<Results<NoContent, Conflict<ApiError>>> (string id, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            if (Publisher(db, s, box) is not { } publisher) return TypedResults.Conflict(ApiError.Of("publish.noKey"));
+            try { return Recipes.Discard(db, id, await publisher.MainRecipes(ct)) ? TypedResults.NoContent() : TypedResults.Conflict(ApiError.Of("recipes.noMain")); }
+            catch (Exception e) when (e is TaskException or HttpRequestException) { return TypedResults.Conflict(ApiError.Of("recipes.noMain")); }
+        });
+        // «Probar la descarga» (#109): baja el archivo a una carpeta temporal, informa y la borra.
+        api.MapPost("/recipes/{id}/test", async Task<Results<Ok<RecipeTest>, Conflict<ApiError>>> (string id, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            var (result, error) = await Recipes.Test(db, id, GitHubToken(db, s, box), ct);
+            return error is null ? TypedResults.Ok(result!) : TypedResults.Conflict(error);
+        });
         // Las de main, con sus bytes, mientras la base local no las tenga.
         api.MapPost("/recipes/import", async Task<Results<Ok<int>, Conflict<ApiError>>> (AppSession s, SecretBox box, CancellationToken ct) =>
         {
@@ -159,8 +186,15 @@ public static class CatalogEndpoints
         api.MapPost("/recipes/draft", async Task<Results<Ok<RecipeText>, BadRequest<ApiError>, Conflict<ApiError>>> (RepoRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
         {
             if (Db(s) is not { } db) return NoData();
-            var (json, error) = await Recipes.Draft(request.Url, GitHubToken(db, s, box), ct);
+            var (json, error) = await Recipes.Draft(request.Url, GitHubToken(db, s, box), ct, request.File);
             return error is null ? TypedResults.Ok(new RecipeText(json!)) : error.Code == "recipes.badRepo" ? TypedResults.BadRequest(error) : TypedResults.Conflict(error);
+        });
+        // «Agregar una receta»: las releases del repo con sus archivos.
+        api.MapGet("/recipes/releases", async Task<Results<Ok<List<RepoRelease>>, BadRequest<ApiError>, Conflict<ApiError>>> (string url, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            var (list, error) = await Recipes.RepoReleases(url, GitHubToken(db, s, box), ct);
+            return error is null ? TypedResults.Ok(list!) : error.Code == "recipes.badRepo" ? TypedResults.BadRequest(error) : TypedResults.Conflict(error);
         });
         api.MapPut("/recipes/{id}", async Task<Results<Ok<List<RecipeInfo>>, BadRequest<ApiError>, Conflict<ApiError>>> (string id, RecipeText request, AppSession s, SecretBox box, CancellationToken ct, bool create = false) =>
         {
@@ -248,7 +282,7 @@ public static class CatalogEndpoints
     static Igdb IgdbFor(Database db, AppSession s, SecretBox box) =>
         new(new ApiClient(db, IgdbImport.Handler), new Credentials(db, s.Config.MachineId, box), IgdbImport.Handler);
 
-    static string? GitHubToken(Database db, AppSession s, SecretBox box) =>
+    internal static string? GitHubToken(Database db, AppSession s, SecretBox box) =>
         new Credentials(db, s.Config.MachineId, box).Read("github.token") is { Length: > 0 } token ? token : null;
 
     static GitHubPublisher? Publisher(Database db, AppSession s, SecretBox box) =>
