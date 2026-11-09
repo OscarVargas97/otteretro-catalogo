@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:63340/"
+      "url": "http://127.0.0.1:56784/"
     }
   ],
   "paths": {
@@ -2199,6 +2199,35 @@
         }
       }
     },
+    "/api/catalog/catchup": {
+      "post": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogCatchUp"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/catalog/conflicts": {
       "get": {
         "tags": [
@@ -3923,6 +3952,33 @@
               "string"
             ],
             "format": "int32"
+          },
+          "conflicts": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "CatalogCatchUp": {
+        "required": [
+          "status",
+          "tag",
+          "conflicts"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "tag": {
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "conflicts": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",

@@ -35,6 +35,10 @@ public class CatalogVersionsTests
                     },
                 },
                 $"GET repos/{Repo}/commits/{Tag}" => new { sha = Commit },
+                // #106: el PR propio fusionado (7) cuyo commit no está en la release; el 8, sin fusionar.
+                $"GET repos/{Repo}/pulls/7" => new { merged = true, merge_commit_sha = "m1" },
+                $"GET repos/{Repo}/compare/m1...{Commit}" => new { status = "diverged" },
+                $"GET repos/{Repo}/pulls/8" => new { merged = false, merge_commit_sha = (string?)null },
                 $"GET repos/{Repo}/zipball/base1" => baseZip,
                 "GET dl/catalogo.db.gz" => gz,
                 "GET dl/catalogo.db.gz.json" => Encoding.UTF8.GetBytes(manifest),
@@ -135,5 +139,22 @@ public class CatalogVersionsTests
         var again = await versions.Apply(Tag);
         Assert.Equal((0, 0, 0, 0), (again.Inserted, again.Updated, again.Deleted, again.Conflicts));
         Assert.Equal(zipballs, github.Calls.Count(x => x.Contains("zipball")));
+    }
+
+    [Fact]
+    public async Task CatchUpAvisesWhenTheNewestReleaseIsNotTheOwnPrAndIsQuietWhenCurrent()
+    {
+        await using var f = new Fixture();
+        var versions = new CatalogVersions(f.Db, new GitHubPublisher(f.Db, "secreto", new FakeGitHub([], [], "{}")) { Work = f.Tmp["trabajo"] });
+        Assert.Equal("current", (await versions.CatchUp()).Status); // sin base no hay con qué fusionar
+        GitHubPublisher.SetBase(f.Db, "base1");
+        var first = await versions.CatchUp();
+        Assert.Equal(("available", Tag), (first.Status, first.Tag)); // sin PR propio
+        GitHubPublisher.SetSetting(f.Db, GitHubPublisher.PrSetting, "8");
+        Assert.Equal("available", (await versions.CatchUp()).Status); // PR sin fusionar
+        GitHubPublisher.SetSetting(f.Db, GitHubPublisher.PrSetting, "7");
+        Assert.Equal("available", (await versions.CatchUp()).Status); // fusionado, pero su commit no llegó a la release
+        GitHubPublisher.SetBase(f.Db, Commit);
+        Assert.Equal("current", (await versions.CatchUp()).Status);
     }
 }

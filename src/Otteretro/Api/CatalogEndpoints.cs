@@ -210,6 +210,14 @@ public static class CatalogEndpoints
             catch (TaskException e) { return TypedResults.Conflict(e.Error); }
             catch (HttpRequestException) { return TypedResults.Conflict(ApiError.Of("publish.offline")); }
         });
+        api.MapPost("/catalog/catchup", async Task<Results<Ok<CatalogCatchUp>, Conflict<ApiError>>> (AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            if (Publisher(db, s, box) is not { } publisher) return TypedResults.Conflict(ApiError.Of("publish.noKey"));
+            try { return TypedResults.Ok(await new CatalogVersions(db, publisher).CatchUp(ct)); }
+            catch (TaskException e) { return TypedResults.Conflict(e.Error); }
+            catch (HttpRequestException) { return TypedResults.Conflict(ApiError.Of("publish.offline")); }
+        });
         api.MapGet("/catalog/conflicts", Results<Ok<List<CatalogConflict>>, Conflict<ApiError>> (AppSession s) =>
             Db(s) is { } db ? TypedResults.Ok(CatalogVersions.Conflicts(db)) : NoData());
         // Elegir un lado; devuelve los que quedan.

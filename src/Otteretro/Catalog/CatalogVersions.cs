@@ -19,6 +19,9 @@ public record CatalogRelease(string Tag, string Commit, DateTimeOffset? Publishe
 /// <summary>Ajustes › Catálogo (#105, decisión 363): la base, lo que hay en la base local y las versiones publicadas.</summary>
 /// <param name="Base">El commit de main del que parte el catálogo local; null si no se fijó.</param>
 public record CatalogVersionsPage(string? Base, long Sagas, long Games, long Images, List<CatalogRelease> Versions);
+/// <summary>Ponerse al día solo (#106, decisión 361): `current` no hay nada nuevo; `applied` la release traía el PR propio y se aplicó; `available` hay una release que avisar;
+/// `conflicts` quedan conflictos por resolver.</summary>
+public record CatalogCatchUp(string Status, string? Tag, int Conflicts);
 /// <param name="Inserted">Filas que entraron, cambiaron o se quitaron con la versión, sumando todas las tablas.</param>
 /// <param name="Conflicts">Campos o filas en conflicto que quedan para elegir (<see cref="CatalogVersions.Conflicts"/>).</param>
 public record CatalogApplyResult(string Tag, string Commit, int Inserted, int Updated, int Deleted, int Conflicts);
@@ -55,6 +58,35 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
             : null;
         return releases.Select(r => new CatalogRelease(r.Tag, r.Tag.Split('-')[^1], r.Date, baseSha is not null && baseSha.StartsWith(r.Tag.Split('-')[^1], StringComparison.Ordinal),
             history?.Entries.Where(e => e.Version == r.Tag).ToList() ?? [], history?.Images?.GetValueOrDefault(r.Tag) ?? 0)).ToList();
+    }
+
+    /// <summary>
+    /// Al abrir la administración y tras publicar: si la release más nueva trae el PR propio ya fusionado, se aplica sola; si no, se avisa.
+    /// Bajar y publicar usan el mismo repo (<see cref="GitHubPublisher.Repo"/>).
+    /// </summary>
+    public async Task<CatalogCatchUp> CatchUp(CancellationToken ct = default)
+    {
+        if (Conflicts(db).Count is > 0 and var pending) return new("conflicts", null, pending);
+        var baseSha = Base();
+        var newest = (await Releases(ct)).OrderByDescending(r => r["published_at"]?.GetValue<string>(), StringComparer.Ordinal).FirstOrDefault()?["tag_name"]?.GetValue<string>();
+        if (newest is null || baseSha is null) return new("current", null, 0);
+        var commit = (await github.Must(HttpMethod.Get, $"repos/{GitHubPublisher.Repo}/commits/{newest}", null, ct))["sha"]!.GetValue<string>();
+        if (baseSha == commit) return new("current", newest, 0);
+        if (!await OwnPrIn(commit, ct)) return new("available", newest, 0);
+        var result = await Apply(newest, ct);
+        return new(result.Conflicts > 0 ? "conflicts" : "applied", newest, result.Conflicts);
+    }
+
+    /// <summary>El PR que abrió la persona está fusionado y su commit es el del tag o su ancestro.</summary>
+    async Task<bool> OwnPrIn(string tagCommit, CancellationToken ct)
+    {
+        using var c = db.Open();
+        if (c.ExecuteScalar<string?>("SELECT value FROM setting WHERE machine_id = '' AND name = @PrSetting", new { GitHubPublisher.PrSetting }) is not { } number) return false;
+        var pr = await github.Get($"repos/{GitHubPublisher.Repo}/pulls/{number}", ct);
+        if (pr?["merged"]?.GetValue<bool>() != true || pr["merge_commit_sha"]?.GetValue<string>() is not { } merge) return false;
+        if (merge == tagCommit) return true;
+        var status = (await github.Get($"repos/{GitHubPublisher.Repo}/compare/{merge}...{tagCommit}", ct))?["status"]?.GetValue<string>();
+        return status is "ahead" or "identical";
     }
 
     /// <summary>La pestaña entera: la base, los totales de la base local y las versiones.</summary>
