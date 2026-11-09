@@ -56,7 +56,7 @@ public static partial class Published
         DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
     };
 
-    static void Save(string path, object value)
+    internal static void Save(string path, object value)
     {
         Directory.CreateDirectory(Path.GetDirectoryName(path)!);
         File.WriteAllText(path, JsonSerializer.Serialize(value, value.GetType(), Json).ReplaceLineEndings("\n") + "\n", new UTF8Encoding(false));
