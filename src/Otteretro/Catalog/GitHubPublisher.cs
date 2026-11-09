@@ -32,8 +32,6 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     public const string Repo = "OscarVargas97/otteretro-catalogo";
     /// <summary>De qué commit de main parte el catálogo local (setting): con él se ve si alguien cambió lo mismo después.</summary>
     public const string BaseSetting = "catalog.base";
-    /// <summary>El número del último PR que abrió la persona (setting): con él se ve si lo fusionado ya salió en una release (#106).</summary>
-    public const string PrSetting = "catalog.pr";
     const string Folder = "catalogo";
 
     /// <summary>Lo único que se pide a la API de GitHub; nada de esto fusiona.</summary>
@@ -136,7 +134,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         else
             await Must(HttpMethod.Patch, $"repos/{target}/git/refs/heads/{plan.Branch}", new { sha, force = true }, ct);
 
-        if (await OpenPr(owner!, plan.Branch, ct) is { } url) return Remember(new(url, true));
+        if (await OpenPr(owner!, plan.Branch, ct) is { } url) return new(url, true);
         var pr = await Must(HttpMethod.Post, $"repos/{Repo}/pulls", new
         {
             title = $"Catálogo: {plan.Title}",
@@ -145,13 +143,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
             body = Body(plan),
             maintainer_can_modify = true,
         }, ct);
-        return Remember(new(pr["html_url"]!.GetValue<string>(), false));
-    }
-
-    PublishResult Remember(PublishResult result)
-    {
-        if (long.TryParse(result.Url.Split('/')[^1], out var number)) SetSetting(db, PrSetting, number.ToString());
-        return result;
+        return new(pr["html_url"]!.GetValue<string>(), false);
     }
 
     /// <summary>Archivos por pedido al armar el árbol: unos 200 archivos de saga son 1 a 2 MB.</summary>

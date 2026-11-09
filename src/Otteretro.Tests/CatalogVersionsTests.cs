@@ -16,6 +16,9 @@ public class CatalogVersionsTests
     sealed class FakeGitHub(byte[] baseZip, byte[] gz, string manifest) : HttpMessageHandler
     {
         public readonly List<string> Calls = [];
+        /// <summary>El último commit de main (#106, decisión 373) y sus JSON.</summary>
+        public string Head = "head0";
+        public byte[] HeadZip = [];
 
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
         {
@@ -35,11 +38,9 @@ public class CatalogVersionsTests
                     },
                 },
                 $"GET repos/{Repo}/commits/{Tag}" => new { sha = Commit },
-                // #106: el PR propio fusionado (7) cuyo commit no está en la release; el 8, sin fusionar.
-                $"GET repos/{Repo}/pulls/7" => new { merged = true, merge_commit_sha = "m1" },
-                $"GET repos/{Repo}/compare/m1...{Commit}" => new { status = "diverged" },
-                $"GET repos/{Repo}/pulls/8" => new { merged = false, merge_commit_sha = (string?)null },
+                $"GET repos/{Repo}/git/ref/heads/main" => new { @object = new { sha = Head } },
                 $"GET repos/{Repo}/zipball/base1" => baseZip,
+                _ when call == $"GET repos/{Repo}/zipball/{Head}" => HeadZip,
                 "GET dl/catalogo.db.gz" => gz,
                 "GET dl/catalogo.db.gz.json" => Encoding.UTF8.GetBytes(manifest),
                 // #105: el historial de cambios que muestra Ajustes › Catálogo.
@@ -139,22 +140,30 @@ public class CatalogVersionsTests
         var again = await versions.Apply(Tag);
         Assert.Equal((0, 0, 0, 0), (again.Inserted, again.Updated, again.Deleted, again.Conflicts));
         Assert.Equal(zipballs, github.Calls.Count(x => x.Contains("zipball")));
+
+        // #106 (decisión 373): main avanzó sin release nueva (otro año para Tetris); se fusiona sola y su commit queda como base.
+        Edit(Path.Combine(release, "sin-saga", "00000.json"), n => n["games"]![0]!["year"] = 1990);
+        (github.Head, github.HeadZip) = ("head1", Zip(release));
+        var caught = await versions.CatchUp();
+        Assert.Equal(("applied", "main@head1", 0), (caught.Status, caught.Tag, caught.Conflicts));
+        using (var c = f.Db.Open())
+        {
+            Assert.Equal(1990, c.ExecuteScalar<long>("SELECT year FROM game WHERE id = 12"));
+            Assert.Equal("Final Fantasy X (local)", c.ExecuteScalar<string>("SELECT name_es FROM game WHERE id = 10")); // lo no publicado se queda
+        }
+        Assert.Equal("current", (await versions.CatchUp()).Status);
+        Assert.True((await versions.List()).Single().Current); // en el último commit de main, la release más nueva está en uso
     }
 
     [Fact]
-    public async Task CatchUpAvisesWhenTheNewestReleaseIsNotTheOwnPrAndIsQuietWhenCurrent()
+    public async Task CatchUpIsQuietWithoutBaseOrOnTheLastCommitOfMain()
     {
         await using var f = new Fixture();
-        var versions = new CatalogVersions(f.Db, new GitHubPublisher(f.Db, "secreto", new FakeGitHub([], [], "{}")) { Work = f.Tmp["trabajo"] });
+        var github = new FakeGitHub([], [], "{}");
+        var versions = new CatalogVersions(f.Db, new GitHubPublisher(f.Db, "secreto", github) { Work = f.Tmp["trabajo"] });
         Assert.Equal("current", (await versions.CatchUp()).Status); // sin base no hay con qué fusionar
+        github.Head = "base1";
         GitHubPublisher.SetBase(f.Db, "base1");
-        var first = await versions.CatchUp();
-        Assert.Equal(("available", Tag), (first.Status, first.Tag)); // sin PR propio
-        GitHubPublisher.SetSetting(f.Db, GitHubPublisher.PrSetting, "8");
-        Assert.Equal("available", (await versions.CatchUp()).Status); // PR sin fusionar
-        GitHubPublisher.SetSetting(f.Db, GitHubPublisher.PrSetting, "7");
-        Assert.Equal("available", (await versions.CatchUp()).Status); // fusionado, pero su commit no llegó a la release
-        GitHubPublisher.SetBase(f.Db, Commit);
-        Assert.Equal("current", (await versions.CatchUp()).Status);
+        Assert.Equal(("current", "main@base1"), ((await versions.CatchUp()).Status, (await versions.CatchUp()).Tag));
     }
 }

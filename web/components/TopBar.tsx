@@ -73,10 +73,9 @@ export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/
         <span className="search-text">{t("search")}</span>
         <span className="kbd">{t("shortcut")}</span>
       </button>
-      {(catchUp?.status === "available" || catchUp?.status === "conflicts") && (
+      {catchUp?.status === "conflicts" && (
         <Link className="ot-btn" href="/settings/?s=catalog" role="status">
-          {catchUp.status === "available" ? t("catchUpAvailable", { tag: catchUp.tag ?? "" }) : t("catchUpConflicts", { count: Number(catchUp.conflicts) })}
-          {" · "}{catchUp.status === "available" ? t("catchUpOpen") : t("catchUpResolve")}
+          {t("catchUpConflicts", { count: Number(catchUp.conflicts) })}{" · "}{t("catchUpResolve")}
         </Link>
       )}
       <PublishButton kind="all" id={0} />
@@ -103,8 +102,8 @@ export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/
 }
 
 /**
- * Ponerse al día solo (#106, decisión 361): al abrir y cada 5 minutos pregunta si la release más nueva trae el PR propio, y entonces el
- * servidor la aplica; si no, o si quedan conflictos, devuelve el aviso. Publicar la vuelve a pedir (Publish.tsx).
+ * Ponerse al día solo (#106, decisiones 372 y 373): al abrir y cada 5 minutos el servidor fusiona el catálogo local con el último
+ * commit de main si avanzó desde la base; si quedan conflictos, la barra avisa. Publicar la vuelve a pedir (Publish.tsx).
  */
 function useCatchUp() {
   const cache = useQueryClient();
