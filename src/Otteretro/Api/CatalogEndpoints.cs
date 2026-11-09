@@ -144,6 +144,9 @@ public static class CatalogEndpoints
         // «Emuladores» (#95): las recetas en la base local, como las sagas; Publicar lleva al PR las que cambiaron.
         api.MapGet("/recipes", Results<Ok<List<RecipeInfo>>, Conflict<ApiError>> (AppSession s) =>
             Db(s) is { } db ? TypedResults.Ok(Recipes.List(db)) : NoData());
+        // Las recetas que recomiendan un juego (#123), para su ficha.
+        api.MapGet("/games/{id:long}/recipes", Results<Ok<List<GameRecipe>>, Conflict<ApiError>> (long id, AppSession s) =>
+            Db(s) is { } db ? TypedResults.Ok(Recipes.ForGame(db, id)) : NoData());
         // El editor de recetas (#111) se arma con el esquema: el mismo que valida al guardar.
         api.MapGet("/recipes/schema", () => TypedResults.Ok(new RecipeText(Published.RecipeSchema())));
         api.MapGet("/recipes/{id}", Results<Ok<RecipeText>, NotFound, Conflict<ApiError>> (string id, AppSession s) =>
