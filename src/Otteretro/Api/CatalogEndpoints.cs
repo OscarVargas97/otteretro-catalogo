@@ -180,8 +180,15 @@ public static class CatalogEndpoints
         api.MapPost("/recipes/draft", async Task<Results<Ok<RecipeText>, BadRequest<ApiError>, Conflict<ApiError>>> (RepoRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
         {
             if (Db(s) is not { } db) return NoData();
-            var (json, error) = await Recipes.Draft(request.Url, GitHubToken(db, s, box), ct);
+            var (json, error) = await Recipes.Draft(request.Url, GitHubToken(db, s, box), ct, request.File);
             return error is null ? TypedResults.Ok(new RecipeText(json!)) : error.Code == "recipes.badRepo" ? TypedResults.BadRequest(error) : TypedResults.Conflict(error);
+        });
+        // «Agregar una receta»: las releases del repo con sus archivos.
+        api.MapGet("/recipes/releases", async Task<Results<Ok<List<RepoRelease>>, BadRequest<ApiError>, Conflict<ApiError>>> (string url, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            var (list, error) = await Recipes.RepoReleases(url, GitHubToken(db, s, box), ct);
+            return error is null ? TypedResults.Ok(list!) : error.Code == "recipes.badRepo" ? TypedResults.BadRequest(error) : TypedResults.Conflict(error);
         });
         api.MapPut("/recipes/{id}", async Task<Results<Ok<List<RecipeInfo>>, BadRequest<ApiError>, Conflict<ApiError>>> (string id, RecipeText request, AppSession s, SecretBox box, CancellationToken ct, bool create = false) =>
         {

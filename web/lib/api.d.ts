@@ -2321,6 +2321,61 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/recipes/releases": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query: {
+                    url: string;
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["RepoRelease"][];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/publish/preview": {
         parameters: {
             query?: never;
@@ -4539,8 +4594,19 @@ export interface components {
             /** Format: int32 */
             days: number | string;
         };
+        RepoFile: {
+            name: string;
+            windows: boolean;
+            pattern: string;
+        };
+        RepoRelease: {
+            tag: string;
+            publishedAt: null | string;
+            files: components["schemas"]["RepoFile"][];
+        };
         RepoRequest: {
             url: string;
+            file?: null | string;
         };
         ReviewItem: {
             /** Format: int64 */

@@ -4,6 +4,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useConsoleName } from "@/components/Catalog";
+import { RecipeAdd } from "@/components/RecipeAdd";
 import { RecipeCard } from "@/components/RecipeCard";
 import { Tabs } from "@/components/Tabs";
 import { request } from "@/lib/client";
@@ -25,8 +26,8 @@ const json = (method: string, body: unknown) => ({ method, body: JSON.stringify(
 const empty = (v: unknown) => v === undefined || v === "" || v === false || (Array.isArray(v) && v.length === 0);
 
 /**
- * Emuladores (#95, #108): una pestaña por tipo de receta (sin Sistema, decisión 364) con sus tarjetas agrupadas por consola, «Crear
- * desde su repo» y un formulario por campo. Se guardan en la base local, como las
+ * Emuladores (#95, #108): una pestaña por tipo de receta (sin Sistema, decisión 364) con sus tarjetas agrupadas por consola, «Agregar
+ * una receta» (RecipeAdd, #110) y un formulario por campo. Se guardan en la base local, como las
  * sagas, y Publicar las lleva al PR. Al guardar, el servidor revisa el esquema y que la fuente tenga una release con un archivo que calce.
  */
 export default function Emulators() {
@@ -40,12 +41,8 @@ export default function Emulators() {
   const statusOf = new Map((status.data ?? []).map((x) => [x.id, x]));
   const [kind, setKind] = useState<(typeof KINDS)[number]>("emulator");
   const [editing, setEditing] = useState<{ recipe: Recipe; create: boolean } | null>(null);
-  const [url, setUrl] = useState("");
+  const [adding, setAdding] = useState(false);
   const importMain = useMutation({ mutationFn: () => request<number>("/api/recipes/import", { method: "POST" }), onSuccess: () => cache.invalidateQueries({ queryKey: ["recipes"] }) });
-  const draft = useMutation({
-    mutationFn: () => request<RecipeText>("/api/recipes/draft", json("POST", { url })),
-    onSuccess: (r) => setEditing({ recipe: JSON.parse(r.json), create: true }),
-  });
   const open = useMutation({
     mutationFn: (id: string) => request<RecipeText>(`/api/recipes/${encodeURIComponent(id)}`),
     onSuccess: (r) => setEditing({ recipe: JSON.parse(r.json), create: false }),
@@ -67,12 +64,12 @@ export default function Emulators() {
 
   return (
     <div className="content">
-      <form className="toolbar" onSubmit={(e) => { e.preventDefault(); draft.mutate(); }}>
-        <input style={{ flex: 1 }} aria-label={t("repoUrl")} placeholder={t("repoPlaceholder")} value={url} onChange={(e) => setUrl(e.target.value)} />
-        <button className="ot-btn ot-btn-primary" type="submit" disabled={!url.trim() || draft.isPending}>{t("fromRepo")}</button>
+      <div className="toolbar">
+        <button className="ot-btn ot-btn-primary" type="button" disabled={adding} onClick={() => setAdding(true)}>{t("fromRepo")}</button>
         <span className="small muted tabular toolbar-total" aria-live="polite">{recipes.data ? t("total", { count: recipes.data.length }) : ""}</span>
-      </form>
-      {[draft.error, open.error, duplicate.error, recipes.error, importMain.error].filter(Boolean).map((e, i) => <p key={i} className="error small" role="alert">{describe(e)}</p>)}
+      </div>
+      {adding && <RecipeAdd onDraft={(recipe) => { setAdding(false); setEditing({ recipe, create: true }); }} onCancel={() => setAdding(false)} />}
+      {[open.error, duplicate.error, recipes.error, importMain.error].filter(Boolean).map((e, i) => <p key={i} className="error small" role="alert">{describe(e)}</p>)}
       {editing && <RecipeForm key={String(editing.recipe.id)} recipe={editing.recipe} create={editing.create} onDone={() => setEditing(null)} />}
       {recipes.data?.length === 0 && (
         <section className="panel">

@@ -103,6 +103,24 @@ public class RecipesTests
         Assert.Equal(("forgejo", "eden-emu/eden", "git.eden-emu.dev"), Recipes.Source("https://git.eden-emu.dev/eden-emu/eden.git"));
     }
 
+    /// <summary>#110: el patrón de un archivo calza con la versión siguiente, y el repo lista sus releases con archivos para elegir.</summary>
+    [Fact]
+    public async Task ThePatternMatchesTheNextVersionAndReleasesListTheirFiles()
+    {
+        var pattern = Recipes.AssetPattern("flycast-win64-2.4.zip");
+        Assert.Matches(pattern, "flycast-win64-2.5.zip");
+        Assert.Matches(pattern, "flycast-win64-2.10.1.zip");
+        Assert.DoesNotMatch(pattern, "flycast-linux-2.5.zip");
+
+        Recipes.Http = new HttpClient(new FakeReleases(new() { [Releases] = MgbaReleases }));
+        var (list, error) = await Recipes.RepoReleases("github.com/mgba-emu/mgba", token: null);
+        Assert.Null(error);
+        var release = Assert.Single(list!);
+        Assert.Equal([false, true], release.Files.Select(f => f.Windows));
+        var (json, _) = await Recipes.Draft("github.com/mgba-emu/mgba", token: null, chosen: "mGBA-0.10.5-macos.dmg");
+        Assert.Contains("macos", json);
+    }
+
     /// <summary>#108: la tarjeta sabe la última release, si el patrón calza con ella y si la receta está publicada; la release se guarda un rato.</summary>
     [Fact]
     public async Task TheStatusComparesTheLatestReleaseAndMain()

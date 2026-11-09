@@ -26,7 +26,11 @@ public record RecipeStatus(string Id, string? Tag, string? PublishedAt, bool? Ma
 /// </summary>
 public record RecipeTest(string Tag, string File, long Size, string Detect, bool? Found);
 /// <summary>La URL del repo de un emulador (GitHub, Forgejo o Gitea).</summary>
-public record RepoRequest(string Url);
+public record RepoRequest(string Url, string? File = null);
+/// <summary>Un archivo de una release (#110): su nombre, si parece de Windows y el patrón que saldría de él.</summary>
+public record RepoFile(string Name, bool Windows, string Pattern);
+/// <summary>Una release de un repo con sus archivos (#110).</summary>
+public record RepoRelease(string Tag, string? PublishedAt, List<RepoFile> Files);
 
 /// <summary>
 /// La sección «Emuladores» (#95, decisiones 352 y 353 de Otteretro). Las recetas se guardan en la base local (`catalog.recipe`), como las
@@ -357,11 +361,28 @@ public static partial class Recipes
     public static string AssetPattern(string file) =>
         "^" + Regex.Replace(Regex.Escape(file), @"(?<![A-Za-uw-z0-9])\d+(\\\.\d+)+(?![A-Za-z0-9])", "[0-9.]+") + "$";
 
+    /// <summary>«Agregar una receta» (#110): las releases del repo pegado con los archivos de cada una, para elegir el de Windows.</summary>
+    public static async Task<(List<RepoRelease>? Releases, ApiError? Error)> RepoReleases(string url, string? token, CancellationToken ct = default)
+    {
+        if (Source(url) is not { } parsed) return (null, ApiError.Of("recipes.badRepo"));
+        var (source, repo, host) = parsed;
+        try
+        {
+            var list = (await Releases(source, host, repo, token, ct)).Select(r => new RepoRelease(r.Tag, r.PublishedAt,
+                r.Assets.Select(a => new RepoFile(a, !NotWindows().IsMatch(a), AssetPattern(a))).ToList())).ToList();
+            return list.Count == 0 ? (null, ApiError.Of("recipes.noRelease", ("repo", repo))) : (list, null);
+        }
+        catch (Exception e) when (e is HttpRequestException or JsonException or TaskCanceledException && !ct.IsCancellationRequested)
+        {
+            return (null, ApiError.Of("recipes.sourceFailed", ("repo", repo), ("detail", e.Message)));
+        }
+    }
+
     /// <summary>
     /// «Crear desde su repo»: una receta para completar a partir de la release más nueva con un archivo de Windows. Lleva su fuente, el
     /// patrón del archivo y un ejecutable supuesto; la consola, la carpeta y lo demás se completan en el formulario. No se guarda.
     /// </summary>
-    public static async Task<(string? Json, ApiError? Error)> Draft(string url, string? token, CancellationToken ct = default)
+    public static async Task<(string? Json, ApiError? Error)> Draft(string url, string? token, CancellationToken ct = default, string? chosen = null)
     {
         if (Source(url) is not { } parsed) return (null, ApiError.Of("recipes.badRepo"));
         var (source, repo, host) = parsed;
@@ -371,7 +392,7 @@ public static partial class Recipes
         {
             return (null, ApiError.Of("recipes.sourceFailed", ("repo", repo), ("detail", e.Message)));
         }
-        var file = releases.Select(r => r.Assets.Where(a => !NotWindows().IsMatch(a)).OrderBy(a => a.Contains("win", StringComparison.OrdinalIgnoreCase) ? 0 : 1).FirstOrDefault())
+        var file = chosen ?? releases.Select(r => r.Assets.Where(a => !NotWindows().IsMatch(a)).OrderBy(a => a.Contains("win", StringComparison.OrdinalIgnoreCase) ? 0 : 1).FirstOrDefault())
             .FirstOrDefault(a => a is not null);
         if (file is null) return (null, ApiError.Of("recipes.noRelease", ("repo", repo)));
         var name = repo.Split('/')[1];
