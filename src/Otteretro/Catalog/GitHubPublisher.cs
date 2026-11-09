@@ -213,7 +213,10 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
                 // cambió solo acá se suma, y lo que ya está igual en los dos lados no es cambio. Solo un mismo campo distinto es conflicto.
                 var (inMain, here) = (Load(before), Load(after));
                 var found = new List<string>();
-                var merged = JsonMerge.Merge(Load(Path.Combine(origin, path)), inMain, here, found);
+                // Una receta que llegó a main después de la base se trae con «Traer las recetas de main»: su origen es la de main
+                // (sin eso, cualquier campo editado acá contaría como conflicto).
+                var from = Load(Path.Combine(origin, path)) ?? (path.StartsWith("recetas/", StringComparison.Ordinal) ? inMain : null);
+                var merged = JsonMerge.Merge(from, inMain, here, found);
                 if (JsonMerge.Same(merged, inMain)) continue;
                 if (found.Count > 0) conflicts.Add($"{Folder}/{path}: {string.Join(", ", found.Take(5))}{(found.Count > 5 ? "…" : "")}");
                 else if (!JsonMerge.Same(merged, here))
