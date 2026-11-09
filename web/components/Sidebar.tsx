@@ -10,11 +10,12 @@ import type { AppState } from "@/lib/types";
 import { normalizePath, useAppState } from "./Shell";
 
 // Clave en nav.* de cada entrada; `phase`, la fase en que llega: hasta entonces se ve atenuada y no se abre (#169).
-type Entry = { href: string; key: "home" | "sagas" | "review" | "settings"; phase?: number };
+type Entry = { href: string; key: "home" | "sagas" | "review" | "emulators" | "settings"; phase?: number };
 const MAIN: Entry[] = [
   { href: "/", key: "home" },
   { href: "/sagas/", key: "sagas" },
   { href: "/review/", key: "review" },
+  { href: "/emulators/", key: "emulators" },
 ];
 const SECONDARY: Entry[] = [
   { href: "/settings/", key: "settings" },
@@ -25,6 +26,7 @@ const ICONS: Record<Entry["key"], string> = {
   home: "M3 11 12 4l9 7M5 10v10h5v-6h4v6h5V10",
   sagas: "M4 5h6v14H4zM14 5h6v6h-6zM14 15h6v4h-6z",
   review: "M5 12l4 4L19 6",
+  emulators: "M6 8h12a4 4 0 0 1 0 8H6a4 4 0 0 1 0-8zM8 11v2M7 12h2M15 11h.01M17 13h.01",
   settings: "M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2",
 };
 const Icon = ({ d }: { d: string }) => (

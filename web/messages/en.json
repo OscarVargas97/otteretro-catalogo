@@ -13,6 +13,7 @@
     "saga": "Saga",
     "game": "Game",
     "review": "Review",
+    "emulators": "Emulators",
     "settings": "Settings",
     "pending": "{count, plural, one {# to review} other {# to review}}",
     "comingIn": "Coming in phase {phase}",
@@ -379,9 +380,47 @@
     },
     "withSystemBadge": "With the system"
   },
+  "emulators": {
+    "repoUrl": "Repo address",
+    "repoPlaceholder": "https://github.com/owner/repo",
+    "fromRepo": "Create from its repo",
+    "total": "{count, plural, one {# recipe} other {# recipes}}",
+    "empty": "This catalog has no recipes yet.",
+    "importMain": "Bring the recipes from main",
+    "newTitle": "New recipe",
+    "editTitle": "Recipe {id}",
+    "commas": "comma separated",
+    "others": "Other fields, as JSON",
+    "checkNote": "Saving checks the schema and that the source has a release with a file matching “asset”. Publish takes it to the PR.",
+    "badOthers": "The other fields are not valid JSON.",
+    "cancel": "Cancel",
+    "save": "Save",
+    "checking": "Checking…",
+    "kinds": { "emulator": "Emulator", "port": "Port", "complement": "Add-on", "tool": "Tool" },
+    "sources": { "github": "GitHub", "forgejo": "Forgejo or Gitea", "dolphin": "Dolphin" },
+    "versionFrom": { "exe": "From the executable", "date": "Release date", "fixed": "Fixed" },
+    "field": {
+      "id": "Id", "kind": "Kind", "name": "Name", "folder": "Folder", "detect": "File that detects it", "parent": "Parent recipe",
+      "game": "Game", "link": "Link", "license": "License", "asset": "Release file (pattern)", "saveAs": "Save as",
+      "consoles": "Consoles", "baseFor": "Base for", "formats": "Formats", "saves": "Saves", "config": "Config", "content": "Content",
+      "version": "Version", "versionValue": "Version value", "source": "Source", "repo": "Repo", "host": "Server",
+      "dev": "Development build", "experimental": "Experimental", "devOnly": "Development only"
+    }
+  },
   "errors": {
     "http": "The app responded with an error ({status}).",
     "unknown": "Something went wrong ({code}).",
+    "recipes": {
+      "badJson": "The recipe is not valid JSON: {detail}",
+      "schema": "The recipe does not match the schema: {problems}",
+      "idChanged": "The id cannot change: the recipe is {id}.",
+      "exists": "There is already a recipe {id}.",
+      "noRepo": "The source needs its repo (and its server, for Forgejo).",
+      "noRelease": "{repo} has no published releases.",
+      "noAsset": "No release of {repo} has a file matching {pattern}.",
+      "sourceFailed": "Could not query {repo}: {detail}",
+      "badRepo": "That address is not a GitHub, Forgejo or Gitea repo."
+    },
     "path": {
       "notAbsolute": "The path must be complete, for example E:\\Otteretro.",
       "isFile": "That path is a file, not a folder.",

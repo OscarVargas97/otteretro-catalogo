@@ -205,8 +205,12 @@ public class GitHubPublisherTests
             File.WriteAllText(Path.Combine(folder, Published.RecipesFolder, "dolphin.json"), "{}");
         }), canPush: true);
         Assert.Null(Editing.SetIconic(f.Db, 33, true));
+        // #95: la de «Emuladores» (en la base local) sí va.
+        var local = Directory.CreateDirectory(f.Tmp["recetas-locales"]).FullName;
+        File.WriteAllText(Path.Combine(local, "mgba.json"), """{ "id": "mgba", "name": "mGBA", "kind": "emulator", "folder": "GBA", "detect": "mGBA.exe" }""");
+        Assert.Equal(1, Recipes.Import(f.Db, local));
         var preview = await new GitHubPublisher(f.Db, "secreto", github) { Work = f.Tmp["trabajo-recetas"] }.Preview(new("all", 0));
-        Assert.Equal(["sagas/00033-final-fantasy.json"], preview.Files.Select(x => x.Path));
+        Assert.Equal(["recetas/mgba.json", "sagas/00033-final-fantasy.json"], preview.Files.Select(x => x.Path));
     }
 
     /// <summary>#85: volver a la vista previa o publicar reusa la comparación; un cambio local la rehace.</summary>

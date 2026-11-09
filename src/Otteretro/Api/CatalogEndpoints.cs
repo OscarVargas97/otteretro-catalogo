@@ -137,6 +137,33 @@ public static class CatalogEndpoints
         api.MapDelete("/games/{id:long}", Results<Ok, BadRequest<ApiError>, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : Editing.DeleteGame(db, id) is { } e ? TypedResults.BadRequest(e) : TypedResults.Ok());
 
+        // «Emuladores» (#95): las recetas en la base local, como las sagas; Publicar lleva al PR las que cambiaron.
+        api.MapGet("/recipes", Results<Ok<List<RecipeInfo>>, Conflict<ApiError>> (AppSession s) =>
+            Db(s) is { } db ? TypedResults.Ok(Recipes.List(db)) : NoData());
+        api.MapGet("/recipes/{id}", Results<Ok<RecipeText>, NotFound, Conflict<ApiError>> (string id, AppSession s) =>
+            Db(s) is not { } db ? NoData() : Recipes.Get(db, id) is { } json ? TypedResults.Ok(new RecipeText(json)) : TypedResults.NotFound());
+        // Las de main, con sus bytes, mientras la base local no las tenga.
+        api.MapPost("/recipes/import", async Task<Results<Ok<int>, Conflict<ApiError>>> (AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            if (Publisher(db, s, box) is not { } publisher) return TypedResults.Conflict(ApiError.Of("publish.noKey"));
+            try { return TypedResults.Ok(Recipes.Import(db, await publisher.MainRecipes(ct))); }
+            catch (TaskException e) { return TypedResults.Conflict(e.Error); }
+            catch (HttpRequestException) { return TypedResults.Conflict(ApiError.Of("publish.offline")); }
+        });
+        // «Crear desde su repo»: una receta para completar en el formulario; no se guarda.
+        api.MapPost("/recipes/draft", async Task<Results<Ok<RecipeText>, BadRequest<ApiError>, Conflict<ApiError>>> (RepoRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            var (json, error) = await Recipes.Draft(request.Url, GitHubToken(db, s, box), ct);
+            return error is null ? TypedResults.Ok(new RecipeText(json!)) : error.Code == "recipes.badRepo" ? TypedResults.BadRequest(error) : TypedResults.Conflict(error);
+        });
+        api.MapPut("/recipes/{id}", async Task<Results<Ok<List<RecipeInfo>>, BadRequest<ApiError>, Conflict<ApiError>>> (string id, RecipeText request, AppSession s, SecretBox box, CancellationToken ct, bool create = false) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            return await Recipes.Save(db, id, request.Json, create, GitHubToken(db, s, box), ct) is { } error ? TypedResults.BadRequest(error) : TypedResults.Ok(Recipes.List(db));
+        });
+
         // Publicar tu versión como un PR (#22). Solo propone: nada acá fusiona.
         api.MapPost("/publish/preview", async Task<Results<Ok<PublishPreview>, Conflict<ApiError>>> (PublishRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
         {
@@ -186,8 +213,11 @@ public static class CatalogEndpoints
     static Igdb IgdbFor(Database db, AppSession s, SecretBox box) =>
         new(new ApiClient(db, IgdbImport.Handler), new Credentials(db, s.Config.MachineId, box), IgdbImport.Handler);
 
+    static string? GitHubToken(Database db, AppSession s, SecretBox box) =>
+        new Credentials(db, s.Config.MachineId, box).Read("github.token") is { Length: > 0 } token ? token : null;
+
     static GitHubPublisher? Publisher(Database db, AppSession s, SecretBox box) =>
-        new Credentials(db, s.Config.MachineId, box).Read("github.token") is { Length: > 0 } token ? new(db, token) : null;
+        GitHubToken(db, s, box) is { } token ? new(db, token) : null;
 
     static bool HasSgdbKey(Database db, AppSession s, SecretBox box) =>
         new Credentials(db, s.Config.MachineId, box).List().Any(c => c.Id == "steamgriddb.apiKey" && c.Saved);

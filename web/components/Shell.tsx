@@ -20,6 +20,7 @@ const TITLES = {
   "/saga": "saga",
   "/game": "game",
   "/review": "review",
+  "/emulators": "emulators",
   "/settings": "settings",
 } as const;
 

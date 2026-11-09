@@ -45,9 +45,9 @@ test("el asistente elige la carpeta de datos y pide las claves del catálogo", a
 
 test("cada pantalla abre, y lo que era de cada persona ya no está en el menú", async () => {
   const menu = page.locator(".sidebar");
-  for (const key of ["home", "sagas", "review", "settings"] as const) await expect(menu.getByRole("link", { name: es.nav[key] })).toBeVisible();
-  await expect(menu.locator("a.ot-nav-item")).toHaveCount(4);
-  for (const path of ["sagas", "review", "settings"]) {
+  for (const key of ["home", "sagas", "review", "emulators", "settings"] as const) await expect(menu.getByRole("link", { name: es.nav[key] })).toBeVisible();
+  await expect(menu.locator("a.ot-nav-item")).toHaveCount(5);
+  for (const path of ["sagas", "review", "emulators", "settings"]) {
     await page.goto(`${base()}/${path}/`);
     await expect(page.locator(".top h1")).toBeAttached();
   }

@@ -253,6 +253,18 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     static bool Same(string a, string b) =>
         File.Exists(a) == File.Exists(b) && (!File.Exists(a) || File.ReadAllText(a) == File.ReadAllText(b));
 
+    /// <summary>La carpeta de recetas de main (#95), para traerlas a «Emuladores».</summary>
+    public async Task<string> MainRecipes(CancellationToken ct = default)
+    {
+        await Gate.WaitAsync(ct);
+        try
+        {
+            var head = (await Must(HttpMethod.Get, $"repos/{Repo}/git/ref/heads/main", null, ct))["object"]!["sha"]!.GetValue<string>();
+            return Path.Combine(await MainFolder(head, ct), Published.RecipesFolder);
+        }
+        finally { Gate.Release(); }
+    }
+
     /// <summary>Cuántos archivos llevaría «Publicar todo» (#85), para el botón de la barra de arriba.</summary>
     public async Task<int> CountAll(CancellationToken ct = default)
     {
@@ -273,8 +285,8 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         {
             foreach (var folder in new[] { main, local })
                 paths.UnionWith(Directory.GetFiles(folder, "*.json", SearchOption.AllDirectories).Select(f => Path.GetRelativePath(folder, f).Replace('\\', '/'))
-                    // #94: las recetas no salen de la base local (Write no las escribe): sin esto, Publicar todo las borraría de main.
-                    .Where(p => !p.StartsWith(Published.RecipesFolder + "/", StringComparison.Ordinal)));
+                    // #94, #95: una receta va solo si está en la base local (las de «Emuladores»): Publicar todo nunca borra una de main.
+                    .Where(p => folder == local || !p.StartsWith(Published.RecipesFolder + "/", StringComparison.Ordinal)));
             return paths;
         }
         var (mainGames, localGames) = (Published.GameFiles(main), Published.GameFiles(local));
