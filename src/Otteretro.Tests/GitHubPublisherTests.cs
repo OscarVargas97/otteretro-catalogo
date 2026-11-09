@@ -154,9 +154,11 @@ public class GitHubPublisherTests
         var (f, github, publisher) = Setup(canPush: true);
         // base0 es lo de la fixture; main (head1) lo tiene con un cambio en Final Fantasy y otro en Zelda, que acá no se tocaron.
         github.Zips["base0"] = MainZip(f);
+        // #91: como las imágenes que main sumó después de la base, más un campo de Zelda.
         var ahead = MainZip(f, folder =>
         {
-            foreach (var file in new[] { "sagas/00033-final-fantasy.json", "sagas/00040-zelda.json" }) File.AppendAllText(Path.Combine(folder, file), "\n");
+            EditJson(folder, "sagas/00033-final-fantasy.json", s => s["games"]![0]!["images"] = new JsonObject { ["cover"] = CoverA });
+            EditJson(folder, "sagas/00040-zelda.json", s => s["games"]![0]!["year"] = 1987);
         });
         github = new FakeGitHub(ahead, canPush: true) { Zips = { ["base0"] = github.Zips["base0"] } };
         GitHubPublisher.SetBase(f.Db, "base0");
@@ -164,15 +166,74 @@ public class GitHubPublisherTests
         return (f, github, new GitHubPublisher(f.Db, "secreto", github) { Work = publisher.Work });
     }
 
-    [Fact]
-    public async Task OnlyWhatChangedOnBothSidesIsAConflict()
+    const string CoverA = "https://cdn2.steamgriddb.com/grid/aaaa.png", CoverB = "https://cdn2.steamgriddb.com/grid/bbbb.png";
+
+    static void EditJson(string folder, string file, Action<JsonNode> change)
     {
-        var (f, github, publisher) = SetupAhead(f => Assert.Null(Editing.SetIconic(f.Db, 33, true)));
+        var path = Path.Combine(folder, file);
+        var node = JsonNode.Parse(File.ReadAllText(path))!;
+        change(node);
+        File.WriteAllText(path, node.ToJsonString(new JsonSerializerOptions { WriteIndented = true }));
+    }
+
+    static void AddCover(Fixture f, string url)
+    {
+        using var c = f.Db.Open();
+        c.Execute("INSERT INTO catalog.image (game_id, kind, url) VALUES (10, 'cover', @url)", new { url });
+    }
+
+    /// <summary>#91: las imágenes que main sumó y acá ya están iguales no son conflicto ni cambio.</summary>
+    [Fact]
+    public async Task ImagesAlreadyEqualInMainAndHereAreNotAConflict()
+    {
+        var (f, _, publisher) = SetupAhead(f => AddCover(f, CoverA));
+        await using var _ = f;
+
+        var preview = await publisher.Preview(new("all", 0));
+        Assert.Empty(preview.Conflicts);
+        Assert.Empty(preview.Files);
+    }
+
+    /// <summary>#91: un cambio local en un campo que main no tocó se publica, sin revertir lo que main sumó en el mismo archivo.</summary>
+    [Fact]
+    public async Task ALocalChangeInAFieldMainDidNotTouchIsPublishedKeepingMain()
+    {
+        var (f, _, publisher) = SetupAhead(f => Assert.Null(Editing.SetIconic(f.Db, 33, true)));
+        await using var _ = f;
+
+        var preview = await publisher.Preview(new("all", 0));
+        Assert.Empty(preview.Conflicts);
+        Assert.Empty(preview.Errors);
+        Assert.Equal(["sagas/00033-final-fantasy.json"], preview.Files.Select(x => x.Path)); // Zelda cambió solo en main: no va
+        var published = JsonNode.Parse(File.ReadAllText(Path.Combine(publisher.Work, "local", "sagas", "00033-final-fantasy.json")))!;
+        Assert.True(published["iconic"]!.GetValue<bool>());
+        Assert.Equal(CoverA, published["games"]![0]!["images"]!["cover"]!.GetValue<string>());
+    }
+
+    /// <summary>#91: una lista vacía en main y ausente acá (el generador omite las vacías) no es cambio ni conflicto.</summary>
+    [Fact]
+    public void AnEmptyListInMainAndAnAbsentFieldHereAreTheSame()
+    {
+        var origin = JsonNode.Parse("""{"id":1,"summary":"a"}""");
+        var main = JsonNode.Parse("""{"id":1,"summary":"a","criteria":[],"routes":[],"images":{"cover":"x"}}""");
+        var local = JsonNode.Parse("""{"id":1,"summary":"b","images":{"cover":"x"}}""");
+        var conflicts = new List<string>();
+        var merged = JsonMerge.Merge(origin, main, local, conflicts);
+        Assert.Empty(conflicts);
+        Assert.True(JsonMerge.Same(JsonNode.Parse("""{"id":1,"summary":"b","criteria":[],"routes":[],"images":{"cover":"x"}}"""), merged));
+        Assert.True(JsonMerge.Same(main, JsonNode.Parse("""{"id":1,"summary":"a","images":{"cover":"x"}}""")));
+    }
+
+    /// <summary>#91: solo es conflicto un mismo campo que cambió distinto en main y acá.</summary>
+    [Fact]
+    public async Task OnlyTheSameFieldChangedDifferentlyOnBothSidesIsAConflict()
+    {
+        var (f, github, publisher) = SetupAhead(f => { AddCover(f, CoverB); Assert.Null(Editing.SetIconic(f.Db, 33, true)); });
         await using var _ = f;
 
         var preview = await publisher.Preview(new("all", 0));
         Assert.True(preview.KnownBase);
-        Assert.Equal([SagaFile], preview.Conflicts);
+        Assert.Equal([SagaFile + ": games[10].images.cover"], preview.Conflicts);
         Assert.Equal(["sagas/00033-final-fantasy.json"], preview.Files.Select(x => x.Path)); // Zelda cambió solo en main: no va
         var error = await Assert.ThrowsAsync<App.TaskException>(() => publisher.Publish(new("all", 0)));
         Assert.Equal("publish.conflict", error.Error.Code);
