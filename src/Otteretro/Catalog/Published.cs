@@ -242,9 +242,10 @@ public static partial class Published
     /// Genera la base que baja la app y su manifiesto. Parte siempre de los archivos y de una base nueva, nunca de la del generador: lo que no
     /// esté en lo publicado no puede colarse en lo que reciben las personas.
     /// </summary>
-    public static PublishedManifest Compile(string folder, string output)
+    /// <param name="validate">False solo para rearmar una base vieja como origen de una fusión (#104): lo de un commit ya publicado no se vuelve a juzgar.</param>
+    public static PublishedManifest Compile(string folder, string output, bool validate = true)
     {
-        if (Validate(folder) is { Count: > 0 } errors) throw new InvalidDataException(string.Join('\n', errors));
+        if (validate && Validate(folder) is { Count: > 0 } errors) throw new InvalidDataException(string.Join('\n', errors));
         var all = Read(folder);
         var work = Directory.CreateTempSubdirectory("otteretro-compilar").FullName;
         try

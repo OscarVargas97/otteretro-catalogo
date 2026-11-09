@@ -2334,6 +2334,243 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/catalog/versions": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["CatalogVersionsPage"];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/catalog/version/apply": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["CatalogApplyRequest"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["CatalogApplyResult"];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/catalog/catchup": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["CatalogCatchUp"];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/catalog/conflicts": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["CatalogConflict"][];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/catalog/conflicts/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: number;
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["ConflictChoice"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["CatalogConflict"][];
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/search": {
         parameters: {
             query?: never;
@@ -4045,6 +4282,48 @@ export interface components {
             examples: string[];
             issueUrl: null | string;
         };
+        CatalogApplyRequest: {
+            tag: string;
+        };
+        CatalogApplyResult: {
+            tag: string;
+            commit: string;
+            /** Format: int32 */
+            inserted: number | string;
+            /** Format: int32 */
+            updated: number | string;
+            /** Format: int32 */
+            deleted: number | string;
+            /** Format: int32 */
+            conflicts: number | string;
+        };
+        CatalogCatchUp: {
+            status: string;
+            tag: null | string;
+            /** Format: int32 */
+            conflicts: number | string;
+        };
+        CatalogConflict: {
+            /** Format: int64 */
+            id: number | string;
+            version: string;
+            table: string;
+            key: string;
+            field: null | string;
+            base: null | string;
+            local: null | string;
+            remote: null | string;
+        };
+        CatalogRelease: {
+            tag: string;
+            commit: string;
+            /** Format: date-time */
+            published: null | string;
+            current: boolean;
+            changes: components["schemas"]["PublishedChange"][];
+            /** Format: int32 */
+            images: number | string;
+        };
         CatalogTaskInfo: {
             id: string;
             model: null | string;
@@ -4063,6 +4342,16 @@ export interface components {
             auto?: null | boolean;
             /** Format: int32 */
             days?: null | number | string;
+        };
+        CatalogVersionsPage: {
+            base: null | string;
+            /** Format: int64 */
+            sagas: number | string;
+            /** Format: int64 */
+            games: number | string;
+            /** Format: int64 */
+            images: number | string;
+            versions: components["schemas"]["CatalogRelease"][];
         };
         ClaudeSettingsRequest: {
             scheduleStart: null | string;
@@ -4090,6 +4379,9 @@ export interface components {
             /** Format: int64 */
             progress: number | string;
             resumeAt: null | string;
+        };
+        ConflictChoice: {
+            useRemote: boolean;
         };
         ConsoleCount: {
             id: string;
@@ -4371,6 +4663,17 @@ export interface components {
             path: string;
             change: string;
             details: components["schemas"]["ApiError"][];
+        };
+        PublishedChange: {
+            version: string;
+            kind: string;
+            change: string;
+            /** Format: int64 */
+            id: number | string;
+            name?: null | string;
+            from?: null | string;
+            /** Format: int64 */
+            into?: null | number | string;
         };
         PublishPreview: {
             title: string;

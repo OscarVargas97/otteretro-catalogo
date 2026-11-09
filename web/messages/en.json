@@ -21,6 +21,10 @@
     "expand": "Expand menu"
   },
   "topBar": {
+    "catchUpAvailable": "There is a new catalog version: {tag}",
+    "catchUpOpen": "View",
+    "catchUpConflicts": "{count} conflicts left from the last version",
+    "catchUpResolve": "Resolve",
     "search": "Search sagas and games…",
     "shortcut": "CTRL K",
     "tasks": "Tasks",
@@ -106,6 +110,44 @@
     "later": "Backup and the remaining settings arrive with their phase.",
     "credentials": "Accounts and keys",
     "sections": "Settings sections",
+    "catalog": {
+      "title": "Catalog",
+      "inUse": "Catalog in use",
+      "base": "Based on main version",
+      "noBase": "not set",
+      "totals": "{sagas} sagas · {games} games · {images} images",
+      "unpublished": "{count, plural, =0 {No changes to publish.} one {# file with unpublished changes.} other {# files with unpublished changes.}}",
+      "unpublishedUnknown": "Unknown how many changes are unpublished (missing GitHub key or offline).",
+      "versions": "Published versions",
+      "loading": "Looking for versions on GitHub…",
+      "noVersions": "No published versions.",
+      "current": "In use",
+      "apply": "Apply",
+      "noHistory": "No change details.",
+      "changes": "{count, plural, one {# change} other {# changes}}",
+      "images": "{count, plural, one {# game with new images} other {# games with new images}}",
+      "applied": "{version} applied: {inserted} new rows, {updated} changed, {deleted} removed and {conflicts} conflicts to choose.",
+      "chooseFirst": "Choose the pending conflicts before applying another version.",
+      "conflicts": "{count, plural, one {# conflict to choose} other {# conflicts to choose}}",
+      "conflictsHint": "Changed differently in the version and here without publishing: nothing is overwritten until you choose.",
+      "wholeRow": "the whole row",
+      "local": "Here",
+      "remote": "In {version}",
+      "missing": "(not there)",
+      "keepLocal": "Keep this one",
+      "useRemote": "Use the version's",
+      "kind": {
+        "saga": "Saga",
+        "game": "Game"
+      },
+      "change": {
+        "added": "New {kind}: {name}",
+        "removed": "{kind} removed: {name}",
+        "renamed": "{kind} renamed: {from} → {name}",
+        "merged": "{kind} merged: {name}",
+        "changed": "{name} moves from {from} to another saga"
+      }
+    },
     "claude": {
       "title": "Tasks",
       "schedule": "Schedule",
@@ -712,6 +754,11 @@
       "nothingChanged": "There's nothing to publish.",
       "invalid": "What would be published doesn't pass validation ({count} errors).",
       "conflict": "Changed on GitHub: {files}. It isn't published so as not to overwrite it.",
+      "pendingConflicts": "{count} conflicts from the previous version are still waiting for a choice: resolve them before applying another.",
+      "noBase": "It isn't known which version the local catalog starts from: set it with “catalogo base <sha>”.",
+      "noRelease": "Version {tag} isn't there or lacks its published database.",
+      "badDownload": "The database of version {tag} doesn't match its manifest: it isn't applied.",
+      "mergeFailed": "Version {tag} couldn't be merged without breaking the catalog; nothing was changed.",
       "change": {
         "replaced": "{count} games or versions become replaced",
         "sagaAdded": "New saga: {name}",
