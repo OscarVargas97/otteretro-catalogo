@@ -1456,7 +1456,7 @@
     },
     "invalid": "Doesn't pass validation",
     "conflictTitle": "Changed on GitHub",
-    "conflict": "Someone changed {files} after the version your catalog comes from. It isn't published so as not to overwrite it.",
+    "conflict": "Someone changed the same fields as you on GitHub, after the version your catalog comes from. It isn't published so as not to overwrite it.",
     "unknownBase": "It's unknown which version your catalog comes from, so changes by others can't be detected: check the list is only yours.",
     "openPr": "There's already an open PR for this:",
     "opened": "PR opened:",
@@ -1466,6 +1466,8 @@
     "open": "Open PR",
     "update": "Update PR",
     "buttonAll": "Publish everything",
-    "more": "and {count, plural, one {# more file} other {# more files}}"
+    "more": "and {count, plural, one {# more file} other {# more files}}",
+    "files": "{count, plural, one {# file} other {# files}}",
+    "showList": "show list"
   }
 }
