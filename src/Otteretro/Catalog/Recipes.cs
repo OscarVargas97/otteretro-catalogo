@@ -52,7 +52,7 @@ public static partial class Recipes
     static readonly System.Collections.Concurrent.ConcurrentDictionary<string, (DateTime At, Release? Release)> Latest = new();
     public static TimeSpan LatestFor { get; set; } = TimeSpan.FromMinutes(15);
 
-    static readonly JsonSerializerOptions Indented = new() { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
+    internal static readonly JsonSerializerOptions Indented = new() { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
 
     static RecipeInfo Info(string json, bool local)
     {
@@ -124,7 +124,7 @@ public static partial class Recipes
         return count;
     }
 
-    static void Store(System.Data.IDbConnection c, JsonElement r, string text)
+    internal static void Store(System.Data.IDbConnection c, JsonElement r, string text)
     {
         var id = r.GetProperty("id").GetString()!;
         c.Execute("INSERT INTO recipe (id, kind, json) VALUES (@id, @kind, @text) ON CONFLICT (id) DO UPDATE SET kind = excluded.kind, json = excluded.json",
@@ -237,7 +237,7 @@ public static partial class Recipes
         return (latest.Tag, latest.PublishedAt, pattern is null ? null : latest.Assets.Any(a => Regex.IsMatch(a, pattern)));
     }
 
-    sealed record Release(string Tag, string? PublishedAt, List<string> Assets, Dictionary<string, string>? Urls = null);
+    internal sealed record Release(string Tag, string? PublishedAt, List<string> Assets, Dictionary<string, string>? Urls = null, bool Prerelease = false);
 
     /// <summary>
     /// Descarta lo no publicado (#109): la receta vuelve a la de main (<paramref name="main"/>) o, si main no la tiene, se borra de la base
@@ -315,20 +315,30 @@ public static partial class Recipes
     }
 
     /// <summary>Las releases publicadas (sin borradores) de un repo de GitHub, o de Forgejo o Gitea (la misma API, en <paramref name="host"/>).</summary>
-    static async Task<List<Release>> Releases(string source, string? host, string repo, string? token, CancellationToken ct)
+    internal static async Task<List<Release>> Releases(string source, string? host, string repo, string? token, CancellationToken ct)
     {
         var url = source == "forgejo" ? $"https://{host}/api/v1/repos/{repo}/releases?limit=30" : $"https://api.github.com/repos/{repo}/releases?per_page=30";
-        using var request = new HttpRequestMessage(HttpMethod.Get, url);
-        request.Headers.UserAgent.ParseAdd("OtteretroCatalogo (+https://github.com/" + GitHubPublisher.Repo + ")");
-        if (source == "github" && token is { Length: > 0 }) request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-        using var response = await Http.SendAsync(request, ct);
-        if (response.StatusCode == HttpStatusCode.NotFound) return [];
-        if (!response.IsSuccessStatusCode) throw new HttpRequestException($"{url}: {(int)response.StatusCode}");
-        var list = JsonNode.Parse(await response.Content.ReadAsStringAsync(ct))!.AsArray();
+        if (await Api(url, token, ct) is not JsonArray list) return [];
         return list.Where(g => g?["draft"]?.GetValue<bool>() != true)
             .Select(g => new Release((string?)g!["tag_name"] ?? "", (string?)g["published_at"], g["assets"]?.AsArray().Select(a => (string)a!["name"]!).ToList() ?? [],
-                g["assets"]?.AsArray().Where(a => (string?)a!["browser_download_url"] is not null).ToDictionary(a => (string)a!["name"]!, a => (string)a!["browser_download_url"]!, StringComparer.Ordinal)))
+                g["assets"]?.AsArray().Where(a => (string?)a!["browser_download_url"] is not null).ToDictionary(a => (string)a!["name"]!, a => (string)a!["browser_download_url"]!, StringComparer.Ordinal),
+                g["prerelease"]?.GetValue<bool>() == true))
             .OrderByDescending(g => g.PublishedAt ?? "").ToList();
+    }
+
+    /// <summary>
+    /// Un GET a la API de GitHub (con la clave, si hay) o de Forgejo o Gitea. null si es un 404; otro error lanza con su código, para que
+    /// quien llama distinga un límite de consultas (403 o 429).
+    /// </summary>
+    internal static async Task<JsonNode?> Api(string url, string? token, CancellationToken ct)
+    {
+        using var request = new HttpRequestMessage(HttpMethod.Get, url);
+        request.Headers.UserAgent.ParseAdd("OtteretroCatalogo (+https://github.com/" + GitHubPublisher.Repo + ")");
+        if (url.StartsWith("https://api.github.com/", StringComparison.Ordinal) && token is { Length: > 0 }) request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+        using var response = await Http.SendAsync(request, ct);
+        if (response.StatusCode == HttpStatusCode.NotFound) return null;
+        if (!response.IsSuccessStatusCode) throw new HttpRequestException($"{url}: {(int)response.StatusCode}", null, response.StatusCode);
+        return JsonNode.Parse(await response.Content.ReadAsStringAsync(ct));
     }
 
     /// <summary>
@@ -352,7 +362,7 @@ public static partial class Recipes
 
     /// <summary>Archivos que no son el de Windows: otros sistemas, símbolos de depuración, código fuente, firmas (los mismos que en Otteretro).</summary>
     [GeneratedRegex(@"linux|macos|darwin|\bmac\b|osx|android|ios|appimage|flatpak|aarch64|arm64|symbol|debug|pdb|source|\.(deb|rpm|dmg|apk|sig|sha\d*|txt|json)$", RegexOptions.IgnoreCase)]
-    private static partial Regex NotWindows();
+    internal static partial Regex NotWindows();
 
     /// <summary>
     /// El patrón de un archivo: su nombre con cada versión (1.2.3) cambiada por [0-9.]+. A diferencia de Otteretro (#350), solo los números

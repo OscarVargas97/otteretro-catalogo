@@ -165,7 +165,7 @@
       "dueIn": "toca en {days, plural, one {# día} other {# días}}",
       "dueToday": "toca hoy",
       "lastRun": {"done": "{ago} · terminó bien", "error": "{ago} · con error", "canceled": "{ago} · cancelada"},
-      "pending": {"codes": "{count, plural, one {# versión sin código} other {# versiones sin código}}", "ports": "{count, plural, one {# port sin juego} other {# ports sin juego}}", "images": "{count, plural, one {# juego con imágenes incompletas} other {# juegos con imágenes incompletas}}", "translate": "{count, plural, one {# juego sin traducir} other {# juegos sin traducir}}", "iconic": "{count, plural, one {# saga por analizar} other {# sagas por analizar}}", "routes": "{count, plural, one {# saga sin rutas} other {# sagas sin rutas}}", "best": "{count, plural, one {# juego sin mejor versión} other {# juegos sin mejor versión}}"},
+      "pending": {"codes": "{count, plural, one {# versión sin código} other {# versiones sin código}}", "ports": "{count, plural, one {# port sin juego} other {# ports sin juego}}", "images": "{count, plural, one {# juego con imágenes incompletas} other {# juegos con imágenes incompletas}}", "translate": "{count, plural, one {# juego sin traducir} other {# juegos sin traducir}}", "iconic": "{count, plural, one {# saga por analizar} other {# sagas por analizar}}", "routes": "{count, plural, one {# saga sin rutas} other {# sagas sin rutas}}", "best": "{count, plural, one {# juego sin mejor versión} other {# juegos sin mejor versión}}", "emulators": "{count, plural, one {# en Revisar} other {# en Revisar}}"},
       "never": "Nunca corrió",
       "month": "este mes: {calls, plural, one {# llamada} other {# llamadas}} · {cost}",
       "covers": "{have} de {total} con portada",
@@ -213,6 +213,10 @@
         "portSearch": {
           "name": "Buscar ports nuevos",
           "text": "Lee el RSS de Recompendium y listas conocidas (Read Only Memo). Lo que el script no puede confirmar lo verifica Claude en su fuente primaria, una sola vez por enlace. Solo agrega ports: nunca cambia los que ya están."
+        },
+        "emulators": {
+          "name": "Emuladores",
+          "text": "Revisa cada receta: una release nueva que calza con su patrón se aplica sola y queda sin publicar; un patrón que ya no calza o un repo archivado, movido o desaparecido va a Revisar. Después busca forks (los del repo, por nombre en GitHub y en listas conocidas) y los filtra por API: release para Windows de los últimos 6 meses, commits propios y al menos 10 estrellas. Solo lo dudoso lo verifica Sonnet, una vez por repo."
         }
       },
       "ports": {
@@ -448,6 +452,26 @@
     }
   },
   "errors": {
+    "emulators": {
+      "checking": "Revisando la receta {done} de {total}",
+      "searching": "Buscando forks en los repos, GitHub y las listas conocidas",
+      "filtering": "Filtrando {done} de {total} posibles forks",
+      "verifying": "Claude verifica {done} de {total} posibles forks",
+      "log": {
+        "failed": "No se pudo revisar {repo}: {detail}",
+        "rateLimited": "GitHub llegó a su límite de consultas: los forks que faltan se buscan la próxima vez.",
+        "done": "Listo: {updated} recetas con su release nueva, {problems} a Revisar y {forks} forks nuevos a Revisar.",
+        "updated": "{recipe}: suma la release {tag}, sin publicar.",
+        "gone": "{recipe}: el repo {repo} ya no existe. Va a Revisar.",
+        "moved": "{recipe}: el repo {repo} se movió a {to}. Va a Revisar.",
+        "archived": "{recipe}: el repo {repo} está archivado. Va a Revisar.",
+        "noRelease": "{recipe}: {repo} no tiene releases. Va a Revisar.",
+        "noAsset": "{recipe}: ningún archivo de la release {tag} calza con {pattern}. Va a Revisar.",
+        "unreachable": "No se pudo leer {source}: se sigue con lo demás.",
+        "rejected": "Descartado: {repo}. {reason}",
+        "candidate": "Posible fork de {recipe}: {repo}. Va a Revisar."
+      }
+    },
     "http": "La app respondió con un error ({status}).",
     "unknown": "Algo salió mal ({code}).",
     "recipes": {
@@ -850,6 +874,9 @@
   },
   "tasks": {
     "kind": {
+      "emulators": {
+        "check": "Revisar emuladores"
+      },
       "demo": "Tarea de prueba",
       "igdb": {
         "saga": "Cargar una saga de IGDB",

@@ -165,7 +165,7 @@
       "dueIn": "due in {days, plural, one {# day} other {# days}}",
       "dueToday": "due today",
       "lastRun": {"done": "{ago} · finished fine", "error": "{ago} · failed", "canceled": "{ago} · canceled"},
-      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}"},
+      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}", "emulators": "{count, plural, one {# in Review} other {# in Review}}"},
       "never": "Never ran",
       "month": "this month: {calls, plural, one {# call} other {# calls}} · {cost}",
       "covers": "{have} of {total} with a cover",
@@ -213,6 +213,10 @@
         "portSearch": {
           "name": "Find new ports",
           "text": "Reads the Recompendium RSS and known lists (Read Only Memo). What the script cannot confirm, Claude verifies at its primary source, once per link. It only adds ports: it never changes existing ones."
+        },
+        "emulators": {
+          "name": "Emulators",
+          "text": "Checks every recipe: a new release that matches its pattern is applied automatically and left unpublished; a pattern that no longer matches or an archived, moved or missing repo goes to Review. Then it looks for forks (the repo's own, by name on GitHub and in known lists) and filters them through the API: a Windows release from the last 6 months, their own commits and at least 10 stars. Only the doubtful ones are checked by Sonnet, once per repo."
         }
       },
       "ports": {
@@ -448,6 +452,26 @@
     }
   },
   "errors": {
+    "emulators": {
+      "checking": "Checking recipe {done} of {total}",
+      "searching": "Looking for forks in the repos, GitHub and known lists",
+      "filtering": "Filtering {done} of {total} possible forks",
+      "verifying": "Claude is checking {done} of {total} possible forks",
+      "log": {
+        "failed": "Could not check {repo}: {detail}",
+        "rateLimited": "GitHub hit its rate limit: the remaining forks will be searched next time.",
+        "done": "Done: {updated} recipes with their new release, {problems} sent to Review and {forks} new forks sent to Review.",
+        "updated": "{recipe}: adds release {tag}, unpublished.",
+        "gone": "{recipe}: the repo {repo} no longer exists. Sent to Review.",
+        "moved": "{recipe}: the repo {repo} moved to {to}. Sent to Review.",
+        "archived": "{recipe}: the repo {repo} is archived. Sent to Review.",
+        "noRelease": "{recipe}: {repo} has no releases. Sent to Review.",
+        "noAsset": "{recipe}: no file in release {tag} matches {pattern}. Sent to Review.",
+        "unreachable": "Could not read {source}: moving on.",
+        "rejected": "Discarded: {repo}. {reason}",
+        "candidate": "Possible fork of {recipe}: {repo}. Sent to Review."
+      }
+    },
     "http": "The app responded with an error ({status}).",
     "unknown": "Something went wrong ({code}).",
     "recipes": {
@@ -850,6 +874,9 @@
   },
   "tasks": {
     "kind": {
+      "emulators": {
+        "check": "Check emulators"
+      },
       "demo": "Test task",
       "igdb": {
         "saga": "Load a saga from IGDB",

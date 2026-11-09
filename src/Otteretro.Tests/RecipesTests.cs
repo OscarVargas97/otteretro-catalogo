@@ -5,6 +5,7 @@ using Otteretro.Catalog;
 namespace Otteretro.Tests;
 
 /// <summary>#95: «Emuladores» guarda una receta solo si cumple el esquema y su fuente tiene una release con un archivo que calce.</summary>
+[Collection(nameof(ClaudeRunnerTests))] // comparte Recipes.Http con EmulatorCheckTests
 public class RecipesTests
 {
     /// <summary>Releases falsas por URL pedida; lo que no está es un 404.</summary>
