@@ -205,9 +205,9 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
                 var (inMain, here) = (Load(before), Load(after));
                 var found = new List<string>();
                 var merged = JsonMerge.Merge(Load(Path.Combine(origin, path)), inMain, here, found);
-                if (JsonNode.DeepEquals(merged, inMain)) continue;
+                if (JsonMerge.Same(merged, inMain)) continue;
                 if (found.Count > 0) conflicts.Add($"{Folder}/{path}: {string.Join(", ", found.Take(5))}{(found.Count > 5 ? "…" : "")}");
-                else if (!JsonNode.DeepEquals(merged, here))
+                else if (!JsonMerge.Same(merged, here))
                 {
                     // Lo que se publica es lo fusionado, con el mismo formato que escribe el generador.
                     if (merged is null) File.Delete(after);

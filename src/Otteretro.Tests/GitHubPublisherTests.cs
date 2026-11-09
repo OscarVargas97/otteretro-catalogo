@@ -210,6 +210,20 @@ public class GitHubPublisherTests
         Assert.Equal(CoverA, published["games"]![0]!["images"]!["cover"]!.GetValue<string>());
     }
 
+    /// <summary>#91: una lista vacía en main y ausente acá (el generador omite las vacías) no es cambio ni conflicto.</summary>
+    [Fact]
+    public void AnEmptyListInMainAndAnAbsentFieldHereAreTheSame()
+    {
+        var origin = JsonNode.Parse("""{"id":1,"summary":"a"}""");
+        var main = JsonNode.Parse("""{"id":1,"summary":"a","criteria":[],"routes":[],"images":{"cover":"x"}}""");
+        var local = JsonNode.Parse("""{"id":1,"summary":"b","images":{"cover":"x"}}""");
+        var conflicts = new List<string>();
+        var merged = JsonMerge.Merge(origin, main, local, conflicts);
+        Assert.Empty(conflicts);
+        Assert.True(JsonMerge.Same(JsonNode.Parse("""{"id":1,"summary":"b","criteria":[],"routes":[],"images":{"cover":"x"}}"""), merged));
+        Assert.True(JsonMerge.Same(main, JsonNode.Parse("""{"id":1,"summary":"a","images":{"cover":"x"}}""")));
+    }
+
     /// <summary>#91: solo es conflicto un mismo campo que cambió distinto en main y acá.</summary>
     [Fact]
     public async Task OnlyTheSameFieldChangedDifferentlyOnBothSidesIsAConflict()

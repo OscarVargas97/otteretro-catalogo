@@ -17,8 +17,8 @@ public static class JsonMerge
     /// <returns>Lo fusionado; null si el archivo no queda.</returns>
     public static JsonNode? Merge(JsonNode? origin, JsonNode? main, JsonNode? local, List<string> conflicts, string at = "")
     {
-        if (JsonNode.DeepEquals(main, local) || JsonNode.DeepEquals(origin, local)) return main?.DeepClone();
-        if (JsonNode.DeepEquals(origin, main)) return local?.DeepClone();
+        if (Same(main, local) || Same(origin, local)) return main?.DeepClone();
+        if (Same(origin, main)) return local?.DeepClone();
         if (main is JsonObject m && local is JsonObject l)
         {
             var o = origin as JsonObject;
@@ -42,6 +42,19 @@ public static class JsonMerge
         }
         conflicts.Add(at.Length == 0 ? "(archivo)" : at);
         return local?.DeepClone();
+    }
+
+    /// <summary>Igualdad por contenido en la que un campo ausente y una lista vacía valen lo mismo: el generador omite las listas
+    /// vacías que main puede traer como [] (p. ej. criteria, routes), y eso no es cambio ni conflicto.</summary>
+    public static bool Same(JsonNode? a, JsonNode? b)
+    {
+        static bool Empty(JsonNode? n) => n is null || n is JsonArray { Count: 0 };
+        if (Empty(a) && Empty(b)) return true;
+        if (a is JsonObject x && b is JsonObject y)
+            return x.Select(p => p.Key).Union(y.Select(p => p.Key)).All(k => Same(x[k], y[k]));
+        if (a is JsonArray p && b is JsonArray q)
+            return p.Count == q.Count && p.Zip(q).All(t => Same(t.First, t.Second));
+        return JsonNode.DeepEquals(a, b);
     }
 
     /// <summary>La clave que identifica cada elemento en las tres listas, o null si no hay una.</summary>
