@@ -19,8 +19,8 @@ public record CatalogRelease(string Tag, string Commit, DateTimeOffset? Publishe
 /// <summary>Ajustes › Catálogo (#105, decisión 363): la base, lo que hay en la base local y las versiones publicadas.</summary>
 /// <param name="Base">El commit de main del que parte el catálogo local; null si no se fijó.</param>
 public record CatalogVersionsPage(string? Base, long Sagas, long Games, long Images, List<CatalogRelease> Versions);
-/// <summary>Ponerse al día solo (#106, decisión 361): `current` no hay nada nuevo; `applied` la release traía el PR propio y se aplicó; `available` hay una release que avisar;
-/// `conflicts` quedan conflictos por resolver.</summary>
+/// <summary>Ponerse al día solo (#106, decisiones 372 y 373): `current` la base es el último commit de main; `applied` main avanzó y se fusionó;
+/// `conflicts` quedan conflictos por resolver. Tag es `main@<sha7>`.</summary>
 public record CatalogCatchUp(string Status, string? Tag, int Conflicts);
 /// <param name="Inserted">Filas que entraron, cambiaron o se quitaron con la versión, sumando todas las tablas.</param>
 /// <param name="Conflicts">Campos o filas en conflicto que quedan para elegir (<see cref="CatalogVersions.Conflicts"/>).</param>
@@ -49,6 +49,7 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
     public async Task<List<CatalogRelease>> List(CancellationToken ct = default)
     {
         var baseSha = Base();
+        var onMain = baseSha is not null && baseSha == await Head(ct);
         var releases = (await Releases(ct))
             .Select(r => (Node: r, Tag: r["tag_name"]!.GetValue<string>(), Date: r["published_at"]?.GetValue<string>() is { } d ? DateTimeOffset.Parse(d, System.Globalization.CultureInfo.InvariantCulture) : (DateTimeOffset?)null))
             .OrderByDescending(r => r.Date).ToList();
@@ -56,38 +57,43 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
         var history = releases.Select(r => AssetUrl(r.Node, HistoryAsset)).FirstOrDefault(u => u is not null) is { } url
             ? JsonSerializer.Deserialize<PublishedHistory>(await github.Bytes(url, ct), JsonSerializerOptions.Web)
             : null;
-        return releases.Select(r => new CatalogRelease(r.Tag, r.Tag.Split('-')[^1], r.Date, baseSha is not null && baseSha.StartsWith(r.Tag.Split('-')[^1], StringComparison.Ordinal),
+        // Con la base en el último commit de main (decisión 373) se tiene todo lo publicado: la más nueva está en uso.
+        return releases.Select((r, i) => new CatalogRelease(r.Tag, r.Tag.Split('-')[^1], r.Date,
+            (onMain && i == 0) || (baseSha is not null && baseSha.StartsWith(r.Tag.Split('-')[^1], StringComparison.Ordinal)),
             history?.Entries.Where(e => e.Version == r.Tag).ToList() ?? [], history?.Images?.GetValueOrDefault(r.Tag) ?? 0)).ToList();
     }
 
     /// <summary>
-    /// Al abrir la administración y tras publicar: si la release más nueva trae el PR propio ya fusionado, se aplica sola; si no, se avisa.
+    /// Al abrir la administración, cada 5 minutos y tras publicar: si `main` avanzó desde la base, se fusiona sola con su último commit
+    /// (decisiones 372 y 373), haya o no release nueva; la fusión en tres vías conserva lo no publicado y los choques quedan para elegir.
     /// Bajar y publicar usan el mismo repo (<see cref="GitHubPublisher.Repo"/>).
     /// </summary>
     public async Task<CatalogCatchUp> CatchUp(CancellationToken ct = default)
     {
         if (Conflicts(db).Count is > 0 and var pending) return new("conflicts", null, pending);
-        var baseSha = Base();
-        var newest = (await Releases(ct)).OrderByDescending(r => r["published_at"]?.GetValue<string>(), StringComparer.Ordinal).FirstOrDefault()?["tag_name"]?.GetValue<string>();
-        if (newest is null || baseSha is null) return new("current", null, 0);
-        var commit = (await github.Must(HttpMethod.Get, $"repos/{GitHubPublisher.Repo}/commits/{newest}", null, ct))["sha"]!.GetValue<string>();
-        if (baseSha == commit) return new("current", newest, 0);
-        if (!await OwnPrIn(commit, ct)) return new("available", newest, 0);
-        var result = await Apply(newest, ct);
-        return new(result.Conflicts > 0 ? "conflicts" : "applied", newest, result.Conflicts);
+        if (Base() is not { } baseSha) return new("current", null, 0);
+        var head = await Head(ct);
+        if (baseSha == head) return new("current", MainLabel(head), 0);
+        var result = await ApplyMain(ct);
+        return new(result.Conflicts > 0 ? "conflicts" : "applied", result.Tag, result.Conflicts);
     }
 
-    /// <summary>El PR que abrió la persona está fusionado y su commit es el del tag o su ancestro.</summary>
-    async Task<bool> OwnPrIn(string tagCommit, CancellationToken ct)
+    /// <summary>Fusiona el catálogo local con los JSON del último commit de `main` y lo deja como base (decisión 373).</summary>
+    public async Task<CatalogApplyResult> ApplyMain(CancellationToken ct = default)
     {
-        using var c = db.Open();
-        if (c.ExecuteScalar<string?>("SELECT value FROM setting WHERE machine_id = '' AND name = @PrSetting", new { GitHubPublisher.PrSetting }) is not { } number) return false;
-        var pr = await github.Get($"repos/{GitHubPublisher.Repo}/pulls/{number}", ct);
-        if (pr?["merged"]?.GetValue<bool>() != true || pr["merge_commit_sha"]?.GetValue<string>() is not { } merge) return false;
-        if (merge == tagCommit) return true;
-        var status = (await github.Get($"repos/{GitHubPublisher.Repo}/compare/{merge}...{tagCommit}", ct))?["status"]?.GetValue<string>();
-        return status is "ahead" or "identical";
+        await GitHubPublisher.Gate.WaitAsync(ct);
+        try
+        {
+            var head = await Head(ct);
+            return await Into(head, MainLabel(head), () => Compiled(head, ct), ct);
+        }
+        finally { GitHubPublisher.Gate.Release(); }
     }
+
+    async Task<string> Head(CancellationToken ct) =>
+        (await github.Must(HttpMethod.Get, $"repos/{GitHubPublisher.Repo}/git/ref/heads/main", null, ct))["object"]!["sha"]!.GetValue<string>();
+
+    static string MainLabel(string sha) => $"main@{sha[..Math.Min(7, sha.Length)]}";
 
     /// <summary>La pestaña entera: la base, los totales de la base local y las versiones.</summary>
     public async Task<CatalogVersionsPage> Page(CancellationToken ct = default)
@@ -115,29 +121,39 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
 
     async Task<CatalogApplyResult> ApplyLocked(string tag, CancellationToken ct)
     {
-        // Con conflictos sin elegir, otra fusión los taparía: lo local quedaría como cambio propio y lo de la versión se perdería.
-        if (Conflicts(db).Count is > 0 and var pending) throw new TaskException(ApiError.Of("publish.pendingConflicts", ("count", pending.ToString())));
-        var baseSha = Base() ?? throw new TaskException(ApiError.Of("publish.noBase"));
         var release = (await Releases(ct)).FirstOrDefault(r => r["tag_name"]!.GetValue<string>() == tag) ?? throw new TaskException(ApiError.Of("publish.noRelease", ("tag", tag)));
         string Asset(string name) => AssetUrl(release, name) ?? throw new TaskException(ApiError.Of("publish.noRelease", ("tag", tag)));
         var commit = (await github.Must(HttpMethod.Get, $"repos/{GitHubPublisher.Repo}/commits/{tag}", null, ct))["sha"]!.GetValue<string>();
 
-        var gz = await github.Bytes(Asset(DbAsset), ct);
-        var manifest = JsonNode.Parse(await github.Bytes(Asset(ManifestAsset), ct))!;
-        if (!string.Equals(manifest["sha256"]?.GetValue<string>(), Convert.ToHexStringLower(SHA256.HashData(gz)), StringComparison.OrdinalIgnoreCase))
-            throw new TaskException(ApiError.Of("publish.badDownload", ("tag", tag)));
-        Directory.CreateDirectory(github.Work);
-        var remote = Path.Combine(github.Work, $"version-{tag}.db");
-        Unzip(gz, remote);
+        return await Into(commit, tag, async () =>
+        {
+            var gz = await github.Bytes(Asset(DbAsset), ct);
+            var manifest = JsonNode.Parse(await github.Bytes(Asset(ManifestAsset), ct))!;
+            if (!string.Equals(manifest["sha256"]?.GetValue<string>(), Convert.ToHexStringLower(SHA256.HashData(gz)), StringComparison.OrdinalIgnoreCase))
+                throw new TaskException(ApiError.Of("publish.badDownload", ("tag", tag)));
+            Directory.CreateDirectory(github.Work);
+            var remote = Path.Combine(github.Work, $"version-{tag}.db");
+            Unzip(gz, remote);
+            return remote;
+        }, ct);
+    }
+
+    /// <summary>Fusiona <paramref name="remote"/> (lo publicado en <paramref name="commit"/>) con el catálogo local y deja ese commit como base.</summary>
+    async Task<CatalogApplyResult> Into(string commit, string label, Func<Task<string>> remote, CancellationToken ct)
+    {
+        // Con conflictos sin elegir, otra fusión los taparía: lo local quedaría como cambio propio y lo de la versión se perdería.
+        if (Conflicts(db).Count is > 0 and var pending) throw new TaskException(ApiError.Of("publish.pendingConflicts", ("count", pending.ToString())));
+        var baseSha = Base() ?? throw new TaskException(ApiError.Of("publish.noBase"));
+        var theirs = await remote();
         var origin = await Origin(baseSha, ct);
 
-        var result = Merge(db, origin, remote, tag);
+        var result = Merge(db, origin, theirs, label);
         // La copia de lo publicado en la base nueva, origen de la próxima fusión; se nombra por commit, así una base vieja nunca se toma por otra.
         SqliteConnection.ClearAllPools();
         var folder = Path.GetDirectoryName(OriginPath(commit))!;
         Directory.CreateDirectory(folder);
         foreach (var old in Directory.GetFiles(folder, "base-*.db")) File.Delete(old);
-        File.Copy(remote, OriginPath(commit));
+        File.Copy(theirs, OriginPath(commit));
         GitHubPublisher.SetBase(db, commit);
         return result with { Commit = commit };
     }
@@ -153,7 +169,12 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
     /// <summary>Lo publicado en la base: la copia guardada al aplicar, o la primera vez, los JSON de ese commit compilados.</summary>
     async Task<string> Origin(string sha, CancellationToken ct)
     {
-        if (File.Exists(OriginPath(sha))) return OriginPath(sha);
+        return File.Exists(OriginPath(sha)) ? OriginPath(sha) : await Compiled(sha, ct);
+    }
+
+    /// <summary>Los JSON de un commit compilados como lo publicado.</summary>
+    async Task<string> Compiled(string sha, CancellationToken ct)
+    {
         var file = Path.Combine(github.Work, $"origen-{sha}.db");
         var compiled = file + ".gz";
         Published.Compile(await github.MainFolder(sha, ct), compiled, validate: false);
