@@ -213,6 +213,39 @@ public class GitHubPublisherTests
         Assert.Equal(["recetas/mgba.json", "sagas/00033-final-fantasy.json"], preview.Files.Select(x => x.Path));
     }
 
+    /// <summary>#96: las recetas de Otteretro se ven como locales y Publicar las ofrece; sin tocar esa carpeta ni mirar `_respaldos`.</summary>
+    [Fact]
+    public async Task TheRecipesOfOtteretroAreLocalAndPublishedOnce()
+    {
+        var (f, _, _) = Setup(canPush: true);
+        await using var _f = f;
+        var data = f.Tmp["datos-otteretro"];
+        var folder = Directory.CreateDirectory(Path.Combine(data, "data", "recetas")).FullName;
+        Directory.CreateDirectory(Path.Combine(folder, "_respaldos"));
+        var text = """{ "id": "mgba", "name": "mGBA", "kind": "emulator", "folder": "GBA", "detect": "mGBA.exe" }""";
+        File.WriteAllText(Path.Combine(folder, "mgba.json"), text);
+        File.WriteAllText(Path.Combine(folder, "_respaldos", "viejo.json"), text.Replace("mgba", "viejo"));
+        {
+            Assert.Equal([("mgba", true)], Recipes.List(f.Db, folder).Select(r => (r.Id, r.Local)));
+            var github = new FakeGitHub(MainZip(f, _ => { }), canPush: true);
+            var preview = await new GitHubPublisher(f.Db, "secreto", github) { Work = f.Tmp["trabajo-locales"], LocalRecipes = folder }.Preview(new("all", 0));
+            Assert.Equal(["recetas/mgba.json"], preview.Files.Select(x => x.Path));
+            Assert.Equal(text, File.ReadAllText(Path.Combine(folder, "mgba.json"))); // solo lectura
+
+            // Ya en main: no se ofrece otra vez.
+            var published = new FakeGitHub(MainZip(f, m =>
+            {
+                Directory.CreateDirectory(Path.Combine(m, Published.RecipesFolder));
+                File.WriteAllText(Path.Combine(m, Published.RecipesFolder, "mgba.json"), text);
+            }), canPush: true);
+            Assert.Empty((await new GitHubPublisher(f.Db, "secreto", published) { Work = f.Tmp["trabajo-publicadas"], LocalRecipes = folder }.Preview(new("all", 0))).Files);
+
+            // Con la receta en la base (traída de main), deja de ser local.
+            Assert.Equal(1, Recipes.Import(f.Db, folder));
+            Assert.Equal([("mgba", false)], Recipes.List(f.Db, folder).Select(r => (r.Id, r.Local)));
+        }
+    }
+
     /// <summary>#85: volver a la vista previa o publicar reusa la comparación; un cambio local la rehace.</summary>
     [Fact]
     public async Task ThePlanIsReusedUntilSomethingChanges()

@@ -75,6 +75,7 @@ export default function Emulators() {
               <button key={r.id} type="button" className="chip" aria-pressed={editing?.recipe.id === r.id} disabled={open.isPending} onClick={() => open.mutate(r.id)}
                 title={`${r.id} · ${t(`kinds.${r.kind as (typeof KINDS)[number]}`)}`}>
                 {r.name || r.id}
+                {r.local && <span className="small muted" title={t("localHint")}> · {t("local")}</span>}
               </button>
             ))}
           </div>

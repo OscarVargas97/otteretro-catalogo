@@ -68,6 +68,9 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     async Task<JsonNode> Must(HttpMethod method, string path, object? body, CancellationToken ct) =>
         await Send(method, path, body, ct) ?? throw new TaskException(ApiError.Of("publish.failed", ("status", "404")));
 
+    /// <summary>La carpeta de recetas de Otteretro (#96); null usa la de su carpeta de datos. Las pruebas la fijan.</summary>
+    public string? LocalRecipes { get; init; }
+
     sealed record Plan(string Head, string Title, string Branch, List<(PublishChange Change, string? LocalFile)> Files, List<string> Errors, List<string> Conflicts, bool KnownBase);
 
     /// <summary>Qué cambiaría el PR: lo publicado de lo elegido, comparado con main, y si el resultado pasa la validación.</summary>
@@ -181,7 +184,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         var head = (await Must(HttpMethod.Get, $"repos/{Repo}/git/ref/heads/main", null, ct))["object"]!["sha"]!.GetValue<string>();
         var baseSha = c.ExecuteScalar<string?>("SELECT value FROM setting WHERE machine_id = '' AND name = @BaseSetting", new { BaseSetting });
         // #85: la comparación se reusa mientras no cambien main, la base ni la base de datos local; volver al diálogo o publicar no la rehace.
-        var key = string.Join('|', request.Kind, request.Id, head, baseSha, Work, Fingerprint(db.FilePath), Fingerprint(db.CatalogPath));
+        var key = string.Join('|', request.Kind, request.Id, head, baseSha, Work, Fingerprint(db.FilePath), Fingerprint(db.CatalogPath), LocalRecipesStamp(LocalRecipes));
         if (Cache is { } saved && saved.Key == key) return saved.Plan;
 
         var main = await MainFolder(head, ct);
@@ -190,6 +193,12 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         var local = Path.Combine(Work, "local");
         if (Directory.Exists(local)) Directory.Delete(local, true);
         Published.Write(db, local);
+        // #96: las recetas de Otteretro que no están en la base ni en main se ofrecen como un cambio más; las de main ya están publicadas.
+        foreach (var (id, text) in Recipes.Local(db, LocalRecipes).Where(r => !File.Exists(Path.Combine(main, Published.RecipesFolder, r.Key + ".json"))))
+        {
+            Directory.CreateDirectory(Path.Combine(local, Published.RecipesFolder));
+            File.WriteAllText(Path.Combine(local, Published.RecipesFolder, id + ".json"), text);
+        }
 
         var paths = Affected(request, main, local);
         var files = new List<(PublishChange, string?)>();
@@ -248,6 +257,10 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     // ponytail: fecha y tamaño de los archivos, no un contador de cambios; cualquier escritura (también la de una tarea) recalcula.
     static string Fingerprint(string file) =>
         string.Join(',', new[] { file, file + "-wal" }.Select(f => new FileInfo(f)).Select(f => f.Exists ? $"{f.LastWriteTimeUtc.Ticks}:{f.Length}" : "-"));
+
+    /// <summary>Cambia cuando se agrega, quita o toca una receta de la carpeta de Otteretro (#96).</summary>
+    static string LocalRecipesStamp(string? folder) => (folder ?? Recipes.LocalFolder()) is { } f && Directory.Exists(f)
+        ? string.Join(',', Directory.GetFiles(f, "*.json").Order(StringComparer.Ordinal).Select(x => $"{x}:{File.GetLastWriteTimeUtc(x).Ticks}")) : "-";
 
     /// <summary>Mismo contenido, o los dos no existen.</summary>
     static bool Same(string a, string b) =>
