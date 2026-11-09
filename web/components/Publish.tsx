@@ -56,6 +56,8 @@ function PublishPanel({ kind, id, onClose }: PublishRequest & { onClose: () => v
     <div className="overlay" onClick={onClose}>
       <div className="search-dialog publish-dialog" role="dialog" aria-label={t("title")} onClick={(e) => e.stopPropagation()}>
         <h3 style={{ margin: 0 }}>{p ? t("titleOf", { name: p.title }) : t("title")}</h3>
+        {/* #91: con miles de archivos, lo de en medio se desplaza y los botones quedan a la vista. */}
+        <div className="publish-body">
         {preview.isPending && <p className="small muted" role="status"><span className="spinner" aria-hidden="true" /> {t("comparing")}</p>}
         {noKey ? (
           <div className="panel">
@@ -67,17 +69,22 @@ function PublishPanel({ kind, id, onClose }: PublishRequest & { onClose: () => v
         {p && (
           <>
             {p.files.length === 0 && <p className="small muted">{t("nothing")}</p>}
-            <ul className="publish-files">
-              {/* «Publicar todo» puede tocar miles de archivos: se listan los primeros y el total. */}
-              {p.files.slice(0, SHOWN).map((f) => (
-                <li key={f.path}>
-                  <span className={`ot-badge${f.change === "deleted" ? " ot-badge-danger" : f.change === "added" ? " ot-badge-have" : ""}`}>{t(`change.${f.change as "added"}`)}</span>{" "}
-                  <code className="small">catalogo/{f.path}</code>
-                  {f.details.length > 0 && <ul className="small muted">{f.details.map((d, i) => <li key={i}>{describe(d)}</li>)}</ul>}
-                </li>
-              ))}
-              {p.files.length > SHOWN && <li className="small muted">{t("more", { count: p.files.length - SHOWN })}</li>}
-            </ul>
+            {p.files.length > 0 && (
+              // Contados y plegados (#91): «Publicar todo» puede tocar miles de archivos; se listan los primeros y el total.
+              <details>
+                <summary className="small">{t("files", { count: p.files.length })} · {t("showList")}</summary>
+                <ul className="publish-files">
+                  {p.files.slice(0, SHOWN).map((f) => (
+                    <li key={f.path}>
+                      <span className={`ot-badge${f.change === "deleted" ? " ot-badge-danger" : f.change === "added" ? " ot-badge-have" : ""}`}>{t(`change.${f.change as "added"}`)}</span>{" "}
+                      <code className="small">catalogo/{f.path}</code>
+                      {f.details.length > 0 && <ul className="small muted">{f.details.map((d, i) => <li key={i}>{describe(d)}</li>)}</ul>}
+                    </li>
+                  ))}
+                  {p.files.length > SHOWN && <li className="small muted">{t("more", { count: p.files.length - SHOWN })}</li>}
+                </ul>
+              </details>
+            )}
             {p.errors.length > 0 && (
               <div className="result" role="alert">
                 <span className="ot-badge ot-badge-danger">{t("invalid")}</span>
@@ -87,13 +94,21 @@ function PublishPanel({ kind, id, onClose }: PublishRequest & { onClose: () => v
             {p.conflicts.length > 0 && (
               <div className="result" role="alert">
                 <span className="ot-badge ot-badge-danger">{t("conflictTitle")}</span>
-                <span className="small">{t("conflict", { files: p.conflicts.join(", ") })}</span>
+                <span className="small">{t("conflict")}</span>
+                <details>
+                  <summary className="small">{t("files", { count: p.conflicts.length })} · {t("showList")}</summary>
+                  <ul className="publish-files small">
+                    {p.conflicts.slice(0, SHOWN).map((c) => <li key={c}><code>{c}</code></li>)}
+                    {p.conflicts.length > SHOWN && <li className="muted">{t("more", { count: p.conflicts.length - SHOWN })}</li>}
+                  </ul>
+                </details>
               </div>
             )}
             {!p.knownBase && p.files.length > 0 && <p className="small muted">{t("unknownBase")}</p>}
             {p.openPr && <p className="small">{t("openPr")} <a href={p.openPr} target="_blank" rel="noreferrer">{p.openPr}</a></p>}
           </>
         )}
+        </div>
 
         {publish.data ? (
           <p className="small" role="status">{t(publish.data.updated ? "updated" : "opened")} <a href={publish.data.url} target="_blank" rel="noreferrer">{publish.data.url}</a></p>

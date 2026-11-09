@@ -17,7 +17,7 @@ public record PublishRequest(string Kind, long Id);
 /// <param name="Details">Qué cambia, como códigos que traduce el front (publish.change.*).</param>
 public record PublishChange(string Path, string Change, List<ApiError> Details);
 /// <param name="Errors">Lo que la validación del catálogo rechaza: con algo acá no se publica.</param>
-/// <param name="Conflicts">Archivos que cambiaron en main después de la versión de la que parte el catálogo local.</param>
+/// <param name="Conflicts">Archivos con un campo que cambió distinto en main y acá después de la versión de la que parte el catálogo local (#91), con esos campos.</param>
 /// <param name="KnownBase">Se sabe de qué versión de main parte el catálogo local; si no, los conflictos no se pueden detectar.</param>
 /// <param name="OpenPr">El PR que ya está abierto para esto: publicar otra vez lo actualiza.</param>
 public record PublishPreview(string Title, List<PublishChange> Files, List<string> Errors, List<string> Conflicts, bool KnownBase, string? OpenPr);
@@ -102,7 +102,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         var plan = await MakePlan(request, ct);
         if (plan.Files.Count == 0) throw new TaskException(ApiError.Of("publish.nothingChanged"));
         if (plan.Errors.Count > 0) throw new TaskException(ApiError.Of("publish.invalid", ("count", plan.Errors.Count.ToString())));
-        if (plan.Conflicts.Count > 0) throw new TaskException(ApiError.Of("publish.conflict", ("files", string.Join(", ", plan.Conflicts))));
+        if (plan.Conflicts.Count > 0) throw new TaskException(ApiError.Of("publish.conflict", ("files", string.Join(", ", plan.Conflicts.Take(10)))));
 
         var (owner, target) = await Target(createFork: true, ct);
         var tree = (await Must(HttpMethod.Get, $"repos/{Repo}/git/commits/{plan.Head}", null, ct))["tree"]!["sha"]!.GetValue<string>();
@@ -209,11 +209,19 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
             if (Same(before, after)) continue;
             if (origin is not null)
             {
-                var start = Path.Combine(origin, path);
-                // Lo que no tocaste y cambió en main: tu copia está atrasada, no es un cambio tuyo. No se publica (lo revertiría).
-                if (Same(start, after)) continue;
-                // Cambiaste algo que también cambió en main: no se pisa.
-                if (!Same(start, before)) conflicts.Add($"{Folder}/{path}");
+                // #91: en tres vías por campo. Lo que cambió solo en main se conserva (publicar tu copia atrasada lo revertiría), lo que
+                // cambió solo acá se suma, y lo que ya está igual en los dos lados no es cambio. Solo un mismo campo distinto es conflicto.
+                var (inMain, here) = (Load(before), Load(after));
+                var found = new List<string>();
+                var merged = JsonMerge.Merge(Load(Path.Combine(origin, path)), inMain, here, found);
+                if (JsonMerge.Same(merged, inMain)) continue;
+                if (found.Count > 0) conflicts.Add($"{Folder}/{path}: {string.Join(", ", found.Take(5))}{(found.Count > 5 ? "…" : "")}");
+                else if (!JsonMerge.Same(merged, here))
+                {
+                    // Lo que se publica es lo fusionado, con el mismo formato que escribe el generador.
+                    if (merged is null) File.Delete(after);
+                    else Published.Save(after, merged);
+                }
             }
             var (had, has) = (File.Exists(before), File.Exists(after));
             files.Add((new PublishChange(path, !had ? "added" : !has ? "deleted" : "modified", Details(path, had ? before : null, has ? after : null)), has ? after : null));
@@ -277,6 +285,8 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         }
         finally { Gate.Release(); }
     }
+
+    static JsonNode? Load(string file) => File.Exists(file) ? JsonNode.Parse(File.ReadAllText(file)) : null;
 
     /// <summary>Cuántos archivos llevaría «Publicar todo» (#85), para el botón de la barra de arriba.</summary>
     public async Task<int> CountAll(CancellationToken ct = default)
