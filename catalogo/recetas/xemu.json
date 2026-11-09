@@ -1,0 +1,22 @@
+{
+  "id": "xemu",
+  "name": "xemu",
+  "kind": "emulator",
+  "folder": "Xbox",
+  "detect": "xemu.exe",
+  "version": { "from": "date" },
+  "consoles": ["xbox"],
+  "baseFor": ["xbox"],
+  "license": "GPL-2.0-only",
+  "portable": [{ "type": "file", "path": "xemu.toml", "system": "windows" }],
+  "config": ["xemu.toml"],
+  "perGame": { "apply": "argument", "args": ["-config_path", "{config}"] },
+  "options": [
+    { "name": "renderer", "file": "xemu.toml", "format": "toml", "key": "display.renderer" },
+    { "name": "resolution", "file": "xemu.toml", "format": "toml", "key": "display.quality.surface_scale" },
+    { "name": "filter", "file": "xemu.toml", "format": "toml", "key": "display.filtering" },
+    { "name": "vsync", "file": "xemu.toml", "format": "toml", "key": "display.window.vsync" }
+  ],
+  "updates": { "source": "github", "repo": "xemu-project/xemu" },
+  "asset": "^xemu-[0-9.]+(-[0-9]+-g[0-9a-f]+)?-windows-x86_64\\.zip$"
+}

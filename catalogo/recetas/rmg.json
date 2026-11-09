@@ -1,0 +1,17 @@
+{
+  "id": "rmg",
+  "name": "Rosalie's Mupen GUI",
+  "kind": "emulator",
+  "folder": "Nintendo 64",
+  "detect": "RMG.exe",
+  "version": { "from": "date" },
+  "consoles": ["n64"],
+  "baseFor": ["n64"],
+  "license": "GPL-3.0-only",
+  "portable": [{ "type": "file", "path": "portable.txt", "system": "windows" }],
+  "saves": ["Save/Game", "Save/State"],
+  "config": ["Config"],
+  "perGame": { "config": "Config/mupen64plus.cfg", "apply": "section" },
+  "updates": { "source": "github", "repo": "Rosalie241/RMG" },
+  "asset": "^RMG-Portable-Windows64-v[0-9.]+\\.zip$"
+}

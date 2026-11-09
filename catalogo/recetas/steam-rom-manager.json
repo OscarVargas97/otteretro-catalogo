@@ -1,0 +1,14 @@
+{
+  "id": "steam-rom-manager",
+  "name": "Steam ROM Manager",
+  "kind": "tool",
+  "folder": "Steam",
+  "detect": "Steam-ROM-Manager.exe",
+  "version": { "from": "date" },
+  "license": "GPL-3.0-only",
+  "saveAs": "Steam-ROM-Manager.exe",
+  "portable": [{ "type": "folder", "path": "userData" }],
+  "config": ["userData"],
+  "updates": { "source": "github", "repo": "SteamGridDB/steam-rom-manager" },
+  "asset": "^Steam-ROM-Manager-portable-[0-9.]+\\.exe$"
+}

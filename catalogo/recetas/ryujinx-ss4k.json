@@ -1,0 +1,16 @@
+{
+  "id": "ryujinx-ss4k",
+  "name": "Ryujinx SS4K",
+  "kind": "emulator",
+  "folder": "Switch",
+  "detect": "Ryujinx.exe",
+  "version": { "from": "exe" },
+  "consoles": ["switch"],
+  "portable": [{ "type": "folder", "path": "portable" }],
+  "saves": ["portable/bis/user/save", "portable/bis/system/save"],
+  "config": ["portable/Config.json", "portable/profiles"],
+  "gamePaths": [{ "file": "portable/Config.json", "format": "json", "key": "game_dirs" }],
+  "perGame": { "config": "portable/games/{titleId}/Config.json", "apply": "file", "idCase": "lower", "full": true },
+  "input": { "profiles": ["portable/profiles"], "keys": ["input_config"] },
+  "formats": ["nsp", "xci", "nca", "nro"]
+}

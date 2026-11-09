@@ -134,6 +134,78 @@ public class PublishedTests
         Assert.Throws<InvalidDataException>(() => Published.Compile(folder, f.Tmp["no.gz"]));
     }
 
+    /// <summary>Las recetas del repo (#94), para copiarlas a un catálogo de prueba.</summary>
+    static string RepoRecipes()
+    {
+        var dir = new DirectoryInfo(AppContext.BaseDirectory);
+        while (!File.Exists(Path.Combine(dir!.FullName, "Otteretro.slnx"))) dir = dir.Parent;
+        return Path.Combine(dir.FullName, "catalogo", Published.RecipesFolder);
+    }
+
+    static string WithRecipe(Fixture f, string recipe = "dolphin.json")
+    {
+        var folder = Written(f);
+        var recipes = Directory.CreateDirectory(Path.Combine(folder, Published.RecipesFolder)).FullName;
+        foreach (var name in new[] { "receta.schema.json", recipe }) File.Copy(Path.Combine(RepoRecipes(), name), Path.Combine(recipes, name));
+        return folder;
+    }
+
+    /// <summary>#94: las recetas del repo cumplen el esquema, y una válida se publica en `recipe` con sus consolas.</summary>
+    [Fact]
+    public async Task AValidRecipeIsPublishedInTheRecipeTable()
+    {
+        var all = Directory.CreateTempSubdirectory("otteretro-recetas").FullName;
+        try
+        {
+            File.WriteAllText(Path.Combine(all, "consolas.json"), "[]");
+            File.WriteAllText(Path.Combine(all, "reemplazados.json"), "[]");
+            Directory.CreateDirectory(Path.Combine(all, Published.RecipesFolder));
+            foreach (var file in Directory.GetFiles(RepoRecipes())) File.Copy(file, Path.Combine(all, Published.RecipesFolder, Path.GetFileName(file)));
+            Assert.Empty(Published.Validate(all));
+        }
+        finally { Directory.Delete(all, true); }
+
+        await using var f = new Fixture();
+        Fill(f);
+        var folder = WithRecipe(f);
+        Assert.Empty(Published.Validate(folder));
+        var output = f.Tmp["recetas.db.gz"];
+        var manifest = Published.Compile(folder, output);
+        Assert.Contains("recipe.json", manifest.Schema!);
+        Assert.Contains("recipe_console.console_id", manifest.Schema!);
+        var plain = f.Tmp["recetas.db"];
+        using (var gz = new GZipStream(File.OpenRead(output), CompressionMode.Decompress))
+        using (var file = File.Create(plain))
+            gz.CopyTo(file);
+        using var c = new SqliteConnection($"Data Source={plain};Pooling=False");
+        c.Open();
+        var (kind, json) = c.QuerySingle<(string, string)>("SELECT kind, json FROM recipe WHERE id = 'dolphin'");
+        Assert.Equal("emulator", kind);
+        using (var doc = System.Text.Json.JsonDocument.Parse(json)) Assert.Equal("Dolphin.exe", doc.RootElement.GetProperty("detect").GetString());
+        Assert.Equal(["gc", "wii"], c.Query<string>("SELECT console_id FROM recipe_console WHERE recipe_id = 'dolphin' ORDER BY console_id"));
+    }
+
+    [Theory]
+    [InlineData("\"kind\": \"emulator\"", "\"kind\": \"juego\"", "«kind» vale \"juego\"")]
+    [InlineData("\"detect\": \"Dolphin.exe\",", "", "falta «detect»")]
+    [InlineData("\"id\": \"dolphin\"", "\"id\": \"dolphin\", \"color\": \"azul\"", "«color» no está en el esquema")]
+    [InlineData("\"from\": \"date\"", "\"from\": 3", "«version.from» vale 3")]
+    [InlineData("\"type\": \"file\"", "\"type\": \"enlace\"", "«portable[0].type»")]
+    [InlineData("\"id\": \"dolphin\"", "\"id\": \"otro\"", "tiene otro id")]
+    public async Task AnInvalidRecipeDoesNotPass(string from, string to, string expected)
+    {
+        await using var f = new Fixture();
+        Fill(f);
+        var folder = WithRecipe(f);
+        var file = Path.Combine(folder, Published.RecipesFolder, "dolphin.json");
+        var text = File.ReadAllText(file);
+        Assert.Contains(from, text);
+        File.WriteAllText(file, text.Replace(from, to));
+        var errors = Published.Validate(folder);
+        Assert.Contains(errors, e => e.StartsWith("La receta dolphin.json") && e.Contains(expected));
+        Assert.Throws<InvalidDataException>(() => Published.Compile(folder, f.Tmp["no.gz"]));
+    }
+
     [Fact]
     public async Task BrokenJsonAndABadReplacementSaySo()
     {

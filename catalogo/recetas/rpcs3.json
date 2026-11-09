@@ -1,0 +1,29 @@
+{
+  "id": "rpcs3",
+  "name": "RPCS3",
+  "kind": "emulator",
+  "folder": "PlayStation 3",
+  "detect": "rpcs3.exe",
+  "version": { "from": "date" },
+  "consoles": ["ps3"],
+  "baseFor": ["ps3"],
+  "license": "GPL-2.0-only",
+  "devOnly": true,
+  "saves": ["dev_hdd0/home/00000001/savedata"],
+  "config": ["config"],
+  "content": ["dev_hdd0"],
+  "perGame": { "config": "config/custom_configs/config_{titleId}.yml", "apply": "file" },
+  "install": [
+    { "formats": ["pkg"], "args": ["--installpkg", "{file}"] },
+    { "formats": ["pup"], "args": ["--installfw", "{file}"] }
+  ],
+  "options": [
+    { "name": "renderer", "file": "config/config.yml", "format": "yml", "key": "Video.Renderer" },
+    { "name": "resolution", "file": "config/config.yml", "format": "yml", "key": "Video.Resolution Scale" },
+    { "name": "aspectRatio", "file": "config/config.yml", "format": "yml", "key": "Video.Aspect ratio" },
+    { "name": "speed", "file": "config/config.yml", "format": "yml", "key": "Video.Frame limit" },
+    { "name": "anisotropy", "file": "config/config.yml", "format": "yml", "key": "Video.Anisotropic Filter Override" }
+  ],
+  "updates": { "source": "github", "repo": "RPCS3/rpcs3-binaries-win" },
+  "asset": "^rpcs3-v.+_win64(_msvc)?\\.7z$"
+}

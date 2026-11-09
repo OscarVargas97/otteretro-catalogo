@@ -1,0 +1,13 @@
+{
+  "id": "blastem",
+  "name": "BlastEm",
+  "kind": "emulator",
+  "folder": "Mega Drive",
+  "detect": "blastem.exe",
+  "version": { "from": "date" },
+  "consoles": ["genesis-slash-megadrive"],
+  "baseFor": ["genesis-slash-megadrive"],
+  "license": "GPL-3.0-only",
+  "config": ["default.cfg"],
+  "perGame": { "apply": "swap" }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ppsspp",
+  "name": "PPSSPP",
+  "kind": "emulator",
+  "folder": "PSP",
+  "detect": "PPSSPPWindows64.exe",
+  "version": { "from": "date" },
+  "consoles": ["psp"],
+  "baseFor": ["psp"],
+  "license": "GPL-2.0-or-later",
+  "saves": ["memstick/PSP/SAVEDATA"],
+  "config": ["memstick/PSP/SYSTEM"],
+  "perGame": { "mods": ["memstick/PSP/TEXTURES/{gameId}"] },
+  "options": [
+    { "name": "resolution", "file": "memstick/PSP/SYSTEM/ppsspp.ini", "format": "ini", "section": "Graphics", "key": "InternalResolution" },
+    { "name": "renderer", "file": "memstick/PSP/SYSTEM/ppsspp.ini", "format": "ini", "section": "Graphics", "key": "GraphicsBackend" },
+    { "name": "filter", "file": "memstick/PSP/SYSTEM/ppsspp.ini", "format": "ini", "section": "Graphics", "key": "TextureFiltering" }
+  ],
+  "updates": { "source": "github", "repo": "hrydgard/ppsspp" },
+  "asset": "^PPSSPP-v[0-9.]+-Windows-x64\\.zip$"
+}

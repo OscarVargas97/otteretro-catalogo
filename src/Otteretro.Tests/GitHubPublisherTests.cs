@@ -254,6 +254,22 @@ public class GitHubPublisherTests
         Assert.Contains($"POST repos/{Repo}/pulls", github.Calls);
     }
 
+    /// <summary>#94: las recetas de main no salen de la base local; Publicar todo no las borra.</summary>
+    [Fact]
+    public async Task PublishingEverythingLeavesTheRecipesOfMainAlone()
+    {
+        var (f, _, _) = Setup(canPush: true);
+        await using var _f = f;
+        var github = new FakeGitHub(MainZip(f, folder =>
+        {
+            Directory.CreateDirectory(Path.Combine(folder, Published.RecipesFolder));
+            File.WriteAllText(Path.Combine(folder, Published.RecipesFolder, "dolphin.json"), "{}");
+        }), canPush: true);
+        Assert.Null(Editing.SetIconic(f.Db, 33, true));
+        var preview = await new GitHubPublisher(f.Db, "secreto", github) { Work = f.Tmp["trabajo-recetas"] }.Preview(new("all", 0));
+        Assert.Equal(["sagas/00033-final-fantasy.json"], preview.Files.Select(x => x.Path));
+    }
+
     /// <summary>#85: volver a la vista previa o publicar reusa la comparación; un cambio local la rehace.</summary>
     [Fact]
     public async Task ThePlanIsReusedUntilSomethingChanges()

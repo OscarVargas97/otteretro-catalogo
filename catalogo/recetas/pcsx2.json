@@ -1,0 +1,17 @@
+{
+  "id": "pcsx2",
+  "name": "PCSX2",
+  "kind": "emulator",
+  "folder": "PlayStation 2",
+  "detect": "pcsx2-qt.exe",
+  "version": { "from": "date" },
+  "consoles": ["ps2"],
+  "baseFor": ["ps2"],
+  "license": "GPL-3.0-only",
+  "portable": [{ "type": "file", "path": "portable.txt", "system": "windows" }],
+  "saves": ["memcards"],
+  "config": ["gamesettings", "inputprofiles"],
+  "perGame": { "config": "gamesettings/{serial}_{crc}.ini", "apply": "file", "mods": ["patches/{serial}_{crc}.pnach"] },
+  "updates": { "source": "github", "repo": "PCSX2/pcsx2" },
+  "asset": "^pcsx2-v[0-9.]+-windows-x64-Qt\\.7z$"
+}
