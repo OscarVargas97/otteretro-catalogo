@@ -4395,6 +4395,8 @@ export interface components {
             kind: string;
             folder: string;
             consoles: string[];
+            /** @default false */
+            local: boolean;
         };
         RecipeText: {
             json: string;

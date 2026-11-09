@@ -11,7 +11,7 @@ using Otteretro.Data;
 namespace Otteretro.Catalog;
 
 /// <summary>Una receta en la lista de «Emuladores» (#95).</summary>
-public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles);
+public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false);
 /// <summary>Una receta entera, como JSON.</summary>
 public record RecipeText(string Json);
 /// <summary>La URL del repo de un emulador (GitHub, Forgejo o Gitea).</summary>
@@ -29,21 +29,52 @@ public static partial class Recipes
 
     static readonly JsonSerializerOptions Indented = new() { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
 
-    public static List<RecipeInfo> List(Database db)
+    static RecipeInfo Info(string json, bool local)
+    {
+        var r = JsonNode.Parse(json)!;
+        return new RecipeInfo((string)r["id"]!, (string?)r["name"] ?? "", (string?)r["kind"] ?? "", (string?)r["folder"] ?? "",
+            r["consoles"]?.AsArray().Select(x => (string)x!).ToList() ?? [], local);
+    }
+
+    public static List<RecipeInfo> List(Database db, string? local = null)
     {
         using var c = db.Open();
-        return c.Query<string>("SELECT json FROM recipe ORDER BY id").Select(json =>
-        {
-            var r = JsonNode.Parse(json)!;
-            return new RecipeInfo((string)r["id"]!, (string?)r["name"] ?? "", (string?)r["kind"] ?? "", (string?)r["folder"] ?? "",
-                r["consoles"]?.AsArray().Select(x => (string)x!).ToList() ?? []);
-        }).ToList();
+        return c.Query<string>("SELECT json FROM recipe ORDER BY id").Select(json => Info(json, false))
+            .Concat(Local(db, local).Values.Select(json => Info(json, true))).OrderBy(r => r.Id, StringComparer.Ordinal).ToList();
     }
 
     public static string? Get(Database db, string id)
     {
         using var c = db.Open();
-        return c.ExecuteScalar<string?>("SELECT json FROM recipe WHERE id = @id", new { id });
+        return c.ExecuteScalar<string?>("SELECT json FROM recipe WHERE id = @id", new { id }) ?? Local(db).GetValueOrDefault(id);
+    }
+
+    /// <summary>La carpeta de recetas de Otteretro del mismo equipo (`data\recetas` de su carpeta de datos), o null si no está instalado.</summary>
+    public static string? LocalFolder() => ImageHome.OtteretroDataFolder() is { } d ? Path.Combine(d, "data", "recetas") : null;
+
+    /// <summary>
+    /// Las recetas de Otteretro (#96, decisión 350) que la base local todavía no tiene, por id y con su texto: solo lectura, nunca se
+    /// escribe en esa carpeta. Se ignoran `_respaldos`, los esquemas y lo que no cumple el esquema.
+    /// </summary>
+    public static Dictionary<string, string> Local(Database db, string? folder = null)
+    {
+        var found = new Dictionary<string, string>();
+        folder ??= LocalFolder();
+        if (folder is null || !Directory.Exists(folder)) return found;
+        using var c = db.Open();
+        foreach (var file in Directory.GetFiles(folder, "*.json").Where(f => !f.EndsWith(".schema.json", StringComparison.Ordinal)).Order(StringComparer.Ordinal))
+        {
+            try
+            {
+                var text = File.ReadAllText(file);
+                using var doc = JsonDocument.Parse(text);
+                if (Published.CheckRecipe(doc.RootElement).Count > 0) continue;
+                var id = doc.RootElement.GetProperty("id").GetString()!;
+                if (c.ExecuteScalar<long>("SELECT count(*) FROM recipe WHERE id = @id", new { id }) == 0) found[id] = text;
+            }
+            catch (Exception e) when (e is IOException or UnauthorizedAccessException or JsonException or KeyNotFoundException) { }
+        }
+        return found;
     }
 
     /// <summary>Trae las recetas de una carpeta (la de main) que todavía no están en la base, con sus bytes. Devuelve cuántas trajo.</summary>
