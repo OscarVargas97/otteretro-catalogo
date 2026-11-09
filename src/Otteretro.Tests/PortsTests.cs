@@ -20,15 +20,22 @@ public class PortsTests : IAsyncDisposable
     readonly List<string> calls = [];
     readonly Func<ProcessStartInfo, string, CancellationToken, Task<ProcessOutput>> real = ClaudeRunner.Launch;
     readonly Func<DateTime> realNow = ClaudeBudget.UtcNow;
+    readonly HttpClient realHttp = Recipes.Http;
 
     /// <summary>Lo que responde la red: el tar de Recompendium, las listas de compatibilidad, el RSS y Read Only Memo.</summary>
     sealed class Net(Dictionary<string, string> yaml) : HttpMessageHandler
     {
         public string Rss = "", Memo = "";
+        /// <summary>Las releases de cada repo de GitHub («dueño/repo» → JSON); las que faltan, 404.</summary>
+        public readonly Dictionary<string, string> Releases = [];
+        public readonly List<string> Asked = [];
 
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
         {
             var url = Uri.UnescapeDataString(request.RequestUri!.ToString());
+            if (url.Contains("/releases")) Asked.Add(url);
+            if (Releases.FirstOrDefault(r => url.Contains($"api.github.com/repos/{r.Key}/releases")).Value is { } release)
+                return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(release, Encoding.UTF8) });
             if (url.Contains("codeload.github.com")) return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent(Tar(yaml)) });
             string? body = url switch
             {
@@ -74,6 +81,7 @@ public class PortsTests : IAsyncDisposable
     {
         net = new Net(yaml);
         Ports.Handler = net;
+        Recipes.Http = new HttpClient(net); // las releases de las recetas propuestas (#119)
         ClaudeBudget.UtcNow = () => TimeZoneInfo.ConvertTimeToUtc(DateTime.Today.AddHours(3), TimeZoneInfo.Local); // de noche
         using var c = f.Db.Open();
         c.Execute("""
@@ -89,6 +97,7 @@ public class PortsTests : IAsyncDisposable
     public async ValueTask DisposeAsync()
     {
         Ports.Handler = null;
+        Recipes.Http = realHttp;
         ClaudeRunner.Launch = real;
         ClaudeBudget.UtcNow = realNow;
         await f.DisposeAsync();
@@ -160,6 +169,59 @@ public class PortsTests : IAsyncDisposable
         yaml["recomps/rush.yaml"] = "name: Rush 2049\nconsole: arcade\nstatus: beta\nrepo: c/rush\n";
         await Done(Ports.Enqueue(f.Db));
         Assert.Equal(0, Scalar<long>("SELECT delisted FROM port WHERE project = 'rush'"));
+    }
+
+    static string Release(string tag, params string[] files) =>
+        $$"""[{ "tag_name": "{{tag}}", "draft": false, "published_at": "2026-10-01T00:00:00Z", "assets": [{{string.Join(",", files.Select(a => $$"""{ "name": "{{a}}", "browser_download_url": "https://dl/{{a}}" }"""))}}] }]""";
+
+    /// <summary>
+    /// #119: después del cruce, cada port con juego y repo propone una receta (con su archivo, o la lista si hay varios); lo que ya
+    /// tiene receta no se propone, lo resuelto no vuelve y lo que no tiene archivo de Windows no se repite hasta que cambie su release.
+    /// </summary>
+    [Fact]
+    public async Task PortsWithAWindowsReleaseProposeARecipe()
+    {
+        net.Releases["Zelda64Recomp/Zelda64Recomp"] = Release("v1.2.0", "Zelda64Recompiled-1.2.0-Windows.zip", "Zelda64Recompiled-1.2.0-Linux.tar.gz");
+        net.Releases["a/prime-recomp"] = Release("v0.3", "prime-0.3-win64.zip", "prime-0.3-win32.zip");
+        net.Releases["b/nb-recomp"] = Release("v1", "nb-linux.tar.gz");
+        net.Releases["HarbourMasters/2ship2harkinian"] = Release("v2", "2ship-win64.zip");
+        using (var c = f.Db.Open())
+            c.Execute("""INSERT INTO recipe (id, kind, json) VALUES ('2ship', 'port', '{ "id": "2ship", "updates": { "source": "github", "repo": "HarbourMasters/2ship2harkinian" } }')""");
+
+        await Done(Ports.Enqueue(f.Db));
+        var ports = PortRecipes.List(f.Db);
+        Assert.Equal(["Zelda64Recomp", "prime-recomp"], ports.Select(p => p.Project).Order(StringComparer.Ordinal));
+        Assert.DoesNotContain(net.Asked, u => u.Contains("2ship2harkinian")); // ya tiene receta
+        Assert.Equal(2, CatalogTasks.PendingCounts(f.Db)["portsReview"]);
+        var zelda = ports.Single(p => p.Project == "Zelda64Recomp");
+        Assert.Equal(["Zelda64Recompiled-1.2.0-Windows.zip"], zelda.Files);
+        Assert.Equal(@"^Zelda64Recompiled-[0-9.]+-Windows\.zip$", (string)System.Text.Json.Nodes.JsonNode.Parse(zelda.Recipe)!["asset"]!);
+        var prime = ports.Single(p => p.Project == "prime-recomp");
+        Assert.Equal(2, prime.Files.Count);
+        Assert.DoesNotContain("asset", prime.Recipe); // se elige al aceptar
+
+        // Aceptar: con varios archivos hay que elegir; la receta queda experimental, en la carpeta de su consola y calzando con la release.
+        var (found, error) = await PortRecipes.Accept(f.Db, prime.Id, null, null);
+        Assert.True(found);
+        Assert.Equal("review.chooseFile", error?.Code);
+        (found, error) = await PortRecipes.Accept(f.Db, prime.Id, "prime-0.3-win64.zip", null);
+        Assert.True(found && error is null, error?.Code);
+        var recipe = System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "prime-recomp")!)!;
+        Assert.Equal(("port", "GameCube", "Metroid Prime", true, "a/prime-recomp"),
+            ((string)recipe["kind"]!, (string)recipe["folder"]!, (string)recipe["game"]!, (bool)recipe["experimental"]!, (string)recipe["updates"]!["repo"]!));
+        Assert.Matches((string)recipe["asset"]!, "prime-0.3-win64.zip");
+        Assert.True(PortRecipes.Dismiss(f.Db, zelda.Id));
+        Assert.False(PortRecipes.Dismiss(f.Db, zelda.Id));
+
+        // Otra vez: nada vuelve; el que no tenía archivo de Windows se mira de nuevo, pero con la misma release no se propone.
+        net.Asked.Clear();
+        await Done(Ports.Enqueue(f.Db));
+        Assert.Empty(PortRecipes.List(f.Db));
+        Assert.Contains(net.Asked, u => u.Contains("b/nb-recomp"));
+        Assert.DoesNotContain(net.Asked, u => u.Contains("prime-recomp") || u.Contains("Zelda64Recomp")); // aceptado y descartado
+        net.Releases["b/nb-recomp"] = Release("v2", "nb-linux.tar.gz", "nb-windows.zip");
+        await Done(Ports.Enqueue(f.Db));
+        Assert.Equal(["nb-recomp"], PortRecipes.List(f.Db).Select(p => p.Project));
     }
 
     /// <summary>#72: cada juego publica sus ports, la base compilada los trae y un cambio de ports cambia el hash de contenido.</summary>

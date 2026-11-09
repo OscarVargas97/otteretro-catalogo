@@ -517,7 +517,8 @@
     "http": "La app respondió con un error ({status}).",
     "unknown": "Algo salió mal ({code}).",
     "review": {
-      "noOriginal": "La receta original {recipe} ya no existe."
+      "noOriginal": "La receta original {recipe} ya no existe.",
+      "chooseFile": "Elige cuál de los archivos de Windows de la release usa la receta."
     },
     "recipes": {
       "badJson": "La receta no es un JSON válido: {detail}",
@@ -853,6 +854,7 @@
       "reading": "Bajando la lista de Recompendium",
       "compat": "Consultando la compatibilidad en los emuladores",
       "matching": "Cruzando los ports con los juegos",
+      "recipes": "Buscando releases para proponer recetas",
       "search": {
         "reading": "Leyendo el RSS de Recompendium y las listas conocidas",
         "verifying": "Claude verifica {done} de {total} candidatos"
@@ -864,7 +866,10 @@
         "unreachable": "No se pudo leer {source}: se sigue con lo demás.",
         "added": "Nuevo: {game} ({console}), {link}.",
         "rejected": "Descartado: {link}. {reason}",
-        "search": "Listo: {added} ports nuevos y {rejected} descartados; {matched} de {total} con juego."
+        "search": "Listo: {added} ports nuevos y {rejected} descartados; {matched} de {total} con juego.",
+        "recipes": "Recetas propuestas: {added} nuevas en Revisar.",
+        "recipesLimited": "GitHub llegó a su límite de consultas: las releases que faltan se miran la próxima vez.",
+        "recipeFailed": "No se pudo leer la release de {repo}: {detail}"
       }
     }
   },

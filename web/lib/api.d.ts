@@ -3429,6 +3429,125 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/review/{id}/port/accept": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: number;
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["AcceptPortRequest"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ReviewPage"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/review/{id}/port/dismiss": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: number;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ReviewPage"];
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/learnings/{id}/undo": {
         parameters: {
             query?: never;
@@ -4575,6 +4694,9 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        AcceptPortRequest: {
+            file?: null | string;
+        };
         ApiError: {
             code: string;
             params?: null | {
@@ -4969,6 +5091,20 @@ export interface components {
             company: null | string;
             consoleId: null | string;
         };
+        PortCandidate: {
+            /** Format: int64 */
+            id: number | string;
+            /** Format: int64 */
+            port: number | string;
+            game: string;
+            project: string;
+            console: string;
+            url: string;
+            tag: string;
+            publishedAt: null | string;
+            files: string[];
+            recipe: string;
+        };
         PortInfo: {
             /** Format: int64 */
             id: number | string;
@@ -5113,6 +5249,7 @@ export interface components {
             files: components["schemas"]["FileReview"][];
             forks: components["schemas"]["ForkCandidate"][];
             notices: components["schemas"]["RecipeNotice"][];
+            ports: components["schemas"]["PortCandidate"][];
         };
         Route: {
             kind: string;
