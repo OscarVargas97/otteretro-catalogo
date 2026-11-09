@@ -103,6 +103,37 @@ test("se crea una saga, se le agregan juegos, se arma su ruta y se fusiona un ju
   await page.getByRole("button", { name: es.publish.close }).click();
 });
 
+test("una receta se edita por secciones, con chips y el JSON solo en la vista avanzada plegada (#111)", async () => {
+  const { DatabaseSync } = await import("node:sqlite");
+  const file = join(dataDir("data"), "catalogo", "catalogo.db");
+  let db = new DatabaseSync(file);
+  db.exec(`INSERT INTO recipe (id, kind, json) VALUES ('prueba', 'emulator', '{"id":"prueba","name":"Prueba","kind":"emulator","folder":"snes","detect":"prueba.exe","formats":["sfc"]}')`);
+  db.close();
+  const t = es.emulators;
+
+  await page.goto(`${base()}/emulators/`);
+  await page.getByRole("button", { name: t.card.edit }).click();
+  await expect(page.getByRole("tab", { name: t.sections.basic })).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByLabel(t.field.name, { exact: true })).toHaveValue("Prueba");
+  await expect(page.locator("textarea")).toBeHidden();
+
+  await page.getByRole("tab", { name: t.sections.consoles }).click();
+  const formats = page.getByRole("textbox", { name: t.field.formats });
+  await formats.fill("smc");
+  await formats.press("Enter");
+  await expect(page.getByRole("button", { name: t.removeChip.replace("{value}", "smc") })).toBeVisible();
+
+  await page.getByText(t.jsonView).click();
+  await expect(page.locator("textarea")).toHaveValue(/"smc"/);
+  await page.getByRole("button", { name: t.save, exact: true }).click();
+  await expect(page.getByRole("tab", { name: t.sections.basic })).toHaveCount(0);
+
+  db = new DatabaseSync(file);
+  const saved = db.prepare("SELECT json FROM recipe WHERE id = 'prueba'").get() as { json: string };
+  db.close();
+  expect(JSON.parse(saved.json).formats).toEqual(["sfc", "smc"]);
+});
+
 test("Ajustes tiene claves, consolas, tareas y general", async () => {
   await page.goto(`${base()}/settings/`);
   await expect(page.getByRole("tab")).toHaveCount(4);

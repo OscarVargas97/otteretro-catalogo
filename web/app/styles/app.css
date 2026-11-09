@@ -325,3 +325,9 @@ a.ot-btn, a.chip { text-decoration: none; }
 .usage-system { background: var(--danger); }
 .usage-other { background: var(--ink-muted); }
 .usage-free { background: var(--surface-raised); border: 1px solid var(--line); }
+
+/* Editor de recetas (#111): grupos y filas del esquema, y chips que se quitan. */
+.recipe-group { display: grid; gap: var(--space-2); flex-basis: 100%; margin: 0; padding: var(--space-2) var(--space-3); border: 1px solid var(--line); border-radius: 8px; }
+.recipe-row { align-items: flex-end; padding-bottom: var(--space-2); border-bottom: 1px solid var(--line); }
+.chip .chip-remove { margin-left: 6px; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.chips input { height: 28px; min-width: 10ch; }

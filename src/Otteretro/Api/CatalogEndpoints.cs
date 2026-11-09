@@ -140,6 +140,8 @@ public static class CatalogEndpoints
         // «Emuladores» (#95): las recetas en la base local, como las sagas; Publicar lleva al PR las que cambiaron.
         api.MapGet("/recipes", Results<Ok<List<RecipeInfo>>, Conflict<ApiError>> (AppSession s) =>
             Db(s) is { } db ? TypedResults.Ok(Recipes.List(db)) : NoData());
+        // El editor de recetas (#111) se arma con el esquema: el mismo que valida al guardar.
+        api.MapGet("/recipes/schema", () => TypedResults.Ok(new RecipeText(Published.RecipeSchema())));
         api.MapGet("/recipes/{id}", Results<Ok<RecipeText>, NotFound, Conflict<ApiError>> (string id, AppSession s) =>
             Db(s) is not { } db ? NoData() : Recipes.Get(db, id) is { } json ? TypedResults.Ok(new RecipeText(json)) : TypedResults.NotFound());
         // Lo de cada tarjeta (#108): última release, si el patrón calza y si está publicada. Sin la clave o sin red, main queda sin leer.
