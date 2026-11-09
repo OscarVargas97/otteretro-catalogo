@@ -21,6 +21,10 @@
     "expand": "Expandir el menú"
   },
   "topBar": {
+    "catchUpAvailable": "Hay una versión nueva del catálogo: {tag}",
+    "catchUpOpen": "Ver",
+    "catchUpConflicts": "Quedan {count} conflictos de la última versión",
+    "catchUpResolve": "Resolver",
     "search": "Buscar sagas y juegos…",
     "shortcut": "CTRL K",
     "tasks": "Tareas",
@@ -106,6 +110,44 @@
     "later": "Respaldo y el resto de ajustes llegan con su fase.",
     "credentials": "Cuentas y claves",
     "sections": "Secciones de Ajustes",
+    "catalog": {
+      "title": "Catálogo",
+      "inUse": "Catálogo en uso",
+      "base": "Parte de la versión de main",
+      "noBase": "sin fijar",
+      "totals": "{sagas} sagas · {games} juegos · {images} imágenes",
+      "unpublished": "{count, plural, =0 {Sin cambios por publicar.} one {# archivo con cambios sin publicar.} other {# archivos con cambios sin publicar.}}",
+      "unpublishedUnknown": "No se sabe cuántos cambios hay sin publicar (falta la clave de GitHub o no hay conexión).",
+      "versions": "Versiones publicadas",
+      "loading": "Buscando las versiones en GitHub…",
+      "noVersions": "No hay versiones publicadas.",
+      "current": "En uso",
+      "apply": "Aplicar",
+      "noHistory": "Sin detalle de cambios.",
+      "changes": "{count, plural, one {# cambio} other {# cambios}}",
+      "images": "{count, plural, one {# juego con imágenes nuevas} other {# juegos con imágenes nuevas}}",
+      "applied": "{version} aplicada: {inserted} filas nuevas, {updated} cambiadas, {deleted} quitadas y {conflicts} conflictos por elegir.",
+      "chooseFirst": "Elige los conflictos pendientes antes de aplicar otra versión.",
+      "conflicts": "{count, plural, one {# conflicto por elegir} other {# conflictos por elegir}}",
+      "conflictsHint": "Cambiaron distinto en la versión y aquí sin publicar: nada se pisa hasta que elijas.",
+      "wholeRow": "la fila entera",
+      "local": "Aquí",
+      "remote": "En {version}",
+      "missing": "(no está)",
+      "keepLocal": "Dejar lo de aquí",
+      "useRemote": "Usar el de la versión",
+      "kind": {
+        "saga": "Saga",
+        "game": "Juego"
+      },
+      "change": {
+        "added": "{kind} nuevo: {name}",
+        "removed": "{kind} quitado: {name}",
+        "renamed": "{kind} renombrado: {from} → {name}",
+        "merged": "{kind} fusionado: {name}",
+        "changed": "{name} pasa de {from} a otra saga"
+      }
+    },
     "claude": {
       "title": "Tareas",
       "schedule": "Horario",
@@ -781,6 +823,11 @@
       "nothingChanged": "No hay cambios que publicar.",
       "invalid": "Lo publicado no pasa la validación ({count} errores).",
       "conflict": "Cambiaron en GitHub: {files}. No se publica para no pisarlo.",
+      "pendingConflicts": "Quedan {count} conflictos por elegir de la versión anterior: elígelos antes de aplicar otra.",
+      "noBase": "No se sabe de qué versión parte el catálogo local: fíjala con «catalogo base <sha>».",
+      "noRelease": "No está la versión {tag} o le falta la base publicada.",
+      "badDownload": "La base de la versión {tag} no coincide con su manifiesto: no se aplica.",
+      "mergeFailed": "La versión {tag} no se pudo fusionar sin romper el catálogo; no se cambió nada.",
       "change": {
         "replaced": "{count} juegos o versiones pasan a reemplazados",
         "sagaAdded": "Saga nueva: {name}",

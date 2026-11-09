@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { Suspense, useDeferredValue, useEffect, useRef, useState } from "react";
 import { eventsUrl, request } from "@/lib/client";
 import { useDescribeError } from "@/lib/i18n";
-import type { SearchResults } from "@/lib/types";
+import type { CatalogCatchUp, SearchResults } from "@/lib/types";
 import { gameQuery, sagaQuery } from "@/lib/queries";
 import { useIdParam } from "./Catalog";
 import { UpdateTask, useUpdate } from "./Update";
@@ -60,6 +60,7 @@ export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/
     };
   }, []);
 
+  const catchUp = useCatchUp();
   return (
     <header className="top" ref={header}>
       <h1 className={crumbs ? "sr-only" : undefined}>{title}</h1>
@@ -72,6 +73,12 @@ export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/
         <span className="search-text">{t("search")}</span>
         <span className="kbd">{t("shortcut")}</span>
       </button>
+      {(catchUp?.status === "available" || catchUp?.status === "conflicts") && (
+        <Link className="ot-btn" href="/settings/?s=catalog" role="status">
+          {catchUp.status === "available" ? t("catchUpAvailable", { tag: catchUp.tag ?? "" }) : t("catchUpConflicts", { count: Number(catchUp.conflicts) })}
+          {" · "}{catchUp.status === "available" ? t("catchUpOpen") : t("catchUpResolve")}
+        </Link>
+      )}
       <PublishButton kind="all" id={0} />
       <button className="ot-btn" type="button" aria-expanded={tasksOpen} onClick={() => setTasksOpen(!tasksOpen)}>
         <span className="dot" data-connected={connected} data-busy={busy} />
@@ -93,6 +100,26 @@ export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/
       {searching && <Search onClose={() => setSearching(false)} />}
     </header>
   );
+}
+
+/**
+ * Ponerse al día solo (#106, decisión 361): al abrir y cada 5 minutos pregunta si la release más nueva trae el PR propio, y entonces el
+ * servidor la aplica; si no, o si quedan conflictos, devuelve el aviso. Publicar la vuelve a pedir (Publish.tsx).
+ */
+function useCatchUp() {
+  const cache = useQueryClient();
+  const { data } = useQuery({
+    queryKey: ["catalog", "catchup"],
+    queryFn: () => request<CatalogCatchUp>("/api/catalog/catchup", { method: "POST" }),
+    refetchInterval: 5 * 60_000,
+    retry: false,
+  });
+  const applied = data?.status === "applied" ? data.tag : null;
+  // Lo aplicado cambia sagas, juegos e imágenes: se vuelve a pedir todo salvo la propia sonda.
+  useEffect(() => {
+    if (applied) cache.invalidateQueries({ predicate: (q) => q.queryKey[1] !== "catchup" });
+  }, [applied, cache]);
+  return data;
 }
 
 /** «Sagas › saga › juego» (#169). Sale de las mismas consultas que la pantalla: no pide nada aparte. */

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -47,7 +47,12 @@ function PublishPanel({ kind, id, onClose }: PublishRequest & { onClose: () => v
     staleTime: 0,
     retry: false,
   });
-  const publish = useMutation({ mutationFn: () => request<PublishResult>("/api/publish", { method: "POST", body }) });
+  const cache = useQueryClient();
+  // #106: al terminar de publicar se vuelve a sondear si la release ya trae el PR.
+  const publish = useMutation({
+    mutationFn: () => request<PublishResult>("/api/publish", { method: "POST", body }),
+    onSuccess: () => cache.invalidateQueries({ queryKey: ["catalog", "catchup"] }),
+  });
   const p = preview.data;
   const noKey = preview.error instanceof ApiRequestError && preview.error.error.code === "publish.noKey";
   const blocked = !p || p.files.length === 0 || p.errors.length > 0 || p.conflicts.length > 0;

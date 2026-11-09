@@ -32,6 +32,8 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     public const string Repo = "OscarVargas97/otteretro-catalogo";
     /// <summary>De qué commit de main parte el catálogo local (setting): con él se ve si alguien cambió lo mismo después.</summary>
     public const string BaseSetting = "catalog.base";
+    /// <summary>El número del último PR que abrió la persona (setting): con él se ve si lo fusionado ya salió en una release (#106).</summary>
+    public const string PrSetting = "catalog.pr";
     const string Folder = "catalogo";
 
     /// <summary>Lo único que se pide a la API de GitHub; nada de esto fusiona.</summary>
@@ -63,9 +65,17 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         return text.Length == 0 ? null : JsonNode.Parse(text);
     }
 
-    Task<JsonNode?> Get(string path, CancellationToken ct) => Send(HttpMethod.Get, path, null, ct);
+    internal Task<JsonNode?> Get(string path, CancellationToken ct) => Send(HttpMethod.Get, path, null, ct);
 
-    async Task<JsonNode> Must(HttpMethod method, string path, object? body, CancellationToken ct) =>
+    /// <summary>Un archivo entero (#104: los de una release); la dirección viene de la propia API de GitHub.</summary>
+    internal async Task<byte[]> Bytes(string url, CancellationToken ct)
+    {
+        using var response = await http.SendAsync(Request(HttpMethod.Get, url), ct);
+        if (!response.IsSuccessStatusCode) throw new TaskException(ApiError.Of("publish.failed", ("status", ((int)response.StatusCode).ToString())));
+        return await response.Content.ReadAsByteArrayAsync(ct);
+    }
+
+    internal async Task<JsonNode> Must(HttpMethod method, string path, object? body, CancellationToken ct) =>
         await Send(method, path, body, ct) ?? throw new TaskException(ApiError.Of("publish.failed", ("status", "404")));
 
     /// <summary>La carpeta de recetas de Otteretro (#96); null usa la de su carpeta de datos. Las pruebas la fijan.</summary>
@@ -126,7 +136,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         else
             await Must(HttpMethod.Patch, $"repos/{target}/git/refs/heads/{plan.Branch}", new { sha, force = true }, ct);
 
-        if (await OpenPr(owner!, plan.Branch, ct) is { } url) return new(url, true);
+        if (await OpenPr(owner!, plan.Branch, ct) is { } url) return Remember(new(url, true));
         var pr = await Must(HttpMethod.Post, $"repos/{Repo}/pulls", new
         {
             title = $"Catálogo: {plan.Title}",
@@ -135,7 +145,13 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
             body = Body(plan),
             maintainer_can_modify = true,
         }, ct);
-        return new(pr["html_url"]!.GetValue<string>(), false);
+        return Remember(new(pr["html_url"]!.GetValue<string>(), false));
+    }
+
+    PublishResult Remember(PublishResult result)
+    {
+        if (long.TryParse(result.Url.Split('/')[^1], out var number)) SetSetting(db, PrSetting, number.ToString());
+        return result;
     }
 
     /// <summary>Archivos por pedido al armar el árbol: unos 200 archivos de saga son 1 a 2 MB.</summary>
@@ -260,7 +276,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     /// Publicar también lo toma, porque lee los archivos del plan.
     /// </summary>
     // ponytail: un solo candado para todo el programa; por carpeta de trabajo si alguna vez hay más de un catálogo abierto.
-    static readonly SemaphoreSlim Gate = new(1, 1);
+    internal static readonly SemaphoreSlim Gate = new(1, 1);
 
     /// <summary>
     /// Cambia cuando se escribe la base: SQLite toca el archivo o su -wal.
@@ -342,7 +358,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     public string Work { get; init; } = Path.Combine(Path.GetTempPath(), "otteretro-publicar");
 
     /// <summary>La carpeta `catalogo` de main en ese commit; se baja una vez por commit.</summary>
-    async Task<string> MainFolder(string head, CancellationToken ct)
+    internal async Task<string> MainFolder(string head, CancellationToken ct)
     {
         var folder = Path.Combine(Work, "main-" + head);
         if (Directory.Exists(folder)) return folder;
@@ -375,10 +391,12 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     }
 
     /// <summary>`catalogo base &lt;sha&gt;`: de qué commit de main parte el catálogo local.</summary>
-    public static void SetBase(Database db, string sha)
+    public static void SetBase(Database db, string sha) => SetSetting(db, BaseSetting, sha);
+
+    public static void SetSetting(Database db, string name, string value)
     {
         using var c = db.Open();
-        c.Execute("INSERT INTO setting (name, value, machine_id) VALUES (@BaseSetting, @sha, '') ON CONFLICT (name, machine_id) DO UPDATE SET value = excluded.value",
-            new { BaseSetting, sha });
+        c.Execute("INSERT INTO setting (name, value, machine_id) VALUES (@name, @value, '') ON CONFLICT (name, machine_id) DO UPDATE SET value = excluded.value",
+            new { name, value });
     }
 }

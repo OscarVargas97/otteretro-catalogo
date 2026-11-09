@@ -61,3 +61,7 @@ export type RecipeText = Schemas["RecipeText"];
 export type RepoRelease = Schemas["RepoRelease"];
 export type RecipeStatus = Schemas["RecipeStatus"];
 export type RecipeTest = Schemas["RecipeTest"];
+export type CatalogVersionsPage = Schemas["CatalogVersionsPage"];
+export type CatalogApplyResult = Schemas["CatalogApplyResult"];
+export type CatalogCatchUp = Schemas["CatalogCatchUp"];
+export type CatalogConflict = Schemas["CatalogConflict"];

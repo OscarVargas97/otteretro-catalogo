@@ -255,7 +255,7 @@ public class PortMigrationTests
                 VALUES (7, 'n64', 'Super Mario 64', 'sm64coopdx', 'decomp', 'complete', 'https://github.com/coop-deluxe/sm64coopdx', 'extra', '2026-10-14', 'ares', NULL, 42, 1)
                 """);
 
-        Assert.Equal(3, Migrations.Apply(db)); // la 0029, la 0030 (recetas, #94) y la 0032 (forks vistos, #97)
+        Assert.Equal(4, Migrations.Apply(db)); // la 0029, la 0030 (recetas, #94), la 0031 (conflictos, #104) y la 0032 (forks vistos, #97)
 
         using var after = db.Open();
         Assert.Equal(("sm64coopdx", "complete", 42L, true, false), after.QuerySingle<(string, string, long, bool, bool)>(
