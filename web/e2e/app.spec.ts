@@ -97,7 +97,7 @@ test("se crea una saga, se le agregan juegos, se arma su ruta y se fusiona un ju
   await expect(steps.nth(1)).toContainText("Secret of Mana");
 
   // Publicar sin clave de GitHub dice qué token crear y lleva a Cuentas y claves (#22).
-  await page.getByRole("button", { name: es.publish.button }).click();
+  await page.getByRole("button", { name: es.publish.button, exact: true }).click();
   await expect(page.getByText(es.publish.noKey)).toBeVisible();
   await expect(page.getByRole("link", { name: es.publish.openCredentials })).toBeVisible();
   await page.getByRole("button", { name: es.publish.close }).click();

@@ -146,6 +146,13 @@ public static class CatalogEndpoints
             catch (TaskException e) { return TypedResults.Conflict(e.Error); }
             catch (HttpRequestException) { return TypedResults.Conflict(ApiError.Of("publish.offline")); }
         });
+        // Cuántos archivos llevaría «Publicar todo», para la barra de arriba (#85); null si no se puede saber (sin clave o sin conexión).
+        api.MapGet("/publish/count", async Task<Ok<int?>> (AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db || Publisher(db, s, box) is not { } publisher) return TypedResults.Ok<int?>(null);
+            try { return TypedResults.Ok<int?>(await publisher.CountAll(ct)); }
+            catch (Exception e) when (e is TaskException or HttpRequestException) { return TypedResults.Ok<int?>(null); }
+        });
         api.MapPost("/publish", async Task<Results<Ok<PublishResult>, Conflict<ApiError>>> (PublishRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
         {
             if (Db(s) is not { } db) return NoData();

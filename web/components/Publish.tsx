@@ -15,9 +15,20 @@ import type { PublishPreview, PublishRequest, PublishResult } from "@/lib/types"
 export function PublishButton({ kind, id }: PublishRequest) {
   const t = useTranslations("publish");
   const [open, setOpen] = useState(false);
+  // «Publicar todo» va en la barra de arriba con cuántos archivos llevaría (#85); el servidor reusa la comparación mientras nada cambie.
+  const count = useQuery({
+    queryKey: ["publish", "count"],
+    queryFn: () => request<number | null>("/api/publish/count"),
+    enabled: kind === "all",
+    staleTime: 60_000,
+    retry: false,
+  });
   return (
     <>
-      <button className="ot-btn" type="button" aria-expanded={open} onClick={() => setOpen(!open)}>{kind === "all" ? t("buttonAll") : t("button")}</button>
+      <button className="ot-btn" type="button" aria-expanded={open} onClick={() => setOpen(!open)}>
+        {kind === "all" ? t("buttonAll") : t("button")}
+        {kind === "all" && count.data != null && <span className="ot-count">{count.data}</span>}
+      </button>
       {open && <PublishPanel kind={kind} id={id} onClose={() => setOpen(false)} />}
     </>
   );
@@ -32,8 +43,8 @@ function PublishPanel({ kind, id, onClose }: PublishRequest & { onClose: () => v
   const preview = useQuery({
     queryKey: ["publish", kind, String(id)],
     queryFn: () => request<PublishPreview>("/api/publish/preview", { method: "POST", body }),
+    // Al volver se muestra la última al instante y se confirma con el servidor, que la reusa si nada cambió (#85).
     staleTime: 0,
-    gcTime: 0,
     retry: false,
   });
   const publish = useMutation({ mutationFn: () => request<PublishResult>("/api/publish", { method: "POST", body }) });
