@@ -192,6 +192,8 @@ public class PublishedTests
     [InlineData("\"from\": \"date\"", "\"from\": 3", "«version.from» vale 3")]
     [InlineData("\"type\": \"file\"", "\"type\": \"enlace\"", "«portable[0].type»")]
     [InlineData("\"id\": \"dolphin\"", "\"id\": \"otro\"", "tiene otro id")]
+    [InlineData("\"id\": \"dolphin\"", "\"id\": \"dolphin\", \"recommendedFor\": [{ \"game\": \"Zelda\", \"gameId\": \"x\" }]", "«recommendedFor[0].gameId» tiene que ser integer")]
+    [InlineData("\"id\": \"dolphin\"", "\"id\": \"dolphin\", \"recommendedFor\": [{ \"game\": \"Zelda\", \"gameId\": 999999 }]", "recomienda un juego que no existe: 999999")]
     public async Task AnInvalidRecipeDoesNotPass(string from, string to, string expected)
     {
         await using var f = new Fixture();

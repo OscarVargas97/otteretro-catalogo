@@ -208,7 +208,7 @@ public static partial class Published
             else if (known.Contains(r.OldId)) errors.Add($"{r.Kind} {r.OldId} figura como reemplazado, pero sigue en el catálogo.");
             else if (r.NewId is { } to && !known.Contains(to)) errors.Add($"{r.Kind} {r.OldId} se reemplaza por algo que no existe: {to}.");
         }
-        ValidateRecipes(folder, errors);
+        ValidateRecipes(folder, gameIds, errors);
         return errors;
     }
 

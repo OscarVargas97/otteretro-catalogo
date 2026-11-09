@@ -21,6 +21,11 @@ public record RecipeNotice(long Id, string Recipe, string? RecipeName, string Re
 /// <summary>Lo que la tarea «Emuladores» (#97) deja en Revisar y se resuelve ahí (#98): candidatos de fork y avisos de recetas.</summary>
 public static class EmulatorReview
 {
+    /// <summary>El juego del catálogo que se llama así (nombre en español u original, sin distinguir mayúsculas), si es uno solo (#121).</summary>
+    // ponytail: igualdad exacta del nombre; si los nombres de las fuentes no calzan, el gameId se elige después en el editor.
+    static long? GameByName(System.Data.IDbConnection c, string name) =>
+        c.Query<long>("SELECT id FROM game WHERE name_es = @name COLLATE NOCASE OR original_name = @name COLLATE NOCASE LIMIT 2", new { name }).ToList() is [var id] ? id : null;
+
     static string? Name(Database db, string id) => Recipes.Get(db, id) is { } json ? (string?)JsonNode.Parse(json)!["name"] : null;
 
     public static List<ForkCandidate> Forks(Database db)
@@ -92,8 +97,16 @@ public static class EmulatorReview
         updates["repo"] = repo;
         r["updates"] = updates;
         if ((string?)j["passed"]?["file"] is { } file) r["asset"] = Recipes.AssetPattern(file);
-        var games = (j["recommendedFor"]?.AsArray() ?? []).Select(g => new JsonObject { ["game"] = (string?)g?["game"] ?? "", ["source"] = (string?)g?["source"] })
-            .Where(g => (string)g["game"]! != "").ToList();
+        List<JsonObject> games;
+        using (var c = db.Open())
+            games = (j["recommendedFor"]?.AsArray() ?? []).Where(g => (string?)g?["game"] is { Length: > 0 }).Select(g =>
+            {
+                var name = (string)g!["game"]!;
+                var item = new JsonObject { ["game"] = name };
+                if (GameByName(c, name) is { } gameId) item["gameId"] = gameId;
+                if ((string?)g["source"] is { } source) item["source"] = source;
+                return item;
+            }).ToList();
         if (games.Count > 0) r["recommendedFor"] = new JsonArray([.. games]);
 
         if (await Recipes.Save(db, newId, r.ToJsonString(), true, token, ct) is { } error) return (true, error);
