@@ -274,6 +274,28 @@ public class GitHubPublisherTests
         Assert.Equal(["recetas/mgba.json", "sagas/00033-final-fantasy.json"], preview.Files.Select(x => x.Path));
     }
 
+    /// <summary>#95: una receta que llegó a main después de la base, traída y editada acá, se publica sin un falso conflicto.</summary>
+    [Fact]
+    public async Task ARecipeAddedToMainAfterTheBaseIsNotAConflict()
+    {
+        var (f, _, _) = Setup(canPush: true);
+        await using var _f = f;
+        const string mgba = """{ "id": "mgba", "name": "mGBA", "kind": "emulator", "folder": "GBA", "detect": "mGBA.exe" }""";
+        var github = new FakeGitHub(MainZip(f, folder =>
+        {
+            Directory.CreateDirectory(Path.Combine(folder, Published.RecipesFolder));
+            File.WriteAllText(Path.Combine(folder, Published.RecipesFolder, "mgba.json"), mgba);
+        }), canPush: true) { Zips = { ["base0"] = MainZip(f) } };
+        GitHubPublisher.SetBase(f.Db, "base0");
+        var local = Directory.CreateDirectory(f.Tmp["recetas-traidas"]).FullName;
+        File.WriteAllText(Path.Combine(local, "mgba.json"), mgba.Replace("\"mGBA\"", "\"mGBA dev\""));
+        Assert.Equal(1, Recipes.Import(f.Db, local));
+
+        var preview = await new GitHubPublisher(f.Db, "secreto", github) { Work = f.Tmp["trabajo-traidas"] }.Preview(new("all", 0));
+        Assert.Empty(preview.Conflicts);
+        Assert.Equal(["recetas/mgba.json"], preview.Files.Select(x => x.Path));
+    }
+
     /// <summary>#85: volver a la vista previa o publicar reusa la comparación; un cambio local la rehace.</summary>
     [Fact]
     public async Task ThePlanIsReusedUntilSomethingChanges()
