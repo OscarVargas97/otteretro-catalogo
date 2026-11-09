@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "47990",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Alice in Wonderland",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Alice in Wonderland",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Prepare to journey down the rabbit hole and into a land beyond your wildest imaginings. In Alice in Wonderland, the world of the dazzling Tim Burton film bursts onto your screen, filled with all the whimsical, fantastical adventure of the movie and the classic book that inspired it.",
           "source": "igdb",
           "manual": false
         },
@@ -65,14 +77,34 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 296824,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "VALE",
+            "VALV"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/39b506804d21cb800ba48a2e48e2d6c6.png",
         "hero": "https://cdn2.steamgriddb.com/hero/95d309f0b035d97f69902e7972c2b2e6.png",
         "logo": "https://cdn2.steamgriddb.com/logo/87ba276ebbe553ec05d2f5b37c20125f.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1323,
+          "platform": "wii",
+          "project": "Decomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Alice-2010/Decomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     }
   ],
   "routes": []

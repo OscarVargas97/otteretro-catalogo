@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Yunoha na Spring! is a Japanese otome visual novel.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 13019,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3lmq.jpg"
+      }
     },
     {
       "id": 41458,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fandisc for Yunohana Spring!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 135855,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3lms.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3367,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40928,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 41458,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

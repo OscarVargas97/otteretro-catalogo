@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115524",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The 4th Wall",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The 4th Wall",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The 4th Wall is an surreal horror puzzle game by GZ Storm. It was designed specifically to prey on the phobias of Youtube LPer AzuriteReaction.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 64126,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido del juego original completo, sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de PC de la época, sin mejoras modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la visión original del autor."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Técnicamente correcto en PC, pero con estándares de 2012."
+            }
+          ]
         },
         {
           "id": 115426,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 64126,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base que el original de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Se juega con mando, pero con opciones limitadas de consola."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a la versión original, adaptada a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución y rendimiento de Xbox 360, el más limitado."
+            }
+          ]
         },
         {
           "id": 115524,
@@ -65,9 +119,33 @@
           "year": 2024,
           "igdbId": 326931,
           "steamAppId": 3383190,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Se asume que incluye todo el contenido, con posibles añadidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Se espera calidad de vida y controles modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reinterpreta el juego y puede alejarse de lo original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Presentación y rendimiento actuales en PC."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/hye0ufal7jlttjbj3pnq.jpg"
+      }
     }
   ],
   "routes": []

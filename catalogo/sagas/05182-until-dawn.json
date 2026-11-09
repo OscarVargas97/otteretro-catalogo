@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99034",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Until Dawn",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Until Dawn",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Until Dawn is an interactive drama survival horror video game. It was originally planned as a first-person game for the PlayStation 3's motion controller PlayStation Move, but the motion controls were later dropped when it became a PlayStation 4 exclusive game.\n\nUntil Dawn is designed to be played multiple times, as players will miss out on quite a bit of content with a single playthrough. Each will last about nine hours in length and the game mechanics utilize a new in-game system called the \"Butterfly Effect\" in which any choice of action by the player may cause unforeseen consequences later on. For example, locating a weapon in an earlier chapter may allow the player to pick it up down the line when a chase scene leads back to the same room. Throughout the game, players will make difficult decisions during ethical or moral dilemmas, such as sacrificing one character to save another. The Butterfly Effect system blurs the line between right and wrong decisions and it is possible for players to keep all eight characters alive as well as having all eight of them die, allowing for many different paths and scenarios as well as offering several different endings. Until Dawn has a strict auto-save system to prevent players from reloading a previous save file to an earlier point in the game if they regret an in-game decision they have made. The only way to change the player's choice is to restart the game from the beginning or continue to the end and start a new game. In a developer interview, it has been said that Until Dawn has \"hundreds of endings\". Different endings have different variations depending on the combination of characters alive at the end of the game.\n\nThe gameplay is focused on exploration, quick-time events and discovering clues as well as making decisions. There is an in-game system that will keep track of all of the clues and secrets players have discovered in total, even if there are multiple playthroughs; these clues will allow the player to piece together the mysteries of Blackwood. In terms of the gameplay mechanics and theme, Until Dawn has been noted to be similar to Heavy Rain and Beyond: Two Souls.\n\nUntil Dawn was met with a positive critical response upon release, with praise directed at the visuals, choice mechanic, horror elements, music, voice acting and gameplay design. Most of the criticism the game drew was concerning the story, mostly the second half, camera angles, character movements and partially linear plot.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 7609,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Historia completa original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles algo rígidos pero fieles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la visión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "1080p a 30 fps, cargas largas."
+            }
+          ]
         },
         {
           "id": 99171,
@@ -57,7 +90,28 @@
           "year": 2024,
           "igdbId": 284721,
           "steamAppId": 2172010,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Escenas nuevas, pero ajustes de guion y música."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cámara sobre el hombro, más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Cambia cámara, tono y partes del guion."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos modernos, con algunos fallos de rendimiento."
+            }
+          ]
         },
         {
           "id": 99172,
@@ -65,7 +119,28 @@
           "kind": "remake",
           "year": 2024,
           "igdbId": 284721,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Escenas nuevas, pero ajustes de guion y música."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cámara sobre el hombro, más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Cambia cámara, tono y partes del guion."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor imagen y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 101169,
@@ -73,7 +148,49 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 42947,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Historia completa, posible edición con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles algo rígidos pero fieles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma visión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "1080p a 30 fps, cargas largas."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f28c89145bc5c930ba927088d63b196d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6187b22b73c4056f9fbbb75d5c5d2d38.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ce9658dc4560d4b6ac49748f5edf3fab.png"
+      },
+      "ports": [
+        {
+          "id": 471,
+          "platform": "ps4",
+          "project": "UntilDawn_PC",
+          "kind": "native-layer",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/SuperCatElvis/UntilDawn_PC",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "shadPS4",
+          "emulatorLevel": 1
         }
       ]
     },
@@ -99,6 +216,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A twisting tale of terror. Life and death decisions\nOpen your eyes... and prepare yourself for the dread of unforgettable psychological horror. Set 60 years before the nerve-shredding events of \"Until Dawn\", you awaken in a strange medical facility, with no memory. It's up to you to discover why you're trapped within Blackwood Pines Sanatorium - and uncover a chilling conspiracy lurking within its shadows.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2018",
           "source": "igdb",
@@ -114,7 +237,11 @@
           "igdbId": 37089,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a16ab3e70e263b0680ba0f6b66a5803d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/0576befa082efff3f0282f5a0a42ab31.png"
+      }
     },
     {
       "id": 47951,
@@ -138,6 +265,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ready to die for likes? Join a team of ambitious ghost hunters as they chase their next viral hit on a remote island haunted by a woman’s chilling story of demons and ghostly phenomena.\n\nWhen the tale begins to manifest in terrifying ways, the group will have to fight their own fear—and anything else that gets in their way – to get off the island alive. Their lives are in your hands. Make every choice count.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2027",
           "source": "igdb",
@@ -153,8 +286,36 @@
           "igdbId": 404058,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocvjf.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2021,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41619,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 42351,
+          "reason": "2018"
+        },
+        {
+          "position": 3,
+          "gameId": 47951,
+          "reason": "2027"
+        }
+      ]
+    }
+  ]
 }

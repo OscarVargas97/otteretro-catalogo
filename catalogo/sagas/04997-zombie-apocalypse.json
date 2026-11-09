@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96091",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zombie Apocalypse",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Zombie Apocalypse",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Zombie Apocalypse is a dual-stick shooter where the player must survive waves of zombies across 55 stages/days. Points are awarded for saving stranded civilians, killing zombies with environmental hazards, or simply mowing down the hordes with ten weapons including machine guns, flamethrowers, shotguns, and chainsaws. Up to four players can tackle the zombies together, online or off.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 18053,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/70c8733c2ef9c76addbdfaf4300d8df4.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ebaf99b405d133522fc8abcb4d4d0217.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d9e0913c45b60f7d92983836828f9104.png"
+      }
     },
     {
       "id": 40587,
@@ -70,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97120",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zombie Apocalypse: Never Die Alone",
           "source": "igdb",
@@ -78,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Zombie Apocalypse: Never Die Alone",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This sequel to Nihilistic Games' Zombie Apocalypse is developed by Backbone Entertainment and published by Konami.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +134,31 @@
           "igdbId": 51650,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/d0w3kle0xl9tgb1tbsjs.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3340,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40159,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 40587,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

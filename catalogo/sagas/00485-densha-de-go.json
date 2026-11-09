@@ -3,7 +3,7 @@
   "name": "Densha de go",
   "igdbKind": "franchise",
   "igdbId": 2440,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1998,
       "igdbId": 37286,
       "popularity": 0,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "2231",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Densha de Go! 2",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Densha de Go! 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Densha de Go! 2 Kousoku-hen is a train driving simulation game. It was released in the arcades in Japan in 1998. It was ported to PlayStation, Nintendo 64, WonderSwan, Neo Geo Pocket Color, Windows, Dreamcast, and Game Boy Color. The Nintendo 64 version was titled Densha de Go! 64.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Densha de Go! 2 Kousoku-hen es un juego de simulación de conducción de trenes. Se lanzó en las recreativas de Japón en 1998. Fue portado a PlayStation, Nintendo 64, WonderSwan, Neo Geo Pocket Color, Windows, Dreamcast y Game Boy Color. La versión para Nintendo 64 se tituló Densha de Go! 64.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -56,7 +74,13 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 37286,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-80346",
+            "SLPM-80406",
+            "SLPM-86142",
+            "SLPM-86615"
+          ]
         },
         {
           "id": 2687,
@@ -86,8 +110,14 @@
       "year": 1997,
       "igdbId": 43850,
       "popularity": 0,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "12599",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Densha de GO!",
@@ -98,6 +128,18 @@
           "field": "original_name",
           "value": "Densha de GO!",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Densha de GO! is a 1997 train simulator arcade game developed and published by Taito in Japan. Players are tasked with driving a train, adhering to the schedule and obeying signals and speed restrictions. It features real-world train lines from Japan, including the Yamanote Line and Keihin-Tohoku Line. The game was ported to the PC, Sega Saturn, and PlayStation.\n\nThe concept for Densha de Go! was inspired by designer Akira Saito's personal fascination with Japanese train lines and railroads. He wanted to create a game that allowed players to familiarize themselves with driving a train. The controls were his primary focus as he wanted them to be accurate and responsive, and to mimic the controls of a real train—his father worked for the Kyoto City Transportation Bureau Facilities Division, which made this easier to accomplish. Saito included real-world railroads and trains to appeal towards other railroad enthusiasts, thinking that it could also attract more \"ordinary\" players for its realistic, familiar theme. As arcades at the time were dominated primarily by racing and fighting games, he believed its unique concept could make it stand out.\n\nDensha de Go! is among Taito's most successful games, preceded only by Space Invaders. The PlayStation version sold over one million copies. The game was well-received by critics for its controls, attention to detail, and unique concept. Some felt that its home releases lacked enough content and had poor visuals. It was followed by a long series of sequels, spin-offs, and reimaginings, beginning with Densha de Go! 2 in 1999.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Densha de GO! es un juego de recreativa de simulación de trenes de 1997, desarrollado y publicado por Taito en Japón. Los jugadores deben conducir un tren, respetando el horario y obedeciendo las señales y los límites de velocidad. Incluye líneas de tren reales de Japón, entre ellas la Línea Yamanote y la Línea Keihin-Tōhoku. El juego fue portado a PC, Sega Saturn y PlayStation.\n\nEl concepto de Densha de GO! surgió de la fascinación personal del diseñador Akira Saito por las líneas de tren y los ferrocarriles japoneses. Quería crear un juego que permitiera a los jugadores familiarizarse con la conducción de un tren. Los controles fueron su principal prioridad, ya que quería que fueran precisos y responsivos, e imitaran los de un tren real; su padre trabajaba en la División de Instalaciones de la Oficina de Transporte de la Ciudad de Kioto, lo que facilitó esta tarea. Saito incluyó ferrocarriles y trenes reales para atraer a otros aficionados al ferrocarril, pensando que su temática realista y familiar también podría atraer a más jugadores «comunes». Como en esa época las recreativas estaban dominadas principalmente por juegos de carreras y de lucha, creía que su concepto único podía hacer que se destacara.\n\nDensha de GO! es uno de los juegos más exitosos de Taito, solo precedido por Space Invaders. La versión para PlayStation vendió más de un millón de copias. La crítica lo recibió bien por sus controles, su atención al detalle y su concepto único. Algunos consideraron que sus versiones para el hogar tenían contenido insuficiente y gráficos deficientes. Le siguió una larga serie de secuelas, spin-offs y reinterpretaciones, a partir de Densha de Go! 2 en 1999.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -114,7 +156,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 43850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control en PC menos natural."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Port antiguo."
+            }
+          ]
         },
         {
           "id": 12599,
@@ -122,7 +185,32 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 43850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base de conducción de trenes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para el mando de PS1."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "El original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ],
+          "codes": [
+            "SLPM-86263",
+            "SLPS-01150"
+          ]
         },
         {
           "id": 12925,
@@ -130,7 +218,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 143247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión portátil reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Simplificada."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Gráficos mínimos."
+            }
+          ]
         },
         {
           "id": 39278,
@@ -138,7 +247,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 139066,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Entrega moderna con más rutas y trenes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Parece un juego distinto."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Gráficos actuales."
+            }
+          ]
         },
         {
           "id": 39279,
@@ -146,7 +276,57 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 139066,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Entrega moderna con más rutas y trenes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles modernos, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Parece un juego distinto."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Gráficos actuales."
+            }
+          ]
+        },
+        {
+          "id": 64841,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 2003,
+          "igdbId": 203129,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Relanzamiento del mismo juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Igual que el original."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Igual al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ]
         }
       ],
       "images": {
@@ -174,6 +354,18 @@
           "field": "original_name",
           "value": "Densha de GO! Tokubetsu-hen: Fukkatsu Shouwa no Yamanotesen",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Densha de Go! Tokubetsu-hen: Fukkatsu! Shouwa no Yamanotesen (loosely translated to \"Go by Train! Special Edition: Revival! Yamanote Line of the Showa Period\") is an electric train driving simulation game developed by Ongakukan and published by Square Enix for the Nintendo DS in Japan on July 22, 2010.\n\nA handheld spin-off of the Densha de Go! series (and the only one not developed by Taito, instead developed by the studio behind Train Simulator), Tokubetsu-hen utilizes the platform's dual-screen display to simulate the driver controls using the touchscreen.\n\nCelebrating the 100th anniversary of the electrified Yamanote Line in Tokyo, this entry focuses solely on that route with trains both modern (E231-500, 205, and 103) and historical (101, 72, 31, 30, and DeHa 6285). With historical trains, the route appears as it was during the 1950s. The game also includes a quiz about the Yamanote Line as a mini-game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Densha de Go! Tokubetsu-hen: Fukkatsu! Shouwa no Yamanotesen (traducido libremente como «¡Viaja en tren! Edición especial: ¡Renacimiento! Línea Yamanote de la era Shōwa») es un juego de simulación de conducción de trenes eléctricos desarrollado por Ongakukan y publicado por Square Enix para Nintendo DS en Japón el 22 de julio de 2010.\n\nSpin-off portátil de la serie Densha de Go! (y el único que no fue desarrollado por Taito, sino por el estudio detrás de Train Simulator), Tokubetsu-hen aprovecha la pantalla dual de la plataforma para simular los controles de conducción mediante la pantalla táctil.\n\nPara celebrar el centenario de la electrificación de la Línea Yamanote en Tokio, esta entrega se centra únicamente en esa ruta, con trenes tanto modernos (E231-500, 205 y 103) como históricos (101, 72, 31, 30 y DeHa 6285). Con los trenes históricos, la ruta aparece tal como era en la década de 1950. El juego también incluye, como minijuego, un concurso sobre la Línea Yamanote.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -207,6 +399,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50907",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Densha de GO! Shinkansen: Sanyou Shinkansen-hen",
           "source": "igdb",
@@ -216,6 +414,18 @@
           "field": "original_name",
           "value": "Densha de GO! Shinkansen: Sanyou Shinkansen-hen",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Densha de Go! Shinkansen: Sanyoushinkansen-hen (loosely translated to \"Go by Train! Shinkansen: Sanyou Shinkansen Edition\") is an electric train driving simulation game developed and published by Taito for the PlayStation 2 in Japan on September 20, 2001. It was later ported to the PC by Unbalance on December 13, 2002.\n\nA spin-off of the Densha de Go! series, Shinkansen focuses on the titular high-speed rail line San'yō Shinkansen (through the entire route both ways, between Shin-Ōsaka and Hakata).\n\nThe game was later ported to the Wii as Densha de Go! Shinkansen EX: Sanyoushinkansen-hen (loosely translated to \"Go by Train! Shinkansen EX: Sanyou Shinkansen Edition\") on March 1, 2007. This version features a new \"Kids Mode\" utilizing the Wii Remote's motion control.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Densha de Go! Shinkansen: Sanyoushinkansen-hen (traducido libremente como «¡Viaja en tren! Shinkansen: Edición Shinkansen Sanyō») es un juego de simulación de conducción de trenes eléctricos desarrollado y publicado por Taito para PlayStation 2 en Japón el 20 de septiembre de 2001. Más tarde fue portado a PC por Unbalance el 13 de diciembre de 2002.\n\nDerivado de la serie Densha de Go!, Shinkansen se centra en la línea de alta velocidad que le da nombre, el Shinkansen Sanyō, en todo el recorrido y en ambos sentidos, entre Shin-Ōsaka y Hakata.\n\nEl juego fue portado después a Wii como Densha de Go! Shinkansen EX: Sanyoushinkansen-hen (traducido libremente como «¡Viaja en tren! Shinkansen EX: Edición Shinkansen Sanyō») el 1 de marzo de 2007. Esta versión incluye un nuevo «Modo Niños» que utiliza el control de movimiento del Wii Remote.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -232,7 +442,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 63708,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control en PC menos natural."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Port antiguo."
+            }
+          ]
         },
         {
           "id": 50907,
@@ -240,7 +471,33 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 63708,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para el mando de PS2."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "El original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en PS2."
+            }
+          ],
+          "codes": [
+            "SLPM-62050",
+            "SLPM-65039",
+            "SLPM-74403"
+          ]
         },
         {
           "id": 51150,
@@ -248,7 +505,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 146542,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Posible edición con cambios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control de Wii distinto."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos sencillos."
+            }
+          ]
         }
       ],
       "images": {
@@ -265,6 +543,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63181",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kisha de GO!",
           "source": "igdb",
@@ -274,6 +558,18 @@
           "field": "original_name",
           "value": "Kisha de GO!",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kisha de Go! is an offshoot of the Densha de Go! series. This version of the game allows players to drive a steam train, rather than an electric train like the other entries.\nThe coverage included portions of the Keihin-Tōhoku Line, Shin'etsu Main Line and Ban'etsu-Sai Line. The controls were made slightly more complex to reflect steam operation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Kisha de Go! es una derivación de la serie Densha de Go! En esta versión, los jugadores conducen un tren de vapor, en lugar de un tren eléctrico como en las demás entregas. El recorrido incluye tramos de la Línea Keihin-Tōhoku, la Línea Principal Shin'etsu y la Línea Banetsu-Sai. Los controles se hicieron un poco más complejos para reflejar la operación a vapor.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -290,7 +586,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 63754,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control en PC menos natural."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Port antiguo."
+            }
+          ]
         },
         {
           "id": 63181,
@@ -298,7 +615,31 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 63754,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para el mando de PS1."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "El original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ],
+          "codes": [
+            "SLPM-86449"
+          ]
         }
       ],
       "images": {
@@ -315,6 +656,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63948",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Densha de GO! Professional",
           "source": "igdb",
@@ -324,6 +671,18 @@
           "field": "original_name",
           "value": "Densha de GO! Professional",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A train simulation game by Taito featuring the lines from Densha de Go! 1 and 2, as well as some Kantou area portions of the Toukaidou Line. Some of the strictness of the previous games was reduced through a number of features, including the addition of a panel at left which allowed the user to see a map of the upcoming track segment, including showing speed limits, which greatly reduced the required amount of track memorization, and allowed the player more time to react. The overall reduction of strictness in the game reflected Taito's shift in emphasis from arcade to home-play versions as time went on.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un juego de simulación de trenes de Taito que incluye las líneas de Densha de Go! 1 y 2, así como algunos tramos de la zona de Kantō de la Línea Tōkaidō. Se redujo parte de la rigurosidad de los juegos anteriores mediante varias funciones, entre ellas un panel a la izquierda que permitía al usuario ver un mapa del tramo de vía próximo, incluidos los límites de velocidad. Esto redujo considerablemente la necesidad de memorizar el trazado y dio al jugador más tiempo para reaccionar. La reducción general de la rigurosidad del juego reflejó el cambio de énfasis de Taito, que con el tiempo pasó de las versiones de recreativa a las versiones para el hogar.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -340,7 +699,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 78575,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control en PC menos natural."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Port antiguo."
+            }
+          ]
         },
         {
           "id": 63948,
@@ -348,7 +728,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 78575,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para el mando de PS1."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "El original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ]
         }
       ],
       "images": {
@@ -365,6 +766,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63966",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Densha de Go! Nagoya Tetsudou-hen",
           "source": "igdb",
@@ -374,6 +781,18 @@
           "field": "original_name",
           "value": "Densha de Go! Nagoya Tetsudou-hen",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A release not seen in arcades, this Densha de Go! entry focuses on Meitetsu's railroad lines in Nagoya, including the series' only monorail.\n\nYou play as a train engineer which serve the Meitetsu Nagoya line in Japan. There are many kinds of trains that you can drive, from express trains to monorails. Some trains are locked until you finish a mission, for example you can only drive monorails until you've finished the commuter and express train missions. All of the game parts, except the menu and station names, are in Japanese.\n\nIn addition or the Meitetsu Nagoya Line, coverage includes Meitetsu Inuyama Line, Meitetsu Minomachi Line and Meitetsu Monkey Park Monorail Line. This was the first version to feature a monorail, and also featured a Meitetsu hybrid light rail route which ran both on regular train lines and as a sort of urban tram on special lanes in city streets. Part of the gameplay of this required the user to stop for regular traffic signals and avoid car traffic. This was the Densha de Go player's first opportunity to drive a vehicle much lighter (and thus shorter stopping distance) than standard trains.\n\nIn this version, the driver must sound the horn before beginning to accelerate out of a station. This is unique to this title. The gameplay, physics, and strictness of this version were all somewhat relaxed compared to previous versions.\n\nThe game was published by Taito for the Sony PlayStation in Japan on January 27, 2000. It was later ported to the PC by Unbalance on December 1, 2000. The PS1 version later received a re-release as part of D3Publisher's Simple 1500 series of budget games, as Simple 1500 Series Vol. 102: The Densha Untenshi - Densha de Go! Nagoya Tetsudou-hen, on August 29, 2002.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Una versión que no se lanzó en recreativas. Esta entrega de Densha de Go! se centra en las líneas ferroviarias de Meitetsu en Nagoya, incluido el único monorraíl de la serie.\n\nJuegas como maquinista que presta servicio en la línea Meitetsu Nagoya de Japón. Hay muchos tipos de trenes que puedes conducir, desde trenes expresos hasta monorraíles. Algunos trenes están bloqueados hasta que completes una misión; por ejemplo, solo puedes conducir monorraíles después de terminar las misiones de trenes de cercanías y expresos. Todas las partes del juego, excepto el menú y los nombres de las estaciones, están en japonés.\n\nAdemás de la Línea Meitetsu Nagoya, el juego incluye la Línea Meitetsu Inuyama, la Línea Meitetsu Minomachi y la Línea de Monorraíl Meitetsu Monkey Park. Esta fue la primera versión en incluir un monorraíl, y también presentó una ruta híbrida de tren ligero de Meitetsu que circulaba tanto por líneas de tren convencionales como por una especie de tranvía urbano en carriles especiales en las calles de la ciudad. Parte de la jugabilidad consistía en detenerse ante los semáforos normales y evitar el tráfico de automóviles. Esta fue la primera oportunidad para los jugadores de Densha de Go! de conducir un vehículo mucho más ligero (y, por tanto, con una distancia de frenado más corta) que los trenes estándar.\n\nEn esta versión, el conductor debe tocar la bocina antes de empezar a acelerar al salir de una estación. Esto es exclusivo de este título. La jugabilidad, la física y la rigurosidad de esta versión se redujeron algo en comparación con las versiones anteriores.\n\nEl juego fue publicado por Taito para Sony PlayStation en Japón el 27 de enero de 2000. Más tarde fue portado a PC por Unbalance el 1 de diciembre de 2000. La versión para PS1 recibió después una reedición como parte de la serie de juegos económicos Simple 1500 de D3Publisher, como Simple 1500 Series Vol. 102: The Densha Untenshi - Densha de Go! Nagoya Tetsudou-hen, el 29 de agosto de 2002.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -398,7 +817,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 72000,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-86424"
+          ]
         }
       ],
       "images": {
@@ -424,6 +846,18 @@
           "field": "original_name",
           "value": "Densha de GO! 3 Tsuukinhen",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Densha de Go! 3 Tsuukin-hen (loosely translated to \"Go by Train! 3 Commuting Edition\", also known as \"Let's Go by Train! 3\") is an electric train driving simulation game developed and released by Taito for arcades in Japan on March 2000.\n\nThe sequel to the 1998 game Densha de Go! 2 Kousoku-hen, Densha de Go! 3 uses updated arcade hardware for improved 3D graphics (such as a higher-resolution user interface and improved models for both the trains and environment) while revamping the scoring calculation, adding online leaderboards, adding multiple time-of-day options (including morning, noon, evening, and night), and including two additional game modes (\"Family Mode\" for beginner players and \"Tetsujin Mode\" for advanced players).\n\nIt features a new set of real-life train routes, including the Sasaguri Line, the Kagoshima Main Line, the San'yō Main Line, the San'in Main Line, the Chūō Main Line, and the Chūō-Sōbu Line.\n\nThe game later received an update on October 2000, known as Densha de Go! 3 Tsuukin-hen: Daiya-kaisei (loosely translated to \"Go by Train! 3 Commuting Edition: Diagram Revision\"). This version updates some minor things, including the timetable and scoring calculation. It is the last arcade entry in the series in 14 years, prior to Densha de Go!!\n\nThe original version was later ported to the PlayStation 2 on March 15, 2001, while the Daiya-kaisei version was later ported to the PC by Unbalance. The PS2 version also included a demo of Densha de Go! Shinkansen on a bonus disc, and later received a re-release (sans demo) as part of D3Publisher's Simple 2000 series of budget games, as Simple 2000 Series Vol. 22: The Tsuukin Densha Utenshi - Densha de Go! 3 Tsuukin-hen, on March 27, 2003.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Densha de Go! 3 Tsuukin-hen (traducido libremente como «¡Viaja en tren! 3 Edición de cercanías», también conocido como «¡Let's Go by Train! 3») es un juego de simulación de conducción de trenes eléctricos desarrollado y lanzado por Taito en las recreativas de Japón en marzo de 2000.\n\nSecuela de Densha de Go! 2 Kousoku-hen (1998), Densha de Go! 3 utiliza hardware arcade actualizado para mejorar los gráficos 3D (como una interfaz de mayor resolución y modelos mejorados tanto de los trenes como del entorno). Además, rediseña el cálculo de puntuación, añade clasificaciones en línea, incorpora varias opciones de hora del día (mañana, mediodía, tarde y noche) e incluye dos modos de juego adicionales: el «Modo Familia» para jugadores principiantes y el «Modo Tetsujin» para jugadores avanzados.\n\nIncluye un nuevo conjunto de rutas de trenes reales, entre ellas la Línea Sasaguri, la Línea Principal Kagoshima, la Línea Principal Sanyō, la Línea Principal San'in, la Línea Principal Chūō y la Línea Chūō-Sōbu.\n\nEl juego recibió después una actualización en octubre de 2000, conocida como Densha de Go! 3 Tsuukin-hen: Daiya-kaisei (traducido libremente como «¡Viaja en tren! 3 Edición de cercanías: Revisión de horarios»). Esta versión actualiza algunos aspectos menores, como el horario y el cálculo de puntuación. Es la última entrada de recreativa de la serie en 14 años, antes de Densha de Go!!\n\nLa versión original fue portada a PlayStation 2 el 15 de marzo de 2001, mientras que la versión Daiya-kaisei fue portada a PC por Unbalance. La versión para PS2 también incluía una demo de Densha de Go! Shinkansen en un disco de bonificación, y después recibió una reedición (sin la demo) como parte de la serie de juegos económicos Simple 2000 de D3Publisher, como Simple 2000 Series Vol. 22: The Tsuukin Densha Utenshi - Densha de Go! 3 Tsuukin-hen, el 27 de marzo de 2003.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -457,6 +891,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83476",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Densha de GO! Professional 2",
           "source": "igdb",
@@ -466,6 +906,18 @@
           "field": "original_name",
           "value": "Densha de GO! Professional 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Densha de Go! Professional-shiyou 2 (loosely translated to \"Go by Train! Professional Specification 2\") is an electric train driving simulation game developed and published by Taito for the PlayStation 2 in Japan on October 25, 2002. It was later ported to the PC by Unbalance on April 30, 2003.\n\nThe sequel to the 1999 home console entry in the Densha De Go! series, Densha de Go! Professional-shiyou, Professional-shiyou 2 features a graphical upgrade and a new set of real-life train routes: the Shōnan-Shinjuku Line, the Tsurumi Line, the Kosei Line, the Seto-Ōhashi Line, and the Nagasaki Main Line to Sasebo Line. One new feature added to the series is the ability to save and resume route progress, and to start progress from a designated station.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Densha de Go! Professional-shiyou 2 (traducido libremente como «¡Viaja en tren! Especificación profesional 2») es un juego de simulación de conducción de trenes eléctricos desarrollado y publicado por Taito para PlayStation 2 en Japón el 25 de octubre de 2002. Más tarde fue portado a PC por Unbalance el 30 de abril de 2003.\n\nSecuela de la entrega para consola doméstica de 1999 de la serie, Densha de Go! Professional-shiyou, Professional-shiyou 2 presenta una mejora gráfica y un nuevo conjunto de rutas de trenes reales: la Línea Shōnan-Shinjuku, la Línea Tsurumi, la Línea Kōsei, la Línea Seto-Ōhashi y la Línea Principal Nagasaki a la Línea Sasebo. Una función nueva en la serie es la posibilidad de guardar y reanudar el progreso de la ruta, y de empezar desde una estación designada.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -490,7 +942,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 63703,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-65243",
+            "SLPM-65661"
+          ]
         }
       ],
       "images": {
@@ -507,6 +963,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83910",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Densha de GO! Ryojou-hen",
           "source": "igdb",
@@ -516,6 +978,18 @@
           "field": "original_name",
           "value": "Densha de GO! Ryojou-hen",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Taito's 13th entry in its train simulation series, this one focused on electric trams and light rails.\n\nGanbare Unten-shi!! (loosely translated to \"Good Luck, Driver!!\") is an electric train driving simulation game developed and released by Taito for arcades in Japan on October 2000.\n\nA spin-off of the Densha de Go! series (and using the same engine as Densha de Go! 3 Tsuukin-hen), Ganbare Unten-shi!! focuses on light rail transit with two routes: the Enoshima Electric Railway and the Iyo Railway.\n\nWhile much of the game is the same as the main series, it modifies the braking and throttling controls for added precision and adds controls for operating the vehicle's doors. Due to street traffic, maintaining a timetable is not as strict as previous entries and the time-based penalty system is replaced with a \"lives\"-based one.\n\nThe game was later ported to both the PlayStation 2 (on July 25, 2002) and PC (by Unbalance on June 5, 2003) as Densha de Go! Ryojou-hen (loosely translated to \"Go by Train! Emotional Travel Edition\"). This version features features an updated graphics engine (based on Densha de Go! Shinkansen) and adds four additional routes: two from the Keifuku Electric Railroad and two from the Hakodate Transportation Bureau.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Decimotercera entrega de la serie de simulación de trenes de Taito, centrada en tranvías eléctricos y tren ligero.\n\nGanbare Unten-shi!! (traducido libremente como «¡Ánimo, conductor!!») es un juego de simulación de conducción de trenes eléctricos desarrollado y lanzado por Taito en las recreativas de Japón en octubre de 2000.\n\nDerivado de la serie Densha de Go! (y que usa el mismo motor que Densha de Go! 3 Tsuukin-hen), Ganbare Unten-shi!! se centra en el tren ligero con dos rutas: el Ferrocarril Eléctrico Enoshima y el Ferrocarril Iyo. Aunque gran parte del juego es igual a la serie principal, modifica los controles de frenado y aceleración para ofrecer mayor precisión, y añade controles para operar las puertas del vehículo. Debido al tráfico callejero, mantener el horario no es tan estricto como en entregas anteriores, y el sistema de penalizaciones basado en el tiempo se reemplaza por uno basado en «vidas».\n\nEl juego fue portado después a PlayStation 2 (el 25 de julio de 2002) y a PC (por Unbalance, el 5 de junio de 2003) como Densha de Go! Ryojou-hen (traducido libremente como «¡Viaja en tren! Edición de viaje emocional»). Esta versión presenta un motor gráfico actualizado (basado en Densha de Go! Shinkansen) y añade cuatro rutas adicionales: dos del Ferrocarril Eléctrico Keifuku y dos de la Oficina de Transporte de Hakodate.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -540,9 +1014,17 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 79442,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-60179",
+            "SLPM-65148",
+            "SLPM-65810"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2yzw.jpg"
+      }
     },
     {
       "id": 34081,
@@ -554,6 +1036,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84091",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Densha de Go! Final",
           "source": "igdb",
@@ -563,6 +1051,18 @@
           "field": "original_name",
           "value": "Densha de Go! Final",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Densha de Go! Final (loosely translated to \"Go by Train! Final\") is an electric train driving simulation game developed and published by Taito for the PlayStation 2 in Japan on May 27, 2004. It was later ported to the PC by Unbalance on December 17, 2004.\n\nPart of the Densha de Go! series, Final features a significantly upgraded graphics and audio, a revamped penalty system (using a point-based system from Densha de Go! Ryojou-hen and Densha de Go! Shinkansen), a combo-based scoring system, an improved Navigation System display, and unlockable route extensions.\n\nIn addition to standard play, the game includes an alternate play-style where players can instead (or alongside the driver player for two-player multiplayer) act as the train's conductor. Train Conductors must open and close the train doors at the correct time, choose the next correct station to stop at, and make in-car announcements.\n\nThe game includes four routes: the Yamanote Line, the Chūō Main Line, the Osaka Loop Line, and the Tōkaidō Main Line. Playable in both directions, it features the entirety of the Yamanote Line and Osaka Loop Lines, the Rapid section of the Chūō Main Line between Tokyo and Takao, and the section of the Tōkaidō Main Line between Kyoto and Kobe.\n\nThis version of the game was later ported to the PlayStation Portable in piecemeal, all part of the \"Densha de Go! Pocket\" line of releases:\n- Densha de Go! Pocket: Yamanotesen-hen (loosely translated to \"Go by Train! Pocket: Yamanote Line Edition\") was released on September 29, 2005, including only the Yamanote Line.\n\n- Densha de Go! Pocket: Chuuousen-hen (loosely translated to \"Go by Train! Pocket: Chūō Line Edition\") was released on January 19, 2006, including only the Chūō Main Line.\n\n- Densha de Go! Pocket: Osakakanjousen-hen (loosely translated to \"Go by Train! Pocket: Osaka Loop Line Edition\") was released on March 30, 2006, including only the Osaka Loop Line.\n\n- Densha de Go! Pocket: Toukaidousen-hen (loosely translated to \"Go by Train! Pocket: Tōkaidō Line Edition\") was released on July 27, 2006, including only the Tōkaidō Main Line.\n\nTo celebrate the series' 20th anniversary, the game was later released as a standalone plug-and-play unit on February 8, 2018 as Densha de Go! Plug & Play.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Densha de Go! Final (traducido libremente como «¡Viaja en tren! Final») es un juego de simulación de conducción de trenes eléctricos desarrollado y publicado por Taito para PlayStation 2 en Japón el 27 de mayo de 2004. Más tarde fue portado a PC por Unbalance el 17 de diciembre de 2004.\n\nComo parte de la serie Densha de Go!, Final presenta gráficos y audio notablemente mejorados, un sistema de penalizaciones renovado (basado en el sistema por puntos de Densha de Go! Ryojou-hen y Densha de Go! Shinkansen), un sistema de puntuación basado en combos, una pantalla de navegación mejorada y extensiones de ruta desbloqueables.\n\nAdemás del modo de juego estándar, incluye un estilo de juego alternativo en el que los jugadores pueden, en lugar de conducir (o junto con el jugador conductor, en multijugador para dos), actuar como revisor del tren. Los revisores deben abrir y cerrar las puertas del tren en el momento correcto, elegir la siguiente estación en la que parar y hacer los anuncios dentro del vagón.\n\nEl juego incluye cuatro rutas: la Línea Yamanote, la Línea Principal Chūō, la Línea Circular de Osaka y la Línea Principal Tōkaidō. Jugables en ambos sentidos, incluye la totalidad de la Línea Yamanote y de la Línea Circular de Osaka, el tramo Rápido de la Línea Principal Chūō entre Tokio y Takao, y el tramo de la Línea Principal Tōkaidō entre Kioto y Kobe.\n\nEsta versión fue portada después, por partes, a PlayStation Portable, como parte de la línea de lanzamientos «Densha de Go! Pocket»:\n- Densha de Go! Pocket: Yamanotesen-hen (traducido libremente como «¡Viaja en tren! Pocket: Edición Línea Yamanote») se lanzó el 29 de septiembre de 2005 e incluía solo la Línea Yamanote.\n- Densha de Go! Pocket: Chuuousen-hen (traducido libremente como «¡Viaja en tren! Pocket: Edición Línea Chūō») se lanzó el 19 de enero de 2006 e incluía solo la Línea Principal Chūō.\n- Densha de Go! Pocket: Osakakanjousen-hen (traducido libremente como «¡Viaja en tren! Pocket: Edición Línea Circular de Osaka») se lanzó el 30 de marzo de 2006 e incluía solo la Línea Circular de Osaka.\n- Densha de Go! Pocket: Toukaidousen-hen (traducido libremente como «¡Viaja en tren! Pocket: Edición Línea Tōkaidō») se lanzó el 27 de julio de 2006 e incluía solo la Línea Principal Tōkaidō.\n\nPara celebrar el vigésimo aniversario de la serie, el juego se lanzó después como unidad independiente plug and play el 8 de febrero de 2018, con el nombre de Densha de Go! Plug & Play.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -579,7 +1079,28 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 78576,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control en PC menos natural."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución."
+            }
+          ]
         },
         {
           "id": 84091,
@@ -587,7 +1108,34 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 78576,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para el mando de PS2."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "El original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en PS2."
+            }
+          ],
+          "codes": [
+            "SLPM-60237",
+            "SLPM-65590",
+            "SLPM-66772",
+            "SLPM-74214"
+          ]
         },
         {
           "id": 84381,
@@ -595,7 +1143,28 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 38455,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición portátil con menos rutas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control de PSP limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 84387,
@@ -603,7 +1172,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 146558,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Edición portátil distinta."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control de PSP limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Contenido distinto."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 84390,
@@ -611,7 +1201,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 146559,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Edición portátil distinta."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control de PSP limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Contenido distinto."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 84392,
@@ -619,10 +1230,198 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 146560,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Edición portátil distinta."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control de PSP limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Contenido distinto."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/12f389780bc6388d45f145e38c869052.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e2d11fd12ee06a65d0b03b35a4928931.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/31b7e865b13310bbbc0dbc93eaeef2cb.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 406,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6622,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 1190,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 25624,
+          "reason": "1999"
+        },
+        {
+          "position": 4,
+          "gameId": 25193,
+          "reason": "2000"
+        },
+        {
+          "position": 5,
+          "gameId": 25635,
+          "reason": "2000"
+        },
+        {
+          "position": 6,
+          "gameId": 33561,
+          "reason": "2000"
+        },
+        {
+          "position": 7,
+          "gameId": 33940,
+          "reason": "2000"
+        },
+        {
+          "position": 8,
+          "gameId": 20767,
+          "reason": "2001"
+        },
+        {
+          "position": 9,
+          "gameId": 33651,
+          "reason": "2002"
+        },
+        {
+          "position": 10,
+          "gameId": 34081,
+          "reason": "2004"
+        },
+        {
+          "position": 11,
+          "gameId": 17199,
+          "reason": "2010"
+        }
+      ]
+    },
+    {
+      "id": 3853,
+      "kind": "story",
+      "rationale": "Son simuladores de conducción de trenes sin historia continua. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6622,
+          "reason": "Primer juego."
+        },
+        {
+          "position": 2,
+          "gameId": 1190,
+          "reason": "Segunda entrega."
+        },
+        {
+          "position": 3,
+          "gameId": 25624,
+          "reason": "Versión Professional."
+        },
+        {
+          "position": 4,
+          "gameId": 25193,
+          "reason": "Variante con locomotoras de vapor."
+        },
+        {
+          "position": 5,
+          "gameId": 25635,
+          "reason": "Variante de Nagoya."
+        },
+        {
+          "position": 6,
+          "gameId": 33561,
+          "reason": "Entrega en PS2."
+        },
+        {
+          "position": 7,
+          "gameId": 33940,
+          "reason": "Variante Ryojou-hen."
+        },
+        {
+          "position": 8,
+          "gameId": 20767,
+          "reason": "Variante Shinkansen."
+        },
+        {
+          "position": 9,
+          "gameId": 33651,
+          "reason": "Professional 2."
+        },
+        {
+          "position": 10,
+          "gameId": 34081,
+          "reason": "Cierre de la saga clásica."
+        },
+        {
+          "position": 11,
+          "gameId": 17199,
+          "reason": "Especial en DS."
+        }
+      ]
+    },
+    {
+      "id": 3854,
+      "kind": "community",
+      "rationale": "Sin fuentes verificadas: selección basada en conocimiento general. Se recomienda un puñado de entregas representativas; se omiten variantes regionales.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6622,
+          "recommendedVersionId": 39279,
+          "reason": "La versión de Switch es la forma más cómoda de probar el original."
+        },
+        {
+          "position": 2,
+          "gameId": 25624,
+          "recommendedVersionId": 63948,
+          "reason": "Entrega Professional con más rutas y realismo, en PS1."
+        },
+        {
+          "position": 3,
+          "gameId": 33651,
+          "recommendedVersionId": 83477,
+          "reason": "Professional 2 en PS2, de las más completas."
+        },
+        {
+          "position": 4,
+          "gameId": 34081,
+          "recommendedVersionId": 84091,
+          "reason": "Final: cierre de la saga con la versión de PS2."
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

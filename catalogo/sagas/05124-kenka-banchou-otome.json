@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An otome visual novel adaptation of the Kenka Bancho series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 28497,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4v23.jpg"
+      }
     },
     {
       "id": 41319,
@@ -62,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98438",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kenka Banchou Otome: Kanzen Muketsu no My Honey",
           "source": "igdb",
@@ -70,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Kenka Banchou Otome: Kanzen Muketsu no My Honey",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kenka Banchou Otome: Kanzen Muketsu no My Honey is a fandisc to the original Kenka Banchou Otome game.",
           "source": "igdb",
           "manual": false
         },
@@ -97,7 +118,10 @@
           "igdbId": 54743,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4v2h.jpg"
+      }
     },
     {
       "id": 41359,
@@ -121,6 +145,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel of the original game of Kenka Bancho Otome. It adds a new Character at Shishiku Academy.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2019",
           "source": "igdb",
@@ -136,8 +166,36 @@
           "igdbId": 109571,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4v26.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2010,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41081,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 41319,
+          "reason": "2017"
+        },
+        {
+          "position": 3,
+          "gameId": 41359,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

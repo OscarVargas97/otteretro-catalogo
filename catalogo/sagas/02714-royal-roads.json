@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "29913",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Royal Roads",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Royal Roads",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The princess embarks on an exciting adventure to hunt down the evil witch and turn back into her true self! Get ready for vibrant locations, exciting levels, fun characters, simple gameplay for any age, great music and a storyline you'll never forget! Adventure awaits on the Royal Roads!",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 111971,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100AFE00DDAC000"
+          ]
         }
       ],
       "images": {
@@ -90,6 +105,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "105040",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Royal Roads 2: The Magic Box",
           "source": "igdb",
@@ -98,6 +119,12 @@
         {
           "field": "original_name",
           "value": "Royal Roads 2: The Magic Box",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "New adventures await you in the beautiful world of wizardry and magic!",
           "source": "igdb",
           "manual": false
         },
@@ -115,7 +142,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 161401,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cursor con mando, menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 105040,
@@ -124,7 +172,28 @@
           "year": 2020,
           "igdbId": 161401,
           "steamAppId": 1474940,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución."
+            }
+          ]
         },
         {
           "id": 105041,
@@ -132,9 +201,33 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 161401,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cursor con mando, menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3ypo.jpg"
+      }
     },
     {
       "id": 44761,
@@ -146,6 +239,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "106161",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Royal Roads 3 Portal",
           "source": "igdb",
@@ -154,6 +253,12 @@
         {
           "field": "original_name",
           "value": "Royal Roads 3 Portal",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A fascinating journey through the fabulous Kingdoms. Join forces of people and wizards, save the kingdoms!",
           "source": "igdb",
           "manual": false
         },
@@ -190,8 +295,36 @@
           "igdbId": 212653,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5o4c.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1735,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12272,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 44289,
+          "reason": "2020"
+        },
+        {
+          "position": 3,
+          "gameId": 44761,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

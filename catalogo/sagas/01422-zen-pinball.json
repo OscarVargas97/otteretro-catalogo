@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9179",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zen Pinball",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Zen Pinball",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Zen Pinball is a downloadable pinball game simulator that features realistic physics and vibrant, intricate tables.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 20730,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mesas y contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Buen control con mando y físicas más sólidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "HD fluido."
+            }
+          ]
         },
         {
           "id": 9876,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 21146,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Menos mesas y contenido reducido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, pantallas pequeñas."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación recortada de la original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos y físicas más simples."
+            }
+          ]
         }
       ],
       "images": {
@@ -73,6 +127,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14217",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zen Pinball 2",
           "source": "igdb",
@@ -81,6 +141,12 @@
         {
           "field": "original_name",
           "value": "Zen Pinball 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Zen Pinball 2 launched on PlayStation 4 as a free platform download with a total of 20 tables available as paid DLC. Users can purchase tables inside the Zen Pinball 2 platform, including the following tables and packs at launch:\n\n• Star Wars Pinball\n• Star Wars Pinball: Balance of the Force\n• Marvel Pinball\n• Marvel Pinball:Avengers Chronicles\n• Plants vs. Zombies Pinball\n• Epic Quest\n• Paranormal\n• Earth Defense\n\nZen Studios has HUGE plans for pinball in 2014, including more Star Wars Pinball and\nMarvel Pinball tables, as well as tables based on more iconic and exciting brands.",
           "source": "igdb",
           "manual": false
         },
@@ -132,5 +198,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2339,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4463,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 7699,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111267",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Marathon",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Marathon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A PvP-focused extraction shooter set on the mysterious planet of Tau Ceti IV, Marathon will see players inhabit the bodies of Runners, cybernetic mercenaries who have been designed to survive the planet’s harsh environments and explore the lost colony that once inhabited Tau Ceti’s surface. Players will engage solo or in crews of three, searching for mysterious alien artifacts, as well as for valuable loot and new weapons and gear that they can add to their collection.",
           "source": "igdb",
           "manual": false
         },
@@ -67,8 +79,105 @@
           "igdbId": 250630,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e99894b491210420d1961702c6e2dd85.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c7a274845656c1f01ed6f52598d6e81a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1a4f5370dba6cda7e9d9bc45c0067f65.png"
+      }
+    },
+    {
+      "id": 48322,
+      "nameEs": "Marathon 2: Durandal",
+      "originalName": "Marathon 2: Durandal",
+      "year": 1995,
+      "igdbId": 8710,
+      "popularity": 15,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "114913",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Marathon 2: Durandal",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Marathon 2: Durandal",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Marathon 2: Durandal is the sequel to the first Marathon. Although the engine is similar to Doom in most respects (2.5D maps, bitmap sprites instead of polygons, etc.), Marathon 2 distinguishes itself with such features such as a rudimentary inventory system, ambient sound, multiple fire modes for each weapon, allies who aid the player, enemies belonging to different factions which will attack each other, a more developed plot (gradually narrated to the player at various computer terminals scattered throughout the levels).\n\nThe Xbox 360 version of the game presents a revised HUD and provides support for both 4-player split-screen play on the same console and 8-player Xbox Live gameplay. This version also supports 16:9 screen resolutions, high-definition output at 60 frames per second (compared to the original 30) as well as upgraded models and graphics",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1995",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 114710,
+          "platform": "pc",
+          "kind": "original",
+          "year": 1996,
+          "igdbId": 8710,
+          "criteria": []
+        },
+        {
+          "id": 114711,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2007,
+          "igdbId": 8710,
+          "criteria": []
+        },
+        {
+          "id": 114913,
+          "platform": "x360",
+          "kind": "remaster",
+          "year": 2007,
+          "igdbId": 299291,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/32b5bda1b95bc6bdc626a091b7515ae0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b8b73364ac6cd496668497fd5d6c3c81.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1041a1c29970d80d56b6dc22a9f4ab31.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3485,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48322,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 46937,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

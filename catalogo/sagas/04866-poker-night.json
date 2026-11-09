@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "91568",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Poker Night at the Inventory",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Poker Night at the Inventory",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Almost seven years after the Inventory closed its doors, this underground social club has reopened for business. Play No Limit Texas Hold’em with four video game icons in a high-stakes battle of cards, bets, and trash talk.",
           "source": "igdb",
           "manual": false
         },
@@ -65,9 +77,17 @@
           "kind": "remaster",
           "year": 2026,
           "igdbId": 388390,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01005EA024EBC000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f9db6a7cd60dc1681a33c2061a5b15a6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/33e75ff09dd601bbe69f351039152189.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f4f6dce2f3a0f9dada0c2b5b66452017.png"
+      }
     },
     {
       "id": 39677,
@@ -79,6 +99,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94677",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Poker Night 2",
           "source": "igdb",
@@ -87,6 +113,12 @@
         {
           "field": "original_name",
           "value": "Poker Night 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Poker Night 2 is a poker video game developed by Telltale Games. It is the sequel to Poker Night at the Inventory and, like its predecessor, features crossover characters from different franchises.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +155,33 @@
           "igdbId": 2047,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5b2afc07f58d13c0203bc1df693d7017.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/eecca5b6365d9607ee5a9d336962c534.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/8e98d81f8217304975ccb23337bb5761.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3298,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39677,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 38102,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

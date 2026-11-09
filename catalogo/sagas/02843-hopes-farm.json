@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "34820",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hope's Farm",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Hope's Farm",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Match your way through an incredible farming adventure. Grow crops, plant trees, raise adorable animals and customize a wonderful farm.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2019,
           "igdbId": 127000,
           "steamAppId": 1199900,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado cómodos para gestionar la granja."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y rendimiento escalables."
+            }
+          ]
         },
         {
           "id": 34821,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 127000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Con mando es más incómodo, pero es portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento más limitados."
+            }
+          ],
+          "codes": [
+            "01005C0015594000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "79545",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hope's Farm 2",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Hope's Farm 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Build your dream farm in this unique blend of farming and puzzle adventure! Grow crops, raise adorable animals, and solve delightful puzzles to unlock new items and expand your farmland.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +177,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 328116,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01004C4022450000"
+          ]
         }
       ],
       "images": {
@@ -116,5 +188,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2771,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13749,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 31842,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

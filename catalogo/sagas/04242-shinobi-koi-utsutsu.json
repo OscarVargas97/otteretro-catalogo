@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "70091",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shinobi, Koi Utsutsu",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Shinobi, Koi Utsutsu",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The heroine, Katagiri Kaede, goes to a ninja school! She lost her parents very young and her grandmother at 16. She is trying to become a ninja. She attends a local ninjutsu dojo, and one day meets the head of the Sanada Secondary Training Campus (founded by Sanada Yukimura after beating Tokugawa Ieyasu), which trains ninja. He invites her to take a ninja exam, and she agrees, transferring to the school to do a short-term study before taking the test. On her first day, she accidentally uses an advanced technique that makes her male classmates go meromero (lose their heads) over her when her heart thumps!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 61665,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de PSP, guardado básico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja de PSP."
+            }
+          ]
         },
         {
           "id": 70091,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 253739,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar al original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómoda, portátil y fácil de conseguir."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y carga rápida."
+            }
+          ]
         },
         {
           "id": 86981,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 224194,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar al original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor pantalla y controles en Vita."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Se ve mejor que en PSP."
+            }
+          ]
         }
       ],
       "images": {
@@ -93,6 +168,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Sequel + fandisc to Shinobi, Koi Utsutsu.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -108,8 +189,31 @@
           "igdbId": 83669,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5qdt.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3156,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 27730,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 41324,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

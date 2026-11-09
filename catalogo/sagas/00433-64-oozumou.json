@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "64 Oozumou adresses the everyday life of japanese sumo wrestlers, simulating not only fights but also focusing on training, diet and social interactions.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3433,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NOSJ"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "64 Oozumou 2 is a sumo wrestling game for the Nintendo 64, which was only released in Japan in 1999. It is the sequel to the game 64 Oozumou. Like its predecessor, the gameplay simulates various aspects of a sumo wrestlers life and training cycle.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -90,7 +105,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3434,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NO2J"
+          ]
         }
       ],
       "images": {
@@ -98,5 +116,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2135,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1069,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 1205,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

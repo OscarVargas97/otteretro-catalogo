@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Journey through the zombie apocalypse in a race to save your family. Arm yourself with an arsenal of powerful weapons and do whatever it takes to survive. Maim, mow down, and massacre the Dead - anything to keep moving! In a world where no one is safe, how far will you go to make it out alive?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 74828,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01000F700DECE000"
+          ]
         }
       ],
       "images": {
@@ -67,6 +76,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111217",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Into the Dead: Our Darkest Days",
           "source": "igdb",
@@ -75,6 +90,12 @@
         {
           "field": "original_name",
           "value": "Into the Dead: Our Darkest Days",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Texas, 1980. Walton City has fallen to a zombie outbreak. Lead a band of desperate survivors from refuge to refuge by scavenging, crafting, and fighting in a relentless struggle for survival. Plan wisely, stick together, and — above all — keep moving if you want to make it out alive.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +113,28 @@
           "kind": "original",
           "year": 2027,
           "igdbId": 230366,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Aún sin lanzar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin datos todavía."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port previsto."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Sin datos todavía."
+            }
+          ]
         },
         {
           "id": 111216,
@@ -100,7 +142,28 @@
           "kind": "original",
           "year": 2027,
           "igdbId": 230366,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Aún sin lanzar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin datos todavía."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port previsto."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Se espera menor rendimiento."
+            }
+          ]
         },
         {
           "id": 111217,
@@ -109,7 +172,28 @@
           "year": 2025,
           "igdbId": 230366,
           "steamAppId": 2239710,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Disponible ya."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Puede tener errores propios del acceso anticipado."
+            }
+          ]
         },
         {
           "id": 111218,
@@ -117,10 +201,56 @@
           "kind": "original",
           "year": 2027,
           "igdbId": 230366,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Aún sin lanzar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin datos todavía."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port previsto."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Sin datos todavía."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6fbe146402c883f00a5dcefab790671b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/94f4df968cf1302015c5769891fc1a16.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2977d5573e6c35344a5df59190afa28d.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2655,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10353,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 46921,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

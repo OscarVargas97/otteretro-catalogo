@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "33683",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Biped",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Biped",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Biped is a coop action game with physics. Take Aku and Sila on a fun and bonding adventure, overcoming original challenges and saving Earth from going dark.\n\n- 30 exotic stages to explore, many secrets to uncover\n- supports both local 2 player coop and solo play\n- collect treasures and customize your bipeds",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 121247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con cooperativo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control correcto con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y carga de PS4."
+            }
+          ]
         },
         {
           "id": 33682,
@@ -57,7 +90,28 @@
           "year": 2020,
           "igdbId": 121247,
           "steamAppId": 1071870,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con cooperativo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando recomendado; cooperativo local menos práctico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 33683,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 121247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con cooperativo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control correcto con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor carga y fluidez en consola."
+            }
+          ]
         },
         {
           "id": 33684,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 121247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con cooperativo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control correcto con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento de consola anterior."
+            }
+          ]
         },
         {
           "id": 33685,
@@ -81,7 +177,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 121247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con cooperativo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cooperativo fácil con Joy-Con."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución más baja."
+            }
+          ],
+          "codes": [
+            "010053B0117F8000"
+          ]
         }
       ],
       "images": {
@@ -100,6 +220,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "74971",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Biped 2",
           "source": "igdb",
@@ -108,6 +234,12 @@
         {
           "field": "original_name",
           "value": "Biped 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Adorable robots are back to save the day! Explore an unknown planet in this puzzle action-adventure game and experiment with our unique, innovative mechanics solo or in co-op with up to 4 players!",
           "source": "igdb",
           "manual": false
         },
@@ -166,7 +298,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 298613,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01004240237F6000"
+          ]
         }
       ],
       "images": {
@@ -174,5 +309,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2763,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13403,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 30033,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

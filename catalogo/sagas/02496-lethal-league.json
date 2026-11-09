@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24244",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lethal League Blaze",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Lethal League Blaze",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Banging beats and mad style, Lethal League Blaze is the most intense ball game you can play online with up to 4 players.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 59858,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01003AB00983C000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98950",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lethal League",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Lethal League",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lethal League is a competitive projectile fighting game where you have to hit an anti-gravity ball into the face of your opponent to win. The ball speeds up with every strike, up to explosively extreme velocities. Play intense local matches with friends and foes, challenge yourself in the singleplayer mode or battle it out online.",
           "source": "igdb",
           "manual": false
         },
@@ -117,7 +144,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 8262,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando, sin opciones extra de PC."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable a 60 fps, resolución fija."
+            }
+          ]
         },
         {
           "id": 98950,
@@ -126,7 +174,28 @@
           "year": 2014,
           "igdbId": 8262,
           "steamAppId": 261180,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo con todos los modos y personajes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando con respuesta precisa, ideal para un juego de reflejos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fps altos y estables en PC."
+            }
+          ]
         },
         {
           "id": 98951,
@@ -134,10 +203,56 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 8262,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando, sin opciones extra de PC."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable a 60 fps, resolución fija."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6c8a12209e4818416c7a0fac9fe555c4.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e22312179bf43e61576081a2f250f845.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e6cbc650cd5798a05dfd0f51d14cde5c.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2659,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41590,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 10531,
+          "reason": "2018"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

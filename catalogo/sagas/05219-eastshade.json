@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100026",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Eastshade",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Eastshade",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Eastshade is a first-person, open world exploration game.\n\nYou are a traveling painter, exploring the island of Eastshade. Capture the world on canvas using your artist’s easel. Talk to the inhabitants to learn about their lives. Make friends and help those in need. Discover mysteries and uncover secrets about the land. Surmount natural impasses to reach forgotten places. Experience how your actions impact the world around you.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 17480,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/bd9c29a7219e6d849af77f68e697debe.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/751f915c24612ce66dba400a86a0909b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ab2b41c63853f0a651ba9fbf502b0cd8.png"
+      }
     },
     {
       "id": 42046,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100256",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Leaving Lyndow",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Leaving Lyndow",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Leaving Lyndow is a short, first-person exploration adventure game, set in the Eastshade universe. It's Clara's last day on the island where she grew up. With high honors, she's graduated and fulfilled her childhood dream of joining the Guild of Maritime Exploration. She needs to complete preparations, visit her favorite places, and say her goodbyes before leaving on a journey she may not return from. *dangerous journey not included*",
           "source": "igdb",
           "manual": false
         },
@@ -115,8 +144,33 @@
           "steamAppId": 585840,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/739befafbab95d66b36ab14e9f04f86e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/69dd2eff9b6a421d5ce262b093bdab23.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1bcef5d8bd566084523bf65b7e1a245d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3400,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42046,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 41961,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

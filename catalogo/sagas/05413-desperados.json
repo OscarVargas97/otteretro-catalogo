@@ -51,7 +51,12 @@
           "steamAppId": 260730,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8072aeddcd3a697c34951f811cf137d9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d0df036bf29fd4db6e3fadab6b314715.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c73758de686279f745639eb7f81f6c51.png"
+      }
     },
     {
       "id": 43776,
@@ -63,6 +68,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103499",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Desperados III",
           "source": "igdb",
@@ -71,6 +82,12 @@
         {
           "field": "original_name",
           "value": "Desperados III",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Wild West. A place where the law is made by those with a gun in their hands, and is enforced by the henchmen at their command. A place where death is no stranger and the undertakers are working overtime… especially when people start playing Desperados III. This real-time tactics game, developed by German game studio Mimimi Games (Shadow Tactics: Blades Of The Shogun), lets players command a band of Desperados led by fan-favourite gunslinger John Cooper.",
           "source": "igdb",
           "manual": false
         },
@@ -107,8 +124,33 @@
           "igdbId": 107218,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0f816b127200f9af246169ed640caaa9.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/3d22c195f5defa65a63dfff0d83eff27.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/592d39205bdaa0ea4ae83e7397ec9416.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3444,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43701,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 43776,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

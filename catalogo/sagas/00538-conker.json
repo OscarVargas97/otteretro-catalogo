@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2794",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Conker's Bad Fur Day",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Conker's Bad Fur Day",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Humorous action-platformer that does away with the tedious item collection found in most games in the genre. Instead, BFD employs a combination of standard jump, run and explore mechanics and context-sensitive gags and actions. For instance, in the beginning of the game, by pressing the B button on the first pad he encounters, Conker drinks some Alka-Seltzer to wipe out his hangover, at which point players can proceed forward. Later on these pads are used to activate a slingshot and throwing knives; to turn Conker into an anvil and drop downward; to shoot automatic, double-handed guns; to activate a The Matrix-inspired slow-motion effect and flip through the air shooting enemies; and much, much more.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,32 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 1286,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Campaña original sin multijugador mejorado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control y cámara anticuados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cuadros bajos en N64."
+            }
+          ],
+          "codes": [
+            "NFUE",
+            "NFUP"
+          ]
         },
         {
           "id": 2794,
@@ -56,7 +93,28 @@
           "kind": "remake",
           "year": 2005,
           "igdbId": 1425,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña rehecha y multijugador en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles y cámara mejorados."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Remake con cambios y censura."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos y fluidez mucho mejores."
+            }
+          ]
         },
         {
           "id": 2795,
@@ -64,14 +122,91 @@
           "kind": "remake",
           "year": 2026,
           "igdbId": 1425,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "No pude confirmar esta versión de 2026."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin datos verificados."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Sin datos verificados."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Sin datos verificados."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/e7ba692151c4e6c1c41c4770cdd15e8b.png",
         "hero": "https://cdn2.steamgriddb.com/hero/1a04f965818a8533f5613003c7db243d.png",
         "logo": "https://cdn2.steamgriddb.com/logo/ce840aa9583592e71f3db26ee6e41703.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 613,
+          "platform": "n64",
+          "project": "conker64-recompiled",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Conker64Recomp/conker64-recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 614,
+          "platform": "n64",
+          "project": "ConkerBFDReloaded",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/DahSidiAbdallah/ConkerBFDReloaded",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 615,
+          "platform": "n64",
+          "project": "CBFD-Recompiled",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sciaschi/CBFD-Recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1335,
+          "platform": "n64",
+          "project": "conker",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": true,
+          "link": "https://github.com/mkst/conker",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 6011,
@@ -91,6 +226,12 @@
         {
           "field": "original_name",
           "value": "Conker's Pocket Tales",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's Conker's birthday and someone crashed his party! The Evil Acorn has stolen all of Conker's presents and kidnapped his best chipmunk friend, Berri. Now you must take on the role of the bushy-tailed hero, pursuing your nemesis throughout 6 visually-stunning worlds to rescue Berri and save your birthday from complete disaster. Strain your brain to solve challenging puzzles, battle the Evil Acorn's horde of minions with your trusty slingshot, and even flex your muscles in sporting events as you track your foe to the final showdown!",
           "source": "igdb",
           "manual": false
         },
@@ -118,5 +259,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2164,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6011,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 1383,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

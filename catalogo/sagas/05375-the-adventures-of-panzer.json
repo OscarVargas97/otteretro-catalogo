@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Adventures of Panzer for the NES.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2021",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 181415,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9ux5.jpg"
+      }
     },
     {
       "id": 43636,
@@ -62,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103246",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Adventures of Panzer 2",
           "source": "igdb",
@@ -70,6 +85,12 @@
         {
           "field": "original_name",
           "value": "The Adventures of Panzer 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Set approximately 1 year after the events of the first game, Panzer returns to his role as Raid Leader of the Zergadins. The old team has been \"recruited\", an all-new state-of-the-art headquarters built, and a world of adventure awaits!",
           "source": "igdb",
           "manual": false
         },
@@ -98,8 +119,31 @@
           "igdbId": 258379,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co95cr.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3434,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43314,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 43636,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

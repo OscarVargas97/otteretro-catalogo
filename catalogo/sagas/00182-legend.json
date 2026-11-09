@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "438",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Legend",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Legend",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Legend is a Beat'em up game that resembles games like Final Fight, or Streets of Rage. The game features a medieval setting.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 15247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido original completo, sin extras añadidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de época, sin guardado rápido ni ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fluidez propias de SNES, sin mejoras."
+            }
+          ]
         },
         {
           "id": 439,
@@ -57,7 +90,28 @@
           "year": 2015,
           "igdbId": 15247,
           "steamAppId": 412380,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que el original, sin extras confirmados."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "En PC suele permitir guardado rápido y mapeo de controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene el juego original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución y sin cargas; depende de la emulación usada."
+            }
+          ]
         },
         {
           "id": 918,
@@ -65,7 +119,31 @@
           "kind": "remake",
           "year": 1998,
           "igdbId": 81187,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Por ser remake de 1998, probablemente añade contenido o rehace partes; sin verificar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Probable guardado en memory card y controles más cómodos; sin verificar."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Al ser remake, se aleja del diseño original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos y sonido de PS1, probablemente superiores al SNES, con cargas."
+            }
+          ],
+          "codes": [
+            "SLES-00730"
+          ]
         }
       ],
       "images": {

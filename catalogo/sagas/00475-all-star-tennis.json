@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2186",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "All Star Tennis '99",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "All Star Tennis '99",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Play as 8 world class ATP / WTA tour players (including Mark Philippoussis, Richard Krajicek, Conchita Martinez & Jana Novotna) as well as 4 fictional players through a range of tournaments on grass, clay, hard court and rebound ace surfaces.\n\nLob, volley, smash and serve past computer controlled players in singles or doubles, 4 player multiplayer doubles, and 8 player multiplayer singles and doubles tournaments.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3436,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NTNE",
+            "NTNP"
+          ]
         },
         {
           "id": 2187,
@@ -56,7 +72,11 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3436,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-01433",
+            "SLPS-01962"
+          ]
         }
       ],
       "images": {
@@ -75,6 +95,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13372",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "All Star Tennis 2000",
           "source": "igdb",
@@ -83,6 +109,12 @@
         {
           "field": "original_name",
           "value": "All Star Tennis 2000",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is a cartoon style tennis challenge that requires all your skill! Pick a character and journey through the game's tournament mode, or simply try your hand in free mode. Choose from different court surfaces and different match setup options. Offering games for one to four players, All Star Tennis is a great way to enjoy the action on centre court.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +132,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 49880,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02764",
+            "SLES-02765"
+          ]
         },
         {
           "id": 13372,
@@ -117,5 +153,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2148,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1160,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 6979,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

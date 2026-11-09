@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "16002",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Clock Tower",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Clock Tower",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Clock Tower is a survival horror point-and-click adventure game developed and published by Human Entertainment for the Super Famicom in 1995. It is the first installment of the long-running Clock Tower series.\n\nThe story follows Jennifer Simpson as she learns the secrets of the Barrows Mansion and attempts to escape the game's antagonist, Scissorman.",
           "source": "igdb",
           "manual": false
         },
@@ -180,6 +192,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61345",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Clock Tower II: The Struggle Within",
           "source": "igdb",
@@ -188,6 +206,12 @@
         {
           "field": "original_name",
           "value": "Clock Tower II: The Struggle Within",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Clock Tower II: The Struggle Within, known as Clock Tower: Ghost Head in Japan, is a PlayStation point-and-click survival horror game and the third installment in the Clock Tower series. It was developed and published by Human Entertainment on March 12, 1998 in Japan and later published by Agetec on October 31, 1999 in North America. It was released as a PlayStation Classic on the Japanese PlayStation Network for PlayStation 3 on May 9, 2012.\nThe game is a spin-off story with little to no connection to the story of the Barrows/Burroughs family or Scissorman, nor was Hifumi Kono involved with it.\nIt does not take place in Europe as many of the others do; it takes place in Osaka, Japan. In the North American version, the setting was changed to Salinas, California, and the characters were given Westernized names. However, untranslated Japanese can be seen in the hospital entrance and even in the intro, there are Japanese-styled buildings, including a Shinto shrine. The game also contains various Japanese-styled rooms and samurai armor.",
           "source": "igdb",
           "manual": false
         },
@@ -205,7 +229,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 19288,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas más rápidas, imagen ajustable."
+            }
+          ]
         },
         {
           "id": 61346,
@@ -213,7 +258,31 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 19288,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control tipo tanque, guardado en tarjeta."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, cargas lentas."
+            }
+          ],
+          "codes": [
+            "SLUS-00695"
+          ]
         },
         {
           "id": 61347,
@@ -221,7 +290,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 19288,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, pero menos botones y control incómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -252,6 +342,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Clock Tower 3 is a survival horror video game co-developed by Capcom and Sunsoft for the PlayStation 2. Released in 2002, it is the fourth installment in the Clock Tower series, and the first and only video game directed by Japanese film director Kinji Fukasaku. The plot and characters have very little relation with the previous Clock Tower games. The story follows 14-year-old Alyssa Hamilton who is part of a family lineage of female warriors who travel through time to defeat evil spirits. Alyssa travels from her time in 2003 London to the 1940s and 1960s in order to defeat these \"Entities\" and bring peace to troubled souls.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -265,7 +361,13 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 18305,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51619",
+            "SLKA-25051",
+            "SLPM-65221",
+            "SLUS-20633"
+          ]
         }
       ],
       "images": {
@@ -275,5 +377,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1620,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7922,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 24215,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 32854,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

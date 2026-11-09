@@ -14,6 +14,54 @@
   ],
   "games": [
     {
+      "id": 24906,
+      "nameEs": "Meltylancer: The Melting Pot Police",
+      "originalName": "Meltylancer: The Melting Pot Police",
+      "year": 1995,
+      "igdbId": 340399,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Meltylancer: The Melting Pot Police",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Meltylancer: The Melting Pot Police",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "MeltyLancer is a life simulation game similar to -- and by the same designers as -- Graduation, in which the player is tasked with training a squad of six young Tokyo Eastern Metro Police recruits, called Lancers. The main core of the game is determining each Lancer's weekly schedule: which days are they on patrol, which days on standby, and which days do they have off? After the general schedule is determined, the player meets with each Lancer to speak with them directly, determining specific actions they'll take that week; whether they spend a day training, exercising, or getting some much-needed rest will affect their stats and ability to complete missions. While on patrol or on special missions, battles may occur, which can be partially controlled with a handful of commands but mostly play out automatically. Each of the six Lancers has their own abilities, personalities, and specialties.\n\nA mini-CD containing the game's theme song is also included in the package.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1995",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 63361,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 1996,
+          "igdbId": 60977,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9on4.jpg"
+      }
+    },
+    {
       "id": 25024,
       "nameEs": "Meltylancer Re-inforce",
       "originalName": "Meltylancer Re-inforce",
@@ -35,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "MeltyLancer: Re-inforce is a sequel to MeltyLancer: Ginga Shoujo Keisatsu 2086 and takes place two years after, meaning in 2088. The core gameplay consists of isometric turn-based combat on one hand, and on visual novel and dating simulation style interaction with other characters. The player plays a young rookie transferred to a GPO (Galactic Police Organization) unit under Sylvie, the heroine from the previous game. The goal is to learn from the best and uphold the law.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -48,7 +102,13 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 60976,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01147",
+            "SLPS-01147-0",
+            "SLPS-01148",
+            "SLPS-01148-1"
+          ]
         }
       ],
       "images": {
@@ -77,6 +137,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "MeltyLancer: The 3rd Planet is the third and final game in the MeltyLancer series of sci-fi police simulation games. This entry features a new main cast of characters, as well as significant differences in the simulation gameplay. Rather than training the abilities of individual officers through schedule management, this entry takes more of a business-simulation approach with the player sending lancer teams on group missions; the success rates of these missions affect public confidence in the government. Each Lancer's stats will affect their ability to successfully complete missions, and if too many missions are failed the game will be over. Battles may occur during missions, which take a semi-automated turn-based format.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -90,7 +156,13 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 60973,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-86231",
+            "SLPM-86231-0",
+            "SLPM-86232",
+            "SLPM-86232-1"
+          ]
         }
       ],
       "images": {
@@ -98,5 +170,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1890,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24906,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 25024,
+          "reason": "1997"
+        },
+        {
+          "position": 3,
+          "gameId": 25127,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

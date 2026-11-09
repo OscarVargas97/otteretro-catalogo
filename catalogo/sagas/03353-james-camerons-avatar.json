@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "46875",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "James Cameron's Avatar: The Game",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "James Cameron's Avatar: The Game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "James Cameron's Avatar: The Game is the official video game based on the highly anticipated film James Cameron's Avatar.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,16 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 4211,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50161",
+            "BLES-00667",
+            "BLES-00667/ANZ",
+            "BLES-00667/P",
+            "BLES-00753",
+            "BLJM-60186",
+            "BLUS-30374"
+          ]
         },
         {
           "id": 46874,
@@ -56,7 +77,12 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 4211,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R5VE-USA-B0",
+            "RVL-R5VP-UKV-B0",
+            "RVL-R5VX-EUR-B0"
+          ]
         },
         {
           "id": 46875,
@@ -73,7 +99,12 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 4211,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-01357",
+            "ULES-01357/E",
+            "ULUS-10451"
+          ]
         },
         {
           "id": 46877,
@@ -89,7 +120,12 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 200999,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "VAVE",
+            "VAVJ",
+            "VAVV"
+          ]
         }
       ],
       "images": {
@@ -108,6 +144,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110588",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Avatar: Frontiers of Pandora",
           "source": "igdb",
@@ -116,6 +158,12 @@
         {
           "field": "original_name",
           "value": "Avatar: Frontiers of Pandora",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Avatar: Frontiers of Pandora is a first-person, action-adventure game set in the never-before-seen Western Frontier of Pandora. Abducted by the human militaristic corporation known as the RDA, you, a Na’vi, were trained and molded to serve their purpose. Fifteen years later, you are free, but find yourself a stranger in your birthplace. Reconnect with your lost heritage, discover what it truly means to be Na'vi, and join other clans to protect Pandora from the RDA.",
           "source": "igdb",
           "manual": false
         },
@@ -152,8 +200,33 @@
           "igdbId": 152202,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f605461477eb8b7ab10cb504c0b99488.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e5c9a9b84b65dfc5ba62c677aefc5d4a.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/2c5427c04737ff4c985317f27a8013ad.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2919,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 18556,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 46704,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "39765",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Swords & Bones",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Swords & Bones",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Swords & Bones inherits the spirit of the great 16-bit classics from the 80s and 90s, enriching the game experience with modern mechanics! Undead hordes and demons await you in this epic adventure!",
           "source": "igdb",
           "manual": false
         },
@@ -65,7 +77,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 144026,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100D21016FC0000"
+          ]
         }
       ],
       "images": {
@@ -82,6 +97,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "56003",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Swords & Bones 2",
           "source": "igdb",
@@ -90,6 +111,12 @@
         {
           "field": "original_name",
           "value": "Swords & Bones 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Swords and Bones 2 is an action-platform game with RPG features, inspired by 80s and 90s classics! Fight through levels filled with monsters, avoid traps and collect power-ups & trophies in this new epic second chapter!",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +135,28 @@
           "year": 2022,
           "igdbId": 196928,
           "steamAppId": 1928120,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado/ratón y mando; mejor control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor rendimiento y resolución."
+            }
+          ]
         },
         {
           "id": 56004,
@@ -116,7 +164,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 196928,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, posibles actualizaciones tardías."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 56005,
@@ -124,7 +193,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 196928,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, posibles actualizaciones tardías."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y fluidez."
+            }
+          ],
+          "codes": [
+            "01007EC01A73E000"
+          ]
         }
       ],
       "images": {
@@ -132,5 +225,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2817,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 15191,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 22491,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

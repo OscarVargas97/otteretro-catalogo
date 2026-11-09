@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "39168",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rascal’s Escape",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rascal’s Escape",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rascal's Escape is a co-op adventure game to satisfy your wanderlust.\n\nJoin the nimble Squirrel and the strong Bear on a wild journey. Jump, stomp, zoom through colorful cities following Rascal's clues. Travel Europe with your friends and experience nutastic moments.",
           "source": "igdb",
           "manual": false
         },
@@ -57,13 +69,84 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 139017,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100810013072000"
+          ]
         }
       ],
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co929m.jpg"
       }
+    },
+    {
+      "id": 18498,
+      "nameEs": "Benjamin Blumchen: Ein Tag im Zoo",
+      "originalName": "Benjamin Blumchen: Ein Tag im Zoo",
+      "year": 2009,
+      "igdbId": 187076,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Benjamin Blumchen: Ein Tag im Zoo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Benjamin Blumchen: Ein Tag im Zoo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Benjamin Blümchen: Ein Tag im Zoo is a german only Nintendo DS game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2009",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 46794,
+          "platform": "ds",
+          "kind": "original",
+          "year": 2009,
+          "igdbId": 187076,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4cjq.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2811,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 18498,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 14981,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

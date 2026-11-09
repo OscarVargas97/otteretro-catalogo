@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9943",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The House in Fata Morgana",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The House in Fata Morgana",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A gothic suspense tale set in a cursed mansion. \"The House in Fata Morgana\" is a full-length visual novel spanning nearly a millennium that deals in tragedy, human nature, and insanity.",
           "source": "igdb",
           "manual": false
         },
@@ -116,6 +128,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "78887",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The House in Fata Morgana: Reincarnation",
           "source": "igdb",
@@ -124,6 +142,12 @@
         {
           "field": "original_name",
           "value": "The House in Fata Morgana: Reincarnation",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The fully voiced \"Reincarnation\" sequel featuring the central cast members reincarnated in the present day.",
           "source": "igdb",
           "manual": false
         },
@@ -141,7 +165,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 329687,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Novela visual completa con el mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Lectura cómoda en TV, sin portabilidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión de referencia en consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución alta y carga estable."
+            }
+          ]
         },
         {
           "id": 78886,
@@ -149,7 +194,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 329687,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido íntegro de la novela."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, buena para leer en sesiones cortas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a la obra original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla y resolución menores."
+            }
+          ]
         },
         {
           "id": 78887,
@@ -157,7 +223,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 329687,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil y en TV, con pantalla táctil y guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena nitidez y cargas rápidas."
+            }
+          ]
         }
       ],
       "images": {
@@ -165,5 +252,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2343,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4556,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 31499,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

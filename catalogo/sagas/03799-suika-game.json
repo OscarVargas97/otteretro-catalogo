@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58915",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Juego de la sandía",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Suika Game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A game where you drop fruits. When two of the same fruit meet, they form a bigger fruit, which can then combine to create an even bigger fruit, until eventually you form a watermelon!",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2026,
           "igdbId": 221740,
           "steamAppId": 4572790,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego, probablemente con ajustes de la nueva edición."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón o mando, cómodo para partidas cortas."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al juego base."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 58916,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 221740,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego, probablemente con ajustes de la nueva edición."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al juego base."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Nítida y fluida."
+            }
+          ]
         },
         {
           "id": 58917,
@@ -65,11 +119,35 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 221740,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base sin posibles extras de las ediciones nuevas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles sencillos y buenos en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto, resolución limitada."
+            }
+          ],
+          "codes": [
+            "0100800015926000"
+          ]
         }
       ],
       "images": {
-        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coasl5.jpg"
+        "cover": "https://cdn2.steamgriddb.com/grid/fce3ffaad1e08ad3528fb2b1c9a7e601.png"
       }
     },
     {
@@ -82,6 +160,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "89621",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Suika Game Planet",
           "source": "igdb",
@@ -90,6 +174,12 @@
         {
           "field": "original_name",
           "value": "Suika Game Planet",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A new Suika Game is here from a new setting in space! Turn, target, and aim for the watermelon!\n\nDrop the fruits freely from any direction as \"Poppy\" flies 360° around the planet. Make fruits of the same type collide to make them \"evolve\" and aim to create watermelons for a high score!\nMake a lot of fruits \"evolve\" to enter the new \"Super Evolution Time\" mode! Special background music, dramatic effects, and a bonus score bring the excitement to a peak!\n\nThe \"Suika Game Planet\" has evolved in many ways, including with a customization function that allows you to freely decorate the game screen (skin), and a collection function that allows you to collect stickers for completing missions and use them to create your original name tag. Try playing it now!",
           "source": "igdb",
           "manual": false
         },
@@ -107,7 +197,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 366891,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0400CB3024EF8000"
+          ]
         },
         {
           "id": 89621,
@@ -132,10 +225,36 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 366891,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100D3D02477A000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coag5j.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3042,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23368,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 37193,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

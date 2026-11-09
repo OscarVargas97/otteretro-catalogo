@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A Mahjong game based on a manga about a prolific gambler. It's the first Super Famicom game in a long-running series, and was never released outside of Japan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1986",
           "source": "igdb",
@@ -54,7 +60,160 @@
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9v5f.jpg"
       }
+    },
+    {
+      "id": 26685,
+      "nameEs": "Gambler Jiko Chuushinha: Ippatsu Shoubu!",
+      "originalName": "Gambler Jiko Chuushinha: Ippatsu Shoubu!",
+      "year": 2000,
+      "igdbId": 420493,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "65714",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Gambler Jiko Chuushinha: Ippatsu Shoubu!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Gambler Jiko Chuushinha: Ippatsu Shoubu!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gambler Jiko Chuushinka Ippatsu Shoubu! - Tokyo Mahjong Land is a first person perspective mahjong game that features lots of different characters to choose from and different game modes: A Free mahjong mode and a quiz mode about mahjong.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2000",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 65714,
+          "platform": "ps3",
+          "kind": "original",
+          "year": 2016,
+          "igdbId": 420493,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego como descarga."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas más rápidas."
+            }
+          ]
+        },
+        {
+          "id": 65715,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 2000,
+          "igdbId": 420493,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo en disco."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado con tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original del 2000."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cargas largas, resolución de PS1."
+            }
+          ]
+        },
+        {
+          "id": 65716,
+          "platform": "psp",
+          "kind": "original",
+          "year": 2016,
+          "igdbId": 420493,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego como descarga."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo para jugar en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cod069.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2057,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2,
+          "reason": "1986"
+        },
+        {
+          "position": 2,
+          "gameId": 26685,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

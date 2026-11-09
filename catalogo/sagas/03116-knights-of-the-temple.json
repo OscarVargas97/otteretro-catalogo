@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43875",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Knights of the Temple: Infernal Crusade",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Knights of the Temple: Infernal Crusade",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An action/adventure role playing game from the developers behind Chronicles of Riddick and The Darkness. The game was never released outside Europe.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1222,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GTPP-EUR"
+          ]
         },
         {
           "id": 43875,
@@ -73,7 +88,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1222,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52448"
+          ]
         }
       ],
       "images": {
@@ -92,6 +110,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82388",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Knights of the Temple II",
           "source": "igdb",
@@ -100,6 +124,12 @@
         {
           "field": "original_name",
           "value": "Knights of the Temple II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Knights of the Temple II is a 3rd Person Action-Adventure with non-linear game play, interactive dialog system, trade mode, side quests, RPG elements, alternative endings and multiplayer. KOTT2 is a game showing the player the ultimate fight of Paul de Raque, grandmaster of the Order of the Temple and hero of the first game, with the forces of Hell. Traveling the lands and kingdoms of Europe of the 13th century, he must reveal the secret of the three ancient artifacts and fight the demon armies attacking our world.\n\nAs a grandmaster of the Order of the Temple has Paul de Raque fought many battles in the eternal war between good and evil. But now he stands before his greatest challenge. Visions of evil forces invading our world, undead beings ravaging the lands of northern Europe and a dark menace opening a portal closed millennia ago. Fight your way through the forgotten Roman city, deadly dungeons of the Saracen Empire; discover long forgotten islands, ruins and catacombs on a search for a secret hidden on the ground of an ancient Underwater fortress. Test your fighting skills to overcome the hordes of darkness and to discover that the victory must be paid with blood, pain and maybe your own soul.",
           "source": "igdb",
           "manual": false
         },
@@ -133,7 +163,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 11007,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53645"
+          ]
         }
       ],
       "images": {
@@ -143,5 +176,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2855,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16673,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 33009,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

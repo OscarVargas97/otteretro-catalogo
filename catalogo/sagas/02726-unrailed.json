@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "30483",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Unrailed!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Unrailed!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Unrailed! is all about getting an unstoppable train safely to the station through a variety of procedurally generated maps, both weird and wonderful in online multiplayer, local multiplayer or versus mode.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 115201,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010042C011476000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "72636",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Unrailed 2: Back on Track",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Unrailed 2: Back on Track",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Unrailed is back on track with more co-op railroad construction chaos! Choose your path in a new world packed with bold biomes and bosses. Permanently upgrade your character and engines, even create and share your own levels - just don‘t let your train derail!",
           "source": "igdb",
           "manual": false
         },
@@ -117,7 +144,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 278600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento en Switch 2."
+            }
+          ]
         },
         {
           "id": 72636,
@@ -126,7 +174,28 @@
           "year": 2024,
           "igdbId": 278600,
           "steamAppId": 2211170,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con sus actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando o teclado, partidas en línea consolidadas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cuadros por segundo."
+            }
+          ]
         },
         {
           "id": 72637,
@@ -134,7 +203,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 278600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas rápidas y fluido."
+            }
+          ]
         },
         {
           "id": 72638,
@@ -142,7 +232,31 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 278600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y fluidez."
+            }
+          ],
+          "codes": [
+            "01006D00241E6000"
+          ]
         }
       ],
       "images": {
@@ -152,5 +266,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2728,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12476,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 29085,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

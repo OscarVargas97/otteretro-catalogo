@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "38797",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Mombo Quest",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Super Mombo Quest",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Mombo Quest is an action-packed precision platformer! A metroidvania with classic arcade mechanics, featuring some crazy combat, challenging combos and plenty of collectibles - all in a huge interconnected world! Bounce and stomp through an enormous interconnected world, doing some intense acrobatics and getting huge combos! A superfast precision platformer that mixes up a Metroidvania world with classic Arcade mechanics.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 139438,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona estable en PS4."
+            }
+          ]
         },
         {
           "id": 38797,
@@ -57,7 +90,28 @@
           "year": 2021,
           "igdbId": 139438,
           "steamAppId": 1262040,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, guardado cómodo y ajustes flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y cuadros por segundo altos, carga rápida."
+            }
+          ]
         },
         {
           "id": 38798,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 139438,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona estable en consola."
+            }
+          ]
         },
         {
           "id": 38799,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 139438,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando, portátil y cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel sin cambios relevantes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable para un juego 2D sencillo."
+            }
+          ],
+          "codes": [
+            "0100DCC01376E000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +191,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "108367",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mombo Combo Legacy",
           "source": "igdb",
@@ -100,6 +205,12 @@
         {
           "field": "original_name",
           "value": "Mombo Combo Legacy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mombo Combo Legacy is a fast-paced platformer packed with action and adventure! Battle monstrous enemies, unlock powerful forms, and pull off incredible combos across hundreds of handcrafted levels. Customize your Mombo with stylish skins, collect and evolve Orumon pets, and take down epic bosses in your quest to save the universe. Easy to play, hard to master — and all powered by skill, courage… and a whole lot of tongue.",
           "source": "igdb",
           "manual": false
         },
@@ -152,8 +263,31 @@
           "igdbId": 326858,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9qbo.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2807,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 14891,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 45748,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

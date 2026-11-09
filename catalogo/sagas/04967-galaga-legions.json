@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95578",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Galaga Legions DX",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Galaga Legions DX",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The legendary hit arcade shooter returns with Galaga Legions DX! Featuring a new twist on the classic gameplay, slick new graphics and devastating weapon power-ups, the fate of the galaxy lies in your hands! Board your fighter and prepare to defend Earth from wave after wave of relentless aliens. Target your enemies' critical weak spots to earn bonuses and rack-up an astronomical score! Blast your way through unique levels and epic boss battles on your mission to defend the galaxy and prevent an intergalactic catastrophe!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 10762,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base del juego original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles arcade sencillos, sin mejoras notables."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución HD de la generación PS3, estable."
+            }
+          ]
         },
         {
           "id": 95578,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 10762,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, versión portada a consolas más nuevas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales, con carga y menús más ágiles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Conserva fielmente el diseño original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez en hardware actual."
+            }
+          ]
         },
         {
           "id": 95579,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 10762,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base del juego original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles arcade sencillos, sin mejoras notables."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución HD de la generación X360, estable."
+            }
+          ]
         },
         {
           "id": 95580,
@@ -72,9 +147,35 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 10762,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, versión portada a consolas más nuevas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales, con carga y menús más ágiles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Conserva fielmente el diseño original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez en hardware actual."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b406d761e227fdcd4af4d22db7ecba87.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d9671ef3fd5d97ca1ee64bb10577dd6c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/21f1dfbf0e1ba7279aed485a3fa63af6.png"
+      }
     },
     {
       "id": 48502,
@@ -98,6 +199,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Galaga Legions is an Xbox Live Arcade exclusive video game created by Namco Bandai Games. The title was developed by the same team who created Pac-Man Championship Edition. This game is also included in the Namco Museum Virtual Arcade collection, and in Pac-Man & Galaga Dimensions for Nintendo 3DS. A DX version of the game was released on Xbox Live Arcade as part of the Namco Generations series on June 29, 2011, with the PlayStation Network version released in August 2, 2011.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -113,8 +220,33 @@
           "igdbId": 21347,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c39edf1da23e35f1cf7adf7117ac0575.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/09fc3fd7cf26523393428b92114831cb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/25ea70634b0126caee5f4cc2bdc773e6.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3332,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48502,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 39979,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

@@ -14,6 +14,59 @@
   ],
   "games": [
     {
+      "id": 16953,
+      "nameEs": "Nana: Live Staff Daiboshuu! Shoshinsha Kangei",
+      "originalName": "Nana: Live Staff Daiboshuu! Shoshinsha Kangei",
+      "year": 2007,
+      "igdbId": 65421,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Nana: Live Staff Daiboshuu! Shoshinsha Kangei",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Nana: Live Staff Daiboshuu! Shoshinsha Kangei",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nana: Live Staff Daiboshuu! Shoshinsha Kangei is the third Nana video game released by Konami for the Nintendo DS on June 2007. The character designs are similar to the previous video game, Nana: Everything Is Controlled by the Great Demon King!?.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2007",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 44873,
+          "platform": "ds",
+          "kind": "original",
+          "year": 2007,
+          "igdbId": 65421,
+          "criteria": [],
+          "codes": [
+            "YNAJ"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/36609591a13d51f24c06c3e59e7fcccf.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/638d72f7e118f423910c75a1bace8489.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2cf400d7f98eaf0cee50257fbd396564.png"
+      }
+    },
+    {
       "id": 33776,
       "nameEs": "Nana",
       "originalName": "Nana",
@@ -35,6 +88,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Nana is a simulation game released in 2005 based on the manga of the same name, where the player can choose their character and experience the Tokyo life by meeting other characters, getting part-time jobs, buying clothes, and decorating their room.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -48,9 +107,16 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 61424,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-65914",
+            "SLPM-66256"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ghz.jpg"
+      }
     },
     {
       "id": 35716,
@@ -74,6 +140,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Nana: Subete ha Daimaou no Omichibiki!? is a video game based on Nana released by Konami on July 6, 2006 for the PSP. Many of the voice actors from the anime voice their respective characters in the game.\n\nThe game is different in many aspects from the first Nana game, such as characters in \"chibi\" form, and the game board setting.\n\nThe setting is fashioned as a game board. A dice is provided for the player to move across the board. Gameplay is set up into several rounds, after every three rounds Blast or Trapnest perform live.\n\nThe player can be friends with their favorite Nana characters, buy clothes, or decorate their room. Sabrina, Jackson Hole, and Apartment 707 are some of the many locations in the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -89,8 +161,36 @@
           "igdbId": 67430,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4kme.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1958,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33776,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 35716,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 16953,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

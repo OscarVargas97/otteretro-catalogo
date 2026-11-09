@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Let's Ride! Sunshine Stables is a Sports game, developed by ValuSoft and published by THQ, which was released in 2005.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 49395,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "B34E"
+          ]
         }
       ],
       "images": {
@@ -65,6 +74,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "4290",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Let's Ride!: Dreamer",
           "source": "igdb",
@@ -73,6 +88,12 @@
         {
           "field": "original_name",
           "value": "Let's Ride!: Dreamer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Let's Ride! Dreamer is an Adventure game, developed by Kritzelkratz and published by DTP Entertainment, which was released in 2005.",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +119,10 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 49396,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BL9E"
+          ]
         }
       ],
       "images": {
@@ -128,6 +152,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This is a Horse Breeds game for the Nintendo 3DS",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -141,7 +171,10 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 60869,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-ALDE"
+          ]
         }
       ],
       "images": {
@@ -159,6 +192,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83142",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Let's Ride! Silver Buckle Stables",
           "source": "igdb",
@@ -167,6 +206,12 @@
         {
           "field": "original_name",
           "value": "Let's Ride! Silver Buckle Stables",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Train horses and compete in competitions in this horse riding simulation.",
           "source": "igdb",
           "manual": false
         },
@@ -185,7 +230,28 @@
           "year": 2022,
           "igdbId": 43522,
           "steamAppId": 1587860,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente en la versión de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más cómodo con ratón y guardado sencillo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Relanzamiento fiel al juego original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 83143,
@@ -193,7 +259,32 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 43522,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido original de PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de la época y guardado en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución de PS2 y cargas largas."
+            }
+          ],
+          "codes": [
+            "SLES-55136",
+            "SLUS-21309"
+          ]
         }
       ],
       "images": {
@@ -202,5 +293,35 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1123,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2310,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 2347,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 33441,
+          "reason": "2006"
+        },
+        {
+          "position": 4,
+          "gameId": 4515,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

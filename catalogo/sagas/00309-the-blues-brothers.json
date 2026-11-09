@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1279",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Blues Brothers: Jukebox Adventure",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Blues Brothers: Jukebox Adventure",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Jukebox Adventure is the sequel to The Blues Brothers. Once again, the player has to choose a favourite Blues Brother and take him through different side-scrolling platform levels. He needs to collect records and use them as defence by throwing them towards enemies. There are also power-ups that can be gathered until the jukebox to progress to the next level is found.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 47007,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Niveles completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control más fluido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos y sonido superiores."
+            }
+          ]
         },
         {
           "id": 1679,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 48963,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar, más simple."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación posterior."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Monocromo y limitada."
+            }
+          ]
         }
       ],
       "images": {
@@ -85,6 +139,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Start out as Elwood in prison and get the band together for the battle of the bands, which is in less than two days. After saving the guitarist, Cab and defeating the warden, Mac and Buster are waiting to be found in Chicago to complete and reunite your crew!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -98,7 +158,11 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3425,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NBPE",
+            "NBPP"
+          ]
         }
       ],
       "images": {
@@ -117,6 +181,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13311",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Blues Brothers",
           "source": "igdb",
@@ -125,6 +195,12 @@
         {
           "field": "original_name",
           "value": "The Blues Brothers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Blues Brothers video game was designed by Titus Software and is based on the comedic sketch band of the same name. The platformer-style game was released in 1991 for MS-DOS. It was subsequently ported to a number of other platforms, including the Amiga, Atari ST, and NES.",
           "source": "igdb",
           "manual": false
         },
@@ -160,5 +236,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1428,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6902,
+          "reason": "1991"
+        },
+        {
+          "position": 2,
+          "gameId": 633,
+          "reason": "1993"
+        },
+        {
+          "position": 3,
+          "gameId": 1360,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

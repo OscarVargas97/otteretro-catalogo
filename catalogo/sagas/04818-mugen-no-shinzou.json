@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Cursed by the gods, on the verge of death, the protagonist of the game is transferred to a different realm - a fantasy land ruled by sword and sorcery, in which humans are threatened by rampaging goblins, orcs, and a mysterious dragon. The hero must find a powerful artifact known as the Heart of Phantasm in order to return home.\n\nMugen no Shinzō is a role-playing game similar to early Ultima games. The player controls a lone character with basic attributes who roams the vast land, visiting towns and dungeons. Overworld navigation is done by scrolling with arrow keys, without an icon to represent the player character. Town locations have little to no graphics; along with the dungeons, they are displayed in small windows. The maze-like dungeons are represented by abstract pseudo-3D vector graphics. Combat is random; the protagonist fights enemies one-on-one in simple turn-based fashion.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1984",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 345990,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3sjd.jpg"
+      }
     },
     {
       "id": 37262,
@@ -62,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "90937",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mugen no Shinzou II",
           "source": "igdb",
@@ -70,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Mugen no Shinzou II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mugen no Shinzō II is a role-playing game very similar visually and gameplay-wise to early Ultima games. As opposed to the first game, overworld occupies the majority of the screen, and towns can be physically explored in a top-down fashion. Another change is elimination of random enemy encounters in favor of enemies visibly roaming the overworld. Characters can now join the protagonist and participate in battles. Battles are viewed from first-person perspective (with large enemy portraits) and feature simple turn-based mechanics.",
           "source": "igdb",
           "manual": false
         },
@@ -87,7 +108,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 246656,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funcional en PC, menos práctico en sofá."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento en PC."
+            }
+          ]
         },
         {
           "id": 90937,
@@ -95,9 +137,33 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 376220,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, posibles extras no confirmados."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando, modo portátil y suspensión."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto, algo menor que PC."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6eqb.jpg"
+      }
     },
     {
       "id": 37748,
@@ -121,6 +187,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Mugen no Shinzou III is a Role-Playing game, developed and published by XTALSOFT, which was released in Japan in 1990.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1990",
           "source": "igdb",
@@ -136,8 +208,36 @@
           "igdbId": 390490,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7k4l.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1991,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36318,
+          "reason": "1984"
+        },
+        {
+          "position": 2,
+          "gameId": 37262,
+          "reason": "1985"
+        },
+        {
+          "position": 3,
+          "gameId": 37748,
+          "reason": "1990"
+        }
+      ]
+    }
+  ]
 }

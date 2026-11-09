@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "36569",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cupid Parasite",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Cupid Parasite",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sent to the Human Realm on her heavenly mission of “matchmaking”, Lynette meets her biggest challenge yet: the infamous Parasite 5. In order to help these five hopeless men find true love, Lynette and her team concoct the perfect matchmaking plan… REALITY TV.\n\nWill Lynette be able to live up to her name as top bridal advisor and Cupid, or will her dreams get cancelled?",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2026,
           "igdbId": 136964,
           "steamAppId": 4245590,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base; sin diferencias conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, ajustes gráficos y guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene la visión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez en un juego ligero."
+            }
+          ]
         },
         {
           "id": 36570,
@@ -57,11 +90,35 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 136964,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base; sin diferencias conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con mando, pero con menos opciones de ajuste."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento más limitados en la consola."
+            }
+          ],
+          "codes": [
+            "0100E010152CA000"
+          ]
         }
       ],
       "images": {
-        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocyqz.jpg"
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobyo9.jpg"
       }
     },
     {
@@ -86,6 +143,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Cupid Parasite: Sweet and Spicy Darling is a fandisc for Cupid Parasite.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2023",
           "source": "igdb",
@@ -99,7 +162,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 200558,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010010D01D2B6000"
+          ]
         }
       ],
       "images": {
@@ -107,5 +173,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2792,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 14291,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 22736,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

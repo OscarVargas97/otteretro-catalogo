@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "46017",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bloons",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Bloons",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bloons is a strategy game in which players throw darts at a series of floating balloons in an effort to pop them all. Players are given a limited number of darts and must pop a certain number of balloons to progress to the next level.",
           "source": "igdb",
           "manual": false
         },
@@ -80,7 +92,89 @@
         "hero": "https://cdn2.steamgriddb.com/hero/4926b735eb624e5de200880635cc272a.png",
         "logo": "https://cdn2.steamgriddb.com/logo/0873eb83b60c886393773450dda98b3a.png"
       }
+    },
+    {
+      "id": 17940,
+      "nameEs": "Bloons TD",
+      "originalName": "Bloons TD",
+      "year": 2009,
+      "igdbId": 85512,
+      "popularity": 1,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "46125",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Bloons TD",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Bloons TD",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's time once again to achieve total Bloon popping satisfaction, this time in the form of classic TD.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2009",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 46124,
+          "platform": "psp",
+          "kind": "original",
+          "year": 2011,
+          "igdbId": 85512,
+          "criteria": []
+        },
+        {
+          "id": 46125,
+          "platform": "ds",
+          "kind": "original",
+          "year": 2011,
+          "igdbId": 85512,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7xt1.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2899,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17843,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 17940,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

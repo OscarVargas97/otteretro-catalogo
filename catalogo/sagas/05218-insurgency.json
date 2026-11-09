@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100020",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Insurgency: Sandstorm",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Insurgency: Sandstorm",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Insurgency: Sandstorm is a team-based, tactical FPS based on lethal close quarters combat and objective-oriented multiplayer gameplay. Experience the intensity of modern combat where skill is rewarded, and teamwork wins the fight.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 18088,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo en consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando y soporte de ratón y teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego, solo cambia la plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fps estables en Series."
+            }
+          ]
         },
         {
           "id": 100018,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 18088,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base, menos soporte de extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando correcto pero menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego, solo cambia la plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución y fps limitados en PS4."
+            }
+          ]
         },
         {
           "id": 100019,
@@ -65,7 +119,28 @@
           "year": 2018,
           "igdbId": 18088,
           "steamAppId": 581320,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo con todas las actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos, buena personalización."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento en PC, exigente en equipos modestos."
+            }
+          ]
         },
         {
           "id": 100020,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 18088,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo en consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando y respuesta háptica."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego, solo cambia la plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fps estables en PS5."
+            }
+          ]
         },
         {
           "id": 100021,
@@ -81,9 +177,35 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 18088,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base que PS4."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando correcto pero menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego, solo cambia la plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Rendimiento limitado en Xbox One."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f42fc75eac59b332ae535e1a6bcc0713.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a4ed074907dc9bc3c86cc52904d763e3.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/c0db17c6772e2a26cb133ad3ba389cce.png"
+      }
     },
     {
       "id": 43749,
@@ -123,8 +245,33 @@
           "steamAppId": 222880,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d9cd8910929263be5fe2b102a37f206c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2e11fe8529da207b7f069d6477a41368.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/475238fb0e20e291f52044dfd7c0330e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3399,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43749,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 41959,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76357",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tritorn",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tritorn",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tritorn is an early progenitor of the Action RPG genre and the first game in XAIN Soft's Tritorn trilogy.",
           "source": "igdb",
           "manual": false
         },
@@ -85,14 +97,43 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Tritorn is an enhanced port of Tritorn for MSX2, released by XAIN Soft in 1986. Tritorn is an early progenitor of the Action RPG genre and the first game in the Tritorn trilogy.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1986",
           "source": "igdb",
           "manual": false
         }
       ],
-      "versions": []
+      "versions": [],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co31cf.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3171,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 30062,
+          "reason": "1985"
+        },
+        {
+          "position": 2,
+          "gameId": 38211,
+          "reason": "1986"
+        }
+      ]
+    }
+  ]
 }

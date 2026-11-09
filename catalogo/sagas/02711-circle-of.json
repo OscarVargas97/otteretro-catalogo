@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "29871",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Circle of Sumo",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Circle of Sumo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Have fun with your friends with the great award-winning Circle of Sumo! \n \nUse your belly to your advantage! Challenge your friends in this fun party game on sumo. Fight into the arena: charge, hit, dodge and defeat the opponents. Let's have some good old fun!",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2020,
           "igdbId": 111916,
           "steamAppId": 961850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando o teclado, ajustes gráficos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 29872,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 111916,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento limitados."
+            }
+          ],
+          "codes": [
+            "010039700BA7E000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "35373",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Circle of Sumo: Online Rumble!",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Circle of Sumo: Online Rumble!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Use your belly to your advantage! Challenge players all over the world and climb the leaderboards. Fight into the arena: charge, hit, dodge and defeat the opponents. Let's have some good old fun!",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +177,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 126661,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01009BB00F850000"
+          ]
         }
       ],
       "images": {
@@ -125,6 +197,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "37783",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Circle of Football",
           "source": "igdb",
@@ -133,6 +211,12 @@
         {
           "field": "original_name",
           "value": "Circle of Football",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's not the usual soccer game, it's a fast-paced football game with hilarious fields, easy-to-learn controls and hard-to-master gameplay. Have fun with your friends and compete in online multiplayer matches! Kick, tackle your opponents and score GOOOOALS to climb the leaderboards!",
           "source": "igdb",
           "manual": false
         },
@@ -184,5 +268,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1734,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12258,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 13922,
+          "reason": "2020"
+        },
+        {
+          "position": 3,
+          "gameId": 14589,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

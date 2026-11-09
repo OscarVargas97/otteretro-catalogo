@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "88985",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Temari Trials",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Temari Trials",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Puzzles with Samurai Paws",
           "source": "igdb",
           "manual": false
         },
@@ -88,9 +100,15 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 359984,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100233024A56000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobvce.jpg"
+      }
     },
     {
       "id": 37787,
@@ -102,6 +120,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "91043",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Temari Trials: Dojo's Test",
           "source": "igdb",
@@ -110,6 +134,12 @@
         {
           "field": "original_name",
           "value": "Temari Trials: Dojo's Test",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Temari Trials: Dojo’s Test is a logic-focused puzzle game with charming pixel art where you guide a clever fox pushing temaris toward locked chests. Every hit removes a lock, and when a chest is fully unlocked, the level is cleared. Temaris can also push each other, allowing creative setups and surprising solutions for players who enjoy Japanese aesthetics and clever problem-solving.",
           "source": "igdb",
           "manual": false
         },
@@ -167,10 +197,36 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 387859,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010071A02669E000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobecg.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3293,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36912,
+          "reason": "2025"
+        },
+        {
+          "position": 2,
+          "gameId": 37787,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

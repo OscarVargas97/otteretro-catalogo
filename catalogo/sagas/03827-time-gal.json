@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60836",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Time Gal",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Time Gal",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The year is 4001. The evil Luna has stolen a time machine and plans to use it to take over the world. You are the Time Gal, a skillful and pretty scientist, and your mission is to chase Luna through different time periods, to get the time machine back, and to save the world.",
           "source": "igdb",
           "manual": false
         },
@@ -94,6 +106,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A sequel to LaserDisc-based game Time Gal following a new character named Luna, who is sent on a mission to stop the villain Luda as well as Reika, the original game's protagonist.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2025",
           "source": "igdb",
@@ -109,8 +127,31 @@
           "igdbId": 377094,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/ar65ab.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3050,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23728,
+          "reason": "1985"
+        },
+        {
+          "position": 2,
+          "gameId": 37287,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

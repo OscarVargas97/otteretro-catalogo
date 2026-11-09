@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "15632",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Chompy Chomp Chomp Party",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Chompy Chomp Chomp Party",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Chompy Chomp Chomp Party is a multiplayer party game for 1-9 players. Featuring 20 arenas and 3 varied game modes.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 58675,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido de minijuegos y modos de fiesta."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con GamePad y mandos Wii; la consola está descontinuada."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento propios de Wii U, sin mejoras."
+            }
+          ]
         },
         {
           "id": 15632,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 58675,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Funciona bien con Joy-Con y es fácil jugar en grupo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con cambios menores de plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Algo más pulido y se ve mejor en una consola vigente."
+            }
+          ],
+          "codes": [
+            "0100C7D00FA18000"
+          ]
         }
       ],
       "images": {
@@ -75,6 +132,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114878",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Chompy Chomp Chomp",
           "source": "igdb",
@@ -83,6 +146,12 @@
         {
           "field": "original_name",
           "value": "Chompy Chomp Chomp",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Chompy Chomp Chomp is a maze-based multiplayer rampage in which Chompies chase each other around trying to eat their target colour Chompy. Underneath your Chompy's feet you have a target the colour of the Chompy you need to eat. You get points for chomping, you lose points for being chomped. The target colours change at random, turning hunters into hunted and vice versa.",
           "source": "igdb",
           "manual": false
         },
@@ -111,8 +180,32 @@
           "igdbId": 8425,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c3d88059b2e320757be9d6e62d2211aa.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5734bb4825668b18cf9482687c0c2b40.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2497,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48431,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 8102,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98605",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Re:Birthday Song - Koi wo Utau Shinigami",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Re:Birthday Song - Koi wo Utau Shinigami",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kokoro, wasn't selected by anybody to be her partner as she performed poorly in all disciplines of Reaper study. As a result, she was grouped with other cadets that were falling behind, and was made to take special supplementary lessons. The other attendees of these supplementary lessons are fellow Reaper cadets. It's filled with unique guys, all with their own reasons for attending the school.\n\nKokoro must choose one of the boys to become partners with, however... With her partner at her side, will she be able to become a full fledged Reaper?",
           "source": "igdb",
           "manual": false
         },
@@ -58,26 +70,41 @@
           "igdbId": 199220,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4p9w.jpg"
+      }
     },
     {
       "id": 41418,
-      "nameEs": "Un:Birthday Song ~Ai wo Utau Shinigami~",
-      "originalName": "Un:Birthday Song ~Ai wo Utau Shinigami~",
+      "nameEs": "Un:Birthday Song: Ai wo Utau Shinigami",
+      "originalName": "Un:Birthday Song: Ai wo Utau Shinigami",
       "year": 2015,
       "igdbId": 54919,
       "popularity": 0,
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98608",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
-          "value": "Un:Birthday Song ~Ai wo Utau Shinigami~",
+          "value": "Un:Birthday Song: Ai wo Utau Shinigami",
           "source": "igdb",
           "manual": false
         },
         {
           "field": "original_name",
-          "value": "Un:Birthday Song ~Ai wo Utau Shinigami~",
+          "value": "Un:Birthday Song: Ai wo Utau Shinigami",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kanno Hotori was a normal girl leading a normal life. One day, out of the blue, two unfamiliar guys appear before her. The strangely-dressed guys informed her:\n\n'You only have one month left to live'.\n\nCalling themselves 'Reapers', they had come to inform Hotori that the end of her life was drawing near. Having to obey the fate that came upon her, she had to give the Reapers her soul. However, just before she did so, Hotori had a wish she wanted granted dearly.\nThat wish was to tell her one-sided crush that she loves him.",
           "source": "igdb",
           "manual": false
         },
@@ -95,7 +122,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 54919,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Historia base completa, sin los añadidos de Vita."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado libre y salto de texto en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y carga rápida."
+            }
+          ]
         },
         {
           "id": 98829,
@@ -103,10 +151,54 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 199219,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Port de Vita con contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda en portátil, menos flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original con añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor propia de Vita."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co68om.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3377,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41415,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 41418,
+          "reason": "2015"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "11468",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Alien Syndrome",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Alien Syndrome",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The time bomb is set. It's the only sure way to get rid of these aliens. For good. They're vile. Vicious. And villainous. And they've infested our outcolony. They're holding hundreds of inhabitants hostage. Some of them your friends. So get in there. And get blasting. Inside, you'll find state-of-the-art weaponry. It's yours for the taking. There's sector after sector to purge. Each more intricate than the one before it. And there are Super Aliens to confront. Each more hideous than the one before it. Get the hostages out. And get as many aliens as you can. Before the blast gets all of you.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 202925,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego clásico con extras de la serie 3D Classics."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel al clásico con mejoras opcionales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Efecto 3D y buena fluidez."
+            }
+          ]
         },
         {
           "id": 48334,
@@ -56,7 +89,32 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 4667,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Reimaginación de 2007 con más armas, mejoras y cooperativo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando de Wii, algo repetitivo."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Rediseño que se aleja del juego clásico."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos 3D modestos, cumple."
+            }
+          ],
+          "codes": [
+            "RVL-RLSE-USA",
+            "RVL-RLSP-EUR"
+          ]
         },
         {
           "id": 48335,
@@ -64,7 +122,32 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 4667,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Reimaginación de 2007 con progresión y mejoras de personaje."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Jugable en portátil, repetitivo."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Rediseño que se aleja del juego clásico."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento aceptable en PSP."
+            }
+          ],
+          "codes": [
+            "ULES-00772",
+            "ULUS-10245"
+          ]
         },
         {
           "id": 103329,
@@ -72,7 +155,28 @@
           "kind": "original",
           "year": 1988,
           "igdbId": 273019,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Port de 8 bits con contenido recortado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sin guardado, control antiguo y exigente."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios respecto al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Parpadeo y lentitud propios de NES."
+            }
+          ]
         }
       ],
       "images": {
@@ -103,6 +207,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Alien Syndrome acts as a re-imagining of the 1987 arcade release of Alien Syndrome, with much darker visuals presented entirely in 3D.\nThough it is a slower game, the player can take more than one hit and can fire in any direction using the right analogue stick (similar to Robotron 2084 or Smash T.V.). You can also rapid-fire in a single direction while moving in any direction.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -118,8 +228,31 @@
           "igdbId": 100017,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7zy5.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2376,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5319,
+          "reason": "1987"
+        },
+        {
+          "position": 2,
+          "gameId": 34482,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

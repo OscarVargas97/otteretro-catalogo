@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "30375",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vambrace: Cold Soul",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Vambrace: Cold Soul",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Vambrace: Cold Soul is a roguelike fantasy-adventure set amidst a frozen landscape. Plan your expeditions underground, then journey to the cursed city surface with your team of heroes. Wield unique powers, avoid dangerous traps, brave strange encounters, and survive deadly combat!",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 111253,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01000E000DD40000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111932",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vambrace: Dungeon Monarch",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Vambrace: Dungeon Monarch",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Vambrace: Dungeon Monarch is a unique combination of Deck-Building and Dungeon Defense, with a wide variety of military units and combinations, strategies and magic manifested in cards. Make your dungeon more dangerous by defending it against increasingly powerful enemies.",
           "source": "igdb",
           "manual": false
         },
@@ -136,8 +163,31 @@
           "igdbId": 294339,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9ayy.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2726,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12443,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 47188,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

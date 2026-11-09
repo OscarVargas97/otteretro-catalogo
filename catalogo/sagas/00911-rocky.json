@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "4619",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rocky",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rocky",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Based on the famous movie series of the same name about good boxer Rocky Balboa (played by Sylvester Stallone).\n\nThe boxing simulator game has several modes, including Movie Mode, Exhibition and Knockout Tournament. In Movie Mode you can follow the movie series, starting each part with three minor opponents and finishing the big boss in the end. Each character has personal weaknesses. Also you can train Rocky prior to each fight.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 4093,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GRKE-USA",
+            "DL-DOL-GRKP-EUR"
+          ]
         },
         {
           "id": 4620,
@@ -64,7 +80,12 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 4093,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51208",
+            "SLPM-65463",
+            "SLUS-20559"
+          ]
         },
         {
           "id": 5307,
@@ -72,7 +93,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 209089,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AR8E",
+            "AROP"
+          ]
         }
       ],
       "images": {
@@ -91,6 +116,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81728",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rocky Legends",
           "source": "igdb",
@@ -99,6 +130,12 @@
         {
           "field": "original_name",
           "value": "Rocky Legends",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Be Rocky, Apollo Creed, Clubber Lang, or Ivan Drago in this fighting game prequel to the movie series. Using classic Rocky characters, locations, and music, Rocky: Legends puts the player in the boxing, ring recreating or rewriting the careers of the boxing franchise's heroes and villains.\n\nPlay the career mode or jump into a 1-2 player slugfest. As you progress through the career mode, you must train to improve your skills just like a professional would, and use your fight purse to unlock more playable characters, arenas, movie trailers and more. Combinations of punches can be executed powerfully.",
           "source": "igdb",
           "manual": false
         },
@@ -124,7 +161,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 6016,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52761",
+            "SLUS-20890"
+          ]
         }
       ],
       "images": {
@@ -134,5 +175,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2226,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2514,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 32672,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

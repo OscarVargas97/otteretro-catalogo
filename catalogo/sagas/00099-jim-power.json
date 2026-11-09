@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Jim Power in Mutant Planet is a platform game designed by Digital Concept and published by Loriciel for the Amiga, Atari ST and Amstrad CPC in 1992. The game features several contrasting modes of gameplay, including side-view platforming, top-view, and horizontal shoot 'em up. Jim Power in Mutant Planet was also released for the TurboGrafx-CD in 1993 exclusively in Japan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1992",
           "source": "igdb",
@@ -67,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1314",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Jim Power: The Lost Dimension in 3D",
           "source": "igdb",
@@ -75,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Jim Power: The Lost Dimension in 3D",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "JIm Power: The Lost Dimension in 3-D utilizes the revolutionary Nuoptix 3D graphics, allowing you to experience the thrill of virtual reality without a virtual reality system. 3D glasses facilitate the incredible depth experience, but the thrill and the horror of \"The Lost Dimension\" may be fully experienced with or without 3D glasses.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +110,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 42606,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Muy difícil y sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos 16 bits con ralentizaciones."
+            }
+          ]
         },
         {
           "id": 1314,
@@ -101,7 +140,28 @@
           "year": 2015,
           "igdbId": 42606,
           "steamAppId": 370270,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego con posibles opciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado o mando y mejor comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercano al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen y carga rápida."
+            }
+          ]
         }
       ],
       "images": {
@@ -120,6 +180,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "56129",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "QUByte Classics: Jim Power - The Lost Dimension by Piko",
           "source": "igdb",
@@ -128,6 +194,12 @@
         {
           "field": "original_name",
           "value": "QUByte Classics: Jim Power - The Lost Dimension by Piko",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "QUByte Classics: Jim Power: The Lost Dimension by Piko is a classic action-adventure platformer that brings the special agent Jim Power, to save our planet from the supernatural alien, Vaprak.\n\nHis forces are too strong, a direct attack would not be effective and that’s why Jim Power has to slip through the defenses and attempt to stop this threat. It’s up to the player to reach Vaprak’s fortress and send him back from where he came.\n\nUpgrade your weapons, jump carefully through the platforms, eliminate the enemies and reach the peak of your skills to save the planet in two Jim Power games, the 8Bit version and the 16-Bit!",
           "source": "igdb",
           "manual": false
         },
@@ -177,7 +249,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 203269,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100105017ABC000"
+          ]
         }
       ],
       "images": {
@@ -185,5 +260,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1410,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 150,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 670,
+          "reason": "1993"
+        },
+        {
+          "position": 3,
+          "gameId": 22541,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

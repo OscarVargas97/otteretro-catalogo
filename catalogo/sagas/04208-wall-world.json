@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66612",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wall World",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Wall World",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Explore the mysterious Wall World on your giant robospider: mine for valuable resources, upgrade your equipment to fight off hordes of monsters, and discover exotic biomes in-between attacks. Will you be able to survive and learn the secrets of the Wall World?",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 224705,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100E4C01CE9E000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "80886",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wall World 2",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Wall World 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The adventure in the mysterious world of the Wall continues! Pilot your robospider into its depths, uncover lost artifacts and technologies, upgrade your exosuit and spider, and battle the horrors lurking in the dark. Unravel the mysteries buried in the depths of the Wall!",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +169,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 335291,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100416026718000"
+          ]
         }
       ],
       "images": {
@@ -152,5 +182,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3142,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 27093,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 32396,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

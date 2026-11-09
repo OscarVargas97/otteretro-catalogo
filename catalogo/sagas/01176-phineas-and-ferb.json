@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6935",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phineas and Ferb: Quest for Cool Stuff",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Phineas and Ferb: Quest for Cool Stuff",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Switch on-the-fly between ambitious innovator Phineas and silent, but stoic Man of Action Ferb as they explore an ancient lost temple, underwater caverns and more in search of treasure!\nBuild, upgrade and customize the A.T.T. (All-Terrain Transformatron vehicle), then take it on treasure-seeking adventures around the world.\nTransform Perry from subdued pet to super Agent P and battle the evil Dr. Doofenshmirtz\nExperience four intertwining episodes filled with witty humor and outlandish adventures\nDisplay the loot collected inside including the lost Atlantis hieroglyph, caveman's first stone wheel, floating baby head, and much more",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 5318,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AAWE",
+            "CTR-P-AAWP"
+          ]
         },
         {
           "id": 6932,
@@ -80,7 +96,11 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 5318,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "TPFE",
+            "TPFP"
+          ]
         }
       ],
       "images": {
@@ -111,6 +131,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The fun never stops as you attempt to save the world as the Secret Agent P in a battle against the evil Dr. Doofenshmirtz! There's a whole lot of stuff to do before school starts and Phineas and Ferb plan to do it all...",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -124,7 +150,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 47788,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CFPE",
+            "CNHP"
+          ]
         }
       ],
       "images": {
@@ -155,6 +185,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Phineas and Ferb Ride Again for the Nintendo DS was released on September 14, 2010.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -168,13 +204,99 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 66260,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "VPFE",
+            "VPFV"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/09816d199c50dba0300c480c820903d8.png"
       }
+    },
+    {
+      "id": 41066,
+      "nameEs": "Phineas and Ferb: Day of Doofenshmirtz",
+      "originalName": "Phineas and Ferb: Day of Doofenshmirtz",
+      "year": 2015,
+      "igdbId": 23476,
+      "popularity": 1,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Phineas and Ferb: Day of Doofenshmirtz",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Phineas and Ferb: Day of Doofenshmirtz",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Take control of Disney's Phineas and Ferb and rescue the city of Danville from a marauding army of… household appliances? That could only mean one thing, right?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2015",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 98048,
+          "platform": "vita",
+          "kind": "original",
+          "year": 2015,
+          "igdbId": 23476,
+          "criteria": [],
+          "codes": [
+            "PCSF-00718"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d57091f13453dbe02efb3e2cabf98ecb.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/5f71bc4e6abdb7421e16abe2e414d344.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1148,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3819,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 17218,
+          "reason": "2010"
+        },
+        {
+          "position": 3,
+          "gameId": 3517,
+          "reason": "2013"
+        },
+        {
+          "position": 4,
+          "gameId": 41066,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

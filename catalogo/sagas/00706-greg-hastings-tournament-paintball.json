@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3568",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Greg Hastings' Tournament Paintball MAX'D",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Greg Hastings' Tournament Paintball MAX'D",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The sequel to the original Tournament Paintball game",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 5855,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BGQE"
+          ]
         },
         {
           "id": 3567,
@@ -64,7 +79,11 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 5855,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AGXE",
+            "AGXP"
+          ]
         },
         {
           "id": 3568,
@@ -72,7 +91,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 5855,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-21539"
+          ]
         }
       ],
       "images": {
@@ -91,6 +113,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49722",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Greg Hastings Paintball 2",
           "source": "igdb",
@@ -99,6 +127,12 @@
         {
           "field": "original_name",
           "value": "Greg Hastings Paintball 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "As the next iteration in the highly successful paintball franchise, Greg Hastings Paintball 2 features PlayStationMove technology, thrusting players into the middle of the action like no other paintball game has.",
           "source": "igdb",
           "manual": false
         },
@@ -124,7 +158,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 24317,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SGBE-USA-B0",
+            "RVL-SGBP-UKV-B0"
+          ]
         },
         {
           "id": 49724,
@@ -161,6 +199,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Greg Hastings' Tournament Paintball is a First Person Shooter paintball game that came out exclusively for Xbox.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -176,8 +220,36 @@
           "igdbId": 5854,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6ff5a030a8dbe69db18cd662dc6a9339.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1469,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48166,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 1849,
+          "reason": "2005"
+        },
+        {
+          "position": 3,
+          "gameId": 20053,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

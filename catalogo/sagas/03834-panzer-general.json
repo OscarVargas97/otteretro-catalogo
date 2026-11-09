@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60122",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Panzer General",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Panzer General",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You are the brightest and best of the new Axis generals in the Second World War. Your tactical skills will be tested in armored assaults, amphibious invasions, paradrops, naval engagements, and fierce aerial combat for control of the skies. Go from triumph to triumph, invading and seizing the capitals of Great Britain, the Soviet Union, and ultimately the United States of America on your way to conquering the whole world! Can you achieve a place in history?",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,12 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 4268,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00041",
+            "SLPS-00552",
+            "SLUS-00132"
+          ]
         }
       ],
       "images": {
@@ -87,6 +104,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This is a newly developed game in the Panzer General series for Xbox Live Arcade.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -102,8 +125,31 @@
           "igdbId": 22879,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/pfp9fg78qawadb9ussnd.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3051,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23747,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 48521,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

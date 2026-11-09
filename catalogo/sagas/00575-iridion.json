@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3037",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Iridion 3D",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Iridion 3D",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the distant regions of our galaxy, far beyond the darkest limits of the Orion Nebula, a deadly force has bee unleashed upon the universe and is heading straight for Earth. Get ready to travel forward to a time, when the fate of the universe rests in the palm of your hands! - See more at:",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2020,
           "igdbId": 6449,
           "steamAppId": 1132220,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, versión PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Permite guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con emulación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen en pantalla grande."
+            }
+          ]
         },
         {
           "id": 3037,
@@ -57,14 +90,168 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 6449,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control directo de GBA."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original."
+            }
+          ],
+          "codes": [
+            "AI3E"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/4bb9c3f46c3fb076cd91e6d436f0cbd0.png",
         "hero": "https://cdn2.steamgriddb.com/hero/e257bba3e349f2e57d18f3035a223493.jpg"
       }
+    },
+    {
+      "id": 1670,
+      "nameEs": "Iridion II",
+      "originalName": "Iridion II",
+      "year": 2003,
+      "igdbId": 6450,
+      "popularity": 1,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "3307",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Iridion II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Iridion II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Be the new saviour as the Iridion force strikes back! A century has passed since the Iridion Empire was defeated. Humans have populated the old Iridion galaxy giving mankind freedom and peace. Suddenly, all communications with the human outposts are lost. The Iridions are back! Planet Earth is too far away to offer help. The only chance? A lone powerful spaceship...Yours!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2003",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 3307,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2020,
+          "igdbId": 6450,
+          "steamAppId": 1132230,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, versión PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Permite guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con emulación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen en pantalla grande."
+            }
+          ]
+        },
+        {
+          "id": 3308,
+          "platform": "gba",
+          "kind": "original",
+          "year": 2003,
+          "igdbId": 6450,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control directo de GBA."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original."
+            }
+          ],
+          "codes": [
+            "AI2E",
+            "AI2P"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/297add8b9b6f149fa6b36e921b6eda27.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a195142f0be3d920bd8ff05587c382d6.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2169,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1476,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 1670,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

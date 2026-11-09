@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1346",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Brett Hull Hockey",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Brett Hull Hockey",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Golden Brett returns to the SNES in the improved and updated BRETT HULL HOCKEY ’95. The second game in this series also features a full NHLPA license, so you’re sure to find your favorite players ready to hit the ice. Use every little trick in the book to get the job done: one-timers, fake shots, drop passes, and even dekes.\n\nThere are several gameplay options to satisfy any hockey fan: Full Season, Half Season, Playoffs, All-Star Game, and Exhibition. You make all the decisions in the course of a game, whether it’s shuffling your lines, pulling the goalie, or calling the offensive strategy. Choose wisely, because each option could mean the difference between glorious victory and bitter defeat. And with the stellar play-by-play of Al Michaels, you’ll forget that you’re not just watching a game on TV, you’re playing one!",
           "source": "igdb",
           "manual": false
         },
@@ -48,14 +60,56 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 42633,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo de 1994."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Hockey con licencia, control clásico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original de 1994."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Hardware de 16 bits."
+            }
+          ]
         },
         {
           "id": 1753,
           "platform": "snes",
           "kind": "original",
           "igdbId": 42468,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Parece la misma edición sin año."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Hockey con licencia, control clásico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Presumiblemente igual al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Hardware de 16 bits."
+            }
+          ]
         }
       ],
       "images": {
@@ -84,6 +138,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "AL MICHEAELS CALLS THE PLAY-BY-PLAY!\n\nBrutal Checks. Awesome Stick Saves. 100 MPH One-Timers. This is Hockey With An Attidude.\n\nAll the hard-hitting NHLPA players. True NHL-style stats. Real ice-grinding hockey action. In this game you're playing for keeps. Control the blue-line with guys like Leetch and Bourque. Blank-'em in the crease with guys like Richter and Irbe. Take it down the wing and into the slot behind scoring legends like Modano, Yzerman, Bure, and of course, Brett Hull. Can you make the cut? Only the stats will tell. Shots, checks, penalties, and passing percentages. Make it or miss, it's crunch time. And this time, it's for real.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1994",
           "source": "igdb",
@@ -106,5 +166,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2117,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 701,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 706,
+          "reason": "1994"
+        }
+      ]
+    }
+  ]
 }

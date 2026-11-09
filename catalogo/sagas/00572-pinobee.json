@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3023",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pinobee: Wings of Adventure",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Pinobee: Wings of Adventure",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pinobee: Wings of Adventure takes full advantage of Game Boy Advance's 32-bit color graphics. From Pinobee's fluid animation to the detailed environments he explores, it's obvious that a lot of spit and polish has been applied to this Pak. Pinobee screenshots may lead you to believe that this is a standard action platform game, but that is far from an accurate description.\nPinobee can walk along the ground or shimmy up walls, but his main means of locomotion is dashing through the air. As he makes it deeper in his quest, Pinobee gains the ability to dash farther and farther through the air. Soon enough, he's spending more time hovering and dashing through the sky than on the ground. This unique play control system gives Pinobee a fresh feel.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 6535,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "APBE"
+          ]
         },
         {
           "id": 3674,
@@ -86,6 +101,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Japanese-only sequel to Pinobee.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -99,7 +120,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 49768,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AP6J"
+          ]
         }
       ],
       "images": {
@@ -107,5 +131,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2168,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1468,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 2019,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

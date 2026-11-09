@@ -19,9 +19,15 @@
       "originalName": "Euro Truck Simulator 2",
       "year": 2012,
       "igdbId": 3070,
-      "popularity": 423,
+      "popularity": 424,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "98866",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Euro Truck Simulator 2",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Euro Truck Simulator 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Euro Truck Simulator 2 is a vehicle simulation game and a direct sequel to the 2008 game Euro Truck Simulator. Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore from the UK, Belgium, Germany, Italy, the Netherlands, Poland, and many more, your endurance, skill and speed will all be pushed to their limits. If you’ve got what it takes to be part of an elite trucking force, get behind the wheel and prove it!",
           "source": "igdb",
           "manual": false
         },
@@ -83,7 +95,12 @@
           "igdbId": 3070,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4ba6c472f1057449e226bfc754ff0ddf.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/309f9c1587ee1d24ef7a40ed71003aad.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/69119d4f2670e411071c9cb8d7d01b27.png"
+      }
     },
     {
       "id": 43759,
@@ -95,6 +112,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103467",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "American Truck Simulator",
           "source": "igdb",
@@ -103,6 +126,12 @@
         {
           "field": "original_name",
           "value": "American Truck Simulator",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "American Truck Simulator puts you in the seat of a driver for hire entering the local freight market, making you work your way up to become an owner-operator, and go on to create one of the largest transportation companies in the United States.",
           "source": "igdb",
           "manual": false
         },
@@ -139,8 +168,33 @@
           "igdbId": 9667,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cc43b0ba58947644b5ffc7709c752422.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9c2d17a70d7a37fa59a6cb88d8950b27.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/4ab8599848131b7e081baf0b5b87aba0.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3383,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41559,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 43759,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

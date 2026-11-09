@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14857",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ikki",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ikki",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ikki is a Japanese arcade game developed by Sunsoft. It was also released for the Nintendo Famicom.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 12915,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de Consola Virtual de Ikki, sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, guardado básico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estándar."
+            }
+          ]
         },
         {
           "id": 14059,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 12915,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Mismo juego en Wii U."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, guardado básico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación con salida HD."
+            }
+          ]
         },
         {
           "id": 14856,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 99567,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Relanzamiento con opciones de pantalla."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y opciones modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen escalado y estabilidad."
+            }
+          ]
         },
         {
           "id": 14857,
@@ -72,7 +147,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 99567,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Relanzamiento con opciones de pantalla."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido, rebobinado y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen escalado y estabilidad."
+            }
+          ]
         }
       ],
       "images": {
@@ -103,6 +199,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ikki Online (2010) (Grouvee was a multiplayer action game where players, as farmers Gonbe and Tago, rebelled against feudal lords in medieval Japan, with gameplay focused on collecting coins, defeating ninja armies, and racing to goals, offering modes like stealing items and expanding vision through teamwork, but it's remembered as an obscure online venture by Sunsoft that faced criticism for chaotic gameplay and lack of polish compared to its famous predecessor, Ikki (1985)",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -118,8 +220,31 @@
           "igdbId": 92367,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocb7t.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2461,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7640,
+          "reason": "1985"
+        },
+        {
+          "position": 2,
+          "gameId": 40714,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

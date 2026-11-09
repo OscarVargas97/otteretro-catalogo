@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Saiyuki Reload is a Role-Playing game, published by Bandai, which was released in Japan in 2004.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 68239,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4tbl.jpg"
+      }
     },
     {
       "id": 34087,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Saiyuki Reload: Gunlock is an Action game, published by Bandai, which was released in Japan in 2004.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 68247,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4tbn.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3245,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34068,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 34087,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

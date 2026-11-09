@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A legendary tale of betrayal and self-destruction. Abuse derived from the greediness of man. the powers of a magical creature betrayed. Will man realize his mistakes before irreparable damage is done? Armed with a magical ally and the will to survive, lead Vahn and his cohorts to the redemption of man. Pursue a quest to save the world and discover place where legends are born. New combat system bases on fight games. Discover special combinations for more effective attacks. Beautiful realistic graphics with full polygons. 100s of 3D enemies that react with a full range of motion.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -48,14 +54,38 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 13676,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-01752",
+            "SCES-01944",
+            "SCES-01945",
+            "SCES-01946",
+            "SCES-01947",
+            "SCUS-94254"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/70b4d3e0b3d5c9c9869bf1fee1aebe19.png",
         "hero": "https://cdn2.steamgriddb.com/hero/b84a25d15d9d44f58640a485c1387df8.png",
         "logo": "https://cdn2.steamgriddb.com/logo/2232f30cfb819b91b49e55a1b29841dc.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 836,
+          "platform": "ps1",
+          "project": "legend-of-legaia-recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/SamSteProjects/legend-of-legaia-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 33193,
@@ -79,6 +109,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A magical crystal that supplies infinite water to the small village of Nohl is stolen, causing a solar eclipse. The resulting evil light fills the land with powerful monsters, placing the village's survival at stake. Now Lang, a rookie member of the Nohl militia, must fight his way across uncharted lands to recover the crystal and restore peace to the land. With special attack combos, elemental forces, and powerful weapons, you'll have a variety of ways to battle your foes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -92,7 +128,12 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 28161,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50891",
+            "SLES-50891-GER",
+            "SLUS-20414"
+          ]
         }
       ],
       "images": {
@@ -102,5 +143,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3078,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24250,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 33193,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

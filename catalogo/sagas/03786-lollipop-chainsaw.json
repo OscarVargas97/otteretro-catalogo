@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58548",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lollipop Chainsaw",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Lollipop Chainsaw",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lollipop Chainsaw is the 'un-deadly' story of sweet and killer zombie hunter Juliet Starling and her quest to uncover the root of a colossal zombie outbreak. With her wickedly awesome chainsaw in hand, Juliet slices, dices and splits her way through hordes of the undead, but soon realizes the horde is only the opening act to a festival of zombie rock lords determined to kill the chainsaw wielding cheerleader.",
           "source": "igdb",
           "manual": false
         },
@@ -139,6 +151,27 @@
           "igdbId": 268855,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/87a424e35c265079fea30aca8a9ef80c.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/ee5d32069fe494573d28c22d8b5033dc.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/4ea4de091d1d1c8fef2845072ebcedcf.png"
+      },
+      "ports": [
+        {
+          "id": 842,
+          "platform": "x360",
+          "project": "Re-Cherry",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/MaxDeadBear/Re-Cherry",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
       ]
     },
     {
@@ -163,6 +196,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Juliet returns to a rebuilt San Romero, now transformed into “Jaredwood”, a sprawling metropolis built around the film industry. When a mysterious director traps her inside his twisted zombie movie, Juliet must fight alongside her allies, uncover the conspiracy behind the chaos, and stop a new threat posed by the Corrupted Realm zombies.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2027",
           "source": "igdb",
@@ -178,8 +217,31 @@
           "igdbId": 356930,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocxbd.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3037,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39646,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 47627,
+          "reason": "2027"
+        }
+      ]
+    }
+  ]
 }

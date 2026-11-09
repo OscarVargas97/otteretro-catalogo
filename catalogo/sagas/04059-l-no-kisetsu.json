@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A visual novel for the original PlayStation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 62175,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-02203",
+            "SLPS-02204"
+          ]
         }
       ],
       "images": {
@@ -77,6 +87,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A sequel to L no Kisetsu: A Piece of Memories for PlayStation 2.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -90,10 +106,36 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 62174,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-55009"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4uf8.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3107,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25139,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 33892,
+          "reason": "2008"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110115",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Smalland: Survive the Wilds",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Smalland: Survive the Wilds",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Experience a big adventure on a tiny scale! Enjoy multiplayer survival in a vast, hazardous world. Preparation is key when you're this small & at the bottom of the food chain. Craft weapons & armour, tame & ride creatures, build encampments & explore a strange new land.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 77730,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar al lanzamiento 1.0 en consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando adaptado, menús algo incómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con interfaz adaptada."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable en consola potente."
+            }
+          ]
         },
         {
           "id": 110114,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 77730,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, versión portátil más reciente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando y modo portátil, interfaz adaptada."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con recortes visuales por la plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor potencia, resolución y fps más bajos."
+            }
+          ],
+          "codes": [
+            "04001F2025DCC000"
+          ]
         },
         {
           "id": 110115,
@@ -65,7 +122,28 @@
           "year": 2023,
           "igdbId": 77730,
           "steamAppId": 768200,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo desde el acceso anticipado y actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado cómodos para construcción e inventario."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fps, ajustes gráficos amplios."
+            }
+          ]
         },
         {
           "id": 110116,
@@ -73,9 +151,35 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 77730,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar al lanzamiento 1.0 en consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando adaptado, menús algo incómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con interfaz adaptada."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable y cargas rápidas."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/22640c8ce4fa0395989c16ab8f3b3117.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e6849f2c6d528a12aac41540441d47c8.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/31350fd379f37e2008ddb6da765a3bbe.png"
+      }
     },
     {
       "id": 47973,
@@ -87,6 +191,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114017",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Smalland II: Lost Realms",
           "source": "igdb",
@@ -95,6 +205,12 @@
         {
           "field": "original_name",
           "value": "Smalland II: Lost Realms",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Smallfolk are back with a massively expanded universe in this open-world survival adventure set on a tiny scale! Enjoy up to 10 player co-op where you craft weapons and armor, form companionships with creatures, build encampments, and discover strange new lands.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +239,31 @@
           "igdbId": 405175,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/acb51e8d07454fe540ef85556000cb0f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3475,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46539,
+          "reason": "2024"
+        },
+        {
+          "position": 2,
+          "gameId": 47973,
+          "reason": "2027"
+        }
+      ]
+    }
+  ]
 }

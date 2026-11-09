@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sole release of Itadaki Street for the original PlayStation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 60478,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-86120"
+          ]
         }
       ],
       "images": {
@@ -73,6 +82,12 @@
         {
           "field": "original_name",
           "value": "Itadaki Street 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The third sequential version of the popular Japanese board game from Enix.",
           "source": "igdb",
           "manual": false
         },
@@ -119,6 +134,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Itadaki Street Portable is a crossover party board video game in the long running Itadaki Street series, exclusive to Japan. Featuring characters from both Final Fantasy and Dragon Quest.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -132,9 +153,18 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 69176,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-05127",
+            "ULJM-05321"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a298f4eaf2a304f44499933153f1d901.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b478e76e6a84df66dc6e89d7b03ac7dd.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ff43c54892e80e1e23a88057639aafe7.png"
+      }
     },
     {
       "id": 41326,
@@ -146,6 +176,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98451",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Itadaki Street: Dragon Quest & Final Fantasy 30th Anniversary",
           "source": "igdb",
@@ -154,6 +190,12 @@
         {
           "field": "original_name",
           "value": "Itadaki Street: Dragon Quest & Final Fantasy 30th Anniversary",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Square-Enix's flagship board game simulator celebrates 30 years of its two most influential RPG series.",
           "source": "igdb",
           "manual": false
         },
@@ -181,8 +223,41 @@
           "igdbId": 54550,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co205s.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1322,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25082,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 33619,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 35713,
+          "reason": "2006"
+        },
+        {
+          "position": 4,
+          "gameId": 41326,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

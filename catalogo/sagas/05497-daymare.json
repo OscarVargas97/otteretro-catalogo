@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43077",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Daymare: 1994 Sandcastle",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "Daymare: 1994 Sandcastle",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Daymare: 1994 Sandcastle is a third-person story-driven survival horror game prequel to the critically acclaimed Daymare: 1998. Step into the shoes of agent Dalila Reyes, a former government spy now in the service of H.A.D.E.S. unit and prepare to face the true horror.",
           "source": "igdb",
           "manual": false
         },
@@ -95,9 +107,15 @@
       "originalName": "Daymare: 1998",
       "year": 2019,
       "igdbId": 23891,
-      "popularity": 28,
+      "popularity": 29,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "100412",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Daymare: 1998",
@@ -107,6 +125,12 @@
         {
           "field": "original_name",
           "value": "Daymare: 1998",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Daymare: 1998 is a third-person survival horror game that recreates the mood of iconic titles from the '90s, with a fresh storyline. An incident that turns a small town into a deadly zone, three characters to play with and little time to find the truth, before its mutated citizens abruptly end your mission.",
           "source": "igdb",
           "manual": false
         },
@@ -143,8 +167,33 @@
           "igdbId": 23891,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b761c0237639f01545ae49fd0ddbb1c2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/7dec175db60d4453dd7dc2aa4ce08bf9.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/e394c4fcf4858aeb877a99486c9c9418.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3468,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42103,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 16396,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

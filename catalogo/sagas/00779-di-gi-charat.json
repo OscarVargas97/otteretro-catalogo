@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Di Gi Charat: Di Gi Communication is a Miscellaneous game, developed by M2 and published by Broccoli, which was released in Japan in 2002.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -73,6 +79,12 @@
         {
           "field": "original_name",
           "value": "Di Gi Communication 2: Datou! Black GemaGema Dan!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Di Gi Communication 2: Datou! Black GemaGema Dan! is an Action game, developed by M2 and published by Broccoli, which was released in Japan in 2004.",
           "source": "igdb",
           "manual": false
         },
@@ -119,6 +131,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dejiko no Mahjong Party is a Game Boy Color game, published by King Records, which was released in Japan in 2000.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -149,6 +167,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84889",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Di Gi Charat Fantasy",
           "source": "igdb",
@@ -157,6 +181,12 @@
         {
           "field": "original_name",
           "value": "Di Gi Charat Fantasy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Di Gi Charat Fantasy is a visual novel adventure game developed and published by Broccoli. The PC version was released on February 22, 2001 and the Dreamcast version was released on September 6, 2001. The game was ported to PlayStation 2 on November 20, 2003 as Di Gi Charat Fantasy Excellent.",
           "source": "igdb",
           "manual": false
         },
@@ -174,7 +204,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 109070,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base del juego original japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de PC con teclado, menos cómodo para este estilo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Software antiguo, con problemas de compatibilidad en Windows moderno."
+            }
+          ]
         },
         {
           "id": 84889,
@@ -182,10 +233,66 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 203830,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Port de PS2 con contenido equivalente o ligeramente ampliado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con mando y guardado en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al juego original con pocos cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en PS2 o emulación."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/66e8748af8d7993a8df1f5fb1aa81e21.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f23fb90262d583ec0d1f8031e434a423.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ad4ac4f93d33053a3996af56c8f75ecc.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1119,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6698,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 34319,
+          "reason": "2001"
+        },
+        {
+          "position": 3,
+          "gameId": 2053,
+          "reason": "2002"
+        },
+        {
+          "position": 4,
+          "gameId": 2222,
+          "reason": "2004"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

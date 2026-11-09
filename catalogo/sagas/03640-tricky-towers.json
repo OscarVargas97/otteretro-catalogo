@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19190",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tricky Towers",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "Tricky Towers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tricky Towers is a multiplayer physics-based tower building game. In a game of Tricky Towers you stack your bricks to create a stable tower and try to topple those of your opponents. To spice it up you can cast magic to support your structure and fend off the dark spells of your rivals in this frantic physics party game.",
           "source": "igdb",
           "manual": false
         },
@@ -39,7 +51,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 21623,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todos los modos y desafíos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando y multijugador local."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Fluido y nítido."
+            }
+          ]
         },
         {
           "id": 19190,
@@ -48,7 +81,28 @@
           "year": 2016,
           "igdbId": 21623,
           "steamAppId": 437920,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todos los modos y desafíos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Admite teclado y mandos múltiples."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 19191,
@@ -56,7 +110,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 21623,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todos los modos y desafíos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Fluido y nítido."
+            }
+          ]
         },
         {
           "id": 19192,
@@ -64,7 +139,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 21623,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todos los modos y desafíos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ideal para partidas rápidas con Joy-Con."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución en modo portátil."
+            }
+          ],
+          "codes": [
+            "010015F005C8E000"
+          ]
         }
       ],
       "images": {
@@ -95,6 +194,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "\"Reverse Tetris\" physics puzzler, where the goal is to stack your bricks as high as possible.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -110,8 +215,31 @@
           "igdbId": 8619,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co43a1.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2995,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40890,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 9112,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

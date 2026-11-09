@@ -3,7 +3,7 @@
   "name": "The Last of Us",
   "igdbKind": "franchise",
   "igdbId": 2675,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -19,9 +19,15 @@
       "originalName": "The Last of Us",
       "year": 2013,
       "igdbId": 1009,
-      "popularity": 3628,
-      "iconic": false,
+      "popularity": 3629,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94862",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Last of Us",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "The Last of Us",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Last of Us is a third-person action-adventure game featuring a mix of exploration, stealth and combat. Players face both infected creatures and hostile human enemies while progressing through varied environments. The game includes a narrative-driven single-player campaign and a competitive online multiplayer mode called Factions. Trophy support is included, and additional downloadable content was made available separately.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Last of Us es un juego de acción y aventura en tercera persona que combina exploración, sigilo y combate. Los jugadores se enfrentan tanto a criaturas infectadas como a enemigos humanos hostiles mientras avanzan por entornos variados. El juego incluye una campaña para un jugador centrada en la narrativa y un modo multijugador competitivo en línea llamado Factions. Incluye soporte para trofeos, y el contenido descargable adicional se publicó por separado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,40 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1009,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base con Left Behind y multijugador, sin extras nuevos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles y apuntado más toscos; guardado normal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "La visión original sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "720p a 30 fps con cargas largas."
+            }
+          ],
+          "codes": [
+            "BCAS-25015",
+            "BCES-01584",
+            "BCES-01584/G",
+            "BCES-01585",
+            "BCES-01585/G/RSC",
+            "BCES-01585/RUS",
+            "BCJS-37010",
+            "BCJS-75004",
+            "BCKS-15013",
+            "BCUS-98174"
+          ]
         },
         {
           "id": 94807,
@@ -56,7 +107,28 @@
           "kind": "remaster",
           "year": 2014,
           "igdbId": 6036,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye Left Behind, multijugador y modo foto."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles originales con mejor estabilidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "1080p a 60 fps, cargas aún lentas."
+            }
+          ]
         },
         {
           "id": 94861,
@@ -65,7 +137,28 @@
           "year": 2023,
           "igdbId": 204350,
           "steamAppId": 1888930,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, con opciones gráficas extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen soporte de teclado y mando, aunque con menos pulido que PS5."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mismo remake fiel en historia."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Alto rendimiento posible, pero exigente y con errores arrastrados del lanzamiento."
+            }
+          ]
         },
         {
           "id": 94862,
@@ -73,7 +166,28 @@
           "kind": "remake",
           "year": 2022,
           "igdbId": 204350,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye Left Behind y muchas opciones de accesibilidad, sin multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Apuntado y movimiento modernos, DualSense y accesibilidad amplia."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mismo guion con visuales y animaciones renovados."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "4K/60 o 60 fps en rendimiento, cargas casi instantáneas."
+            }
+          ]
         },
         {
           "id": 94863,
@@ -81,9 +195,35 @@
           "kind": "remake",
           "year": 2022,
           "igdbId": 215089,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que la otra edición de PS5."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Igual de pulido, con DualSense y accesibilidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mismo remake fiel en historia."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Igual de sólido que la otra edición de PS5."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/769fda94fbd3dd567d4cf6e296226fc8.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ae5e9154ff3754a3a942ca2417701560.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1956768b78ac039215c9600c9691c572.png"
+      }
     },
     {
       "id": 40292,
@@ -95,6 +235,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96627",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Last of Us: Left Behind",
           "source": "igdb",
@@ -104,6 +250,18 @@
           "field": "original_name",
           "value": "The Last of Us: Left Behind",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Left Behind is the first single player DLC for the critically acclaimed survival horror game The Last of Us, developed by Naughty Dog.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Left Behind es el primer DLC para un jugador del aclamado juego de terror de supervivencia The Last of Us, desarrollado por Naughty Dog.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -130,7 +288,12 @@
           "igdbId": 219027,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cc8a1e447da4c7098997152ff86fabdc.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f95490b29665f1400527d32a286f63ad.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/67c706cb9127dbcd1376511e18ed403c.png"
+      }
     },
     {
       "id": 42108,
@@ -138,9 +301,15 @@
       "originalName": "The Last of Us Part II",
       "year": 2020,
       "igdbId": 26192,
-      "popularity": 1831,
-      "iconic": false,
+      "popularity": 1832,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "100494",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Last of Us Part II",
@@ -151,6 +320,18 @@
           "field": "original_name",
           "value": "The Last of Us Part II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Last of Us Part II is an action-adventure game set five years after the events of The Last of Us. The player traverses post-apocalyptic environments such as buildings and forests to advance the story. They can use firearms, improvised weapons, and stealth to defend against hostile humans and cannibalistic creatures infected by a mutated strain of the Cordyceps fungus. The game intermittently switches control between Ellie and Abby, and also briefly Joel in the opening sequence. The nimble nature of the player character introduces platforming elements, allowing the player to jump and climb to traverse environments and gain advantages during combat.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Last of Us Part II es un juego de acción y aventura ambientado cinco años después de los sucesos de The Last of Us. El jugador recorre entornos postapocalípticos, como edificios y bosques, para avanzar en la historia. Puede usar armas de fuego, armas improvisadas y sigilo para defenderse de humanos hostiles y de criaturas caníbales infectadas por una cepa mutada del hongo Cordyceps. El juego alterna el control entre Ellie y Abby, y brevemente también Joel en la secuencia inicial. La agilidad del personaje del jugador introduce elementos de plataformas, que le permiten saltar y escalar para desplazarse por los entornos y obtener ventajas en combate.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -194,8 +375,92 @@
           "igdbId": 277143,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f3949fa34208fe26a430aed32434ebc8.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/42ecf12411b5b8e910c45048f5aba5fe.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/cad44517b35950ca85cffe44458ff25a.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2000,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39686,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 40292,
+          "reason": "2014"
+        },
+        {
+          "position": 3,
+          "gameId": 42108,
+          "reason": "2020"
+        }
+      ]
+    },
+    {
+      "id": 3633,
+      "kind": "story",
+      "rationale": "La saga es una historia continua. Left Behind es una precuela: cuenta el pasado de Ellie con Riley, antes de los hechos del primer juego, y por eso va primero. Part II es la secuela.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40292,
+          "recommendedVersionId": 96627,
+          "reason": "Cronológicamente ocurre antes del viaje con Joel. Se recomienda la versión remaster de PS4, la más completa y estable."
+        },
+        {
+          "position": 2,
+          "gameId": 39686,
+          "recommendedVersionId": 94862,
+          "reason": "Historia principal. Se recomienda el remake de PS5 por sus mejoras técnicas y de accesibilidad. Hay dos entradas de remake en PS5 y elegí la primera."
+        },
+        {
+          "position": 3,
+          "gameId": 42108,
+          "recommendedVersionId": 100495,
+          "reason": "Secuela, cinco años después. Se recomienda el remaster de PS5 por el rendimiento y el modo extra No Return."
+        }
+      ]
+    },
+    {
+      "id": 3634,
+      "kind": "community",
+      "rationale": "La comunidad suele recomendar jugar el original, luego Left Behind y después Part II. Así Left Behind se disfruta con el contexto emocional del primer juego. Hay pocos juegos y no se deja ninguno fuera.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39686,
+          "recommendedVersionId": 94862,
+          "reason": "Punto de partida. El remake de PS5 es la versión más pulida para quien empieza hoy. Hay dos entradas de remake en PS5 y elegí la primera."
+        },
+        {
+          "position": 2,
+          "gameId": 40292,
+          "recommendedVersionId": 96627,
+          "reason": "Se juega tras terminar el primer juego, porque su final pesa más con ese contexto. Se recomienda el remaster de PS4, que es la mejor versión disponible en la lista."
+        },
+        {
+          "position": 3,
+          "gameId": 42108,
+          "recommendedVersionId": 100495,
+          "reason": "Cierre de la saga. Se recomienda el remaster de PS5 por las mejoras de rendimiento y el contenido adicional."
+        }
+      ]
+    }
+  ]
 }

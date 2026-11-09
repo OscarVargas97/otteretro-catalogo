@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1372",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Disney's The Jungle Book",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Disney's The Jungle Book",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Jungle Book game is based on a Disney movie hero Mowgli. It's a scrolling arcade action game. You play as Mowgli and your goal is to gather all gems and return to one of your friends or your mother. The jungle is full of the nasty animals and you have to make your way through it safely.",
           "source": "igdb",
           "manual": false
         },
@@ -104,6 +116,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Journey as Mowgli through wild jungles based on Walt Disney's The Jungle Book original animated film! Explore vivid worlds, encounter wild creatures, and challenge all the characters in the wild jungle like Baloo, Bagheera, Kaa, King Louie, Shere Khan, and more.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -125,5 +143,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2118,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 725,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 2561,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

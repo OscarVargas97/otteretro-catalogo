@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103095",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Stronghold",
           "source": "igdb",
@@ -69,7 +75,12 @@
           "steamAppId": 2140020,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b7f5170b0e88479b217050fa7b210f63.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1c7dd87c02f9a807c16c2923d1f9fdb6.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/b6367a0e7f50d49102061da87a53ee28.png"
+      }
     },
     {
       "id": 43357,
@@ -80,6 +91,12 @@
       "popularity": 184,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "103079",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Stronghold Crusader",
@@ -117,8 +134,47 @@
           "steamAppId": 40970,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/efe805948c443f4f23bd13c4b7eb0922.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/cd5b9bd38107ed5cf2f64639dd645a37.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/dba4c1a117472f6aca95211285d0587e.png"
+      },
+      "ports": [
+        {
+          "id": 395,
+          "platform": "pc",
+          "project": "OpenSHC",
+          "kind": "remake",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sourcehold/OpenSHC",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3436,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43351,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 43357,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97619",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hatoful Boyfriend",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Hatoful Boyfriend",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Congratulations! You've been accepted as the only human student at the prestigious St. PigeoNation's Institute, a school for talented birds! Roam the halls and find love in between classes as a sophomore student at the world's greatest pigeon high school. Finding happiness won't be easy, but it’s not all academic — there's always time for a little romance in this delightful remake of Hato Moa's popular visual novel / avian dating sim Hatoful Boyfriend!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 8874,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición ampliada con material adicional y una revisión del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo y control sencillo con el mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conserva la historia con retoques y añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más nítida y estable en pantalla grande."
+            }
+          ]
         },
         {
           "id": 97620,
@@ -57,7 +90,28 @@
           "year": 2011,
           "igdbId": 8874,
           "steamAppId": 310080,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión original con el contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Novela visual simple, cómoda con ratón, con pocas mejoras de uso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja y sin pulido moderno."
+            }
+          ]
         },
         {
           "id": 97621,
@@ -65,9 +119,35 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 8874,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Misma edición ampliada, con el contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ideal para jugar en portátil con guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mismos retoques y añadidos que la edición de PS4."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña y resolución menor que en PS4."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5f2b9e025f05eb5399adbf5c9ddf5def.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9d7f7160ba81eaf68f2834c8fbb71103.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f0f254331b4693742ea6cc1379b84e73.png"
+      }
     },
     {
       "id": 40942,
@@ -79,6 +159,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97817",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hatoful Boyfriend: Holiday Star",
           "source": "igdb",
@@ -87,6 +173,12 @@
         {
           "field": "original_name",
           "value": "Hatoful Boyfriend: Holiday Star",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The loveable birds of Hatoful Boyfriend are back in the remastered holiday-themed sequel Hatoful Boyfriend: Holiday Star! Travel to fantastically styled worlds, meet interesting new chickadees, and find romance in the elegantly designed winter wonderlands. Dust the snow off your wings and take flight with familiar faces and new friends alike in extraordinary adventures hatched from the whimsical mind of the series creator Hato Moa and developer Mediatonic!",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +215,32 @@
           "igdbId": 14397,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/07d47824d71d64f5a02962b40666f382.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/7bee424db269e7f9c5d0a68c7a635018.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3362,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40845,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 40942,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

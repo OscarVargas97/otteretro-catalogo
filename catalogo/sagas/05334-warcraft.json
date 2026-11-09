@@ -3,7 +3,7 @@
   "name": "Warcraft",
   "igdbKind": "franchise",
   "igdbId": 135,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2002,
       "igdbId": 132,
       "popularity": 1688,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "102330",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Warcraft III: Reign of Chaos",
@@ -48,7 +54,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 132,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Campañas originales sin ampliaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Interfaz 4:3 y sin mejoras modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y problemas en Windows actual."
+            }
+          ]
         },
         {
           "id": 102330,
@@ -56,9 +83,35 @@
           "kind": "remake",
           "year": 2020,
           "igdbId": 111650,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Campañas más cinemáticas nuevas y Battle.net."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Interfaz widescreen y matchmaking."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia arte y diálogos; modo clásico disponible."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Soporta 4K, con fallos pasados."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c8113305c0428b74ed3f1b6051520039.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d3d9446802a44259755d38e6d163e820.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6b03eab4f067cf8739e85bd408f05d94.png"
+      }
     },
     {
       "id": 42953,
@@ -69,6 +122,12 @@
       "popularity": 906,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "102345",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "World of Warcraft",
@@ -95,7 +154,28 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 123,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido de lanzamiento, sin servidores oficiales hoy."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sistemas arcaicos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Obsoleto en la práctica."
+            }
+          ]
         },
         {
           "id": 102329,
@@ -103,7 +183,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 75379,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión Classic de 2019 con fases de contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Fiel, con mejoras menores."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Servidores activos, gráficos antiguos."
+            }
+          ]
         },
         {
           "id": 102345,
@@ -111,7 +212,47 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 417650,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todo el contenido actual, no verificado en detalle."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Calidad de vida moderna."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Muy distinto del lanzamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Motor actual."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1ccc0ad70725fbdef023f6c431881114.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a1b63b36ba67b15d2f47da55cdb8018d.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/5236d2d466e7a1d9785a33e298a58c3c.png"
+      },
+      "ports": [
+        {
+          "id": 491,
+          "platform": "pc",
+          "project": "benilla",
+          "kind": "remake",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/samwhosung/benilla",
+          "source": "recompendium",
+          "added": "2026-11-05"
         }
       ]
     },
@@ -152,7 +293,12 @@
           "igdbId": 1279,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f30259f76102eefd8b482ee4b68b1ef7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6120d42c7249acb7b2cfcf020bf7ab75.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3e3c087258d37f185c2da83ef8904c7d.png"
+      }
     },
     {
       "id": 43337,
@@ -163,6 +309,12 @@
       "popularity": 176,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "103096",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Warcraft: Orcs & Humans",
@@ -199,8 +351,89 @@
           "igdbId": 322108,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/087b8b6312e6e1b432c7cb3e5b05beb5.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c646a3b8b24cb64c1314c03292fff0fd.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/900754f1e8feebb37ebba733828589bc.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1388,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43337,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 42946,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 42953,
+          "reason": "2004"
+        },
+        {
+          "position": 4,
+          "gameId": 42979,
+          "reason": "2014"
+        }
+      ]
+    },
+    {
+      "id": 3613,
+      "kind": "story",
+      "rationale": "La historia sigue de la Primera Guerra a Azeroth y la Plaga hasta el MMO. Hearthstone es un juego de cartas sin lugar propio en la cronología y se deja fuera.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43337,
+          "recommendedVersionId": 103096,
+          "reason": "Abre la historia con la invasión orca de Azeroth. Se recomienda el remaster por ser más cómodo de jugar hoy."
+        },
+        {
+          "position": 2,
+          "gameId": 42946,
+          "recommendedVersionId": 102330,
+          "reason": "Cuenta la Tercera Guerra: la Plaga, la Legión y la fundación de Theramore. Se recomienda la versión remake por ser la que sigue activa y actualizada."
+        },
+        {
+          "position": 3,
+          "gameId": 42953,
+          "reason": "Continúa la historia tras Warcraft III. La versión da igual para empezar, porque el servidor actual unifica la experiencia."
+        }
+      ]
+    },
+    {
+      "id": 3614,
+      "kind": "community",
+      "rationale": "Se suele empezar por Warcraft III, que cuenta lo esencial del lore y es la mejor puerta de entrada, y seguir con World of Warcraft. Se omiten Orcs & Humans, por antiguo, y Hearthstone, por ser un spin-off de cartas. No pude consultar la web en esta sesión, así que esta ruta se basa en mi conocimiento general y no cito fuentes.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42946,
+          "recommendedVersionId": 102330,
+          "reason": "Es el mejor punto de partida: su campaña explica el lore que usa WoW. Se recomienda el remake por ser la versión mantenida; el original también sirve."
+        },
+        {
+          "position": 2,
+          "gameId": 42953,
+          "reason": "Es la continuación directa y el centro de la saga. La versión da igual."
+        }
+      ]
+    }
+  ]
 }

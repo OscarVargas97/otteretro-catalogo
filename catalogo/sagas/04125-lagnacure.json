@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Sequel to Lagnacure, Lagnacure Legend takes place fifteen years after the first game's events, continuing on with the son of the main character from the first game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 93533,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-02832"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Lagnacure is a 3D isometric RPG where the player controls a group of characters.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -90,7 +105,12 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 213197,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCPS-45120",
+            "SLPS-01009",
+            "SLPS-02833"
+          ]
         }
       ],
       "images": {
@@ -98,5 +118,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3122,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26258,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 25654,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "33411",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wer Weiß Denn Sowas?: Das 2. Spiel",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Wer Weiß Denn Sowas?: Das 2. Spiel",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's time for round two, promising the best entertainment for you and your friends. Play in a team with Elton or compete alongside of Bernhard Hoëcker. You'll have to give your all in \"Wer weiß denn sowas?\" 30 new shows await you with exciting questions and answer videos.",
           "source": "igdb",
           "manual": false
         },
@@ -82,6 +94,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103784",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wer Weiß Denn Sowas?",
           "source": "igdb",
@@ -90,6 +108,12 @@
         {
           "field": "original_name",
           "value": "Wer Weiß Denn Sowas?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "With the official game based on the TV show, you can put your knowledge to the test. Play alongside Elton, Bernhard Hoëcker, or up to three friends. 30 complete shows with over 390 questions from more than 100 categories await you. You'll often be left wondering \"Who even knows these things?\"",
           "source": "igdb",
           "manual": false
         },
@@ -118,7 +142,10 @@
           "steamAppId": 782130,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5hsp.jpg"
+      }
     },
     {
       "id": 45558,
@@ -130,6 +157,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "107960",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wer weiß denn sowas?: Das 3. Spiel",
           "source": "igdb",
@@ -138,6 +171,12 @@
         {
           "field": "original_name",
           "value": "Wer weiß denn sowas?: Das 3. Spiel",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Just in time for the 11th season, Elton, Bernhard Hoëcker and Kai Pflaume are back on the PC with a brand new edition of WER WEISS DENN SOWAS?",
           "source": "igdb",
           "manual": false
         },
@@ -174,8 +213,36 @@
           "igdbId": 315657,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8rv5.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1749,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43869,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 13320,
+          "reason": "2019"
+        },
+        {
+          "position": 3,
+          "gameId": 45558,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

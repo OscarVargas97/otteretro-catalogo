@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2250",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Beetle Adventure Racing!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Beetle Adventure Racing!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Take control of a collection of the latest Volkswagen Beetle \"2.0\" models, from street type to off-road designs, and race across varying road types that will test your speed and endurance!\nFind shortcuts or use nitro boosts to finish first in order to move on to the next track. If the computer AI is to easy for you, battle against a friend in two player race mode or challenge up to 4 people in a special Battle Mode, with added abilities including weapons, from mines and rockets to magical elements, while collecting the flag and finding the exit!",
           "source": "igdb",
           "manual": false
         },
@@ -63,7 +75,37 @@
         "cover": "https://cdn2.steamgriddb.com/grid/a53eaf73493994af66b20f4596410adc.png",
         "hero": "https://cdn2.steamgriddb.com/hero/b8cb6b3e3fbbe240152724d977bb8fec.png",
         "logo": "https://cdn2.steamgriddb.com/logo/1b62d7b3f8f7235f93ac885532dbdf14.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 557,
+          "platform": "n64",
+          "project": "beetle-adventure-racing-recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/danielgomesvieira2000/beetle-adventure-racing-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 558,
+          "platform": "n64",
+          "project": "BeetleRecomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/bryankruman/BeetleRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     }
   ],
   "routes": []

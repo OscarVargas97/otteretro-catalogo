@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "116244",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Killer Instinct 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Killer Instinct 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Killer Instinct 2 follows on from the plot line that the previous installment ended with. Eyedol's death at the hands of Orchid accidentally sets off a time warp, transporting some of the combatants back in time and allowing the Demon Lord Gargos to escape from Limbo. Now, trapped 2000 years in the past, the warriors that survived Killer Instinct, along with several new faces, fight for the right to face Gargos in combat, but Chief Thunder, Cinder and Riptor did not return. Each character that survived the journey from the first game has a corresponding background story, while new characters on this installment are native inhabitants of this past time period. Some fighters, like T.J. Combo who survives from the original, just want to get home. Others, like new character Tusk, want to bring an end to Gargos and his reign of evil. This time there is no tournament or prize money, just a fight to the finish with the fate of the future hanging in the balance.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 10613,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de N64 con menos extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles adaptados al mando de N64."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port del arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y menos fluidez."
+            }
+          ]
         },
         {
           "id": 116244,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 106235,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye modos y extras modernos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Juego en línea y modo práctica."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al arcade con mejoras."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fluido."
+            }
+          ]
         }
       ],
       "images": {
@@ -75,6 +129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115723",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Killer Instinct",
           "source": "igdb",
@@ -83,6 +143,12 @@
         {
           "field": "original_name",
           "value": "Killer Instinct",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The legendary fighting game franchise is back with next-generation visuals, over-the-top action, a wild cast of combatants, rocking reactive music, and C-C-C-COMBO BREAKERS! Choose from amongst a wild cast of combatants each with fluid animations, unique combat tactics, and flashy special attacks. Utilize an open-ended combo system to rack up huge combos as your opponent looks for openings to break you and turn the tides of battle. Go online and test yourself against players from all over the world, or brush up on your combat skills in detailed tutorials.",
           "source": "igdb",
           "manual": false
         },
@@ -101,7 +167,28 @@
           "year": 2016,
           "igdbId": 10354,
           "steamAppId": 577940,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo con modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Buen juego en línea y controles configurables."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y rendimiento más flexibles."
+            }
+          ]
         },
         {
           "id": 115724,
@@ -109,10 +196,56 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 10354,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo con modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen juego en línea y controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena imagen y fluidez."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8617e5b11a7b27234df8332132f72268.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6aed000af86a084f9cb0264161e29dd3.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/bd6a06f41bae67be959e5b44addc880f.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2126,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1002,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 49053,
+          "reason": "2013"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

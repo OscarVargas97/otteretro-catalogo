@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "59430",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Spectator",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Spectator",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You are an observer tasked with monitoring surveillance footage for suspicious activity. This innocuous job soon takes a turn for the creepy, as anomalies begin to appear, from moving furniture... to them. Experience a real-time horror straight from horror-filled creepypastas!",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 216880,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100E1D019A3A000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +89,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "71325",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Spectator 2",
           "source": "igdb",
@@ -82,6 +103,12 @@
         {
           "field": "original_name",
           "value": "Spectator 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome to the world of Spectator 2 – the sequel to the gripping horror game Spectator! Brace yourself for new levels of atmospheric terror and captivating surveillance, you'll face even more chilling events and dangers as you carefully monitor cameras and report any suspicious occurrences.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +135,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 264629,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010023A0246E8000"
+          ]
         }
       ],
       "images": {
@@ -116,5 +146,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3044,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23570,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 28596,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

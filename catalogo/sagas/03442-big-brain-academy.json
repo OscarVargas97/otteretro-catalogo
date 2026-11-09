@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Brawl with Other Brains! The Wii sequel includes three multiplayer modes for up to eight players. You can also exchange training data with other players over WiiConnect24 and compete against their save data.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 4713,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RYWE-USA"
+          ]
         }
       ],
       "images": {
@@ -67,6 +76,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "52226",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Big Brain Academy: Batalla de Ingenio",
           "source": "igdb",
@@ -75,6 +90,12 @@
         {
           "field": "original_name",
           "value": "Big Brain Academy: Brain vs. Brain",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Battle to see who has the brawniest brain\n\nTake on a series of brain-bending activities that test your mental mettle in Big Brain Academy: Brain vs. Brain for the Nintendo Switch system! Play a wide variety of activities, like memorizing a series of numbers, identifying an animal as it slowly comes into focus, or helping guide a train to its goal in fun, fast activities. Go brain-to-brain with friends and family in 4-player* matches to see who gets the highest score. Everyone can play together at varying difficulties, so a kid can hold their own against an adult in this battle of the brains!\n\nTreat your brain to some quick mental fun\n\nGet your own Big Brain Brawn score with a fun test. Boost your skill and speed by practicing certain activities. Of course, you can also prep for your next multiplayer brain battle or compare scores with friends and family. Unlock dozens of outfit options for your in-game avatar—from a cat outfit to a corn costume!\n\nGo brain vs. brain against mind-masters near and far\n\nWant to see how you match up to brainiacs around the world? Hop into Ghost Clash mode to compete against other users’ data**. Choose from mental marvels worldwide, folks on your friend's list, or family members who have profiles on the same system. Outside of Ghost Clash mode, check your rankings to see how your Big Brain Brawn matches up against others.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +113,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 166489,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente, posibles ajustes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles, mejor respuesta."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con mejoras técnicas."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución y carga más rápida."
+            }
+          ]
         },
         {
           "id": 52227,
@@ -100,7 +142,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 166489,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base de Switch."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos para el juego."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución estándar de Switch."
+            }
+          ],
+          "codes": [
+            "0100620012D6E000"
+          ]
         }
       ],
       "images": {
@@ -110,5 +176,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2938,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19389,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 21252,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

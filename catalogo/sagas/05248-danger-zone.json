@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100681",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Danger Zone",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Danger Zone",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Danger Zone is an all new 3D vehicular destruction game, a genre we know well. The concept is simple : crash for cash by creating the biggest car crash.\n\nThe Danger Zone is a virtual Crash Testing Facility where players step into the shoes of a dangerous driver and are challenged to survive a variety of spectacular crash testing scenarios.\n\nIt’s easy to crash, but can you also grab all of the Bonus Pickups?\n\nPowered by Unreal Engine, Danger Zone combines real physical crashes with explosive gameplay. Shunt vehicles into oncoming traffic, take down trailers to shed their payloads and use your explosive “SmashBreaker” to move your vehicle around. The more explosions you cause, the bigger your score.\n\nIf you’re feeling burnt out by congestion and jammed roads, take the highway to the Danger Zone. Take your revenge on rush hour traffic. This place is a paradise for those who like their driving flame-grilled.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,10 @@
           "igdbId": 28242,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co23q3.jpg"
+      }
     },
     {
       "id": 43850,
@@ -79,6 +94,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103736",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Danger Zone 2",
           "source": "igdb",
@@ -87,6 +108,12 @@
         {
           "field": "original_name",
           "value": "Danger Zone 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Danger Zone 2 takes the crash testing action out of the Test Area and onto real public roads.\n\nA high speed driving game featuring speed, traffic and crashes, Danger Zone 2 lets players loose onto the Freeways of the USA, the Motorways of the UK and the Autovias of Spain.\n\nUsing advanced real world physics and the power of Unreal Engine, Danger Zone 2 lets players ‘crash for cash’ and compete against each other to cause the most chaos on the road.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +150,31 @@
           "igdbId": 104231,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co28qj.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3409,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42197,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 43850,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

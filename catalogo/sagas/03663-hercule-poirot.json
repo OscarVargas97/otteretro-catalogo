@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "52006",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Agatha Christie: Hercule Poirot - The First Cases",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Agatha Christie: Hercule Poirot - The First Cases",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Discover an untold crime story from the mysterious youth of the famous detective Hercule Poirot.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 159123,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010000F012936000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "68052",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Agatha Christie: Hercule Poirot - The London Case",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Agatha Christie: Hercule Poirot - The London Case",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Hercule Poirot is back in a brand-new adventure, set in the heart of London.",
           "source": "igdb",
           "manual": false
         },
@@ -158,7 +185,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 246262,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01002FD01A24C000"
+          ]
         }
       ],
       "images": {
@@ -167,5 +197,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3001,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 21191,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 27566,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

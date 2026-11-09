@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "23266",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Demon Crystal",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Demon Crystal",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Originally released in 1984 for the MZ-1500.\n\nFrom MobyGames:\nDemon Crystal is an action puzzle game. Scattered around the stage are numerous keys which help open locked areas. The goal is to find the big key which is needed to open the exit and advance to the next stage. Ares' only weapon is a limited number of bombs, which explode in a flame and can kill multiple enemies at once. The game consists of 30 stages (houses).",
           "source": "igdb",
           "manual": false
         },
@@ -88,6 +100,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Originally released in 1986 on the MZ-1500 and FM-7.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1986",
           "source": "igdb",
@@ -127,6 +145,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Originally released in 1987 as Dark Storm for the MZ-1500",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1987",
           "source": "igdb",
@@ -145,5 +169,30 @@
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1692,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10211,
+          "reason": "1985"
+        },
+        {
+          "position": 2,
+          "gameId": 12620,
+          "reason": "1986"
+        },
+        {
+          "position": 3,
+          "gameId": 12623,
+          "reason": "1987"
+        }
+      ]
+    }
+  ]
 }

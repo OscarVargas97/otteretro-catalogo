@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "117012",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Doodle Harmony",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Doodle Harmony",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Find and match 100 cute doodle pairs scattered all over the screen in this point-and-click game. Can you match them all",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2023,
           "igdbId": 267284,
           "steamAppId": 2606760,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón o pantalla táctil ideales para este tipo de juego."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Rendimiento y carga excelentes."
+            }
+          ]
         },
         {
           "id": 117013,
@@ -57,9 +90,33 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 267284,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Solo mando, menos natural para este género."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien, con cargas algo más lentas."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7c12.jpg"
+      }
     }
   ],
   "routes": []

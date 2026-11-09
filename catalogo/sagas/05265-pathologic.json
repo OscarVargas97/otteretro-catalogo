@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101122",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pathologic 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Pathologic 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pathologic 2 is a reimagining of the original, focused on the Haruspex, Artemy Burakh. You return to your plague-stricken hometown as a surgeon-healer caught between local kinship traditions, colonial urban power, impossible medicine, hunger, exhaustion, and a clock that never stops. Compared with the 2005 game, it is more mechanically coherent and cinematic, but still intentionally punishing: you are meant to triage, fail, compromise, and live with irreversible consequences.",
           "source": "igdb",
           "manual": false
         },
@@ -66,7 +78,12 @@
           "igdbId": 55322,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d2b9d7150a1f6693817d82d4ca9b701d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/acaf74112ddf8ccdaa0811c7732cfabf.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/7c5feb07041100d3cf5e2e86613f8d87.png"
+      }
     },
     {
       "id": 47285,
@@ -78,6 +95,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112195",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pathologic 3",
           "source": "igdb",
@@ -86,6 +109,12 @@
         {
           "field": "original_name",
           "value": "Pathologic 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pathologic 3 is a psychological horror game in which you play Daniil Dankovsky, a rationalist doctor trying to defeat death itself as the same doomed town collapses around him. It is a standalone follow-up to Pathologic 2 and a reimagining of the Bachelor route from the original Pathologic, rather than a direct sequel or prequel. Its major new distinction is time manipulation: the premise remains a 12-day plague crisis, but the Bachelor can revisit and alter key events, reflecting his obsession with control, causality, and conquering death.",
           "source": "igdb",
           "manual": false
         },
@@ -122,8 +151,33 @@
           "igdbId": 319087,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/720a0f7aad108d5e8103dd1d0e9b2748.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/9d3daef2abbfe68e1ec9e46ff405b0a9.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/2ccbfdd8489c28b8d9ce1096665b1db9.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3413,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42383,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 47285,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

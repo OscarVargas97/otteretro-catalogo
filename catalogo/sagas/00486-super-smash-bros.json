@@ -3,7 +3,7 @@
   "name": "Super Smash Bros.",
   "igdbKind": "collection",
   "igdbId": 325,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2236",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Smash Bros.",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Super Smash Bros.",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Smash Bros. is a crossover fighting video game between several different Nintendo franchises, and the first installment in the Super Smash Bros. series. Players must defeat their opponents multiple times in a fighting frenzy of items and power-ups. Super Smash Bros. is a departure from the general genre of fighting games: instead of depleting an opponent's life bar, the players seek to knock opposing characters off a stage. Each player has a damage total, represented by a percentage, which rises as the damage is taken.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Smash Bros. es un videojuego de lucha de crossover entre varias franquicias distintas de Nintendo, y la primera entrega de la serie Super Smash Bros. Los jugadores deben derrotar a sus oponentes varias veces en un frenesí de combate con objetos y potenciadores. Super Smash Bros. se aparta del género habitual de los juegos de lucha: en lugar de agotar la barra de vida del oponente, los jugadores intentan sacar del escenario a los personajes rivales. Cada jugador tiene un total de daño, representado por un porcentaje, que sube a medida que recibe golpes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 1626,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado sencillo y mandos clásicos, pero sin vibración."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con ligeras diferencias de emulación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más limpia con emulación estable."
+            }
+          ]
         },
         {
           "id": 2236,
@@ -56,14 +95,82 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 1626,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control nativo con vibración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja y 60 fps variables en hardware viejo."
+            }
+          ],
+          "codes": [
+            "NALE",
+            "NALP",
+            "NALU"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/aedfc9ce6f9548cae0642eb628fa23c7.png",
         "hero": "https://cdn2.steamgriddb.com/hero/d1aa227de516e4617cc72ab9cf456380.png",
         "logo": "https://cdn2.steamgriddb.com/logo/c7af0926b294e47e52e46cfebe173f20.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 408,
+          "platform": "n64",
+          "project": "BattleShip",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/JRickey/BattleShip",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1151,
+          "platform": "n64",
+          "project": "smash64r",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/zestydevy/smash64r",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1457,
+          "platform": "n64",
+          "project": "ssb-decomp-re",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/VetriTheRetri/ssb-decomp-re",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 4309,
@@ -87,6 +194,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Smash Bros. for Nintendo 3DS is the first portable entry in the renowned series, in which game worlds collide. Up to four players battle each other locally or online using some of Nintendo’s most well-known and iconic characters across beautifully designed stages inspired by classic portable Nintendo games. It’s a genuine, massive Super Smash Bros. experience that’s available to play on the go, anytime, anywhere.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Smash Bros. para Nintendo 3DS es la primera entrega portátil de la aclamada serie, en la que los mundos de los videojuegos chocan entre sí. Hasta cuatro jugadores se enfrentan entre sí en local o en línea, usando algunos de los personajes más conocidos e icónicos de Nintendo, en escenarios de diseño cuidado inspirados en los clásicos juegos portátiles de Nintendo. Es una experiencia de Super Smash Bros. auténtica y enorme, disponible para jugar en cualquier momento y lugar.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -100,7 +219,12 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 9621,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AXCE",
+            "CTR-P-AXCK",
+            "CTR-P-AXCP"
+          ]
         }
       ],
       "images": {
@@ -131,6 +255,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Smash Bros. for Wii U is the fourth console-based entry in the popular Super Smash Bros. series of fighting games. With an even larger roster of fighters than its predecessors and the introduction eight player battles, Smash for Wii U continues to add to the formula that gamers have loved since 1999.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Smash Bros. para Wii U es la cuarta entrega para consola de la popular serie de juegos de lucha Super Smash Bros. Con una plantilla de luchadores aún más amplia que sus predecesores y la introducción de combates de ocho jugadores, Smash para Wii U sigue ampliando la fórmula que los jugadores han disfrutado desde 1999.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -151,7 +287,23 @@
         "cover": "https://cdn2.steamgriddb.com/grid/5b2133764ba9ee4e211cf50a7e3c86f5.png",
         "hero": "https://cdn2.steamgriddb.com/hero/3472ab80b6dff70c54758fd6dfc800c2.png",
         "logo": "https://cdn2.steamgriddb.com/logo/bc573864331a9e42e4511de6f678aa83.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1152,
+          "platform": "wiiu",
+          "project": "Smash4PC",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/josiahg2502-glitch/Smash4PC",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Cemu",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 11393,
@@ -159,7 +311,7 @@
       "originalName": "Super Smash Bros. Ultimate",
       "year": 2018,
       "igdbId": 90101,
-      "popularity": 967,
+      "popularity": 968,
       "iconic": false,
       "fields": [
         {
@@ -172,6 +324,18 @@
           "field": "original_name",
           "value": "Super Smash Bros. Ultimate",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Smash Bros. Ultimate is a crossover fighting game for the Nintendo Switch and the fifth main entry in the series. It features every playable fighter from previous installments alongside new additions such as Inkling and Ridley. The game includes faster combat, new items, and expanded defensive mechanics. Modes include local and online multiplayer, a single-player adventure mode called World of Light, and various casual and competitive rulesets.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Smash Bros. Ultimate es un juego de lucha de crossover para Nintendo Switch y la quinta entrega principal de la serie. Incluye a todos los luchadores jugables de las entregas anteriores, junto con nuevas incorporaciones como Inkling y Ridley. El juego ofrece combates más rápidos, nuevos objetos y mecánicas defensivas ampliadas. Sus modos incluyen multijugador local y en línea, un modo aventura para un jugador llamado World of Light, y diversos conjuntos de reglas casuales y competitivas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -188,14 +352,47 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 90101,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01006A800016E000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/2ef85f2ae5e56041ded26f67e18136be.png",
         "hero": "https://cdn2.steamgriddb.com/hero/d9db2bba49b1f97833bd51b102e9a790.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/f9aceeacd04f4eba8b36012486d63a75.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1155,
+          "platform": "switch",
+          "project": "WindowSmash",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/OpenSmash-Ultimate/WindowSmash",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1156,
+          "platform": "switch",
+          "project": "ssbu-recomp",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/OpenSmash-Ultimate/ssbu-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        }
+      ]
     },
     {
       "id": 16474,
@@ -204,7 +401,7 @@
       "year": 2001,
       "igdbId": 1627,
       "popularity": 1112,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -216,6 +413,18 @@
           "field": "original_name",
           "value": "Super Smash Bros. Melee",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A crossover platform fighting game featuring characters from Nintendo franchises including Mario, The Legend of Zelda, Star Fox, Pokémon, and Fire Emblem. Unlike traditional fighters, the goal is to knock opponents off the stage rather than deplete a health bar. Damage accumulates as a percentage, increasing the distance a character is launched when hit. Players use simple one-button inputs combined with joystick directions to execute moves. The game supports up to four players simultaneously and includes various single-player modes alongside its multiplayer focus. Its fast-paced, aggressive gameplay fostered a long-running competitive esports scene that persisted well beyond the game's original lifespan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un juego de lucha de plataformas y crossover con personajes de franquicias de Nintendo como Mario, The Legend of Zelda, Star Fox, Pokémon y Fire Emblem. A diferencia de los juegos de lucha tradicionales, el objetivo es sacar a los oponentes del escenario en lugar de agotar una barra de salud. El daño se acumula como porcentaje, lo que aumenta la distancia a la que sale disparado un personaje cuando recibe un golpe. Los jugadores usan combinaciones sencillas de un solo botón con direcciones del joystick para ejecutar movimientos. El juego admite hasta cuatro jugadores simultáneamente e incluye varios modos para un jugador junto a su enfoque multijugador. Su jugabilidad rápida y agresiva dio lugar a una larga escena de esports competitivos que perduró mucho más allá de la vida útil original del juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -232,14 +441,92 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 1627,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GALE-KOR",
+            "DL-DOL-GALE-USA",
+            "DL-DOL-GALP-EUR",
+            "DL-DOL-GALP-EUR-01"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/6bc12f11f086c6c9dd8d09f936775fce.png",
         "hero": "https://cdn2.steamgriddb.com/hero/d1a2a78180205c620020b4a4629607b2.png",
         "logo": "https://cdn2.steamgriddb.com/logo/20f817b9520d57dd7b9f725537816cbb.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 241,
+          "platform": "gc",
+          "project": "melee-pc",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/999sian/melee-pc",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 409,
+          "platform": "gc",
+          "project": "melee-unlocked",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Hero88go/melee-unlocked",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1153,
+          "platform": "gc",
+          "project": "melee-ace-unlocked",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sennecaelen/melee-ace-unlocked",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1154,
+          "platform": "gc",
+          "project": "YAMPP",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sonsegajp/YAMPP",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1456,
+          "platform": "gc",
+          "project": "melee",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/doldecomp/melee",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 19422,
@@ -263,6 +550,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Smash Bros. Brawl is the third installment in the Super Smash Bros. series and the follow-up to Super Smash Bros. Melee. This edition introduces super attacks referred to as final smashes, as well as a brand-new adventure mode in The Subspace Emissary which is a side-scrolling adventure in the style of a platformer. It retains all basic mechanics of the Super Smash Bros. series, such as a damage meter, stocks, and Smash-style attacks.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Smash Bros. Brawl es la tercera entrega de la serie Super Smash Bros. y la continuación de Super Smash Bros. Melee. Esta edición introduce ataques especiales llamados \"final smashes\", así como un modo aventura completamente nuevo, The Subspace Emissary, que es una aventura de desplazamiento lateral al estilo de los juegos de plataformas. Conserva todas las mecánicas básicas de la serie Super Smash Bros., como el medidor de daño, las vidas y los ataques al estilo Smash.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -276,15 +575,151 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1628,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RSBE-USA",
+            "RVL-RSBE-USA-2",
+            "RVL-RSBE-USA-E0",
+            "RVL-RSBP-EUR",
+            "RVL-RSBP-EUR-1",
+            "RVL-RSBP-EUR-E0"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/d24296a1f65e4eedeb7b0426f1411cba.png",
         "hero": "https://cdn2.steamgriddb.com/hero/a019af77fec797e53a29ce057455df30.png",
         "logo": "https://cdn2.steamgriddb.com/logo/c6f32964ed71a81a16b0c3e047350c06.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1455,
+          "platform": "wii",
+          "project": "brawl",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/doldecomp/brawl",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 715,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1193,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 16474,
+          "reason": "2001"
+        },
+        {
+          "position": 3,
+          "gameId": 19422,
+          "reason": "2008"
+        },
+        {
+          "position": 4,
+          "gameId": 4309,
+          "reason": "2014"
+        },
+        {
+          "position": 5,
+          "gameId": 7807,
+          "reason": "2014"
+        },
+        {
+          "position": 6,
+          "gameId": 11393,
+          "reason": "2018"
+        }
+      ]
+    },
+    {
+      "id": 3595,
+      "kind": "story",
+      "rationale": "Smash Bros. no tiene una historia continua: cada entrega es un crossover independiente. Se repite el orden de lanzamiento. Se omite la versión de Wii del primer juego (1193 solo tiene ese lanzamiento en N64 en su catálogo original).",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1193,
+          "recommendedVersionId": 2236,
+          "reason": "Primer juego de la saga; la versión original de N64 es la de referencia."
+        },
+        {
+          "position": 2,
+          "gameId": 16474,
+          "recommendedVersionId": 43393,
+          "reason": "Segunda entrega, en GameCube; solo hay una versión."
+        },
+        {
+          "position": 3,
+          "gameId": 19422,
+          "recommendedVersionId": 48391,
+          "reason": "Tercera entrega, en Wii; incluye el modo historia Emisario Subespacial."
+        },
+        {
+          "position": 4,
+          "gameId": 4309,
+          "recommendedVersionId": 8560,
+          "reason": "Cuarta entrega, versión portátil en 3DS."
+        },
+        {
+          "position": 5,
+          "gameId": 7807,
+          "recommendedVersionId": 14602,
+          "reason": "Cuarta entrega, versión de sobremesa en Wii U."
+        },
+        {
+          "position": 6,
+          "gameId": 11393,
+          "recommendedVersionId": 26952,
+          "reason": "Quinta entrega, la más reciente y completa, en Switch."
+        }
+      ]
+    },
+    {
+      "id": 3596,
+      "kind": "community",
+      "rationale": "Se recomienda empezar y quedarse en Ultimate, que reúne a todos los luchadores y tiene la mejor base de jugadores. Después, jugar Melee y Brawl como opcionales por su valor histórico. Se omiten el original de N64 y las versiones de 3DS y Wii U porque Ultimate las supera. No pude consultar fuentes web en esta sesión, así que esto se basa en mi conocimiento general.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11393,
+          "recommendedVersionId": 26952,
+          "reason": "Mejor punto de entrada: todos los luchadores, muchos escenarios y modos, y comunidad activa."
+        },
+        {
+          "position": 2,
+          "gameId": 16474,
+          "recommendedVersionId": 43393,
+          "reason": "Opcional: clásico competitivo con gran legado; solo hay una versión."
+        },
+        {
+          "position": 3,
+          "gameId": 19422,
+          "recommendedVersionId": 48391,
+          "reason": "Opcional: por el Emisario Subespacial, el modo historia más completo de la saga."
+        }
+      ]
+    }
+  ]
 }

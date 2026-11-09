@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Tokyo Bus Guide is a bus driving simulation for the Sega Dreamcast.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 72903,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/325c4f0846767291e447a7b9cf3d2ba2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0680ef953590f207e87da1da47101849.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5ee119b25901a726d0dc2d2e6d5d63d5.png"
+      }
     },
     {
       "id": 34150,
@@ -89,8 +100,31 @@
           "igdbId": 79635,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8z56.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3239,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33926,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 34150,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

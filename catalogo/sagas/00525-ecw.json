@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2462",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "ECW Hardcore Revolution",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "ECW Hardcore Revolution",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Often imitated, never duplicated, ECW Hardcore Revolution takes you to Hell and back with the most intense hardcore wrestling action the human body can endure. Remember, scars never heal. Debut of over 40 hardcore ECW stars including Rob Van Dam, Sabu, Tommy Dreamer, Raven, Mike Awesome, Francine and New Jack! Real gutter-mouth crowd chants and commentary from ECW's Joey Styles. Brutal finishers and chair shots. \"3-Way Dance\" plus over 20 game modes!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,12 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3483,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NWID",
+            "NWIE",
+            "NWIP"
+          ]
         },
         {
           "id": 2463,
@@ -56,7 +73,13 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3483,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02535",
+            "SLES-02536",
+            "SLUS-01045",
+            "SLUS-81045"
+          ]
         },
         {
           "id": 2726,
@@ -72,7 +95,82 @@
         "hero": "https://cdn2.steamgriddb.com/hero/577ce6c6a40dd525dffb99e780a08a1b.png",
         "logo": "https://cdn2.steamgriddb.com/logo/237fe40996eac2622f184361a0d1ae85.png"
       }
+    },
+    {
+      "id": 25685,
+      "nameEs": "ECW Anarchy Rulz",
+      "originalName": "ECW Anarchy Rulz",
+      "year": 2000,
+      "igdbId": 72029,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "ECW Anarchy Rulz",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "ECW Anarchy Rulz",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Acclaim brings its third wrestling title to the Dreamcast with ECW: Anarchy Rulz. More than 60 ECW wrestlers are included in the game including Dusty Rhodes, The Sandman, and Masato Tanaka. Choose from any of the available wrestlers or create your own jump into the action in any one of the more than 25 modes of play.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2000",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 64041,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 2000,
+          "igdbId": 72029,
+          "criteria": [],
+          "codes": [
+            "SLES-02823",
+            "SLES-03069",
+            "SLUS-01169"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/73ec89bb30ae22ae20f23bf59b763f86.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/18193913dd17681d584ecd22d7966392.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/0c96eaa650b5363558e0f88cd59b2f29.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2160,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1315,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 25685,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

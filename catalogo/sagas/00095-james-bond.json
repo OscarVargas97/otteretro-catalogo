@@ -3,7 +3,7 @@
   "name": "James Bond",
   "igdbKind": "franchise",
   "igdbId": 37,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "230",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "James Bond Jr.",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "James Bond Jr.",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This adaptation of the animated TV series differs significantly from its NES namesake. The nephew of Agent 007 must foil the plans of malevolent S.C.U.M. agents, who are hunting for rare artifacts that would allow them to dominate the world. Unlike the NES game, this version is a more action-oriented side-scrolling game without detailed mission objectives or puzzle-solving.\n\nThe game consists of three levels, each beginning with a section in which Bond pilots a helicopter, a boat, and a jet, respectively. These are controlled in arcade-like fashion, similarly to side-scrolling shooters. Enemies must be dealt with using weapons mounted on the craft. Various hazards are scattered through the stages, requiring the player to react quickly in order to stay alive.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Esta adaptación de la serie animada difiere notablemente de su homónimo de NES. El sobrino del agente 007 debe frustrar los planes de los malvados agentes de S.C.U.M., que buscan artefactos raros con los que dominar el mundo. A diferencia del juego de NES, esta versión es un juego de desplazamiento lateral más orientado a la acción, sin objetivos de misión detallados ni resolución de puzles.\n\nEl juego consta de tres niveles, cada uno de los cuales comienza con una sección en la que Bond pilota, respectivamente, un helicóptero, un bote y un jet. Se controlan de forma arcade, similar a los shooters de desplazamiento lateral. Los enemigos deben eliminarse con armas montadas en las naves. Hay diversos peligros repartidos por las fases, que exigen reaccionar rápidamente para seguir con vida.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -72,8 +90,14 @@
       "year": 1997,
       "igdbId": 1638,
       "popularity": 423,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "2845",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "GoldenEye 007",
@@ -84,6 +108,18 @@
           "field": "original_name",
           "value": "GoldenEye 007",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "GoldenEye 007 is a first-person shooter based on the 1995 James Bond film. The game features a single-player campaign with 20 missions across multiple difficulty levels, emphasizing stealth, varied objectives and mission-based progression. Players can use a range of weapons and gadgets while navigating diverse environments inspired by the movie.\n\nThe local split-screen multiplayer mode supports up to four players and offers competitive scenarios such as deathmatch, team modes and character selection from the James Bond universe. The multiplayer component became widely recognized for its influence on console FPS design and is considered a landmark feature of the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "GoldenEye 007 es un shooter en primera persona basado en la película de James Bond de 1995. El juego ofrece una campaña para un jugador con 20 misiones en varios niveles de dificultad, con énfasis en el sigilo, objetivos variados y progresión por misiones. Los jugadores pueden usar una variedad de armas y gadgets mientras recorren entornos diversos inspirados en la película.\n\nEl modo multijugador en pantalla dividida local admite hasta cuatro jugadores y ofrece escenarios competitivos como combate a muerte por equipos, modos por equipos y selección de personajes del universo James Bond. El componente multijugador se hizo muy conocido por su influencia en el diseño de los shooters de consola y se considera una característica emblemática del juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -100,7 +136,33 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 1638,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Campaña y multijugador local completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles de N64 y cuadros bajos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Baja resolución y cuadros inestables."
+            }
+          ],
+          "codes": [
+            "NGEE",
+            "NGEJ",
+            "NGEP"
+          ]
         },
         {
           "id": 2808,
@@ -108,7 +170,33 @@
           "kind": "remake",
           "year": 2010,
           "igdbId": 1647,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Reimaginación con Daniel Craig y modos nuevos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buenos controles y puntería moderna."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Historia y niveles muy cambiados."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto en Wii."
+            }
+          ],
+          "codes": [
+            "RVL-SJBE-USA-B0",
+            "RVL-SJBJ-JPN-B0",
+            "RVL-SJBP-EUR-B0"
+          ]
         },
         {
           "id": 2845,
@@ -116,7 +204,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 233877,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con multijugador en línea y logros."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido, rebobinado y controles modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel al original de N64."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y 60 fps estables."
+            }
+          ]
         },
         {
           "id": 2846,
@@ -124,14 +233,56 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 233877,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido y modos en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mismas mejoras de comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel al original de N64."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena, con menos resolución que Series."
+            }
+          ]
         },
         {
           "id": 2891,
           "platform": "x360",
           "kind": "remaster",
           "igdbId": 143406,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Remaster XBLA cancelado, solo versión filtrada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles modernos pero inestable."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Pretendía ser fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Build incompleto no oficial."
+            }
+          ]
         },
         {
           "id": 47086,
@@ -139,7 +290,37 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 144476,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión de DS recortada, con campaña corta."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles táctiles aceptables."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Sigue la versión de 2010, no la de N64."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos limitados de DS."
+            }
+          ],
+          "codes": [
+            "BJCD",
+            "BJCE",
+            "BJCF",
+            "BJCI",
+            "BJCP",
+            "BJCS",
+            "BJCZ"
+          ]
         },
         {
           "id": 48678,
@@ -147,7 +328,28 @@
           "kind": "remaster",
           "year": 2011,
           "igdbId": 1651,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Reloaded con modos y multijugador en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles de shooter modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Ambientado con Craig y muy modificado."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD, pero el multijugador ya no está activo."
+            }
+          ]
         },
         {
           "id": 48679,
@@ -155,14 +357,91 @@
           "kind": "remaster",
           "year": 2011,
           "igdbId": 1651,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Reloaded con modos y multijugador en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles de shooter modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Ambientado con Craig y muy modificado."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD estable, con retrocompatibilidad."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/f0971d67a49ade9bab406f7664e8129d.png",
         "hero": "https://cdn2.steamgriddb.com/hero/d91d1b4d82419de8a614abce9cc0e6d4.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/c77cfd5563c8ec4bfcde94c09098ba84.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 172,
+          "platform": "n64",
+          "project": "goldeneye-pc-port",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/jkdansereau/goldeneye-pc-port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 173,
+          "platform": "n64",
+          "project": "Project-Midas",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/murkantor/Project-Midas",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 758,
+          "platform": "n64",
+          "project": "GoldenEye64Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/cblock85/GoldenEye64Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 761,
+          "platform": "n64",
+          "project": "GoldenRecomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/kholdfuzion/GoldenRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1362,
@@ -174,6 +453,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2546",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "James Bond 007: The World Is Not Enough",
           "source": "igdb",
@@ -183,6 +468,18 @@
           "field": "original_name",
           "value": "James Bond 007: The World Is Not Enough",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The World Is Not Enough is a first-person shooter video game developed by Eurocom and based on the 1999 James Bond film of the same name. It was published by Electronic Arts and released for the Nintendo 64 on October 17, 2000, shortly before the release of its PlayStation counterpart. The game features a single-player campaign in which players assume the role of MI6 agent James Bond as he fights to stop a terrorist from triggering a nuclear meltdown in the waters of Istanbul. It includes a split-screen multiplayer mode where up to four players can compete in different types of deathmatch and objective-based games.\n\nThe game runs on an engine that was adapted to take advantage of the Nintendo 64 strengths. Although Eurocom used original production material to recreate the environments of the film, the company added elements to help the game design, including a mission which takes place in the London Underground. The game supports the Nintendo 64 Expansion Pak, which provides enhanced graphics and visual effects, but a Controller Pak is required to save the player's progress through the game.\n\nThe World Is Not Enough received generally positive reviews from critics and was frequently compared to Rare's Nintendo 64 first-person shooters GoldenEye 007 and Perfect Dark. It was also considered superior to its PlayStation counterpart because of its level design and inclusion of a multiplayer mode. Critics generally praised the game's graphics and smooth frame rate, but criticized its weak and inconsistent enemy artificial intelligence. In the United States, the game sold more than one million copies.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The World Is Not Enough es un videojuego de disparos en primera persona desarrollado por Eurocom y basado en la película de James Bond de 1999 del mismo nombre. Fue publicado por Electronic Arts y lanzado para Nintendo 64 el 17 de octubre de 2000, poco antes del lanzamiento de su versión para PlayStation. El juego incluye una campaña para un jugador en la que asumes el papel del agente del MI6 James Bond, que trata de impedir que un terrorista provoque una fusión nuclear en las aguas de Estambul. Incluye un modo multijugador en pantalla dividida en el que hasta cuatro jugadores pueden competir en distintos tipos de deathmatch y juegos basados en objetivos.\n\nEl juego funciona con un motor adaptado para aprovechar los puntos fuertes de la Nintendo 64. Aunque Eurocom utilizó material original de producción para recrear los escenarios de la película, la compañía añadió elementos para ayudar al diseño del juego, entre ellos una misión que transcurre en el metro de Londres. El juego es compatible con el Expansion Pak de Nintendo 64, que ofrece gráficos y efectos visuales mejorados, pero se necesita un Controller Pak para guardar el progreso del jugador.\n\nThe World Is Not Enough recibió críticas generalmente positivas y se comparó con frecuencia con los shooters en primera persona de Rare para Nintendo 64, GoldenEye 007 y Perfect Dark. También se consideró superior a su versión para PlayStation gracias a su diseño de niveles y a la inclusión de un modo multijugador. Los críticos elogiaron en general los gráficos y la fluidez de la tasa de fotogramas, pero criticaron la inteligencia artificial enemiga, débil e inconsistente. En Estados Unidos, el juego vendió más de un millón de copias.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -232,6 +529,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44183",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "James Bond 007: Nightfire",
           "source": "igdb",
@@ -241,6 +544,18 @@
           "field": "original_name",
           "value": "James Bond 007: Nightfire",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "007: Nightfire is a first-person shooter featuring the character of the British secret agent James Bond and a sequel to Agent Under Fire. The game marked Pierce Brosnan's fourth appearance as James Bond before the release of his fourth and final Bond film Die Another Day. His likeness was featured in the game, but not his voice, which was provided by Maxwell Caulfield. Overall there are many weapons that the player can carry including grenades of various sorts and other types of explosives. In addition, there are numerous amounts of mounted weapons found throughout the game. As with previous James Bond games, the weapons that appear are based on actual weapons, but with the names changed. Some weapons appear in the console version but not the PC version, and vice-versa.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "007: Nightfire es un shooter en primera persona protagonizado por el agente secreto británico James Bond y secuela de Agent Under Fire. El juego marcó la cuarta aparición de Pierce Brosnan como James Bond, antes del estreno de su cuarta y última película de Bond, Die Another Day. Su parecido físico aparece en el juego, pero no su voz, que corrió a cargo de Maxwell Caulfield. En conjunto, el jugador puede llevar muchas armas, incluidas granadas de distintos tipos y otros explosivos. Además, a lo largo del juego se encuentran numerosas armas montadas. Como en los juegos anteriores de James Bond, las armas que aparecen se basan en armas reales, pero con los nombres cambiados. Algunas armas aparecen en la versión para consola pero no en la de PC, y viceversa.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -303,8 +618,14 @@
       "year": 2004,
       "igdbId": 1644,
       "popularity": 55,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "4840",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "James Bond 007: Everything or Nothing",
@@ -315,6 +636,18 @@
           "field": "original_name",
           "value": "James Bond 007: Everything or Nothing",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Returning as James Bond is Pierce Brosnan, who will lend his cyberscanned likeness and voice to the character. The rest of the cast will include new Bond girls (Shannon Elizabeth and Heidi Klum) as well as old and new Bond villains. The original script will take players through exciting locales in four continents including the Valley of the Kings in Egypt and the French Quarter in New Orleans.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Regresa como James Bond Pierce Brosnan, que prestará su semejanza y su voz escaneadas digitalmente al personaje. El resto del reparto incluirá nuevas chicas Bond (Shannon Elizabeth y Heidi Klum), así como villanos de Bond antiguos y nuevos. El guion original llevará a los jugadores por escenarios emocionantes en cuatro continentes, entre ellos el Valle de los Reyes en Egipto y el Barrio Francés de Nueva Orleans.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -372,6 +705,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6812",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "James Bond 007: Blood Stone",
           "source": "igdb",
@@ -381,6 +720,18 @@
           "field": "original_name",
           "value": "James Bond 007: Blood Stone",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "James Bond 007: Blood Stone features the likeness and voice talent of Daniel Craig, Joss Stone and Judi Dench and features an epic, original story developed by legendary screenwriter Bruce Feirstein. Players can engage in cover-based firefights, lethal hand-to-hand combat and speed their way through explosive adrenaline-fueled driving sequences as they embark on a global chase leading to action on land and sea through Athens, Istanbul, Monaco and Bangkok. Gamers can also feel what it is like to be a 00 agent, as they take the battle online in several robust 16-person multi-player modes that require skill, teamwork and strategy as players compete in matches that will have spies battling mercenaries.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "James Bond 007: Blood Stone cuenta con la semejanza y las voces de Daniel Craig, Joss Stone y Judi Dench, y presenta una historia épica y original desarrollada por el legendario guionista Bruce Feirstein. Los jugadores pueden enfrentarse a tiroteos con coberturas, combates cuerpo a cuerpo letales y recorrer a toda velocidad secuencias de conducción explosivas y llenas de adrenalina, mientras emprenden una persecución global que lleva a la acción en tierra y mar por Atenas, Estambul, Mónaco y Bangkok. Los jugadores también pueden sentir lo que es ser un agente 00, ya que pueden llevar la batalla a internet en varios modos multijugador completos para 16 jugadores, que exigen habilidad, trabajo en equipo y estrategia, mientras los espías se enfrentan a mercenarios.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -458,6 +809,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An arms smuggling ring threatens to create a new world order.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un anillo de contrabando de armas amenaza con crear un nuevo orden mundial.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -490,6 +853,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14245",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "007 Legends",
           "source": "igdb",
@@ -499,6 +868,18 @@
           "field": "original_name",
           "value": "007 Legends",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "007 Legends features an original, overarching storyline tying together six classic Bond movies for an original James Bond experience, and equips players with state-of-the-art spy gadgets, an arsenal of weapons and more.\n\nIn addition to 007 Legends' main story, the game features the return of fan-favorite single-player Mi6 Ops Missions, which debuted in GoldenEye 007: Reloaded and challenges players to complete extra missions ranging from all-out action to stealth and gadget-based gameplay and compete for the highest online leader board scores. Also for the first time ever, players will be able to participate as one of Bond's cohorts or villainous foes, reliving the missions through their eyes, as well as 007's. Meanwhile the robust James Bond multiplayer experience includes local four-player split-screen game modes and online competitive gameplay with new maps, weapons and characters derived from Bond's 50 year legacy. With more gadgets, deeper stealth and spy investigation gameplay, gamers will have every opportunity to truly feel like the world's favorite spy.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "007 Legends presenta una historia original y transversal que une seis películas clásicas de Bond para ofrecer una experiencia original del personaje, y equipa a los jugadores con gadgets de espionaje de última generación, un arsenal de armas y mucho más.\n\nAdemás de la historia principal de 007 Legends, el juego trae de vuelta las misiones de operaciones MI6 para un jugador, muy queridas por los fans, que debutaron en GoldenEye 007: Reloaded. Estas misiones extra desafían al jugador con desde la acción total hasta el sigilo y las basadas en gadgets, y le permiten competir por las puntuaciones más altas en las clasificaciones online. Además, por primera vez, los jugadores podrán participar como uno de los compañeros de Bond o como uno de sus enemigos villanos, revivir las misiones desde sus ojos y también desde los de 007. Por otro lado, el completo modo multijugador de James Bond incluye modos de pantalla dividida para cuatro jugadores en local y competición online con nuevos mapas, armas y personajes inspirados en el legado de 50 años de Bond. Con más gadgets, un sigilo más profundo y una jugabilidad de investigación de espionaje, los jugadores tendrán todas las oportunidades para sentirse realmente como el espía favorito del mundo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -515,7 +896,12 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1649,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01614",
+            "BLES-01690/RUS",
+            "BLUS-30983"
+          ]
         },
         {
           "id": 14245,
@@ -558,6 +944,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43386",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "James Bond 007: Agent Under Fire",
           "source": "igdb",
@@ -567,6 +959,18 @@
           "field": "original_name",
           "value": "James Bond 007: Agent Under Fire",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "James Bond 007: Agent Under Fire is the first James Bond game to appear on the PlayStation 2, GameCube, and Xbox. The game casts the player as the legendary James Bond who must accomplish missions throughout different areas of the world. Bond is sent on a mission rescue Zoe Nightshade, a CIA agent in the hands of Nigel Bloch. Nigel Bloch is the CEO of Identicon, a section of a highly successful industry company known as Malprave industries. Bond is also tasked to retrieve the set of DNA samples that are in Identicon's hands. So James Bond sets off on another adventure...\n\nThe game combines three game modes into one package: first-person-shooter, which is what most of the missions are, a rail-shooter, where the player only controls firing, and a driving game, where the player drives one of the many Bond cars. Numerous weapons have been added to the series, along with some fictional weapons like the Photon cannon and the 5-way grenade launcher. The player can utilize a wide array of gadgets and weapons, like the Q-Claw, Q-Decoder, and Bond's trusty Walther handgun. There is a large variety of missions, and Bond can go through most missions with weapons, or take a stealthy approach. The player is also rated in each level, based on score and difficulty level, and can unlock new features for both single and multiplayer.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "James Bond 007: Agent Under Fire es el primer juego de James Bond que aparece en PlayStation 2, GameCube y Xbox. El juego te pone en el papel del legendario James Bond, que debe cumplir misiones en distintas zonas del mundo. Bond es enviado a rescatar a Zoe Nightshade, una agente de la CIA en manos de Nigel Bloch. Nigel Bloch es el director ejecutivo de Identicon, una división de una empresa industrial de gran éxito conocida como Malprave industries. Bond también debe recuperar el conjunto de muestras de ADN que están en poder de Identicon. Así que James Bond se pone en marcha en otra aventura...\n\nEl juego combina tres modos de juego en un solo paquete: shooter en primera persona, que es el formato de la mayoría de las misiones; shooter sobre raíles, en el que el jugador solo controla el disparo; y juego de conducción, en el que el jugador conduce uno de los muchos coches de Bond. Se han añadido numerosas armas a la serie, junto con algunas armas ficticias como el cañón de fotones y el lanzagranadas de 5 vías. El jugador puede usar una gran variedad de gadgets y armas, como el Q-Claw, el Q-Decoder y la fiel pistola Walther de Bond. Hay una amplia variedad de misiones, y Bond puede completarlas con armas o adoptar un enfoque sigiloso. Además, el jugador recibe una calificación en cada nivel, basada en la puntuación y el nivel de dificultad, y puede desbloquear nuevas funciones tanto en el modo para un jugador como en el multijugador.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -616,6 +1020,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43980",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "GoldenEye: Rogue Agent",
           "source": "igdb",
@@ -625,6 +1035,18 @@
           "field": "original_name",
           "value": "GoldenEye: Rogue Agent",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "GoldenEye: Rogue Agent is a first-person shooter video game developed by EA LA and published by Electronic Arts. The player takes the role of an ex-MI6 agent Jack Hunter, who is recruited by Auric Goldfinger (a member of a powerful unnamed criminal organisation based on Ian Fleming's SPECTRE) to assassinate his rival Dr. No. Several other characters from the Bond series make appearances throughout the game, including Pussy Galore, Oddjob, Xenia Onatopp and Francisco Scaramanga.\nDespite its name and being part of the James Bond universe, the game has no relation to the 1995 film or the 1997 video game of the same name. In this setting the game's protagonist is given the name 'GoldenEye' after he loses his eye and receives a gold-colored cybernetic replacement.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "GoldenEye: Rogue Agent es un videojuego de disparos en primera persona desarrollado por EA LA y publicado por Electronic Arts. El jugador asume el papel de Jack Hunter, un antiguo agente del MI6 reclutado por Auric Goldfinger (miembro de una poderosa organización criminal sin nombre, basada en el SPECTRE de Ian Fleming) para asesinar a su rival, el Dr. No. Otros personajes de la serie Bond aparecen a lo largo del juego, entre ellos Pussy Galore, Oddjob, Xenia Onatopp y Francisco Scaramanga.\n\nA pesar de su nombre y de formar parte del universo de James Bond, el juego no tiene relación con la película de 1995 ni con el videojuego de 1997 del mismo nombre. En este escenario, al protagonista se le da el nombre de “GoldenEye” tras perder un ojo y recibir un reemplazo cibernético de color dorado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -649,7 +1071,21 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1632,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GOYD-0-NOE",
+            "DL-DOL-GOYD-0-NOE-0",
+            "DL-DOL-GOYD-1-NOE",
+            "DL-DOL-GOYD-1-NOE-1",
+            "DL-DOL-GOYE-0-USA",
+            "DL-DOL-GOYE-0-USA-0",
+            "DL-DOL-GOYE-1-USA",
+            "DL-DOL-GOYE-1-USA-1",
+            "DL-DOL-GOYP-0-EUR",
+            "DL-DOL-GOYP-0-EUR-0",
+            "DL-DOL-GOYP-1-EUR",
+            "DL-DOL-GOYP-1-EUR-1"
+          ]
         },
         {
           "id": 43981,
@@ -657,7 +1093,12 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1632,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52974",
+            "SLES-52976/GER",
+            "SLUS-21064"
+          ]
         },
         {
           "id": 44215,
@@ -665,7 +1106,11 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 146882,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AGEE",
+            "AGEP"
+          ]
         }
       ],
       "images": {
@@ -684,6 +1129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44095",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "James Bond 007: From Russia with Love",
           "source": "igdb",
@@ -693,6 +1144,18 @@
           "field": "original_name",
           "value": "James Bond 007: From Russia with Love",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "James Bond 007: From Russia with Love is a video game featuring Ian Fleming's secret agent, James Bond. The game is based on the 1957 novel and the 1963 film of the same name, albeit adding in new scenes to make the game more action-oriented, as well as changing the affiliation of the main villains. Additionally, it features many elements of earlier Bond films to recreate the feel of the era such as the jet pack from Thunderball (1965) and the Aston Martin DB5 that debuted in Goldfinger (1964).\n\nFrom Russia with Love is also notable in that it is the first video game to use Sean Connery's likeness as James Bond and the first to include all new voice work by the actor. From Russia with Love is the last James Bond video game EA Games marketed before they lost the rights to Activision in 2006.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "James Bond 007: From Russia with Love es un videojuego protagonizado por el agente secreto de Ian Fleming, James Bond. El juego se basa en la novela de 1957 y en la película de 1963 del mismo nombre, aunque añade nuevas escenas para hacerlo más orientado a la acción y cambia la afiliación de los principales villanos. Además, incorpora numerosos elementos de películas anteriores de Bond para recrear el ambiente de la época, como la mochila propulsora de Thunderball (1965) y el Aston Martin DB5 que debutó en Goldfinger (1964).\n\nFrom Russia with Love también destaca por ser el primer videojuego que utiliza la semejanza de Sean Connery como James Bond y el primero en incluir todo el doblaje nuevo a cargo del actor. Es también el último videojuego de James Bond que EA Games comercializó antes de perder los derechos en favor de Activision en 2006.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -750,6 +1213,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "46732",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "James Bond 007: Quantum of Solace",
           "source": "igdb",
@@ -759,6 +1228,18 @@
           "field": "original_name",
           "value": "James Bond 007: Quantum of Solace",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "007: Quantum of Solace is a James Bond video game based on the films Casino Royale and Quantum of Solace. Several versions of the game were released across seven platforms, with the PlayStation 3, Xbox 360, Wii, and PC versions designed as first-person shooters and the PlayStation 2 and Nintendo DS versions as third-person shooters. It is powered by the Call of Duty 4 game engine.\n\nThe core gameplay in Quantum of Solace is that of a first-person shooter. Throughout the game, however, the view switches to third person to emphasize that the player is playing as James Bond. This third-person view is used with a cover system and quick time events, among other scenarios. An example is using quick-time events to chase Mollaka during a level that recreates the construction-site chase at the beginning of the Casino Royale film.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "007: Quantum of Solace es un videojuego de James Bond basado en las películas Casino Royale y Quantum of Solace. Se lanzaron varias versiones del juego en siete plataformas: las versiones para PlayStation 3, Xbox 360, Wii y PC están diseñadas como shooters en primera persona, y las versiones para PlayStation 2 y Nintendo DS como shooters en tercera persona. Funciona con el motor de Call of Duty 4.\n\nLa jugabilidad central de Quantum of Solace es la de un shooter en primera persona. Sin embargo, a lo largo del juego la vista cambia a tercera persona para subrayar que el jugador controla a James Bond. Esta vista en tercera persona se usa con un sistema de coberturas y eventos de tiempo rápido (QTE), entre otros escenarios. Por ejemplo, se usan QTE para perseguir a Mollaka en un nivel que recrea la persecución en una obra al inicio de la película Casino Royale.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -844,6 +1325,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In 007: Tomorrow Never Dies, which is based on the movie of the same name, the player takes the role of the famous James Bond who fights against Elliot Carver. Carver tries to increase his TV ratings by creating a war between the British and the Chinese. To achieve his goal he sunk a British ship with his stealth ship and made it look like the Chinese Air Force was the offender. Now it is Bond's responsibility to set things right...",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En 007: Tomorrow Never Dies, basado en la película del mismo nombre, el jugador asume el papel del famoso James Bond, que lucha contra Elliot Carver. Carver intenta aumentar sus índices de audiencia en televisión provocando una guerra entre británicos y chinos. Para lograr su objetivo, hundió un barco británico con su buque furtivo e hizo que pareciera que la Fuerza Aérea china era la responsable. Ahora es responsabilidad de Bond poner las cosas en orden...",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -886,6 +1379,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In 007 Racing you can get behind the wheel of James Bond's car.\n\nYou must complete missions which range from collecting an object and getting out alive, to much harder and more complicated things. Your car is armed with many weapons including mines, rockets, lasers, smokescreens, and more.\n\nThen, if you get bored playing alone, you can eliminate your opponent in multiplayer missions where you have to destroy the other car, or a game mode called \"Pass the Bomb\", where you must pass the bomb to the other car by touching it before you blow up.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En 007 Racing puedes ponerte al volante del coche de James Bond.\n\nDebes completar misiones que van desde recoger un objeto y salir con vida hasta otras mucho más difíciles y complicadas. Tu coche está armado con numerosas armas, entre ellas minas, cohetes, láseres, cortinas de humo y más.\n\nY si te aburres de jugar solo, puedes eliminar a tu rival en misiones multijugador en las que hay que destruir el otro coche, o en un modo de juego llamado “Pass the Bomb”, en el que debes pasar la bomba al otro coche tocándolo antes de que explote.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -899,7 +1404,16 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 1642,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03355",
+            "SLES-03355-P",
+            "SLES-03356",
+            "SLES-03356-P",
+            "SLES-03357",
+            "SLUS-01300",
+            "SLUS-01300CE"
+          ]
         }
       ],
       "images": {
@@ -914,9 +1428,15 @@
       "originalName": "007 First Light",
       "year": 2026,
       "igdbId": 141114,
-      "popularity": 205,
+      "popularity": 206,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "103065",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "007 First Light",
@@ -927,6 +1447,18 @@
           "field": "original_name",
           "value": "007 First Light",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "007 First Light is a thrilling espionage action-adventure game from IO Interactive. Players follow James Bond as a young, resourceful, and sometimes reckless recruit in MI6's training program and discover an origin story of the world's most famous spy.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "007 First Light es un emocionante juego de acción y aventuras de espionaje de IO Interactive. Los jugadores siguen a James Bond como un recluta joven, ingenioso y a veces temerario del programa de entrenamiento del MI6, y descubren el origen del espía más famoso del mundo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -970,8 +1502,224 @@
           "igdbId": 141114,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9cd0f2a7c17876d6721916f09bce496c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e6e463ff3aff42c3733ee571ae9f7eb4.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b26593cc2d0589aa2573b00fbd5a59c2.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 307,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 145,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 1046,
+          "reason": "1997"
+        },
+        {
+          "position": 3,
+          "gameId": 5986,
+          "reason": "1998"
+        },
+        {
+          "position": 4,
+          "gameId": 23937,
+          "reason": "1999"
+        },
+        {
+          "position": 5,
+          "gameId": 1362,
+          "reason": "2000"
+        },
+        {
+          "position": 6,
+          "gameId": 23988,
+          "reason": "2000"
+        },
+        {
+          "position": 7,
+          "gameId": 16471,
+          "reason": "2001"
+        },
+        {
+          "position": 8,
+          "gameId": 2533,
+          "reason": "2002"
+        },
+        {
+          "position": 9,
+          "gameId": 2619,
+          "reason": "2004"
+        },
+        {
+          "position": 10,
+          "gameId": 16713,
+          "reason": "2004"
+        },
+        {
+          "position": 11,
+          "gameId": 16758,
+          "reason": "2005"
+        },
+        {
+          "position": 12,
+          "gameId": 18452,
+          "reason": "2008"
+        },
+        {
+          "position": 13,
+          "gameId": 3470,
+          "reason": "2010"
+        },
+        {
+          "position": 14,
+          "gameId": 7705,
+          "reason": "2012"
+        },
+        {
+          "position": 15,
+          "gameId": 43479,
+          "reason": "2026"
+        }
+      ]
+    },
+    {
+      "id": 3773,
+      "kind": "story",
+      "rationale": "James Bond en videojuegos no tiene una historia continua: cada juego es una aventura aparte o adapta una película. Se repite el orden de lanzamiento de los juegos principales y se omiten los menores.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1046,
+          "recommendedVersionId": 1987,
+          "reason": "Adapta GoldenEye y abre la saga moderna; versión original de N64."
+        },
+        {
+          "position": 2,
+          "gameId": 23937,
+          "recommendedVersionId": 60545,
+          "reason": "Adaptación de Tomorrow Never Dies."
+        },
+        {
+          "position": 3,
+          "gameId": 1362,
+          "recommendedVersionId": 2546,
+          "reason": "Adaptación de The World Is Not Enough; versión N64."
+        },
+        {
+          "position": 4,
+          "gameId": 16471,
+          "recommendedVersionId": 43387,
+          "reason": "Historia original; versión PS2."
+        },
+        {
+          "position": 5,
+          "gameId": 2533,
+          "recommendedVersionId": 4652,
+          "reason": "Historia original; versión GameCube."
+        },
+        {
+          "position": 6,
+          "gameId": 2619,
+          "recommendedVersionId": 4840,
+          "reason": "Historia original; versión GameCube."
+        },
+        {
+          "position": 7,
+          "gameId": 16758,
+          "recommendedVersionId": 44095,
+          "reason": "Adaptación de From Russia with Love; versión GameCube."
+        },
+        {
+          "position": 8,
+          "gameId": 18452,
+          "recommendedVersionId": 46731,
+          "reason": "Continúa Casino Royale y Quantum of Solace."
+        },
+        {
+          "position": 9,
+          "gameId": 3470,
+          "recommendedVersionId": 6812,
+          "reason": "Historia original con Daniel Craig; versión PC."
+        },
+        {
+          "position": 10,
+          "gameId": 7705,
+          "recommendedVersionId": 14245,
+          "reason": "Recopila varias películas clásicas."
+        },
+        {
+          "position": 11,
+          "gameId": 43479,
+          "recommendedVersionId": 103065,
+          "reason": "El juego más reciente, historia nueva."
+        }
+      ]
+    },
+    {
+      "id": 3774,
+      "kind": "community",
+      "rationale": "Se recomiendan los clásicos más queridos, GoldenEye, Nightfire y Everything or Nothing, más los títulos modernos más sólidos. Se omiten los juegos de Game Boy, los de carreras y los más flojos. No pude consultar fuentes, así que la ruta es de memoria.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1046,
+          "recommendedVersionId": 1987,
+          "reason": "El clásico indiscutido; la versión N64 es la original."
+        },
+        {
+          "position": 2,
+          "gameId": 1362,
+          "recommendedVersionId": 2546,
+          "reason": "Buen shooter en N64 con el mismo motor."
+        },
+        {
+          "position": 3,
+          "gameId": 2533,
+          "recommendedVersionId": 4652,
+          "reason": "Muy valorado por su multijugador; versión GameCube."
+        },
+        {
+          "position": 4,
+          "gameId": 2619,
+          "recommendedVersionId": 4840,
+          "reason": "Acción en tercera persona muy apreciada; versión GameCube."
+        },
+        {
+          "position": 5,
+          "gameId": 16758,
+          "recommendedVersionId": 44095,
+          "reason": "Adaptación con buena reputación; versión GameCube."
+        },
+        {
+          "position": 6,
+          "gameId": 3470,
+          "recommendedVersionId": 6812,
+          "reason": "Entrega moderna con buena acción; versión PC."
+        },
+        {
+          "position": 7,
+          "gameId": 43479,
+          "recommendedVersionId": 103065,
+          "reason": "El juego más reciente; versión PC."
+        }
+      ]
+    }
+  ]
 }

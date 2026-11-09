@@ -3,7 +3,7 @@
   "name": "Phantasy Star",
   "igdbKind": "franchise",
   "igdbId": 801,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7484",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantasy Star 0",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Phantasy Star 0",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Phantasy Star Zero takes place on an alternate Earth 200 years after the Great Blank, a massive war that has reduced the once-prosperous civilization to almost nothing. The sole surviving Humans have worked hard to exist peacefully and have built thriving Cities. The Humans that adventure past the outskirts of these Cities, called Hunters, explore the vast wilderness and hunt dangerous monsters to keep Cities safe. Players will take up the role of Hunters and select from three types of races and different classes, as well as gender for a total of 14 customizable character types. Each character type will play very differently and give players access to a great range of items, armor and weapons. Featuring over 350 unique weapons, gamers will venture out on Earth, combat dangerous monsters to gain experience and meet new major characters. As players explore further, they will unravel the mystery of the Great Blank and discover a dangerous new force that must be stopped.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Phantasy Star Zero transcurre en una Tierra alternativa, 200 años después del Gran Vacío, una guerra masiva que redujo la otrora próspera civilización a casi nada. Los únicos humanos supervivientes han trabajado duro para existir en paz y han construido ciudades prósperas. Los humanos que se aventuran más allá de las afueras de estas ciudades, llamados Cazadores, exploran la vasta naturaleza salvaje y cazan monstruos peligrosos para mantener las ciudades a salvo. Los jugadores asumen el papel de Cazadores y pueden elegir entre tres tipos de razas y distintas clases, así como el género, para un total de 14 tipos de personaje personalizables. Cada tipo de personaje juega de forma muy distinta y da acceso a una gran variedad de objetos, armaduras y armas. Con más de 350 armas únicas, los jugadores se aventurarán por la Tierra, combatirán monstruos peligrosos para ganar experiencia y conocerán a nuevos personajes importantes. A medida que avancen, desentrañarán el misterio del Gran Vacío y descubrirán una nueva y peligrosa fuerza que debe ser detenida.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -70,8 +88,14 @@
       "year": 2012,
       "igdbId": 513,
       "popularity": 28,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "37616",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Phantasy Star Online 2",
@@ -82,6 +106,18 @@
           "field": "original_name",
           "value": "Phantasy Star Online 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Embark on a never-ending assortment of missions with fellow operatives and experience unparalleled character customization and action RPG combat, completely free to play. Explore numerous worlds with a party of up to four friends or exclusive multiparty areas where up to twelve players can play simultaneously!\n\nOriginally released in Japan and Asia in 2012 and 2014 respectively, The game makes its Global debut in 2020 with a North American launch on Xbox One and Windows 10 before eventually releasing on Steam and across 33 countries. The Global version features the latest balances and patches from the Japanese version while also slowly unlocking new content and features; starting out with the game's first three Episodes, Nine classes and several features introduced in latter major updates.\n\nAside from that, the game supports cross-platform multiplayer and uses a Free-to-Play model with in-game purchases; players can experience a lot of what the game has to offer with no upfront fee.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Emprende una interminable serie de misiones junto a otros agentes y disfruta de una personalización de personajes y un combate de RPG de acción sin igual, completamente gratis. Explora numerosos mundos con un grupo de hasta cuatro amigos o en zonas multigrupo exclusivas donde hasta doce jugadores pueden jugar simultáneamente.\n\nLanzado originalmente en Japón y Asia en 2012 y 2014, respectivamente, el juego debuta a nivel global en 2020, con un lanzamiento en Norteamérica en Xbox One y Windows 10, para después llegar a Steam y a 33 países. La versión global incluye los ajustes y parches más recientes de la versión japonesa, y desbloquea progresivamente nuevo contenido y funciones; comienza con los tres primeros Episodios del juego, nueve clases y varias funciones introducidas en grandes actualizaciones posteriores.\n\nAdemás, el juego admite multijugador multiplataforma y utiliza un modelo free-to-play con compras dentro del juego; los jugadores pueden disfrutar de gran parte de lo que ofrece sin pagar nada por adelantado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -98,7 +134,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 513,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión clásica."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 23383,
@@ -106,7 +163,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 513,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión clásica, sin New Genesis."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control anticuado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos antiguos."
+            }
+          ]
         },
         {
           "id": 23384,
@@ -114,7 +192,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 513,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido recortado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Limitada."
+            }
+          ]
         },
         {
           "id": 23385,
@@ -122,7 +221,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 513,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión global."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 24736,
@@ -130,7 +250,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 67201,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido ampliado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejoras de comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena."
+            }
+          ]
         },
         {
           "id": 24737,
@@ -138,7 +279,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 67201,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido ampliado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Basada en la nube."
+            }
+          ]
         },
         {
           "id": 37614,
@@ -146,7 +308,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 136042,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye New Genesis."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Muy ampliada."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena en Series."
+            }
+          ]
         },
         {
           "id": 37615,
@@ -154,7 +337,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 136042,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye New Genesis."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Muy ampliada."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Aceptable."
+            }
+          ]
         },
         {
           "id": 37616,
@@ -163,7 +367,28 @@
           "year": 2021,
           "igdbId": 136042,
           "steamAppId": 1056640,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye New Genesis."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control y opciones flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Muy ampliada."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 37617,
@@ -171,7 +396,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 136042,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye New Genesis."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Muy ampliada."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Aceptable."
+            }
+          ]
         },
         {
           "id": 37618,
@@ -179,7 +425,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 136042,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "New Genesis en la nube."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Muy ampliada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Depende de la conexión."
+            }
+          ]
         }
       ],
       "images": {
@@ -198,6 +465,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "29566",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantasy Star",
           "source": "igdb",
@@ -207,6 +480,18 @@
           "field": "original_name",
           "value": "Phantasy Star",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The time: Space Century 3240. The place: The Algol Star System. It began when King Lassic turned evil and let hordes of hideous, magical creatures run amok on the three planets. When her brother was killed, Alis vowed to avenge his death and put an end to Lassic forever.\n\nJoin her in a journey across time and space to worlds where creatures speak...where magic and science combine to take you on the ultimate video quest.\n\nPhantasy Star is total adventure role playing with towns full of people and shops...16 level dungeons full of traps and treasure...three companions who will help you if you find them and some of the most awesome graphics ever put in a video game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Época: Siglo Espacial 3240. Lugar: el sistema estelar de Algol. Todo empezó cuando el rey Lassic se volvió malvado y dejó que hordas de criaturas mágicas y horribles se desmandaran por los tres planetas. Cuando su hermano fue asesinado, Alis juró vengar su muerte y acabar con Lassic para siempre.\n\nÚnete a ella en un viaje a través del tiempo y del espacio, hacia mundos donde las criaturas hablan... donde la magia y la ciencia se combinan para llevarte a la aventura de videojuego definitiva.\n\nPhantasy Star es un juego de rol de aventura total, con pueblos llenos de gente y tiendas... mazmorras de 16 niveles llenas de trampas y tesoros... tres compañeros que te ayudarán si los encuentras y algunos de los gráficos más impresionantes que se han visto nunca en un videojuego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -223,7 +508,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 1233,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original de Master System."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Mazmorras difíciles, sin ayudas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta."
+            }
+          ]
         },
         {
           "id": 29566,
@@ -231,7 +537,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 109596,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Original con extras y opciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado, ayudas y mapa."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Pulida y estable."
+            }
+          ]
         },
         {
           "id": 48650,
@@ -239,7 +566,28 @@
           "kind": "remake",
           "year": 2014,
           "igdbId": 43454,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake con cambios de contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Menos tedioso."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy alterado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS2."
+            }
+          ]
         },
         {
           "id": 48651,
@@ -247,7 +595,28 @@
           "kind": "remake",
           "year": 2003,
           "igdbId": 43454,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake con cambios de contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Menos tedioso."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy alterado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS2."
+            }
+          ]
         }
       ],
       "images": {
@@ -278,6 +647,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A turn-based online RPG for the Nintendo GameCube. Set in the Phantasy Star Online universe, join the Hero or Dark side using cards featuring weapons or creatures from Phantasy Star Online Episodes I and II.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un RPG en línea por turnos para Nintendo GameCube. Ambientado en el universo de Phantasy Star Online, únete al bando del Héroe o al lado oscuro usando cartas con armas o criaturas de Phantasy Star Online Episodes I y II.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -291,7 +672,13 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 23329,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GPSE-USA",
+            "DL-DOL-GPSJ-JPN",
+            "DL-DOL-GPSP-EUR",
+            "DL-DOL-GPSP-UKV"
+          ]
         }
       ],
       "images": {
@@ -319,6 +706,18 @@
           "field": "original_name",
           "value": "Phantasy Star Online Ver. 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The realm of Phantasy Star Online has increased. Phantasy Star Online Ver. 2 includes all of the original content, and expands the world with more levels, more features, and more evil to combat. Master the Ultimate Difficulty setting, survive the Challenge Dungeon, and reign as the champion of Battle Mode. The evolution of the original revolutionary gaming experience continues.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El mundo de Phantasy Star Online se ha ampliado. Phantasy Star Online Ver. 2 incluye todo el contenido original y expande el mundo con más niveles, más funciones y más maldad a la que hacer frente. Domina la dificultad Ultimate, sobrevive a la Challenge Dungeon y reina como campeón del Battle Mode. La evolución de la experiencia de juego original y revolucionaria continúa.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -351,8 +750,14 @@
       "year": 2002,
       "igdbId": 9890,
       "popularity": 17,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "44705",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Phantasy Star Online Episode I & II",
@@ -363,6 +768,18 @@
           "field": "original_name",
           "value": "Phantasy Star Online Episode I & II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Create your own character from one of three races (Android, Human, or Newman) and choose a class (Hunter, Ranger, or Force type) to journey through the new world of Ragol. Play with up to 3 other people. Progress through 4 difficulties and complete side quest story lines to unlock better items.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Crea tu propio personaje a partir de una de tres razas (Androide, Humano o Newman) y elige una clase (tipo Cazador, Rastreador o Fuerza) para viajar por el nuevo mundo de Ragol. Juega con hasta otras 3 personas. Avanza por 4 niveles de dificultad y completa las líneas argumentales de las misiones secundarias para desbloquear mejores objetos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -387,7 +804,14 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 9890,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GPOE-USA",
+            "DL-DOL-GPOJ-JPN",
+            "DL-DOL-GPOJ-JPN-01",
+            "DL-DOL-GPOP-EUR",
+            "DL-DOL-GPOP-EUR-01"
+          ]
         }
       ],
       "images": {
@@ -416,6 +840,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SEGA re-released in 2003 an updated version of Phantasy Star Online Episode I & II for the Nintendo GameCube in 2003 called Phantasy Star Online Episode I & II Plus.\n\nEarly in the effort to run unsigned code on the GameCube, people found that when playing PSO and connecting to a server using the GameCube Broadband Adapter, a regular PC could be made to pretend it was a server which would fool the game.\n\nAfter making the connection, data could be streamed back to the GameCube, making it easy for hacking and false servers. Phantasy Star Online Episode I & II Plus was created in mind to fix this problem. Along with this problem, SEGA included extra content for offline with this game including:\n- Episode II Challenge Mode, which was perviously only online.\n- Perviously Online only quests, Seat of the Heart, West Tower and East Tower are now available offline.\n- Central Dome Fire Swirl, a downloadable quest for the Xbox, is now available offline.\n- The downloadable goods from Fake in Yellow quest are now available offline.\n\nAside from some extra cheat protection, Phantasy Star Online Episode I & II Plus ran exactly the same as the original version and all data from characters, items, ect, can be swapped between the two instantly.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En 2003, SEGA volvió a lanzar una versión actualizada de Phantasy Star Online Episode I & II para Nintendo GameCube, llamada Phantasy Star Online Episode I & II Plus.\n\nAl principio del esfuerzo por ejecutar código no firmado en GameCube, la gente descubrió que, al jugar a PSO y conectarse a un servidor mediante el Adaptador de Banda Ancha de GameCube, un PC normal podía hacerse pasar por un servidor y engañar al juego.\n\nUna vez establecida la conexión, los datos podían transmitirse de vuelta a la GameCube, lo que facilitaba el hackeo y los servidores falsos. Phantasy Star Online Episode I & II Plus se creó para solucionar este problema. Además, SEGA incluyó contenido extra para jugar sin conexión:\n- Modo Desafío del Episodio II, que antes solo estaba disponible en línea.\n- Misiones que antes solo se podían jugar en línea (Seat of the Heart, West Tower y East Tower), ahora disponibles sin conexión.\n- Central Dome Fire Swirl, una misión descargable para Xbox, ahora disponible sin conexión.\n- Los objetos descargables de la misión Fake in Yellow ahora están disponibles sin conexión.\n\nAparte de cierta protección adicional contra trampas, Phantasy Star Online Episode I & II Plus funciona exactamente igual que la versión original, y los datos de personajes, objetos, etc. se pueden intercambiar al instante entre ambas versiones.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -429,7 +865,12 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 79149,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GPOE-USA-01",
+            "DL-DOL-GPOJ-JPN-02",
+            "DL-DOL-GPOJ-JPN-03"
+          ]
         }
       ],
       "images": {
@@ -445,8 +886,14 @@
       "year": 1989,
       "igdbId": 1232,
       "popularity": 27,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "48188",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Phantasy Star II",
@@ -457,6 +904,18 @@
           "field": "original_name",
           "value": "Phantasy Star II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gameplay is similar to the original Phantasy Star, the first game in the series. Its battle system is turn-based, allowing the player to choose commands for their party of up to four characters. Each of the eight characters has a different set of preferred weapons and armor, as well as techniques, suited to the character's job. The player must defeat enemies in the overworld and in dungeons to advance in the game.\n\nThe game abandoned the first-person view that the first game used for dungeons and battles. Phantasy Star II instead uses a top-down perspective for exploration and a third-person view in battles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La jugabilidad es similar a la del Phantasy Star original, el primer juego de la serie. Su sistema de combate es por turnos, lo que permite al jugador elegir órdenes para su grupo de hasta cuatro personajes. Cada uno de los ocho personajes tiene un conjunto distinto de armas y armaduras preferidas, así como técnicas adaptadas a su oficio. El jugador debe derrotar enemigos en el mapa del mundo y en mazmorras para avanzar en el juego.\n\nEl juego abandonó la vista en primera persona que el primer juego usaba para las mazmorras y los combates. Phantasy Star II utiliza, en su lugar, una perspectiva cenital para la exploración y una vista en tercera persona en los combates.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -473,7 +932,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1232,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado normal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta."
+            }
+          ]
         },
         {
           "id": 48188,
@@ -482,7 +962,28 @@
           "year": 2012,
           "igdbId": 1232,
           "steamAppId": 211203,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y configurable."
+            }
+          ]
         },
         {
           "id": 48189,
@@ -490,7 +991,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 1232,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Con guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 48657,
@@ -498,7 +1020,28 @@
           "kind": "remake",
           "year": 2014,
           "igdbId": 129891,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake con contenido añadido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy alterado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS2."
+            }
+          ]
         },
         {
           "id": 48658,
@@ -506,7 +1049,28 @@
           "kind": "remake",
           "year": 2005,
           "igdbId": 129891,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake con contenido añadido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy alterado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS2."
+            }
+          ]
         }
       ],
       "images": {
@@ -525,6 +1089,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "48201",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantasy Star III: Generations of Doom",
           "source": "igdb",
@@ -534,6 +1104,18 @@
           "field": "original_name",
           "value": "Phantasy Star III: Generations of Doom",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Just as you’re about to marry Maia, the mysterious woman you found on the shore, a winged dragon grabs her and disappears. This is the tragic start of what seems like a never-ending journey into a world of loathsome creatures and wicked souls that spans three generations.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Justo cuando estás a punto de casarte con Maia, la misteriosa mujer que encontraste en la orilla, un dragón alado la agarra y desaparece. Es el trágico comienzo de lo que parece un viaje sin fin por un mundo de criaturas repugnantes y almas perversas que abarca tres generaciones.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -550,7 +1132,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1231,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado normal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta."
+            }
+          ]
         },
         {
           "id": 48201,
@@ -559,7 +1162,28 @@
           "year": 2012,
           "igdbId": 1231,
           "steamAppId": 211204,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y configurable."
+            }
+          ]
         }
       ],
       "images": {
@@ -575,8 +1199,14 @@
       "year": 1993,
       "igdbId": 1230,
       "popularity": 50,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "48225",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Phantasy Star IV: The End of the Millennium",
@@ -587,6 +1217,18 @@
           "field": "original_name",
           "value": "Phantasy Star IV: The End of the Millennium",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You are Chaz Ashely, a rookie Hunter straight out of training who is supported by Alys Brangwin – a crafty veteran whose good looks and prowess with the blade have earned her an awesome reputation. The two Hunters along with a cast of supporting characters will go beyond Motavia to unwittingly save their entire solar system.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Eres Chaz Ashely, un Cazador novato recién salido del entrenamiento, al que apoya Alys Brangwin, una veterana astuta cuya buena presencia y destreza con la espada le han granjeado una reputación impresionante. Los dos Cazadores, junto con un reparto de personajes secundarios, irán más allá de Motavia para salvar, sin proponérselo, todo su sistema solar.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -603,7 +1245,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1230,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado normal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta."
+            }
+          ]
         },
         {
           "id": 48225,
@@ -612,7 +1275,28 @@
           "year": 2012,
           "igdbId": 1230,
           "steamAppId": 211205,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y configurable."
+            }
+          ]
         }
       ],
       "images": {
@@ -631,6 +1315,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82458",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantasy Star Universe",
           "source": "igdb",
@@ -640,6 +1330,18 @@
           "field": "original_name",
           "value": "Phantasy Star Universe",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ethan Waber, the main character, and his little sister, Lumia Waber, are at the celebration of the 100th year anniversary of the Alliance Space Fleet on the GUARDIANS Space station. The celebration is interrupted when a mysterious meteor shower almost destroys the entire fleet. During evacuation, Ethan and Lumia split off of the main evacuation route and collapsing rubble separates Lumia from Ethan. Ethan then meets up with a GUARDIAN named Leo, but they are attacked by a strange creature. The creature paralyzes Leo and Ethan takes his handgun and kills the creature. Leo then tells Ethan to find his sister and that a rescue team is on the way.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Ethan Waber, el protagonista, y su hermanita, Lumia Waber, asisten a la celebración del centenario de la Flota Espacial de la Alianza, en la estación espacial GUARDIANS. La celebración se interrumpe cuando una misteriosa lluvia de meteoritos casi destruye toda la flota. Durante la evacuación, Ethan y Lumia se separan de la ruta principal y unos escombros que se derrumban los separan. Ethan se encuentra entonces con un GUARDIAN llamado Leo, pero una extraña criatura los ataca. La criatura paraliza a Leo, y Ethan toma su pistola y mata a la criatura. Leo le dice entonces a Ethan que busque a su hermana y que un equipo de rescate está en camino.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -672,7 +1374,14 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 7129,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54308",
+            "SLPM-66031",
+            "SLPM-68523",
+            "SLPM-74244",
+            "SLUS-21194"
+          ]
         }
       ],
       "images": {
@@ -691,6 +1400,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83248",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantasy Star Universe: Ambition of the Illuminus",
           "source": "igdb",
@@ -700,6 +1415,18 @@
           "field": "original_name",
           "value": "Phantasy Star Universe: Ambition of the Illuminus",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Phantasy Star Universe: Ambition of the Illuminous is the expansion pack for Phantasy Star Universe. It was released as DLC for Xbox 360, and as a standalone disc on PC and PS2.\n\nIt brings a more personalized and interactive universe to the series. The online multiplayer world has been expanded, enriching the battle experience for up to six players with additional new maps and levels and lobbies.\n\nGamers now have more customization options for their characters with additional weapons, armor and clothing, and they can bring this greater level of customization into their rooms, with the new room grid system that allows full customization of their personal space.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Phantasy Star Universe: Ambition of the Illuminus es el paquete de expansión de Phantasy Star Universe. Se lanzó como DLC para Xbox 360 y como disco independiente para PC y PS2.\n\nAporta un universo más personalizado e interactivo a la saga. El mundo multijugador en línea se ha ampliado, enriqueciendo la experiencia de combate para hasta seis jugadores con nuevos mapas, niveles y salas de espera.\n\nLos jugadores ahora tienen más opciones de personalización para sus personajes, con armas, armaduras y ropa adicionales, y pueden llevar este mayor nivel de personalización a sus habitaciones gracias al nuevo sistema de cuadrícula, que permite personalizar por completo su espacio personal.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -732,7 +1459,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 21501,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54892",
+            "SLUS-21631"
+          ]
         }
       ],
       "images": {
@@ -763,6 +1494,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Sega's long-running RPG goes handheld for the first time in North America with Phantasy Star Portable, a story set between the events of Phantasy Star Universe and Ambition of the Illuminus. Players return to the Gurhal system where they join the new character Vivienne in an attempt to investigate and clear out an area contaminated after the perceived eradication of the alien SEED menace. Gamers can choose from a wide variety of options when creating a custom avatar, and then set about meeting new characters and collecting more than 150 items. Multiplayer fans can also join up to three friends for wireless co-operative exploration and combat.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La longeva saga de RPG de Sega llega por primera vez a las consolas portátiles en Norteamérica con Phantasy Star Portable, una historia ambientada entre los acontecimientos de Phantasy Star Universe y Ambition of the Illuminus. Los jugadores regresan al sistema Gurhal, donde se unen al nuevo personaje Vivienne en un intento por investigar y despejar una zona contaminada tras la supuesta erradicación de la amenaza alienígena SEED. Los jugadores pueden elegir entre una amplia variedad de opciones al crear un avatar personalizado, y luego conocer nuevos personajes y recoger más de 150 objetos. Los fans del multijugador también pueden unirse a hasta tres amigos para exploración y combate cooperativos inalámbricos.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -776,9 +1519,22 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 21873,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "UCKS-45098",
+            "ULES-01218",
+            "ULJM-05309",
+            "ULJM-08023",
+            "ULJM-91014",
+            "ULUS-10410"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/26ed5dceb1f5dab03b95703f3ea5e231.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b2934262a65d2f051397cc8390f51dc9.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/aa7fcf3b4a628b52779535e8233883e9.png"
+      }
     },
     {
       "id": 35368,
@@ -790,6 +1546,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86969",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantasy Star Portable 2",
           "source": "igdb",
@@ -799,6 +1561,18 @@
           "field": "original_name",
           "value": "Phantasy Star Portable 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Return to the Phantasy Star Portable world in a global online multiplayer experience! The Phantasy Star series returns to the PlayStation Portable for an exciting new adventure, bringing all new content and returning the series back to its online roots. Picking up three years after the exciting Phantasy Star Universe saga, Phantasy Star Portable 2 brings the series to its conclusion as players take on the role of mercenary to save the Gurhal system. Phantasy Star Portable 2 offers a gigantic dose of original content from new combat moves, weapons and character customization options. New to the Phantasy Star Portable franchise, online play through Infrastructure mode and enhanced social interactivity adds to the adventure for fans and newcomers alike.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Vuelve al mundo de Phantasy Star Portable en una experiencia multijugador en línea global! La serie Phantasy Star regresa a PlayStation Portable para una nueva y emocionante aventura, con contenido totalmente nuevo y devolviendo la serie a sus raíces en línea. Tres años después de la emocionante saga de Phantasy Star Universe, Phantasy Star Portable 2 lleva la serie a su conclusión: los jugadores asumen el papel de mercenarios para salvar el sistema Gurhal. Phantasy Star Portable 2 ofrece una enorme cantidad de contenido original, con nuevos movimientos de combate, armas y opciones de personalización de personajes. Novedad en la franquicia, el juego en línea mediante el modo Infrastructure y una interactividad social mejorada añaden emoción a la aventura, tanto para los fans como para los recién llegados.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -815,7 +1589,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 19256,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base con muchas misiones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen cooperativo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta en PSP."
+            }
+          ]
         },
         {
           "id": 86969,
@@ -823,9 +1618,35 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 79771,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más misiones, extras y ajustes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejoras de comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Ampliación del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta en PSP."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/de32eed7086734e3b7c31c0401443c9b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/735f505f81a75048db0947fe995b58e9.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/cfa69734cfd2525e6a7626c0397d072c.png"
+      }
     },
     {
       "id": 41043,
@@ -849,6 +1670,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Phantasy Star Nova will be set in the same world as Phantasy Star Online 2 but will drop many of the online elements and take on a much more single player approach. If the idea of playing without your friends sounds horrifying, the game will include 4-player co-cop play.\n\nThe title takes place on Planet Machia, a planet where 'Photon' energy is useless. Without the ability to recover energy or upgrade your weapons, players must take survival into their own hands, exploring the planet of Machia and unlocking the secrets it has to offer.\n\nThe creatures inhabiting Machia are giant beasts appropriately named 'Gigantes.' In order to take these massive brutes down, you'll need to find and hit their weak spots together with your allies.\n\nSega also implemented tweaks based off the Phantasy Star Nova battle demo into the game. After the first demo, tri-Ace increased character movement speed by 1.4x, reduced input delay, fixed issues with locking on to enemies, and fine tuned the speed of the camera, among other improvements.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Phantasy Star Nova se desarrollará en el mismo mundo que Phantasy Star Online 2, pero prescindirá de muchos elementos en línea y adoptará un enfoque mucho más centrado en un solo jugador. Si la idea de jugar sin tus amigos te horroriza, el juego incluirá el modo cooperativo para 4 jugadores.\n\nEl título transcurre en el Planeta Machia, un planeta donde la energía 'Photon' es inútil. Sin la capacidad de recuperar energía ni de mejorar tus armas, los jugadores deben tomar la supervivencia en sus propias manos, explorando el planeta Machia y desbloqueando los secretos que oculta.\n\nLas criaturas que habitan Machia son bestias gigantes llamadas, apropiadamente, 'Gigantes'. Para derribar a estos enormes brutos, necesitarás encontrar sus puntos débiles y atacarlos junto a tus aliados.\n\nSega también incorporó al juego ajustes basados en la demo de batalla de Phantasy Star Nova. Tras la primera demo, tri-Ace aumentó la velocidad de movimiento de los personajes 1,4 veces, redujo el retardo de entrada, corrigió problemas al fijar objetivos en los enemigos y ajustó con precisión la velocidad de la cámara, entre otras mejoras.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -864,8 +1697,181 @@
           "igdbId": 42674,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9a5983a350306052c7c7c0e2c39a10dd.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1c3eac4cf991d540f73986e15cb6be63.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/10c2b66d97dde3e04da35a6042edddd6.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 316,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11667,
+          "reason": "1987"
+        },
+        {
+          "position": 2,
+          "gameId": 19330,
+          "reason": "1989"
+        },
+        {
+          "position": 3,
+          "gameId": 19335,
+          "reason": "1990"
+        },
+        {
+          "position": 4,
+          "gameId": 19349,
+          "reason": "1993"
+        },
+        {
+          "position": 5,
+          "gameId": 16908,
+          "reason": "2001"
+        },
+        {
+          "position": 6,
+          "gameId": 16909,
+          "reason": "2002"
+        },
+        {
+          "position": 7,
+          "gameId": 16856,
+          "reason": "2003"
+        },
+        {
+          "position": 8,
+          "gameId": 16910,
+          "reason": "2003"
+        },
+        {
+          "position": 9,
+          "gameId": 33050,
+          "reason": "2006"
+        },
+        {
+          "position": 10,
+          "gameId": 33516,
+          "reason": "2007"
+        },
+        {
+          "position": 11,
+          "gameId": 3811,
+          "reason": "2008"
+        },
+        {
+          "position": 12,
+          "gameId": 35341,
+          "reason": "2009"
+        },
+        {
+          "position": 13,
+          "gameId": 35368,
+          "reason": "2009"
+        },
+        {
+          "position": 14,
+          "gameId": 10253,
+          "reason": "2012"
+        },
+        {
+          "position": 15,
+          "gameId": 41043,
+          "reason": "2014"
+        }
+      ]
+    },
+    {
+      "id": 3781,
+      "kind": "story",
+      "rationale": "La saga clásica (I a IV) forma una historia conectada en el sistema Algol. PSO, PSU y PSO2 son universos aparte, así que se ponen después.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11667,
+          "reason": "Inicio de la historia de Algol."
+        },
+        {
+          "position": 2,
+          "gameId": 19330,
+          "reason": "Continúa la historia, mil años después."
+        },
+        {
+          "position": 3,
+          "gameId": 19335,
+          "reason": "Generaciones posteriores, enlaza con IV."
+        },
+        {
+          "position": 4,
+          "gameId": 19349,
+          "reason": "Cierre de la historia clásica."
+        },
+        {
+          "position": 5,
+          "gameId": 16910,
+          "recommendedVersionId": 44730,
+          "reason": "Inicio de la rama online PSO; versión Plus, la más completa."
+        },
+        {
+          "position": 6,
+          "gameId": 33050,
+          "reason": "Otra continuidad, la de Universe."
+        },
+        {
+          "position": 7,
+          "gameId": 10253,
+          "reason": "Online actual, historia aparte."
+        }
+      ]
+    },
+    {
+      "id": 3782,
+      "kind": "community",
+      "rationale": "Se recomienda empezar por Phantasy Star IV, el mejor de los clásicos, y seguir con II y I. PSO y PSO2 son la rama online más popular; se omiten III, PSU y los spin-offs portátiles.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19349,
+          "recommendedVersionId": 48225,
+          "reason": "El más valorado y se entiende solo; versión de PC."
+        },
+        {
+          "position": 2,
+          "gameId": 19330,
+          "recommendedVersionId": 48188,
+          "reason": "Gran historia, con dificultad alta."
+        },
+        {
+          "position": 3,
+          "gameId": 11667,
+          "reason": "Origen de la saga, más antiguo."
+        },
+        {
+          "position": 4,
+          "gameId": 16910,
+          "recommendedVersionId": 44730,
+          "reason": "El PSO de GameCube, la versión Plus, es la más completa."
+        },
+        {
+          "position": 5,
+          "gameId": 10253,
+          "recommendedVersionId": 23383,
+          "reason": "Gratis y con servidores activos; versión de PC."
+        }
+      ]
+    }
+  ]
 }

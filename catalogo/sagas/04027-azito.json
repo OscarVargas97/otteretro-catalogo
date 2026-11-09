@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62816",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Azito",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Azito",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Azito, the player takes the role of chief commander of a new secret base. Weapons, in the form of Mechs are developed and used to defend the secret base from enemy attacks. The secret base must be protected in order to be completed. The player cannot attack enemy bases, but only intercept the enemy units. As the player chooses their attributes with the help of specialized staff, a variety of weapons can be developed, and the appearance of the base will change depending on what is being developed.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 63270,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Emulación con guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y fácil de conseguir."
+            }
+          ]
         },
         {
           "id": 62817,
@@ -56,7 +89,32 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 63270,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Solo tarjeta de memoria y cargas lentas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Requiere hardware o disco PS1."
+            }
+          ],
+          "codes": [
+            "SLPM-87284",
+            "SLPS-00683"
+          ]
         },
         {
           "id": 62818,
@@ -64,7 +122,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 63270,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -93,6 +172,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Azito 2 is the second game in the series, the most important difference between this game and Azito is that in Azito 2 the player can choose between the evil side or the justice side at the beginning of the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -106,7 +191,10 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 63269,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01526"
+          ]
         }
       ],
       "images": {
@@ -135,6 +223,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The final PlayStation entry in the base and super-robot building series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -148,7 +242,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 63268,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-02496"
+          ]
         }
       ],
       "images": {
@@ -177,6 +274,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A version of the robot and base-building strategy game based on Tatsunoko's legendary anime properties.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -192,8 +295,41 @@
           "igdbId": 60963,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5gbu.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1321,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24979,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 25089,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 25188,
+          "reason": "2000"
+        },
+        {
+          "position": 4,
+          "gameId": 49177,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

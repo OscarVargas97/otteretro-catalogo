@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Stack-Up is a video game released in 1985 for the Nintendo Entertainment System, designed for use with the Robotic Operating Buddy (R.O.B.) Stack-Up is one of two games in Nintendo's Robot Series, the other being Gyromite (Robot Gyro in Japan). While Gyromite is a pack-in game with the R.O.B. itself and therefore comes with all the parts needed to play the game, Stack-Up comes in a large box containing additional bases and colored discs. The game's retail box comes with many small, plastic parts, which may contribute to difficulty in maintaining a complete set. Stack-Up is considered by collectors to be one of the rarest first-party games for the NES.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1985",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 8579,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/53823e704db3f2ddc5ce108d64657627.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/55b8b4d97ceb12c9a77328cfba8118b6.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1f89885d556929e98d3ef9b86448f951.png"
+      }
     },
     {
       "id": 42626,
@@ -74,6 +85,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Gyromite is a video game released in 1985 for the Nintendo Entertainment System, designed for use with the Robotic Operating Buddy (R.O.B.). Gyromite is one of two games in Nintendo's Robot Series, the other being Stack-Up",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1985",
           "source": "igdb",
@@ -89,8 +106,33 @@
           "igdbId": 8578,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a2aa076ce6614bcf2b701067c41d6ec7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5c14593321a9d60ddeb155bc2a458694.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3bc31a430954d8326605fc690ed22f4d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3416,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42624,
+          "reason": "1985"
+        },
+        {
+          "position": 2,
+          "gameId": 42626,
+          "reason": "1985"
+        }
+      ]
+    }
+  ]
 }

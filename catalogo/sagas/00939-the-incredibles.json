@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "4895",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Incredibles",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Incredibles",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Superstrength, superspeed, invisibility, and elasticity are all the powers you have to combat evil in The Incredibles. You'll need them, because your enemies throw bombs, bullets, and lasers at you. Based on the movie from Pixar, The Incredibles tells the story of a family of undercover superheroes that is trying to live a quiet, suburban life but is forced back into action to save the world. As the film's main characters, you must fight, race, and solve puzzles in more than 18 action-packed levels.",
           "source": "igdb",
           "manual": false
         },
@@ -80,7 +92,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 210442,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BICE",
+            "BICX"
+          ]
         }
       ],
       "images": {
@@ -99,6 +115,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "26728",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "LEGO Los Increíbles",
           "source": "igdb",
@@ -107,6 +129,12 @@
         {
           "field": "original_name",
           "value": "LEGO The Incredibles",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "LEGO The Incredibles takes players on an adventure where they’ll control their favourite Incredibles characters and team up as a family to conquer crime and family life.",
           "source": "igdb",
           "manual": false
         },
@@ -149,7 +177,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 94876,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100A01006E00000"
+          ]
         }
       ],
       "images": {
@@ -159,5 +190,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2231,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2641,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 11323,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

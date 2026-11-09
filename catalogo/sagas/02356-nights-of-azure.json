@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "20965",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Nights of Azure 2: Bride of the New Moon",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Nights of Azure 2: Bride of the New Moon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nights of Azure 2: Bride of the New Moon takes place in a fictional, demon-ridden Western European city towards the end of the 19th century. The story focuses on a knight protector named Alushe and her two childhood friends – Liliana, a kind-hearted priestess, and Ruhenheid, a holy knight of the Lourdes Order. While guarding Liliana, Alushe is ambushed and killed only to later awaken as an artificial half-demon at the hands of the New Curia, a religious organization with dark ties. In the company of a variety of unlikely allies with their own pasts and agendas, Alushe’s strong desire to save Liliana gives her the strength to scatter the shadows shrouding the world and motivation to uncover the shocking truth behind the mysterious Queen of the Moon.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 25636,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100628004BCE000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96523",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Nights of Azure",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Nights of Azure",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game is set on the imaginary island-kingdom of Ruswal, where nights are plagued by Azure-blooded demons. Although it is dangerous for humans to leave their homes after dark, the brave knights known as the Curia are trained to fend off the ever growing threat.\n\nAmong them is Arnice, a warrior of great skill and the protagonist of Nights of Azure. While she’s skilled with a blade, her talents aren’t just a product of her training. Arnice has some demon blood herself and is actually the only human that has managed to touch azure blood and survive! This event hasn’t left her unscathed and its thrilling implications become apparent quite early on; among others, it allows her access to a set of impressive abilities including the power to summon monsters to her aid in battle.",
           "source": "igdb",
           "manual": false
         },
@@ -117,7 +144,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 14878,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base completo, DLC aparte."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funcional, pero con tirones en combate."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y cuadros inestables."
+            }
+          ]
         },
         {
           "id": 96522,
@@ -125,7 +173,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 14878,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base completo, DLC aparte."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles fluidos y guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p y rendimiento estable."
+            }
+          ]
         },
         {
           "id": 96523,
@@ -134,7 +203,28 @@
           "year": 2017,
           "igdbId": 14878,
           "steamAppId": 527280,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y DLC disponibles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Admite mando y es cómodo de jugar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y 60 fps."
+            }
+          ]
         },
         {
           "id": 96524,
@@ -142,10 +232,56 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 14878,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base completo, DLC aparte."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, pero con tirones."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y cuadros inestables."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4549427ab501fca3449d6450165e060a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/acc4ba4eec87758e9b2ca94782c41bb9.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/597c7b407a02cc0a92167e7a371eca25.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2611,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40333,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 9575,
+          "reason": "2017"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

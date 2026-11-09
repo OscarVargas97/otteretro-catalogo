@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14125",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mario Strikers Charged",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mario Strikers Charged",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mario Strikers Charged is a Mario soccer Wii game and the sequel to the Nintendo GameCube game Super Mario Strikers. Up to four players can participate in this game as play soccer, attempting to kick the ball into another opponent's goal. The soccer in this game, however, has several differences than the real soccer, such as the ability to tackle other players with a minimal penalty, using Mario-themed items to give players an advantage over their opponents, and playing with stage hazards effectively. This game places a higher emphasis on individual character attributes compared to its precedent, by not only assigning stats, but by also giving team captains a unique Super Ability and the Mega Strike, an opportunity to score up to six goals. Another introduced mechanic is the power level of the ball: indicated by the color of the glow, the shots of the ball become more quick and powerful the more active it is, thus making it easier to score goals with.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,33 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 2255,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo; online ya cerrado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control Wii correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480p, borroso en TV actual."
+            }
+          ],
+          "codes": [
+            "RVL-R4QE-USA",
+            "RVL-R4QE-USA-B0",
+            "RVL-R4QJ-JPN"
+          ]
         },
         {
           "id": 14125,
@@ -56,14 +94,66 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 2255,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido; online cerrado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control con mandos Wii."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Casi idéntico al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD escalada, más limpia."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/c9814f056e558d72a9729ea56950fc9a.png",
         "hero": "https://cdn2.steamgriddb.com/hero/82b04cd5aa016d979fe048f3ddf0e8d3.png",
         "logo": "https://cdn2.steamgriddb.com/logo/8e80aa8666161beb9f25f5bed48f06c7.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 233,
+          "platform": "wii",
+          "project": "recharged",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/previouslevelgames/recharged",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 862,
+          "platform": "wii",
+          "project": "Strikers-WiiCompiled",
+          "kind": "recomp",
+          "toolchain": "Wiicompiled",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/BlackAndBlue95/Strikers-WiiCompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 16767,
@@ -87,6 +177,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Mario Strikers is the first game in the Mario Strikers series, it features a version of soccer without referees and rules and has power-ups and special strikes which count as two goals. In comparison to actual soccer, the game features a smaller version of the soccer field and each team has only five members instead of the usual eleven-a-side rule. The match time can be manually set from 2 to 15 minutes but is defined as 5 minutes by default. If time runs out when scores are level, a Sudden Death follows the regular game time where next goal wins.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -100,15 +196,84 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 2256,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-G4QE-USA",
+            "DL-DOL-G4QJ-JPN"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a85d58f89d4a5e8f8f9a6336b3dd18f7.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/ada822e604972569cda7a8cddc045c0d.png",
         "logo": "https://cdn2.steamgriddb.com/logo/a1140a3d0df1c81e24ae954d935e8926.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 403,
+          "platform": "gc",
+          "project": "strikers",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/new-coke/strikers",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1144,
+          "platform": "gc",
+          "project": "StrikersRecomp",
+          "kind": "recomp",
+          "toolchain": "DolRecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/aharonahdoot/StrikersRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1452,
+          "platform": "gc",
+          "project": "smstrikers-decomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/yannicksuter/smstrikers-decomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2466,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16767,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 7664,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

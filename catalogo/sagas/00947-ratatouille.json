@@ -29,6 +29,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44803",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ratatouille",
           "source": "igdb",
@@ -37,6 +43,12 @@
         {
           "field": "original_name",
           "value": "Ratatouille",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Players relive the film's most thrilling moments as they assume the role of Remy, a young rat who dreams of becoming a great French chef, despite the obvious problem of being a rat. From the underground sewers to the bustling streets of Paris, players dash, glide and slide through 6 action-packed worlds filled with dangerous enemies, heists and perilous missions. Players can go head-to-head with their friends in multiplayer mini-games or navigate their way through a sensational rat race that turns the culinary world of Paris upside down.",
           "source": "igdb",
           "manual": false
         },
@@ -78,7 +90,14 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 210731,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BNLE",
+            "BNLP",
+            "BNLU",
+            "BNLX",
+            "BNLY"
+          ]
         },
         {
           "id": 44801,
@@ -118,7 +137,16 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 281842,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ALWD",
+            "ALWE",
+            "ALWP",
+            "ALWU",
+            "ALWX",
+            "ALWY",
+            "ALWZ"
+          ]
         },
         {
           "id": 48660,
@@ -133,7 +161,23 @@
         "cover": "https://cdn2.steamgriddb.com/grid/357640a3884804fc1787ea511137e51b.png",
         "hero": "https://cdn2.steamgriddb.com/hero/0993bdfbd20407e1b60739ef01e432c8.png",
         "logo": "https://cdn2.steamgriddb.com/logo/6ee0208730157b0b4d5d44705f954895.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1425,
+          "platform": "gc",
+          "project": "RatDecomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/ZounaModding/RatDecomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 3210,
@@ -157,6 +201,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ratatouille: Food Frenzy is a cookery simulation-styled minigame compilation video game developed by Helixe and published by THQ for the Nintendo DS. It is based on the film Ratatouille.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -170,7 +220,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 18296,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YRLE",
+            "YRLP"
+          ]
         }
       ],
       "images": {
@@ -180,5 +234,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2233,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2766,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 3210,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

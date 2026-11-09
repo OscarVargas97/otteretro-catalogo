@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19264",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Curious Expedition",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Curious Expedition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Curious Expedition is a roguelike expedition simulation set in the late 19th century. Together with famous personalities you will venture on unprecedented expeditions to regions never explored before for fame, science and treasures.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 19319,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Menús pensados para ratón, menos cómodos con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptado a mando."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 19264,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 19319,
           "steamAppId": 358130,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón cómodo para el mapa y la gestión."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y nítido."
+            }
+          ]
         },
         {
           "id": 19265,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 19319,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Menús pensados para ratón, menos cómodos con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptado a mando."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 19266,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 19319,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "La pantalla táctil ayuda con los menús."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptado a Switch."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor."
+            }
+          ],
+          "codes": [
+            "010079500E0DA000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +191,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "32264",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Curious Expedition 2",
           "source": "igdb",
@@ -100,6 +205,12 @@
         {
           "field": "original_name",
           "value": "Curious Expedition 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Curious Expedition 2 is a turn-based narrative roguelike set in a reimagined version of the late 19th century that uses procedural gameplay and story elements to create completely unique and epic adventures every time you play.",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +253,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 115711,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010033500E0DC000"
+          ]
         }
       ],
       "images": {
@@ -152,5 +266,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2575,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9131,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 12990,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

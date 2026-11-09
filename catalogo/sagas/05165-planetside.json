@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98870",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "PlanetSide 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "PlanetSide 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "PlanetSide 2 is a Massively Multiplayer first person shooter that delivers truly epic, massive combat on a scale never before seen in stunning, breathtaking detail. Battles take place not between dozens of troops, but thousands; with air and ground vehicles slugging it out alongside squads of troops. Whether in open fields, tightly-packed urban centers or enormous structures, winning requires strategic teamwork and a quick trigger finger.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1265,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar, pero con servidores y actualizaciones aparte, y con retraso."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Se juega bien con mando, aunque apuntar es menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene el diseño, adaptado al mando."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución y tasa de cuadros más bajas, con menos jugadores."
+            }
+          ]
         },
         {
           "id": 98870,
@@ -57,9 +90,35 @@
           "year": 2012,
           "igdbId": 1265,
           "steamAppId": 218230,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Recibe todo el contenido y las actualizaciones primero."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado y mouse precisos, con muchos ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original del juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y cuadros por segundo, con batallas más grandes."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/809b70633a43fb8b657407c5436f49b2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2b9bd744f7c0d06123d9d9557310fa80.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a4d0649394c84ceb8b42b5f3987a333b.png"
+      }
     }
   ],
   "routes": []

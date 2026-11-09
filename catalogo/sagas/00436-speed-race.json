@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2036",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Automobili Lamborghini",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Automobili Lamborghini",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Automobili Lamborghini is one of the earlier racing games for the Nintendo 64, developed by Titus. 8 cars are included in this game, among them the Lamborghini Diablo, Porsche 959, Ferrari F50 and some hidden ones. The courses are quite detailed and the effects are decent, including special effects like lens flares. Races take you through six circuits in exotic areas around the world. There are 4 modes in Single Player including Arcade Mode, Championship Mode, Single Race and Time Trials. The game also includes 4 player support.",
           "source": "igdb",
           "manual": false
         },
@@ -63,7 +75,23 @@
         "cover": "https://cdn2.steamgriddb.com/grid/1c7e02e71df12a6cdae7888b9785b38f.png",
         "hero": "https://cdn2.steamgriddb.com/hero/7acc6b8a4fb3eecc9bdffe7ff1f88c25.png",
         "logo": "https://cdn2.steamgriddb.com/logo/86941b92e2c44caf6d6becf9171d08b2.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 542,
+          "platform": "n64",
+          "project": "automobililamborghini-recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/alondero/automobililamborghini-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     }
   ],
   "routes": []

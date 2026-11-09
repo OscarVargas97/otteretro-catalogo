@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A golf game from Artdink and the first in the Golful Golf series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 57050,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51493",
+            "SLES-51493-GER"
+          ]
         }
       ],
       "images": {
@@ -77,6 +87,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An Artdink developed early PlayStation 2 golf game released in both Japan and Europe",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -90,7 +106,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 59012,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-20183"
+          ]
         }
       ],
       "images": {
@@ -98,5 +117,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3232,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33585,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 33621,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

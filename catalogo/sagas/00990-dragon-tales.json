@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5919",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Tales: Dragon Adventures",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dragon Tales: Dragon Adventures",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Wish on Dragon Scale and get whisked away to Dragon Land. Then choose your adventure from five different fun-filled stories. While searching for Dragon Berry cupcakes, gems, and musical Notes you will travel to magical places like Puzzlewood in the Crystal Caves!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 6389,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Aventura infantil en Game Boy."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control sencillo, con guardado básico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla y gráficos más limitados."
+            }
+          ]
         },
         {
           "id": 5919,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 248751,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar al anterior."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control sencillo."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Posible reedición o adaptación con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor color y definición."
+            }
+          ],
+          "codes": [
+            "BD9E"
+          ]
         }
       ],
       "images": {
@@ -85,6 +142,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Tales: Dragon Seek is an interactive product that is part of the encompassing multi-media project centered on the PBS television series Dragon Tales. The game features puzzles and activities designed to encourage creative problem-solving and bolster self-confidence in pre-schoolers.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -107,5 +170,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2243,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24764,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 2879,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

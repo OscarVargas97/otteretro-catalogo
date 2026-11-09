@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49569",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "LostWinds",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "LostWinds",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Wield the awesome powers of Enril the wind spirit to guide and protect young Toku through this unique platform adventure.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 21486,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control por puntero de Wii, como se diseñó."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja; tienda cerrada."
+            }
+          ]
         },
         {
           "id": 49569,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 21486,
           "steamAppId": 447780,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Ratón o mando en lugar de puntero."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con control adaptado."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y disponible."
+            }
+          ]
         }
       ],
       "images": {
@@ -76,6 +130,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49662",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "LostWinds: Winter of the Melodias",
           "source": "igdb",
@@ -84,6 +144,12 @@
         {
           "field": "original_name",
           "value": "LostWinds: Winter of the Melodias",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "With amazing new abilities, re-visit a land full of wonder on a new adventure in LostWinds 2: Winter of the Melodias - sequel to the award-winning ‘LostWinds’.",
           "source": "igdb",
           "manual": false
         },
@@ -101,7 +167,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 21245,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Secuela completa original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control por puntero de Wii, como se diseñó."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja; tienda cerrada."
+            }
+          ]
         },
         {
           "id": 49662,
@@ -110,7 +197,28 @@
           "year": 2016,
           "igdbId": 21245,
           "steamAppId": 447800,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Secuela completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Ratón o mando en lugar de puntero."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con control adaptado."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y disponible."
+            }
+          ]
         }
       ],
       "images": {
@@ -120,5 +228,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2970,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19948,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 20017,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

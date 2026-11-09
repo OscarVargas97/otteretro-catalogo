@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81062",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Soldier of Fortune",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Soldier of Fortune",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "John Mullins, working for a U.S.-based mercenary (\"soldier of fortune\") organization known only as \"The Shop\", and his partner, Aaron \"Hawk\" Parsons, are assigned to prevent the nukes from falling into the wrong hands, and stop the terrorists in their plans.",
           "source": "igdb",
           "manual": false
         },
@@ -61,7 +73,21 @@
       ],
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5xso.jpg"
-      }
+      },
+      "ports": [
+        {
+          "id": 363,
+          "platform": "pc",
+          "project": "openMERC",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sidreshot/openMERC",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     },
     {
       "id": 39721,
@@ -73,6 +99,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94917",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Soldier of Fortune: Payback",
           "source": "igdb",
@@ -81,6 +113,12 @@
         {
           "field": "original_name",
           "value": "Soldier of Fortune: Payback",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Soldier of Fortune: Payback is a first-person shooter video game and the third installment of the Soldier of Fortune game series. Unlike the previous two Soldier of Fortune games, which were developed by Raven Software utilizing the Quake 2 and Quake 3 engines, Payback was developed by Cauldron HQ, developed with Cauldron's in-house CloakNT engine, used in their previous first person shooter game, Chaser. It is the first game of the series released for the Xbox 360 and PlayStation 3. The game was released on 14 November 2007.",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +136,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 3113,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00189",
+            "BLES-00190",
+            "BLUS-30105"
+          ]
         },
         {
           "id": 94917,
@@ -117,7 +160,12 @@
           "igdbId": 3113,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/dec5c44910c67f2d4d841b9df598bd62.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b786faa6ea0ea903be19e6fe1bf0de99.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/acd746ef45bbe504516078ff295ad7a7.png"
+      }
     },
     {
       "id": 48014,
@@ -129,6 +177,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114239",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Soldier of Fortune II: Double Helix",
           "source": "igdb",
@@ -137,6 +191,12 @@
         {
           "field": "original_name",
           "value": "Soldier of Fortune II: Double Helix",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Soldier of Fortune II: Double Helix is a video game created by Raven Software, a sequel to Soldier of Fortune. It was developed using the Quake III: Team Arena engine. Once again, Raven hired John Mullins to act as a consultant on the game. Based on comments and criticisms of the original game, Raven Software developed Soldier of Fortune II to be a more \"realistic\" game, with tactical shooters like Operation Flashpoint: Cold War Crisis and Tom Clancy's Rainbow Six as inspirations rather than Quake. A sequel titled Soldier of Fortune: Payback, made by Cauldron HQ was released for Microsoft Windows, PlayStation 3 and Xbox 360 in 2007.",
           "source": "igdb",
           "manual": false
         },
@@ -164,8 +224,36 @@
           "igdbId": 3112,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8q0q.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1932,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32440,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 48014,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 39721,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

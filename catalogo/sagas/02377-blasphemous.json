@@ -19,9 +19,15 @@
       "originalName": "Blasphemous",
       "year": 2019,
       "igdbId": 26820,
-      "popularity": 328,
+      "popularity": 329,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "21423",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Blasphemous",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Blasphemous",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Blasphemous is a punishing action-platformer that combines the fast-paced, skilled combat of a hack-n-slash game with a deep and evocative narrative core. Explore this nightmarish world of twisted religion and discover its many secrets hidden deep inside. Use devastating combos and brutal executions to smite the hordes of grotesque monsters and titanic bosses, who are all ready to rip your limbs off. Locate and equip relics, rosary beads and prayers that call on the powers of the heavens to aid you in your quest to break your eternal damnation.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 26820,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100698009C6E000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "52625",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Blasphemous II",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Blasphemous II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Penitent One awakens as Blasphemous 2 joins him once again in an endless struggle against The Miracle. Dive into a perilous new world filled with mysteries and secrets to discover, and tear your way through monstrous foes that stand between you and your quest to end the cycle one and for all.",
           "source": "igdb",
           "manual": false
         },
@@ -168,5 +195,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2620,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9707,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 21348,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "26404",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Midnight",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Midnight",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In this golf-like game your task is to guide a little square shaped fairy, Midnight.\nUse your mouse to launch Midnight, but watch out this world is full of danger.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2016,
           "igdbId": 33802,
           "steamAppId": 431460,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado y mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución alta."
+            }
+          ]
         },
         {
           "id": 15369,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 33802,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con pantalla del mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución."
+            }
+          ]
         },
         {
           "id": 26401,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 89495,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 26402,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 89495,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil cómoda."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor."
+            }
+          ]
         },
         {
           "id": 26403,
@@ -81,7 +177,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 89495,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 26404,
@@ -89,7 +206,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 89495,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil o en TV con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y nítida."
+            }
+          ]
         }
       ],
       "images": {
@@ -120,6 +258,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A golf puzzle game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -143,5 +287,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2493,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8015,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 8117,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

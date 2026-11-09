@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83825",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Last Escort: Club Katze",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Last Escort: Club Katze",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Last Escort: Club Katze is a Japanese PS2/PSP game.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 56704,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJS-00255"
+          ]
         },
         {
           "id": 83825,
@@ -56,9 +71,16 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 56704,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25957",
+            "SLPS-25958"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e067a894323f397c9d8218500e94dab7.png"
+      }
     },
     {
       "id": 34896,
@@ -82,6 +104,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A otome game that takes place in a host club.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -95,9 +123,15 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 220566,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25591"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5flg.jpg"
+      }
     },
     {
       "id": 34912,
@@ -121,6 +155,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Addition disc for Last Escort.\nAdds a new route and new endings for the existing options.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -134,9 +174,15 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 220567,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25673"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5fli.jpg"
+      }
     },
     {
       "id": 34957,
@@ -160,6 +206,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Last Escort 2: Shin'ya no Amai Ibara is an otome game, developed by Vingt-et-un Systems and published by D3Publisher, which was released in Japan in 2008.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -175,8 +227,41 @@
           "igdbId": 220570,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5flj.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1360,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34896,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 34912,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 34957,
+          "reason": "2008"
+        },
+        {
+          "position": 4,
+          "gameId": 33909,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "name": "Dragon Age",
   "igdbKind": "franchise",
   "igdbId": 1047,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2009,
       "igdbId": 76,
       "popularity": 1757,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94331",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dragon Age: Origins",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Dragon Age: Origins",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Age: Origins is a third-person role-playing game described as a spiritual successor to Baldur's Gate and Neverwinter Nights franchises. Players create their own character by customizing gender and appearance as well as choosing a race and class. Combat is in real time with the ability to pause at any moment: tactical options include an editor which allows the player to give the AI detailed instructions on how to behave in every possible situation. Although the main storyline is the same for every character created, the game features six unique prologues, two for each race. Dragon Age: Origins received critical acclaim upon release, with praise mostly directed at its story, setting, characters, music and combat system.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Age: Origins es un juego de rol en tercera persona, descrito como sucesor espiritual de las sagas Baldur's Gate y Neverwinter Nights. Los jugadores crean su propio personaje personalizando su género y apariencia, además de elegir raza y clase. El combate es en tiempo real, con la posibilidad de pausarlo en cualquier momento; entre las opciones tácticas se incluye un editor que permite dar a la IA instrucciones detalladas sobre cómo comportarse en cada situación posible. Aunque la trama principal es la misma para todos los personajes creados, el juego incluye seis prólogos únicos, dos por cada raza. Dragon Age: Origins fue muy aclamado por la crítica al salir, con elogios sobre todo a su historia, ambientación, personajes, música y sistema de combate.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,17 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 76,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50150",
+            "BLES-00699",
+            "BLES-00699/ANZ",
+            "BLES-00730",
+            "BLES-00730/CE",
+            "BLJS-10103",
+            "BLJS-50019",
+            "BLUS-30415"
+          ]
         },
         {
           "id": 94331,
@@ -67,6 +95,28 @@
           "igdbId": 76,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/202712c96eef8d96aefae885bd6f20ea.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ee89223a2b625b5152132ed77abbcc79.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3501672ebc68a5524629080e3ef60aef.png"
+      },
+      "ports": [
+        {
+          "id": 677,
+          "platform": "x360",
+          "project": "Dragon-Age-Origins-Recomp",
+          "kind": "recomp",
+          "toolchain": "XenonRecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/96dot/Dragon-Age-Origins-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
       ]
     },
     {
@@ -79,6 +129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94439",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Age II",
           "source": "igdb",
@@ -88,6 +144,18 @@
           "field": "original_name",
           "value": "Dragon Age II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Age II is the sequel to Dragon Age: Origins and the second major game in the series. Like its predecessor, players can explore and engage in combat from a third-person perspective and will also encounter various companions who play major roles in the plot and gameplay. Depending on players' decisions and dialogue, a companion will either recognize the main character Hawke as a friend or a rival. The game adopts the wheel-based dialogue system, meaning short responses that reflect different tones and attitudes the player wishes to choose for Hawke. The combat system is quite similar to the one used in the previous Dragon Age game, though it has been noticeably sped up.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Age II es la secuela de Dragon Age: Origins y la segunda gran entrega de la serie. Al igual que su predecesor, los jugadores pueden explorar y combatir desde una perspectiva en tercera persona, y también se encontrarán con diversos compañeros que desempeñan papeles importantes en la trama y en la jugabilidad. Según las decisiones y los diálogos del jugador, un compañero reconocerá al personaje principal, Hawke, como amigo o como rival. El juego adopta un sistema de diálogo por ruedas, es decir, respuestas breves que reflejan distintos tonos y actitudes que el jugador quiere elegir para Hawke. El sistema de combate es bastante similar al del juego anterior de Dragon Age, aunque se ha acelerado notablemente.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -104,7 +172,13 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 78,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50317",
+            "BLES-01084",
+            "BLJS-10161",
+            "BLUS-30645"
+          ]
         },
         {
           "id": 94439,
@@ -123,7 +197,12 @@
           "igdbId": 78,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/dd86da43ce04b4583e0147d0e6442e6e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6c91724b896cdcf48285039ab05b3aaf.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/6e2253d472803d93d15023a5adacbcc4.png"
+      }
     },
     {
       "id": 39706,
@@ -132,8 +211,14 @@
       "year": 2014,
       "igdbId": 1887,
       "popularity": 1098,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94775",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dragon Age: Inquisition",
@@ -144,6 +229,18 @@
           "field": "original_name",
           "value": "Dragon Age: Inquisition",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Age: Inquisition is a role-playing game and the third main game in the Dragon Age series. It is set in the Thedas continent, the same fantasy world as the two previous games. It consist of two large countries: Ferelden (from Dragon Age: Origins) and Orlais, as well as the land inbetween.\n\nTrue to the spirit of the series the character can be customized for appearance, sex, class and race. The available races are dwarf, elf, human, and Qunari and the classes are mage, rogue, and warrior with three specializations each. To grow the Inquisition experience needs to be earned by completing quests, which allows the player to further define allegiances and pursue romances.\n\nA custom party can be defined and each member benefits from experience as it opens up access to better weapons and more abilities. Power points open up new areas and Inquisition points define the influence over the region; each new level provides a perk that benefits the entire Inquisition.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Age: Inquisition es un juego de rol y la tercera entrega principal de la serie Dragon Age. Se ambienta en el continente de Thedas, el mismo mundo de fantasía de los dos juegos anteriores. Consta de dos grandes países, Ferelden (de Dragon Age: Origins) y Orlais, además de las tierras intermedias.\n\nFiel al espíritu de la serie, el personaje puede personalizarse en cuanto a apariencia, sexo, clase y raza. Las razas disponibles son enano, elfo, humano y qunari, y las clases son mago, pícaro y guerrero, cada una con tres especializaciones. Para hacer crecer la Inquisición, la experiencia se gana completando misiones, lo que permite al jugador definir sus alianzas con más precisión y perseguir romances.\n\nSe puede definir un grupo personalizado, y cada miembro se beneficia de la experiencia, ya que desbloquea el acceso a mejores armas y más habilidades. Los puntos de poder abren nuevas zonas, y los puntos de Inquisición definen la influencia sobre la región; cada nuevo nivel otorga una ventaja que beneficia a toda la Inquisición.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -160,7 +257,14 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 1887,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01657",
+            "BLJM-61204",
+            "BLJM-61212",
+            "BLUS-30997",
+            "BLUS-31515"
+          ]
         },
         {
           "id": 94774,
@@ -195,7 +299,12 @@
           "igdbId": 1887,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6b7e5dd8e735ac7504cd75e04acc097b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2c19c8daab0288cfce5172b551ff6d00.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/ba66841940a5fb383b6258d37ed444dc.png"
+      }
     },
     {
       "id": 43465,
@@ -207,6 +316,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103022",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Age: The Veilguard",
           "source": "igdb",
@@ -216,6 +331,18 @@
           "field": "original_name",
           "value": "Dragon Age: The Veilguard",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Select from different races and combat classes, customize your appearance, choose your character’s backstory and begin your journey as Rook, Dragon Age’s newest hero.\n\nSelect from three classes (Warrior, Mage, and Rogue), each with two distinct weapon types and unique abilities you can select between mid-combat. Experience new strategic depth as you combine fast-paced attacks, parries, and dodges with the companion ability wheel to exploit enemy weaknesses and seize victory with devastating combat combos.\n\nThe Veilguard contains several different factions, any of these could prove to be important ally during the story. Your faction choice will influence Rook's backstory, conversation options and more.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Elige entre distintas razas y clases de combate, personaliza tu apariencia, escoge el trasfondo de tu personaje y comienza tu viaje como Rook, el héroe más nuevo de Dragon Age.\n\nElige entre tres clases (guerrero, mago y pícaro), cada una con dos tipos de arma distintos y habilidades únicas que puedes seleccionar en mitad del combate. Descubre una nueva profundidad estratégica al combinar ataques rápidos, paradas y esquivas con la rueda de habilidades de compañeros para explotar las debilidades enemigas y alcanzar la victoria con combos devastadores.\n\nThe Veilguard incluye varias facciones distintas; cualquiera de ellas puede convertirse en un aliado importante durante la historia. Tu elección de facción influirá en el trasfondo de Rook, en las opciones de conversación y en mucho más.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -251,8 +378,107 @@
           "igdbId": 30208,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3b54a98867984c72934f886da10677c2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/08f6d3f1c7b5b5ecedb19cb55f38d490.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/1914d2e2b65a41f61544a62cec721807.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1373,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39557,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 39595,
+          "reason": "2011"
+        },
+        {
+          "position": 3,
+          "gameId": 39706,
+          "reason": "2014"
+        },
+        {
+          "position": 4,
+          "gameId": 43465,
+          "reason": "2024"
+        }
+      ]
+    },
+    {
+      "id": 3611,
+      "kind": "story",
+      "rationale": "La saga es una historia continua en Thedas y la cronología coincide con el orden de lanzamiento. Origins, Dragon Age II e Inquisition llevan a The Veilguard.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39557,
+          "recommendedVersionId": 94331,
+          "reason": "Inicio de la historia: la Ruina y el Guardia Gris. Se recomienda la versión de PC por mods y estabilidad."
+        },
+        {
+          "position": 2,
+          "gameId": 39595,
+          "recommendedVersionId": 94439,
+          "reason": "Cuenta la historia de Hawke en paralelo y después de la Ruina. Se recomienda PC."
+        },
+        {
+          "position": 3,
+          "gameId": 39706,
+          "recommendedVersionId": 94775,
+          "reason": "Continúa la crisis de Thedas con la Brecha y el Inquisidor. Se recomienda PC por rendimiento."
+        },
+        {
+          "position": 4,
+          "gameId": 43465,
+          "reason": "Cierra los hilos de Solas y el Velo. Da igual la versión, todas son la original."
+        }
+      ]
+    },
+    {
+      "id": 3612,
+      "kind": "community",
+      "rationale": "La comunidad suele recomendar jugar en orden de lanzamiento. Dragon Age II se juega aunque tenga fama de ser el más flojo, porque importa para Inquisition. Esta ruta no omite ningún juego. Es una recomendación de memoria, sin fuentes verificadas en esta sesión.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39557,
+          "recommendedVersionId": 94331,
+          "reason": "Base de lore y decisiones. Se recomienda PC por la mejor compatibilidad con mods y parches."
+        },
+        {
+          "position": 2,
+          "gameId": 39595,
+          "recommendedVersionId": 94439,
+          "reason": "Aporta personajes y eventos clave para Inquisition. Es corto y se puede jugar sin prisa. Se recomienda PC."
+        },
+        {
+          "position": 3,
+          "gameId": 39706,
+          "recommendedVersionId": 94775,
+          "reason": "Es el más popular y el más grande de la saga. Se recomienda PC por el rendimiento."
+        },
+        {
+          "position": 4,
+          "gameId": 43465,
+          "reason": "Es la secuela directa y usa las decisiones anteriores. Da igual la versión."
+        }
+      ]
+    }
+  ]
 }

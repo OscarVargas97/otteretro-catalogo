@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19012",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pang Adventures",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Pang Adventures",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Pang series is a beloved collection of arcade video games from the early 90s. Guide two brothers on a quest around the world to save humankind from a massive alien invasion!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 23372,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 19012,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 23372,
           "steamAppId": 415150,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fps."
+            }
+          ]
         },
         {
           "id": 19013,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 23372,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 19014,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 23372,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ideal para partidas rápidas y cooperativo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución más baja."
+            }
+          ],
+          "codes": [
+            "010087300B730000"
+          ]
         }
       ],
       "images": {
@@ -104,6 +203,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Michael, an aspiring young magician, has failed an experiment - leading to dire consequences!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -125,5 +230,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2570,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17219,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 9066,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

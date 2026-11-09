@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Rule the streets in this big-time baller game, based on the console arcade-style NBA game. Take on the biggest stars of the NBA in full Street style, battle it out with a 3-on-3 game, or go on the ultimate quest to become a Street legend in the King of the Court mode. Create your own Baller and add your personal style. Two unique PSP modes feature unique gameplay for the portable -- earn style points in Shot Blocker and Arcade Shootout modes and enhance your status as the game’s newest street legend. Wireless head-to-head play allows you to go one-on-one against a friend in the original Pick Up game mode, while Party Play lets up to four players can compete in two high-flyin’ game modes, Shot Blocker and Arcade Shootout, using one PSP.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -48,9 +54,18 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 38479,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULAS-42003",
+            "ULES-00037",
+            "ULJM-05046",
+            "ULUS-10010"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f38f3050620c4a2c883fa2c689d38307.jpg"
+      }
     },
     {
       "id": 39841,
@@ -62,6 +77,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95290",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "NBA Street Homecourt",
           "source": "igdb",
@@ -70,6 +91,12 @@
         {
           "field": "original_name",
           "value": "NBA Street Homecourt",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "NBA Street Homecourt is the fourth game in the NBA Street series. It was released for the Xbox 360 on February 19, 2007, and for the PlayStation 3 on March 6, 2007.\n\nCarmelo Anthony, pictured during his tenure with the Denver Nuggets, is featured on the cover.\n\nA demo of the game was released on February 2, 2007 on the Xbox Live Marketplace. NBA Street Homecourt was the first Xbox 360 game to be natively rendered in the 1080p resolution.[2] The game features basketball courts that are based on real ones that NBA superstars grew up on and honed their talents.",
           "source": "igdb",
           "manual": false
         },
@@ -87,7 +114,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 7108,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00038",
+            "BLJM-60025",
+            "BLUS-30022"
+          ]
         },
         {
           "id": 95291,
@@ -97,8 +129,33 @@
           "igdbId": 7108,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4038eedc54a3bfda96d5ff5271818f50.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4922a6fd912d4477a18cc8a678189dab.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/8158c0cb82cb59f37ac5913b14b48633.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3266,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35217,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 39841,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

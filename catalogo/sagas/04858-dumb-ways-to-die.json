@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "90883",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dumb Ways to Party",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dumb Ways to Party",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The worlds dumbest party game is here! Play as your favorite Bean, and go head-to-head with up to three other players to become the Dumbest of the Dumb. Will you use skill, sabotage or sheer dumb luck to win?",
           "source": "igdb",
           "manual": false
         },
@@ -99,7 +111,10 @@
           "igdbId": 375096,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coaqqm.jpg"
+      }
     },
     {
       "id": 47915,
@@ -111,6 +126,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113848",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dumb Ways to Build",
           "source": "igdb",
@@ -119,6 +140,12 @@
         {
           "field": "original_name",
           "value": "Dumb Ways to Build",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dumb Ways to Build is a chaotic, physics-based co-op game. Team up with friends to assemble your crew and take-on dangerous construction jobs. With all the gear and no idea, work together to build your path forward, or die trying!",
           "source": "igdb",
           "manual": false
         },
@@ -155,8 +182,32 @@
           "igdbId": 414526,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/212f29b4df419c67d6a29424f6b9ebe0.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/acb50258fe5ac2d541a1f00b8523d134.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3296,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 37720,
+          "reason": "2026"
+        },
+        {
+          "position": 2,
+          "gameId": 47915,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

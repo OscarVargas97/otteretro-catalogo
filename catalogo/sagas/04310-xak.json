@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "73864",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Xak: The Art of Visual Stage",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Xak: The Art of Visual Stage",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Xak: The Art of Visual Stage is the first game in the fantasy role-playing video game series Xak. It was originally released for the NEC PC-8801 computer system, with subsequent versions being developed for the NEC PC-9801, Sharp X68000, MSX2, PC-Engine, Super Famicom, and mobile phones.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 41769,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo de la recopilación."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado, mando y guardado flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a los juegos originales."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y ventana configurables, carga rápida."
+            }
+          ]
         },
         {
           "id": 75068,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 292867,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que la versión de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil, con menos opciones de configuración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a los juegos originales."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución fija y menor potencia que PC."
+            }
+          ]
         }
       ],
       "images": {
@@ -83,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Xak II: Rising of the Redmoon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Xak II: Rising of the Redmoon is a Role-Playing game, developed and published by Micro Cabin, which was released in Japan in 1991.",
           "source": "igdb",
           "manual": false
         },
@@ -131,6 +191,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fray in Magical Adventure, also known as just Fray (フレイ) and Fray-Xak Epilogue (Gai-den), is a 1990 spin-off \"gaiden\" (sidestory) game in a role-playing video game series Xak developed and published by the Japanese software developer MicroCabin. Even though it is directly connected to the more serious Xak storyline, Fray has a less serious tone and light-hearted comedic approach to telling the story. It was originally released for the MSX2 and was later ported to several different systems, among them MSX turbo R, PC-9801, PC Engine (as Fray CD), and Game Gear.\nFray is a simple action RPG. The game proceeds by the player's character Fray fighting through a preset overhead view map shooting opposing monsters, jumping over obstacles, and locating powerups and Gold, the game's currency, along the way. At the end of each stage the player will fight a boss and enter a town or safe haven where the player can purchase new equipment, hit points and the option to save their progress. Fray advances in power through the items that she can equip such as different rods and shields. Battles are in real-time as Fray walks around on automatic vertically scrolling game map as well as the monster characters. She has an attack and defense rating, and can switch between different projectile weapon styles as well as use special attacks and healing items",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1990",
           "source": "igdb",
@@ -146,7 +212,10 @@
           "igdbId": 351228,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/ftvovb6hxn8pfgk1q1xb.jpg"
+      }
     },
     {
       "id": 36796,
@@ -170,6 +239,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Xak Precious Package: The Tower of Gazzel is a fantasy role-playing video game developed and published by the Japanese software developer MicroCabin. The game is a direct sequel to Xak: The Art of Visual Stage and Xak II: The Rising of the Red Moon. While technically being the third installment of the series, The Tower of Gazzel is a side story taking place between the events of Xak II and Xak III.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -185,8 +260,43 @@
           "igdbId": 358628,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c9e8e511cdc6bbcad29e3fc6c66cff84.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c84504d9a640c3dae4c83ea6cf8e2a67.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/dbff73f891ddaf801efb146c79834a4a.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1342,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 29586,
+          "reason": "1989"
+        },
+        {
+          "position": 2,
+          "gameId": 31006,
+          "reason": "1990"
+        },
+        {
+          "position": 3,
+          "gameId": 36321,
+          "reason": "1990"
+        },
+        {
+          "position": 4,
+          "gameId": 36796,
+          "reason": "1991"
+        }
+      ]
+    }
+  ]
 }

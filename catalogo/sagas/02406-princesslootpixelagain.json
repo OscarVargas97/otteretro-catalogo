@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22141",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Princess.Loot.Pixel.Again",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Princess.Loot.Pixel.Again",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "PLPA is a dynamic platformer with a combo system and special strikes, there is also a bit of rogue-lite genre. The principal aim is to get through all floors of the Dark Tower and outfight the main antagonist a Evil Mage. That’s not easy due to a instant death which is followed by a full castle structure regeneration.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 34129,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Port estable."
+            }
+          ]
         },
         {
           "id": 22141,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 34129,
           "steamAppId": 414290,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, respuesta precisa."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y escalable."
+            }
+          ]
         },
         {
           "id": 22142,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 34129,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Port estable."
+            }
+          ]
         },
         {
           "id": 22143,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 34129,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien en Switch."
+            }
+          ],
+          "codes": [
+            "0100174015E56000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +191,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "25973",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Princess.Loot.Pixel.Again x2",
           "source": "igdb",
@@ -100,6 +205,12 @@
         {
           "field": "original_name",
           "value": "Princess.Loot.Pixel.Again x2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Save cats! Kill dragons! Kiss a Princess! Again!",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +253,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 79101,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100F9D0160B6000"
+          ]
         }
       ],
       "images": {
@@ -152,5 +266,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2633,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9902,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 11082,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

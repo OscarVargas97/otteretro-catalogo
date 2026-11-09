@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "29606",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Spirit of the North",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Spirit of the North",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Spirit of the North is a single player, 3rd-person adventure game inspired by the breathtaking and mysterious landscapes of Iceland. The story takes root from various pieces of Nordic folklore. The game is unique in that it purposefully has no dialog or narrative. Players must breathe in their surroundings to solve various puzzles and speculate the meaning of a lost ancient civilization. Play as an ordinary red fox who’s story becomes entwined with the guardian of the Northern Lights, a female spirit fox. As you journey over the mountains and under red stained skies you’ll discover more about your companion and a land left in ruin.\"",
           "source": "igdb",
           "manual": false
         },
@@ -65,7 +77,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 107141,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01005E101122E000"
+          ]
         },
         {
           "id": 29606,
@@ -100,6 +115,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111687",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Spirit of the North 2",
           "source": "igdb",
@@ -108,6 +129,12 @@
         {
           "field": "original_name",
           "value": "Spirit of the North 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Unveil the mysteries of a beautiful ancient world in this breathtaking 3rd-Person Adventure, a sequel to the acclaimed ‘Spirit of the North.’ Take on the role of an isolated fox with a raven companion on a quest to restore the lost guardians and return home.\n\nIn an ancient world left in ruin, embark on the journey of an isolated fox far from home. With the help of a wise Raven companion, seek out the lost legendary guardians and release them from the grasp of the dark shaman Grimnir.",
           "source": "igdb",
           "manual": false
         },
@@ -144,8 +171,33 @@
           "igdbId": 273868,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/30105a760ff39afbe52e943bd0466109.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/ac55a25f041641d0ba10b559ad5a78d0.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/0376a0c35668a969cbf41f5c12f8868f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2710,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12028,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 47093,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

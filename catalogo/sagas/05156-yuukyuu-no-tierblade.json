@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "3000 years in the future, after a terrible war has polluted the worlds atmosphere.\n\nA young girl named Eve has lived in an underground shelter for a long time with only a robot AI for companionship.\n\nWhen one day a guy finds her and her world starts to move again.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 136438,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co557u.jpg"
+      }
     },
     {
       "id": 41499,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fandisk for Yuukyuu no Tierblade: Lost Chronicle.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 136439,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4smy.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3381,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41457,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 41499,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

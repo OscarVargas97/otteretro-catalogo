@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94506",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rage",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rage",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rage is a first-person shooter set in the not-too-distant future after an asteroid impacts Earth, leaving a ravaged world behind. You emerge into this vast wasteland to discover humanity working to rebuild itself against such forces as raider gangs, mutants, and the Authority – an oppressive government regime that has a special interest in you in particular.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,16 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 509,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01377",
+            "BLES-01378",
+            "BLES-01426",
+            "BLJM-60994",
+            "BLKS-20302",
+            "BLUS-30485",
+            "BLUS-30485GH"
+          ]
         },
         {
           "id": 94506,
@@ -67,7 +88,12 @@
           "igdbId": 509,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/748a516769a5b4377bd4d2febd8b452e.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/157db0091dc94a8b439cf5e46fc5dfd2.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/68ab14b322fecf44196cc1186f167857.png"
+      }
     },
     {
       "id": 42593,
@@ -79,6 +105,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101652",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rage 2",
           "source": "igdb",
@@ -87,6 +119,12 @@
         {
           "field": "original_name",
           "value": "Rage 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dive headfirst into a dystopian world devoid of society, law, and order. Rage 2 brings together a true open world FPS experience where you can go anywhere, shoot anything, and explode everything.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +161,33 @@
           "igdbId": 101211,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0c10b4b67b3b750c1f71544393ac935f.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ec341a16d2ebfd5bd5954296bd261ffc.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/16fa2b0294e410b2551c3bf6965c0853.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3312,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39618,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 42593,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

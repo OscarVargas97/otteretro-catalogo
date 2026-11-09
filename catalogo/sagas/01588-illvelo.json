@@ -77,6 +77,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Illvelo, also named Illmatic Envelope, is a vertical shmup initially released for the NAOMI arcade system by MileStone Inc. in 2008. It's mostly noticeable for its trippy level backgrounds, bizarre sound effects and wacky enemy visual designs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -107,6 +113,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "52140",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Illvelo Swamp",
           "source": "igdb",
@@ -115,6 +127,12 @@
         {
           "field": "original_name",
           "value": "Illvelo Swamp",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The latest game in the Illvelo (Illimatic Envelope) STG Series, Developed by RS34. The game is noted for it's branching level structure and focus on surreal visuals.",
           "source": "igdb",
           "manual": false
         },
@@ -133,7 +151,28 @@
           "year": 2026,
           "igdbId": 165182,
           "steamAppId": 4539580,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y ajustes."
+            }
+          ]
         },
         {
           "id": 52141,
@@ -141,7 +180,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 165182,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -170,6 +230,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Illvelo Swamp Happy Together is the new and evolved version of the previous title, Illvelo Swamp.\n\nSwim through 100 stages of happiness via two unique modes—Regular Mode and Dev Mode—equipped with multi-ability weapon, the Doll.\n\nBe prepared for endlessly happy shoot ’em up experience.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2025",
           "source": "igdb",
@@ -185,8 +251,41 @@
           "igdbId": 383529,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cob5qz.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1187,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20476,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 5491,
+          "reason": "2014"
+        },
+        {
+          "position": 3,
+          "gameId": 21228,
+          "reason": "2021"
+        },
+        {
+          "position": 4,
+          "gameId": 37774,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

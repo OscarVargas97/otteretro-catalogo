@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "45201",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Calvin Tucker's Redneck: Farm Animals Racing Tournament",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Calvin Tucker's Redneck: Farm Animals Racing Tournament",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Calvin Tucker's Redneck: Farm Animal Racing Tournament is a wacky kart game with loads of typical redneck humor. Their crazy organized tournaments bring them from the Farm to the tropical Pirate Island, from the Polar North to Egypt and from inside the Pyramid they are warped into time to Medieval times, finally returning by UFO back in time again.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 51039,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SCGE-USA-B0"
+          ]
         },
         {
           "id": 45201,
@@ -93,6 +108,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Every year, the people of Redneck County gather to compete in the great Redneck Jamboree! Come join them and test your redneck skills in 12 hilarious events to gain more bottle caps than any of the four families participating to become the greatest family of the county for a year. Not only will you get bragging rights, but you'll also get the privilege to move in \"The Big Trailer\" where fabulous redneck style luxuries await!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -106,7 +127,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 4743,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RVNE-USA-B0",
+            "RVL-RVNP-EUR-B0"
+          ]
         }
       ],
       "images": {
@@ -114,5 +139,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2877,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19455,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 17206,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

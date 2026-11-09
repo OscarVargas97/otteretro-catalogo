@@ -3,7 +3,7 @@
   "name": "starcraft",
   "igdbKind": "franchise",
   "igdbId": 589,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1998,
       "igdbId": 230,
       "popularity": 1270,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "102322",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "StarCraft",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "StarCraft",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "StarCraft is a real-time strategy game set in a distant sector of the Milky Way galaxy in the 26th century. Players command one of three species across separate campaigns: the Terrans, resourceful human colonists cut off from Earth; the Zerg, an insectoid swarm that assimilates other species; and the Protoss, a technologically advanced race with powerful psionic abilities. Each species features distinct units, structures, and strategic options. The game includes a story-driven single-player campaign for each faction and competitive multiplayer via Battle.net.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "StarCraft es un juego de estrategia en tiempo real ambientado en un sector lejano de la Vía Láctea en el siglo XXVI. Los jugadores dirigen a una de tres especies en campañas separadas: los Terran, colonos humanos ingeniosos aislados de la Tierra; los Zerg, un enjambre insectoide que asimila otras especies; y los Protoss, una raza tecnológicamente avanzada con poderosas habilidades psiónicas. Cada especie tiene unidades, estructuras y opciones estratégicas propias. El juego incluye una campaña para un jugador con historia para cada facción y competencia multijugador a través de Battle.net.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -80,7 +98,7 @@
       "year": 2010,
       "igdbId": 239,
       "popularity": 1150,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -110,7 +128,12 @@
           "igdbId": 239,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6b858b47b1a454fbeed28048602926c3.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c757db153bb444294ae503de6a9f192d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ee44ad0dac9aeaef088d0b44daa70bd2.png"
+      }
     },
     {
       "id": 42977,
@@ -149,7 +172,11 @@
           "igdbId": 457,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/aa196ebf45a370c98b856004d837c741.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/157d9f8e3592c76c244fa8f0327a04c0.png"
+      }
     },
     {
       "id": 43415,
@@ -188,8 +215,109 @@
           "igdbId": 458,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9876b43ac1d19e78b15dade574ebfd9a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/17c276c8e723eb46aef576537e9d56d0.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/e867c10126c42db2765d6fa79c1ccab2.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1098,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1104,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 42968,
+          "reason": "2010"
+        },
+        {
+          "position": 3,
+          "gameId": 42977,
+          "reason": "2013"
+        },
+        {
+          "position": 4,
+          "gameId": 43415,
+          "reason": "2015"
+        }
+      ]
+    },
+    {
+      "id": 3605,
+      "kind": "story",
+      "rationale": "La historia es continua y coincide con el orden de lanzamiento: StarCraft (con Brood War) y luego la trilogía de StarCraft II.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1104,
+          "recommendedVersionId": 102322,
+          "reason": "Inicia la historia; la versión Remastered mantiene la campaña con mejor resolución y mejoras de calidad de vida."
+        },
+        {
+          "position": 2,
+          "gameId": 42968,
+          "recommendedVersionId": 102168,
+          "reason": "Continúa la historia de Jim Raynor y Mengsk cuatro años después."
+        },
+        {
+          "position": 3,
+          "gameId": 42977,
+          "recommendedVersionId": 102183,
+          "reason": "Sigue la campaña de Kerrigan y los zerg."
+        },
+        {
+          "position": 4,
+          "gameId": 43415,
+          "recommendedVersionId": 102856,
+          "reason": "Cierra la saga con los protoss y Artanis."
+        }
+      ]
+    },
+    {
+      "id": 3606,
+      "kind": "community",
+      "rationale": "Se recomienda empezar por StarCraft Remastered (incluye Brood War) para entender la trama y luego jugar SC2 en orden. Quien prefiera algo más moderno puede empezar en Wings of Liberty.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1104,
+          "recommendedVersionId": 102322,
+          "reason": "Remastered es la versión recomendada: gráficos actualizados, mismo juego y requisitos bajos. Las versiones N64 y original de PC no se aconsejan hoy."
+        },
+        {
+          "position": 2,
+          "gameId": 42968,
+          "recommendedVersionId": 102168,
+          "reason": "La campaña más accesible de SC2 y la que mejor introduce el conflicto."
+        },
+        {
+          "position": 3,
+          "gameId": 42977,
+          "recommendedVersionId": 102183,
+          "reason": "Continúa la historia de Kerrigan y es mejor jugarla antes del cierre."
+        },
+        {
+          "position": 4,
+          "gameId": 43415,
+          "recommendedVersionId": 102856,
+          "reason": "Final de la trilogía; la mayor parte de su peso narrativo depende de los juegos anteriores."
+        }
+      ]
+    }
+  ]
 }

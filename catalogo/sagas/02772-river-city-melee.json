@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "31881",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "River City Melee Mach!!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "River City Melee Mach!!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Downtown Rantou Koushinkyoku Mach!! is an enhanced version of River City Melee: Battle Royal Special with new elements added that make for more heated battles.",
           "source": "igdb",
           "manual": false
         },
@@ -65,7 +77,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 115481,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100B2100767C000"
+          ]
         }
       ],
       "images": {
@@ -83,6 +98,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101225",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "River City Melee: Battle Royal Special",
           "source": "igdb",
@@ -91,6 +112,12 @@
         {
           "field": "original_name",
           "value": "River City Melee: Battle Royal Special",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is the most recent installment of the Kunio-Kun franchise recreated as a fun and easy fighting game with the fighting aspects taken and upgraded from River City Super Sports Challenge All Star Special.",
           "source": "igdb",
           "manual": false
         },
@@ -119,8 +146,32 @@
           "steamAppId": 544630,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ec25c33da3cb77a325b10d78b388ae5f.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/18adec6e03961a45fb12cf220b7a731f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2747,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42424,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 12883,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

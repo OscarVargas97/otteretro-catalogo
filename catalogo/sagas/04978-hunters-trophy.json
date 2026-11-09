@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "15154",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hunter's Trophy 2: Europa",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Hunter's Trophy 2: Europa",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A hunting game from Bigben Interactive.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 64376,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01671"
+          ]
         },
         {
           "id": 15155,
@@ -83,6 +98,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95746",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hunter's Trophy 2: Australia",
           "source": "igdb",
@@ -91,6 +112,12 @@
         {
           "field": "original_name",
           "value": "Hunter's Trophy 2: Australia",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "More complete, fun and realistic than ever, the Hunting Challenge series has earned a reputation as the best hunting simulation for consoles.\n\nRealistic animal behaviour, a variety of environments, weapons, animals, hunting plans, equipment and skills to unlock, online leaderboards, training in shooting at fixed and moving targets… all are brought together to offer a unique gaming experience which will delight experienced and novice hunters as well as players just looking to experience something new.",
           "source": "igdb",
           "manual": false
         },
@@ -126,7 +153,10 @@
           "igdbId": 10421,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocspk.jpg"
+      }
     },
     {
       "id": 40050,
@@ -138,6 +168,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95754",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hunter's Trophy 2: America",
           "source": "igdb",
@@ -146,6 +182,12 @@
         {
           "field": "original_name",
           "value": "Hunter's Trophy 2: America",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "More complete, fun and realistic than ever, the Hunting Challenge series has earned a reputation as the best hunting simulation for consoles.\n\nRealistic animal behaviour, a variety of environments, weapons, animals, hunting plans, equipment and skills to unlock, online leaderboards, training in shooting at fixed and moving targets… all are brought together to offer a unique gaming experience which will delight experienced and novice hunters as well as players just looking to experience something new.",
           "source": "igdb",
           "manual": false
         },
@@ -173,8 +215,36 @@
           "igdbId": 10420,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2j5j.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2001,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7941,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 40047,
+          "reason": "2013"
+        },
+        {
+          "position": 3,
+          "gameId": 40050,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

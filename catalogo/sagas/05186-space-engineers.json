@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99137",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Space Engineers",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Space Engineers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Space Engineers is a sandbox game about engineering, construction and maintenance of space works. Players build space ships and space stations of various sizes and utilization (civil and military), pilot ships and perform asteroid mining.\n\nSpace Engineers utilizes a realistic volumetric-based physics engine: all objects can be assembled, disassembled, damaged and destroyed.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 3239,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar al de Xbox, con mods limitados."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de mando funcionales pero menos precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original con recortes por consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Rendimiento modesto en PS4 y cargas más lentas."
+            }
+          ]
         },
         {
           "id": 99137,
@@ -57,7 +90,28 @@
           "year": 2019,
           "igdbId": 3239,
           "steamAppId": 244850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo, con todos los DLC y acceso a mods del Steam Workshop."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado y ratón van muy bien para construir; guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original del juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y cuadros por segundo, limitado solo por el equipo."
+            }
+          ]
         },
         {
           "id": 99138,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 3239,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Mismo contenido que PS4, con mods limitados."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando adaptado, con mejor respuesta que PS4."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original con recortes por consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mejor rendimiento y cargas más rápidas que en PS4, sin igualar a PC."
+            }
+          ]
         },
         {
           "id": 99139,
@@ -73,9 +148,35 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 3239,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Casi todo el contenido, pero sin mods completos del Workshop y con retraso en las actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de mando adaptados, menos cómodos para construir."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la idea original con recortes por consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Rendimiento inferior y mundos más limitados."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7adec11f33252f2d4df7fdf3495879c1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6fe3ec8f08093fb71744041532af3382.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/78e47c847242a09b099c9100497a3cb4.png"
+      }
     }
   ],
   "routes": []

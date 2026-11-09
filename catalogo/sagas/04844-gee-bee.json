@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113376",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gee Bee",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Gee Bee",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Namco's first independently designed video arcade game, Gee Bee combines gameplay elements of pinball and Breakout.\n\nThere are two paddles, one at the bottom and one in the middle, that stay aligned when moving, so players must pay attention to both when bouncing the ball. There are blocks at the top, sides. and in two tiny compartments on the sides near the bottom. There is also a third, stationary, vertically-oriented paddle in the middle, as well as bumpers to give it a pinball feel. Scoring depends on what objects you hit.\n\nThis was the first of three similar games designed and developed by Toru Iwatani, the creator of Pac-Man.",
           "source": "igdb",
           "manual": false
         },
@@ -82,7 +94,12 @@
           "igdbId": 371415,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fe6e1aa6a096f3d53fadf70c8c88aba8.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/cf47f28a13af2a43c2d2786e49263a85.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9c1486a35ee3e21495b84219ad861670.png"
+      }
     },
     {
       "id": 37256,
@@ -94,6 +111,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113397",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomb Bee",
           "source": "igdb",
@@ -102,6 +125,12 @@
         {
           "field": "original_name",
           "value": "Bomb Bee",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It is the sequel to Gee Bee, which was released in the previous year.\n\nThe objective of the game is to use two paddles to bounce a ball which flies around and hit the colored bricks above it with the ball. When the bricks are cleared out of the side sections, it will turn that same side's pop-bumper into 100 points instead of 10.",
           "source": "igdb",
           "manual": false
         },
@@ -153,8 +182,31 @@
           "igdbId": 378489,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6szw.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3295,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 37255,
+          "reason": "1978"
+        },
+        {
+          "position": 2,
+          "gameId": 37256,
+          "reason": "1979"
+        }
+      ]
+    }
+  ]
 }

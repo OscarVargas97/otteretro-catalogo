@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A compilation of Idea Factory's two visual novel tie-ins to the popular manga franchise Fushigi Yuugi, ported to the Nintendo DS.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 68021,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BF4J"
+          ]
         }
       ],
       "images": {
@@ -65,6 +74,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83651",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fushigi Yuugi Genbu Kaiden Gaiden: Kagami no Miko",
           "source": "igdb",
@@ -73,6 +88,12 @@
         {
           "field": "original_name",
           "value": "Fushigi Yuugi Genbu Kaiden Gaiden: Kagami no Miko",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fushigi Yuugi Genbu Kaiden: Kagami no Miko is a simulation game for Playstation 2, based on the shoo manga Fushigi Yuugi Genbu Kaiden. It was ported to PSP on September 21, 2006. It is the first game of the Fushigi Yuugi series, and it takes place in the original Fushigi Yuugi Genbu Kaiden manga.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +111,10 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 62179,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-05175"
+          ]
         },
         {
           "id": 83651,
@@ -98,9 +122,17 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 62179,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-66023",
+            "SLPM-66024",
+            "SLPM-67000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7yra.jpg"
+      }
     },
     {
       "id": 33889,
@@ -124,6 +156,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fushigi Yuugi Suzaku Ibun is a simulation game for the anime and manga series Fushigi Yuugi. It's story is based on the original Fushigi Yugi. The game, though having most of the characters as returning characters from the original series, it has apparently replaced Miaka and Yui. It was released on 2008, in two editions: limited and full edition. The game was also ported to NDS on June 25, 2009 and placed on the same cartridge as Fushigi Yuugi Genbu Kaiden: Kagami no Miko.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -137,10 +175,42 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 62178,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-66998",
+            "SLPM-66999"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4ohd.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1798,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33785,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 33889,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 17627,
+          "reason": "2009"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

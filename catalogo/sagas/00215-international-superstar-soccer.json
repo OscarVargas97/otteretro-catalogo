@@ -3,7 +3,7 @@
   "name": "International Superstar Soccer",
   "igdbKind": "franchise",
   "igdbId": 2056,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -32,6 +32,18 @@
           "field": "original_name",
           "value": "International Superstar Soccer",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "International Superstar Soccer is a football video game developed by Konami for the Super Nintendo Entertainment System. It is known as the best soccer game available for any 16-bit systems, mostly due to its lifelike approach, innovative for the time, that showed diversified players in the same team, with an adult look and back numbers on their respective jerseys, corresponding to real-life players of the time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "International Superstar Soccer es un videojuego de fútbol desarrollado por Konami para la Super Nintendo Entertainment System. Es conocido como el mejor juego de fútbol disponible para sistemas de 16 bits, sobre todo por su enfoque realista, innovador para la época, que mostraba jugadores diversos dentro del mismo equipo, con aspecto adulto y dorsales en sus camisetas correspondientes a los jugadores reales de la época.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -67,6 +79,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "645",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "International Superstar Soccer Deluxe",
           "source": "igdb",
@@ -76,6 +94,18 @@
           "field": "original_name",
           "value": "International Superstar Soccer Deluxe",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "International Superstar Soccer Deluxe is a football video game and the sequel to International Superstar Soccer.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "International Superstar Soccer Deluxe es un videojuego de fútbol y la secuela de International Superstar Soccer.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -92,7 +122,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 9862,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con selecciones y torneos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles ágiles y bien probados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "El original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Fluido en 16 bits."
+            }
+          ]
         },
         {
           "id": 646,
@@ -100,14 +151,68 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 9862,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Ritmo y control distintos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Más detalle visual y sonido."
+            }
+          ],
+          "codes": [
+            "SLES-00511"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/cf5b6f0e6477c48793e51e4f31e0cdb9.png",
         "hero": "https://cdn2.steamgriddb.com/hero/6e98a07774134cd7335ad075d05c464a.png",
         "logo": "https://cdn2.steamgriddb.com/logo/24df2ddc8f842b2c2047d7a6088f2845.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 803,
+          "platform": "snes",
+          "project": "iss-deluxed",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Mabec-games/iss-deluxed",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 804,
+          "platform": "snes",
+          "project": "issd-native",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sergiomanzur/issd-native",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 1036,
@@ -115,9 +220,15 @@
       "originalName": "International Superstar Soccer 64",
       "year": 1997,
       "igdbId": 3516,
-      "popularity": 33,
-      "iconic": false,
+      "popularity": 32,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "1974",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "International Superstar Soccer 64",
@@ -128,6 +239,18 @@
           "field": "original_name",
           "value": "International Superstar Soccer 64",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Are you ready for the most realistic soccer game the world has ever seen? Get ready for: Incredible, seemless game control; Awesome animation with over 17,000 motion captured animations; Live, intelligent commentary; Every conceivable soccer move from headers to heel passes; Multiple formations to team strategies; Trade & create your own players; 36 International teams with 16 players per team. Everything a soccer fan wants!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¿Estás listo para el juego de fútbol más realista que el mundo haya visto jamás? Prepárate para: un control del juego increíble y sin fisuras; una animación impresionante con más de 17.000 animaciones con captura de movimiento; comentarios en directo e inteligentes; todos los movimientos de fútbol imaginables, desde cabezazos hasta pases de tacón; múltiples formaciones y estrategias de equipo; intercambia y crea tus propios jugadores; 36 selecciones internacionales con 16 jugadores por equipo. ¡Todo lo que un aficionado al fútbol desea!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -144,7 +267,28 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3516,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición internacional con más selecciones y comentarios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control y modos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "El original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en N64."
+            }
+          ]
         },
         {
           "id": 2636,
@@ -152,7 +296,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 185992,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición japonesa con menos selecciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "El original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Igual de fluido."
+            }
+          ]
         },
         {
           "id": 2674,
@@ -160,7 +325,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 131795,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "1",
+              "text": "Versión portátil muy recortada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Simplificada."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Solo recuerda al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Gráficos básicos."
+            }
+          ]
         }
       ],
       "images": {
@@ -191,6 +377,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Do you have what it takes to be a superstar? Over 17,000 new motion captured animations! Team motivation, players and teams react to real game situations. Vertical camera angle allows you to see more of the pitch. 52 International teams and 9 unique soccer stadiums. Create your own players and trade existing ones. Infinite team formations and customizable strategies.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¿Tienes lo necesario para ser una superestrella? ¡Más de 17.000 nuevas animaciones con captura de movimiento! Motivación del equipo: jugadores y equipos reaccionan a situaciones reales del partido. El ángulo de cámara vertical te permite ver más del campo. 52 selecciones internacionales y 9 estadios de fútbol únicos. Crea tus propios jugadores e intercambia los existentes. Formaciones de equipo infinitas y estrategias personalizables.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -204,7 +402,11 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3514,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NWSE",
+            "NWSP"
+          ]
         }
       ],
       "images": {
@@ -223,6 +425,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2510",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "International Superstar Soccer 2000",
           "source": "igdb",
@@ -232,6 +440,18 @@
           "field": "original_name",
           "value": "International Superstar Soccer 2000",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The undisputed king of football returns... Experience the new Career Mode - bring youngsters through the ranks to create individual star players. Smoother animations and gameplay. ISS 2000 is the choice of champions - nothing gets as close to the beautiful game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El rey indiscutible del fútbol vuelve… Experimenta el nuevo modo Carrera: forma a jóvenes promesas para crear jugadores estrella individuales. Animaciones y jugabilidad más fluidas. ISS 2000 es la elección de los campeones: nada se acerca tanto al bello juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -271,7 +491,37 @@
         "cover": "https://cdn2.steamgriddb.com/grid/42c055bbb7b45d6c5e247283fd96452f.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/a77db118bbb7db86ee5b8cb6ac32c096.png",
         "logo": "https://cdn2.steamgriddb.com/logo/0f29370d9da664c1e143182f37301063.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 801,
+          "platform": "n64",
+          "project": "ISS2000",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/djultra64/ISS2000",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 802,
+          "platform": "n64",
+          "project": "iss2000-recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Mabec-games/iss2000-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 2067,
@@ -295,6 +545,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "International Superstar Soccer Advance is a Sports game, developed by Konami Computer Entertainment Osaka and published by Konami, which was released in Europe in 2003.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "International Superstar Soccer Advance es un juego deportivo desarrollado por Konami Computer Entertainment Osaka y publicado por Konami, que se lanzó en Europa en 2003.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -308,7 +570,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 49280,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AY2P"
+          ]
         }
       ],
       "images": {
@@ -326,6 +591,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "4436",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "ISS: International Superstar Soccer",
           "source": "igdb",
@@ -335,6 +606,18 @@
           "field": "original_name",
           "value": "ISS: International Superstar Soccer",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "International Superstar Soccer (abbreviated as ISS) is a football video game in the International Superstar Soccer series by Konami.\n\nPlayers can train and edit their teams, and they can change the formations and tactics before the match. During the match, they can adjust camera angles, make substitutions and tactical changes, adjust the game speed, and so on. The main game element is controlling the players, making searching passes, and scoring goals.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "International Superstar Soccer (abreviado como ISS) es un videojuego de fútbol de la serie International Superstar Soccer de Konami.\n\nLos jugadores pueden entrenar y editar sus equipos, y pueden cambiar las formaciones y tácticas antes del partido. Durante el partido, pueden ajustar los ángulos de cámara, hacer sustituciones y cambios tácticos, ajustar la velocidad del juego, etc. El elemento principal del juego es controlar a los jugadores, hacer pases de búsqueda y marcar goles.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -351,7 +634,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 136303,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición PS1 posterior."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy similar."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos de PS1."
+            }
+          ]
         },
         {
           "id": 4436,
@@ -359,7 +663,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 136303,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Más modos y equipos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control más pulido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Misma base con mejoras."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejores gráficos de PS2."
+            }
+          ]
         },
         {
           "id": 5249,
@@ -367,7 +692,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 220859,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión portátil reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Simplificada."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos limitados."
+            }
+          ]
         },
         {
           "id": 64908,
@@ -375,7 +721,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 220858,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición PS1 base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "El original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos de PS1."
+            }
+          ]
         },
         {
           "id": 84878,
@@ -383,7 +750,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 168136,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Edición de PS2 regional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control similar."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Misma base."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos de PS2."
+            }
+          ]
         },
         {
           "id": 84879,
@@ -391,7 +779,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 168137,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Edición de PS2 posterior."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control similar."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Misma base."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos de PS2."
+            }
+          ]
         }
       ],
       "images": {
@@ -417,6 +826,18 @@
           "field": "original_name",
           "value": "International Superstar Soccer 99",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "So, you don't think realistic international soccer is possible on the Game Boy Color? Think again; INTERNATIONAL SUPERSTAR SOCCER 99 has all of the rules, physics, and intensity of the real thing. You can play as any of 32 worldwide squads, competing for the rights to the International Cup. Choose whether you want to play three, five, or seven-minute halves, and decide whether you want your overtime decisions to be made Golden Goal or Extended Time-style. The gameplay and decisions are so detailed, you can even select your starting lineup and reserve players, pick a formation, and set up your own strategies. You can engage in any number of exhibition games (alone or against a friend), but the real fun begins in International Cup mode, in which you claw your way up from a ranking of 32nd in the world. Beginners and seasoned veterans alike will get plenty of mileage out of the game, as there are three different difficulty settings to master.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¿Crees que el fútbol internacional realista no es posible en Game Boy Color? Piénsalo otra vez: INTERNATIONAL SUPERSTAR SOCCER 99 tiene todas las reglas, la física y la intensidad del fútbol real. Puedes jugar con cualquiera de las 32 selecciones del mundo, compitiendo por el derecho a la Copa Internacional. Elige si quieres jugar partidos de tres, cinco o siete minutos por mitad, y decide si las prórrogas se resuelven con gol de oro o con tiempo extra. La jugabilidad y las decisiones son tan detalladas que incluso puedes seleccionar tu alineación inicial y los suplentes, elegir una formación y configurar tus propias estrategias. Puedes disputar cualquier número de partidos amistosos (solo o contra un amigo), pero la verdadera diversión comienza en el modo Copa Internacional, en el que debes abrirte camino desde el puesto 32 del ranking mundial. Tanto los principiantes como los veteranos sacarán mucho partido al juego, ya que tiene tres niveles de dificultad que dominar.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -448,8 +869,14 @@
       "year": 2001,
       "igdbId": 3957,
       "popularity": 5,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "43345",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "International Superstar Soccer 2",
@@ -460,6 +887,18 @@
           "field": "original_name",
           "value": "International Superstar Soccer 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "ISS 2 is the latest offering from the creators of Konami's successful International Superstar Soccer series. Its arcade style gameplay is based on realistic and intuitive football action, and ISS 2's fluid and detailed style allows the gamer greater scope for their flexing virtual football talent, with the open gameplay ensuring that no two goals or build-up play will be the same. With more than 50 international teams and a wealth of game modes, ISS 2 is huge. Featuring real player names thanks to the FIFPro licence, the game allows players to step into the boots of their favorite players to tackle, dribble and score their way to glory on every next generation platform.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "ISS 2 es la última propuesta de los creadores de la exitosa serie International Superstar Soccer de Konami. Su jugabilidad de estilo arcade se basa en una acción de fútbol realista e intuitiva, y el estilo fluido y detallado de ISS 2 da al jugador mayor margen para demostrar su talento futbolístico virtual; el juego abierto garantiza que no haya dos goles ni jugadas de construcción iguales. Con más de 50 selecciones internacionales y una gran variedad de modos de juego, ISS 2 es enorme. Gracias a la licencia de FIFPro, incluye nombres reales de jugadores; el juego te permite ponerte en la piel de tus futbolistas favoritos para entrar, driblar y marcar goles en busca de la gloria en cada plataforma de la nueva generación.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -484,7 +923,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 3957,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GJ2P-EUR"
+          ]
         },
         {
           "id": 43346,
@@ -519,6 +961,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43646",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "International Superstar Soccer 3",
           "source": "igdb",
@@ -528,6 +976,18 @@
           "field": "original_name",
           "value": "International Superstar Soccer 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Come and be a part of Football. Feel the nerves in the tunnel and the excitement on the pitch. Immerse yourself with intuitive gameplay and realism for total footballing action. Experience the all new one-on-one situations and live the game. Pull off some amazing skills that really are pure football.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Ven y forma parte del fútbol. Siente los nervios en el túnel y la emoción en el campo. Sumérgete en una jugabilidad intuitiva y en el realismo para vivir toda la acción del fútbol. Vive las nuevas situaciones de uno contra uno y vive el juego. Ejecuta jugadas espectaculares que son, de verdad, puro fútbol.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -544,7 +1004,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 3958,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GJ3P-EUR"
+          ]
         },
         {
           "id": 43646,
@@ -599,6 +1062,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "International Superstar Soccer Pro 98, officially abbreviated as ISS Pro 98, is a football simulation game developed and published by Konami for the PlayStation in 1997. It is part of the International Superstar Soccer (ISS) series, known for its focus on realistic gameplay and detailed graphics for the time. ISS Pro 98 features a wide range of national teams, realistic player animations, and improved AI, making it one of the more advanced football games of its era.\n\nThe game offers various modes, including Exhibition, International Cup, World League, and Training. ISS Pro 98 is often remembered as one of the best football games on the original PlayStation.\n\nDespite not having the FIFPro license, the game showcased Italian player Fabrizio Ravanelli on the cover of its PlayStation version. Additionally, the German release featured Andreas Koepke from Germany, and the British release featured Paul Ince.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "International Superstar Soccer Pro 98, abreviado oficialmente como ISS Pro 98, es un juego de simulación de fútbol desarrollado y publicado por Konami para PlayStation en 1997. Forma parte de la serie International Superstar Soccer (ISS), conocida por su enfoque en la jugabilidad realista y los gráficos detallados para la época. ISS Pro 98 cuenta con una amplia variedad de selecciones nacionales, animaciones de jugadores realistas y una IA mejorada, lo que lo convierte en uno de los juegos de fútbol más avanzados de su era.\n\nEl juego ofrece varios modos, como Amistoso, Copa Internacional, Liga Mundial y Entrenamiento. ISS Pro 98 suele recordarse como uno de los mejores juegos de fútbol de la PlayStation original.\n\nAunque no tenía la licencia de FIFPro, el juego mostró al jugador italiano Fabrizio Ravanelli en la portada de su versión para PlayStation. Además, la versión alemana presentó a Andreas Koepke, de Alemania, y la versión británica, a Paul Ince.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -612,7 +1087,13 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 44932,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCPS-45294",
+            "SLES-01218",
+            "SLES-01264",
+            "SLUS-00674"
+          ]
         }
       ],
       "images": {
@@ -622,5 +1103,167 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 403,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 351,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 425,
+          "reason": "1995"
+        },
+        {
+          "position": 3,
+          "gameId": 1036,
+          "reason": "1997"
+        },
+        {
+          "position": 4,
+          "gameId": 24542,
+          "reason": "1997"
+        },
+        {
+          "position": 5,
+          "gameId": 1115,
+          "reason": "1998"
+        },
+        {
+          "position": 6,
+          "gameId": 6010,
+          "reason": "1999"
+        },
+        {
+          "position": 7,
+          "gameId": 1343,
+          "reason": "2000"
+        },
+        {
+          "position": 8,
+          "gameId": 2425,
+          "reason": "2000"
+        },
+        {
+          "position": 9,
+          "gameId": 16456,
+          "reason": "2001"
+        },
+        {
+          "position": 10,
+          "gameId": 2067,
+          "reason": "2002"
+        },
+        {
+          "position": 11,
+          "gameId": 16578,
+          "reason": "2003"
+        }
+      ]
+    },
+    {
+      "id": 3849,
+      "kind": "story",
+      "rationale": "La saga no tiene historia continua: son simuladores de fútbol anuales. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 351,
+          "reason": "Primer juego de la saga."
+        },
+        {
+          "position": 2,
+          "gameId": 425,
+          "reason": "Mejora del primero."
+        },
+        {
+          "position": 3,
+          "gameId": 1036,
+          "reason": "Salto a 3D en N64."
+        },
+        {
+          "position": 4,
+          "gameId": 24542,
+          "reason": "Versión PS1 de 1997."
+        },
+        {
+          "position": 5,
+          "gameId": 1115,
+          "reason": "Evolución de ISS 64."
+        },
+        {
+          "position": 6,
+          "gameId": 6010,
+          "reason": "Entrega de 1999."
+        },
+        {
+          "position": 7,
+          "gameId": 1343,
+          "reason": "Entrega de 2000."
+        },
+        {
+          "position": 8,
+          "gameId": 2425,
+          "reason": "Entrega de 2000 en PS1/PS2/GBA."
+        },
+        {
+          "position": 9,
+          "gameId": 16456,
+          "reason": "Primera entrega de la era de PS2/Xbox/GC."
+        },
+        {
+          "position": 10,
+          "gameId": 2067,
+          "reason": "Versión portátil en GBA."
+        },
+        {
+          "position": 11,
+          "gameId": 16578,
+          "reason": "Última entrega de la saga."
+        }
+      ]
+    },
+    {
+      "id": 3850,
+      "kind": "community",
+      "rationale": "Sin fuentes verificadas: selección basada en conocimiento general. Se destacan los títulos más queridos (ISS 64 y ISS 98) y las entregas de PS2; se omiten versiones portátiles y entregas menores.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1036,
+          "recommendedVersionId": 2636,
+          "reason": "Clásico de N64 muy recordado por su jugabilidad y el modo multijugador."
+        },
+        {
+          "position": 2,
+          "gameId": 1115,
+          "recommendedVersionId": 2109,
+          "reason": "Refina ISS 64 con más pulido; es de lo mejor de la saga."
+        },
+        {
+          "position": 3,
+          "gameId": 16456,
+          "recommendedVersionId": 43346,
+          "reason": "Da el salto a PS2; se juega mejor en esa consola."
+        },
+        {
+          "position": 4,
+          "gameId": 16578,
+          "recommendedVersionId": 44177,
+          "reason": "Cierre de la saga y la más completa en PS2."
+        }
+      ]
+    }
+  ]
 }

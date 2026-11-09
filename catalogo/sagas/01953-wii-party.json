@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "It's time to party with Wii U Enjoy board games and mini-games on the TV, play familiar tabletop games using the Wii U GamePad Controller, or transform your living room into a game show floor. No matter what kind of party you're throwing, Wii Party U offers something for everyone.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -79,6 +85,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Wii Party features 13 different game modes divided amongst three categories: Party Games, House Party Games, and Pair Games. Most of the game modes integrate use of Wii Party's 80 mini-games. The game also offers additional modes that make exclusive use of the mini-games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -92,15 +104,57 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 2189,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SUPE-USA-B0",
+            "RVL-SUPJ-JPN-B0",
+            "RVL-SUPK-KOR-B0",
+            "RVL-SUPP-EUR-B0"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/587864d357de196350158ad57eeae9a1.png",
         "hero": "https://cdn2.steamgriddb.com/hero/9c9ac1bb61647aff9c55c6dc00035a01.png",
         "logo": "https://cdn2.steamgriddb.com/logo/f915833c0979810086c2ea49db2993c6.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1268,
+          "platform": "wii",
+          "project": "wiiparty-recomp",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/arelkair/wiiparty-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2475,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19502,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 7763,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

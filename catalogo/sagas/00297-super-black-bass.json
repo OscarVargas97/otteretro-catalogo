@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Compete in four exciting tournaments against top anglers for the celebrated title of Super Bass Champion.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1992",
           "source": "igdb",
@@ -73,6 +79,12 @@
         {
           "field": "original_name",
           "value": "Bassin's Black Bass",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bassin's Black Bass is a fishing game in which players aim to become a professional fisherman. It is part of Starfish's Black Bass fishing game series and their second title on the SNES. Originally titled Super Black Bass 2, the game was renamed for the US release and endorsed by the professional fishing champion Hank Parker. The object of the game is for the player to become a professional fisherman and can travel by themselves or along with Hank.",
           "source": "igdb",
           "manual": false
         },
@@ -121,6 +133,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "With 16 releases across 7 different platforms, the legendary fishing series makes its return with Super Black Bass 3D for the Nintendo 3DS, and packs a host of exciting new features and gameplay modes in its tackle box that are designed exclusively for the Nintendo 3DS.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -134,7 +152,11 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 21023,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-ASBE",
+            "CTR-P-ASBP"
+          ]
         }
       ],
       "images": {
@@ -151,6 +173,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61289",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Big Bass World Championship",
           "source": "igdb",
@@ -159,6 +187,12 @@
         {
           "field": "original_name",
           "value": "Big Bass World Championship",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "BIG BASS WORLD CHAMPIONSHIP places you into the world of competitive, professional fishing. Customize your tackle box and fishing style, then head out to Raccoon Lake and take on the pros in the Tournament mode. If the competition keeps stressing you out, go for a casual afternoon of relaxation in the Practice mode. No matter how you choose to play the game, the underwater camera will capture every second of fish fighting action. With all of the action and excitement of professional fishing, BIG BASS WORLD CHAMPIONSHIP will keep all the future Hank Parker's of the world happy.",
           "source": "igdb",
           "manual": false
         },
@@ -176,7 +210,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 20135,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardados de estado y mando moderno en emulación."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación de PS1 con imagen más limpia."
+            }
+          ]
         },
         {
           "id": 61289,
@@ -184,7 +239,31 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 20135,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de época, guardado en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento de PS1 nativos."
+            }
+          ],
+          "codes": [
+            "SLUS-00228"
+          ]
         },
         {
           "id": 61290,
@@ -192,7 +271,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 20135,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con guardado de estado, controles más limitados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación en pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -200,5 +300,35 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1089,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 591,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 765,
+          "reason": "1994"
+        },
+        {
+          "position": 3,
+          "gameId": 24184,
+          "reason": "1997"
+        },
+        {
+          "position": 4,
+          "gameId": 4236,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

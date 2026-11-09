@@ -3,7 +3,7 @@
   "name": "Plants vs. Zombies",
   "igdbKind": "franchise",
   "igdbId": 5238,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2009,
       "igdbId": 1277,
       "popularity": 685,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "7083",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Plantas contra Zombies",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Plants vs. Zombies",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Plants vs. Zombies is a tower defense game in which players protect their suburban home from waves of approaching zombies by placing various plants on a grid-based lawn. Each plant has a unique defensive function, from shooting projectiles to blocking or exploding, while different zombie types require specific strategies to defeat. The game spans five stages across daytime, nighttime, backyard pool, fog, and rooftop settings, with additional puzzle, mini-game, and survival modes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Plants vs. Zombies es un juego de defensa de torres en el que los jugadores protegen su hogar suburbano de oleadas de zombis que se acercan, colocando diversas plantas en un césped dividido en cuadrícula. Cada planta tiene una función defensiva única, desde disparar proyectiles hasta bloquear o explotar, mientras que los distintos tipos de zombis requieren estrategias específicas para derrotarlos. El juego abarca cinco etapas ambientadas de día, de noche, en una piscina de patio trasero, en la niebla y en tejados, además de modos de puzzle, minijuegos y supervivencia.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,10 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1277,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30852"
+          ]
         },
         {
           "id": 6582,
@@ -152,7 +173,24 @@
         "cover": "https://cdn2.steamgriddb.com/grid/ff4bf2b35971ab9136bf25f3419b9029.png",
         "hero": "https://cdn2.steamgriddb.com/hero/3a02bb9405c627ccf3732d4906ae3fbe.png",
         "logo": "https://cdn2.steamgriddb.com/logo/8448fb05242b03fd9feffae6735453d4.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 975,
+          "platform": "x360",
+          "project": "pvz-console-edition",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/ITSeniy/pvz-console-edition",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
+      ]
     },
     {
       "id": 13329,
@@ -164,6 +202,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "33447",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Plants vs. Zombies La Batalla de Neighborville",
           "source": "igdb",
@@ -173,6 +217,18 @@
           "field": "original_name",
           "value": "Plants vs. Zombies: Battle for Neighborville",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Similar to its predecessors, the game is a third-person shooter where players take control of the Plants or the Zombies in either a cooperative or competitive multiplayer environment. The game features 20 customizable gameplay classes, six of which are new to the franchise, and they are classified into three groups: attackers, defenders, or support. Each camp also has a new team play class that allows players of the same class to combine forms when they fight against enemies. Players can compete against each other in various competitive multiplayer modes, including the objective-based Turf War mode and the team deathmatch variant Team Vanquish. The game also features several player-versus-environment open zones which allowed players to explore, find collectibles, and complete quests. Split-screen local multiplayer is also available for all gameplay mode",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Al igual que sus predecesores, el juego es un shooter en tercera persona en el que los jugadores controlan a las Plantas o a los Zombis en un entorno multijugador cooperativo o competitivo. El juego cuenta con 20 clases de jugabilidad personalizables, seis de ellas nuevas en la franquicia, clasificadas en tres grupos: atacantes, defensores o apoyo. Cada bando también tiene una nueva clase de trabajo en equipo que permite a los jugadores de la misma clase combinar formas cuando luchan contra enemigos. Los jugadores pueden competir entre sí en diversos modos multijugador competitivos, entre ellos el modo basado en objetivos Turf War y la variante por equipos Team Vanquish. El juego también incluye varias zonas abiertas de jugador contra entorno, donde se puede explorar, encontrar coleccionables y completar misiones. También está disponible el multijugador local en pantalla dividida para todos los modos de juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -189,7 +245,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 121618,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y fluido."
+            }
+          ]
         },
         {
           "id": 33447,
@@ -198,7 +275,28 @@
           "year": 2019,
           "igdbId": 121618,
           "steamAppId": 1262240,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando o ratón, ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fps."
+            }
+          ]
         },
         {
           "id": 33448,
@@ -206,7 +304,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 121618,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y fluido."
+            }
+          ]
         },
         {
           "id": 33449,
@@ -214,7 +333,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 121618,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port de Switch con contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercano con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución y fps menores."
+            }
+          ]
         },
         {
           "id": 40834,
@@ -222,7 +362,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 142819,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port de Switch con contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercano con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución y fps menores."
+            }
+          ]
         }
       ],
       "images": {
@@ -241,6 +402,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95160",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Plants vs. Zombies: Garden Warfare",
           "source": "igdb",
@@ -250,6 +417,18 @@
           "field": "original_name",
           "value": "Plants vs. Zombies: Garden Warfare",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Plants vs. Zombies is digging into the trenches with an explosive new 3D experience. Blast zombies, plants, and new characters with inventive weapons across a mine-blowing PvZ world. Take on Co-Op and Multiplayer action with your friends and sow the seeds of victory!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Plants vs. Zombies se adentra en las trincheras con una nueva experiencia 3D explosiva. Destruye zombis, plantas y nuevos personajes con armas ingeniosas en un mundo de PvZ que vuela por los aires. Enfréntate a la acción cooperativa y multijugador junto a tus amigos y ¡siembra las semillas de la victoria!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -266,7 +445,14 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 3146,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50720",
+            "BLES-02021",
+            "BLES-02021/RUS",
+            "BLJM-61194",
+            "BLUS-31410"
+          ]
         },
         {
           "id": 95159,
@@ -300,7 +486,12 @@
           "igdbId": 3146,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fc355f56d5e523cd32025f4756b88eda.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/3da972c3ec85b6f3cc5306acf034fd23.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b4a465e7e05eb06eca8e6da20dadf8cc.png"
+      }
     },
     {
       "id": 41744,
@@ -309,8 +500,14 @@
       "year": 2016,
       "igdbId": 11148,
       "popularity": 119,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "99405",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Plants vs. Zombies: Garden Warfare 2",
@@ -321,6 +518,18 @@
           "field": "original_name",
           "value": "Plants vs. Zombies: Garden Warfare 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The battle for suburbia grows to crazy new heights in Plants vs. Zombies Garden Warfare 2! In this hilarious, action-packed shooter, zombie leader Dr. Zomboss has strengthened his horde and rebuilt suburbia as a zombie utopia. But hope remains, because for the first time the plants are taking the offensive in an all-out attack to reclaim their turf. Play as the plants in the all-new 24-player Herbal Assault mode, or choose your side in 4-player co-op or Solo Play!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La batalla por los suburbios alcanza nuevas y locas alturas en Plants vs. Zombies Garden Warfare 2. En este shooter divertidísimo y lleno de acción, el líder zombi Dr. Zomboss ha reforzado su horda y ha reconstruido los suburbios como una utopía zombi. Pero queda esperanza, porque por primera vez las plantas pasan a la ofensiva en un ataque total para recuperar su territorio. Juega como plantas en el nuevo modo Herbal Assault de 24 jugadores, o elige tu bando en modo cooperativo de 4 jugadores o en Juego en solitario.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -355,8 +564,97 @@
           "igdbId": 11148,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3xur.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1145,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3360,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 39809,
+          "reason": "2014"
+        },
+        {
+          "position": 3,
+          "gameId": 41744,
+          "reason": "2016"
+        },
+        {
+          "position": 4,
+          "gameId": 13329,
+          "reason": "2019"
+        }
+      ]
+    },
+    {
+      "id": 3949,
+      "kind": "story",
+      "rationale": "Los juegos no forman una historia continua: el shooter Garden Warfare es un spin-off aparte. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3360,
+          "reason": "Juego original de defensa de torres."
+        },
+        {
+          "position": 2,
+          "gameId": 39809,
+          "reason": "Primer shooter multijugador de la saga."
+        },
+        {
+          "position": 3,
+          "gameId": 41744,
+          "reason": "Continúa el shooter con más modos."
+        },
+        {
+          "position": 4,
+          "gameId": 13329,
+          "reason": "Tercer shooter, con un tono distinto."
+        }
+      ]
+    },
+    {
+      "id": 3950,
+      "kind": "community",
+      "rationale": "Empieza por el original, que es el núcleo de la saga. Los shooters son opcionales y van después. No pude consultar fuentes.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3360,
+          "recommendedVersionId": 7080,
+          "reason": "El mejor punto de entrada. Se elige el remaster de PC por ser la edición más reciente."
+        },
+        {
+          "position": 2,
+          "gameId": 41744,
+          "recommendedVersionId": 99405,
+          "reason": "El shooter más completo. Versión de PC."
+        },
+        {
+          "position": 3,
+          "gameId": 13329,
+          "recommendedVersionId": 33447,
+          "reason": "Opcional, si quieres más shooter. Versión de PC."
+        }
+      ]
+    }
+  ]
 }

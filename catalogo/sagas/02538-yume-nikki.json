@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "25248",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Yume Nikki: Dream Diary",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Yume Nikki: Dream Diary",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Yume Nikki: Dream Diary is a collaborative show of the utmost respect for auteur Kikiyama’s seminal release.",
           "source": "igdb",
           "manual": false
         },
@@ -104,8 +116,33 @@
           "steamAppId": 650700,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7159ee6744f7862015648fab47a5ef62.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/96de2547f44254c97f5f4f1f402711c1.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1f36c15d6a3d18d52e8d493bc8187cb9.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2669,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43717,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 10847,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

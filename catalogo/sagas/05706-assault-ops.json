@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A military themed twin-stick shooter.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 59734,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/b34aqne4cj3e5fdsp0qr.jpg"
+      }
     },
     {
       "id": 48903,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel to the first Assault Ops.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 59741,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/x7li9bacstyn9863nf4d.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3513,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48901,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 48903,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

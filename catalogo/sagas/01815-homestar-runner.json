@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "It's Trogdor's 19th Trogday and he's out to smote him a Kerrek. Squish all the peasants while avoiding the knights to achieve burnination. Then burninate all the cottages to face off against the Kerrek himself.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2022",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Help Marzipan whip steaks back onto a horrifying skeletal bovine carcass in order to bring it back to life! But beware, -or should we say... beRARE- the steaks can also hurt you!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2022",
           "source": "igdb",
@@ -109,6 +121,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50438",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Trogdor!",
           "source": "igdb",
@@ -117,6 +135,12 @@
         {
           "field": "original_name",
           "value": "Trogdor!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Trogdor! is a game based on the character of Trogdor from the Strong Bad Email dragon. Trogdor squishes peasants and burninates cottages, all while avoiding knights and archers.",
           "source": "igdb",
           "manual": false
         },
@@ -134,7 +158,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 124317,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente, sin extras que yo pueda confirmar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control adaptado al mando de Wii, menos preciso que el ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación a otra plataforma con cambios de control."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de Wii; estable pero menos nítida."
+            }
+          ]
         },
         {
           "id": 50438,
@@ -142,7 +187,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 124317,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo tal como se publicó originalmente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con ratón/teclado simple y directo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Corre fluido en cualquier PC actual, aunque depende de Flash o emuladores."
+            }
+          ]
         }
       ],
       "images": {
@@ -152,5 +218,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1602,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20446,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 6825,
+          "reason": "2022"
+        },
+        {
+          "position": 3,
+          "gameId": 6828,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

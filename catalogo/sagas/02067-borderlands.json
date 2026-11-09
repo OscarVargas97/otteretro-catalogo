@@ -3,7 +3,7 @@
   "name": "Borderlands",
   "igdbKind": "franchise",
   "igdbId": 808,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -19,9 +19,15 @@
       "originalName": "Borderlands",
       "year": 2009,
       "igdbId": 498,
-      "popularity": 1035,
-      "iconic": false,
+      "popularity": 1036,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "18208",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Borderlands",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Borderlands",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Borderlands is an action role-playing first-person shooter set on the distant planet of Pandora. Players choose from four characters, each with distinct combat abilities, and explore an open world rendered in a distinctive cartoon-style visual approach. Gameplay revolves around completing missions, defeating enemies, and collecting procedurally generated weapons with varying statistics and elemental effects. The game supports cooperative play for up to four players, with enemy difficulty scaling based on the number of participants.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Borderlands es un shooter en primera persona de acción y rol ambientado en el lejano planeta Pandora. Los jugadores eligen entre cuatro personajes, cada uno con habilidades de combate distintivas, y exploran un mundo abierto con un estilo visual caricaturesco característico. La jugabilidad gira en torno a completar misiones, derrotar enemigos y recolectar armas generadas proceduralmente, con distintas estadísticas y efectos elementales. El juego admite el modo cooperativo para hasta cuatro jugadores, y la dificultad de los enemigos se ajusta según el número de participantes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,16 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 498,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50267",
+            "BLES-00697/ANZ",
+            "BLES-00697/P",
+            "BLES-00698",
+            "BLKS-20145",
+            "BLUS-30386",
+            "BLUS-30386GH"
+          ]
         },
         {
           "id": 16653,
@@ -105,9 +132,15 @@
       "originalName": "Borderlands 2",
       "year": 2012,
       "igdbId": 1011,
-      "popularity": 1886,
-      "iconic": false,
+      "popularity": 1888,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "16870",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Borderlands 2",
@@ -118,6 +151,18 @@
           "field": "original_name",
           "value": "Borderlands 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A new era of shoot and loot is about to begin. Play as one of four new vault hunters facing off against a massive new world of creatures, psychos and the evil mastermind, Handsome Jack. Make new friends, arm them with a bazillion weapons and fight alongside them in 4 player co-op on a relentless quest for revenge and redemption across the undiscovered and unpredictable living planet.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Está a punto de comenzar una nueva era de disparos y botín! Juega como uno de cuatro nuevos cazadores de bóvedas y enfréntate a un enorme mundo nuevo lleno de criaturas, psicópatas y el malvado cerebro de todo, Handsome Jack. Haz nuevos amigos, armalos con una infinidad de armas y lucha junto a ellos en cooperativo de 4 jugadores, en una búsqueda implacable de venganza y redención por un planeta vivo, inexplorado e impredecible.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -134,7 +179,35 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1011,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base y DLC disponibles en ediciones GOTY."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola correctos, sin mejoras de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "720p, 30 fps inestables y tirones en cooperativo."
+            }
+          ],
+          "codes": [
+            "BLES-01684",
+            "BLJS-10190",
+            "BLJS-10251",
+            "BLUS-30982",
+            "BLUS-30982P2"
+          ]
         },
         {
           "id": 16869,
@@ -142,7 +215,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1011,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición completa con todo el DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mismos controles de consola."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "1080p y 30 fps más estables."
+            }
+          ]
         },
         {
           "id": 16870,
@@ -151,7 +245,28 @@
           "year": 2012,
           "igdbId": 1011,
           "steamAppId": 379880,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todo el DLC y la mejora de Vault Hunter, más mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado, guardado flexible y cooperativo cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego, con parches y opciones extra."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "60 fps o más, alta resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 16871,
@@ -159,7 +274,31 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 1011,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye el DLC principal, aunque con recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles adaptados con límites en apuntado y menús."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Recortes visuales y técnicos notables."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Resolución baja, 30 fps inestables y cierres."
+            }
+          ],
+          "codes": [
+            "PCSF-00570"
+          ]
         },
         {
           "id": 16872,
@@ -167,7 +306,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1011,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que PS3 con DLC disponible."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos, sin mejoras modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "720p, 30 fps con caídas."
+            }
+          ]
         },
         {
           "id": 16873,
@@ -175,7 +335,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 1011,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición completa con todo el DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mismos controles de consola."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mejor resolución y estabilidad que la generación anterior."
+            }
+          ]
         },
         {
           "id": 16874,
@@ -183,7 +364,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 1011,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye el DLC y es portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando, con apuntado giroscópico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución dinámica y 30 fps, con pantalla partida en cooperativo."
+            }
+          ]
         },
         {
           "id": 18203,
@@ -192,7 +394,28 @@
           "year": 2019,
           "igdbId": 110835,
           "steamAppId": 991260,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión VR con contenido más limitado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Experiencia VR distinta y con riesgo de mareo."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Cambia mucho la experiencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Funciona bien, pero con menor detalle por la VR."
+            }
+          ]
         }
       ],
       "images": {
@@ -207,9 +430,15 @@
       "originalName": "Borderlands: The Pre-Sequel",
       "year": 2014,
       "igdbId": 6032,
-      "popularity": 431,
+      "popularity": 432,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "17355",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Borderlands: The Pre-Sequel",
@@ -220,6 +449,18 @@
           "field": "original_name",
           "value": "Borderlands: The Pre-Sequel",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shoot 'n' loot your way through a brand new adventure that rockets you onto Pandora's moon in Borderlands: The Pre-Sequel. Discover the story behind Borderlands 2’s villain, Handsome Jack, and his rise to power in this brand new game in the Borderlands series. Taking place between the original Borderlands and Borderlands 2, the Pre-Sequel gives you a whole lotta new gameplay featuring the genre fusion of shooter and RPG gameplay that players can’t get enough of.\n\nGet high in low gravity and launch across the moonscape to take enemies down from above using new ice and laser weapons. Catch-a-ride on the lunar landscape with new vehicles equipped with deadly weapons allowing for more levels of destructive mayhem. So grab a friend (or two, or three), strap on a rocket, and take off on a brand new Borderlands adventure",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Dispara y saquea en una aventura completamente nueva que te lanza a la luna de Pandora en Borderlands: The Pre-Sequel! Descubre la historia detrás del villano de Borderlands 2, Handsome Jack, y su ascenso al poder en este juego totalmente nuevo de la serie Borderlands. Ambientado entre el Borderlands original y Borderlands 2, The Pre-Sequel te ofrece una enorme cantidad de jugabilidad nueva, con la fusión de géneros de shooter y RPG que tanto gusta a los jugadores.\n\nSalta muy alto en la baja gravedad y lánzate sobre el paisaje lunar para abatir enemigos desde arriba con las nuevas armas de hielo y láser. Súbete a vehículos nuevos del paisaje lunar, equipados con armas letales que permiten niveles aún mayores de caos destructivo. Así que reúne a un amigo (o a dos, o a tres), equípate con un cohete y emprende una nueva aventura de Borderlands.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -236,7 +477,34 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6032,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base y DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "30 fps variables y resolución baja."
+            }
+          ],
+          "codes": [
+            "BLES-02058",
+            "BLJS-10281",
+            "BLKS-20491",
+            "BLUS-31445"
+          ]
         },
         {
           "id": 17354,
@@ -244,7 +512,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 6032,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición con todo el DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "1080p y 30 fps más estables."
+            }
+          ]
         },
         {
           "id": 17355,
@@ -253,7 +542,28 @@
           "year": 2014,
           "igdbId": 6032,
           "steamAppId": 261640,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todo el DLC y mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alto rendimiento y resolución."
+            }
+          ]
         },
         {
           "id": 17356,
@@ -261,7 +571,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6032,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base y DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "30 fps variables y resolución baja."
+            }
+          ]
         },
         {
           "id": 17357,
@@ -269,7 +600,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 6032,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición con todo el DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "1080p y 30 fps más estables."
+            }
+          ]
         },
         {
           "id": 17358,
@@ -277,7 +629,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 6032,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye el DLC y es portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Apuntado con giroscopio."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución reducida y 30 fps."
+            }
+          ],
+          "codes": [
+            "010007400FF24000"
+          ]
         }
       ],
       "images": {
@@ -296,6 +672,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17391",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tales from the Borderlands",
           "source": "igdb",
@@ -305,6 +687,18 @@
           "field": "original_name",
           "value": "Tales from the Borderlands",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tales from the Borderlands is a five part episodic game series. Set on the unforgiving world of Pandora after the events seen in Borderlands 2, this is a story full of Borderlands' trademark humor, following two adventurers on their quest for greatness.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tales from the Borderlands es una serie de juegos episódicos en cinco partes. Ambientada en el hostil mundo de Pandora tras los acontecimientos de Borderlands 2, es una historia llena del característico humor de Borderlands, que sigue a dos aventureros en su búsqueda de la grandeza.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -321,7 +715,31 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6707,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Cinco episodios completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Aventura de decisiones con escenas interactivas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas largas y tirones."
+            }
+          ],
+          "codes": [
+            "BLUS-31586"
+          ]
         },
         {
           "id": 17390,
@@ -329,7 +747,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6707,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Cinco episodios completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p y cargas razonables."
+            }
+          ]
         },
         {
           "id": 17391,
@@ -338,7 +777,28 @@
           "year": 2014,
           "igdbId": 6707,
           "steamAppId": 330830,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Cinco episodios completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo con ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 17392,
@@ -346,7 +806,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6707,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Cinco episodios completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Aventura de decisiones con escenas interactivas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas largas y tirones."
+            }
+          ]
         },
         {
           "id": 17393,
@@ -354,7 +835,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6707,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Cinco episodios completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p y cargas razonables."
+            }
+          ]
         },
         {
           "id": 17394,
@@ -362,7 +864,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 6707,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Cinco episodios completos y portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo, con pantalla táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor y alguna carga lenta."
+            }
+          ],
+          "codes": [
+            "0100F0C011A68000"
+          ]
         }
       ],
       "images": {
@@ -381,6 +907,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "57889",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "New Tales from the Borderlands",
           "source": "igdb",
@@ -390,6 +922,18 @@
           "field": "original_name",
           "value": "New Tales from the Borderlands",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Decide the fates of altruistic scientist Anu, her ambitious, \"streetwise\" brother Octavio, and the fierce, frogurt-slinging Fran. Claw and con your way through five thrilling chapters!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Decide el destino de la científica altruista Anu, de su hermano ambicioso y «callejero», Octavio, y de la feroz Fran, lanzadora de frogurt. ¡Abre paso a garras y a base de engaños a través de cinco capítulos emocionantes!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -447,7 +991,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 214139,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01002B7013440000"
+          ]
         }
       ],
       "images": {
@@ -462,9 +1009,15 @@
       "originalName": "Borderlands 3",
       "year": 2019,
       "igdbId": 19164,
-      "popularity": 606,
+      "popularity": 607,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "100039",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Borderlands 3",
@@ -475,6 +1028,18 @@
           "field": "original_name",
           "value": "Borderlands 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Borderlands 3 is a first-person looter shooter set seven years after the events of Borderlands 2. Players select one of four new Vault Hunters and travel across multiple planets to stop Troy and Tyreen Calypso, twin cult leaders seeking to harness the power of alien Vaults scattered throughout the galaxy. The game features procedurally generated weapons, cooperative multiplayer for up to four players, expanded skill trees with multiple action skills per character, and new traversal mechanics including sliding and mantling.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Borderlands 3 es un looter shooter en primera persona ambientado siete años después de los hechos de Borderlands 2. Los jugadores eligen uno de cuatro nuevos Cazadores de Bóvedas y viajan por varios planetas para detener a Troy y Tyreen Calypso, líderes gemelos de un culto que buscan aprovechar el poder de las bóvedas alienígenas esparcidas por la galaxia. El juego presenta armas generadas proceduralmente, modo cooperativo multijugador para hasta cuatro jugadores, árboles de habilidades ampliados con múltiples habilidades de acción por personaje y nuevas mecánicas de desplazamiento, como deslizarse y trepar.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -526,7 +1091,12 @@
           "igdbId": 19164,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c039e6496e67fdb3d46e6d5877e01ed2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9684bb9ec9d685632ee47174ed6f2dd5.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9b27373ee26f5c75aa3ac8c862b21f08.png"
+      }
     },
     {
       "id": 43791,
@@ -538,6 +1108,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103548",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tiny Tina's Wonderlands",
           "source": "igdb",
@@ -547,6 +1123,18 @@
           "field": "original_name",
           "value": "Tiny Tina's Wonderlands",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Embark on an epic adventure full of whimsy, wonder, and high-powered weaponry! Bullets, magic, and broadswords collide across this chaotic fantasy world brought to life by the unpredictable Tiny Tina.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Embárcate en una épica aventura llena de capricho, asombro y armas de gran potencia! Balas, magia y espadas anchas chocan en este caótico mundo de fantasía dado vida por la impredecible Tiny Tina.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -598,7 +1186,12 @@
           "igdbId": 152061,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1b008416bb72af1fdb6185de0270f59a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/37f01ff25265859cf6a42ee30fbf321f.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/c12a34983b37ecfd4778ebb5bd7809b4.png"
+      }
     },
     {
       "id": 44411,
@@ -610,6 +1203,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "105388",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure",
           "source": "igdb",
@@ -619,6 +1218,18 @@
           "field": "original_name",
           "value": "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Smash skeletons, defeat dragons, and battle giant golems in Tiny Tina's Assault on Dragon Keep: A Wonderlands One-Shot Adventure. Experience the acclaimed 2013 quest jam-packed with fantasy, fun, and mountains of magical loot!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Aplasta esqueletos, derrota dragones y combate contra golems gigantes en Tiny Tina's Assault on Dragon Keep: A Wonderlands One-Shot Adventure! Vive la aclamada aventura de 2013, repleta de fantasía, diversión y montañas de botín mágico.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -654,7 +1265,12 @@
           "igdbId": 180298,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/55dc44f459bbda38b6148caaf07ac8cc.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/236c7aaf1a0faeb6f62c8e929aff5f94.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e50d3040e8a5b650f072e4eaad5c3a49.png"
+      }
     },
     {
       "id": 47280,
@@ -666,6 +1282,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112183",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Borderlands 4",
           "source": "igdb",
@@ -675,6 +1297,18 @@
           "field": "original_name",
           "value": "Borderlands 4",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "See if you have what it takes to go down in history as a legendary Vault Hunter as you search for secret alien treasure, blasting everything in sight.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Demuestra si tienes lo necesario para pasar a la historia como un Cazador de Bóvedas legendario, mientras buscas un tesoro alienígena secreto y arrasas con todo lo que encuentres a tu paso.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -718,8 +1352,158 @@
           "igdbId": 314246,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1d3e544a967aa50d57d5956af7e243d3.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/97a78bf6ca6dd8954332b956bba09b17.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/4521aee2fff7f516a26104a504431a76.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 503,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8504,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 8554,
+          "reason": "2012"
+        },
+        {
+          "position": 3,
+          "gameId": 8676,
+          "reason": "2014"
+        },
+        {
+          "position": 4,
+          "gameId": 8684,
+          "reason": "2014"
+        },
+        {
+          "position": 5,
+          "gameId": 41965,
+          "reason": "2019"
+        },
+        {
+          "position": 6,
+          "gameId": 44411,
+          "reason": "2021"
+        },
+        {
+          "position": 7,
+          "gameId": 23068,
+          "reason": "2022"
+        },
+        {
+          "position": 8,
+          "gameId": 43791,
+          "reason": "2022"
+        },
+        {
+          "position": 9,
+          "gameId": 47280,
+          "reason": "2025"
+        }
+      ]
+    },
+    {
+      "id": 3579,
+      "kind": "story",
+      "rationale": "Cronología interna: The Pre-Sequel ocurre entre el 1 y el 2, y Tales from the Borderlands tras el 2. New Tales y el 4 siguen al 3. Wonderlands y su one-shot son un spin-off aparte y se omiten.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8504,
+          "recommendedVersionId": 18208,
+          "reason": "Inicio de la saga. Versión remasterizada de PC."
+        },
+        {
+          "position": 2,
+          "gameId": 8676,
+          "recommendedVersionId": 17355,
+          "reason": "Cuenta cómo Jack llega al poder, antes del 2."
+        },
+        {
+          "position": 3,
+          "gameId": 8554,
+          "recommendedVersionId": 16870,
+          "reason": "Secuela principal, con Jack como villano."
+        },
+        {
+          "position": 4,
+          "gameId": 8684,
+          "recommendedVersionId": 17391,
+          "reason": "Aventura narrativa ambientada tras el 2."
+        },
+        {
+          "position": 5,
+          "gameId": 41965,
+          "recommendedVersionId": 100039,
+          "reason": "Continúa la historia principal con los Calypso."
+        },
+        {
+          "position": 6,
+          "gameId": 23068,
+          "recommendedVersionId": 57889,
+          "reason": "Aventura narrativa posterior al 3."
+        },
+        {
+          "position": 7,
+          "gameId": 47280,
+          "recommendedVersionId": 112183,
+          "reason": "Entrega más reciente y final cronológico."
+        }
+      ]
+    },
+    {
+      "id": 3580,
+      "kind": "community",
+      "rationale": "La comunidad suele empezar por el 2 o el 1, jugar Tales y seguir con el 3 y el 4. Se omiten The Pre-Sequel, New Tales, Wonderlands y su one-shot por ser opcionales o de otra franquicia.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8554,
+          "recommendedVersionId": 16870,
+          "reason": "Suele considerarse el mejor punto de entrada. Versión de PC."
+        },
+        {
+          "position": 2,
+          "gameId": 8504,
+          "recommendedVersionId": 18208,
+          "reason": "El primero se juega mejor después, con la versión remasterizada. Se puede saltar."
+        },
+        {
+          "position": 3,
+          "gameId": 8684,
+          "recommendedVersionId": 17391,
+          "reason": "Muy recomendado como aventura narrativa, sin necesidad de ser fan del shooter."
+        },
+        {
+          "position": 4,
+          "gameId": 41965,
+          "recommendedVersionId": 100039,
+          "reason": "Trama principal moderna con gran variedad de personajes."
+        },
+        {
+          "position": 5,
+          "gameId": 47280,
+          "recommendedVersionId": 112183,
+          "reason": "Último juego de la saga, para quien quiera lo más reciente."
+        }
+      ]
+    }
+  ]
 }

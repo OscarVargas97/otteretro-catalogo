@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81184",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SWAT: Global Strike Team",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "SWAT: Global Strike Team",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SWAT: GST is a first-person tactical arcade game combining the strategic elements of SWAT 3 with the instantly accessible arcade action of the Virtua Cop series. Like the real-life SWAT organization itself, the SWAT Global Strike Team is a life-saving organization tasked with defending and saving the lives of the innocent. As a member of the SWAT Global Strike Team gamers will be called to duty at a moment?s notice, confronted with missions unlike any seen before.\n\nFounded in 2008, The Global Strike Team is an international offshoot from the SWAT organization tasked with helping countries and organizations around the globe to resolve situations they cannot accomplish successfully on their own.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,12 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 314,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51997",
+            "SLES-52097",
+            "SLUS-20433"
+          ]
         }
       ],
       "images": {
@@ -87,6 +104,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In SWAT: Target Liberty, you will lead a team of highly trained officers on missions to safely rescue hostages while subduing and eliminating enemies utilizing authentic SWAT combat tactics, close-quarters combat, and less than lethal weapons; all the while uncovering a plot that threatens to drive the U.S. to the brink of a world wide nuclear conflict.\n\nTactical/squad-based gameplay, randomized AI placement, team development and multiplayer maps create an authentic and realistic SWAT experience.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -100,9 +123,18 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 319,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00927",
+            "ULUS-10314"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/846007f1273eb3bc74ef4bf5e6fc6d12.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/fb990178f2fdfc63e9e837c2f05d76d7.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a66465dbe291ba2656e164e4425c70a9.png"
+      }
     },
     {
       "id": 43368,
@@ -141,8 +173,38 @@
           "igdbId": 316,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0d74586badbef2905ed11b65c6dd6199.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ec1f850d934f440cfa8e4a18d2cf5463.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e20b21ae6508f22fc189c60a0880d0b8.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1935,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32501,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 43368,
+          "reason": "2005"
+        },
+        {
+          "position": 3,
+          "gameId": 35114,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

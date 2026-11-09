@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60481",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rollcage",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rollcage",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rollcage is an arcade-style racing game for Windows and PlayStation, developed by Attention to Detail, and published by Psygnosis. The Windows version was released in the UK on March 24, 1999. The game's selling point was its unique physics engine, in which cars could drive on walls or ceilings because of the airflow passing over them at extreme speeds. The game also featured an original soundtrack by Fatboy Slim.\nThe game received very positive reviews and ratings.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,12 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 8332,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-01660",
+            "SLUS-00800",
+            "SLUS-00800LE"
+          ]
         }
       ],
       "images": {
@@ -75,6 +92,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60600",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rollcage Stage II",
           "source": "igdb",
@@ -83,6 +106,12 @@
         {
           "field": "original_name",
           "value": "Rollcage Stage II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rollcage Stage II is an arcade-style racing game for PlayStation and PC, developed by Attention To Detail, and published by Psygnosis. It is the sequel to Rollcage and was released in 2000. On top of the basic racing concept, the cars can be equipped with weapons, that are picked up on the track as bonuses, which can be used against competing cars. The automobiles themselves, once again, have wheels that are larger than the body of the car thus creating a car that has no 'right way up' and can be flipped and continue to drive.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +137,11 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3163,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-01922",
+            "SLUS-00867"
+          ]
         }
       ],
       "images": {
@@ -118,5 +151,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3064,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23907,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 23963,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

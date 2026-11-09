@@ -3,7 +3,7 @@
   "name": "Half-Life",
   "igdbKind": "franchise",
   "igdbId": 425,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "18056",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Guard Duty",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Guard Duty",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Guard Duty is a comedy adventure about love, loss and the end of the world. Experience an unforgettable story spanning across two radically different time periods.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Guard Duty es una aventura cómica sobre el amor, la pérdida y el fin del mundo. Vive una historia inolvidable que abarca dos épocas radicalmente distintas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -81,7 +99,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 6741,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100C69010522000"
+          ]
         }
       ],
       "images": {
@@ -107,6 +128,18 @@
           "field": "original_name",
           "value": "Half-Life: Decay",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Half-Life: Decay is an expansion pack for Valve Software's science fiction, first-person shooter video game Half-Life. Developed by Gearbox Software and published by Sierra Entertainment, Decay was released as part of the PlayStation 2 version of Half-Life. It is the third expansion pack for Half-Life, and like its predecessors, Decay returns to the setting and timeline of the original story, albeit portraying the story from the viewpoint of a different set of protagonists: two scientists working in the Black Mesa Research Facility. Decay is a cooperative multiplayer game, designed to be played by two people working together to pass through the game's levels.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Half-Life: Decay es un paquete de expansión del videojuego de ciencia ficción y disparos en primera persona Half-Life, de Valve Software. Desarrollado por Gearbox Software y publicado por Sierra Entertainment, Decay se lanzó como parte de la versión para PlayStation 2 de Half-Life. Es la tercera expansión de Half-Life y, como sus predecesoras, regresa al escenario y a la línea temporal de la historia original, aunque la narra desde el punto de vista de otros protagonistas: dos científicos que trabajan en la Black Mesa Research Facility. Decay es un juego multijugador cooperativo, diseñado para que dos personas trabajen juntas y superen los niveles del juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -142,6 +175,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84422",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Half-Life: Uplink",
           "source": "igdb",
@@ -151,6 +190,18 @@
           "field": "original_name",
           "value": "Half-Life: Uplink",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Half-Life: Uplink is a demo version of Valve's 1998 first-person shooter computer game Half-Life.\n\nUplink features many of the common enemies, characters, and weapons from the full game, but unlike the first Half-Life demo and the Half-Life 2 demo, the location and scenario in this demonstration do not appear in Half-Life. The Uplink chapters were cut during Half-Life's development phase and roughly fit in prior to or during the Lambda Core chapter; they were, however, strongly revised for the demo release. Uplink also includes the same Hazard Course from the full release of Half-Life.\n\nIt was also included on \"Official PlayStation Magazine Disc 57\" as a bonus unlock if you entered a cheat into the PS2 version of Half-Life and swapped the discs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Half-Life: Uplink es una versión de demostración del videojuego de disparos en primera persona Half-Life de Valve, de 1998.\n\nUplink incluye muchos de los enemigos, personajes y armas comunes del juego completo. Sin embargo, a diferencia de la primera demo de Half-Life y de la demo de Half-Life 2, la ubicación y el escenario de esta demostración no aparecen en Half-Life. Los capítulos de Uplink se eliminaron durante la fase de desarrollo de Half-Life y encajarían aproximadamente antes o durante el capítulo Lambda Core; no obstante, se revisaron profundamente para la versión de demostración. Uplink también incluye el mismo Hazard Course de la versión completa de Half-Life.\n\nTambién se incluyó en el «Official PlayStation Magazine Disc 57» como desbloqueo de bonificación si introducías un truco en la versión para PS2 de Half-Life y cambiabas de disco.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -167,7 +218,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 93071,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del original de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado, guardado libre y rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fps altos, corre sin problemas."
+            }
+          ]
         },
         {
           "id": 84423,
@@ -175,9 +247,35 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 93071,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente, adaptado a PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de mando menos precisos para un FPS."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios propios de la consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y fps inestables."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b630d97460c4d5807197d28fe2d3b849.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/92dfa194391a59dc65b88b704599dbd6.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/59de0175dc17bcf0f4fb5ae6ae3f444f.png"
+      }
     },
     {
       "id": 35027,
@@ -186,8 +284,14 @@
       "year": 1998,
       "igdbId": 231,
       "popularity": 2953,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "102331",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Half-Life",
@@ -198,6 +302,18 @@
           "field": "original_name",
           "value": "Half-Life",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Half-Life is a 1998 first-person shooter (FPS) game developed by Valve Corporation and published by Sierra Studios for Windows. It was Valve's debut product and the first game in the Half-Life series. The player assumes the role of Gordon Freeman, a theoretical physicist who must escape from the Black Mesa Research Facility after it is overrun by aliens following a disastrous scientific experiment. Its gameplay consists of diverse combat, exploration and puzzles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Half-Life es un videojuego de disparos en primera persona (FPS) de 1998 desarrollado por Valve Corporation y publicado por Sierra Studios para Windows. Fue el primer producto de Valve y el primer juego de la serie Half-Life. El jugador asume el papel de Gordon Freeman, un físico teórico que debe escapar de la Black Mesa Research Facility tras ser invadida por alienígenas a causa de un desastroso experimento científico. Su jugabilidad combina combates variados, exploración y puzles.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -215,7 +331,28 @@
           "year": 1998,
           "igdbId": 231,
           "steamAppId": 70,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles antiguos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos y resolución antiguos."
+            }
+          ]
         },
         {
           "id": 85531,
@@ -223,7 +360,36 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 401474,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Incluye Decay, con recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control con mando incómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y cargas."
+            }
+          ],
+          "codes": [
+            "SLES-50504",
+            "SLES-50505",
+            "SLES-50507",
+            "SLES-50508",
+            "SLES-50509",
+            "SLUS-20066"
+          ]
         },
         {
           "id": 102304,
@@ -232,7 +398,28 @@
           "year": 2004,
           "igdbId": 6744,
           "steamAppId": 280,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido con motor Source."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Física mejorada, controles viejos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi igual."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mejor imagen con errores."
+            }
+          ]
         },
         {
           "id": 102331,
@@ -241,9 +428,35 @@
           "year": 2012,
           "igdbId": 6739,
           "steamAppId": 362890,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Rehecho con Xen ampliado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles y combate modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reimaginado por fans."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución, estable."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/89250c0d296660c427ed0d1d5059e8b7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/386bb25138d5c75aaf86b0a6d4d8f772.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/2d0662296c200f54a32dce79e9a640bf.png"
+      }
     },
     {
       "id": 39481,
@@ -252,8 +465,14 @@
       "year": 2004,
       "igdbId": 233,
       "popularity": 3491,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94143",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Half-Life 2",
@@ -264,6 +483,18 @@
           "field": "original_name",
           "value": "Half-Life 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "1998. HALF-LIFE sends a shock through the game industry with its combination of pounding action and continuous, immersive storytelling.\n\nNOW. By taking the suspense, challenge and visceral charge of the original, and adding startling new realism and responsiveness, Half-Life 2 opens the door to a world where the player's presence affects everything around them, from the physical environment to the behaviors even the emotions of both friends and enemies.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "1998. HALF-LIFE conmocionó a la industria del videojuego con su combinación de acción trepidante y una narrativa inmersiva y continua.\n\nAHORA. Tomando la tensión, el desafío y la carga visceral del original y añadiéndole un realismo y una capacidad de respuesta asombrosos, Half-Life 2 abre la puerta a un mundo en el que la presencia del jugador afecta a todo lo que le rodea, desde el entorno físico hasta los comportamientos e incluso las emociones tanto de amigos como de enemigos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -280,7 +511,28 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 233,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Campaña principal, sin extras posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de mando correctos, con autoapuntado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port fiel con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución, fps irregulares y cargas largas."
+            }
+          ]
         },
         {
           "id": 94142,
@@ -288,7 +540,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 233,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye la campaña, y en The Orange Box los episodios y Portal."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando funcional, pero menos preciso que el ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con cambios técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Port de PS3 con fps bajos e irregulares."
+            }
+          ]
         },
         {
           "id": 94143,
@@ -297,7 +570,28 @@
           "year": 2004,
           "igdbId": 233,
           "steamAppId": 220,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo, con episodios y mods disponibles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado, guardado rápido y ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución, fps estables y carga rápida."
+            }
+          ]
         },
         {
           "id": 94144,
@@ -305,9 +599,35 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 233,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye la campaña, y en The Orange Box los episodios y Portal."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando y logros."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con cambios técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más estable que en PS3, pero a 720p y con límite de fps."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/58df6629cddf7595b29c6069414583a1.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/d8b21e1dd990a6489424e4af8517850f.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/d71e13c019d57342db713bfbd1de0318.png"
+      }
     },
     {
       "id": 39483,
@@ -319,6 +639,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94149",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Half-Life 2: Episode One",
           "source": "igdb",
@@ -328,6 +654,18 @@
           "field": "original_name",
           "value": "Half-Life 2: Episode One",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Half-Life 2: Episode One is the first of a planned trilogy of expansion packs/episodes for the 2004 first-person shooter game, Half-Life 2. The episode takes place immediately after the end of Half-Life 2, in the war-torn setting of City 17. The player is forced to deal with the effects of their actions during the main game. The episode is a stand-alone game; while a continuation of Half-Life 2, it does not require the original game to be installed or registered to a user's Steam account to play. It takes advantage of several major upgrades to the Source engine since the release of Half-Life 2, primarily its high dynamic range rendering capabilities and the upgraded facial animation system.\n\nEpisode One was released together with Half-Life Deathmatch: Source, a port of the original Half-Life's multiplayer, which doubles as Episode One's multiplayer component. The retail copies of Episode One also come with Half-Life 2 Deathmatch for those who have not previously purchased the later title.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Half-Life 2: Episode One es el primero de una trilogía planificada de paquetes de expansión o episodios para el videojuego de disparos en primera persona Half-Life 2, de 2004. El episodio transcurre inmediatamente después del final de Half-Life 2, en el escenario devastado por la guerra de City 17. El jugador debe lidiar con las consecuencias de sus actos en el juego principal. El episodio es un juego independiente: aunque es continuación de Half-Life 2, no requiere tener instalado el juego original ni estar registrado en la cuenta de Steam del usuario para jugarse. Aprovecha varias mejoras importantes del motor Source desde el lanzamiento de Half-Life 2, principalmente sus capacidades de renderizado de alto rango dinámico y el sistema de animación facial mejorado.\n\nEpisode One se lanzó junto con Half-Life Deathmatch: Source, una adaptación del multijugador del Half-Life original, que funciona también como componente multijugador de Episode One. Las copias comerciales de Episode One incluyen además Half-Life 2 Deathmatch para quienes no hayan comprado previamente este último título.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -363,7 +701,12 @@
           "igdbId": 338,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/692db12cf85a73b210c1854ef3bd385b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/23712318a400454a2c049f165106d985.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9a8f0030ad1618cfb965b48634eecdad.png"
+      }
     },
     {
       "id": 39497,
@@ -372,8 +715,14 @@
       "year": 2007,
       "igdbId": 247,
       "popularity": 1472,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94180",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Half-Life 2: Episode Two",
@@ -384,6 +733,18 @@
           "field": "original_name",
           "value": "Half-Life 2: Episode Two",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Half-Life 2: Episode Two is a first-person shooter set in the aftermath of the Citadel's destruction. Players control Gordon Freeman as he and Alyx Vance travel through forests and underground tunnels toward a resistance base, facing Combine forces and new enemy types along the way. The game emphasizes vehicle-based combat sequences alongside the series' physics-driven puzzles and gunplay.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Half-Life 2: Episode Two es un videojuego de disparos en primera persona ambientado tras la destrucción de la Ciudadela. Los jugadores controlan a Gordon Freeman mientras él y Alyx Vance atraviesan bosques y túneles subterráneos rumbo a una base de la resistencia, enfrentándose a las fuerzas de la Combine y a nuevos tipos de enemigos en el camino. El juego pone énfasis en las secuencias de combate con vehículos, junto con los puzles basados en la física y el tiroteo característicos de la serie.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -419,7 +780,12 @@
           "igdbId": 247,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/972e236a9bac1ea37984c33fef8e3cde.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/829807aa78485041f87d209b458fcdf3.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/5178db2466fc5ad9f0f2354a3f504d82.png"
+      }
     },
     {
       "id": 42936,
@@ -459,7 +825,12 @@
           "steamAppId": 50,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e1074dd6393e49c8100c64fc3491b4af.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5b7fce29c95e235aef97ee358962a3ca.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9d88196d9b43925ec4093e0228fd7803.png"
+      }
     },
     {
       "id": 42942,
@@ -499,7 +870,12 @@
           "steamAppId": 130,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ffb76153ee2fdd67ae416ca6df1cc4bd.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4768620a673136ae86da54a779b72766.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9dcfa40e7250f2fe6fa02282a752c7e2.png"
+      }
     },
     {
       "id": 43371,
@@ -539,8 +915,169 @@
           "steamAppId": 340,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/76aab36218f8a773df94fd9ea6192ea2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8153349b1eb6f6c01622d4f395993bfe.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6fbcc3ce3f65b647deed9b9e489b584e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 453,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35027,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 34307,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 42936,
+          "reason": "1999"
+        },
+        {
+          "position": 4,
+          "gameId": 32806,
+          "reason": "2001"
+        },
+        {
+          "position": 5,
+          "gameId": 42942,
+          "reason": "2001"
+        },
+        {
+          "position": 6,
+          "gameId": 39481,
+          "reason": "2004"
+        },
+        {
+          "position": 7,
+          "gameId": 43371,
+          "reason": "2005"
+        },
+        {
+          "position": 8,
+          "gameId": 39483,
+          "reason": "2006"
+        },
+        {
+          "position": 9,
+          "gameId": 39497,
+          "reason": "2007"
+        },
+        {
+          "position": 10,
+          "gameId": 8843,
+          "reason": "2019"
+        }
+      ]
+    },
+    {
+      "id": 3569,
+      "kind": "story",
+      "rationale": "La historia de Gordon Freeman es continua. Opposing Force, Blue Shift y Decay ocurren en paralelo al original; Lost Coast se sitúa durante Half-Life 2. Uplink (demo) y Guard Duty quedan fuera por no aportar a la trama.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35027,
+          "recommendedVersionId": 85477,
+          "reason": "Inicio del incidente de Black Mesa; la versión original de PC es la fiel."
+        },
+        {
+          "position": 2,
+          "gameId": 42936,
+          "recommendedVersionId": 102119,
+          "reason": "Mismo incidente visto por el soldado Shephard."
+        },
+        {
+          "position": 3,
+          "gameId": 42942,
+          "recommendedVersionId": 102125,
+          "reason": "Mismo incidente visto por el guardia Barney Calhoun."
+        },
+        {
+          "position": 4,
+          "gameId": 32806,
+          "recommendedVersionId": 82059,
+          "reason": "Spin-off cooperativo en Black Mesa; es opcional y solo existe en PS2."
+        },
+        {
+          "position": 5,
+          "gameId": 39481,
+          "recommendedVersionId": 94143,
+          "reason": "Continuación directa años después; la versión de PC es la de referencia."
+        },
+        {
+          "position": 6,
+          "gameId": 43371,
+          "recommendedVersionId": 102793,
+          "reason": "Nivel extra ambientado durante Half-Life 2; es una demo técnica corta."
+        },
+        {
+          "position": 7,
+          "gameId": 39483,
+          "recommendedVersionId": 94149,
+          "reason": "Sigue inmediatamente el final de Half-Life 2."
+        },
+        {
+          "position": 8,
+          "gameId": 39497,
+          "recommendedVersionId": 94180,
+          "reason": "Cierra la historia actual; la versión de PC es la más completa."
+        }
+      ]
+    },
+    {
+      "id": 3570,
+      "kind": "community",
+      "rationale": "La comunidad suele recomendar los juegos principales y a veces Opposing Force; se omiten Uplink, Decay, Guard Duty, Blue Shift y Lost Coast por ser menores u opcionales. Black Mesa (remake) es la forma habitual de jugar el primero hoy.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35027,
+          "recommendedVersionId": 102331,
+          "reason": "Black Mesa moderniza gráficos y jugabilidad del primer juego y es la opción más popular hoy."
+        },
+        {
+          "position": 2,
+          "gameId": 42936,
+          "recommendedVersionId": 102119,
+          "reason": "Expansión muy bien valorada y más variada; opcional."
+        },
+        {
+          "position": 3,
+          "gameId": 39481,
+          "recommendedVersionId": 94143,
+          "reason": "Obra maestra de la saga; en PC (Steam) es la mejor versión."
+        },
+        {
+          "position": 4,
+          "gameId": 39483,
+          "recommendedVersionId": 94149,
+          "reason": "Continuación directa de Half-Life 2."
+        },
+        {
+          "position": 5,
+          "gameId": 39497,
+          "recommendedVersionId": 94180,
+          "reason": "Final de la trilogía actual, en PC."
+        }
+      ]
+    }
+  ]
 }

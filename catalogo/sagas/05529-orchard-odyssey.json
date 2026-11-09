@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "109413",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Orchard Odyssey: Cherry Chase",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Orchard Odyssey: Cherry Chase",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Orchard Odyssey: Cherry Chase, you guide Aurora through a single vibrant orchard level to collect cherries. You can run, jump, and unlock new abilities like double jump or enhanced map vision. The map is semi-procedural being shuffled every time you enter the Orchard.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 370257,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coalil.jpg"
+      }
     },
     {
       "id": 46271,
@@ -69,6 +84,12 @@
       "popularity": 8,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "109507",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Orchard Odyssey: Pumpkin Party",
@@ -105,7 +126,10 @@
           "igdbId": 375440,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cob0nq.jpg"
+      }
     },
     {
       "id": 46331,
@@ -117,6 +141,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "109643",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Orchard Odyssey: Chestnut Christmas",
           "source": "igdb",
@@ -125,6 +155,12 @@
         {
           "field": "original_name",
           "value": "Orchard Odyssey: Chestnut Christmas",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Orchard Odyssey: Chestnut Christmas, you guide Aurora through a single vibrant orchard level to collect chestnuts in a Christmas-themed Orchard. You can run, jump, and unlock new abilities like double jump or enhanced map vision. The map is semi-procedural, being shuffled every time you enter the Orchard.",
           "source": "igdb",
           "manual": false
         },
@@ -152,8 +188,36 @@
           "igdbId": 391146,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobqi4.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2042,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46227,
+          "reason": "2025"
+        },
+        {
+          "position": 2,
+          "gameId": 46271,
+          "reason": "2025"
+        },
+        {
+          "position": 3,
+          "gameId": 46331,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19652",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Neverwinter Nights",
           "source": "igdb",
@@ -83,7 +89,12 @@
           "igdbId": 216,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5b419544239d402299ab2625dc642396.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/dac32839a9f0baae954b41abee610cc0.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/3f5108d516b6b48ba17779859b849f04.png"
+      }
     },
     {
       "id": 43381,
@@ -94,6 +105,12 @@
       "popularity": 156,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "88177",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Neverwinter Nights 2",
@@ -155,8 +172,33 @@
           "igdbId": 214,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/58d6336aa073a0766862605dc61a8db3.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/425892bd87db09ddcca08b2763fe1178.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b754980865415f2efd94b209973a5d03.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2586,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43356,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 43381,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

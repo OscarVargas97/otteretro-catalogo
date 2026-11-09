@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A 1990 RPG by T&E Soft.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1990",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Rune Worth 2: Jikuu no Shinsen is a Role-Playing game, developed and published by T&E Soft, which was released in Japan in 1991",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -92,8 +104,31 @@
           "igdbId": 385112,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co830c.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3189,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 31965,
+          "reason": "1990"
+        },
+        {
+          "position": 2,
+          "gameId": 37749,
+          "reason": "1991"
+        }
+      ]
+    }
+  ]
 }

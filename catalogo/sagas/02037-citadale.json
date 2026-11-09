@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dark fantasy action game from Nitrolic.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "15819",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Citadale: The Legends Trilogy",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Citadale: The Legends Trilogy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Citadale: The Legends Trilogy is a retro action-platformer filled to the brim with vampires, zombies and other creatures of the night. Hope you brought some holy water!",
           "source": "igdb",
           "manual": false
         },
@@ -109,5 +127,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2498,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8135,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 8176,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

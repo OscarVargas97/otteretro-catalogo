@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9178",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fishdom H2O: Hidden Odyssey",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Fishdom H2O: Hidden Odyssey",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Help Jennifer, a young marine biologist, win the Best Aquarium Award. Dive to the bottom of the sea and find various hidden items in numerous eye-teasing locations. Get cash for them to buy cute sea creatures and beautiful ornaments to create three unique aquariums. Choose from tons of accessories and supplies to make the life of your exotic swimming pets fun and comfortable. Become a genuine aquarist, polish your design skills and win trophies in this dazzling hidden object spin-off of the original Fishdom - a game by Playrix where dream aquariums come true!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 41486,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, adaptado a 3DS."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Se juega con lápiz, menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación fiel con cambios menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja."
+            }
+          ]
         },
         {
           "id": 9178,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 41486,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo de objetos ocultos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón ideal para este género."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Nítido y estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -74,6 +128,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "46344",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fishdom",
           "source": "igdb",
@@ -82,6 +142,12 @@
         {
           "field": "original_name",
           "value": "Fishdom",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Thrilling maritime-themed puzzles await you in a beautiful underwater world.",
           "source": "igdb",
           "manual": false
         },
@@ -99,7 +165,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 85147,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo de match-3 y acuario."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón cómodo y guardado automático."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Nítido y estable."
+            }
+          ]
         },
         {
           "id": 46345,
@@ -107,7 +194,33 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 85147,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión de DS con contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil funcional, pero menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación fiel con diferencias menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja de DS."
+            }
+          ],
+          "codes": [
+            "BFDE",
+            "BFDX",
+            "BFDY"
+          ]
         }
       ],
       "images": {
@@ -117,5 +230,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2338,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4462,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 18143,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

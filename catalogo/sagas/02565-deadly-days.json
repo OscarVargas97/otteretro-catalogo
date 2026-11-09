@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "25796",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deadly Days",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Deadly Days",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Life during the apocalypse is hard. Your survivors go out every day looking for parts and scrap to upgrade your base. Help them survive. Unlock a variety of weapons for your survivors and support the wounded with medical care. Can you survive? If nothing helps anymore, just start a nuclear strike.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 75192,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando con doble palanca funcional."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 25796,
@@ -57,7 +90,28 @@
           "year": 2019,
           "igdbId": 75192,
           "steamAppId": 740080,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Apuntar con ratón es lo más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y configurable."
+            }
+          ]
         },
         {
           "id": 25797,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 75192,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando con doble palanca funcional."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 25798,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 75192,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando correcto y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menos resolución."
+            }
+          ],
+          "codes": [
+            "010095A011A14000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +191,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "108048",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deadly Days: Roadtrip",
           "source": "igdb",
@@ -100,6 +205,12 @@
         {
           "field": "original_name",
           "value": "Deadly Days: Roadtrip",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Deadly Days: Roadtrip is an exciting action roguelite, that combines reverse bullet hell gameplay with strategic inventory management.\n\nStart your road trip through the zombie apocalypse! Fight your way through, gain experience and collect items to assemble an epic inventory.\n\nCraft more effective weapons and find out what items you can combine to withstand the ever-increasing waves of zombies.",
           "source": "igdb",
           "manual": false
         },
@@ -135,9 +246,40 @@
           "year": 2026,
           "igdbId": 314090,
           "criteria": []
+        },
+        {
+          "id": 118532,
+          "platform": "xseries",
+          "kind": "original",
+          "year": 2026,
+          "igdbId": 314090,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2139bd8a00f470efd28154a697789c77.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2680,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11025,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 45585,
+          "reason": "2026"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5150",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Spyro: The Eternal Night",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Legend of Spyro: The Eternal Night",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Spyro: The Eternal Night is a 3D action platformer which takes place right after the events at the end of The Legend of Spyro: A New Beginning. Players control Spyro as he searches for his friend Cynder. Initially, he has lost all of his different breath powers from the first game, but he gradually recovers the ability to breathe fire, ice, earth and electricity. New to this game is the ability for Spyro to slow down time using his newly-learned 'Dragon Time' ability.\n\nWhile the game has some basic puzzles involving pressing switches, the main focus is still around fighting. Spryo's primary attack is his headbutt, but he can also use his assorted breaths to defeat foes provided that he has enough magic power. He also earns blue gems from defeating foes which will allow him to level up his powers.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1583,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RO7E-USA",
+            "RVL-RO7P-EUR",
+            "RVL-RO7P-EUR-B0"
+          ]
         },
         {
           "id": 5150,
@@ -56,7 +73,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1583,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54815",
+            "SLES-54816",
+            "SLUS-21607"
+          ]
         },
         {
           "id": 5470,
@@ -72,7 +94,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 210445,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "A6TE",
+            "A6TP"
+          ]
         }
       ],
       "images": {
@@ -91,6 +117,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "47323",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Spyro: Dawn of the Dragon",
           "source": "igdb",
@@ -99,6 +131,12 @@
         {
           "field": "original_name",
           "value": "The Legend of Spyro: Dawn of the Dragon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Three long years have passed since Spyro and Cynder were trapped in the crystal, since then Malefor has unleashed his evil onto the world. In this third chapter of the epic Legend of Spyro trilogy, Spyro must fulfill his destiny and face the Dark Master. As evil spreads over the world, Spyro and Cynder must discover new abilities and unlock their true powers to defeat Malefor and stop him from destroying the world.",
           "source": "igdb",
           "manual": false
         },
@@ -116,7 +154,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1584,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00382",
+            "BLES-00383",
+            "BLUS-30205"
+          ]
         },
         {
           "id": 47321,
@@ -124,7 +167,13 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1584,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RO8E-USA",
+            "RVL-RO8E-USA-B0",
+            "RVL-RO8P-EUR",
+            "RVL-RO8X-SCN-B0"
+          ]
         },
         {
           "id": 47322,
@@ -140,7 +189,14 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1584,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-55163",
+            "SLES-551632",
+            "SLES-55227",
+            "SLES-55265",
+            "SLUS-21820"
+          ]
         },
         {
           "id": 47646,
@@ -148,7 +204,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 210444,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YO8E",
+            "YO8P"
+          ]
         }
       ],
       "images": {
@@ -158,5 +218,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2239,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2769,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 18838,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

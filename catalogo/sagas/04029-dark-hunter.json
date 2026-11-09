@@ -41,6 +41,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A horror adventure game that was released as part of Koei's \"English Dream\" series, a collection of games used to help teach the English language.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -54,7 +60,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 60968,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00773"
+          ]
         }
       ],
       "images": {
@@ -83,6 +92,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The second part of the Dark Hunter English teaching tool.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -102,7 +117,97 @@
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/lxtnvo1djx9gk2zvipgt.jpg"
       }
+    },
+    {
+      "id": 26581,
+      "nameEs": "Dark Hunter: Ge Youma no Mori",
+      "originalName": "Dark Hunter: Ge Youma no Mori",
+      "year": 1997,
+      "igdbId": 356308,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "65541",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Dark Hunter: Ge Youma no Mori",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Dark Hunter: Ge Youma no Mori",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This game is the sequel to Dark Hunter (Jou) Ijigen Gakuen. In the game you can select one of the three main characters (Mariko Kayano, Ran Mashimo & Cher Mulligan). The PSX game is fully voice acted. 2 language interaction (Japanese or English), perfect speech dubbing free conversation. It's possible to select speech choice.\nThe game is an interactive comic adventure, since to advance in the adventure part the player just have to select one answers of the possible ones. There are some action levels made using 3D graphics.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1997",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 65541,
+          "platform": "pc",
+          "kind": "original",
+          "year": 1997,
+          "igdbId": 356308,
+          "criteria": []
+        },
+        {
+          "id": 65542,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 1997,
+          "igdbId": 356308,
+          "criteria": [],
+          "codes": [
+            "SLPS-00789"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coa5h0.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1888,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24984,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 24992,
+          "reason": "1997"
+        },
+        {
+          "position": 3,
+          "gameId": 26581,
+          "reason": "1997"
+        }
+      ]
+    }
+  ]
 }

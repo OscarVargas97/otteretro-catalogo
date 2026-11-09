@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5784",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deal or No Deal",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Deal or No Deal",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The hit TV show is coming to your favorite video game system! The premise is simple: You have 26 briefcases in front of you. Each one contains a different amount of money. Open each case one by one, and try to find the briefcase with the biggest amount of money. Deal Or No Deal?\n\nSingle Player\n3 single play modes tv game, puzzle game, memory\nMulitplay allows you to play as contestant or the banker\nMultiplayer on Nintendo DS",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 4800,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RLAE-USA"
+          ]
         },
         {
           "id": 5784,
@@ -64,7 +79,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 248609,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BZNE"
+          ]
         },
         {
           "id": 5967,
@@ -72,7 +90,13 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 248609,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YDLE",
+            "YLAD",
+            "YLAH",
+            "YLAU"
+          ]
         }
       ],
       "images": {
@@ -80,7 +104,95 @@
         "hero": "https://cdn2.steamgriddb.com/hero/9da4a0c5cad629f90d83578f7a14400c.png",
         "logo": "https://cdn2.steamgriddb.com/logo/24b482e0e7581adb4d2f9ec2a4abf347.png"
       }
+    },
+    {
+      "id": 18863,
+      "nameEs": "Deal or No Deal: The Banker is Back",
+      "originalName": "Deal or No Deal: The Banker is Back",
+      "year": 2008,
+      "igdbId": 70636,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "47650",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Deal or No Deal: The Banker is Back",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Deal or No Deal: The Banker is Back",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "No info",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2008",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 47361,
+          "platform": "wii",
+          "kind": "original",
+          "year": 2008,
+          "igdbId": 70636,
+          "criteria": [],
+          "codes": [
+            "RVL-RLAP-UKV"
+          ]
+        },
+        {
+          "id": 47650,
+          "platform": "ds",
+          "kind": "original",
+          "year": 2008,
+          "igdbId": 242376,
+          "criteria": [],
+          "codes": [
+            "CD4P"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/186176b91ad45322f4d4d3484bf0fbfe.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2252,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3002,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 18863,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

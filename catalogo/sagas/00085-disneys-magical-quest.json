@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "936",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Magical Quest Starring Mickey Mouse",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Magical Quest Starring Mickey Mouse",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pluto has disappeared and his pal Mickey is hot on his trail! But evil Emperor Pete won't make it easy. He's snatched poor Pluto and hidden him deep within his dungeon. Now, Mickey must summon his courage and begin a treacherous trek through Emperor Pete's magical world to rescure his chum before it's too late!\n\nJump and touch the clouds as you and Mickey leap past buzzing bees and sinister snakes in the Treetops. Journey through the Dark Forest and dazzle Pete's guards with the power of Mickey's magical turban! Sink into the blazing inferno of the Fire Grotto and help Firefighter Mickey extinguish the flames! Scale the rocky heights of Pete's Peak and head straight for Emperor Pete's castle. Sneak inside, and Mickey must face the awesome might of Emperor Pete's sinister magic! Hurry! Pluto needs your help!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 6379,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con seis niveles originales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles clásicos buenos, sin guardado, con contraseñas ni nada similar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos y música sobresalientes en SNES, sin problemas."
+            }
+          ]
         },
         {
           "id": 936,
@@ -56,7 +89,28 @@
           "kind": "remake",
           "year": 2002,
           "igdbId": 187209,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Niveles rediseñados y con cambios, algo más de extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, ágil y con guardado de partida."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Remake con niveles y jefes modificados."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña y música algo recortada."
+            }
+          ]
         }
       ],
       "images": {
@@ -75,6 +129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "941",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Great Circus Mystery Starring Mickey & Minnie",
           "source": "igdb",
@@ -83,6 +143,12 @@
         {
           "field": "original_name",
           "value": "The Great Circus Mystery Starring Mickey & Minnie",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game ditches the alternating two-player method in favor of simultaneous co-op. Another new feature is a password back-up.\n\nBoth Mickey and Minnie are identical gameplay-wise, and the costumes they receive don't differ from each other in any aspect except aesthetically.\n\nThe costumes include a sweeper, which can suck enemies and turn them into coins, a safari suit that can climb walls and swing from hooks and a cowboy suit that shoots corks and maneuvers by bouncing. The latter two outfits can be upgraded at a shop.\n\nThe Genesis version of the game includes a cosmetic change for the stage 5 boss and an extra room in stage 3.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +166,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 4407,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo de cooperativo para dos jugadores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Muy buen control, sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sólido en SNES, con buena música."
+            }
+          ]
         },
         {
           "id": 941,
@@ -108,7 +195,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 188634,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Mismo contenido, sin cooperativo simultáneo cómodo en portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y con guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con pequeños ajustes."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña y sonido más débil."
+            }
+          ]
         }
       ],
       "images": {
@@ -118,5 +226,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2072,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 124,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 300,
+          "reason": "1994"
+        }
+      ]
+    }
+  ]
 }

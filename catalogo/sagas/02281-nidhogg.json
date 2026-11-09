@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19548",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Nidhogg 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Nidhogg 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Return of the wurm! The next installment of the epic award-winning dueling tug-of-war is coming! Destroy your opponents with all new moves and weapons across ten different arenas.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 24482,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100C8700B0B6000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97699",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Nidhogg",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Nidhogg",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nidhogg is the award-winning fencing tug-of-war, full of graceful acrobatics and clumsy stabs. This is the ultimate two-player showdown of fast-paced fencing and melee attacks. Beware, advantages in Nidhogg are often fleeting, as new opponents continually spawn in your way. Use a variety of fencing maneuvers while armed -- lunges, parries, and even dirty tricks like throwing your sword. If swordless, press forward with punches, sweep kicks, dive kicks, rolls, and wall jumps.",
           "source": "igdb",
           "manual": false
         },
@@ -136,8 +163,33 @@
           "igdbId": 5551,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/eda53de8bf2499072a8865d9b1e909fe.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1f4183315762e30ea441d3caef5e64ad.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f2617d00a4f462b47ee02e168ae3273b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2583,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40887,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 9203,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

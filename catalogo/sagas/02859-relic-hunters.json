@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "35183",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Relic Hunters Zero: Remix",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Relic Hunters Zero: Remix",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Run, gun, and dodge your way against the forces of the Ducan Empire as you excavate the hidden relics of power to foil their plans for universal conquest.\nFrom the creators of the massively popular Relic Hunters Universe comes Relic Hunters Zero: Remix. Alongside a community of millions of fans from around the world, meet the Relic Hunters as they prepare for landing on their console debut!",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "remaster",
           "year": 2020,
           "igdbId": 129846,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100534011012000"
+          ]
         }
       ],
       "images": {
@@ -73,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "118029",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Relic Hunters Legend",
           "source": "igdb",
@@ -81,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Relic Hunters Legend",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fast. Fluid. Fun. An online cooperative Shooter/Looter/RPG. Gather up to 4 friends, gear up, and save the Galaxy from a terrible villain who has stolen the past!",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +125,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 72497,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, probablemente con las actualizaciones al día."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Buen control con mando y cooperativo cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable en consola."
+            }
+          ]
         },
         {
           "id": 118030,
@@ -107,10 +155,54 @@
           "year": 2023,
           "igdbId": 72497,
           "steamAppId": 1690430,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado y ratón o mando, muy flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento según equipo."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co757i.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2776,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13870,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 50045,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

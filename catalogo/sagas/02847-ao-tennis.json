@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "34904",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "AO Tennis 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "AO Tennis 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Released to coincide with the Australian Open, the first major tennis tournament of the year, AO Tennis 2 offers an unprecedented level of depth and an extensive range of customization options for a tailor-made gameplay experience. In the brand-new narrative-driven career mode, you’ll be able to dominate the court, build your reputation, climb to the top and become a Tennis legend!",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 125479,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010047000E9AA000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101287",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "AO Tennis",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "AO Tennis",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Australian Open licensed tennis game",
           "source": "igdb",
           "manual": false
         },
@@ -135,8 +162,31 @@
           "igdbId": 76726,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2pfm.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2773,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42451,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 13778,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

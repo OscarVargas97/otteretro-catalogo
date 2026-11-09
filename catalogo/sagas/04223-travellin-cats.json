@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "68005",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cats Hidden in Italy",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Cats Hidden in Italy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Find and discover 100 cute cats hidden across Italy in this hand-drawn hidden object game. Can you find them all?",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 239729,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100FF801E3DE000"
+          ]
         }
       ],
       "images": {
@@ -75,6 +90,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "68111",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cats Hidden in Bali",
           "source": "igdb",
@@ -83,6 +104,12 @@
         {
           "field": "original_name",
           "value": "Cats Hidden in Bali",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Find 100 cats hiding in Bali in this cute hand-drawn hidden object game",
           "source": "igdb",
           "manual": false
         },
@@ -109,7 +136,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 244493,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01001C1020D3C000"
+          ]
         }
       ],
       "images": {
@@ -128,6 +158,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "68331",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cats Hidden Around the World",
           "source": "igdb",
@@ -136,6 +172,12 @@
         {
           "field": "original_name",
           "value": "Cats Hidden Around the World",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Find 1500 cats hiding in over 15 iconic locations such as Rio de Janeiro, Istanbul or Tokyo in this cute hand-drawn hidden object game.",
           "source": "igdb",
           "manual": false
         },
@@ -154,7 +196,28 @@
           "year": 2024,
           "igdbId": 246028,
           "steamAppId": 2377970,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón hace más precisa la búsqueda de gatos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución alta y carga rápida."
+            }
+          ]
         },
         {
           "id": 68332,
@@ -162,7 +225,31 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 246028,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona con táctil, menos preciso con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene la propuesta original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor en Switch."
+            }
+          ],
+          "codes": [
+            "01004E2024D2E000"
+          ]
         }
       ],
       "images": {
@@ -170,5 +257,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1913,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 27554,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 27580,
+          "reason": "2023"
+        },
+        {
+          "position": 3,
+          "gameId": 27633,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

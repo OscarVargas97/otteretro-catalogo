@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96462",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Helldivers",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Helldivers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Helldivers is a topdown shooter set in a satirical dystopian future where mankind is ruled by a managed democracy. You are part of the Helldivers – the spearhead of humanity’s defense against the perpetual alien threat on Super Earth.\n\nWith up to four player co-op missions, working together as a team is vital, whether calling in strikes or placing weapons, each action must be totally synchronized to achieve the objectives. This isn’t just a four player co-op game; it’s a co-op game that relies on the global efforts of the entire Helldivers community!",
           "source": "igdb",
           "manual": false
         },
@@ -75,7 +87,12 @@
           "igdbId": 14523,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6a291579f0b4f4471cae98581d95bb4b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d20d9896e5f7a733d09c07acb323154f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/24746ac5a48e8a4f39b11cf8e22e39f3.png"
+      }
     },
     {
       "id": 43007,
@@ -87,6 +104,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102285",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Helldivers 2",
           "source": "igdb",
@@ -95,6 +118,12 @@
         {
           "field": "original_name",
           "value": "Helldivers 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Helldivers 2 is a cooperative third-person shooter in which squads of up to four players are deployed from orbit onto hostile planets to complete strategic missions. Players select loadouts of weapons, armor, and stratagems that allow them to call in orbital strikes, supply drops, vehicles, and turrets during combat. Friendly fire is always active, requiring coordination between teammates. The game features a persistent galactic war where community-wide performance determines which planets are liberated or lost.",
           "source": "igdb",
           "manual": false
         },
@@ -131,8 +160,33 @@
           "igdbId": 250616,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/88804947ad9f43ab446f7ed938060ef8.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/ff95fc4f5e2fc78ac9330e4c595a4985.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/0abe10cc20cfedb109fd9cee834adc18.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3355,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40318,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 43007,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

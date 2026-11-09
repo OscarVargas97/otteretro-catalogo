@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1945",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Robotron X",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Robotron X",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The arcade classic is taken to the next level, this time in 3D. The super-enhanced hero Ugene is once again called into action to save the last human family against the hordes of relentless Robotrons. Battle through 100 different levels, gaining new power-ups and abilities as Ugene survives wave after wave of the unrelenting hordes. While Ugene may face the familiar Robotrons, there will be new additions and tricks that the killer robots will use against the last surviving human family. Ugene must protect them at all cost while racking up the highest possible score!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 9186,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor rendimiento y resolución."
+            }
+          ]
         },
         {
           "id": 1946,
@@ -56,7 +89,33 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 9186,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles con mando analógico limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de PS1."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cargas y gráficos básicos."
+            }
+          ],
+          "codes": [
+            "SLES-00539",
+            "SLPS-00790",
+            "SLUS-00252"
+          ]
         },
         {
           "id": 2656,
@@ -64,7 +123,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 79669,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control cómodo con mando de N64."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja."
+            }
+          ]
         }
       ],
       "images": {
@@ -94,6 +174,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In 2084, man creates a species of super-advanced cyborgs known as Robotrons. Recognizing the imperfect nature of their creators, the Robotrons conclude that the inefficient human race must be exterminated. In Robotron: 2084, only you and a single family of clones remain. If mankind is to survive, you must destroy the Grunts, Brains, Enforcers, and Tanks - but avoid the indestructible Hulks at all cost. Can you withstand wave after wave of android invasion and rescue Mommy, Daddy, and Mikey... before it's too late?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1982",
           "source": "igdb",
@@ -109,8 +195,33 @@
           "igdbId": 3592,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ea2fcafb9d92076d8e641c679866258d.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/467a4e0f51cb99464282ed1849314d34.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/df14386d9de8fe5af5e12e2dff6de887.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2130,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48258,
+          "reason": "1982"
+        },
+        {
+          "position": 2,
+          "gameId": 1015,
+          "reason": "1996"
+        }
+      ]
+    }
+  ]
 }

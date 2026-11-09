@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "56774",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Banchou Tactics",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Banchou Tactics",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Banchou Tactics is a strategy turn-based role-playing game in the Japanese Gangster High School.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 202786,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Buen control con mando y reanudación rápida."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Cargas rápidas y rendimiento sólido."
+            }
+          ]
         },
         {
           "id": 56775,
@@ -57,7 +90,28 @@
           "year": 2023,
           "igdbId": 202786,
           "steamAppId": 1981160,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Configurable y fluido en PC."
+            }
+          ]
         },
         {
           "id": 56776,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 202786,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Buen control con DualSense."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Cargas rápidas y rendimiento sólido."
+            }
+          ]
         },
         {
           "id": 56777,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 202786,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo, ideal en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y fps en Switch."
+            }
+          ],
+          "codes": [
+            "0100E6401D1D0000"
+          ]
         }
       ],
       "images": {
@@ -90,6 +189,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113851",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Banchou Tactics: Lion Heart",
           "source": "igdb",
@@ -98,6 +203,12 @@
         {
           "field": "original_name",
           "value": "Banchou Tactics: Lion Heart",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Banchou Tactics: Lion Heart is a 2D pixel-art tactical RPG set in a nostalgic 1980s school era of rival gangs, heartfelt drama, and youth rivalry.",
           "source": "igdb",
           "manual": false
         },
@@ -123,7 +234,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 418327,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0400C09029454000"
+          ]
         },
         {
           "id": 113852,
@@ -133,8 +247,31 @@
           "igdbId": 418327,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cod3xq.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3024,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 22711,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 47916,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

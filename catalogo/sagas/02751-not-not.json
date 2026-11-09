@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "31222",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Not Not: A Brain Buster",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Not Not: A Brain Buster",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Downloaded 10 million times on mobiles, this Top 1 Puzzle game in 14 countries (including USA, UK, Australia and Canada) was remastered and features:",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 117957,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien."
+            }
+          ]
         },
         {
           "id": 31222,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 117957,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y nítido."
+            }
+          ]
         },
         {
           "id": 31223,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 117957,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien."
+            }
+          ]
         },
         {
           "id": 31224,
@@ -72,7 +147,31 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 117957,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ideal en pantalla táctil y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien."
+            }
+          ],
+          "codes": [
+            "01004D500D9BE000"
+          ]
         }
       ],
       "images": {
@@ -89,6 +188,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "67431",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Not Not 2",
           "source": "igdb",
@@ -97,6 +202,12 @@
         {
           "field": "original_name",
           "value": "Not Not 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Enhance your Brain Skills by solving clever Puzzles based on orientation, logic and colors!",
           "source": "igdb",
           "manual": false
         },
@@ -147,5 +258,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2739,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12655,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 27315,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

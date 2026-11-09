@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17786",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Poly Bridge",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Poly Bridge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Unleash your engineering creativity with an engaging and fresh bridge-building simulator with all the bells and whistles.\nEnjoy hours of physics-based puzzle solving in the Campaign and then jump in the Sandbox to create your own bridge designs and puzzles.\nChallenge friends and the rest of the Steam Workshop community to solve your puzzles and download more levels submitted by other players.",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 11597,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100EAB00605C000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +91,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "67881",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Poly Bridge 3",
           "source": "igdb",
@@ -84,6 +105,12 @@
         {
           "field": "original_name",
           "value": "Poly Bridge 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The third installment in a series of puzzle-simulation games tasking us with designing and building bridges. Poly Bridge 3 features an expansive campaign, a sandbox mode and custom mod tools support.",
           "source": "igdb",
           "manual": false
         },
@@ -102,7 +129,28 @@
           "year": 2023,
           "igdbId": 243400,
           "steamAppId": 1850160,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y taller de la comunidad."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón ideal para construir."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 67882,
@@ -110,7 +158,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 243400,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base, con menos soporte de la comunidad."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Construir con mando es menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 67883,
@@ -118,7 +187,31 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 243400,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base, con menos soporte de la comunidad."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Construir con mando o táctil es menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor rendimiento."
+            }
+          ],
+          "codes": [
+            "0100E560232DC000"
+          ]
         }
       ],
       "images": {
@@ -128,5 +221,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2546,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8778,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 27520,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

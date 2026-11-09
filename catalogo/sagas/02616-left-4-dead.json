@@ -3,7 +3,7 @@
   "name": "Left 4 Dead",
   "igdbKind": "collection",
   "igdbId": 26,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2009,
       "igdbId": 124,
       "popularity": 1218,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "27687",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Left 4 Dead 2",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Left 4 Dead 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Left 4 Dead 2 is a cooperative first-person shooter video game, the sequel to Valve Corporation's Left 4 Dead. The Game builds upon cooperatively focused gameplay and Valve's proprietary Source engine, the same game engine used in the original Left 4 Dead. Set during the aftermath of an apocalyptic pandemic, Left 4 Dead 2 focuses on four new Survivors, fighting against hordes of the Infected, who develop severe psychosis and exhibit zombie-like tendencies. The Survivors must fight their way through five campaigns, interspersed with safe houses that act as checkpoints, with the goal of escape at each campaign's finale.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Left 4 Dead 2 es un shooter cooperativo en primera persona, secuela de Left 4 Dead de Valve Corporation. El juego se basa en la jugabilidad centrada en el cooperativo y en el motor Source propio de Valve, el mismo motor que usó el Left 4 Dead original. Ambientado en las consecuencias de una pandemia apocalíptica, Left 4 Dead 2 se centra en cuatro nuevos supervivientes que luchan contra hordas de infectados, que desarrollan una psicosis severa y muestran tendencias similares a las de los zombis. Los supervivientes deben abrirse camino a través de cinco campañas, intercaladas con refugios seguros que funcionan como puntos de control, con el objetivo de escapar al final de cada campaña.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -76,6 +94,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102155",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Left 4 Dead",
           "source": "igdb",
@@ -85,6 +109,18 @@
           "field": "original_name",
           "value": "Left 4 Dead",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Left 4 Dead is a cooperative first-person shooter set during a zombie outbreak on the East Coast of the United States. Four players control survivors who must fight through hordes of infected humans, creatures transformed by a rabies-like pathogen that causes extreme aggression and loss of higher brain function. Gameplay emphasizes teamwork, with colored outlines showing teammate positions through walls, shared healing items, and friendly fire creating consequences for careless shooting. An AI system called the Director dynamically adjusts enemy placement, item spawns, and pacing based on player performance. Beyond common infected, players face five special mutated types with unique abilities. Campaigns are divided into levels connected by safe houses, each culminating in a desperate last stand for rescue.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Left 4 Dead es un shooter cooperativo en primera persona ambientado durante un brote zombi en la costa este de Estados Unidos. Cuatro jugadores controlan a supervivientes que deben abrirse paso entre hordas de humanos infectados, criaturas transformadas por un patógeno similar a la rabia que provoca una agresividad extrema y la pérdida de las funciones cerebrales superiores. La jugabilidad pone énfasis en el trabajo en equipo: los contornos de colores muestran la posición de los compañeros a través de las paredes, los objetos de curación se comparten y el fuego amigo tiene consecuencias para los disparos descuidados. Un sistema de IA llamado el Director ajusta dinámicamente la ubicación de los enemigos, la aparición de objetos y el ritmo de juego según el rendimiento de los jugadores. Además de los infectados comunes, los jugadores se enfrentan a cinco tipos especiales de mutantes con habilidades únicas. Las campañas se dividen en niveles conectados por refugios seguros, y cada uno culmina en una desesperada última resistencia para ser rescatados.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -112,8 +148,75 @@
           "igdbId": 122,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/949f74d525fc6386b0b8d67b17d840d0.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/69cf37d6e6e7462c6bef71561f143071.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f829101d1967c5ca9eb2f2b1428840b1.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2690,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42962,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 11557,
+          "reason": "2009"
+        }
+      ]
+    },
+    {
+      "id": 3649,
+      "kind": "story",
+      "rationale": "Los dos juegos siguen a los mismos cuatro supervivientes en el mismo brote, pero con distintos grupos y campañas. Es continuo solo en parte, así que el orden de la historia coincide con el de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42962,
+          "recommendedVersionId": 102155,
+          "reason": "Presenta el brote y a Bill, Francis, Louis y Zoey. La versión de PC es la más usada y tiene mods y comunidad."
+        },
+        {
+          "position": 2,
+          "gameId": 11557,
+          "recommendedVersionId": 27687,
+          "reason": "Sigue el brote con otro grupo, en el sur de EE. UU. La versión de PC tiene más mods y servidores activos."
+        }
+      ]
+    },
+    {
+      "id": 3650,
+      "kind": "community",
+      "rationale": "La comunidad suele recomendar empezar por Left 4 Dead 2, porque es más pulido y tiene más contenido y jugadores. Left 4 Dead 1 es opcional después. Las dos son cooperativas y se pueden jugar en cualquier orden.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11557,
+          "recommendedVersionId": 27687,
+          "reason": "Es la entrada más completa: más campañas, armas e infectados especiales. En PC tiene más mods y partidas activas."
+        },
+        {
+          "position": 2,
+          "gameId": 42962,
+          "recommendedVersionId": 102155,
+          "reason": "Va después como complemento, para jugar sus campañas clásicas. En PC se pueden jugar también dentro de Left 4 Dead 2 mediante mods."
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A one on one soccer game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 59649,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/kr6xolf8x9kxerfqwbtt.jpg"
+      }
     },
     {
       "id": 48837,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A one on one basketball game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 59651,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/tysg42wgtvmfhkdb9cy4.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3511,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48835,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 48837,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

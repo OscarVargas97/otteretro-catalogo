@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "67361",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "DNF Duel",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "DNF Duel",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "DNF Duel is a fast-paced 2.5D fighting game set in the Dungeon & Fighter universe. Players select from a diverse roster of iconic fighters, each with distinct combat styles, signature skills, and strategic toolsets.\n\nThe game combines fluid controls with deep tactical systems, including an MP gauge for powerful abilities and dynamic \"Awakening\" states that can turn the tide of battle. Vibrant stages, eye-catching visuals, and expressive animations bring every clash to life.\n\nWith multiple modes — such as Story, Arcade, Survival, Ranked Online, and local versus — DNF Duel caters to both solo players and competitive fighters, offering accessible entry points as well as layers of depth for seasoned players.",
           "source": "igdb",
           "manual": false
         },
@@ -92,6 +104,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111678",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The First Berserker: Khazan",
           "source": "igdb",
@@ -100,6 +118,12 @@
         {
           "field": "original_name",
           "value": "The First Berserker: Khazan",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The First Berserker: Khazan is a hardcore action role-playing game. The player will become Khazan, the great general of the Pelos empire, whom overcame death, and sets out to reveal the incidents that led to his downfall and seek vengeance on his enemies.",
           "source": "igdb",
           "manual": false
         },
@@ -136,7 +160,12 @@
           "igdbId": 279643,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/87f22ef7349f8bc783fbaecb30429e4b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/97579271d7eaa32ef8220238fa4e8413.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/774215859721004eb1d655d3c5767455.png"
+      }
     },
     {
       "id": 48647,
@@ -148,6 +177,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115206",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeon Fighter Online",
           "source": "igdb",
@@ -156,6 +191,12 @@
         {
           "field": "original_name",
           "value": "Dungeon Fighter Online",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dungeon Fighter Online is a free-to-play multiplayer hack-and-slash RPG with a side-scrolling arcade style. There are currently 11 unique character classes. 3 classes have a mirrored class of the opposite gender with a 4th being added soon. Classes have Sub-classes to choose from and later has advancements of those classes to unlock upgraded skills.\nOf the 11 unique classes, 6 have 4 sub-classes, 3 have 2 sub-classes, and 2 have no sub-classes but still has advancements for new skills.\n\nDeveloped by the Korean company Neople in 2005 the game was released in Japan in 2006, China in 2007, Taiwan in 2009, and North America in 2010. The publisher Nexon shut the North American version down in 2013.\nNeople relaunched the game globally in 2016, with Season 2, adding new content and characters to the game.\n\nThe game was released on the Xbox 360 Arcade under the title \"Dungeon Fighter Live\".",
           "source": "igdb",
           "manual": false
         },
@@ -174,7 +215,28 @@
           "year": 2005,
           "igdbId": 26606,
           "steamAppId": 495910,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y actualizado de forma continua."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles de teclado ágiles y comunidad activa."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento en PC, con opciones de configuración."
+            }
+          ]
         },
         {
           "id": 115517,
@@ -182,10 +244,61 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 65266,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Menos contenido y servicio más limitado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Adaptado a mando, pero menos fluido."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento estable pero de consola antigua."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8e4f4940da226cb794b6bac565c9f37e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/423e44c6ee3fc6678aefa0f854160482.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/ef062084a1c4a3584af1d4f8e514ea50.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1912,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48647,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 27281,
+          "reason": "2022"
+        },
+        {
+          "position": 3,
+          "gameId": 47090,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

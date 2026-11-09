@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "45058",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Big League Sports: Summer",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Big League Sports: Summer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Put your athletic skills to the test! Beat the best in a variety of all-star skill challenges to become the ultimate champion! Football, Baseball, Volleyball, Soccer, Tennis, Golf.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 50926,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RY5E-USA-B0"
+          ]
         },
         {
           "id": 45058,
@@ -56,7 +71,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 50926,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLSE"
+          ]
         }
       ],
       "images": {
@@ -85,6 +103,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "All of the games allow up to 4 players playing at the same time, or in the case of Bocce and Disc Golf, taking alternate turns. All the games use the Wii Remote only, no games require the use of the Nunchuck or any other peripheral.\n\nAfter creating a character, the player can compete in tournaments against increasingly tougher opponents in any of the sports. Playing Quick Play games and Tournament games earns the character Skill Points. These are then used to calculate the difficulty of the CPU opponent for future Quick Play matches. Hence, after completing all tournaments for all the sports in Big Beach Sports, where each game has a preset difficulty, the player can then return to Quick Play and continue to max out Skill Points (999 points) for each of the six sports. In the case of most of the sports, however, the game becomes extremely challenging and the AI opponents are much tougher to beat after reaching 900 skill points.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -98,7 +122,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 4712,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RVVE-USA",
+            "RVL-RVVP-EUR-1",
+            "RVL-RVVP-EUR-B0"
+          ]
         }
       ],
       "images": {
@@ -128,6 +157,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kinect sporting game for Xbox 360 from Robomondo and Activision.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -143,8 +178,36 @@
           "igdbId": 20223,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/a4nvllpttjhauigiojng.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1790,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19435,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 17100,
+          "reason": "2009"
+        },
+        {
+          "position": 3,
+          "gameId": 48588,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

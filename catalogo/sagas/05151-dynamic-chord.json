@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "89388",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dynamic Chord feat. Liar-S",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dynamic Chord feat. Liar-S",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dynamic Chord feat. Liar-S is a game developed and published by Honeybee and released on March 27, 2015.",
           "source": "igdb",
           "manual": false
         },
@@ -66,7 +78,10 @@
           "igdbId": 223077,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5pjx.jpg"
+      }
     },
     {
       "id": 41423,
@@ -78,6 +93,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98827",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dynamic Chord feat. Kyohso",
           "source": "igdb",
@@ -86,6 +107,12 @@
         {
           "field": "original_name",
           "value": "Dynamic Chord feat. Kyohso",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A PC game part of the Dynamic Chord series.",
           "source": "igdb",
           "manual": false
         },
@@ -103,7 +130,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 142446,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base de la novela visual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Lectura cómoda con funciones estándar de novela visual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con buena resolución."
+            }
+          ]
         },
         {
           "id": 98827,
@@ -111,9 +159,33 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 223079,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Port posterior que probablemente añade extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ideal para jugar en portátil y guardar en cualquier momento."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original con ajustes de plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, con resolución menor que PC."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5pk1.jpg"
+      }
     },
     {
       "id": 41469,
@@ -125,6 +197,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98832",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dynamic Chord feat. Apple-Polisher",
           "source": "igdb",
@@ -133,6 +211,12 @@
         {
           "field": "original_name",
           "value": "Dynamic Chord feat. Apple-Polisher",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A PC game otome game and part of the Dynamic Chord series.",
           "source": "igdb",
           "manual": false
         },
@@ -150,7 +234,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 142447,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base de la novela visual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Lectura cómoda con funciones estándar de novela visual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con buena resolución."
+            }
+          ]
         },
         {
           "id": 98832,
@@ -158,10 +263,59 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 223081,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Port posterior que probablemente añade extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ideal para jugar en portátil y guardar en cualquier momento."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original con ajustes de plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, con resolución menor que PC."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5pk6.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2012,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41419,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 41423,
+          "reason": "2015"
+        },
+        {
+          "position": 3,
+          "gameId": 41469,
+          "reason": "2016"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

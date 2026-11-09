@@ -3,7 +3,7 @@
   "name": "Bomberman",
   "igdbKind": "franchise",
   "igdbId": 799,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,7 +20,7 @@
       "year": 1993,
       "igdbId": 3450,
       "popularity": 57,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -32,6 +32,18 @@
           "field": "original_name",
           "value": "Super Bomberman",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Bomberman is the first video game in the Bomberman series to appear on the Super Nintendo Entertainment System. It is also the first four-player game to be released on the Super NES.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Bomberman es el primer videojuego de la serie Bomberman que aparece en la Super Nintendo Entertainment System. También es el primer juego para cuatro jugadores lanzado para la Super NES.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -55,7 +67,23 @@
         "cover": "https://cdn2.steamgriddb.com/grid/9a9fdd13109f9946013d639abf827ca0.png",
         "hero": "https://cdn2.steamgriddb.com/hero/cb6ee5b2db6a5c4b2dc3f4d4d355fc9f.png",
         "logo": "https://cdn2.steamgriddb.com/logo/a3842ed7b3d0fe3ac263bcabd2999790.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1122,
+          "platform": "snes",
+          "project": "BombermanRecomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/elliotttate/BombermanRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 296,
@@ -64,7 +92,7 @@
       "year": 1994,
       "igdbId": 14530,
       "popularity": 39,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -76,6 +104,18 @@
           "field": "original_name",
           "value": "Super Bomberman 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Bomberman 2 is the second of five games in the Super Bomberman series developed by Produce and Hudson Soft and released on the Super Nintendo. It is the only Super Bomberman game without a 2-player story mode, although one was originally planned.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Bomberman 2 es el segundo de cinco juegos de la serie Super Bomberman, desarrollados por Produce y Hudson Soft y lanzados para la Super Nintendo. Es el único juego de Super Bomberman sin modo historia para dos jugadores, aunque se planeó originalmente uno.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -123,6 +163,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Bomberman 3 is a game released for the Super Nintendo Entertainment System in 1995. It is the third game in the Bomberman series for the system. The game was released in Japan and the PAL region, but not in North America.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Bomberman 3 es un juego lanzado para la Super Nintendo Entertainment System en 1995. Es el tercer juego de la serie Bomberman para esta consola. Se lanzó en Japón y en la región PAL, pero no en Norteamérica.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -155,6 +207,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1997",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman 64",
           "source": "igdb",
@@ -164,6 +222,18 @@
           "field": "original_name",
           "value": "Bomberman 64",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The evil Altair is using the Omni Cube to drain the energy from Planet Bomber. With the aid of a mysterious helper, you must defeat Altair, and restore peace to Planet Bomber. In the Adventure mode, guide Bomberman through 24 areas of perilous conflict. Battle Altair's sinister allies, destroy their bases and put an end to the insane attack. The multi-player Battle mode offers endless hours of explosive action. Use the standard Bomberman character or create a custom one and save it to an N64 Controller Pak.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El malvado Altair usa el Omni Cube para drenar la energía del Planeta Bomber. Con la ayuda de un misterioso aliado, debes derrotar a Altair y restaurar la paz en el Planeta Bomber. En el modo Aventura, guía a Bomberman a través de 24 zonas de conflicto. Enfréntate a los siniestros aliados de Altair, destruye sus bases y pon fin al ataque insensato. El modo Batalla para varios jugadores ofrece horas interminables de acción explosiva. Usa el Bomberman estándar o crea uno personalizado y guárdalo en un Controller Pak de N64.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -180,7 +250,28 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3451,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cámara y control de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Bajo cuadros por segundo."
+            }
+          ]
         },
         {
           "id": 1997,
@@ -188,7 +279,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 3451,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD y salida estable."
+            }
+          ]
         },
         {
           "id": 2605,
@@ -196,14 +308,51 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 80368,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cámara y control de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Relanzamiento fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Igual que el original."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/c5b781ce025e8217c23f95f9569a0b96.png",
         "hero": "https://cdn2.steamgriddb.com/hero/3a06105cf87a4a0d2b22ca218aca4783.png",
         "logo": "https://cdn2.steamgriddb.com/logo/afb79a9be5cd9762572a008088d3153e.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 574,
+          "platform": "n64",
+          "project": "BM64Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/RevoSucks/BM64Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1109,
@@ -215,6 +364,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2096",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman Hero",
           "source": "igdb",
@@ -224,6 +379,18 @@
           "field": "original_name",
           "value": "Bomberman Hero",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bomberman's latest adventure takes him across the galaxy! Princess Millian has been kidnapped by the evil Garaden Empire and it's up to Bomberman to save the day. Travel through worlds of ice, fire and water. Use new abilities and get help from friends like Louie the rabbit and Pibol the robot. New vehicles like the Bomber Copter and Bomber Marine will come in handy in your quest to save the Princess and free the universe once again!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡La última aventura de Bomberman lo lleva por toda la galaxia! La princesa Millian ha sido secuestrada por el malvado Imperio Garaden, y depende de Bomberman salvar el día. Viaja por mundos de hielo, fuego y agua. Usa nuevas habilidades y recibe ayuda de amigos como Louie, el conejo, y Pibol, el robot. Nuevos vehículos, como el Bomber Copter y el Bomber Marine, te serán muy útiles en tu misión de salvar a la princesa y liberar de nuevo el universo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -240,7 +407,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 3453,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor salida de video."
+            }
+          ]
         },
         {
           "id": 2097,
@@ -248,14 +436,55 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3453,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de N64, cámara difícil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cuadros bajos."
+            }
+          ],
+          "codes": [
+            "NBDE",
+            "NBDP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/0e6e9339d71b9008e8ecd4680608d0ec.png",
         "hero": "https://cdn2.steamgriddb.com/hero/2cc18398df2e6692fffc29a610cb72e3.png",
         "logo": "https://cdn2.steamgriddb.com/logo/34e420f6e47d96669897a45586997a57.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 577,
+          "platform": "n64",
+          "project": "BMHeroRecomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/RevoSucks/BMHeroRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1296,
@@ -279,6 +508,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Of the great discoveries in the universe, few are more important than the legendary 8 elements. When the evil Rukifellth found one of these elements - the powerful Celestial Stone - he used his influence to assemble the dreaded BHB Army. Armed with his new army and a giant space warship, the power-crazed Rukifellth began scouring the galaxy for the other 7 elements, invading planets and enslaving innocent races throughout the galaxy. Rukifellth controls these enslaved planets with special Gravity Generators - the same devices the BHB Army used to create a Black Hole. Rukifellth uses his Black Hole to capture new planets... But he should have thought twice before he tried to capture Bomber Planet!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Entre los grandes descubrimientos del universo, pocos son tan importantes como los legendarios 8 elementos. Cuando el malvado Rukifellth encontró uno de estos elementos, la poderosa Piedra Celestial, usó su influencia para reunir al temido Ejército BHB. Armado con su nuevo ejército y una gigantesca nave espacial de guerra, el Rukifellth, cegado por el poder, comenzó a recorrer la galaxia en busca de los otros 7 elementos, invadiendo planetas y esclavizando a razas inocentes en toda la galaxia. Rukifellth controla estos planetas esclavizados con unos Generadores de Gravedad especiales, los mismos dispositivos que el Ejército BHB usó para crear un agujero negro. Rukifellth usa su agujero negro para capturar nuevos planetas... ¡Pero debería haberlo pensado dos veces antes de intentar capturar el Planeta Bomber!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -292,7 +533,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3452,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NBVE"
+          ]
         }
       ],
       "images": {
@@ -311,6 +555,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61428",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman",
           "source": "igdb",
@@ -320,6 +570,18 @@
           "field": "original_name",
           "value": "Bomberman",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bomberman is a robot engaged in the production of bombs. Like his fellow robots, he had been put to work in an underground compound by evil forces. Bomberman found it to be an unbearably dreary existence. One day, he heard an encouraging rumor. According to the rumor, any robot that could escape the underground compound and make it to the surface could become human. Bomberman leaped at the opportunity, but escape proved to be no small task. Alerted to Bomberman's betrayal, large numbers of the enemy set out in pursuit. Bomberman can rely only on bombs of his own production for his defense. Will he ever make it up to the surface? Once there, will he really become human?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman es un robot dedicado a la fabricación de bombas. Como sus compañeros robots, fue obligado por fuerzas malvadas a trabajar en un complejo subterráneo. Bomberman encontraba esa existencia insoportablemente monótona. Un día oyó un rumor alentador: según el rumor, cualquier robot que pudiera escapar del complejo subterráneo y llegar a la superficie podría convertirse en humano. Bomberman aprovechó la oportunidad, pero escapar resultó ser una tarea nada sencilla. Alertados de la traición de Bomberman, un gran número de enemigos salió en su persecución. Bomberman solo puede confiar en las bombas que él mismo fabrica para defenderse. ¿Llegará alguna vez a la superficie? Una vez allí, ¿realmente se convertirá en humano?",
+          "source": "claude",
           "manual": false
         },
         {
@@ -336,7 +598,28 @@
           "kind": "remake",
           "year": 1989,
           "igdbId": 3445,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido básico de 1989."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Un solo jugador, sin guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original clásico."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Estable, resolución baja."
+            }
+          ]
         },
         {
           "id": 3694,
@@ -344,7 +627,28 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 49163,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido básico."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Fácil de jugar en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel a la NES."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Buen port."
+            }
+          ]
         },
         {
           "id": 7107,
@@ -352,7 +656,33 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 22287,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Multijugador local variado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buenos controles y Wi-Fi histórico."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Remake con extras."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto."
+            }
+          ],
+          "codes": [
+            "ABME",
+            "ABMJ",
+            "ABMP"
+          ]
         },
         {
           "id": 61428,
@@ -360,7 +690,28 @@
           "kind": "remake",
           "year": 2008,
           "igdbId": 18786,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más modos y juego en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando cómodo y multijugador."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Remake moderno."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "HD y estable."
+            }
+          ]
         },
         {
           "id": 61429,
@@ -368,7 +719,34 @@
           "kind": "remake",
           "year": 1998,
           "igdbId": 18786,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Más modos que la NES."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Multijugador local."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reinterpretación."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ],
+          "codes": [
+            "SCPS-45368",
+            "SLES-01893",
+            "SLPM-86844",
+            "SLPS-01717"
+          ]
         },
         {
           "id": 61430,
@@ -376,7 +754,28 @@
           "kind": "remake",
           "year": 2008,
           "igdbId": 18786,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido moderado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Remake."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto."
+            }
+          ]
         },
         {
           "id": 87009,
@@ -384,7 +783,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 129853,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido moderado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Remake."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto."
+            }
+          ]
         }
       ],
       "images": {
@@ -413,6 +833,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An S.O.S. from the cosmos signals that planet Phantarion is in trouble! Grab your arsenal and get ready for non-stop action as you blast your way through interactive battlefields and take on up to 4 real-time players. Battle opponents through 8 interactive battlefield mazes! Take on up to 4 players in multi-player blastfests! Fast, furious, explosive bombing adventure!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Un S.O.S. desde el cosmos indica que el planeta Phantarion está en peligro! Toma tu arsenal y prepárate para una acción sin descanso mientras te abres paso a base de explosiones por campos de batalla interactivos y te enfrentas a hasta 4 jugadores en tiempo real. ¡Combate contra rivales en 8 laberintos de campo de batalla interactivos! ¡Enfréntate a hasta 4 jugadores en explosivas batallas multijugador! ¡Una aventura de bombas rápida, feroz y explosiva!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -426,7 +858,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 6334,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ABSE"
+          ]
         }
       ],
       "images": {
@@ -457,6 +892,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman and Max have been shrunk to the size of an ant by the evil Mujie's secret weapon. Work together with max to find and destroy the device before Mujoe can take control of the universe. And so the newest adventures of Bomberman begins!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman y Max han sido reducidos al tamaño de una hormiga por el arma secreta del malvado Mujie. Trabaja junto a Max para encontrar y destruir el dispositivo antes de que Mujoe pueda tomar el control del universo. ¡Y así comienzan las nuevas aventuras de Bomberman!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -470,7 +917,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 6331,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AMHE",
+            "AMHP"
+          ]
         }
       ],
       "images": {
@@ -501,6 +952,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman again teams up with Max to take on the evil Mujoe. But before they get the chance, Mujoe turns the tables, shrinking the heroes into tiny critters. Now the two must use their bombing powers and traverse the levels, blowing up obstacles and enemies to get to the exit, to eventually destroy the device and return themselves to normal size.\n\nAs with all previous Bomberman title, the aim of the game is to plant bombs, destroying anything that come within the boundaries of the blast. Charabomb characters can be collected during play to increase your powers, or you battle and trade them with a friend in link mode.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman vuelve a unirse a Max para enfrentarse al malvado Mujoe. Pero antes de que tengan la oportunidad, Mujoe da la vuelta a la situación y reduce a los héroes a pequeñas criaturas. Ahora los dos deben usar sus poderes con bombas y recorrer los niveles, haciendo explotar obstáculos y enemigos para llegar a la salida, y así destruir finalmente el dispositivo y recuperar su tamaño normal.\n\nAl igual que en todos los títulos anteriores de Bomberman, el objetivo del juego es colocar bombas, destruyendo todo lo que caiga dentro del alcance de la explosión. Durante el juego se pueden recolectar personajes Charabomb para aumentar tus poderes, o bien combatir e intercambiarlos con un amigo en el modo enlace.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -514,7 +977,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 6333,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AMYE",
+            "AMYP"
+          ]
         }
       ],
       "images": {
@@ -545,6 +1012,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A game based on the Bomberman Jetters anime. Includes a pinball game, a collection of Bomberman Land-esqe minigames, and the franchise's famous Battle Mode.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un juego basado en el anime Bomberman Jetters. Incluye un juego de pinball, una colección de minijuegos al estilo de Bomberman Land y el famoso modo Batalla de la franquicia.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -558,7 +1037,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 49528,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BOMJ"
+          ]
         }
       ],
       "images": {
@@ -587,6 +1069,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman Jetters is an action RPG that could be considered the spiritual successor to Bomberman Tournament.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Jetters es un RPG de acción que podría considerarse el sucesor espiritual de Bomberman Tournament.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -600,7 +1094,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 67859,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AJZJ"
+          ]
         }
       ],
       "images": {
@@ -631,6 +1128,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The fun of the Bomberman series returns to the Nintendo DS, this time with not only classic Bomberman gameplay, but a whole new selection of addictive mini games to play alone, or over Nintendo's Wi-Fi connection! Navigate your way through an amusement park filled with addictive mini games with intuitive stylus control, while working to unlock all the games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La diversión de la serie Bomberman regresa a Nintendo DS, esta vez con no solo la jugabilidad clásica de Bomberman, sino también una selección completamente nueva de minijuegos adictivos para jugar en solitario o a través de la conexión Wi-Fi de Nintendo. Recorre un parque de atracciones lleno de minijuegos adictivos con control intuitivo mediante el lápiz táctil, mientras trabajas para desbloquear todos los juegos.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -644,7 +1153,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 20612,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ABXE",
+            "ABXP"
+          ]
         }
       ],
       "images": {
@@ -675,6 +1188,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "BOMBERMAN LAND Touch! 2 is the follow up sequel to IGN's Best Online Multiplayer 2006 Game of the Year on the Nintendo DS. Embark on a fun-filled, theme park adventure as you discover a huge land to explore, a gigantic multiplayer pack, and a host of addicting mini-games that can be played by yourself or with up to 4 people.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "BOMBERMAN LAND Touch! 2 es la secuela del juego ganador del premio IGN al Mejor Juego Multijugador en Línea de 2006 en Nintendo DS. Embárcate en una aventura divertida en un parque temático, donde descubrirás una enorme tierra por explorar, un gran paquete multijugador y un montón de minijuegos adictivos que pueden jugarse solo o con hasta 4 personas.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -688,7 +1213,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 20774,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YB2E",
+            "YB2P"
+          ]
         }
       ],
       "images": {
@@ -707,6 +1236,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9157",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman GB 3",
           "source": "igdb",
@@ -716,6 +1251,18 @@
           "field": "original_name",
           "value": "Bomberman GB 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The 11th planet of Bomber Nebula, named Owen, faces a sudden earthquake. Deep within its underground, the terrible Evil Bomber had been trapped for ages. He finally rises to power and steals the Bomber Capsules from Bomberman. Bomberman and his friends then vow to take back the Capsules and defeat Evil Bomber...\n\nThis game was only released in Japan. It is the last game in the Bomberman GB trilogy and features the appearance of a few new characters like Cutie Bomber.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El undécimo planeta de la Nebulosa Bomber, llamado Owen, sufre un repentino terremoto. En lo más profundo de su subsuelo, el terrible Evil Bomber llevaba siglos atrapado. Por fin asciende al poder y roba las Cápsulas Bomber de Bomberman. Bomberman y sus amigos juran recuperar las Cápsulas y derrotar a Evil Bomber...\n\nEste juego solo se lanzó en Japón. Es el último de la trilogía Bomberman GB e incluye la aparición de algunos personajes nuevos, como Cutie Bomber.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -732,7 +1279,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 49081,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Pantalla más nítida."
+            }
+          ]
         },
         {
           "id": 9158,
@@ -740,7 +1308,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 49081,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla poco nítida."
+            }
+          ]
         }
       ],
       "images": {
@@ -768,6 +1357,18 @@
           "field": "original_name",
           "value": "Atomic Punk",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "There are four modes of gameplay in Atomic Punk, including two single player modes and two multiplayer game modes.\n\nSolo:\n\n\"Game A\" (known as \"Bomber Boy\" in the Japanese version) is similar to other games in the series, with a few differences. Power-ups, known as panels, which are usually gained in each level and carried over from one to the next, can also be bought from a store by using GP, which is collected depending on how much time it takes to complete a level and how many blocks are destroyed. At the beginning of each round, the player decides which panels to use to complete the round. Another difference is that the linear gameplay of the original, with the player advancing levels after completing each one, was changed to implement a world map with nine locations.\n\nThe second game mode, \"Game B\" (known as \"Bomber Man\" in the Japanese version) is the same as that in the original Bomberman game, but the stage area is squared rather than rectangular and the screen is always centered on Bomberman rather than scrolling when he touches the border.\n\nVs.:\n\nPanel Mode, in which players begin with only one bomb to place at a time and a bomb blast length of one unit, and Bomb Up and Fire Up panels appear.\n\nPowerful Mode, in which players have four bombs to place at a time and a bomb blast length of four units, and no panels appear.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En Atomic Punk hay cuatro modos de juego: dos modos para un jugador y dos modos multijugador.\n\nUn jugador:\n\n«Game A» (conocido como «Bomber Boy» en la versión japonesa) es similar a otros juegos de la serie, con algunas diferencias. Los potenciadores, conocidos como paneles, que normalmente se obtienen en cada nivel y se conservan de uno a otro, también pueden comprarse en una tienda con GP, que se acumula según el tiempo que tardes en completar un nivel y la cantidad de bloques destruidos. Al comienzo de cada ronda, el jugador decide qué paneles usar para completarla. Otra diferencia es que la jugabilidad lineal del original, en la que el jugador avanzaba de nivel al completar cada uno, se cambió por un mapa del mundo con nueve ubicaciones.\n\nEl segundo modo de juego, «Game B» (conocido como «Bomber Man» en la versión japonesa), es igual que en el Bomberman original, pero el área del escenario es cuadrada en lugar de rectangular, y la pantalla siempre está centrada en Bomberman en lugar de desplazarse cuando él toca el borde.\n\nVersus:\n\nModo Paneles, en el que los jugadores comienzan con una sola bomba para colocar a la vez y un alcance de explosión de una unidad, y aparecen paneles de Bomb Up y Fire Up.\n\nModo Potente, en el que los jugadores tienen cuatro bombas para colocar a la vez y un alcance de explosión de cuatro unidades, y no aparecen paneles.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -803,6 +1404,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "11745",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman GB",
           "source": "igdb",
@@ -812,6 +1419,18 @@
           "field": "original_name",
           "value": "Bomberman GB",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bomberman is searching the depths of the earth in hopes of finding the Legendary Treasure. In the Story Mode, guide him through 48 levels of puzzle-solving action, collecting power-up items and defeating monsters along the way. The Battle Mode is the old favorite, where one to four players battle it out on six different maps.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman explora las profundidades de la tierra con la esperanza de encontrar el Tesoro Legendario. En el modo historia, guíalo a través de 48 niveles de acción y resolución de puzles, recogiendo objetos potenciadores y derrotando monstruos por el camino. El modo Batalla es el clásico de siempre, en el que de uno a cuatro jugadores se enfrentan en seis mapas diferentes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -828,7 +1447,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 7793,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles clásicos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 11969,
@@ -836,7 +1476,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 1713,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles clásicos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Variante regional."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 12579,
@@ -844,7 +1505,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 135909,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles clásicos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Variante posterior."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -872,6 +1554,18 @@
           "field": "original_name",
           "value": "Pocket Bomberman",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Everyone is familiar with explosive hurling hero 'Bomberman' but this time he's back in a side-view platforming adventure on the Game Boy and Game Boy Color. Use your bombs to blast your way through each stage and overcome the boss battles at the end of each zone to reach your ultimate goal.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Todos conocen al héroe lanzabombas 'Bomberman', pero esta vez regresa en una aventura de plataformas en vista lateral para Game Boy y Game Boy Color. Usa tus bombas para abrirte paso a través de cada fase y supera las batallas contra jefes al final de cada zona para alcanzar tu objetivo final.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -919,6 +1613,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman is on his way home when the engines on his ship are stolen. As a result, he must make an emergency landing on a strange planet. However, Bomberman is not traveling alone he's got all of the monsters he has captured on his adventures with him. After a rough crash landing, the monsters escaped. You must help Bomberman recapture the monsters and find his engines in order to return home. You'll travel to four different regions of the planet collecting bombs, finding items, and getting hints for how to proceed on your adventure. Along with the main quest a Two-Player mode is also included, in which you try to trap your opponent by setting bombs; the first person to be victimized by a bomb loses.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman volvía a casa cuando le robaron los motores de su nave, por lo que debe hacer un aterrizaje de emergencia en un planeta extraño. Sin embargo, no viaja solo: lleva consigo a todos los monstruos que ha capturado en sus aventuras. Tras un aterrizaje forzoso y brusco, los monstruos escaparon. Debes ayudar a Bomberman a recapturarlos y encontrar sus motores para poder regresar a casa. Recorrerás cuatro regiones del planeta recogiendo bombas, encontrando objetos y obteniendo pistas para avanzar en tu aventura. Además de la misión principal, incluye un modo para dos jugadores, en el que intentas atrapar a tu oponente colocando bombas; quien sea alcanzado primero por una bomba pierde.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -963,6 +1669,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In Bomberman Max, your task is to jump through five zones with a dozen levels each. At the beginning of the round, you're given your quota to meet -- in some levels, you'll have to destroy all the enemies. In another, wipe out all the blocks in the land. In another, rescue the level's Charabomb. And in others, simply make your way to the target square in the set amount of time. But it won't be easy, since many enemies just don't stay still for you to walk up and plant a bomb next to them. It's all in the strategy of bomb-placement. Plus, once a level's complete, you'll have to pick the proper exit that appears. Released in two versions, Blue and Red.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En Bomberman Max, tu tarea es atravesar cinco zonas con una docena de niveles cada una. Al comienzo de la ronda se te asigna el objetivo que debes cumplir: en algunos niveles tendrás que destruir a todos los enemigos; en otro, eliminar todos los bloques del territorio; en otro, rescatar al Charabomb del nivel; y en otros, simplemente llegar a la casilla objetivo en el tiempo establecido. Pero no será fácil, ya que muchos enemigos no se quedan quietos para que te acerques y coloques una bomba junto a ellos. Todo depende de la estrategia al colocar las bombas. Además, una vez completado un nivel, tendrás que elegir la salida adecuada que aparece. Se lanzó en dos versiones, Azul y Roja.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -1004,6 +1722,18 @@
           "field": "original_name",
           "value": "Bomberman Max: Blue Champion",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Bomberman Max, your task is to jump through five zones with a dozen levels each. At the beginning of the round, you're given your quota to meet -- in some levels, you'll have to destroy all the enemies. In another, wipe out all the blocks in the land. In another, rescue the level's Charabomb. And in others, simply make your way to the target square in the set amount of time. But it won't be easy, since many enemies just don't stay still for you to walk up and plant a bomb next to them. It's all in the strategy of bomb-placement. Plus, once a level's complete, you'll have to pick the proper exit that appears. Released in two versions, Blue and Red.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En Bomberman Max, tu tarea es atravesar cinco zonas con una docena de niveles cada una. Al comienzo de la ronda se te asigna el objetivo que debes cumplir: en algunos niveles tendrás que destruir a todos los enemigos; en otro, eliminar todos los bloques del territorio; en otro, rescatar al Charabomb del nivel; y en otros, simplemente llegar a la casilla objetivo en el tiempo establecido. Pero no será fácil, ya que muchos enemigos no se quedan quietos para que te acerques y coloques una bomba junto a ellos. Todo depende de la estrategia al colocar las bombas. Además, una vez completado un nivel, tendrás que elegir la salida adecuada que aparece. Se lanzó en dos versiones, Azul y Roja.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1081,6 +1811,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14102",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman '94",
           "source": "igdb",
@@ -1090,6 +1826,18 @@
           "field": "original_name",
           "value": "Bomberman '94",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "BOMBERMAN has arrived to restore peace on the planet, which has been split into five parts by an evil hand! In addition to the nine members of the Bomber Family, the character ROOI shows up to lend a hand. Jump on the EGGS that appear from destroyed SOFT BLOCKS, and you can ride one of five types of ROOI. Each ROOI has different special abilitiesuse these well and youll ride to victory! Bombs that turn according to arrows and other new gimmicks have been added to BATTLE GAME, increased to ten stages. Tag-team matches are now possible, ensuring that this game will be a blast!\n\nBomberman '94 is a video game from the Bomberman series which was developed and published by Hudson Soft for the PC Engine and released on December 10, 1993 in Japan. It was later re-developed by Westone and re-published by Sega as Mega Bomberman on the Sega Mega Drive/Genesis in 1994 in other areas. The PC Engine Bomberman '94 was later released outside Japan through the Wii's Virtual Console and the PlayStation 3's PlayStation Network.\n\nThe game supports single-player and multi-player modes. In single player, the player navigates several levels of mazes, destroying creatures with bombs. In multi-player mode, players defeat each other with bombs.\n\nBomberman '94 is the final HuCard title to be made and released by Hudson Soft, the original designers of the PC Engine console.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡BOMBERMAN ha llegado para devolver la paz al planeta, que ha sido dividido en cinco partes por una mano malvada! Además de los nueve miembros de la Familia Bomber, aparece el personaje ROOI para echar una mano. Salta sobre los HUEVOS que aparecen al destruir los BLOQUES BLANDOS, y podrás montar uno de cinco tipos de ROOI. Cada ROOI tiene habilidades especiales distintas: ¡úsalas bien y llegarás a la victoria! Se han añadido bombas que giran según las flechas y otras novedades al MODO BATALLA, que ahora tiene diez escenarios. Ahora son posibles los combates por equipos, ¡lo que hará de este juego una auténtica explosión!\n\nBomberman '94 es un videojuego de la serie Bomberman desarrollado y publicado por Hudson Soft para la PC Engine, y lanzado el 10 de diciembre de 1993 en Japón. Más tarde fue redesarrollado por Westone y publicado por Sega como Mega Bomberman para Sega Mega Drive/Genesis en 1994, en otras regiones. La versión para PC Engine de Bomberman '94 se lanzó posteriormente fuera de Japón a través de la Consola Virtual de Wii y de PlayStation Network de PlayStation 3.\n\nEl juego admite modos para un jugador y multijugador. En el modo para un jugador, el jugador recorre varios niveles de laberintos destruyendo criaturas con bombas. En el modo multijugador, los jugadores se derrotan entre sí con bombas.\n\nBomberman '94 es el último título en formato HuCard desarrollado y lanzado por Hudson Soft, los diseñadores originales de la consola PC Engine.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1106,7 +1854,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 3448,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena emulación."
+            }
+          ]
         },
         {
           "id": 14101,
@@ -1114,7 +1883,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 3448,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen multijugador."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena emulación."
+            }
+          ]
         },
         {
           "id": 14102,
@@ -1122,7 +1912,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 3448,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD y buena emulación."
+            }
+          ]
         },
         {
           "id": 14103,
@@ -1130,7 +1941,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 3448,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Multijugador local limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -1146,8 +1978,14 @@
       "year": 1992,
       "igdbId": 42097,
       "popularity": 10,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "15071",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Bomberman '93",
@@ -1158,6 +1996,18 @@
           "field": "original_name",
           "value": "Bomberman '93",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tension, strategy, action, excitement - Bomberman's back!\n\nYou can now battle against up to four computer-controlled maniacs by yourself for the ultimate five bomberman mode.\nChoose from seven exciting new stages with loads of new power-up items like werps, conveyer belts, revolving doors and even kicking bombs!\nOr for portable thrills, go head-to-head against a friend using TurboExpress for non-stop action.\nThe best competitive game is back, and it's more intense than ever!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Tensión, estrategia, acción, emoción: Bomberman ha vuelto!\n\nAhora puedes enfrentarte a solas con hasta cuatro maníacos controlados por la computadora en el modo definitivo de cinco bombermen.\nElige entre siete emocionantes escenarios nuevos con montones de objetos potenciadores nuevos, como teletransportadores, cintas transportadoras, puertas giratorias e incluso ¡bombas que puedes patear!\nO, para emociones portátiles, enfréntate cara a cara con un amigo usando la TurboExpress para una acción sin pausa.\n¡El mejor juego competitivo ha vuelto, y es más intenso que nunca!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1174,7 +2024,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 42097,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen multijugador con mandos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena emulación."
+            }
+          ]
         },
         {
           "id": 15070,
@@ -1182,7 +2053,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 42097,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Teclado, sin guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación básica."
+            }
+          ]
         },
         {
           "id": 15071,
@@ -1190,7 +2082,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 42097,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD y buena emulación."
+            }
+          ]
         }
       ],
       "images": {
@@ -1209,6 +2122,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "15095",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman: Panic Bomber",
           "source": "igdb",
@@ -1218,6 +2137,18 @@
           "field": "original_name",
           "value": "Bomberman: Panic Bomber",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It is a \"falling blocks\" puzzle game based on the Bomberman franchise. The goal of the game is essentially to cause your opponent to lose by causing their gameplay field to fill to the top with objects. You do this by causing chains of bombs to explode, sending useless rubble over to your opponent's field, which they must then remove themselves. Bombs are earned by causing chains of three identical blocks to disappear. Bombs can only be blown up with an explosion from a lit bomb, which falls from the top of the screen every so often. If the player causes enough damage, they can eventually earn a giant bomb, which will remove a large amount of debris from the playing field, and cause their opponent a good deal of trouble.\n\nThe game's regular story mode revolves around Bomberman's hunt for the Golden Bomber statue. During his trek, he fights against several different odd characters, like Drifty the balloon, or Cecil the tiger. However, all that can really be earned from playing through this mode is a harder difficulty level, earned by finishing the entire story at the \"hard\" difficulty level.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Es un juego de puzles de «bloques que caen» basado en la franquicia Bomberman. El objetivo es, básicamente, hacer que tu oponente pierda llenando su campo de juego de objetos hasta el tope. Para lograrlo, provocas cadenas de bombas que explotan, enviando escombros inútiles al campo de tu oponente, que luego deberá quitar por sí mismo. Las bombas se obtienen al provocar cadenas de tres bloques idénticos que desaparecen. Solo pueden hacerse explotar con la explosión de una bomba encendida, que cae desde la parte superior de la pantalla de vez en cuando. Si el jugador causa suficiente daño, puede llegar a obtener una bomba gigante, que elimina una gran cantidad de escombros del campo de juego y causa bastantes problemas al oponente.\n\nLa historia principal gira en torno a la búsqueda de la estatua del Bombardero Dorado por parte de Bomberman. Durante su travesía se enfrenta a varios personajes extraños, como Drifty, el globo, o Cecil, el tigre. Sin embargo, lo único que se puede obtener al jugar este modo es un nivel de dificultad más alto, que se consigue terminando toda la historia en el nivel de dificultad «difícil».",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1234,7 +2165,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 39663,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen multijugador."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena emulación."
+            }
+          ]
         },
         {
           "id": 15095,
@@ -1242,7 +2194,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 39663,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD y buena emulación."
+            }
+          ]
         },
         {
           "id": 15898,
@@ -1250,7 +2223,31 @@
           "kind": "remake",
           "year": 2005,
           "igdbId": 162409,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Correcto en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ],
+          "codes": [
+            "ULJM-05023"
+          ]
         }
       ],
       "images": {
@@ -1269,6 +2266,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "20612",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Bomberman R",
           "source": "igdb",
@@ -1278,6 +2281,18 @@
           "field": "original_name",
           "value": "Super Bomberman R",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Since its release in 1985, Bomberman has been a familiar party-battle game for many years. Now, Bomberman is coming back as \"SUPER BOMBERMAN R\" to Nintendo Switch.\n\nIn SUPER BOMBERMAN R, the simple rule remains the same: operate the main character (Bomberman), place bombs, and battle with enemies and rivals, but it's coming back in a modern style with 3D stages and photo-real graphics. You can enjoy battles with rivals from all over the world.\n\nThere is \"Battle\" mode for maximum of 8 players, and single play \"Story\" mode (cooperative play for 2 players is possible as well) where players clear each stage one by one, with a big volume of 50 stages. Also, there is a new rule where the condition to clear the stage is not just by wiping out all the enemies. This simple but strategic game with new rules and 3D stages is fun for everyone, from children to adults.\"",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "«Desde su lanzamiento en 1985, Bomberman ha sido durante muchos años un conocido juego de batallas para fiestas. Ahora, Bomberman regresa como «SUPER BOMBERMAN R» a Nintendo Switch.\n\nEn SUPER BOMBERMAN R, la regla sencilla se mantiene: maneja al personaje principal (Bomberman), coloca bombas y combate contra enemigos y rivales, pero ahora con un estilo moderno, con escenarios 3D y gráficos fotorrealistas. Puedes disfrutar de batallas contra rivales de todo el mundo.\n\nHay un modo «Batalla» para un máximo de 8 jugadores, y un modo «Historia» para un solo jugador (también es posible el juego cooperativo para 2 jugadores), en el que se superan los escenarios uno por uno, con un gran volumen de 50 escenarios. Además, hay una nueva regla: la condición para superar un escenario no es solo eliminar a todos los enemigos. Este juego sencillo pero estratégico, con nuevas reglas y escenarios 3D, es divertido para todos, desde niños hasta adultos.»",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1319,7 +2334,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 26760,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01007AD00013E000"
+          ]
         }
       ],
       "images": {
@@ -1338,6 +2356,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "36600",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Bomberman R Online",
           "source": "igdb",
@@ -1347,6 +2371,18 @@
           "field": "original_name",
           "value": "Super Bomberman R Online",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Drop bombs and collect power-ups to blast your way through Super Bomberman R Online! You can compete against up to 64 players from around the world in this explosive survival battle. With the new Battle 64 mode, move from one area to another and blast away your rivals in an epic online survival battle! Fight your way to the end and outlast all other players to be Bomber One!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Suelta bombas y recoge potenciadores para abrirte paso a explosiones en Super Bomberman R Online! Puedes competir contra hasta 64 jugadores de todo el mundo en esta explosiva batalla de supervivencia. Con el nuevo modo Battle 64, avanza de un área a otra y ¡derrota a tus rivales en una épica batalla de supervivencia en línea! Lucha hasta el final y sobrevive a todos los demás jugadores para convertirte en Bomber One.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1388,7 +2424,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 135826,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01007380121FE000"
+          ]
         }
       ],
       "images": {
@@ -1419,6 +2458,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman returns with a new cel-shaded 3D look. The same storyline applies, however. Bomberman has been given the task of taking back a powerful element of magic, and protecting it from the hands of evil. To do so, he must use his bombing abilites to blast his way through mazes filled with crazy enemies and hidden secrets. There are 5 worlds in all, each with 16 levels to complete. And after completing cetain objectives and picking up items, Bomberman will learn new techniques and abilities to improve his range with his bombs or use new weapons.\n\nAlso included is a 4 player classic bomberman multi-player modes. Unlike the adventure mode, all of the multi-player modes are set in the original 2D, top down style perspective. The last man standing wins in most rounds, with the added twist of other enemies on screen and timed battles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman regresa con un nuevo aspecto 3D con sombreado cel. Sin embargo, la trama es la misma. A Bomberman se le ha encomendado la tarea de recuperar un poderoso elemento mágico y protegerlo de las manos del mal. Para ello, debe usar sus habilidades con bombas para abrirse paso a base de explosiones por laberintos llenos de enemigos locos y secretos ocultos. Hay 5 mundos en total, cada uno con 16 niveles por completar. Y, tras cumplir ciertos objetivos y recoger objetos, Bomberman aprenderá nuevas técnicas y habilidades para mejorar el alcance de sus bombas o usar armas nuevas.\n\nTambién se incluyen modos multijugador clásicos de Bomberman para 4 jugadores. A diferencia del modo aventura, todos los modos multijugador se desarrollan en la perspectiva 2D original, vista desde arriba. En la mayoría de las rondas gana el último jugador en pie, con el añadido de otros enemigos en pantalla y batallas por tiempo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -1432,14 +2483,36 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 3832,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GBGE-USA",
+            "DL-DOL-GBGJ-JPN",
+            "DL-DOL-GBGP-EUR"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a036938d01f4a790095ba544c7e0d36e.png",
         "hero": "https://cdn2.steamgriddb.com/hero/9d8af5c8027a44f41d925fd5f2820d1d.png",
         "logo": "https://cdn2.steamgriddb.com/logo/3b31a81be7b2d71eaed7bc41ce6e9b9b.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 576,
+          "platform": "gc",
+          "project": "bomberman-generation-moderngekko",
+          "kind": "recomp",
+          "toolchain": "DolRecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/nikeymikey/bomberman-generation-moderngekko",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 16565,
@@ -1451,6 +2524,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43613",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman Jetters",
           "source": "igdb",
@@ -1460,6 +2539,18 @@
           "field": "original_name",
           "value": "Bomberman Jetters",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bomberman Jetters is a 2002 Japanese anime television series created by Studio Deen and NAS. It has also spawned two manga series and three video games, one of which was localized and given an English dub. It is based on the popular Bomberman video game series created by Hudson Soft.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Jetters es una serie de anime para televisión japonesa de 2002, creada por Studio Deen y NAS. También ha dado lugar a dos series de manga y tres videojuegos, uno de los cuales fue localizado y recibió un doblaje al inglés. Está basada en la popular serie de videojuegos Bomberman, creada por Hudson Soft.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1476,7 +2567,32 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 3833,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la base."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ],
+          "codes": [
+            "DL-DOL-GJBE-USA",
+            "DL-DOL-GJBJ-JPN"
+          ]
         },
         {
           "id": 43614,
@@ -1484,7 +2600,32 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 3833,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido igual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Equivalente."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Algo menos nítida."
+            }
+          ],
+          "codes": [
+            "SLPM-65218",
+            "SLPM-65485"
+          ]
         }
       ],
       "images": {
@@ -1503,6 +2644,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43695",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman Land 2",
           "source": "igdb",
@@ -1512,6 +2659,18 @@
           "field": "original_name",
           "value": "Bomberman Land 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bomberman Land 2 is an Action game, developed by Racjin and published by Hudson, which was released in Japan in 2003.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Land 2 es un juego de acción desarrollado por Racjin y publicado por Hudson, que se lanzó en Japón en 2003.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1528,7 +2687,31 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 3834,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la base."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ],
+          "codes": [
+            "DL-DOL-GB2J-JPN"
+          ]
         },
         {
           "id": 43696,
@@ -1536,7 +2719,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 3834,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido igual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Equivalente."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Algo menos nítida."
+            }
+          ]
         }
       ],
       "images": {
@@ -1565,6 +2769,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman Story DS is a sequel to Bomberman Tournament that was released in Japan and Europe.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Story DS es una secuela de Bomberman Tournament que se lanzó en Japón y Europa.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -1578,7 +2794,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 66613,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ABNJ",
+            "ABNP"
+          ]
         }
       ],
       "images": {
@@ -1606,6 +2826,18 @@
           "field": "original_name",
           "value": "Bomberman Blitz",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bomberman Blitz is the battle mode of Bomberman 2, distributed as DSiWare.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Blitz es el modo batalla de Bomberman 2, distribuido como DSiWare.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1651,6 +2883,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In Bomberman 2 DS, players can customize their own Bomberman using an assortment of different body parts with various statistical advantages that are unlocked as you progress through the main story mode in which you solve puzzles and defeat enemies. In multiplayer, up to four players may battle each other using their own customized Bomberman. Bomberman 2 also features the classic arcade style multiplayer mode from Bomberman DS and Bomberman Story DS for up to eight players in LAN and a maximum of four players over Wi-Fi.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En Bomberman 2 DS, los jugadores pueden personalizar su propio Bomberman usando una variedad de partes del cuerpo con distintas ventajas estadísticas, que se desbloquean a medida que avanzas en el modo Historia principal, en el que resuelves acertijos y derrotas enemigos. En el modo multijugador, hasta cuatro jugadores pueden enfrentarse entre sí con sus propios Bomberman personalizados. Bomberman 2 también incluye el modo multijugador clásico de estilo arcade de Bomberman DS y Bomberman Story DS, para hasta ocho jugadores en LAN y un máximo de cuatro jugadores por Wi-Fi.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -1664,7 +2908,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 85843,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YBAP"
+          ]
         }
       ],
       "images": {
@@ -1683,6 +2930,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87027",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman Land",
           "source": "igdb",
@@ -1692,6 +2945,18 @@
           "field": "original_name",
           "value": "Bomberman Land",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bombermand Land is a revamped continuation of the Bomberman series. There is a single-player Story Mode where the player travels through the Bomberman universe in order to bring peace to it once again by solving puzzles, defeating enemies and collecting power-ups and weapons to defeat them. There are 40 different single-player minigames and 5 multiplayer games to choose from, ranging from skiing, skateboarding, laser ball, archery among many others.\n\nThere is also the classic Bomberman which can also allow up to four human opponents in six different battle modes to compete in: Normal, Points, Stars, Crown, All-Out and Wii (which uses the Wii Remote to throw bombs, an exclusive mode for the Wii)",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Land es una continuación renovada de la serie Bomberman. Cuenta con un modo Historia para un jugador, en el que el jugador viaja por el universo de Bomberman para devolverle la paz resolviendo acertijos, derrotando enemigos y recogiendo potenciadores y armas para vencerlos. Hay 40 minijuegos para un jugador y 5 juegos multijugador entre los que elegir, que van desde esquí y skate hasta laser ball y tiro con arco, entre muchos otros.\n\nTambién está el Bomberman clásico, que permite enfrentarse hasta a cuatro oponentes humanos en seis modos de batalla diferentes: Normal, Puntos, Estrellas, Corona, All-Out y Wii (que usa el Wii Remote para lanzar bombas, un modo exclusivo de Wii).",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1708,7 +2973,31 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 21613,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Muchos minijuegos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con Wii Remote."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Versión distinta."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto."
+            }
+          ],
+          "codes": [
+            "RVL-RBBE-USA"
+          ]
         },
         {
           "id": 64037,
@@ -1716,7 +3005,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 77674,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor salida de video."
+            }
+          ]
         },
         {
           "id": 64038,
@@ -1724,7 +3034,33 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 77674,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ],
+          "codes": [
+            "SLPM-87080",
+            "SLPM-87364",
+            "SLPS-03002"
+          ]
         },
         {
           "id": 64039,
@@ -1732,7 +3068,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 77674,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 87027,
@@ -1740,7 +3097,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 197973,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más minijuegos y modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al espíritu."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -1759,6 +3137,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50064",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman Blast",
           "source": "igdb",
@@ -1768,6 +3152,18 @@
           "field": "original_name",
           "value": "Bomberman Blast",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Look out for Bomberman Blast! There's 8-person online multiplayer and you can even use your Mii as a Bomberman!\n\nA brand new addition to the Bomberman series is available on WiiWare! Up to eight players can battle online simultaneously via Nintendo Wi-Fi Connection! Simple controls make this a great game for family and friends to enjoy at anytime! New items can be triggered by shaking the Wii Remote controller for excitement never before experienced in a Bomberman title! You can even take the intensity up another notch by adding your own Mii caricatures to the mix! Battle results can be recorded on Nintendo Wi-Fi Connection Ranking, so see how you stack up against others around the globe! This title will prove to be a blast for everyone--from those who've never touched a Bomberman game, to the Bomberman masters!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Ojo con Bomberman Blast! Tiene multijugador en línea para 8 personas e incluso puedes usar tu Mii como Bomberman.\n\n¡Una nueva incorporación a la serie Bomberman, ya disponible en WiiWare! ¡Hasta ocho jugadores pueden combatir en línea simultáneamente a través de la Conexión Wi-Fi de Nintendo! ¡Los controles sencillos hacen de este un gran juego para que la familia y los amigos lo disfruten en cualquier momento! ¡Se pueden activar nuevos objetos agitando el mando Wii Remote, para una emoción nunca antes vista en un título de Bomberman! ¡Incluso puedes subir la intensidad añadiendo tus propias caricaturas Mii a la mezcla! Los resultados de las batallas pueden registrarse en el Ranking de la Conexión Wi-Fi de Nintendo, para que veas cómo te comparas con otros jugadores de todo el mundo. ¡Este título será una explosión para todos, desde quienes nunca han tocado un juego de Bomberman hasta los maestros de Bomberman!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1811,6 +3207,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58360",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Bomberman R 2",
           "source": "igdb",
@@ -1820,6 +3222,18 @@
           "field": "original_name",
           "value": "Super Bomberman R 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A sequel to Super Bomberman R, featuring an expanded story mode, and a new \"Castle\" battle mode which has one group teaming up to build castle defenses while the other attempts to breach the castle and take the treasure.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Secuela de Super Bomberman R, con un modo Historia ampliado y un nuevo modo de batalla «Castillo», en el que un grupo se une para construir defensas de castillo mientras el otro intenta irrumpir en él y apoderarse del tesoro.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1877,7 +3291,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 206807,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100B87017D94000"
+          ]
         }
       ],
       "images": {
@@ -1896,6 +3313,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61341",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman World",
           "source": "igdb",
@@ -1905,6 +3328,18 @@
           "field": "original_name",
           "value": "Bomberman World",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bomber worlds. To complete the areas, you must control Bomberman and set bombs to destroy enemies and obstacles that will lead to the exit. To be able to complete each level, the player must locate and pick up all of the Crystals on the map. Once this is complete, the door to the exit will open, and the player is allowed to move on to the next area. In the fourth area of each world, the player will have to defeat a Dark Force Bomber, and an extra boss that is themed after the type of world the setting is in.\n\nOnce you defeat a Dark Force Bomber, the player is given a unique battle armor to wear for the next boss battle, which has a normal attack and a special attack. The battle armor is only used for the boss battles, meaning once the player advances to the next world, the battle armor will be lost. As such, it is recommended that players take full advantage of the armor.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mundos de Bomber. Para completar las áreas, debes controlar a Bomberman y colocar bombas para destruir a los enemigos y obstáculos que conducen a la salida. Para completar cada nivel, el jugador debe localizar y recoger todos los cristales del mapa. Una vez hecho esto, se abre la puerta de salida y el jugador puede pasar al siguiente área. En la cuarta área de cada mundo, el jugador deberá derrotar a un Dark Force Bomber y a un jefe extra con el tema del tipo de mundo en el que se ambienta.\n\nUna vez derrotado un Dark Force Bomber, el jugador recibe una armadura de batalla única para usar en el siguiente combate contra un jefe. Tiene un ataque normal y un ataque especial. La armadura solo se usa en los combates contra jefes, por lo que al avanzar al siguiente mundo se pierde. Por ello, se recomienda aprovecharla al máximo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1921,7 +3356,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 27255,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles menos pulidos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Posibles problemas de compatibilidad."
+            }
+          ]
         },
         {
           "id": 61341,
@@ -1929,14 +3385,57 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 27255,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen multijugador con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ],
+          "codes": [
+            "SCES-01078",
+            "SLPS-01155",
+            "SLPS-91149",
+            "SLUS-00680"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/fd981c6de523ab65b22daa7f5d2ca791.png",
         "hero": "https://cdn2.steamgriddb.com/hero/7ab581c337ee3c0d15ab76aa483ecc87.png",
         "logo": "https://cdn2.steamgriddb.com/logo/9b919c23d10644f99c0313a41316e90e.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 579,
+          "platform": "ps1",
+          "project": "Bomberman-World-Recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/TechnicallyComputers/Bomberman-World-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 24235,
@@ -1948,6 +3447,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61379",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman Fantasy Race",
           "source": "igdb",
@@ -1957,6 +3462,18 @@
           "field": "original_name",
           "value": "Bomberman Fantasy Race",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "If you're looking for fun racing action, look no further than Bomberman Fantasy Race! Lightning fast competition, zany obstacle infested tracks and of course bombs! It's a battle-racing game like you've seen.\n\nFeatures:\n\n* Wacky animal racing! Race atop 10 different animals through 7 unique fantasy courses. Use special techniques , such as the triangle jump, bomb dash and catapult to get ahead of the competition!\n\n* Intense 2 player action! Compete against your friends in the split screen mode to prove who's #1! Best of all, clean out their piggy bank with the unique wagering system!\n\n* Over 15 crazy power-ups! Wield over 15 wacky weapons, including rocket bombs, power bombs, shields and power suits. Unleash long range attacks utilizing the unique throw meter!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Si buscas emocionantes carreras, no busques más: ¡Bomberman Fantasy Race! Competencias ultrarrápidas, pistas llenas de obstáculos disparatados y, por supuesto, ¡bombas! Es un juego de carreras de batalla como no has visto antes.\n\nCaracterísticas:\n\n* ¡Carreras de animales locos! Corre sobre 10 animales diferentes a través de 7 circuitos fantásticos. Usa técnicas especiales, como el salto triangular, el impulso con bomba y la catapulta, para adelantar a la competencia.\n\n* ¡Acción intensa para 2 jugadores! Compite con tus amigos en el modo de pantalla dividida para demostrar quién es el número 1. ¡Y lo mejor de todo: vacía su alcancía con el sistema de apuestas único!\n\n* ¡Más de 15 potenciadores alocados! Empuña más de 15 armas disparatadas, como bombas cohete, bombas de poder, escudos y trajes de poder. Desata ataques de largo alcance usando el medidor de lanzamiento único.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1973,7 +3490,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 22773,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor salida de video."
+            }
+          ]
         },
         {
           "id": 61380,
@@ -1981,7 +3519,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 22773,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido igual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles menos pulidos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Compatibilidad variable."
+            }
+          ]
         },
         {
           "id": 61381,
@@ -1989,7 +3548,35 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 22773,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ],
+          "codes": [
+            "SLES-01712",
+            "SLPM-87102",
+            "SLPS-01525",
+            "SLPS-91138",
+            "SLUS-00823"
+          ]
         },
         {
           "id": 61382,
@@ -1997,14 +3584,51 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 22773,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/82a22bbbb6468af6719f8ff87b388f52.png",
         "hero": "https://cdn2.steamgriddb.com/hero/74ba18cea37cb268269f9e8fee6928d7.png",
         "logo": "https://cdn2.steamgriddb.com/logo/e108f87cf036b927c6aee2b999682642.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 575,
+          "platform": "ps1",
+          "project": "Bomberman-Fantasy-Race-Recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/TechnicallyComputers/Bomberman-Fantasy-Race-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 25054,
@@ -2028,6 +3652,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman Wars is a video game in the Bomberman series released for the Sega Saturn and PlayStation on April 16, 1998. The main character is King Bomber who rules over his kingdom. The object of the game is to conquer all the pieces of the Bomber country. Eventually you fight the main villain, Bagular, and his four henchmen.\n\nThis is one of the earliest games in the Bomberman series to stray away from its party game roots and focus more on the single player component (though it did have a VS mode). It is the third Bomberman game for the Saturn, and the second for the PlayStation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Wars es un videojuego de la serie Bomberman lanzado para Sega Saturn y PlayStation el 16 de abril de 1998. El personaje principal es King Bomber, que gobierna su reino. El objetivo del juego es conquistar todas las piezas del país Bomber. Al final, te enfrentas al villano principal, Bagular, y a sus cuatro secuaces.\n\nEste es uno de los primeros juegos de la serie Bomberman que se alejan de sus raíces de juego para fiestas y se centran más en el componente para un jugador (aunque sí tenía un modo VS). Es el tercer juego de Bomberman para Saturn y el segundo para PlayStation.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -2041,7 +3677,11 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 45407,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCPS-45225",
+            "SLPS-01347"
+          ]
         }
       ],
       "images": {
@@ -2072,6 +3712,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman Kart is a racing game for PlayStation 2 starring the Bomberman characters. It is similar to Mario Kart. The game supports 4 player local multiplayer using the PlayStation 2 Multitap. The first version was released in 2001 in Japan and later 2003 in Europe. The second version, called Bomberman Kart DX (director's cut) was released in 2004 only in Japan. Both versions have never been released in the United States.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Kart es un juego de carreras para PlayStation 2 protagonizado por los personajes de Bomberman. Es similar a Mario Kart. El juego admite partidas locales para 4 jugadores mediante el Multitap de PlayStation 2. La primera versión se lanzó en 2001 en Japón, y después, en 2003, en Europa. La segunda versión, llamada Bomberman Kart DX (director's cut), se lanzó en 2004 solo en Japón. Ninguna de las dos versiones se ha lanzado nunca en Estados Unidos.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -2085,7 +3737,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 43535,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51302",
+            "SLPM-62118"
+          ]
         }
       ],
       "images": {
@@ -2116,6 +3772,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman Hardball is divided into four games. Battle mode (the standard Bomberman game), is joined by tennis, golf and baseball games. At the center of all this is the Living mode, a character building feature in which the player can design a Bomberman for use in any of the battle modes.\n\nBattle Mode is the centerpiece of this and all other Bomberman games. This mode is essentially the standard Bomberman formula; in the game, players navigate grid-based mazes, planting bombs in an attempt to hit other players (while avoided being hit by a bomb themselves). There are several different variations of Battle Mode, although they all center around the standard Bomberman gameplay.\n\nClassic Battle: A standard deathmatch-type game.\nStar Battle: Collect the most stars.\nCrown Battle: Find the crown in the level to win the game.\nPoint Battle: Earn the most points by killing opponents\nReplay: Watched game sessions saved to memory card.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Hardball se divide en cuatro juegos. Al modo Batalla (el juego estándar de Bomberman) se suman los juegos de tenis, golf y béisbol. En el centro de todo está el modo Living, una función de creación de personajes en la que el jugador puede diseñar un Bomberman para usarlo en cualquiera de los modos de batalla.\n\nEl modo Batalla es la pieza central de este y de todos los demás juegos de Bomberman. Este modo es básicamente la fórmula estándar de Bomberman: los jugadores recorren laberintos en forma de cuadrícula, colocando bombas en un intento de alcanzar a otros jugadores (evitando al mismo tiempo ser alcanzados por una bomba propia). Existen varias variantes del modo Batalla, aunque todas giran en torno a la jugabilidad estándar de Bomberman.\n\nBatalla clásica: un deathmatch estándar.\nBatalla de estrellas: reúne la mayor cantidad de estrellas.\nBatalla de la corona: encuentra la corona en el nivel para ganar la partida.\nBatalla de puntos: gana la mayor cantidad de puntos eliminando a los oponentes.\nRepetición: partidas grabadas guardadas en la tarjeta de memoria.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -2129,7 +3797,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 45295,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53301"
+          ]
         }
       ],
       "images": {
@@ -2159,6 +3830,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman, which continues to attract many fans with its simple gameplay, has finally become a network battle!\n\nMoreover, it is possible to play up to 8 players this time!\n\nIf you connect to the net, you can have a heated battle not only with your usual friends but also with many rivals on the other side of the net!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Bomberman, que sigue atrayendo a muchos fans con su jugabilidad sencilla, por fin se ha convertido en una batalla en red!\n\n¡Además, esta vez es posible jugar hasta con 8 jugadores!\n\nSi te conectas a la red, podrás librar una batalla muy reñida no solo con tus amigos habituales, sino también con muchos rivales al otro lado de la red.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -2172,9 +3855,15 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 77673,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-20343"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2klr.jpg"
+      }
     },
     {
       "id": 34140,
@@ -2198,6 +3887,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman Land 3 is a party game released for the Playstation 2. Like it's predecessor it was released only in Japan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Land 3 es un juego de fiesta lanzado para PlayStation 2. Al igual que su predecesor, solo se lanzó en Japón.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -2211,9 +3912,16 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 64947,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-62643",
+            "SLPM-62763"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/ueppiqa2ufczfp97x9gm.jpg"
+      }
     },
     {
       "id": 34461,
@@ -2250,9 +3958,16 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 94366,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-62478",
+            "SLPM-62599"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5u60.jpg"
+      }
     },
     {
       "id": 35473,
@@ -2276,6 +3991,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A PSP exclusive Bomberman entry only released in Japan and developed by Sony Computer Entertainment",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un título de Bomberman exclusivo de PSP, lanzado solo en Japón y desarrollado por Sony Computer Entertainment.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -2291,7 +4018,10 @@
           "igdbId": 59395,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co70pn.jpg"
+      }
     },
     {
       "id": 40363,
@@ -2303,6 +4033,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96963",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bomberman Live",
           "source": "igdb",
@@ -2312,6 +4048,18 @@
           "field": "original_name",
           "value": "Bomberman Live",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Classic Bomberman on the Xbox Live arcade.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman clásico en el arcade de Xbox Live.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2328,7 +4076,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 17456,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen multijugador."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Servidores en línea limitados hoy."
+            }
+          ]
         },
         {
           "id": 96963,
@@ -2336,9 +4105,35 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 44572,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más contenido y mejoras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen multijugador."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Edición ampliada."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/83123a2c1589a62c50704ce056d68905.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b03d078b859d32d6b12b3e491acaf978.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9a2df0715e604dc5b670a2ffcc67dbc7.png"
+      }
     },
     {
       "id": 42850,
@@ -2362,6 +4157,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman II follows the popular Famicom/NES game Bomberman, incorporating a number of new features to the series. The game maintained the classic Bomberman game-type, requiring the player to navigate a maze of blocks using bombs to make a path. It added a two-player and three-player mode, and had a more developed storyline. The game was developed by Hudson Soft and released on the Family Computer and the NES. It was marketed as Dynablaster in Europe.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman II continúa el juego Bomberman de Famicom/NES e incorpora varias funciones nuevas a la serie. El juego mantuvo el tipo de juego clásico de Bomberman, en el que el jugador debe recorrer un laberinto de bloques usando bombas para abrirse camino. Añadió modos para dos y tres jugadores y contaba con una historia más desarrollada. El juego fue desarrollado por Hudson Soft y lanzado para la Family Computer y la NES. En Europa se comercializó como Dynablaster.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -2377,7 +4184,12 @@
           "igdbId": 3447,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/11893c176e703e5348f2fe5e55eca21b.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/03c18fa96b91843e1e4cd3de3abff4cf.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ba6045b2a8a42c49c20bd1dc95acb1f0.png"
+      }
     },
     {
       "id": 48268,
@@ -2401,6 +4213,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman: Act Zero is an action video game developed by Hudson Soft and published by Konami for the Xbox 360 in 2006. It is noteworthy for its departure from standard titles in the Bomberman series; it features more realistic graphics and a dark, dystopian future setting.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman: Act Zero es un videojuego de acción desarrollado por Hudson Soft y publicado por Konami para Xbox 360 en 2006. Destaca por apartarse de los títulos estándar de la serie Bomberman: cuenta con gráficos más realistas y una ambientación oscura y distópica en el futuro.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -2416,7 +4240,12 @@
           "igdbId": 6925,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4885362f7369c91eac85b3689407343a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d21f696d45167526786fe0444acf4670.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e520d428df3ada1af1231364239aa646.png"
+      }
     },
     {
       "id": 48785,
@@ -2440,6 +4269,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bomberman Live: Battlefest is a 2010 video game for the Xbox 360 console, Battlefest was released on December 8, 2010 through Xbox Live Arcade. It is the last Bomberman game to be published by Hudson Soft and was the last Bomberman game until 2017 with the release of Super Bomberman R.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bomberman Live: Battlefest es un videojuego de 2010 para la consola Xbox 360. Battlefest se lanzó el 8 de diciembre de 2010 a través de Xbox Live Arcade. Es el último juego de Bomberman publicado por Hudson Soft y fue el último juego de Bomberman hasta 2017, con el lanzamiento de Super Bomberman R.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -2455,8 +4296,183 @@
           "igdbId": 67696,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4f8f3f44d35c7f986e05943c8f159a7a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d65baff31c80defd60c00cf027401840.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e55da6d27e8671d31f63266b9508d749.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 154,
+      "kind": "release",
+      "rationale": "Selección de los juegos principales por fecha. Se omiten los spin-offs menores, los ports de Game Boy y los juegos de móvil.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1429,
+          "reason": "El original; las versiones varían según la plataforma."
+        },
+        {
+          "position": 2,
+          "gameId": 42850,
+          "recommendedVersionId": 101945,
+          "reason": "Secuela de NES."
+        },
+        {
+          "position": 3,
+          "gameId": 183,
+          "recommendedVersionId": 283,
+          "reason": "Primer Super Bomberman, en SNES."
+        },
+        {
+          "position": 4,
+          "gameId": 296,
+          "recommendedVersionId": 450,
+          "reason": "Secuela muy valorada de SNES."
+        },
+        {
+          "position": 5,
+          "gameId": 406,
+          "recommendedVersionId": 621,
+          "reason": "Tercera entrega de SNES."
+        },
+        {
+          "position": 6,
+          "gameId": 1052,
+          "recommendedVersionId": 1996,
+          "reason": "Salto a 3D en N64."
+        },
+        {
+          "position": 7,
+          "gameId": 1296,
+          "recommendedVersionId": 2431,
+          "reason": "Secuela 3D en N64."
+        },
+        {
+          "position": 8,
+          "gameId": 16493,
+          "recommendedVersionId": 43436,
+          "reason": "Aventura 3D en GameCube."
+        },
+        {
+          "position": 9,
+          "gameId": 9471,
+          "recommendedVersionId": 20612,
+          "reason": "Regreso moderno de la serie, en PC."
+        },
+        {
+          "position": 10,
+          "gameId": 23183,
+          "recommendedVersionId": 58360,
+          "reason": "Última entrega, en PC."
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "kind": "story",
+      "rationale": "Hay continuidad solo entre algunos spin-offs de aventura. La saga no tiene una historia continua, así que repito el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1429,
+          "reason": "Inicio de la saga."
+        },
+        {
+          "position": 2,
+          "gameId": 42850,
+          "recommendedVersionId": 101945,
+          "reason": "Sin historia continua."
+        },
+        {
+          "position": 3,
+          "gameId": 183,
+          "recommendedVersionId": 283,
+          "reason": "Sin historia continua."
+        },
+        {
+          "position": 4,
+          "gameId": 296,
+          "recommendedVersionId": 450,
+          "reason": "Sin historia continua."
+        },
+        {
+          "position": 5,
+          "gameId": 406,
+          "recommendedVersionId": 621,
+          "reason": "Sin historia continua."
+        },
+        {
+          "position": 6,
+          "gameId": 1052,
+          "recommendedVersionId": 1996,
+          "reason": "Sin historia continua."
+        },
+        {
+          "position": 7,
+          "gameId": 1296,
+          "recommendedVersionId": 2431,
+          "reason": "Continúa Bomberman 64, pero cada juego se entiende por separado."
+        },
+        {
+          "position": 8,
+          "gameId": 16493,
+          "recommendedVersionId": 43436,
+          "reason": "Sin historia continua."
+        },
+        {
+          "position": 9,
+          "gameId": 9471,
+          "recommendedVersionId": 20612,
+          "reason": "Sin historia continua."
+        },
+        {
+          "position": 10,
+          "gameId": 23183,
+          "recommendedVersionId": 58360,
+          "reason": "Sin historia continua."
+        }
+      ]
+    },
+    {
+      "id": 156,
+      "kind": "community",
+      "rationale": "Se suele recomendar el multijugador clásico de SNES y la aventura de N64. Los títulos modernos se juegan por comodidad. Sin fuentes verificadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 296,
+          "recommendedVersionId": 450,
+          "reason": "Considerado uno de los mejores multijugador de la saga."
+        },
+        {
+          "position": 2,
+          "gameId": 183,
+          "recommendedVersionId": 283,
+          "reason": "Base de la fórmula clásica, en SNES."
+        },
+        {
+          "position": 3,
+          "gameId": 1052,
+          "recommendedVersionId": 1996,
+          "reason": "Aventura 3D de N64 con modo para un jugador."
+        },
+        {
+          "position": 4,
+          "gameId": 9471,
+          "recommendedVersionId": 20612,
+          "reason": "Opción moderna para jugar hoy; PC es la más práctica."
+        }
+      ]
+    }
+  ]
 }

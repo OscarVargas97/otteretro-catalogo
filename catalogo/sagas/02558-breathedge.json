@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "25605",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Breathedge",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Breathedge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Survive in outer space! Together with your immortal chicken, discover the truth behind your sudden spaceship crash. Craft tools, pilot vehicles, and even control space stations to survive and explore the wreckage.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 89326,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Bien con mando, cargas lentas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento medio con cargas largas."
+            }
+          ]
         },
         {
           "id": 25605,
@@ -57,7 +90,28 @@
           "year": 2018,
           "igdbId": 89326,
           "steamAppId": 738520,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todas las actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles precisos con teclado y ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y rendimiento."
+            }
+          ]
         },
         {
           "id": 25606,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 89326,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas y buen manejo con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 25607,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 89326,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Bien con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento medio con cargas largas."
+            }
+          ]
         },
         {
           "id": 25608,
@@ -81,7 +177,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 89326,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, buena adaptación."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y fluidez inestable."
+            }
+          ],
+          "codes": [
+            "01000AA013A5E000"
+          ]
         }
       ],
       "images": {
@@ -100,6 +220,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111521",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Breathedge 2",
           "source": "igdb",
@@ -108,6 +234,12 @@
         {
           "field": "original_name",
           "value": "Breathedge 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sent on a reckless mission, you find yourself in outer space filled with numerous dangers and things to explore. Build, craft, manage your crew, look after the chicken, and defeat the evil space corporation in this new breathtaking survival game.",
           "source": "igdb",
           "manual": false
         },
@@ -152,8 +284,31 @@
           "igdbId": 252870,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6m12.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2675,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10962,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 47025,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

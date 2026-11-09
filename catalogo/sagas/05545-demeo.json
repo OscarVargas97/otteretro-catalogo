@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110494",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Demeo",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Demeo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "RPG fans, unite… in virtual reality.\nA dark force has taken over the underworld in the upcoming RPG dungeon crawler, Demeo, and it’s a world you’re not likely to survive alone.\n\nTerrors and treasure await as you and your friends brave the corrupted catacombs of Demeo together. Choose your champions wisely in this cooperative VR game, for once you have ventured below you must conquer the nether floors or perish in the attempt. The ultimate outcome depends on your choices, and whether the dice are rolled in your favor…",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2021,
           "igdbId": 144763,
           "steamAppId": 1484280,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido de lanzamiento en VR, con menos actualizaciones que las versiones posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Inmersivo con controles de movimiento, pero requiere casco y espacio."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la experiencia original pensada para VR."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Depende del hardware VR; resolución y fps limitados por el casco."
+            }
+          ]
         },
         {
           "id": 110380,
@@ -58,7 +91,28 @@
           "year": 2021,
           "igdbId": 144763,
           "steamAppId": 1484280,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión de PC plana con el contenido de su época."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado cómodos, sin necesidad de casco."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cambia la inmersión de VR por pantalla plana."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con buena resolución en PC."
+            }
+          ]
         },
         {
           "id": 110381,
@@ -66,7 +120,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 144763,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido amplio, sin algunos extras posteriores de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando adecuado y juego cruzado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación a consola con pantalla plana."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con cargas rápidas, sin opciones gráficas avanzadas."
+            }
+          ]
         },
         {
           "id": 110494,
@@ -75,9 +150,34 @@
           "year": 2022,
           "igdbId": 194737,
           "steamAppId": 1837750,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido y héroes añadidos, con juego cruzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejor accesibilidad, partidas con otras plataformas y controles pulidos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene el diseño, con versión plana en lugar de VR."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable, bien optimizada y con resolución alta."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cb0ffc295a97ed27f185281e73365c2e.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/0672911fa5ea6a6426dd874956e77bd6.png"
+      }
     },
     {
       "id": 46968,
@@ -89,6 +189,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111352",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Demeo Battles",
           "source": "igdb",
@@ -97,6 +203,12 @@
         {
           "field": "original_name",
           "value": "Demeo Battles",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome to the arena! Demeo Battles is a competitive turn-based strategy game for 1-4 players.",
           "source": "igdb",
           "manual": false
         },
@@ -134,8 +246,31 @@
           "igdbId": 251555,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6kne.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3479,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46632,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 46968,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

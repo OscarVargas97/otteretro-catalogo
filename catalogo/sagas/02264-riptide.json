@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19176",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Riptide GP: Renegade",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Riptide GP: Renegade",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Riptide GP: Renegade drops players into a futuristic world of illicit hydro jet racing, where armored riders kick out death-defying stunts over massive waterfalls, outrun cops, and boost at breakneck speeds across surging waves. With a deep career mode and both split screen and online multiplayer, Riptide GP: Renegade is the first game in the popular racing series designed especially for modern consoles.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 21606,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01002A6006AA4000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99641",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Riptide GP2",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Riptide GP2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rev up your rocket-powered hydro jet and put your racing skills to the test as you rip across a dynamic, ever-changing torrent of waves in Riptide GP2. Race through futuristic cityscapes, twisting canals and rivers, open harbors and mysterious research facilities. Hurl yourself off sky-high jumps and bust out death defying stunts. Build a collection of powerful watercraft and customize their performance and paint schemes to suit your individual style. Take your skills online to battle other players around the world -- or trade elbows with friends in split-screen matches right in your home!",
           "source": "igdb",
           "manual": false
         },
@@ -117,7 +144,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 16735,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 99641,
@@ -126,7 +174,28 @@
           "year": 2013,
           "igdbId": 16735,
           "steamAppId": 257790,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fps."
+            }
+          ]
         },
         {
           "id": 99642,
@@ -134,10 +203,56 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 16735,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6379c83436455c5a6776122110997402.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/fad68ee497f1cf9108b630e7ce630e6c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/df320a984cfb79b17d721a870665cdba.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2573,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41816,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 9109,
+          "reason": "2016"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

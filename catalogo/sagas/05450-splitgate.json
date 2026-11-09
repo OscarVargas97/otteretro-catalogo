@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103991",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Splitgate",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Splitgate",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Splitgate is a free-to-play, fast-paced multiplayer shooter that features player-controlled portals. This sci-fi shooter takes the FPS genre to a new dimension with its portal mechanics, delivering high-flying, multi-dimensional combat. Evoking memories of the most revered shooters of the past two decades, Splitgate embraces the classic and familiar feel of close-quarters combat while adding a unique twist.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 114684,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido y modos que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando y juego cruzado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma experiencia de juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "60 FPS en consola, resolución inferior a PC."
+            }
+          ]
         },
         {
           "id": 103991,
@@ -57,7 +90,28 @@
           "year": 2019,
           "igdbId": 114684,
           "steamAppId": 1990390,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y actualizado con los mismos modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos, buena comunidad y ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y FPS altos, configurable."
+            }
+          ]
         },
         {
           "id": 103992,
@@ -65,9 +119,35 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 114684,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido y modos que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando y juego cruzado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma experiencia de juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "60 FPS en consola, resolución inferior a PC."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3cd4760f5ac9f99a485994a9234a13b6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6276c5b3cb830022fe53dcb160acc4c8.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3aadc78106e09c44728f01ead5bcde2b.png"
+      }
     },
     {
       "id": 45580,
@@ -79,6 +159,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "108026",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Splitgate: Arena Reloaded",
           "source": "igdb",
@@ -87,6 +173,12 @@
         {
           "field": "original_name",
           "value": "Splitgate: Arena Reloaded",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SPLITGATE: Arena Reloaded fuses the best of Splitgate 1 & 2, bringing back that classic arena shooter feel. Jump into fast-paced arena modes or drop into Arena Royale, a battle royale built on arena DNA.",
           "source": "igdb",
           "manual": false
         },
@@ -139,8 +231,33 @@
           "igdbId": 308978,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/edf1b0a6f090c3be2cd9895e683e08ce.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/97d2ca266437943fba0ed741d00e4b7c.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/14e64344d0a2fdeb83b926a894614a8c.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3458,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43949,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 45580,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

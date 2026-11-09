@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42875",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Spark the Electric Jester 3",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Spark the Electric Jester 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Continuing directly from where Spark the Electric Jester 2 left off, Join Spark on his mission to overthrow his rival once again. Blaze through fast action packed stages and experience a new and improved combat system.\n\nThe gameplay is a mix of action and platforming in a clever way, taking elements from many games of both genres, you are able to find powers that change the way you play, enjoy great freedom of movement, discover many different ways to beat each stage, and ways to do it faster.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2022,
           "igdbId": 153620,
           "steamAppId": 1629530,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todos los modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Respuesta precisa con mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y con resolución alta."
+            }
+          ]
         },
         {
           "id": 42876,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 153620,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y rendimiento más ajustado."
+            }
+          ],
+          "codes": [
+            "0100D9901DD98000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "116265",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Spark the Electric Jester 2",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Spark the Electric Jester 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Following right after the ending of the original Spark the Electric Jester, you'll take control of Fark, now in the third dimension, in his quest to find out his true identity! Speed through several fast paced platforming stages, action packed bosses and fully animated cutscenes.",
           "source": "igdb",
           "manual": false
         },
@@ -112,8 +181,33 @@
           "igdbId": 118119,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d8da124409cad437d5d2c35b101e3b91.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c12eea7b764a37778affe67c805b8e11.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/fea47eb5acbc2d748205dc2869518359.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2846,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 49337,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 16343,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

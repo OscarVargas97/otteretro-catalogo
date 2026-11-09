@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14929",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Teslagrad",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Teslagrad",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Teslagrad is a 2D puzzle platformer developed by Rain Games. Released in 2013, it is set in a steampunk-inspired world and revolves around the use of magnetism and electricity to solve puzzles. Players control a young boy who must navigate through a mysterious tower, using magnetic powers to manipulate the environment and overcome obstacles. The game is characterised by its lack of dialogue, relying on visual storytelling and atmospheric design to convey its narrative.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 7641,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-02134",
+            "BLUS-31520"
+          ]
         },
         {
           "id": 14477,
@@ -81,7 +97,10 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 7641,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "PCSB-00722"
+          ]
         },
         {
           "id": 14481,
@@ -164,6 +183,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58235",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Teslagrad 2",
           "source": "igdb",
@@ -172,6 +197,12 @@
         {
           "field": "original_name",
           "value": "Teslagrad 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Teslagrad 2 is the sequel to the original Teslagrad, developed by Rain Games and released in 2023. This 2D puzzle platformer builds upon the magnetic and electrical mechanics of its predecessor, with players once again using these abilities to solve puzzles and traverse complex environments. Set in a new region, the game introduces new powers, enemies, and challenges, while maintaining the visual storytelling and atmospheric design characteristic of the series.",
           "source": "igdb",
           "manual": false
         },
@@ -230,7 +261,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 214506,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010078801815C000"
+          ]
         }
       ],
       "images": {
@@ -240,5 +274,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2476,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7775,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 23150,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

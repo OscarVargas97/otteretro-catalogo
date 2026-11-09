@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "35900",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Death Park",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "Death Park",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Can you solve all the puzzles and escape from the scary clown in this horror game? It is already waiting for you!",
           "source": "igdb",
           "manual": false
         },
@@ -107,6 +119,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "90201",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Death Park 2",
           "source": "igdb",
@@ -115,6 +133,12 @@
         {
           "field": "original_name",
           "value": "Death Park 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fight monsters, solve puzzles and uncover Farland's secret and the clown's origin in this sci-fi horror game!",
           "source": "igdb",
           "manual": false
         },
@@ -148,7 +172,10 @@
           "kind": "remaster",
           "year": 2025,
           "igdbId": 375128,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010031D015F06000"
+          ]
         },
         {
           "id": 104831,
@@ -175,8 +202,32 @@
           "igdbId": 149730,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3o9w.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/17a7161db33bcd7a8904250c6277e957.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3453,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13635,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 44225,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

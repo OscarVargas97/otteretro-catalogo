@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61534",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vib-Ribbon",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Vib-Ribbon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Vib-Ribbon is a rhythm game where the player must maneuver musically generated obstacles based on either the game's own soundtrack or a music CD of the player's choice. The player must avoid each obstacle by pressing the correct button at the right time - either L, R, X or down. In more complex tracks, obstacles are combined and the player must press the correct combination of buttons in order the avoid the obstacle. The game is loaded with six tracks to play by Japanese band Laugh and Peace. Additionally, the game's unique software means that the game is loaded into the console's RAM, allowing the player in insert their own music CDs, which generate a unique course for each track.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 9676,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo y acceso digital."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación con escalado."
+            }
+          ]
         },
         {
           "id": 61535,
@@ -56,7 +89,35 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 9676,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Requiere disco y consola originales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa de PS1."
+            }
+          ],
+          "codes": [
+            "SCES-02873",
+            "SCPS-18012",
+            "SCPS-45469",
+            "SCPS-91213",
+            "SCPS-91308"
+          ]
         },
         {
           "id": 61536,
@@ -64,7 +125,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 9676,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -91,6 +173,12 @@
         {
           "field": "original_name",
           "value": "Mojib-Ribbon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mojib-Ribbon is a music video game created by Masaya Matsuura as a spinoff of his 1999 music game, Vib-Ribbon, which was released for PlayStation. A direct sequel called Vib-Ripple was released in 2004. The releases are comparable to the releases of the earlier PaRappa series (also a Matsuura series) where the original was followed by a pseudo-sequel and then a direct sequel a few years later.",
           "source": "igdb",
           "manual": false
         },
@@ -139,6 +227,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Vib Ripple is the sequel to Vib Ribbon, and the third in the Vib Ribbon series. While Vib Ribbon was based around the tone of music, and Mojib Ribbon was based around lyrics, Vib Ripple is themed around drums and percussion.\n\nPlayers once again control the vector rabbit Vibri as they play. This time, they must move her around a gigantic picture (think of the picture as a giant trampoline), and use the any of the face buttons to make her jump. If you time the jumps to the beat of the music, Vibri will jump higher, and jumping on certain parts of the picture will reveal 'Peta Characters' - 2D representations of objects, such as bunny rabbits, onions, and presents. The goal of each level is to reveal the Peta Characters shown in the crown at the bottom left of the screen (of course, you can uncover more if you're game).\n\nIn later levels, blobby enemies known as 'Boonchies' turn up and begin to slowly zero in on Vibri. She must dodge these enemies in addition to bouncing in time to the beat as she uncovers Peta Characters.\n\nVib Ripple, like Vib Ribbon and Mojib Ribbon, allows players to extend their potential playtime. You can create new levels by hooking up certain USB cameras and mobile phones, and uploading photos to your PS2. However, as with the previous games, the preset levels seem to work the best.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -152,7 +246,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 25096,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCPS-11032"
+          ]
         }
       ],
       "images": {
@@ -162,5 +259,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1879,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24319,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 33288,
+          "reason": "2003"
+        },
+        {
+          "position": 3,
+          "gameId": 33321,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

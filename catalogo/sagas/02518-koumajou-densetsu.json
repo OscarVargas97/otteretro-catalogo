@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24825",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Koumajou Remilia Ⅱ: Stranger's Requiem",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Koumajou Remilia Ⅱ: Stranger's Requiem",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The sequel to Koumajou Densetsu: Scarlet Symphony. A Touhou game with Castlevania-esque elements, featuring a new main chracter, new game mechanics and more.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2010,
           "igdbId": 79973,
           "steamAppId": 1229890,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos pero sin mejoras modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Port doujin de PC más antiguo."
+            }
+          ]
         },
         {
           "id": 24825,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 79973,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo y juego portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con ajustes del port."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Más pulida y estable."
+            }
+          ],
+          "codes": [
+            "010037601CE4C000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42843",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Koumajou Remilia: Scarlet Symphony",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Koumajou Remilia: Scarlet Symphony",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Koumajou Remilia: Scarlet Symphony is an action side-scroller based on the world-famous Touhou Project. The legendary 2009 title comes back with modern upgrades including HD remastered graphics and a number of bonus content, ready to give fans more convenient and pleasant gameplay experience.",
           "source": "igdb",
           "manual": false
         },
@@ -118,7 +187,10 @@
           "kind": "remaster",
           "year": 2022,
           "igdbId": 151806,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100532015746000"
+          ]
         }
       ],
       "images": {
@@ -126,5 +198,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2666,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10693,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 16336,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

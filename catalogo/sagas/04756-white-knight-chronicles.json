@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "10,000 years before the original PS3 game takes place, there was a period of strife known as the Dogma Wars. This struggle is between the Yshrenian Empire who are harnessing the power of the Knights in a bid to conquer the world, and the Athwani Mage Kingdom who are trying to stop them. These events would shape history to come in the White Knight Chronicles saga, and White Knight Chronicles: Origins tells the story of the unsung heroes who lived through this period of unrest, only to be forgotten in the annals of time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -48,9 +54,17 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 42811,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "UCES-01511"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3a5af8e640303fd8c47842feebc4e248.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/016c3979cda58d278a85e23b50abc0e5.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f51afe441e8f7e3237ab67312a7c9e23.png"
+      }
     },
     {
       "id": 39891,
@@ -74,6 +88,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "White Knight Chronicles is a Japanese RPG (role-playing game) which allows players to explore an expansive and exciting world of turn-based combat, adventure and comradery A PlayStation 3 exclusive, it was created by noted Japanese RPG game developer Level-5 and features both single player and online multiplayer action, the awesome power to assume the shape of the White Knight, the ability to build a persistent online town/lobby, communication via online blogs, message boards and quest logs, voice chat and beautiful game environments.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -87,9 +107,17 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 7482,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00225"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7c907701ff1ea0e5235dd07c56c6b0e6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/21687893b2f6ad73d3b5904189835a60.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/82049d355441aa8841ef5d3f101ed75e.png"
+      }
     },
     {
       "id": 39939,
@@ -113,6 +141,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "White Knight Chronicles II, the sequel to White Knight Chronicles: International Edition, is an epic role-playing game available exclusively on the PlayStation 3 computer entertainment system. The game masterfully blends the cinematic storytelling of a single player role-playing game (RPG) with an entertaining and interactive co-op multiplayer RPG experience. From famed Japanese developer LEVEL-5, White Knight Chronicles II, features stunning graphics, over 400 new weapons and armors, and new skills and spells that make battles more interactive, strategic, and fast-paced. In addition to the full sequel, the game also includes the remastered White Knight Chronicles: International Edition as a bonus, delivering two full games and over 100 hours of combined gameplay.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -126,10 +160,62 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 7483,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-01085",
+            "BCES-01156",
+            "BLUS-30784"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f7217487b0be00f475ba135450bff62c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2208183e25fd18b7bf374189df696ede.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3332880692313818482a5a0286608ab6.png"
+      },
+      "ports": [
+        {
+          "id": 1267,
+          "platform": "ps3",
+          "project": "White-Knight-Chronicles-2-Recomp",
+          "kind": "recomp",
+          "toolchain": "ps3recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/WK2D/White-Knight-Chronicles-2-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "RPCS3",
+          "emulatorLevel": 1
         }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1985,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39891,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 39939,
+          "reason": "2010"
+        },
+        {
+          "position": 3,
+          "gameId": 35603,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

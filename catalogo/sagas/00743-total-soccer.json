@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Total Soccer Manager is a Sports game, developed by Exient Entertainment and published by Ubisoft, which was released in Europe in 2001.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 49343,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ATFP"
+          ]
         }
       ],
       "images": {
@@ -73,6 +82,12 @@
         {
           "field": "original_name",
           "value": "Alexander Zickler: Total Soccer 2002",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The 2002 season's version of the Total Soccer franchise.",
           "source": "igdb",
           "manual": false
         },
@@ -119,6 +134,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "David O'Leary's Total Soccer 2000 is a soccer game for the Game Boy Color, only released in Europe.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -140,5 +161,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1471,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6325,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 1925,
+          "reason": "2001"
+        },
+        {
+          "position": 3,
+          "gameId": 2451,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

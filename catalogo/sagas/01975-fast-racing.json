@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "21644",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fast Racing Neo",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Fast Racing Neo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Race through a futuristic sci-fi world at incredible speeds in Fast Racing Neo. Jump into the driver’s seat of your anti-gravity vehicle and put your skills to the test in high octane competitions. Challenge your friends to local split-screen competitions or take part in online races against players from all around the world.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 14886,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Buen control, con opciones limitadas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "720p y 60 fps."
+            }
+          ]
         },
         {
           "id": 21644,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 26816,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade pistas y modos extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil y con control refinado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mejorada, con extras añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y 60 fps."
+            }
+          ]
         }
       ],
       "images": {
@@ -83,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Fast Racing League",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Prepare yourself for a whole new racing experience at breakneck speeds.\n\nIn the year 2112 the masses are fascinated by extreme high speed races. The latest antigrav racing technology introduced phase shifting. Perfect phase matching of track and racing machine is the key to stay alive.\n\nPrepare yourself for a whole new racing experience at breakneck speeds. Push your skills to the limit to win races and beat records. Challenge your friends to an all-out split-screen competition. Compete against ruthless opponents and race to the top of all leagues. Warm up your engines, the future is now...",
           "source": "igdb",
           "manual": false
         },
@@ -131,6 +191,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The fastest racing game you may have ever experienced! Non stop adrenaline pumping action at 60 fps in up to 4K HDR.\n\nFAST Fusion vehicles are equipped with antigravity hyper jump technology. Cut corners and get ahead of your oppenents by jumping and boosting over them.\n\nCreate hundreds of new Racing machines by fusing your favorite vehicles.\n\nZoom through Redwood Forest, Alpine peaks, futuristic cities and many more breathtaking landscapes.\n\nPlay with smooth motion controls, enjoy immersive HD Rumble and customize the buttons.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2025",
           "source": "igdb",
@@ -144,10 +210,43 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 338093,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "040041E0212AE000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/35eba98ed982983301d60c65bcd377bd.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9c220770ddb64deb0e6a97f5b8d3c51b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b6008a0f05f6d723c543ed02529ef300.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1613,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20079,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 7841,
+          "reason": "2015"
+        },
+        {
+          "position": 3,
+          "gameId": 50174,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

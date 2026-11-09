@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103212",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Jim & Dill: The Legend of Weed N' Stiff",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Jim & Dill: The Legend of Weed N' Stiff",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join the adventure! Jim Weed and Dill Stiff have been kidnapped by the jealous Joe Bobson, leader of the rival band Moo Cow. You’ll have to battle your way through the seaside, mountains, caves, and snow to save the Weed N’ Stiff boys! Along the way, a cast of characters from the Weed N’ Stiff universe will help you on your quest. Sort of. At least there’s a lot of WS references and even some of the band’s music in glorious 8-bit.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 299147,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Es el juego completo tal como se publicó originalmente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles cómodos con teclado o mando en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Se ejecuta con fluidez en cualquier PC moderno."
+            }
+          ]
         },
         {
           "id": 103213,
@@ -56,9 +89,33 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 299147,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port al formato NES, con el mismo planteamiento general."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de NES, más limitados y difíciles de conseguir hoy."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación posterior a otro sistema, no la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Depende de hardware o emulación retro de 8 bits."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/66865714d0bd6332b01442b032e3d77d.png"
+      }
     },
     {
       "id": 43609,
@@ -82,6 +139,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A side-scrolling beat-em-up for the Nintendo Entertainment System. This is the second game in the Jim & Dill series by calgames.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2021",
           "source": "igdb",
@@ -97,7 +160,10 @@
           "igdbId": 313150,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9rst.jpg"
+      }
     },
     {
       "id": 43656,
@@ -121,6 +187,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An action RPG for the Nintendo Entertainment System, serving as a prequel and origin story of the Jim & Dill game series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2024",
           "source": "igdb",
@@ -136,8 +208,36 @@
           "igdbId": 342118,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9r4h.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2033,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43605,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 43609,
+          "reason": "2021"
+        },
+        {
+          "position": 3,
+          "gameId": 43656,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

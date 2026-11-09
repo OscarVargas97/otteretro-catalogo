@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "35966",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Asonde Igo ga Tsuyoku Naru! Ginsei Igo DX",
           "source": "igdb",
@@ -48,7 +54,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 136958,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido del juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando funcional para un juego por turnos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Nítido y estable."
+            }
+          ]
         },
         {
           "id": 35966,
@@ -56,7 +83,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 136958,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido del juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón da precisión al colocar piedras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y cargas mínimas."
+            }
+          ]
         },
         {
           "id": 35967,
@@ -64,7 +112,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 136958,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, posible actualización."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando funcional, cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Nítido y estable."
+            }
+          ]
         },
         {
           "id": 35968,
@@ -72,7 +141,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 136958,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido del juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Pantalla táctil y modo portátil prácticos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Nítido y estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -116,8 +206,31 @@
           "igdbId": 366974,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coag9g.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2785,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 14088,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 47632,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

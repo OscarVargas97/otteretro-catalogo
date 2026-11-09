@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44323",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "BloodRayne",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "BloodRayne",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rayne is a dhampir (child of a vampire and human, who possess vampire powers without their weaknesses). She is working as an agent for the Brimstone Society, and is also searching for her father.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,13 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 1015,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GBDE-USA",
+            "DL-DOL-GBDF-FRA",
+            "DL-DOL-GBDP-UKV",
+            "DL-DOL-GBDS-ESP"
+          ]
         },
         {
           "id": 43536,
@@ -73,7 +91,12 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 1015,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51474",
+            "SLPM-65665",
+            "SLUS-20461"
+          ]
         },
         {
           "id": 44319,
@@ -141,6 +164,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "53428",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "BloodRayne 2",
           "source": "igdb",
@@ -149,6 +178,12 @@
         {
           "field": "original_name",
           "value": "BloodRayne 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "BloodRayne is a dhampir, born from the unnatural union of vampire and human. Blessed with the powers of a vampire but cursed with the thirst for blood and a weakness to sunlight, Rayne is challenged with her most personal battle yet as she hunts down her siblings.",
           "source": "igdb",
           "manual": false
         },
@@ -231,7 +266,12 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1016,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53831",
+            "SLES-53832",
+            "SLUS-20862"
+          ]
         },
         {
           "id": 81504,
@@ -259,6 +299,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42445",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "BloodRayne: Betrayal",
           "source": "igdb",
@@ -267,6 +313,12 @@
         {
           "field": "original_name",
           "value": "BloodRayne: Betrayal",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "BloodRayne: Betrayal is a 2011 side-scrolling action-adventure game. It is the third title in the BloodRayne series. Unlike the previous 3D hack 'n slash games before it, this game is a 2D side scroller with HD graphic sprites and very bloody attacks. It's unknown whether or not the game takes place in the same continuity as the rest of the series as its story seems self-contained. The game has a high level of difficulty, comparable to that of games such as Ninja Gaiden and some of the achievements require hours of work to achieve.",
           "source": "igdb",
           "manual": false
         },
@@ -352,8 +404,38 @@
           "igdbId": 2606,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/682f0a1a190ae43a27212f67abf13f0c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8d9efdc11d3f363405846f3c09c5567f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2d686296ea060d41b2c67502ec3c1f39.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1777,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16532,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 32528,
+          "reason": "2004"
+        },
+        {
+          "position": 3,
+          "gameId": 39614,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

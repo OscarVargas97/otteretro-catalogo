@@ -51,7 +51,12 @@
           "steamAppId": 40720,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2f68c2e0cd8964d59dbbcfa48196b499.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/872694b2ab50601615cbad2bc50d98d6.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/66b48af35b7a3e54fdf15aff3da8a918.png"
+      }
     },
     {
       "id": 43760,
@@ -91,8 +96,33 @@
           "steamAppId": 421120,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/61c2bdccde74c93ef80c2f0077c07d77.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c1714160652ca6408774473810765950.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/07853a2a7780c24f61a8e4b9961174db.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3445,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43722,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 43760,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

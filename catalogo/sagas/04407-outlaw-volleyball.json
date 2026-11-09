@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81164",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Outlaw Volleyball",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Outlaw Volleyball",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Outlaw Volleyball is the second game in Simon & Schuster's growing Outlaw franchise.\n\nAs the title suggests, you play various games of volleyball with shady and dirty characters, from a slutty biker to an ex con to a pair of strippers. There are sixteen players in total. Each character has his or her own unique personality, strengths and weaknesses.\n\nThere are four different modes you can compete in; Exhibition, which is a standard volleyball game, Tour, which is the career mode that spans fifty different events, and Drills, which are sort of like practice games that awards points you can use to improve your player's abilities. The fourth mode is Xbox Live enabled, allowing you to play with people over the Xbox Live service.\n\nThere are ten different courts to play on, each one with it's own backgrounds and animation. You can play on a beach, at a carnival, or even in a prison.\n\nOutlaw Volleyball utilizes the same momentum feature first seen in Outlaw Golf, which allows you to earn \"beating tokens\" that you can spend on beating up the other team. If you are doing lousy, beating up a member of the other team refills your momentum meter, allowing you to come back and possibly win.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 3806,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52259"
+          ]
         }
       ],
       "images": {
@@ -87,6 +102,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "No Shoes. No shirts. No mercy. \n \n50 Tour Events \nPropel your team to the top \n \n10 Extreme Courts \nFrom the beach to the Big House \n \nMultiplayer Action Including Xbox Live! \nDo it anywhere, anytime, with anyone. \n \nQuick, Intense Gameplay \nGuaranteed to make your palms sweat. \n \n16 Outrageous Characters \nWith their own playing styles and unique skills \n \nBeat Your Opponent Senseless \nGain MOMENTUM for turbo moves.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -100,9 +121,19 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 43628,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53138",
+            "SLES-53138/ANZ",
+            "SLUS-21049"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d535054004ded81ca44992cd7eff39f8.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f06270e164ef9303bd2d4d5cb2975d5b.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/d70201ba3f7f7f3e6eb0c6bcee54129d.png"
+      }
     },
     {
       "id": 48134,
@@ -126,6 +157,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Released as a rental-only exclusive for Blockbuster, and meant to serve as a side game to the original rather than a full-fledged sequel. The game is set in Hell and contains only one court, the \"Pit of Hell\", which wasn't in the original Outlaw Volleyball. Returning characters also had slight outfit variants to reflect the setting, like red horns and devil wings. The game can now be found at many used game retailers.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -141,8 +178,37 @@
           "igdbId": 47379,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/43dd576bd980e7a23b429bd92f5c291e.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/21bf83127568c2d1953194a6dd8e849d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1934,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32493,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 48134,
+          "reason": "2003"
+        },
+        {
+          "position": 3,
+          "gameId": 33783,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

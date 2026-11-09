@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "56607",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Asfalia: El Volcán Gruñón",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Asfalia: The Cranky Volcano",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In this moving and whimsical narrative adventure game, explore Asfalia, a magical world threatened by a raging volcano. Join Charlie as you meet amazing characters, solve fun puzzles, and collect beautiful stickers along the way! A captivating story-driven game suitable for all ages.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2023,
           "igdbId": 196425,
           "steamAppId": 1675040,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles con teclado o mando y guardado sin problemas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez en PC."
+            }
+          ]
         },
         {
           "id": 56608,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 196425,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo con mando y en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución menor, rendimiento correcto."
+            }
+          ],
+          "codes": [
+            "0100609023286000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "71286",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Asfalia: Pánico en la mansión",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Asfalia: Panic at the Mansion",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A spooky shadow is on the loose within Asfalia. Join Charlie and flamboyant sidekick Lilly in their search of four adorable missing puppies. Meet amazing characters, solve fun puzzles, and collect beautiful stickers along the way! Chase the shadows away in a captivating story-driven game suitable for all ages.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +177,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 258347,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01002E2023284000"
+          ]
         }
       ],
       "images": {
@@ -116,5 +188,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3022,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 22668,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 28585,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

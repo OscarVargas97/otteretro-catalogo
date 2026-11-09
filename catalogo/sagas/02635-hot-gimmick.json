@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "29498",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Taisen Hot Gimmick: Cosplay-Jan",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Taisen Hot Gimmick: Cosplay-Jan",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The first Taisen Hot Gimmick game to hit consoles (outside of the Capcom crossover Taisen Net Gimmick).",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 56225,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido original completo, en japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin comodidades modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS2."
+            }
+          ]
         },
         {
           "id": 29498,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 105022,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, más accesible."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y portabilidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel con mejoras menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen y cargas rápidas."
+            }
+          ]
         }
       ],
       "images": {
@@ -72,6 +126,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "73772",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Taisen Hot Gimmick: Axes-Jong",
@@ -98,7 +158,32 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 97968,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido original completo, en japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin comodidades modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS2."
+            }
+          ],
+          "codes": [
+            "SLPM-62611",
+            "SLPM-62612"
+          ]
         },
         {
           "id": 73772,
@@ -106,7 +191,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 282136,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, más accesible."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y portabilidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel con mejoras menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen y cargas rápidas."
+            }
+          ]
         }
       ],
       "images": {
@@ -114,5 +220,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2696,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11696,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 29128,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10127",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lost Heroes",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 64953,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-ALHJ"
+          ]
         },
         {
           "id": 10127,
@@ -56,7 +65,10 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 64953,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJS-00489"
+          ]
         }
       ],
       "images": {
@@ -98,7 +110,11 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 136916,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BL2J",
+            "CTR-P-BL3J"
+          ]
         }
       ],
       "images": {
@@ -106,5 +122,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2361,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4946,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 5514,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

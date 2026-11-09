@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2136",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "F-1 World Grand Prix",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "F-1 World Grand Prix",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game consists of five gameplay modes: Grand Prix, a course-by-course simulation of the 1997 season; Exhibition, a single race; Time Trial, a race against the clock and Challenge, which comprised real scenarios from the 1997 season-examples include trying to win the 1997 Hungarian Grand Prix as Damon Hill or beating Jean Alesi as David Coulthard in the 1997 Italian Grand Prix. The final mode allowed 2 players to compete in a single, split-screen race.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,35 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3487,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Temporada completa de F1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Fluida para su época."
+            }
+          ],
+          "codes": [
+            "NFWD",
+            "NFWE",
+            "NFWF",
+            "NFWJ",
+            "NFWP"
+          ]
         },
         {
           "id": 2137,
@@ -56,7 +96,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3487,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port de PC con contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Depende del control y compatibilidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Similar al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mayor resolución pero con posibles errores."
+            }
+          ]
         },
         {
           "id": 2138,
@@ -64,7 +125,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3487,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port de PS1 con contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel pero recortado."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución más baja."
+            }
+          ]
         },
         {
           "id": 2755,
@@ -72,7 +154,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 248741,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Limitada."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Adaptación simple."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Gráficos mínimos."
+            }
+          ]
         }
       ],
       "images": {
@@ -89,6 +192,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2316",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "F-1 World Grand Prix II",
           "source": "igdb",
@@ -97,6 +206,12 @@
         {
           "field": "original_name",
           "value": "F-1 World Grand Prix II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "F1 WGP 2 pretty much sports the same features as the first game. The game has 4 modes of play: the championship season mode, the exhibition race, time trials, and the challenge mode. R and Z are used to shift gears, the analog stick is used to steer the car, A is the accelerator and B is the brake. The C-buttons allow for camera changes and backmirror views. It's pretty much the same setup and how these work are pretty much unchanged from the first game to the second.",
           "source": "igdb",
           "manual": false
         },
@@ -114,7 +229,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3488,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NF2P"
+          ]
         },
         {
           "id": 2728,
@@ -132,5 +250,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2145,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1133,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 1237,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

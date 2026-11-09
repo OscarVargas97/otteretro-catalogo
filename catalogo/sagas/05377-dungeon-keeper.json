@@ -50,6 +50,23 @@
           "igdbId": 35,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3wg6.jpg"
+      },
+      "ports": [
+        {
+          "id": 137,
+          "platform": "pc",
+          "project": "keeperfx",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/dkfans/keeperfx",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
       ]
     },
     {
@@ -90,8 +107,59 @@
           "steamAppId": 2616460,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f3b624c432ebfcb3df2ac7a17e78dcb5.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/520a4a78c0a273d6505cc3970f556450.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/7dc3338d429a3114842ca29dbbfccfef.png"
+      },
+      "ports": [
+        {
+          "id": 135,
+          "platform": "pc",
+          "project": "GLKeeper",
+          "kind": "remake",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/codenamecpp/GLKeeper",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        },
+        {
+          "id": 136,
+          "platform": "pc",
+          "project": "OpenKeeper",
+          "kind": "remake",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/tonihele/OpenKeeper",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3435,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43339,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 43344,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

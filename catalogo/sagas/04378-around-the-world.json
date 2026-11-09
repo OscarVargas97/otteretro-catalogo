@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "78908",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Around the World 2: Travel to Canada - Collector's Edition",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Around the World 2: Travel to Canada - Collector's Edition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An unforgettable vacation in Canada.",
           "source": "igdb",
           "manual": false
         },
@@ -65,7 +77,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 332324,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100417021F36000"
+          ]
         },
         {
           "id": 112079,
@@ -90,6 +105,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "91255",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Around the World 4: Family Tour - Collector's Edition",
           "source": "igdb",
@@ -98,6 +119,12 @@
         {
           "field": "original_name",
           "value": "Around the World 4: Family Tour - Collector's Edition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An incredible and amazing journey!",
           "source": "igdb",
           "manual": false
         },
@@ -124,9 +151,15 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 386208,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100C820269B8000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobbbd.jpg"
+      }
     },
     {
       "id": 47436,
@@ -138,6 +171,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112579",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Around the World 3: Amazing Countries",
           "source": "igdb",
@@ -146,6 +185,12 @@
         {
           "field": "original_name",
           "value": "Around the World 3: Amazing Countries",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An exciting journey through the most scenic places in the world: hidden objects, mini-games, puzzles, and countless discoveries. Feel the spirit of adventure and explore new horizons!",
           "source": "igdb",
           "manual": false
         },
@@ -174,8 +219,36 @@
           "igdbId": 338046,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cob2el.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1930,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 31508,
+          "reason": "2024"
+        },
+        {
+          "position": 2,
+          "gameId": 47436,
+          "reason": "2025"
+        },
+        {
+          "position": 3,
+          "gameId": 37909,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

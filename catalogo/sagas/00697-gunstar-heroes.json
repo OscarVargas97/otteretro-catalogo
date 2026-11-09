@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Blue and Red, the lead characters in Gunstar Super Heroes, must once again keep a stone of great power from falling into the hands of an evil empire intent on resurrecting the God of Ruin. Blue and Red take on the same adventure using different paths, effectively making for two unique play-through experiences. Players will tackle six wildly inventive levels and take on gigantic bosses that fill the entire Game Boy Advance screen.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 6422,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BGXJ",
+            "BHGE"
+          ]
         }
       ],
       "images": {
@@ -67,6 +77,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10629",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gunstar Heroes",
           "source": "igdb",
@@ -75,6 +91,12 @@
         {
           "field": "original_name",
           "value": "Gunstar Heroes",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Gunstar family are the protectors of the planet Gunstar 9. After many years of peace, vicious dictator Colonel Red kidnapped the Gunstar twins’ older brother and used mind control to make him his slave.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +114,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 6405,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye trofeos y tablas de clasificación."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, aunque el retraso de entrada puede notarse."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Port de emulación con filtros y escalado."
+            }
+          ]
         },
         {
           "id": 9992,
@@ -100,7 +143,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 6405,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original de Mega Drive sin extras notables."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles fieles, con guardado limitado de Consola Virtual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original de Mega Drive."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta a baja resolución."
+            }
+          ]
         },
         {
           "id": 9993,
@@ -109,7 +173,28 @@
           "year": 2011,
           "igdbId": 6405,
           "steamAppId": 71117,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye opciones de configuración extras del port de Steam."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Permite remapear controles y usar cualquier mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona en resoluciones altas con filtros opcionales."
+            }
+          ]
         },
         {
           "id": 9994,
@@ -117,7 +202,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 6405,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye logros y tablas de clasificación."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, con el mando de 360 algo incómodo para el pad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación de buena calidad, con retraso de entrada leve."
+            }
+          ]
         },
         {
           "id": 10629,
@@ -125,7 +231,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 84662,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade efecto 3D, ajustes de dificultad y opciones de mejora."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado de estado y controles cómodos en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico, con pequeños añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con 3D estereoscópico."
+            }
+          ]
         }
       ],
       "images": {
@@ -135,5 +262,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2186,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4856,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 1831,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

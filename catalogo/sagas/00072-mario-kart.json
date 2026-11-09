@@ -3,7 +3,7 @@
   "name": "Mario Kart",
   "igdbKind": "collection",
   "igdbId": 449,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -19,9 +19,15 @@
       "originalName": "Super Mario Kart",
       "year": 1992,
       "igdbId": 2332,
-      "popularity": 461,
-      "iconic": false,
+      "popularity": 462,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "163",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Super Mario Kart",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Super Mario Kart",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Mario Kart is a racing game for the Super Nintendo Entertainment System and the first game of the Mario Kart series, as well as the game that sets precedents to the fictional kart racing genre. Part of this game is heavily based on Super Mario World in terms of graphics and overall theme. Using Mode 7 scaling, the first true kart game on the SNES has you collecting coins to boost your speed while using shells and bananas to stop others on the track.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Mario Kart es un juego de carreras para la Super Nintendo Entertainment System y el primer juego de la serie Mario Kart, además del juego que sentó los precedentes del género ficticio de carreras de karts. Parte de este juego se basa mucho en Super Mario World en cuanto a gráficos y temática general. Usando el escalado Mode 7, el primer verdadero juego de karts de la SNES te pide recoger monedas para aumentar tu velocidad, mientras usas caparazones y plátanos para frenar a los demás en la pista.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 2332,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles originales, sin ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Depende del hardware y la pantalla."
+            }
+          ]
         },
         {
           "id": 162,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2332,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado de consola virtual, mando clásico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable, imagen escalada."
+            }
+          ]
         },
         {
           "id": 163,
@@ -64,7 +124,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 2332,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración y juego en el GamePad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD limpia y estable."
+            }
+          ]
         },
         {
           "id": 164,
@@ -72,14 +153,51 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 2332,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña y baja resolución."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/366db7a591a75efd125cb44641124f2e.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/b49363f7afa303c7c88feeda63de0c85.png",
         "logo": "https://cdn2.steamgriddb.com/logo/55b782d9f1c1765aac3cb3d51aae2430.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1135,
+          "platform": "snes",
+          "project": "SMKSNESRecomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mpolizel/SMKSNESRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 974,
@@ -100,6 +218,18 @@
           "field": "original_name",
           "value": "Mario Kart: Virtual Cup",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mario Kart: Virtual Cup is a homebrew fan game for the Virtual Boy.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mario Kart: Virtual Cup es un juego amateur hecho por fans para la Virtual Boy.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -130,8 +260,14 @@
       "year": 1996,
       "igdbId": 2342,
       "popularity": 610,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "1951",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Mario Kart 64",
@@ -142,6 +278,18 @@
           "field": "original_name",
           "value": "Mario Kart 64",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mario Kart 64 is the second main installment of the Mario Kart series. It is the first game in the series to use three-dimensional graphics, however, the characters and items in this game are still two-dimensional, pre-rendered sprites. The game offers two camera angles and three engine sizes: 50cc, 100cc and 150cc. Each kart has distinctive handling, acceleration and top speed capabilities. Shells that you fire at rival racers, Bananas that make them skid out and Lightning Bolts that make them small and very slow are just a few of the game's unique power-ups.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mario Kart 64 es la segunda entrega principal de la serie Mario Kart. Es el primer juego de la serie que usa gráficos tridimensionales; sin embargo, los personajes y objetos de este juego siguen siendo sprites bidimensionales prerenderizados. El juego ofrece dos ángulos de cámara y tres tamaños de motor: 50cc, 100cc y 150cc. Cada kart tiene un manejo, aceleración y velocidad máxima distintivos. Los caparazones que lanzas a los rivales, los plátanos que los hacen derrapar y los Rayos que los vuelven pequeños y muy lentos son solo algunos de los potenciadores únicos del juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -158,7 +306,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 2342,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Se juega con mandos de Wii o GameCube."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Imagen escalada, rendimiento estable."
+            }
+          ]
         },
         {
           "id": 1950,
@@ -166,7 +335,33 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 2342,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando N64 con stick incómodo hoy."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y 30 fps o menos."
+            }
+          ],
+          "codes": [
+            "NKTE",
+            "NKTJ",
+            "NKTP"
+          ]
         },
         {
           "id": 1951,
@@ -174,14 +369,64 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 2342,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración, GamePad y Pro Controller."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD más nítida."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/8908077ce7fd405516d81c2c929de429.png",
         "hero": "https://cdn2.steamgriddb.com/hero/abdeb6f575ac5c6676b747bca8d09cc2.png",
         "logo": "https://cdn2.steamgriddb.com/logo/1755c118e8859eb000eb6eca25369407.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 376,
+          "platform": "n64",
+          "project": "SpaghettiKart",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/HarbourMasters/SpaghettiKart",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 853,
+          "platform": "n64",
+          "project": "MarioKart64Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sonicdcer/MarioKart64Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1482,
@@ -193,6 +438,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3045",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mario Kart: Super Circuit",
           "source": "igdb",
@@ -202,6 +453,18 @@
           "field": "original_name",
           "value": "Mario Kart: Super Circuit",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Classic Mario Kart action is back once again, this time in a colorful, lightning-fast game that you can take anywhere. Mario, Luigi, Peach, Toad, Wario, Yoshi and Bowser are all tearing up the track, tossing Koopa Shells and laying banana peels along the way.\n\nMario Kart Super Circuit puts your driving skills to the test on 40 tracks, each littered with wild weapons and obstacles. Choose to play as any of your favorite characters as you speed around classic and brand-new tracks. If you're feeling combative, try out the creative weaponry (mushrooms, bananas, thunder bolts, and stars) in Battle mode. Feel like making some friends eat your dust? No problem. Four players can compete in Mario Kart Super Circuit using only one Game Pak! If each player has a copy of the game, bonus features and new modes of play become available.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡La acción clásica de Mario Kart regresa una vez más, esta vez en un juego colorido y vertiginoso que puedes llevar a cualquier lugar! Mario, Luigi, Peach, Toad, Wario, Yoshi y Bowser recorren la pista lanzando caparazones Koopa y dejando cáscaras de plátano por el camino.\n\nMario Kart Super Circuit pone a prueba tus habilidades al volante en 40 circuitos, cada uno lleno de armas salvajes y obstáculos. Elige jugar con cualquiera de tus personajes favoritos mientras recorres a toda velocidad pistas clásicas y completamente nuevas. Si tienes ganas de pelea, prueba el armamento creativo (hongos, plátanos, rayos y estrellas) en el modo Batalla. ¿Te apetece dejar a tus amigos comiendo polvo? No hay problema: ¡cuatro jugadores pueden competir en Mario Kart Super Circuit con un solo Game Pak! Si cada jugador tiene una copia del juego, se desbloquean extras y nuevos modos de juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -218,7 +481,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 2343,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Disponibilidad limitada de embajador."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta, baja resolución."
+            }
+          ]
         },
         {
           "id": 3045,
@@ -226,7 +510,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 2343,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración y pantalla grande."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD estable."
+            }
+          ]
         },
         {
           "id": 3046,
@@ -234,14 +539,55 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 2343,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye todas las pistas y las de SNES."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles originales en GBA."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña, depende de luz."
+            }
+          ],
+          "codes": [
+            "AMKE",
+            "AMKP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/83d788e65786046542c9354d17b92450.png",
         "hero": "https://cdn2.steamgriddb.com/hero/3de644286aafb7e5b26f58ec57d05d2d.png",
         "logo": "https://cdn2.steamgriddb.com/logo/2404d480bb9068047a2fb584b0c5a44c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 856,
+          "platform": "gba",
+          "project": "MarioKartSuperCircuitRecomp",
+          "kind": "recomp",
+          "toolchain": "gbarecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/MarioKartSuperCircuitRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "mGBA"
+        }
+      ]
     },
     {
       "id": 3092,
@@ -253,6 +599,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6042",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mario Kart DS",
           "source": "igdb",
@@ -262,6 +614,18 @@
           "field": "original_name",
           "value": "Mario Kart DS",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mario Kart DS is the continuation of the long running racing game series that began on the Super Nintendo. It features 16 new tracks as well as 16 tracks from the previous 4 games, with each set split up into the Nitro and Retro Grand Prix respectively. Eight racers are initially available, each with two go-karts to choose from. A number of characters and additional karts are also available to unlock. New items have been added to the arsenal, including a Blooper squid that squirts ink onto the screens of other players and a Bullet Bill power up that transforms the player into a giant, fast-travelling bullet on autopilot.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mario Kart DS es la continuación de la larga serie de juegos de carreras que comenzó en Super Nintendo. Incluye 16 pistas nuevas y 16 pistas de los cuatro juegos anteriores, y cada conjunto se divide en el Gran Premio Nitro y el Gran Premio Retro, respectivamente. Al principio hay ocho pilotos disponibles, cada uno con dos karts entre los que elegir. Se pueden desbloquear varios personajes y karts adicionales. Se han añadido nuevos objetos al arsenal, entre ellos un calamar Blooper que lanza tinta sobre las pantallas de otros jugadores, y un potenciador Bullet Bill que convierte al jugador en una bala gigante de movimiento rápido que avanza en piloto automático.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -278,7 +642,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 2345,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego, sin online."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración y GamePad táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen ampliada en TV."
+            }
+          ]
         },
         {
           "id": 6043,
@@ -286,14 +671,59 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 2345,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con modos y pistas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles originales, guardado normal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantallas pequeñas de DS."
+            }
+          ],
+          "codes": [
+            "AMCE",
+            "AMCJ",
+            "AMCK",
+            "AMCP",
+            "WUP-N-DACE",
+            "WUP-N-DACJ",
+            "WUP-N-DACP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3eed6d27b0b2dd008c1be88cce8245fc.png",
         "hero": "https://cdn2.steamgriddb.com/hero/9af9ba7b3261feff8ec724adc8fdb66e.png",
         "logo": "https://cdn2.steamgriddb.com/logo/b59c67bf196a4758191e42f76670ceba.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 855,
+          "platform": "ds",
+          "project": "DS-Kart-Recompiled",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/AlonsoTlol/DS-Kart-Recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "melonDS"
+        }
+      ]
     },
     {
       "id": 4170,
@@ -317,6 +747,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The seventh installment of the fan-favorite Mario Kart franchise brings Mushroom Kingdom racing fun into glorious 3D. For the first time, drivers explore new competitive kart possibilities, such as soaring through the skies or plunging to the depths of the sea. New courses, strategic new abilities and customizable karts bring the racing excitement to new heights.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La séptima entrega de la querida franquicia Mario Kart lleva la diversión de las carreras del Reino Champiñón a un 3D espectacular. Por primera vez, los pilotos exploran nuevas posibilidades competitivas con karts, como volar por los cielos o sumergirse en las profundidades del mar. Nuevos circuitos, habilidades estratégicas y karts personalizables llevan la emoción de las carreras a nuevas alturas.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -330,7 +772,14 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 2349,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AMKE",
+            "CTR-P-AMKJ",
+            "CTR-P-AMKK",
+            "CTR-P-AMKP",
+            "CTR-P-AMKW"
+          ]
         }
       ],
       "images": {
@@ -346,8 +795,14 @@
       "year": 2014,
       "igdbId": 2350,
       "popularity": 690,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "21662",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Mario Kart 8",
@@ -358,6 +813,18 @@
           "field": "original_name",
           "value": "Mario Kart 8",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mario Kart 8 is a kart racing game in which players control characters from the Mario universe and other Nintendo franchises. Racers compete on themed tracks using power-ups found in item boxes to gain advantages or hinder opponents. The game introduces anti-gravity sections where players drive on walls and ceilings, gaining speed boosts from collisions. It supports up to twelve players online, four locally on one system, and features modes including Grand Prix racing and arena-based battles. Vehicle customization allows players to mix kart bodies, wheels, and gliders. The Nintendo Switch version, Mario Kart 8 Deluxe, includes all previous downloadable content, a revamped battle mode with dedicated arenas, and accessibility features for newer players.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mario Kart 8 es un juego de carreras de karts en el que los jugadores controlan personajes del universo Mario y de otras franquicias de Nintendo. Los pilotos compiten en pistas temáticas usando potenciadores que se obtienen en las cajas de objetos para ganar ventajas o entorpecer a los rivales. El juego introduce secciones antigravedad en las que los jugadores conducen por paredes y techos, y ganan impulsos de velocidad al chocar. Admite hasta doce jugadores en línea y cuatro en local en una misma consola, e incluye modos como el Gran Premio y batallas en arenas. La personalización del vehículo permite combinar carrocerías, ruedas y planeadores de kart. La versión para Nintendo Switch, Mario Kart 8 Deluxe, incluye todo el contenido descargable anterior, un modo batalla renovado con arenas dedicadas y opciones de accesibilidad para los jugadores nuevos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -374,7 +841,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 2350,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base, DLC aparte."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin objeto doble y batalla débil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p y 60 fps."
+            }
+          ]
         },
         {
           "id": 21661,
@@ -382,7 +870,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 26764,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Posiblemente mismo contenido; no verificado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Igual que Deluxe, más fluido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Base Deluxe."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Posible mejora en Switch 2."
+            }
+          ]
         },
         {
           "id": 21662,
@@ -390,7 +899,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 26764,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Deluxe con DLC, personajes y batalla completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Doble objeto, ayuda de dirección y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mejorado sobre la base."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p en TV y 60 fps."
+            }
+          ]
         }
       ],
       "images": {
@@ -406,7 +936,7 @@
       "year": 2003,
       "igdbId": 2344,
       "popularity": 390,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -418,6 +948,18 @@
           "field": "original_name",
           "value": "Mario Kart: Double Dash!!",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Mushroom Kingdom just got a whole lot more hectic as Mario and friends double up for furious kart racing. This time around, each kart holds two racers that can switch places at any time, so choose from a huge cast of favorites and pair them up any way you see fit. The character in front handles the driving duties, while the character in the rear doles out damage with six normal items and eight special items that only specific characters can use. Get ready for some intense multiplayer mayhem with your favorite characters, including Mario, Luigi, Donkey Kong, Peach, Bowser, and Koopa.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡El Reino Champiñón se ha vuelto mucho más caótico, porque Mario y sus amigos se unen de dos en dos para carreras de karts frenéticas! Esta vez, cada kart lleva a dos pilotos que pueden intercambiar sus lugares en cualquier momento. Elige entre un enorme elenco de favoritos y combínalos como quieras. El personaje de delante se encarga de conducir, mientras que el de atrás reparte daño con seis objetos normales y ocho objetos especiales que solo ciertos personajes pueden usar. Prepárate para un caos multijugador intenso con tus personajes favoritos, entre ellos Mario, Luigi, Donkey Kong, Peach, Bowser y Koopa.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -434,14 +976,53 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 2344,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GM4E-KOR",
+            "DL-DOL-GM4E-USA",
+            "DL-DOL-GM4J-JPN",
+            "DL-DOL-GM4P-EUR",
+            "DL-DOL-PM4E-USA",
+            "IM-DOL-GM4P-ESP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/c22ad3828656e72b71489a0e3b20df58.png",
         "hero": "https://cdn2.steamgriddb.com/hero/48ab2f9b45957ab574cf005eb8a76760.png",
         "logo": "https://cdn2.steamgriddb.com/logo/69d658d0b2859e32cd4dc3b970c8496c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 854,
+          "platform": "gc",
+          "project": "project-tandem",
+          "kind": "recomp",
+          "toolchain": "gcn-recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/badcompany94-rcmp/project-tandem",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1391,
+          "platform": "gc",
+          "project": "mkdd",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/doldecomp/mkdd",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 19430,
@@ -450,7 +1031,7 @@
       "year": 2008,
       "igdbId": 2183,
       "popularity": 606,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -462,6 +1043,18 @@
           "field": "original_name",
           "value": "Mario Kart Wii",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mario Kart Wii is a multiplayer-oriented racing game for the Wii, and the sixth main installment in the Mario Kart series. Mario Kart Wii retains the traditional item-based weaponry familiar with the franchise, where players can select a Mario franchise driver and themed vehicles. As with most racing games, the overarching goal is to place first among other competitors, through the usage of such items and taking the fastest routes to secure the leads. Several new key elements introduced to Mario Kart Wii include increasing the number of racers to 12 racers from 8 racers from previous entries in the series, as well as introducing a new type of vehicle to the franchise: bikes. The game takes advantage of features unique to the Wii, most notably its motion control capabilities. A Wii Wheel is included in most Mario Kart Wii packages, though the game is still compatible with other controllers. Game modes are also present such as the traditional Grand Prix, Versus, Battle, and Time Trial modes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mario Kart Wii es un juego de carreras orientado al multijugador para la Wii, y la sexta entrega principal de la serie Mario Kart. Mantiene el armamento tradicional basado en objetos que caracteriza a la franquicia, y los jugadores pueden elegir un piloto de la franquicia Mario y vehículos temáticos. Como en la mayoría de los juegos de carreras, el objetivo general es llegar primero entre los competidores, usando esos objetos y tomando las rutas más rápidas para asegurar la ventaja. Entre las novedades clave de Mario Kart Wii están el aumento de corredores de 8 a 12, así como la introducción de un nuevo tipo de vehículo en la franquicia: las motos. El juego aprovecha características exclusivas de la Wii, en especial sus capacidades de control por movimiento. Con la mayoría de los paquetes de Mario Kart Wii se incluye un Volante Wii, aunque el juego sigue siendo compatible con otros mandos. También hay modos de juego como el tradicional Gran Premio, Versus, Batalla y Contrarreloj.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -478,15 +1071,339 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2183,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RMCE-USA",
+            "RVL-RMCE-USA-B0",
+            "RVL-RMCJ-JPN",
+            "RVL-RMCJ-JPN-B0",
+            "RVL-RMCK-KOR",
+            "RVL-RMCK-KOR-B0",
+            "RVL-RMCP-EUR",
+            "RVL-RMCP-EUR-1",
+            "RVL-RMCP-EUR-B0",
+            "RVL-RMCP-EUR-B1",
+            "RVL-RMCP-EUR-B2"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3fb22546e0a13fb8b5d7345218eef2a5.png",
         "hero": "https://cdn2.steamgriddb.com/hero/c4bfbf68f5d8d0f8b9a0752ca08ea01d.png",
         "logo": "https://cdn2.steamgriddb.com/logo/860320be12a1c050cd7731794e231bd3.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 857,
+          "platform": "wii",
+          "project": "kartpad",
+          "kind": "recomp",
+          "toolchain": "Wiicompiled",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/chrissotraidis/kartpad",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 858,
+          "platform": "wii",
+          "project": "Wiicompiled",
+          "kind": "recomp",
+          "toolchain": "Wiicompiled",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/patchzyy/Wiicompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1392,
+          "platform": "wii",
+          "project": "mkw",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/doldecomp/mkw",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
+    },
+    {
+      "id": 50172,
+      "nameEs": "Mario Kart World",
+      "originalName": "Mario Kart World",
+      "year": 2025,
+      "igdbId": 338067,
+      "popularity": 136,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Mario Kart World",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Mario Kart World",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mario Kart World is a kart racing game for the Nintendo Switch 2, featuring characters from the Mario franchise. It introduces an open-world design to the series, allowing players to drive freely between courses rather than selecting them from a menu. Races support up to 24 players and include new mechanics such as off-roading, boat racing, rail grinding, and wall riding. The game features a Knockout Tour elimination mode where racers compete across connected courses with periodic eliminations at checkpoints, as well as a Free Roam mode for open exploration and collectible-finding.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mario Kart World es un juego de carreras de karts para Nintendo Switch 2, con personajes de la franquicia Mario. Introduce a la serie un diseño de mundo abierto que permite conducir libremente entre circuitos en lugar de seleccionarlos desde un menú. Las carreras admiten hasta 24 jugadores e incluyen mecánicas nuevas como la conducción todoterreno, las carreras en barco, el deslizamiento sobre raíles y la conducción por paredes. El juego incluye el modo de eliminación Knockout Tour, en el que los pilotos compiten a lo largo de circuitos conectados con eliminaciones periódicas en los puntos de control, así como un modo Free Roam para explorar libremente y encontrar coleccionables.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2025",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 118275,
+          "platform": "switch2",
+          "kind": "original",
+          "year": 2025,
+          "igdbId": 338067,
+          "criteria": [],
+          "codes": [
+            "0400C3F00006E000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c2526ac91cf2dba8f8b1b58935c7597c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/cf23e914e01f1bc96a8a972178300f54.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/50e721ad016c7b994949a115310241a9.png"
+      },
+      "ports": [
+        {
+          "id": 228,
+          "platform": "switch2",
+          "project": "kartnative",
+          "kind": "native-layer",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/pahorema/kartnative",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        },
+        {
+          "id": 229,
+          "platform": "switch2",
+          "project": "switch2mac",
+          "kind": "native-layer",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/azmasm/switch2mac",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 434,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 104,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 1018,
+          "reason": "1996"
+        },
+        {
+          "position": 3,
+          "gameId": 1482,
+          "reason": "2001"
+        },
+        {
+          "position": 4,
+          "gameId": 16642,
+          "reason": "2003"
+        },
+        {
+          "position": 5,
+          "gameId": 3092,
+          "reason": "2005"
+        },
+        {
+          "position": 6,
+          "gameId": 974,
+          "reason": "2008"
+        },
+        {
+          "position": 7,
+          "gameId": 19430,
+          "reason": "2008"
+        },
+        {
+          "position": 8,
+          "gameId": 4170,
+          "reason": "2011"
+        },
+        {
+          "position": 9,
+          "gameId": 7788,
+          "reason": "2014"
+        },
+        {
+          "position": 10,
+          "gameId": 50172,
+          "reason": "2025"
+        }
+      ]
+    },
+    {
+      "id": 3875,
+      "kind": "story",
+      "rationale": "Mario Kart no tiene historia continua; se repite el orden de lanzamiento. Se omiten Virtual Cup, una versión de demostración de Virtual Boy.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 104,
+          "recommendedVersionId": 161,
+          "reason": "Inicio de la saga; versión original de SNES."
+        },
+        {
+          "position": 2,
+          "gameId": 1018,
+          "recommendedVersionId": 1950,
+          "reason": "Versión original de N64."
+        },
+        {
+          "position": 3,
+          "gameId": 1482,
+          "recommendedVersionId": 3046,
+          "reason": "Original de GBA."
+        },
+        {
+          "position": 4,
+          "gameId": 16642,
+          "recommendedVersionId": 43801,
+          "reason": "Única versión disponible."
+        },
+        {
+          "position": 5,
+          "gameId": 3092,
+          "recommendedVersionId": 6043,
+          "reason": "Original de DS."
+        },
+        {
+          "position": 6,
+          "gameId": 19430,
+          "recommendedVersionId": 48407,
+          "reason": "Única versión disponible."
+        },
+        {
+          "position": 7,
+          "gameId": 4170,
+          "recommendedVersionId": 8261,
+          "reason": "Única versión disponible."
+        },
+        {
+          "position": 8,
+          "gameId": 7788,
+          "recommendedVersionId": 21662,
+          "reason": "La versión de Switch incluye todo el contenido extra."
+        },
+        {
+          "position": 9,
+          "gameId": 50172,
+          "recommendedVersionId": 118275,
+          "reason": "Última entrega."
+        }
+      ]
+    },
+    {
+      "id": 3876,
+      "kind": "community",
+      "rationale": "Se empieza por los más modernos y pulidos y se prueban los clásicos después. Se omiten los primeros, Super Circuit y Virtual Cup.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7788,
+          "recommendedVersionId": 21662,
+          "reason": "Es la entrada más recomendada: tiene todo el contenido y es muy accesible."
+        },
+        {
+          "position": 2,
+          "gameId": 50172,
+          "recommendedVersionId": 118275,
+          "reason": "La entrega más reciente, con mundo abierto y muchos circuitos."
+        },
+        {
+          "position": 3,
+          "gameId": 19430,
+          "recommendedVersionId": 48407,
+          "reason": "Un clásico muy querido, con motos y online en su día."
+        },
+        {
+          "position": 4,
+          "gameId": 4170,
+          "recommendedVersionId": 8261,
+          "reason": "Introdujo el planeador y el submarinismo."
+        },
+        {
+          "position": 5,
+          "gameId": 16642,
+          "recommendedVersionId": 43801,
+          "reason": "Propuesta distinta con dos pilotos por kart."
+        },
+        {
+          "position": 6,
+          "gameId": 3092,
+          "recommendedVersionId": 6043,
+          "reason": "Buen repertorio de circuitos retro."
+        },
+        {
+          "position": 7,
+          "gameId": 1018,
+          "recommendedVersionId": 1950,
+          "reason": "Clásico de N64, ideal para jugar a pantalla partida."
+        },
+        {
+          "position": 8,
+          "gameId": 104,
+          "recommendedVersionId": 161,
+          "reason": "El origen de la saga; es más exigente."
+        }
+      ]
+    }
+  ]
 }

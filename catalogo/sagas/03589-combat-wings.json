@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50357",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Combat Wings: The Great Battles of WWII",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Combat Wings: The Great Battles of WWII",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Become a pilot of a WWII aircraft.",
           "source": "igdb",
           "manual": false
         },
@@ -81,6 +93,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95696",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dogfight 1942",
           "source": "igdb",
@@ -89,6 +107,12 @@
         {
           "field": "original_name",
           "value": "Dogfight 1942",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Piloting a wide range of aircraft, players engage in aerial dogfights and dangerous fighter missions across the major theaters of war during WWII.",
           "source": "igdb",
           "manual": false
         },
@@ -125,8 +149,32 @@
           "igdbId": 10188,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e3495d8180a74ce07b47fc223da632f3.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a9eff89daa0dd80a9af1fc1bed016a9f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2981,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20415,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 40027,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

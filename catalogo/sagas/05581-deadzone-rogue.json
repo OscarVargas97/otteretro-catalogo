@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112168",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deadzone: Rogue",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Deadzone: Rogue",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Deadzone: Rogue is a roguelite first-person shooter set in deep space. Slay hordes of enemies, loot powerful gear, and customize your loadout during each unique run. Uncover fragments of your past as you piece together the truth behind your mission. Fight. Die. Revive. Repeat.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 316979,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "040069E024F5A000"
+          ]
         },
         {
           "id": 112168,
@@ -75,7 +90,11 @@
           "igdbId": 316979,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4f0d64025df8522fad0f019fc323c1e2.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/f2ecd49b201687e941dd3f084ca9f7c5.png"
+      }
     },
     {
       "id": 47947,
@@ -87,6 +106,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113935",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deadzone Rogue 2",
           "source": "igdb",
@@ -95,6 +120,12 @@
         {
           "field": "original_name",
           "value": "Deadzone Rogue 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fight as Talon 13-10 in this FPS roguelite adventure set on a fallen Earth. Combine weapons, augments, and elements to forge devastating builds, and blast through Monarch’s endless machines. Grow stronger each run, solo or with friends.",
           "source": "igdb",
           "manual": false
         },
@@ -131,8 +162,33 @@
           "igdbId": 403822,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/78538c459bdbdeb550383c321aabd290.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0f720f4a9f1770c34969a9408e73c01b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5696070ba6c2871cd129206316e2574f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3487,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 47275,
+          "reason": "2025"
+        },
+        {
+          "position": 2,
+          "gameId": 47947,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

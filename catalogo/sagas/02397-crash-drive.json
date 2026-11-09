@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "21916",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crash Drive 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Crash Drive 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Get ready for ridiculous fun in this multiplayer free-roaming stunting game. Drive a bus, tank or monster truck and speed across huge open worlds. Level up your car, participate in random events and discover secret areas. Buy now and get a free copy to gift to your friend!",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2015,
           "igdbId": 35904,
           "steamAppId": 343440,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del lanzamiento original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado, ratón o mando, con ajustes flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y cuadros altos según tu equipo."
+            }
+          ]
         },
         {
           "id": 21917,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 35904,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen soporte de mando y portátil, sin teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento más limitados en Switch."
+            }
+          ],
+          "codes": [
+            "010007900FCE2000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42338",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crash Drive 3",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Crash Drive 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Experience ridiculous fun in this cross-platform multiplayer, free-roaming game! Drive monster trucks, tanks and more amazing vehicles across a huge open world. Level up, play events, earn cash, unlock new cars and discover secrets.... Crash Drive is back!\n\nCOMPETITIVE EVENTS\nDestroy a gigantic beach ball, catch robbers as a cop or steal the king's crown, these are just a few examples of the 10 fun game events this game has to offer. Participate in these random competitive events, beat your opponents to earn the most cash and buy awesome new cars or customisations.\n\nCRAZY CAR LEVELING\nBy using nitro boosts you increase the car’s nitro capacity, by driving at top speed you increase its top speed... catch the drift? ‘Maxing’ all stats for a car increases your player level allowing you to buy new cars or customisations. Collect over 50+ vehicles and customise your car with funky antennas, boosts and unique number plates with your in-game name on it. Reach the maximum player level to prestige and show who is the real Crash Drive 3 boss! Solid golden car anyone?\n\nOPEN WORLD EXPLORATION\nTo the moon and back! Drive around freely and explore the boundless and varied open world at your leisure. Fly a rocket to the moon, storm the king’s castle in the forest, go to the saloon in the wild west canyons or experience ice drifting fun in the arctic snow. Done with icy cold? How about a relaxing ferry trip to the tropics? Each area is unique and filled with secret areas, collectibles…",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +211,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 153824,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100E2A00FA2C000"
+          ]
         }
       ],
       "images": {
@@ -152,5 +224,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2628,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9828,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 16205,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

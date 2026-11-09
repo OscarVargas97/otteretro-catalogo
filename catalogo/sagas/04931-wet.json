@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94959",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wet",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Wet",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Wet is an action game that combines shooting and swordplay with acrobatics and gore. The main character, Rubi, carries twin pistols and a sword (she can also carry dual shotguns, submachine guns, or crossbows), and can fire while jumping, sliding on her knees, and running on walls. During these acrobatic actions, the game enters slow motion, and she will automatically aim at a second enemy, allowing the player to shoot at two enemies at once. She can also combine her attacks, such as wall running off a person or performing a sword uppercut while sliding.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,14 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 3057,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCKS-10092",
+            "BLES-00707",
+            "BLES-00708",
+            "BLJS-10062",
+            "BLUS-30403"
+          ]
         },
         {
           "id": 94960,
@@ -57,6 +76,43 @@
           "year": 2009,
           "igdbId": 3057,
           "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fc60d6b831c51fa39e7fefd8b7479064.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9a088300736195bea246b3fe4e3e64bb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ed71773d43d53fa70ecf593c6582d9cc.png"
+      },
+      "ports": [
+        {
+          "id": 1265,
+          "platform": "x360",
+          "project": "WetRecomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/nikolaygorb/WetRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1266,
+          "platform": "x360",
+          "project": "wet-recomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Supermedo/wet-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
         }
       ]
     }

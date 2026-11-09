@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95311",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Clive Barker's Jericho",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Clive Barker's Jericho",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Jericho is a horror-themed FPS from the mind of screen legend Clive Barker. In the game, a Jericho Team must fight through a lost city to destroy the evil at its heart.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 6939,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00120",
+            "BLUS-30063"
+          ]
         },
         {
           "id": 95311,
@@ -67,7 +83,12 @@
           "igdbId": 6939,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a1a2635779bc629f98701eb43e003c3d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e0a209539d1e74ab9fe46b9e01a19a97.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/56655a377150dadb240e09f68ac6e65f.png"
+      }
     },
     {
       "id": 47605,
@@ -79,6 +100,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113020",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Clive Barker's Hellraiser: Revival",
           "source": "igdb",
@@ -87,6 +114,12 @@
         {
           "field": "original_name",
           "value": "Clive Barker's Hellraiser: Revival",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Experience a new chapter in the legendary horror series like never before. Clive Barker's Hellraiser: Revival takes first-person action horror survival to the next level. Wield the powers of the Genesis Configuration puzzle box to survive your bargain with the infamous Pinhead.",
           "source": "igdb",
           "manual": false
         },
@@ -112,7 +145,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 356552,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "04001A3028890000"
+          ]
         },
         {
           "id": 113020,
@@ -131,8 +167,33 @@
           "igdbId": 356552,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2979eeec451dcd28d06474671b396519.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/7c7bfb2def1926667eae0ff6edb45434.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d9002651ba752d0dbb6a09d46d93f77a.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3320,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39854,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 47605,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

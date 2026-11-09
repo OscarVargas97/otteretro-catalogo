@@ -51,7 +51,12 @@
           "steamAppId": 2600,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/35c0435bac5b49fc667bd23a5c49fea1.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/a6eab5560609e8a2db70c40fd7499791.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1fee5d8b6b5230e47fc933334d03ff5b.png"
+      }
     },
     {
       "id": 46575,
@@ -63,6 +68,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110217",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vampire: The Masquerade - Bloodlines 2",
           "source": "igdb",
@@ -71,6 +82,12 @@
         {
           "field": "original_name",
           "value": "Vampire: The Masquerade - Bloodlines 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Vampire: The Masquerade - Bloodlines 2 is the successor to the iconic RPG Vampire: The Masquerade - Bloodlines. Set in a Seattle faithfully reimagined in the World of Darkness, Vampire: The Masquerade - Bloodlines 2 features reactive storytelling, fast-paced melee combat, and intriguing characters with their own hidden motives.\n\nCreated in an act of vampire insurrection, your existence ignites a blood war among the vampire factions who run Seattle. To survive, you’ll choose a clan and enter into uneasy alliances with competing factions in a world which will react to every choice you make. Unleash your supernatural powers against your prey, but be mindful of your surroundings at all times or run the risk of breaking the Masquerade (the absolute law of secrecy that keeps Vampire society hidden from humanity).",
           "source": "igdb",
           "manual": false
         },
@@ -107,8 +124,33 @@
           "igdbId": 116530,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1c161429a5475e0f648a935b1adf321a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c6ed748530c47d1dd8d36b1ddc724e03.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/fb0a6055659ae7a3c54debc9bc174f1c.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3426,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42952,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 46575,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

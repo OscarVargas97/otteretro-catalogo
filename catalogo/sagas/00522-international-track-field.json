@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84366",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "International Track & Field 2000",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "International Track & Field 2000",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pure adrenaline! Go for gold with the only Track and Field title for Nintendo 64! Lightning-fast gameplay for up to four players. Over a dozen grueling international events, from weightlifting, to gymnastics, to the 100M dash.",
           "source": "igdb",
           "manual": false
         },
@@ -119,6 +131,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The classic sporting game series of Track and Field celebrates its' 25th Anniversary by coming to the Nintendo DS. All the excitement and fun of the original titles is brought up to date with a bright and stylish new look, more events and online play.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -132,7 +150,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 23030,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AFEE",
+            "AFEK",
+            "AFEP"
+          ]
         }
       ],
       "images": {
@@ -184,5 +207,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1450,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1301,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 7000,
+          "reason": "2000"
+        },
+        {
+          "position": 3,
+          "gameId": 3727,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

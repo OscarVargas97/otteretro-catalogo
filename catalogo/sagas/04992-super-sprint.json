@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Championship Sprint is an arcade game that was released in 1986 and was the sequel to Super Sprint",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1986",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 13478,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co60ci.jpg"
+      }
     },
     {
       "id": 43490,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Sprint is a racing video game released by Atari Games and Midway Games in 1986. Up to three players drive Formula One-like cars on a circuit that is viewed from above. The game is a successor to Gran Trak 10 and the Sprint series, which were black-and-white games from the 1970s. A sequel, Championship Sprint, was released later in the same year.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1986",
           "source": "igdb",
@@ -89,8 +104,32 @@
           "igdbId": 267540,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/81953959194cabdff4a5523bbb826d33.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0dfaab7bd101edb0c413798f4d19e9a1.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3337,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40124,
+          "reason": "1986"
+        },
+        {
+          "position": 2,
+          "gameId": 43490,
+          "reason": "1986"
+        }
+      ]
+    }
+  ]
 }

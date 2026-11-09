@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Second part of Otome Game Romeo VS Juliet, based upon Shakespeare classic Romeo & Juliet.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -48,9 +54,15 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 52726,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-06360"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d37f19c0b9b075307bdc1f1cacf1f772.png"
+      }
     },
     {
       "id": 36080,
@@ -74,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Romeo vs Juliet was released in 2013 for the PSP. In 2015, it was released on the PSVita in a double pack with its sequel called Romeo VS Juliet All Series Pack.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -87,10 +105,36 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 129998,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-06318"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9aad12b11e373b926a268b084ee57d86.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3282,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36080,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 35686,
+          "reason": "2014"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

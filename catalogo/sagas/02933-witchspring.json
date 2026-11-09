@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "39284",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "WitchSpring3",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "WitchSpring3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The story of a witch who is chased after by warriors.",
           "source": "igdb",
           "manual": false
         },
@@ -75,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58378",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "WitchSpring R",
           "source": "igdb",
@@ -83,6 +101,12 @@
         {
           "field": "original_name",
           "value": "WitchSpring R",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "WitchSpring R is a story-based RPG that combines elements of training, collecting, and exploring. It is a remake of the 2015 mobile title WitchSpring.\n\nOutside, you can enjoy collecting magical ingredients, fighting against warriors and monsters, and developing stories with various characters.\nAt home, you can enjoy training your own witch by scheduling training, and fusing magic ingredients that can be collected from the field.\n\nThe witch's ending is enriched by the player's choice and the witch's growth.",
           "source": "igdb",
           "manual": false
         },
@@ -101,7 +125,28 @@
           "year": 2023,
           "igdbId": 210515,
           "steamAppId": 1958220,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando con ajustes y guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión de referencia del remake."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 58379,
@@ -109,7 +154,28 @@
           "kind": "remake",
           "year": 2024,
           "igdbId": 210515,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al remake de PC."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 58380,
@@ -117,7 +183,31 @@
           "kind": "remake",
           "year": 2024,
           "igdbId": 210515,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al remake de PC."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Rendimiento y resolución más bajos."
+            }
+          ],
+          "codes": [
+            "010018401EEA8000"
+          ]
         }
       ],
       "images": {
@@ -127,5 +217,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2797,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 14539,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 23187,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

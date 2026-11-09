@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97884",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gravity Rush",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Gravity Rush",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gain a new perspective as you take on the role of Kat, a strong-willed girl seeking the means to protect her future in a world that’s crumbling to pieces. Tilt and move the PlayStation Vita System, taking gravity into your own hands to deliver devastating attacks, uncover the secrets to your past and explore a mysterious world.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 11701,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "PCSF-00024"
+          ]
         },
         {
           "id": 97884,
@@ -58,7 +73,12 @@
           "igdbId": 12529,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/27af6e8b4742e5cd7afe864b67a323d4.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/24dc42337cd070ece246f0d712c72ff8.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/bf56a4be1b26d4115b5ed703d7e711fd.png"
+      }
     },
     {
       "id": 41777,
@@ -82,6 +102,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Another mind-bending adventure awaits gravity queen Kat as a new danger emerges to threaten the fabric of the universe itself. Still searching for clues behind the mystery of her origin, and with the powerful Raven at her side, Kat must master three unique gravity attack styles as she takes on enemies and massive bosses.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -97,8 +123,49 @@
           "igdbId": 12528,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cee0281e36d843e932cbabe3aaa22d50.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/32621602e69ea9d84568e3a88264882e.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/f9a25a1478f875ff3c2f9a57b7d39a52.png"
+      },
+      "ports": [
+        {
+          "id": 180,
+          "platform": "ps4",
+          "project": "gr2_pc",
+          "kind": "native-layer",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/HayatoG/gr2_pc",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "shadPS4",
+          "emulatorLevel": 2
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3363,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40853,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 41777,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

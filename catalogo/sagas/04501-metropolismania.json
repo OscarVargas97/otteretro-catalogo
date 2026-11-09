@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The best cities are built on friendship, not concrete! Everybody wants to live in the best city in the world! That's why you're a Metropolismaker, a well-connected urban planner who creates the most popular places on the planet. Of course com of your citizens have other ideas, so you'll have to work extra hard to keep everyone happy.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -48,14 +54,35 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 26661,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51162",
+            "SLUS-20377"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/94bfb86b3db76fdd415c05597b09979d.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/40024ed8b16582389611fa61cfcee42b.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/4bd1fb2dd3279549a4a351d40b271b0e.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 898,
+          "platform": "ps2",
+          "project": "Metropolismania-PC",
+          "kind": "recomp",
+          "toolchain": "PS2Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/koaque/Metropolismania-PC",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 34252,
@@ -79,6 +106,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The player's job is to create and maintain a city. Played from a third-person perspective, the player needs to walk around, construct buildings, provide roads, and then screen the emails of possible inhabitants. Citizens need to be kept happy by interacting with them - give them gifts, listen to their gossip and complaints. If their needs are attended to (through schools, hospitals or entertainment), they will ditch the town. Build commercial, utility, entertainment industries to appease your citizens and make this a city people want to live in.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -92,9 +125,18 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 68118,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54898",
+            "SLUS-21606"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b34fda1549565ff24088bf0891036de6.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/45c4024b3193e9a85b297f8421c6f821.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9d536e0c89f6ca394055730f1e22d290.png"
+      }
     },
     {
       "id": 40730,
@@ -106,6 +148,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97371",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Metropolismania 4",
           "source": "igdb",
@@ -114,6 +162,12 @@
         {
           "field": "original_name",
           "value": "Metropolismania 4",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Introducing the definitive version of the city planning simulation that anyone can easily create a city. Become a city development designer \"Metropolismania\" and create a city as you wish! In this work, transportation such as trains, buses, monorails, and highways are also available! You can enjoy urban development with a spacious space, such as crossing a monorail over a railroad or highway.",
           "source": "igdb",
           "manual": false
         },
@@ -141,8 +195,36 @@
           "igdbId": 178560,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co47ku.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1948,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33186,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 34252,
+          "reason": "2007"
+        },
+        {
+          "position": 3,
+          "gameId": 40730,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

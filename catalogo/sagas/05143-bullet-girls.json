@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A PlayStation Vita exclusive sequel to Bullet Girls developed by D3 Publisher",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 59333,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c184aff81d4fbecf8e8043cce0fd5c19.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/795635990815b638cc0fcfd851a9a96e.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c3854f354b4e78fa57d9388d7b2da29c.png"
+      }
     },
     {
       "id": 41348,
@@ -62,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98498",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bullet Girls Phantasia",
           "source": "igdb",
@@ -70,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Bullet Girls Phantasia",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bullet Girls Phantasia is latest entry in the Bullet Girls series for PlayStation 4 and PS Vita. It is an action shooting game where you control the girls of the “Ranger Club,” which operates with the purpose of non-aggressive defense training, and fight enemies one after the next.",
           "source": "igdb",
           "manual": false
         },
@@ -87,7 +110,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 57021,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todos los modos y contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con mando cómodos; guardado estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución moderada en PS4 y rendimiento aceptable."
+            }
+          ]
         },
         {
           "id": 98498,
@@ -96,7 +140,28 @@
           "year": 2020,
           "igdbId": 57021,
           "steamAppId": 1163590,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que las versiones de consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Soporta mando y teclado; guardado sin complicaciones."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original, sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez en PC moderno."
+            }
+          ]
         },
         {
           "id": 98499,
@@ -104,10 +169,56 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 57021,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido principal que la versión de PS4."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Jugable en portátil, con controles equivalentes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene la experiencia original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y hardware más limitado."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/81ea2fbde6adef7f3840ec3964de045d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6dc53468a6a6c55d3a3fae809727bb06.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/34aae54d3a411fceb05b44df2f80ee8c.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3374,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41294,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 41348,
+          "reason": "2018"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

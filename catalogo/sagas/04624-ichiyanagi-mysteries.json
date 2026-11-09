@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84404",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Amagoushi no Yakata",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Amagoushi no Yakata",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is an adventure game based on a classical mystery novel.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,31 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 68264,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido de la edición original de PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de sobremesa sin mejoras de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución estándar de PS2, tiempos de carga normales."
+            }
+          ],
+          "codes": [
+            "SLPS-25702"
+          ]
         },
         {
           "id": 84404,
@@ -56,9 +92,33 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 196205,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente, adaptado a PSP."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Formato portátil con guardado cómodo en cualquier momento."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con ajustes por el hardware portátil."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución pero cargas cortas en portátil."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4mf9.jpg"
+      }
     },
     {
       "id": 34652,
@@ -69,6 +129,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "84830",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Naraku no Shiro Ichiyanagi Nagomu, Nidome no Junan",
@@ -105,7 +171,10 @@
           "igdbId": 196213,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4mfs.jpg"
+      }
     },
     {
       "id": 35988,
@@ -144,8 +213,36 @@
           "igdbId": 124635,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4mkf.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1965,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34240,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 34652,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 35988,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

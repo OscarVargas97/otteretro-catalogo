@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A new beginning for the Xenoblade series is coming to Nintendo Switch 2 in 2027.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2027",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 405450,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coc8ai.jpg"
+      }
     },
     {
       "id": 50238,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Xenoblade Chronicles: Definitive Edition - Nintendo Switch 2 Edition includes the additions and enhancements from the Definitive Edition, along with even more made possible by the power of the Nintendo Switch 2 system - including added features, a smoother frame rate, 4K resolution in TV mode, and full HD in handheld mode.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2026",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 405446,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coc7me.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3523,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 50238,
+          "reason": "2026"
+        },
+        {
+          "position": 2,
+          "gameId": 50233,
+          "reason": "2027"
+        }
+      ]
+    }
+  ]
 }

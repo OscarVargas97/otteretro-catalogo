@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "35625",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vampire: The Masquerade - Swansong",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Vampire: The Masquerade - Swansong",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Based on the cult role-playing world and developed by specialists in the genre, Vampire: The Masquerade – Swansong is a narrative RPG in which your every choice determines the fate of the three main characters and of the Boston Camarilla.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 124992,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01007EE01318E000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110515",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vampire: The Masquerade - Bloodhunt",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Vampire: The Masquerade - Bloodhunt",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bloodhunt is a thrilling free-to-play battle royale game set in Prague consumed by a ruthless war between vampire clans. Use your supernatural powers to hunt and outsmart your rivals and Inquisition soldiers in this third-person action shooter. Gear up, feed on potent blood to grow in power, defy gravity to strike from anywhere, and dominate the night!",
           "source": "igdb",
           "manual": false
         },
@@ -144,8 +171,33 @@
           "igdbId": 152087,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/726c09d8f208435fd0cfa6cd71981fb2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c61f3e16ddd926f2b6b7ef4ee06b0367.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/828feeb4c80ad1bcb65b2002b6ea581b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2781,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46679,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 13991,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "4995",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Based on the Walt Disney Pictures and Walden Media film capturing the renown and beloved book series from author C.S. Lewis.\n\nPlayers enter the world of Narnia, a land frozen in a 100 year winter by the evil powers of the malevolent and evil White Witch. In order to end this frigid captivity and free his people, the mighty lion Aslan, true ruler of Narnia, invokes an ancient prophecy. It will become the destiny of four young siblings from our world: Peter, Susan, Edmund and Lucy Pevensie to work together and use their unique combat skills, weaponry and abilities to defeat the Witch and her armies to save Narnia. These four unlikely heroes must battle the evil forces of the White Witch by waging war against a vast variety of creatures, including Centaurs, Minotaurs, Minoboars, Cyclops, Werewolves, Wraiths, Ankleslicers, Wolves, Satyrs, Boggles and more.",
           "source": "igdb",
           "manual": false
         },
@@ -107,6 +119,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "46684",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Chronicles of Narnia: Prince Caspian",
           "source": "igdb",
@@ -115,6 +133,12 @@
         {
           "field": "original_name",
           "value": "The Chronicles of Narnia: Prince Caspian",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Chronicles of Narnia: Prince Caspian is an action-adventure fantasy video game.",
           "source": "igdb",
           "manual": false
         },
@@ -132,7 +156,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 4763,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00251",
+            "BLES-00252",
+            "BLUS-30138"
+          ]
         },
         {
           "id": 46683,
@@ -140,7 +169,14 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 4763,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RNNE-USA",
+            "RVL-RNNP-UKV",
+            "RVL-RNNX-EUR",
+            "RVL-RNNY-FAH",
+            "RVL-RNNZ-EUU"
+          ]
         },
         {
           "id": 46684,
@@ -164,7 +200,14 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 4763,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-55143",
+            "SLES-55144",
+            "SLES-55145",
+            "SLES-55146",
+            "SLUS-21756"
+          ]
         },
         {
           "id": 47035,
@@ -172,7 +215,13 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 200910,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YQNE",
+            "YQNP",
+            "YQNX",
+            "YQNY"
+          ]
         }
       ],
       "images": {
@@ -182,5 +231,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2234,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2689,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 18418,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

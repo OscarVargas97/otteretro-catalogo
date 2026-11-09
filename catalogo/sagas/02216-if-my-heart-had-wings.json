@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "18403",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "If My Heart Had Wings",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "If My Heart Had Wings",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This game is an animated visual novel based on a youthful, dream filled high school life story. This game portrays the player as Aoi, the protagonist, and brings the player through the feat of building the glider that will realise their dreams, while bonding with the female characters.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 17906,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port de consola con contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando, menos práctico."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con cambios menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución limitada."
+            }
+          ]
         },
         {
           "id": 18403,
@@ -57,7 +90,28 @@
           "year": 2012,
           "igdbId": 17906,
           "steamAppId": 326480,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Novela visual completa con todas las rutas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón, saltar texto, guardado libre y registro."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y carga inmediata."
+            }
+          ]
         },
         {
           "id": 18404,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 17906,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port portátil con contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil con táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con cambios menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla de baja resolución."
+            }
+          ]
         },
         {
           "id": 18405,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 17906,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, adaptado a consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona con botones y táctil, algo menos cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con ajustes de plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y portátil."
+            }
+          ]
         },
         {
           "id": 20015,
@@ -81,7 +177,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 196874,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port más reciente, contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buena portabilidad y táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con ajustes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en Switch."
+            }
+          ]
         }
       ],
       "images": {
@@ -99,6 +216,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "97488",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Kono Oozora ni, Tsubasa wo Hirogete Cruise Sign",
@@ -135,8 +258,31 @@
           "igdbId": 148653,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6155.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2559,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8902,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 40797,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

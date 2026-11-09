@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "45550",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Johnny Platform's Biscuit Romp",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Johnny Platform's Biscuit Romp",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Johnny Platform's Biscuit Romp is a 2D platformer from Ishisoft starring the coffee addicted Johnny Platform as he kills robots across 55 levels.",
           "source": "igdb",
           "manual": false
         },
@@ -85,6 +97,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The original guitar hero with the Elvis attitude and purple hair pompadour, Johnny Bazookatone, has been imprisoned in the year 2050 in Sin Sin Prison by El Diablo, the Lord of the Underworld, who is jealous of his talent and kidnaps other musical legends as well in this 3D side-scrolling platformer. Johnny's guitar Anita has been taken from him and he sets out to escape and vanquish foes on his way to be reunited with Anita.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -98,7 +116,11 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 4256,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00112",
+            "SLUS-00194"
+          ]
         }
       ],
       "images": {
@@ -107,5 +129,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2888,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23777,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 17471,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "32098",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Beyond a Steel Sky",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Beyond a Steel Sky",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "From Charles Cecil, creator of the Broken Sword series, with art direction by Dave Gibbons, legendary comic book artist behind ‘Watchmen’, comes ‘Beyond a Steel Sky’, the long awaited sequel to the cult classic ‘Beneath a Steel Sky’.\n\n‘Beyond a Steel Sky’ is a dramatic, humorous, cyberpunk thriller in which engaging puzzles drive a fast-paced narrative set in a dynamic gameworld that responds to – and is subverted by – the player’s actions.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 116634,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010023C015242000"
+          ]
         }
       ],
       "images": {
@@ -136,8 +151,33 @@
           "steamAppId": 1368340,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/714bb9ae1e0f98eab9dff4c8edaeb6f8.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/adbe673fd502b32bee221970f9cb0e8d.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/e2521b89f813157a3f50c5c8d0d3086b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2748,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43686,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 12949,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

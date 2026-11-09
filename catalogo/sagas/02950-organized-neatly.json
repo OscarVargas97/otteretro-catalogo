@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "37962",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cats Organized Neatly",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Cats Organized Neatly",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In this 2D puzzle game you have the responsibility to arrange your feline friends in a way that fits the grid. Cats Organized Neatly comes with 80 different handcrafted levels and a whole bunch of cats in all shapes and sizes.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2020,
           "igdbId": 139601,
           "steamAppId": 1369340,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón es ideal para este tipo de puzle."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Nítido y fluido."
+            }
+          ]
         },
         {
           "id": 37963,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 139601,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona con mando o pantalla táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Suficiente para un juego ligero."
+            }
+          ],
+          "codes": [
+            "010082101D7C0000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "52138",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dogs Organized Neatly",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Dogs Organized Neatly",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In this 2D puzzle game you have the responsibility to arrange lovely doggos in a way that fits the grid. Dogs Organized Neatly comes with 80 different hand-crafted levels and a whole bunch of dogs in all shapes and sizes.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +169,28 @@
           "year": 2021,
           "igdbId": 154011,
           "steamAppId": 1597730,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón es ideal para este tipo de puzle."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Nítido y fluido."
+            }
+          ]
         },
         {
           "id": 52139,
@@ -108,7 +198,31 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 154011,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona con mando o pantalla táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Suficiente para un juego ligero."
+            }
+          ],
+          "codes": [
+            "0100153024884000"
+          ]
         }
       ],
       "images": {
@@ -116,5 +230,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2800,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 14644,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 21227,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87374",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shall we date? Eternal Vows: Love Beyond Time",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Shall we date? Eternal Vows: Love Beyond Time",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Originally released as Nise no Chigiri in Japan for PSP & PC.\nPublished by NTT Solmare in English for iOS and Android.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 221885,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón/teclado y guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y estabilidad en PC."
+            }
+          ]
         },
         {
           "id": 87375,
@@ -56,9 +89,33 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 221885,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base del juego de citas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funcional pero limitado por PSP."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja de PSP."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9bw9.jpg"
+      }
     },
     {
       "id": 36268,
@@ -82,6 +139,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Known as Iza, Shutsujin! Koi Ikusa Dai Ni Maku in Japan. Published by NTT Solmare under the \"Shall we Date\" series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -97,8 +160,31 @@
           "igdbId": 219134,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ej3.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3289,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36195,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 36268,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

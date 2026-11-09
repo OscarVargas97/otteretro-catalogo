@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Power League 64 is a baseball game for the Nintendo 64. It was released only in Japan in 1997.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3576,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NPLJ"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Baseball game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -98,5 +113,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2132,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20119,
+          "reason": "1991"
+        },
+        {
+          "position": 2,
+          "gameId": 1044,
+          "reason": "1997"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110741",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Way of the Hunter",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Way of the Hunter",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Become the new owner of a hunting lodge nestled among gorgeous habitats and rich animal populations. Explore vast open world environments and hunt with a premium selection of firearms. Enjoy the perfect hunt on your own or with friends in co-op.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 198388,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/23c0534977edc4c4226357ef79aa0132.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0b41d2a59029fc0e1808679717044e70.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/f61fe5a906ef21124bd81e064a543e44.png"
+      }
     },
     {
       "id": 47702,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113273",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Way of the Hunter 2",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Way of the Hunter 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Feel the thrill of the hunt and keep an eye out for the wild and wonderous species that are roaming the North American wilderness and the African Savanna. Hunt and display big game like Moose, and Cape Buffalo as well as, smaller animals and birds.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +152,33 @@
           "igdbId": 383019,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3ee9292a075f20e3a7453c01a95f15ba.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/ff6023e3011fc2f3d90eb466c0d428a3.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/629ff89ffe43b2a2f6d53d35d41afd5c.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3483,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46756,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 47702,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "47416",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "G-Force",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "G-Force",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "G-Force draws you into the adventures of an elite team of trained guinea pigs on a mission to thwart a sinister plot to destroy the world. Take control of both G-Force commander Darwin and his sidekick, Mooch, as they apply their talents to defeat an evil army of altered household appliances.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,13 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 248561,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CFAE",
+            "CFAP",
+            "CFAX",
+            "CFAY"
+          ]
         },
         {
           "id": 51201,
@@ -105,7 +123,81 @@
         "hero": "https://cdn2.steamgriddb.com/hero/8f5c01673292dca6425ee6f028fc2ffa.png",
         "logo": "https://cdn2.steamgriddb.com/logo/3b661d671740495716434a3ba797c6f2.png"
       }
+    },
+    {
+      "id": 35282,
+      "nameEs": "300: March to Glory",
+      "originalName": "300: March to Glory",
+      "year": 2007,
+      "igdbId": 23086,
+      "popularity": 7,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "300: March to Glory",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "300: March to Glory",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lead the glorious army of 300 Spartans in an action game based on Frank Miller's graphic novel series and the major motion picture by Zack Snyder. Players take on the role of King Leonidas, who leads the brave 300 Spartans against Xerxes and his massive Persian army.\n\nAs Leonidas, uses sword, spear and shield and the power of the soldiers in a battle to determine the very fate of Western civilization. 300: March to Glory is a visceral experience focused on action and combat, allowing the player to fight both solo and in a phalanx alongside his fellow Spartans. The game follows the film's highly stylized production design for a unique look and an intense visual experience to charge along with the frantic action.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2007",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 85965,
+          "platform": "psp",
+          "kind": "original",
+          "year": 2007,
+          "igdbId": 23086,
+          "criteria": [],
+          "codes": [
+            "ULES-00766",
+            "ULUS-10241"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f7ab14a5b6fb3e3440995ec977ccebaf.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8f2d3411d68a1cffbe3346b2382a613d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/914e4292f90b80368028247e77c6021e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2927,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35282,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 18906,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

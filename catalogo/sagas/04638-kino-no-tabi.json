@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A visual novel based on the first six light novels volumes of the same name.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -48,9 +54,16 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 140688,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25248",
+            "SLPS-25452"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2a82998e9ba61d47797f7eefaa720d1d.png"
+      }
     },
     {
       "id": 34546,
@@ -74,6 +87,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kino no Tabi II -the Beautiful World- is a visual novel adapted from some volumes of the light novel by the same name with an additional scenario written by the original creator, Keiichi Sigsawa.\n\nThe game came bundled with a thirty-six page book containing the story of the original scenario written for the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -87,10 +106,38 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 141757,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25570",
+            "SLPS-25754"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1ae8df96ccf081bb4de3bada1de8ebb1.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2bb486cebc96e168b4454b4e0b9c29ed.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3253,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34398,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 34546,
+          "reason": "2005"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

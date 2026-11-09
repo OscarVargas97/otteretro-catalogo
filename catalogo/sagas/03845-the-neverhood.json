@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60217",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Neverhood",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Neverhood",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game follows the adventure of a claymation character named Klaymen as he discovers his origins and his purpose in a world made entirely out of clay.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 2164,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo sin recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control con mouse preciso y guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas rápidas; necesita compatibilidad o ScummVM."
+            }
+          ]
         },
         {
           "id": 60218,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 2164,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando, menos cómodo; guardado en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel, con cambios menores de interfaz."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cargas más largas y menos nitidez."
+            }
+          ]
         }
       ],
       "images": {
@@ -87,6 +141,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Something has gone seriously wrong in Klayman's homeland -- Klogg, an evil megalomaniac, wants to destroy the land and basically rule over anything and everyone. Because the task can get difficult at times, he has enlisted the service of fearsome ape-like creatures, Skullmonkeys, to aid in the destruction of planet Idznak. Needless to say, it is up to the player to stop Klogg and his devious plans.\n\nMuch like The Neverhood, Skullmonkeys is a 2D platformer built entirely of Claymation characters, enemies, and environments. Throughout the game's seven worlds spanning ninety levels, the basic objective of each is to destroy as many Skullmonkeys as possible. Destroying the simians can be done one of two ways: firing projectile weapons or butt-bouncing off their heads.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -100,7 +160,13 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 10917,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-01090",
+            "SLES-01091",
+            "SLES-01092",
+            "SLUS-00601"
+          ]
         }
       ],
       "images": {
@@ -131,6 +197,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Save the world in this hilarious free-roam arena based combat game. Join Boomer and his friends as they try to free the Earth's cats from the Feline Aliens. Battle until your bolts pop out, using projectile weapons, hand-to-hand combat and grapple moves. Or collect power-balls to achieve the all-powerful mongo-mode and quickly turn the evil Boombots into scrap metal. The cats of the world are counting on you.\n\nHilarious story line keeps you laughing, attack your opponent from anywhere in the free-roam, combat arenas, fight as any of the 15 characters in 15 arenas, each with unique characteristics, use projectile weapons, hand-to-hand combat, grapple moves and the mongo-mode in over 12 different simple-to-operate combinations to destroy the competition.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -144,7 +216,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 10918,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-00968"
+          ]
         }
       ],
       "images": {
@@ -175,6 +250,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A Japan exclusive entry in the Neverhood franchise. This game was developed with no involvement from the original team in an effort to capitalize on the popularity of the characters in the Japanese market. The game is essentially air hockey but you shoot the puck with guns.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -188,7 +269,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 43749,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-02424"
+          ]
         }
       ],
       "images": {
@@ -196,5 +280,35 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1308,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23794,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 24212,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 24308,
+          "reason": "1999"
+        },
+        {
+          "position": 4,
+          "gameId": 24681,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

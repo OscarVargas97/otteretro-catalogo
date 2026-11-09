@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "31141",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Outer Worlds",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Outer Worlds",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Outer Worlds is a new single-player sci-fi RPG from Obsidian Entertainment and Private Division. As you explore the furthest reaches of space and encounter a host of factions all vying for power, who you decide to become will determine the fate of everyone in Halcyon. In the corporate equation for the colony, you are the unplanned variable.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 113114,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100626011656000"
+          ]
         },
         {
           "id": 31139,
@@ -133,6 +148,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110675",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Outer Worlds 2",
           "source": "igdb",
@@ -141,6 +162,12 @@
         {
           "field": "original_name",
           "value": "The Outer Worlds 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Outer Worlds 2 is the sequel to the award-winning first-person sci-fi RPG from Obsidian Entertainment.",
           "source": "igdb",
           "manual": false
         },
@@ -177,8 +204,33 @@
           "igdbId": 152246,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8831080c91dd4aac058dbc02296bc42e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a62365e3982c95041b9766812e208adb.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/c1b5a6ec0b544e96cf38578b0e49b078.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2729,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12493,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 46732,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

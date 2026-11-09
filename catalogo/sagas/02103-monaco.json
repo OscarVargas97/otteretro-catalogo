@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "16974",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Monaco: What's Yours Is Mine",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Monaco: What's Yours Is Mine",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Monaco: What's Yours Is Mine (or simply Monaco') is a video game made by indie developers at Pocketwatch Games. They are best known for winning the 2010 IGF Award in 2010 for their work on Monaco. The game was released for Windows on April 24, 2013, via Steam, and will be released for the Mac and XBLA platforms in 2013.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2013,
           "igdbId": 8739,
           "steamAppId": 113020,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cooperativo en línea y controles cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión de referencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y fluido."
+            }
+          ]
         },
         {
           "id": 16975,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 8739,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base de la época."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Comunidad en línea muy reducida."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fluidez limitadas."
+            }
+          ]
         },
         {
           "id": 16976,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 8739,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen cooperativo local y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en Switch."
+            }
+          ]
         },
         {
           "id": 35857,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 124988,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Parece un duplicado de la versión de Switch."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Igual que la otra entrada de Switch."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Igual que la otra entrada de Switch."
+            }
+          ]
         }
       ],
       "images": {
@@ -92,6 +188,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110803",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Monaco 2",
           "source": "igdb",
@@ -100,6 +202,12 @@
         {
           "field": "original_name",
           "value": "Monaco 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Get your crew back together\nThe crack team of hackers and masterminds at Pocketwatch Games is in the backroom planning out Monaco II, the sequel to the hyper-stylized heist hit that PC Gamer called “one of the best co-op games of all time.”\n\nThe vision to pull off this job is simple. Bring in a new rogues’ gallery of skilled thieves and infiltration experts to play. Let them loose in an intriguing new setting. Test their skills in brain-bending 3D environments, procedurally generated by an AI mastermind designed to concoct high-stakes challenges and infinite sneaky, stealy fun.\n\nAnd most of all, preserve the friend-fueled energy of the original: a mix of smarts, stealth, and frenzied improvisational mayhem when plans go awry. The big payday is the ultimate heist experience for you and your gang.",
           "source": "igdb",
           "manual": false
         },
@@ -136,8 +244,33 @@
           "igdbId": 194505,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6279ac8f9abadae85c2c53a1d88cb56e.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/943bf4d04cee206b1f8fd49958c1b99c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/552a53a437fa75c18898483933cd88ce.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2518,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8580,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 46777,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

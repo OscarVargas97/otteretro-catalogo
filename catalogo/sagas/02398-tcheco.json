@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "21929",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tcheco in the Castle of Lucio",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tcheco in the Castle of Lucio",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tcheco in the Castle of Lucio is an exciting, fast-paced action game.\nHelp Tcheco the Adventure Boy to leave a mysterious castle full of deadly creatures!\nBe ready for a big challenge, full of nonsense humor and retro goodness.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 35037,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Port estable en PS4."
+            }
+          ]
         },
         {
           "id": 21929,
@@ -57,7 +90,28 @@
           "year": 2015,
           "igdbId": 35037,
           "steamAppId": 377600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, respuesta precisa."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y escalable en PC."
+            }
+          ]
         },
         {
           "id": 21930,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 35037,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Port estable en Xbox One."
+            }
+          ]
         },
         {
           "id": 21931,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 35037,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien para un juego retro 8 bits."
+            }
+          ],
+          "codes": [
+            "0100F43011E5A000"
+          ]
         }
       ],
       "images": {
@@ -91,6 +190,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "31999",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Skatemasta Tcheco",
           "source": "igdb",
@@ -99,6 +204,12 @@
         {
           "field": "original_name",
           "value": "Skatemasta Tcheco",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tcheco is back! Be prepared to survive even crazier stages! Smash, pulverize and destroy - but never lose your gorgeous smile.",
           "source": "igdb",
           "manual": false
         },
@@ -157,7 +268,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 118401,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01001F101289A000"
+          ]
         }
       ],
       "images": {
@@ -166,5 +280,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2629,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9834,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 12920,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97612",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fruit Ninja",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Fruit Ninja",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fruit Ninja is a juicy action game with squishy, splatty and satisfying fruit carnage! Become the ultimate bringer of sweet, tasty destruction with every slash.\n\nSwipe up across the screen to deliciously slash fruit like a true ninja warrior. With three games modes in single player and worldwide leaderboards using Openfeint, the addictive gameplay will keep you coming back for even higher scores.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1684,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye los modos principales y recibió más contenido en su soporte."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón o pantalla táctil permiten cortes rápidos y precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conserva la experiencia central, con adaptación a PC."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y fluidez superior en equipos actuales."
+            }
+          ]
         },
         {
           "id": 97613,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1684,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo para portátil, con modos principales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "La pantalla táctil resulta natural, aunque la consola es antigua."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy cercana al espíritu táctil original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña y resolución baja, pero rendimiento estable."
+            }
+          ]
         },
         {
           "id": 97614,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1684,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base de Xbox 360 con modos clásicos, sin las actualizaciones móviles posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Kinect no es tan preciso ni cómodo como una pantalla táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la idea original, pero con control adaptado a Kinect."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Funciona estable, pero con resolución y calidad visual limitadas."
+            }
+          ]
         },
         {
           "id": 97869,
@@ -72,9 +147,35 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 65910,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar al otro lanzamiento de Xbox 360."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control por Kinect, menos preciso que táctil o ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al juego base, con control adaptado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto pero sin mejoras notables."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/882760d95d14d3ca2fb9c73adcc209e1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/af5604111becd28211b2bc271c8c9b57.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/44b169b864f2beeb97b1d5b282a3ca93.png"
+      }
     },
     {
       "id": 49087,
@@ -98,6 +199,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel to Fruit Ninja Kinect.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -113,8 +220,31 @@
           "igdbId": 20947,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co22uj.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3361,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40842,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 49087,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13151",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Chicken Run",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Chicken Run",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Re-live the hilarious action from the blockbuster film. Ginger is a chicken on a mission. She bravely leads the flock in a number of wild and wacky escape attempts from the barbed wire confines of Tweedy's farm. To do this, she enlists the help of Rocky, a smooth-talking American rooster and the cheeky, cockney rodents Nick and Fetcher. Will they make it to freedom before they end up as pies? Their fate is in your hands!\n\nHuge, detailed 3D immersive environments!\nCharacters, voices, and locations based on the film\nFluid gameplay featuring stealth, puzzle solving, and arcade elements\n4 playable characters including Ginger, Rocky, and their rodent accomplices Nick and Fetcher",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,12 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 6723,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03188",
+            "SLES-03285",
+            "SLUS-01304"
+          ]
         },
         {
           "id": 13393,
@@ -83,6 +100,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "72585",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Chicken Run: Eggstraction",
           "source": "igdb",
@@ -91,6 +114,12 @@
         {
           "field": "original_name",
           "value": "Chicken Run: Eggstraction",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Stealth, silliness, and a whole lot of chaos! Scurry and scramble your way to freedom in this co-op adventure set in the Chicken Run universe.",
           "source": "igdb",
           "manual": false
         },
@@ -149,7 +178,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 276332,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01001CD02327C000"
+          ]
         }
       ],
       "images": {
@@ -157,5 +189,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2445,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7034,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 29067,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

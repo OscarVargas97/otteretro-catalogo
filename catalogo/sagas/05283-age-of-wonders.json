@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101665",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Age of Wonders: Planetfall",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Age of Wonders: Planetfall",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Age of Wonders: Planetfall is the new strategy game from Triumph Studios, creators of the critically acclaimed Age of Wonders and Overlord series, bringing all the exciting tactical-turn based combat and in-depth 4X empire building of its predecessors to space in an all-new sci-fi setting.\n\nEmerge from the cosmic dark age of a fallen galactic empire to craft a new future for your people. Explore the planetary ruins and encounter other surviving factions that have each evolved in their own way, as you unravel the history of a shattered civilization. Fight, build, negotiate and technologically advance your way to utopia, in a deep single player campaign, on random maps and against friends in multiplayer.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 102057,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a893cd19c0b2f786cd3eeb2bf7a2ecb1.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/53c20f681ecfa6202bb64deab4fd02f8.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/dc96a8266db03d23c786f970c7ddabc0.png"
+      }
     },
     {
       "id": 46887,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111122",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Age of Wonders 4",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Age of Wonders 4",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rule a fantasy realm of your own design in Age of Wonders 4! Explore new magical realms in Age of Wonders’ signature blend of 4X strategy and turn-based tactical combat. Control a faction that grows and changes as you expand your empire with each turn.\n\nTriumph Studios’ award-winning strategy series has emerged into a new age, evolving the game’s iconic empire building, role-playing, and warfare to the next level. A new storytelling event system and hugely customizable empires provide an endlessly replayable experience, where each game adds a new chapter to your ever-growing saga.\n\nPowerful Wizard Kings have returned to the realms to reign as gods among mortals. Claim and master the Tomes of Magic to evolve your people, and prepare for an epic battle that will determine the ages to come.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +152,33 @@
           "igdbId": 232571,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/606814acaadf24fc6224db19bf689681.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e64c2624d132c9f8adb9ca78c012a1e5.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/516c3cd3b90a7fc92931f5777872f105.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3415,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42597,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 46887,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ganso!! Yancha-maru is an Action game, published by Irem, which was released in Japan in 1991.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -67,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "26119",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kaiketsu Yanchamaru",
           "source": "igdb",
@@ -75,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Kaiketsu Yanchamaru",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "One day in Feudal Japan, Kid Niki, the most radical of ninjas, is training at his Ninja School. Suddenly, a passing bird is struck down by an arrow and lands at Niki's feet. Attached is a note explaining that Niki's girlfriend, Princess Margo, has been kidnapped by the evil Stone Wizard. With the cry of \"Will help you!\" Niki bursts through the wall of his school and sets off on his quest to save Margo.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +110,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 84759,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Suele incluir modos extra y opciones de partida modernas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido, ajustes de dificultad y mando moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel en el juego, con añadidos opcionales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable, escalado limpio a HD."
+            }
+          ]
         },
         {
           "id": 26119,
@@ -100,7 +139,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 84759,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que PS4, con modos y opciones extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mismas mejoras, y se puede jugar en portátil con pausas fáciles."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel en el juego, con añadidos opcionales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable, escalado limpio a HD."
+            }
+          ]
         },
         {
           "id": 102034,
@@ -108,7 +168,28 @@
           "kind": "original",
           "year": 1987,
           "igdbId": 39465,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión Famicom/NES original, sin extras modernos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sin guardado ni ajustes; dificultad y controles de época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Depende de hardware o emulación original; resolución nativa baja."
+            }
+          ]
         }
       ],
       "images": {
@@ -116,5 +197,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2423,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10671,
+          "reason": "1986"
+        },
+        {
+          "position": 2,
+          "gameId": 6563,
+          "reason": "1991"
+        }
+      ]
+    }
+  ]
 }

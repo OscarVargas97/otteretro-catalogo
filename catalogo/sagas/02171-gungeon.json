@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17751",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Enter the Gungeon",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Enter the Gungeon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Enter the Gungeon is a top-down bullet hell roguelike where players take control of one of several characters known as Gungeoneers and fight their way through the procedurally generated floors of the Gungeon. Combat revolves around shooting bullet-shaped enemies with an extensive arsenal of both conventional and exotic firearms, while using dodge rolls, table flips, and environmental cover to avoid dense patterns of projectiles. The game features permadeath, meaning all items and weapons are lost upon dying, and players must start again from the first floor. Between runs, a hub area called the Breach allows players to unlock new items and interact with non-player characters.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 11182,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01009D60076F6000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "33667",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Exit the Gungeon",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Exit the Gungeon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Exit the Gungeon is a bullet hell dungeon climber immediately following the adventures of the misfit ‘Gungeoneers’ and their journey for personal absolution in Enter the Gungeon. The Gungeon has become a paradox and is collapsing! Armed with an ever-changing weapon, an insatiable need to loot, and the trusty dodge roll, each of our heroes must ascend and escape via their own unique route of increasingly perilous elevators. Battle against the last and most bitter of the Gundead at a frantic pace, slowing down just long enough to chat with some familiar faces… and a few new ones. Shifting rooms, enemies, bosses, bizarre weapons and items all combine to ensure that no two attempts to Exit the Gungeon are the same.",
           "source": "igdb",
           "manual": false
         },
@@ -150,7 +177,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 122311,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100DD30110CC000"
+          ]
         }
       ],
       "images": {
@@ -160,5 +190,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2543,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8769,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 13399,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

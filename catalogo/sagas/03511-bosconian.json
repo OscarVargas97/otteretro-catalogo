@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49948",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bosconian",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Bosconian",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The object of Bosconian is to score as many points as possible by destroying enemy bases and ships. The player controls a small fighter ship that can move in eight directions and can fire both forward and backward. Each level consists of a number of green space stations that must all be destroyed to advance to the next level (a semi-transparent mini-map helps identify their location). Each station consists of six cannons arranged in a hexagon, surrounding a central core. The player must either destroy all six cannons or shoot the core to destroy a station, and in later levels the core is capable of defending itself.\nAdditionally, the player must avoid or destroy asteroids, mines, and a variety of enemy missiles and ships that attempt to collide with the player's ship. Enemies occasionally launch formation attacks — destroying the leader causes all remaining enemies to disperse, but destroying all enemies in a formation scores extra bonus points. A spy ship (worth a random bonus value) also appears occasionally, which must be destroyed or the enemies will go berserk.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 18758,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Solo el juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sin opciones modernas; tienda cerrada."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta."
+            }
+          ]
         },
         {
           "id": 49947,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 263187,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Hi-Score, Caravan y ranking."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ajustes de controles y pantalla."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 49948,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 263187,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Hi-Score, Caravan y ranking."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil y cómoda."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -83,6 +158,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "77578",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Blast Off",
           "source": "igdb",
@@ -91,6 +172,12 @@
         {
           "field": "original_name",
           "value": "Blast Off",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "As in many other vertical scrolling shooters (including Namco's own Xevious), the player controls a ship, facing the top of the screen, that can move freely while the background scrolls down, bringing enemies in to view; the player may destroy enemies for points. The game uses two buttons - one is used to make the ship fire circular lasers, while the other is used to cycle through its four firing patterns. The red pattern is two lasers in a spiral pattern, while the blue one is one laser straight ahead and one behind, the yellow one is one laser straight ahead, one left, and one right and the green one is two lasers diagonally forward (one to the left and one to the right), and one straight behind; by holding down the button, the ship fires more powerful, spherical lasers.\n\nEven though the game is the sequel to Bosconian (which used a synthesized, DAC-generated voice saying \"Blast off!\" at the beginning of every round), Blast Off had more in common gameplay-wise with Namco's own Dragon Spirit than with Bosconian; this is especially noticeable in the third area of every world, where the player's ship undergoes an increase in size, and must destroy a boss. Despite several gameplay differences, the connection with Bosconian was emphasized in the marketing of the game, with the hexagonal space stations from Bosconian appearing in Namco's press literature, and on the game's title screen, and also making appearances in the game itself - and the game is also worth noting for its usages of various Engrish phrases, such as \"To push start only 1 player button\" (on title screen), \"Go next\" (at end of world), \"Congraturations\" (at end of game) and \"Entry your name\" (on high score table). There are a total of six worlds in this game, and each one has three areas (so there are a total of eighteen \"stages\" to play through).",
           "source": "igdb",
           "manual": false
         },
@@ -124,5 +211,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2963,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19823,
+          "reason": "1981"
+        },
+        {
+          "position": 2,
+          "gameId": 30543,
+          "reason": "1989"
+        }
+      ]
+    }
+  ]
 }

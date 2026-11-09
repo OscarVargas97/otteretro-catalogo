@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6844",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "You Don't Know Jack",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "You Don't Know Jack",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You Don't Know Jack is where high culture and pop culture collide! Loaded with outrageous questions, wall-to-wall music and sound effects, blistering humor, and Cookie Masterson, your semi-lovable master of ceremonies, You Don't Know Jack is trivia-licious!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 5304,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30569"
+          ]
         },
         {
           "id": 6843,
@@ -56,7 +71,10 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 5304,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SKJE-USA-B0"
+          ]
         },
         {
           "id": 6844,
@@ -81,7 +99,10 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 5304,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "VJCE"
+          ]
         }
       ],
       "images": {
@@ -112,6 +133,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Mock 2 brings 800 new trivia questions to challenge your wits.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -125,7 +152,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 77326,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-01194"
+          ]
         }
       ],
       "images": {
@@ -134,5 +164,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2286,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25678,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 3482,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

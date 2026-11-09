@@ -3,7 +3,7 @@
   "name": "Divinity",
   "igdbKind": "franchise",
   "igdbId": 1421,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2014,
       "igdbId": 5082,
       "popularity": 259,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "99203",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Divinity: Original Sin",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Divinity: Original Sin",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gather your party and get ready for a new, back-to-the-roots RPG adventure! Discuss your decisions with companions; fight foes in turn-based combat; explore an open world and interact with everything and everyone you see. Join up with a friend to play online in co-op and make your own adventures with the powerful RPG toolkit.\n\nDivinity: Original Sin is a game that gives you a lot of freedom and plenty of gameplay mechanics to use or abuse. The game's epic story may drive you toward your ultimate end-goal, but how you get there is entirely up to you.\n\nOr up to you and a friend, because Divinity: Original Sin can be played completely cooperatively, and features both online and local drop-in/drop-out multiplayer. Great adventures become even greater when shared with a trusted comrade-in-arms!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Reúne a tu grupo y prepárate para una nueva aventura de RPG, de vuelta a las raíces del género! Debate tus decisiones con tus compañeros; lucha contra enemigos en combates por turnos; explora un mundo abierto e interactúa con todo y con todos los que veas. Únete a un amigo para jugar en línea en cooperativo y crea tus propias aventuras con el potente kit de herramientas de RPG.\n\nDivinity: Original Sin es un juego que te ofrece mucha libertad y numerosas mecánicas para usar o aprovechar como quieras. La épica historia puede llevarte hacia tu objetivo final, pero la forma de llegar hasta allí depende totalmente de ti.\n\nO de ti y de un amigo, porque Divinity: Original Sin puede jugarse completamente en cooperativo, e incluye multijugador en línea y local con entrada y salida en cualquier momento. ¡Las grandes aventuras se vuelven aún mejores cuando se comparten con un compañero de armas de confianza!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -76,7 +94,12 @@
           "igdbId": 14177,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/33ee7f3a1e755722c9b888e19e10f805.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/66b708d452969d6b22e8b5eaeb029b0d.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/7ff9ecd5d9bca1ec7e740a92c6c2b8b3.png"
+      }
     }
   ],
   "routes": []

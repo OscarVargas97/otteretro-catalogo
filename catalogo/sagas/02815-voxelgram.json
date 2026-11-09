@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "33515",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Voxelgram",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Voxelgram",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Voxelgram is a 3D puzzle game in which voxels must be removed according to hints on their sides, to reveal hidden model. It's a new adaptation of Nonograms also known as Picross and Griddlers.",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 122807,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100082010A4E000"
+          ]
         }
       ],
       "images": {
@@ -75,6 +90,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "80771",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Voxelgram 2",
           "source": "igdb",
@@ -83,6 +104,12 @@
         {
           "field": "original_name",
           "value": "Voxelgram 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A 3D nonograms game where solving puzzles feels like sculpting in three dimensions. Reveal voxel models as you complete each challenge. This edition adds puzzles in two colours and procedurally generated puzzles.",
           "source": "igdb",
           "manual": false
         },
@@ -109,7 +136,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 335067,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100BC9023F70000"
+          ]
         }
       ],
       "images": {
@@ -117,5 +147,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2760,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13351,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 32365,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

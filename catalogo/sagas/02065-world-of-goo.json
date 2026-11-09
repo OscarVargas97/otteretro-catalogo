@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "16629",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "World of Goo",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "World of Goo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "World of Goo is a multiple award winning physics based puzzle / construction game made entirely by two guys. Drag and drop living, squirming, talking, globs of goo to build structures, bridges, cannonballs, zeppelins, and giant tongues. The millions of Goo Balls that live in the beautiful World of Goo are curious to explore - but they don't know that they are in a game, or that they are extremely delicious. Congratulations, and good luck!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 942,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo, con extras de WiiWare."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "El puntero de Wii funciona muy bien."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja."
+            }
+          ]
         },
         {
           "id": 16629,
@@ -57,7 +90,28 @@
           "year": 2008,
           "igdbId": 942,
           "steamAppId": 22000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con World of Goo Corporation."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y fluido."
+            }
+          ]
         },
         {
           "id": 16630,
@@ -65,7 +119,31 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 942,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil cómodo, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en HD."
+            }
+          ],
+          "codes": [
+            "010009E001D90000"
+          ]
         }
       ],
       "images": {
@@ -84,6 +162,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "72423",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "World of Goo 2",
           "source": "igdb",
@@ -92,6 +176,12 @@
         {
           "field": "original_name",
           "value": "World of Goo 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Use living liquid creatures to build bridges, grow towers, terraform terrain, and fuel flying machines. The world is beautiful, dangerous, and evolving.",
           "source": "igdb",
           "manual": false
         },
@@ -126,7 +216,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 279620,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010061F01DB7C000"
+          ]
         }
       ],
       "images": {
@@ -135,5 +228,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2507,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8499,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 29021,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

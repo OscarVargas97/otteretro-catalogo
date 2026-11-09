@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "ActRaiser",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "ActRaiser",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "ActRaiser is a 1990 platform and city-building simulation game for the Super Nintendo, combining traditional side-scrolling platforming with urban planning god game sections. In 2007, ActRaiser became available on the Wii's Virtual Console download service. A version of the game was also released for European mobile phones in 2004.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1991,
           "igdbId": 6468,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego clásico completo con acción y construcción."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de época, algo rígidos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, buena música."
+            }
+          ]
         },
         {
           "id": 43,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 6468,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que SNES."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado más cómodo en Consola Virtual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 44,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 6468,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que SNES."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido en Consola Virtual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD estable."
+            }
+          ]
         },
         {
           "id": 1029,
@@ -72,7 +147,28 @@
           "kind": "remake",
           "year": 2021,
           "igdbId": 172430,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más contenido: nuevas fases y escenas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control moderno, pero cambios en el diseño."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Reinvención con cambios grandes."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Gráficos modernos y estable."
+            }
+          ]
         },
         {
           "id": 1030,
@@ -81,7 +177,28 @@
           "year": 2021,
           "igdbId": 172430,
           "steamAppId": 1393370,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más contenido: nuevas fases y escenas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control moderno con ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Reinvención con cambios grandes."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 1031,
@@ -89,14 +206,51 @@
           "kind": "remake",
           "year": 2021,
           "igdbId": 172430,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más contenido: nuevas fases y escenas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control moderno y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Reinvención con cambios grandes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen aspecto, menos potencia que PC."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/166f8cd6a7551b0060393dc172e35265.png",
         "hero": "https://cdn2.steamgriddb.com/hero/059e83d6a60903ac8c1b1ec60bf0ccf2.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/e38f33506d2b9e9f151d1acea2a7b206.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 518,
+          "platform": "snes",
+          "project": "ar-recomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp-go",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/DerrickGold/ar-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 228,
@@ -116,6 +270,12 @@
         {
           "field": "original_name",
           "value": "ActRaiser 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "ActRaiser 2 is a side-scrolling platform game for the Super Nintendo Entertainment System developed by Quintet and published by Enix in 1993.\n\nThe game is a sequel to the original ActRaiser, but the storyline is not directly connected to its predecessor; however, many plot details suggest that ActRaiser 2 may actually be set before the events of the original ActRaiser, or takes place in another universe entirely. Otherwise, the given story draws concepts from the famous religious epics Paradise Lost and the Divine Comedy.\n\nUnlike the original game, which alternately combined platform game sequences and god game sequences, ActRaiser 2 is only a platform game.",
           "source": "igdb",
           "manual": false
         },
@@ -143,5 +303,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2060,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26,
+          "reason": "1990"
+        },
+        {
+          "position": 2,
+          "gameId": 228,
+          "reason": "1993"
+        }
+      ]
+    }
+  ]
 }

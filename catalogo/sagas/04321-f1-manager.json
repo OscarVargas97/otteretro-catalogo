@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "74573",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "F1 Manager 2024",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "F1 Manager 2024",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lead your team to glory in F1 Manager 2024. A new Formula 1 season has arrived, packed with 24 races, new cars, new Team Principals and an updated F1 Sprint race format. Start your career at one of 10 official F1 teams or create your own for the very first time.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 290808,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010072E01CE0E000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "105850",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "F1 Manager 2022",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "F1 Manager 2022",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Make your mark on Formula 1 in the officially licensed F1 Manager 2022. Choose your team and be the boss with the full 2022 roster of staff and drivers. Featuring full F1 licensing and true-to-life presentation.",
           "source": "igdb",
           "manual": false
         },
@@ -168,7 +195,12 @@
           "igdbId": 193538,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b6f607a007609f2e7a9f2751daf5c328.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b9971a734026412378ae112c50f5664a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c6024a192f4bc3e6a4294ee0f941a386.png"
+      }
     },
     {
       "id": 45177,
@@ -180,6 +212,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "107112",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "F1 Manager 2023",
           "source": "igdb",
@@ -188,6 +226,12 @@
         {
           "field": "original_name",
           "value": "F1 Manager 2023",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "F1 Manager 2023 gives you unparalleled control of your chosen F1 team, with rich and detailed management features, refined racing spectacle, deeper authenticity and a brand-new mode that allows you to rewrite the season on your terms.Drive every decision and become the best team on the grid across the official 2023 F1 season and beyond.",
           "source": "igdb",
           "manual": false
         },
@@ -240,8 +284,38 @@
           "igdbId": 247383,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a3fcdcf62c30e6626f76a88f528bb785.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5b051b7a3ab7c2bbdd28098676efd0d6.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/324ffc34e5d9d1f3d82969d4272903d7.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1924,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 44595,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 45177,
+          "reason": "2023"
+        },
+        {
+          "position": 3,
+          "gameId": 29931,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

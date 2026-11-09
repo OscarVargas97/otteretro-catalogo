@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85052",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Seikai no Senki",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Seikai no Senki",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Seikai no Senki is a PC and PlayStation 2 game by Gainax.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 214549,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo de la versión original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado libre y salto de texto cómodos en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución ajustable y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 85053,
@@ -56,9 +89,36 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 214549,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port con posibles extras de consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Menos opciones de guardado y navegación con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Con cambios propios del port a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución de PS2 y cargas más lentas."
+            }
+          ],
+          "codes": [
+            "SLPM-66692"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co54fx.jpg"
+      }
     }
   ],
   "routes": []

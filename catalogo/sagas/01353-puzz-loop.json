@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A rather peculiar game that tasks you with throwing colour co-ordinated people at others in a queue. It's as crazy as it sounds.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -66,6 +72,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "12931",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ballistic",
           "source": "igdb",
@@ -74,6 +86,12 @@
         {
           "field": "original_name",
           "value": "Ballistic",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ballistic is a puzzle game in which the player must place 3 patterned balls next to each other in order to clear them.",
           "source": "igdb",
           "manual": false
         },
@@ -99,7 +117,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 187304,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02701",
+            "SLUS-00966"
+          ]
         }
       ],
       "images": {
@@ -109,5 +131,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2324,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6633,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 4202,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

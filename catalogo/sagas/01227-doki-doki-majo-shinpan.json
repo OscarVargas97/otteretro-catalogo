@@ -65,6 +65,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "45397",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Doki-doki Majo Shinpan!",
           "source": "igdb",
@@ -73,6 +79,12 @@
         {
           "field": "original_name",
           "value": "Doki-doki Majo Shinpan!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Doki-doki Majo Shinpan! is a video game developed by SNK Playmore for Nintendo DS. The player assumes the role of a junior high school student who is asked by an angel to locate a witch that has sneaked into his school. In order to find the witch, he must search the suspects' bodies for a \"witch mark.\" The preferred method is by using touch (using the stylus to guide his hands). A sequel titled Doki Doki Majo Shinpan 2 Duo was released 31 July 2008, and a third game titled Doki Majo Plus was released on July 30, 2009.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +102,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 47970,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base del juego sin los añadidos del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles y menús de la época, sin mejoras de comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto en DS, sin cambios técnicos notables."
+            }
+          ]
         },
         {
           "id": 45397,
@@ -98,7 +131,28 @@
           "kind": "remake",
           "year": 2009,
           "igdbId": 69120,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Probablemente incluye material extra respecto al original (sin verificar)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Probablemente con ajustes de comodidad respecto al original (sin verificar)."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Remake que altera parte de la experiencia original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Misma plataforma DS, sin diferencias técnicas claras."
+            }
+          ]
         }
       ],
       "images": {
@@ -107,5 +161,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2298,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16956,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 3738,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

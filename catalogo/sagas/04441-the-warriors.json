@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81840",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Warriors",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Warriors",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Based on the 1979 movie of the same name. A battle on the New York streets. The armies of the night number 60,000 strong, and tonight they're all after The Warriors - a street gang wrongly accused of killing a rival gang leader.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 6030,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con minijuegos y extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de su época, sin ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor visual de las versiones originales."
+            }
+          ]
         },
         {
           "id": 81839,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 6030,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo de PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Trofeos y guardado más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a PS2."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación con mejoras ligeras."
+            }
+          ]
         },
         {
           "id": 81840,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 6030,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo de PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Trofeos y guardado cómodo en consola actual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a PS2."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y más estable."
+            }
+          ]
         },
         {
           "id": 81841,
@@ -72,7 +147,32 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 6030,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido distinto y reducido (Warriors: Streets)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, controles limitados."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Adaptación distinta del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución de pantalla."
+            }
+          ],
+          "codes": [
+            "ULES-00483",
+            "ULUS-10213"
+          ]
         },
         {
           "id": 81842,
@@ -80,14 +180,58 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 6030,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que Xbox."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de su época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Prácticamente idéntica."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Ligeramente inferior a Xbox."
+            }
+          ],
+          "codes": [
+            "SLES-53443",
+            "SLES-53443/P",
+            "SLES-53443/P-ANZ",
+            "SLUS-21215"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/4d895b36f6022d8abc0a30249da4df56.png",
         "hero": "https://cdn2.steamgriddb.com/hero/69f6ffd71cf2dc9146e752ec559a9b06.png",
         "logo": "https://cdn2.steamgriddb.com/logo/613e4b45be59f778a80853ebed1031e7.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1209,
+          "platform": "xbox",
+          "project": "TheWarriors-XBERecomp",
+          "kind": "recomp",
+          "toolchain": "XboxXBE-Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Antriksh1984/TheWarriors-XBERecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "xemu",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 48516,
@@ -99,6 +243,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114998",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Warriors: Street Brawl",
           "source": "igdb",
@@ -107,6 +257,12 @@
         {
           "field": "original_name",
           "value": "The Warriors: Street Brawl",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Warriors ... come out to play-ayyy! Relive the unforgettable cult classic movie and experience The Warriors: Street Brawl in a 3-D side-scrolling fight fest. Brawl it out old school style using your fists and a variety of weapons. Battle through 20 miles of gang-infested Manhattan in order to get back to your home turf, Coney Island. Play as Swan, Cochise, Vermin, or Rembrandt and lead your gang all the way to the showdown against Luther and the Rogues.",
           "source": "igdb",
           "manual": false
         },
@@ -134,8 +290,33 @@
           "igdbId": 21218,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/81b9f6136ad90d9c7cad19ed187a6c22.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/cda3cd26eb96cd54003c160020d7eb9b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/baa5efe4a6dc4ee752e1c0770a7108ff.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3203,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32719,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 48516,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

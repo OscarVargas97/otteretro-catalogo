@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19008",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Goetia",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Goetia",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Goetia is a point-and-click adventure game – and, as in any adventure game, you’ll be seeking out clues, finding objects, and figuring out how to use or combine them in order to progress through the different areas, puzzles and encounters. However, there is one major difference compared to other adventure games that you might be used to. In Goetia, you play the part of Abigail, the ghost of a young lady. And as a ghost, you can walk through walls and fly through ceilings, you can explore everywhere as you see fit. But… to manipulate objects, you’ll have to possess them, just like a real poltergeist would. And once you possess an object, you can’t pass through walls anymore.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 18454,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control correcto con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 19008,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 18454,
           "steamAppId": 421740,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles flexibles, guardado normal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 19009,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 18454,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control correcto con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 19010,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 18454,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución más limitada."
+            }
+          ],
+          "codes": [
+            "0100D82009024000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +191,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "56063",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Goetia 2",
           "source": "igdb",
@@ -100,6 +205,12 @@
         {
           "field": "original_name",
           "value": "Goetia 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "What could happen to two lovers who decided for a short break in Venice, Italy? Among all the possible scenarios, being pulled apart and tricked by a demon is certainly not what Daphné and Luca were expecting. Awakened as a pure soul in a twisted world he doesn’t understand, Luca is trapped in the reality of Buer, a demon with ulterior motives.",
           "source": "igdb",
           "manual": false
         },
@@ -126,7 +237,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 200803,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010067F017FF6000"
+          ]
         }
       ],
       "images": {
@@ -135,5 +249,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2569,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9065,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 22514,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

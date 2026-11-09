@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14345",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Injustice: Gods Among Us",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Injustice: Gods Among Us",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "What if our greatest heroes became our greatest threat? Injustice: Gods Among Us introduces a bold new franchise to the fighting game genre from NetherRealm Studios, creators of the definitive fighting game Mortal Kombat. Featuring DC Comics icons such Batman, Cyborg, The Flash, Harley Quinn, Nightwing, Solomon Grundy, Superman and Wonder Woman, the latest title from the award-winning studio presents a deep original story. Heroes and villains will engage in epic battles on a massive scale in a world where the line between good and evil has been blurred.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1918,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01673",
+            "BLUS-31018"
+          ]
         },
         {
           "id": 14346,
@@ -83,6 +99,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99968",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Injustice 2",
           "source": "igdb",
@@ -91,6 +113,12 @@
         {
           "field": "original_name",
           "value": "Injustice 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Power up and build the ultimate version of your favorite DC legends in INJUSTICE 2. With a massive selection of DC Super Heroes and Super-Villains, INJUSTICE 2 allows you to equip every iconic character with unique and powerful gear earned throughout the game. Experience an unprecedented level of control over how your favorite characters look, how they fight, and how they develop across a huge variety of game modes. This is your super Hero. Your Journey. Your Injustice.",
           "source": "igdb",
           "manual": false
         },
@@ -127,8 +155,33 @@
           "igdbId": 19470,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/288ffb7472070728482f09036fc61bc1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8c33e4788904c28f0aee4b02b35ed9d3.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/6a51cda981c61788ac9a6c540f03f27c.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2470,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7738,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 41941,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

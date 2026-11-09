@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "25362",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Robot Wars X",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Super Robot Wars X",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The fates of warriors X-cross once again in a new world. The crossover of robots from different series in the world of “Al-Warth,” Super Robot Wars X is now out on STEAM! Guided by a bizarre fate, just what is waiting for the warriors gathered in “Al-Warth”?",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 87796,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todo su contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles cómodos y guardado fiable."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena fluidez y cargas aceptables."
+            }
+          ]
         },
         {
           "id": 25363,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 87796,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Soporta mando y teclado, ajustes gráficos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 25364,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 87796,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente, con algunos recortes visuales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, pero con pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y rendimiento limitado."
+            }
+          ]
         },
         {
           "id": 25365,
@@ -72,7 +147,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 87796,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo en modo portátil o sobremesa."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor, estable en general."
+            }
+          ]
         }
       ],
       "images": {
@@ -89,6 +185,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "30263",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Robot Taisen T",
           "source": "igdb",
@@ -97,6 +199,12 @@
         {
           "field": "original_name",
           "value": "Super Robot Taisen T",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Robot Taisen T is a simulation RPG with various robots crossing-over from different works to fight against common enemies.",
           "source": "igdb",
           "manual": false
         },
@@ -132,5 +240,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2671,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10886,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 12405,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

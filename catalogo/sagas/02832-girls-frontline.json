@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "34278",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Reverse Collapse: Code Name Bakery",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Reverse Collapse: Code Name Bakery",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Reverse Collapse: Code Name Bakery is a tactical turn based role-playing game. Set in the near future, Earth has plunged into the \"Second Cold War\", a world war in which two factions – the emerging Antarctic Union and the old guard UURSG – battle for dominance over cutting-edge technology that can turn the tide of war.\n\nAn improved remake of the Tactical RPG \"Code Name: Bakery Girl\", the story is set 30 years after the events of Girls' Frontline.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2024,
           "igdbId": 121203,
           "steamAppId": 1127700,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado, ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Remake fiel a la propuesta."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 34279,
@@ -57,7 +90,28 @@
           "kind": "remake",
           "year": 2024,
           "igdbId": 121203,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Modo portátil cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Remake fiel a la propuesta."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución más baja."
+            }
+          ]
         }
       ],
       "images": {
@@ -76,6 +130,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113708",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Reverse Collapse: F",
           "source": "igdb",
@@ -84,6 +144,12 @@
         {
           "field": "original_name",
           "value": "Reverse Collapse: F",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Reverse Collapse: F is a story-focused sci-fi cooperative PvE third person shooter. It was announced during the Girls' Frontline 10th Anniversary event and is planned for 2028.",
           "source": "igdb",
           "manual": false
         },
@@ -119,8 +185,31 @@
           "igdbId": 400301,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coc0ds.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2769,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13553,
+          "reason": "2024"
+        },
+        {
+          "position": 2,
+          "gameId": 47869,
+          "reason": "2028"
+        }
+      ]
+    }
+  ]
 }

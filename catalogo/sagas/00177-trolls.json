@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "419",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Stone Protectors",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Stone Protectors",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A kingdom built by crystals in under attack by the Saurians. Their leader, called Zok, wants the kingdom's powerful crystals which is protected by the Queen. Breaking into the castle, all seems lost, but as Zok reaches to take the crystal, it explodes into pieces and they fly away... to earth. All but one of the crystals reaches New York and flies into the hands of a rock band... who are transformed into goblins by the power of the crystals. Now their goal is to bring back the pieces to the kingdom and fight Zok and take his piece.\n\nThe game is a typical Beat-'em-Up-game, each player has different weapons, all from melée to long-range weapons such as bazookas and guns.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 38433,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles toscos, sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento original."
+            }
+          ]
         },
         {
           "id": 419,
@@ -57,7 +90,28 @@
           "year": 2022,
           "igdbId": 38433,
           "steamAppId": 1911510,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, posibles extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Probable rebobinado y guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al de SNES."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen escalada y sin ralentizaciones por hardware."
+            }
+          ]
         }
       ],
       "images": {
@@ -82,6 +136,12 @@
         {
           "field": "original_name",
           "value": "Super Troll Islands",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Arcade platform game, based on the license of those bright-haired cute naked chaps. Each scrolling level was initially shrouded in an animated \"mist\". Large rectangles of mist could be cleared by running around platforms and ladders in the correct order. As the mist cleared, a brightly-coloured background was revealed. All the usual platform enemies and pickups abounded.",
           "source": "igdb",
           "manual": false
         },
@@ -130,6 +190,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In this puzzle game, the player controls one of the trolls as they bounce back and forth across the screen trying to acquire the jewels on the playfield. The one caveat is that the players troll has to match the color of the jewel he or she is trying to collect. To become the correct color to snatch up the jewels, the player has to bounce across a paint can that will change your trolls hair to that of the same color as the paint can. The object in each puzzle is to retrieve all the treasures in a room without their character falling prey to the various enemies in rooms or running out of time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1994",
           "source": "igdb",
@@ -145,8 +211,36 @@
           "igdbId": 48269,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6oxe.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1418,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 609,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 277,
+          "reason": "1994"
+        },
+        {
+          "position": 3,
+          "gameId": 43160,
+          "reason": "1994"
+        }
+      ]
+    }
+  ]
 }

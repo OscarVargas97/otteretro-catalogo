@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "15001",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Power Golf",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Power Golf",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Power Golf is a golf video game released by Hudson Soft for the TurboGrafx-16 on August 29, 1989 as one of the system's launch titles. Played using primarily an overhead view of each hole, Power Golf features stroke and match play, and a competition mode that supports up to three players.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 42100,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control fiel, guardado básico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port directo del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación en Wii a 480p."
+            }
+          ]
         },
         {
           "id": 15000,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 42100,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido igual; no verificado si hay extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Depende del teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Probablemente fiel, no confirmado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución flexible, sin verificar."
+            }
+          ]
         },
         {
           "id": 15001,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 42100,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración y mandos flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port directo del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD a 720p."
+            }
+          ]
         }
       ],
       "images": {
@@ -91,6 +166,12 @@
         {
           "field": "original_name",
           "value": "Power Eleven",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Power Eleven is a 1991 Japan-exclusive football video game with top-down perspective, published by Hudson Soft for the PC Engine. It was part of the Power Sports Series, a series of sports games released between 1988 and 1998.",
           "source": "igdb",
           "manual": false
         },
@@ -137,6 +218,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Power Tennis is a tennis game. It features three modes: singles, doubles, and world tour. Countries featured include Japan, the United States of America, the United Kingdom, Australia, and France. The player can choose between various athletes, and different types of courts (hard, lawn, and clay).",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -158,5 +245,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1616,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7880,
+          "reason": "1989"
+        },
+        {
+          "position": 2,
+          "gameId": 19887,
+          "reason": "1991"
+        },
+        {
+          "position": 3,
+          "gameId": 20127,
+          "reason": "1993"
+        }
+      ]
+    }
+  ]
 }

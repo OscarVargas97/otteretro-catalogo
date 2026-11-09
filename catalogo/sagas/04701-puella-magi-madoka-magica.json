@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Puella Magi Madoka Magica Portable is a Japanese roguelike role-playing game with visual novel elements. It is based on the Puella Magi Madoka Magica anime franchise. The game allows players to take many routes, changing the fate of the original storyline.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 11846,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/af2163ae814c087714854fc3c3f76876.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e41bbd4af5da30044b88dc9ab711c5b2.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b29135354047b4fa01f0f943737cc038.png"
+      }
     },
     {
       "id": 40886,
@@ -74,6 +85,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Puella Magi Madoka Magica: The Battle Pentagram is a 3D action game based on the Puella Magi Madoka Magica anime franchise. The game features daytime and nighttime sequences. At daytime, players can talk with the magical girls and strengthen their bonds, while at nighttime players battle witches, the results of which can affect your bonds with the magical girls.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -89,8 +106,33 @@
           "igdbId": 11847,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2e7145689ecdf9560060a209d9ae676a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ee6921d6aa58f31a4ec21e813fed92fd.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/124f1ad42351b5f842a608a7f5b1aba8.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3263,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35181,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 40886,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

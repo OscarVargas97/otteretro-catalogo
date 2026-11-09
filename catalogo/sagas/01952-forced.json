@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14430",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Forced",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Forced",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Players are cast as slaves in a fantasy gladiator arena, condemned to fight as gladiators to win their freedom. With the help of Balfus, a Spirit Mentor, they are able to fight their way through the challenges and Guardians at the end of each area and gain freedom for them and their kin.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 5626,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Juega bien con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable a 1080p."
+            }
+          ]
         },
         {
           "id": 14430,
@@ -57,7 +90,28 @@
           "year": 2013,
           "igdbId": 5626,
           "steamAppId": 249990,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todos los modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado o mando, con buenos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y cuadros por segundo altos y configurables."
+            }
+          ]
         },
         {
           "id": 14431,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 5626,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, posible uso de segunda pantalla."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funcional, pero con menos precisión de apuntado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución más baja y consola descontinuada."
+            }
+          ]
         },
         {
           "id": 14432,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 5626,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Juega bien con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable a 1080p."
+            }
+          ]
         }
       ],
       "images": {
@@ -91,6 +187,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115955",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Minion Masters",
           "source": "igdb",
@@ -99,6 +201,12 @@
         {
           "field": "original_name",
           "value": "Minion Masters",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Minion Masters: The realm's greatest Masters face off in a never-ending conflict for glory. Will you play Control, Aggressive, Swarm or Giant Minions? Choose a Master matching your playstyle and build the best deck to overthrow your opponents in short intense games!\n\nJoin millions of players worldwide and discover one of the best ever rated free game on Steam! Minion Masters is an insanely simple - but challenging to master - Online Strategic & Dynamic game both for competitive and casual players.\n\nPlay 1v1 duels or combine decks in 2v2 multiplayer, with full cross-play for Steam, Xbox, and more to come! Or embark on solo adventures through the different ages and conflicts of the continent. Discover the legends of the Crystal Elves, Empyreans, Zen-chi, and more!",
           "source": "igdb",
           "manual": false
         },
@@ -127,8 +235,33 @@
           "igdbId": 27150,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3cf80f113461db4a67c9721c58b15d86.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/30bb3825e8f631cc6075c0f87bb4978c.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/c7c6102d3e9a9c2796099bdb93d3d23f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2474,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7762,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 49173,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60296",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Alundra",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Alundra",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Between the worlds of light and dark lies the world of dreams. A world where the rule of reason loosens its grip. A place where an insidious evil is stealing minds and blackening the hearts of those from the world of light. Grab a weapon and become the dreamwalker Alundra as he struggles to purge the evil Id of an ancient world before it falls to ash.\n\nExplore dungeons, find weapons, solve challenging puzzles, and kick some serious monster butt as you weave between tense reality and nightmarish dreams to save the hapless masses. With a wide cast of characters and scores of challenging puzzles created by the people responsible for Landstalker on the Genesis. Alundra will rob you of precious sleep until you finish!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1175,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego de PS1 relanzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado libre y trofeos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a PS1."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación con mejor imagen."
+            }
+          ]
         },
         {
           "id": 60297,
@@ -56,7 +89,44 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 1175,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Guardado con tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y cargas largas."
+            }
+          ],
+          "codes": [
+            "SCPS-10035",
+            "SLES-01135",
+            "SLES-01198",
+            "SLES-01256",
+            "SLES-01257",
+            "SLES-01258",
+            "SLUS-00553",
+            "SLUS-00553A",
+            "SLUS-00553B",
+            "SLUS-00553C",
+            "SLUS-00553D",
+            "SLUS-00553E",
+            "SLUS-00553G",
+            "SLUS-00553H"
+          ]
         },
         {
           "id": 60298,
@@ -64,14 +134,51 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1175,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a PS1."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta en pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/62369392c675ab68a37e5f5e5a819506.png",
         "hero": "https://cdn2.steamgriddb.com/hero/9439f1dded6e4cee7a2c49b5b8105ee8.png",
         "logo": "https://cdn2.steamgriddb.com/logo/3d20badc2e5a7bf74ce0fc12cabfbd92.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 525,
+          "platform": "ps1",
+          "project": "alundra-recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/aitorcachero/alundra-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 23940,
@@ -95,6 +202,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "You are Flint, a renegade swordsman on a quest to free a kingdom from the grip of a sinister ruler. Through a land of hidden danger you wield your weapon, navigating an intricate story wrought with bizarre characters, brain-twisting puzzles and wild games. Beware! An even greater evil is about to be revealed...",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -108,7 +221,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 1176,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02600",
+            "SLUS-01017"
+          ]
         }
       ],
       "images": {
@@ -118,5 +235,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3057,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23825,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 23940,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

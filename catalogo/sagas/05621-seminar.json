@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The illustrious Yukari Umesawa teaches players to play Go.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 54939,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7yl1.jpg"
+      }
     },
     {
       "id": 48081,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A how-to-play Othello game from Success.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 54943,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/l4gjuxwcojnsepwudqg9.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3493,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48080,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 48081,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

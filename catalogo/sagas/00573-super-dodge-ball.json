@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The year is 20XX and dodge ball has become the number one sport in the world. Teams from all over the world now compete in dodge ball tournaments to prove once and for all who is the best dodge ball team ever.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 6620,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ADFE",
+            "ADFP"
+          ]
         }
       ],
       "images": {
@@ -67,6 +77,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "27510",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Arcade Archives: Super Dodge Ball",
           "source": "igdb",
@@ -75,6 +91,12 @@
         {
           "field": "original_name",
           "value": "Arcade Archives: Super Dodge Ball",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Arcade Archives: Super Dodge Ball is a port of the action game Super Dodge Ball. Players compete with powerful teams of the world, to become a Super Dodge Ball team of the world. In Japan, it was the second game with starring Technos Japan's video game character Kunio-kun, following Nekketsu Koha Kunio-kun (the Japanese version of Renegade).",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +114,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 99568,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego arcade con modos de puntuación."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control y ajustes de dificultad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Arcade fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable en HD."
+            }
+          ]
         },
         {
           "id": 27510,
@@ -100,7 +143,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 99568,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido arcade."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Modo portátil y mando individual para partidas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Arcade fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con buenos ajustes."
+            }
+          ],
+          "codes": [
+            "0100C6C009812000"
+          ]
         }
       ],
       "images": {
@@ -129,13 +196,24 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Dodge Ball is the localization for the Japanese Arcade game Nekketsu Koukou Dodgeball-bu.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1987",
           "source": "igdb",
           "manual": false
         }
       ],
-      "versions": []
+      "versions": [],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ae6af2070178d932b5d382a033257e34.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d1a7c6924159054d0e339e8a746b7f70.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c18329a875ee3142771b03cad25cfc79.png"
+      }
     },
     {
       "id": 48709,
@@ -159,6 +237,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Downtown Smash Dodgeball! is an Xbox Live Indie game, inspired by Super Dodge Ball.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -174,8 +258,41 @@
           "igdbId": 61959,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4i44.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1107,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42616,
+          "reason": "1987"
+        },
+        {
+          "position": 2,
+          "gameId": 1469,
+          "reason": "2001"
+        },
+        {
+          "position": 3,
+          "gameId": 48709,
+          "reason": "2009"
+        },
+        {
+          "position": 4,
+          "gameId": 11552,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

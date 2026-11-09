@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "107533",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Forgiveness RPG: The First Chapter - Part One",
           "source": "igdb",
@@ -58,7 +64,10 @@
           "igdbId": 285347,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co97qd.jpg"
+      }
     },
     {
       "id": 45378,
@@ -69,6 +78,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "107557",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Forgiveness RPG: The First Chapter - Part Two",
@@ -105,7 +120,10 @@
           "igdbId": 294688,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co97qe.jpg"
+      }
     },
     {
       "id": 45408,
@@ -116,6 +134,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "107615",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Forgiveness RPG: The First Chapter - Part Three",
@@ -152,8 +176,36 @@
           "igdbId": 297539,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co97qf.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2038,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 45365,
+          "reason": "2024"
+        },
+        {
+          "position": 2,
+          "gameId": 45378,
+          "reason": "2024"
+        },
+        {
+          "position": 3,
+          "gameId": 45408,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

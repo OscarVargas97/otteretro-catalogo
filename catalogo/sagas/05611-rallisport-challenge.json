@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114237",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "RalliSport Challenge",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "RalliSport Challenge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You want real rally racing? Try strapping yourself in for the four play modes of RalliSport Challenge. Twenty-five licensed vehicles participate in Conventional Rally, RallyCross, Hill Climb and Ice Racing. Tracks are taken from the real world, with matching terrains and environments. Particle and weather effects heighten the realism. RalliSport Challenge's unique AI engine delivers drivers with their own individual personalities and driving habits, and effective graphics and animations bring it all to life.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 841,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a1581efff154bdfea74c8b7e763e2597.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4bcc7e5f973eceab603798a4fad2caf2.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/e0bd056ad00e30db167713b2fe6432b7.png"
+      }
     },
     {
       "id": 48152,
@@ -82,6 +99,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "RalliSport Challenge 2 is a 2004 rally racing video game, and the sequel to the 2002 RalliSport Challenge. This game contains new features such as a cockpit cameras and ability to change car at the last moment. However, stats like total horsepower and number of gears have been eliminated from the car selection screen.\n\nCars are split up into 5 categories with 2 subcategories each plus \"Classic\" cars. There are 4 paint schemes on each car and drivers must drive 31, 87, and 249 miles before unlocking a new one. By winning all championships in the career mode, all paint schemes for all cars are unlocked.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -97,8 +120,50 @@
           "igdbId": 5997,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/23be6e3f7d89ca997093aad05f0b2229.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b05a7a5c64a7b3683f86e5a82acded21.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/590894963d4a3cc360d47e890416c00a.png"
+      },
+      "ports": [
+        {
+          "id": 1004,
+          "platform": "xbox",
+          "project": "RallisportChallenge2-decomp",
+          "kind": "recomp",
+          "toolchain": "xboxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Mortify7612/RallisportChallenge2-decomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "xemu",
+          "emulatorLevel": 2
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3489,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48013,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 48152,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

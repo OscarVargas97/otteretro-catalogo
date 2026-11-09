@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96208",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deadliest Warrior: Legends",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Deadliest Warrior: Legends",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Deadliest Warrior: Legends is a fighting game and sequel to Deadliest Warrior: The Game. It was released on July 6, 2011 for Playstation Network and X-Box Live Arcade. Unlike the first game, all the fighters are named warriors, instead of all generic warriors.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 21080,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/63cd1166a51bafe8bd66986cedf5d9a2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/7cfba69a47b40a065000c42819ce7a53.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/304ea40f268e8879c9a02cc608be239d.png"
+      }
     },
     {
       "id": 40551,
@@ -70,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97075",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deadliest Warrior: The Game",
           "source": "igdb",
@@ -78,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Deadliest Warrior: The Game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Drawing inspiration from the Bushido Blade series, Deadliest Warrior: The Game is a 3D fighting game based on the Spike TV show \"Deadliest Warrior\", where generic versions of ancient warriors clash to find out who is the deadliest.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +134,33 @@
           "igdbId": 67092,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/69d75a187eac3c4d219dd872d622df40.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c093601fef2e1ed4007cd64fff40e6e9.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/62c926761bf7adecf3892f395a93c5c1.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3348,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40551,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 40213,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

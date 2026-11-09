@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "54289",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Reknum",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "Reknum",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Advance through six different zones as Princess Cheri while looting chests and upgrading skills in order to progress. Each zone introduces new elements and new enemies which must be overcome.",
           "source": "igdb",
           "manual": false
         },
@@ -39,7 +51,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 130401,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base sin cambios destacados."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien en PS4."
+            }
+          ]
         },
         {
           "id": 34975,
@@ -47,7 +80,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 130401,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que el lanzamiento."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Jugable en portátil o en televisor."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento sencillo, sin mejoras posteriores."
+            }
+          ]
         },
         {
           "id": 54289,
@@ -55,7 +109,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 182475,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, posible relanzamiento o actualización."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Jugable en portátil o en televisor, quizá con ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntica al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Probablemente con correcciones respecto a la edición de 2020."
+            }
+          ]
         }
       ],
       "images": {
@@ -74,6 +149,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "40002",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Reknum Cheri Dreamland",
           "source": "igdb",
@@ -82,6 +163,12 @@
         {
           "field": "original_name",
           "value": "Reknum Cheri Dreamland",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "REKNUM Fantasy of Dreams is an action, exploration and 2D platformer videogame, it is the latest installment in the REKNUM saga in which Cheri awakens from a fantasy to start the real adventure! Explore the thematic levels, unlock new weapons and upgrade your skills, fight fearsome bosses inspired by classic gameplay, decipher the poetic words of the ancestors when you travel through the dreamworld and reach the real final outcome.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +195,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 145968,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01005320144BC000"
+          ]
         }
       ],
       "images": {
@@ -125,6 +215,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "40728",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Reknum: Fantasy of Dreams",
           "source": "igdb",
@@ -133,6 +229,12 @@
         {
           "field": "original_name",
           "value": "Reknum: Fantasy of Dreams",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Reknum: Fantasy of Dreams is a 2.5D adventure and exploration game that combines action and the magic of dreams. Join Cheri on her epic quest to uncover the secrets of a dream world filled with strange creatures, puzzles, and surreal landscapes. With hand-drawn frame-by-frame graphics and an instrumental soundtrack that captures the essence of a dream, every step of this journey is a work of art.",
           "source": "igdb",
           "manual": false
         },
@@ -167,5 +269,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2034,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13803,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 15267,
+          "reason": "2021"
+        },
+        {
+          "position": 3,
+          "gameId": 15457,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

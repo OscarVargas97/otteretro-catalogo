@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Wii Play collects nine quick and addictive games that are easy to pick up and play and hard to put away. Thanks to the intuitive controls of the Wii Remote, even the most inexperienced gamers will have no trouble mastering the controls.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -48,14 +54,35 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 2185,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RHAE-USA",
+            "RVL-RHAP-EUR",
+            "RVL-RHAP-EUR-1"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/6f097e848d3e349ddf8763d4aaa943df.png",
         "hero": "https://cdn2.steamgriddb.com/hero/3be4d3f098a8da78f521afe939a92f1c.png",
         "logo": "https://cdn2.steamgriddb.com/logo/02b1be0d48924c327124732726097157.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1478,
+          "platform": "wii",
+          "project": "Rhae",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/akiramusic000/Rhae",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 19794,
@@ -79,6 +106,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Wii Play: Motion is a minigame collection that features Miis as playable characters. All the minigames require use of the Wii MotionPlus accessory, which allows Wii Remote movement to be detected with greater accuracy. Twelve minigames are available to play with both single-player and multiplayer modes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -92,7 +125,11 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 5281,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SC8E-USA-B0",
+            "RVL-SC8P-EUR-B0"
+          ]
         }
       ],
       "images": {
@@ -102,5 +139,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2937,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19379,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 19794,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

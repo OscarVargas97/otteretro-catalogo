@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2807",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Perfect Dark",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Perfect Dark",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Perfect Dark is a first-person shooter video game developed by Rare and published by Nintendo for the Nintendo 64 video game console. It is considered the spiritual successor to Rare's earlier first-person shooter GoldenEye 007, with which it shares many gameplay features. Perfect Dark was first released in North America on 22 May 2000; PAL and NTSC-J releases followed soon afterwards. A separate Game Boy Color game, also titled Perfect Dark, was released in August 2000 as a supplement to the game and allows certain features within the Nintendo 64 game to alternatively be unlocked via a Transfer Pak.\n\nThe game features a single-player mode consisting of 17 main missions in which the player assumes the role of Carrington Institute agent Joanna Dark as she attempts to stop a conspiracy by rival corporation dataDyne. It also features a range of multiplayer options, including a co-operative mode and traditional deathmatch settings. Technically, it is one of the most advanced games developed for the Nintendo 64, with an optional high resolution graphics mode and Dolby Surround Sound. A Nintendo 64 Expansion Pak is required to access the game's campaign and most of the multiplayer features.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,12 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 1463,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NPDE",
+            "NPDJ",
+            "NPDP"
+          ]
         },
         {
           "id": 2807,
@@ -71,7 +88,66 @@
         "cover": "https://cdn2.steamgriddb.com/grid/f2eaa301f9c53bb10fb8e5b9d3d0ea9c.png",
         "hero": "https://cdn2.steamgriddb.com/hero/eb454ad6be830064d49727814426bb6e.png",
         "logo": "https://cdn2.steamgriddb.com/logo/5590ca803d2831d2a3dff3fa3eaca6f4.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 288,
+          "platform": "n64",
+          "project": "perfect_dark",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/perfect-dark-pc-port/perfect_dark",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 968,
+          "platform": "n64",
+          "project": "perfect-dark-recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/n64hub/perfect-dark-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 969,
+          "platform": "x360",
+          "project": "PerfectDarkRemasterRecomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/nikolaygorb/PerfectDarkRemasterRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 970,
+          "platform": "x360",
+          "project": "Perfect-Dark-XBLA-PC-Recomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/CaiusCodes/Perfect-Dark-XBLA-PC-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 48214,
@@ -95,6 +171,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Xbox 360 prequel to Rare's Nintendo 64 hit, Perfect Dark. Players once again slip into the role of Joanna Dark and fight their way through a twisting sci-fi storyline. The franchise's staple multiplayer mode returns, this time with full online support.\n\nSet in the year 2020, three years before the original hit game Perfect Dark, Perfect Dark Zero features a gripping story, multiple game scenarios for endless replayability, a massive arsenal of weapons and combat-enabled vehicles. The sci-fi, first-person shooter features a fully interactive world, support for up to 50 players online via Xbox Live, breathtaking high-resolution graphics and spectacular special effects.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -110,8 +192,50 @@
           "igdbId": 1465,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6757c5d828a29b814e9992332f70b2b7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/16a0720adefe16db0df9b9023e733639.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/db304c0c06222d9c79241e3dbf2e5093.png"
+      },
+      "ports": [
+        {
+          "id": 971,
+          "platform": "x360",
+          "project": "PerfectDarkZeroRecomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/nikolaygorb/PerfectDarkZeroRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2162,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1330,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 48214,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

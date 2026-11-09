@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "41301",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Strike Force 2: Terrorist Hunt",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Strike Force 2: Terrorist Hunt",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A tropical paradise turned into a warzone. One of our agents was on the mission to investigate a para militarized terrorist organization lead by a former german secret service agent. We lost his tracking signal. The last message we got was his coordinates and request for extraction. You are a member of the Strike Force Unit. Your objective is to rescue our agent and combat the terrorist organization. Gear up with a modern arsenal of machine guns, assault rifles, sniper rifles and pistols and fulfill your objective.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147654,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento estándar."
+            }
+          ]
         },
         {
           "id": 41300,
@@ -57,7 +90,28 @@
           "year": 2022,
           "igdbId": 147654,
           "steamAppId": 1375260,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado, ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento."
+            }
+          ]
         },
         {
           "id": 41301,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 147654,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Cargas rápidas y fluidez."
+            }
+          ]
         },
         {
           "id": 41302,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147654,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento estándar."
+            }
+          ]
         },
         {
           "id": 41303,
@@ -81,7 +177,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147654,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y cómoda."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y fluidez."
+            }
+          ],
+          "codes": [
+            "01004B500F07C000"
+          ]
         }
       ],
       "images": {
@@ -98,6 +218,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "70453",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Strike Force 3",
           "source": "igdb",
@@ -106,6 +232,12 @@
         {
           "field": "original_name",
           "value": "Strike Force 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join Strike Force 3, an elite unit combating ruthless terrorists. Engage in adrenaline-pumping firefights, stealth missions, and complete daring objectives. Enlist now for the ultimate combat experience!",
           "source": "igdb",
           "manual": false
         },
@@ -148,7 +280,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 260606,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010060200F080000"
+          ]
         }
       ],
       "images": {
@@ -157,5 +292,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2831,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 15764,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 28329,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43693",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ribbit King",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ribbit King",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The 'Kero Kero' of the title comes from the onomatopoeia for the sound a frog makes. But no wonder the frog is squawking as it gets hammered around the course in a game of croquet with frogs instead of balls. Various conditions to consider too like in golf such as the wind direction or the fact that the ball is a frog and will jump off spiders webs or launch at passing flies. Allows players to enjoy their own characters in versus mode too.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 4087,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GKRE-0-USA",
+            "DL-DOL-GKRP-EUR"
+          ]
         },
         {
           "id": 43694,
@@ -56,7 +72,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 4087,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52466",
+            "SLUS-20837"
+          ]
         }
       ],
       "images": {
@@ -87,6 +107,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kero Kero 7 features an assortment of spy tools for players to use. Record a voice sample and save it or send it to friends. Use your built-in stopwatch or set an alarm. Scribble away with your very own drawing tools! Annoy your friends with your own personal sound effect generator! Or share your secret agent data card with friends who have a copy of the game!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -100,7 +126,10 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 72284,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AK7J"
+          ]
         }
       ],
       "images": {
@@ -108,5 +137,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2852,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16603,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 17384,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

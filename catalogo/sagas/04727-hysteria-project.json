@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86050",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hysteria Project",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Hysteria Project",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You play as an an anonymous mute man who has been locked up inside of a shed, who bears a strange tattoo on his arm. If you don't escape quickly enough, another hooded man will barge in and kill you. It's up to you to save yourself and figure out who you are and why you're wanted dead. Clues are scarce, and the threat of your would-be assassin is always on your heels. Start running.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 20624,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/dc831cf1b53c899ff25ce0085b6c7a45.png"
+      }
     },
     {
       "id": 35407,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86152",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hysteria Project 2",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Hysteria Project 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Hysteria Project 2 is the sequel to Hysteria Project. It continues the story of a kidnapped man who escapes his captor and becomes entangled in the mystery of “Project H,” while being pursued by a hooded figure and a strange black smoke. The game uses a live-action, “choose your own adventure” format with quick-time events to progress the narrative.",
           "source": "igdb",
           "manual": false
         },
@@ -95,7 +122,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 20623,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control cómodo con mando en pantalla grande."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y carga estable."
+            }
+          ]
         },
         {
           "id": 86153,
@@ -103,7 +151,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 20623,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pantalla táctil y portátil cómoda."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mejor que PSP, inferior a PS3."
+            }
+          ]
         },
         {
           "id": 86154,
@@ -111,10 +180,54 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 20623,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Pantalla pequeña y controles más limitados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y cargas más lentas."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co723b.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3272,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35342,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 35407,
+          "reason": "2011"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

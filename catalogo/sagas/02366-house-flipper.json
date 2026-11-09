@@ -19,9 +19,15 @@
       "originalName": "House Flipper",
       "year": 2018,
       "igdbId": 27744,
-      "popularity": 113,
+      "popularity": 114,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "21702",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "House Flipper",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "House Flipper",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "House Flipper is a unique chance to become the one-man renovating crew. You've got to earn it around here before you purchase your first property. No worries though! Luckily, there's plenty of work at your fingertips! Take job offers from nearby residents to clean up, paint walls, install heaters, showers, and air conditioners, or even furnish their whole property! Once the grateful clients pay you for your solid work, it's time to get your own house.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,7 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 27744,
-          "steamAppId": 1853610,
+          "steamAppId": 613100,
           "criteria": []
         },
         {
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 27744,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100CAE00EB02000"
+          ]
         },
         {
           "id": 21700,
@@ -117,6 +132,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110771",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "House Flipper 2",
           "source": "igdb",
@@ -125,6 +146,12 @@
         {
           "field": "original_name",
           "value": "House Flipper 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's time to dust off your hammer - House Flipper is back in a brand-new fashion! Buy and renovate run-down houses! Or maybe you want to build new ones? Now you can! Start as a rookie Flipper and make a fortune by helping out the community of the charming town of Pinnacove.",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +169,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 191797,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo, con actualizaciones algo posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles de mando bien adaptados."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con cargas rápidas."
+            }
+          ]
         },
         {
           "id": 110770,
@@ -150,7 +198,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 191797,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo en portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil, con pantalla táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución que en PC y PS5."
+            }
+          ]
         },
         {
           "id": 110771,
@@ -159,7 +228,28 @@
           "year": 2023,
           "igdbId": 191797,
           "steamAppId": 1190970,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con las actualizaciones y DLC más recientes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado cómodos para decorar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y rendimiento ajustable."
+            }
+          ]
         },
         {
           "id": 110772,
@@ -167,10 +257,56 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 191797,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo, con actualizaciones algo posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles de mando bien adaptados."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con cargas rápidas."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6daacfcddd63a82217250e755d8adad2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1d009c9d4f166b8289cc219188205e51.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/d1b769aeddff7949bb28ce194c1c6840.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2616,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9640,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 46767,
+          "reason": "2023"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

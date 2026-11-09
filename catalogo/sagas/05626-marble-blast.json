@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114506",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Marble Blaster",
           "source": "igdb",
@@ -48,7 +54,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 210043,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Primera versión, con menos niveles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles básicos con ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la primera versión."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Funciona bien pero es temprana."
+            }
+          ]
         },
         {
           "id": 114505,
@@ -56,7 +83,28 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 26191,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, adaptado a consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando, menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación a consola con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de consola antigua."
+            }
+          ]
         },
         {
           "id": 114506,
@@ -64,9 +112,33 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 26191,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más niveles y contenido pulido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con ratón refinado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al concepto original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y fluida en PC."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3c42855b11fcc918539180683df819a3.png"
+      }
     },
     {
       "id": 48459,
@@ -78,6 +150,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114931",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Marble Blast Ultra",
           "source": "igdb",
@@ -86,6 +164,12 @@
         {
           "field": "original_name",
           "value": "Marble Blast Ultra",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Marble Blast Ultra is the latest in the classic Marble Blast series. Suitable for players of any age, Marble Blast Ultra transports you to a futuristic 'astrolab' arena suspended high in the clouds. Compete against each other by navigating your marbles through moving platforms and dangerous hazards, while collecting rare gems and power-up enhancements, in an effort to complete each course in record time. Compete head to head in Xbox Live ultra blast multiplayer mode.",
           "source": "igdb",
           "manual": false
         },
@@ -103,7 +187,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 20503,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, posibles recortes en multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel de 2011."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución flexible en PC."
+            }
+          ]
         },
         {
           "id": 114931,
@@ -111,10 +216,56 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 20503,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Niveles completos y modos multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando y guardado de logros."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable a 60 fps en HD."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6a14ada8ce6fbfebedc2154db173d2f7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/680fd12be44eee12aee2a2e023438a5d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/698936639e27b2bc038e0d7b4ea464b2.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3496,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48109,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 48459,
+          "reason": "2006"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

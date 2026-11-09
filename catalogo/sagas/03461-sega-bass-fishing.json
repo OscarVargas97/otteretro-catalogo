@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "48773",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sega Bass Fishing",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Sega Bass Fishing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Explore the exciting sport of Bass fishing! Based on the Dreamcast hit, motor out to eight different fishing locations to catch the biggest and baddest Bass possible! Choose between fourteen different lures, and compete in four tournaments. Start off as an amateur, and work your way up to the pros in the Masters Classic tournament. Get hooked!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 5147,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Modos del juego base, con trofeos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Juega bien con mando, aunque menos inmersivo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al juego base."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Versión en HD y estable."
+            }
+          ]
         },
         {
           "id": 48773,
@@ -56,7 +89,33 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 5147,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Modos arcade y original, con contenido adaptado a Wii."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control de movimiento con el mando, muy natural."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene el espíritu, con control distinto."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución estándar, estable."
+            }
+          ],
+          "codes": [
+            "RVL-RBTE-USA",
+            "RVL-RBTE-USA-B0",
+            "RVL-RBTP-EUR"
+          ]
         },
         {
           "id": 48774,
@@ -65,7 +124,28 @@
           "year": 2001,
           "igdbId": 5147,
           "steamAppId": 71240,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port del juego base con los modos habituales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Con teclado o mando pierde mucho el encanto."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, salvo por el control."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución mayor, pero port antiguo con problemas de compatibilidad."
+            }
+          ]
         },
         {
           "id": 48775,
@@ -73,7 +153,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 5147,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Modos del juego base, con logros."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Juega bien con mando, aunque menos inmersivo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al juego base."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Versión en HD y estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -104,6 +205,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Put on fishing caps, fill up the coolers, and get ready to play the game that is just like life on the lake. This is the third title in the SEGA Bass Fishing series. Choose a character from a cast of anglers, each with their own distinct and unique characteristics. Fish on lakes that reflect the seasons, time of day, temperature, weather, and wind. With practice, tournament, versus modes, and great graphics, SEGA Bass Fishing Duel is a great sporting-adventure!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -117,7 +224,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 22231,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51388",
+            "SLUS-20339"
+          ]
         }
       ],
       "images": {
@@ -126,5 +237,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2946,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19570,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 33232,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

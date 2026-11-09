@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A love adventure game based on the famous story, \"Nansou Satomi Hakkenden\".",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -48,9 +54,15 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 220573,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-06356"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5flo.jpg"
+      }
     },
     {
       "id": 36277,
@@ -74,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel of Satomi Hakkenden Hachitama no Ki.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -87,9 +105,15 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 220574,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-06379"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5flp.jpg"
+      }
     },
     {
       "id": 36285,
@@ -113,6 +137,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Satomi Hakkenden Murasamemaru no Ki was released in 2015 for the PSP.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -128,8 +158,36 @@
           "igdbId": 220575,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5flq.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1990,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36269,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 36277,
+          "reason": "2014"
+        },
+        {
+          "position": 3,
+          "gameId": 36285,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

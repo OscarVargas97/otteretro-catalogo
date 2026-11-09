@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2420",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "WinBack: Covert Operations",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "WinBack: Covert Operations",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A terrorist group calling itself the Crying Lions is about to take over the world with its mighty satellite and Jean-Luc Cougar is the only one who can stop it. As Jean-Luc, a covert operative working for the Strategic Covert Actions Team, you are responsible for taking back a Lions-controlled base and regaining power of the satellite. Some of the weapons you'll have to acquire and use to defeat the terrorists are handguns, shotguns, and machine guns, though you'll also need to access such materials as explosives, detectors, flashlights and medical kits in order to succeed. A refreshing take on the traditional action game, WINBACK requires as much stealth and strategy as it does reflexes and use of weaponry. The game features six different multiplayer modes, supporting up to four players: Death Match, Lethal Tag, Quick Draw, Cube Hunt, Team Battle, and Point Match. You select your difficulty level and you can even start off in a Tutorial mode to get the controls down.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,31 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 47680,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Campaña completa y modo multijugador, base del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sistema de cobertura que funciona, pero el control en N64 es más torpe."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución, niebla y cuadros por segundo inestables."
+            }
+          ],
+          "codes": [
+            "NWDE"
+          ]
         },
         {
           "id": 2420,
@@ -56,7 +92,31 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 47680,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Misma campaña y modos, con posibles pequeños añadidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor respuesta y control con el DualShock."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conserva el diseño original con mejoras visuales leves."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y rendimiento más estable que en N64."
+            }
+          ],
+          "codes": [
+            "SLUS-20160"
+          ]
         }
       ],
       "images": {
@@ -75,6 +135,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82431",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "WinBack 2: Project Poseidon",
           "source": "igdb",
@@ -83,6 +149,12 @@
         {
           "field": "original_name",
           "value": "WinBack 2: Project Poseidon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In a world where terror takes many forms, a new weapon threatens to shake the balance of power. Freedom's last hope rests in the hands of three new operatives, who must race against time to recover this doomsday device. The fate of the world hangs by a thread, and a few ticks of the clock means the difference between justice and annihilation. WINBACK 2 brings to the series a new \"route\" system that lets players experience each mission from the perspective of different operatives. There are 30 intense missions, multiple difficulty levels, and new weapons including the highly-anticipated sniper rifle. The new Winback assault team is comprised of three young, yet combat-proven operatives led by Craig Contrell. Each team member is qualified in six different weapon types and highly-adept at CQB (Close Quarter Battle). They are masters of target identification, engagement and shot placement. In the hands of the player, all of these techniques will be put to the test. The game's unique shooting action is spread across 30 high-risk operations situated in challenging urban environments and conveyances.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +180,13 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 6234,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLKA-25380",
+            "SLPM-55113",
+            "SLPM-66431",
+            "SLUS-20947"
+          ]
         }
       ],
       "images": {
@@ -118,5 +196,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2158,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1290,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 33034,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

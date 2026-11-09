@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84125",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Alarm for Cobra 11: Hot Pursuit",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Alarm for Cobra 11: Hot Pursuit",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Alarm for Cobra 11 Vol. 2: Hot Pursuit is a licensed game about the eponymous German action TV series.\n\nThe player solves one mission after another the goal is mostly to chase other drivers down. In the process unlocking special cars and a Making Of about the pilot movie. The courses are based on Berlin, Cologne, Hamburg, Munich, Paris, London and New York.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 68263,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6p1q.jpg"
+      }
     },
     {
       "id": 34424,
@@ -69,6 +84,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "84554",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "RTL Alarm für Cobra 11: Teil II",
@@ -105,7 +126,10 @@
           "igdbId": 144348,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2ukf.jpg"
+      }
     },
     {
       "id": 48281,
@@ -117,6 +141,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114639",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crash Time",
           "source": "igdb",
@@ -125,6 +155,12 @@
         {
           "field": "original_name",
           "value": "Crash Time",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Solve cases on the infamous Autobahn highway in this laughable title by taking down dangerous criminals without stepping out of your vehicle in over 70 fascinating missions. Also features a local multiplayer race mode.",
           "source": "igdb",
           "manual": false
         },
@@ -152,8 +188,36 @@
           "igdbId": 6945,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co25n3.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1963,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34424,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 34109,
+          "reason": "2004"
+        },
+        {
+          "position": 3,
+          "gameId": 48281,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

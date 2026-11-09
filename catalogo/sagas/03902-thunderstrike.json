@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Firestorm: Thunderhawk 2, known as Thunderstrike 2 in North America, is a 1995 combat flight simulator video game developed by Core Design and released for Microsoft Windows, PlayStation and Sega Saturn. It is the sequel to Thunderhawk.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 24991,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-00191"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Thunderhawk: Operation Phoenix, known as Thunderstrike: Operation Phoenix in North America and Japan, is a 2001 combat flight simulator video game developed by Core Design and released by Eidos Interactive for the PlayStation 2. It is the sequel to Firestorm: Thunderhawk 2.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -90,7 +105,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 43278,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCPS-55008",
+            "SLUS-20232"
+          ]
         }
       ],
       "images": {
@@ -98,5 +117,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3069,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24068,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 33191,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

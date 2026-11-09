@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "15031",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Moto Roader II",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Moto Roader II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Abandoned future-lite style of the first game for a hard sci-fi look. In addition to a car, players can now race as tanks or hovercraft.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 37708,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta en PS3."
+            }
+          ]
         },
         {
           "id": 15031,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 37708,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -75,6 +129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24777",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Moto Roader MC",
           "source": "igdb",
@@ -83,6 +143,12 @@
         {
           "field": "original_name",
           "value": "Moto Roader MC",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Moto Roader MC is a racing game by NCS and is the third episode of the Moto Roader series. Up to five players can race each other on twenty five tracks (five courses of five tracks each) as they vie for the first place. Unlike other games of the series, each track is constructed of a single static screen and is reminiscent of the arcade classic Super Sprint. Each race is made out of eight laps where anything goes! Cars are invincible and can fire an unlimited amount of rockets and bombs which, consequently, leads the gameplay more towards speed and attack. All the racing tracks display a showcase of exquisite themes - from classic \"City\" and \"Nature\" scapes to more elaborate designs such as the fantasy \"Marchen\" or the unique \"Special\" courses. Road hazards also spice up the game and make each play session unique - from classic pits, speed boosters to shortcuts and disorienting teleporters.",
           "source": "igdb",
           "manual": false
         },
@@ -132,7 +198,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 79389,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010020E016938000"
+          ]
         }
       ],
       "images": {
@@ -163,6 +232,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Moto Roader is a futuristic racing game that allows up to five players to compete against each other. Players use the cash earned when they win a race to power up their machine. Not only can they change the \"tire\" and \"body\" of their vehicles, but they also can add \"special\" parts. Jump over tall obstacles with a \"hopper\" and blast past rivals at incredible speeds with \"nitro.\" What multiplayer game would be complete without attack items? Use a forward-launching \"grenade\" or a backward-dropping \"bomber\" to blow up and knock away rivals. Outmaneuver rivals in all eight heats to become the champion.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1989",
           "source": "igdb",
@@ -186,5 +261,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1617,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20109,
+          "reason": "1989"
+        },
+        {
+          "position": 2,
+          "gameId": 7894,
+          "reason": "1991"
+        },
+        {
+          "position": 3,
+          "gameId": 10675,
+          "reason": "1992"
+        }
+      ]
+    }
+  ]
 }

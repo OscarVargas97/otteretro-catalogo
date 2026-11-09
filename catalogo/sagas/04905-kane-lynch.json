@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94390",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kane & Lynch 2: Dog Days",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Kane & Lynch 2: Dog Days",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kane & Lynch 2: Dog Days is a raw and intense third person shooter designed to take players on an visceral story driven experience, following two of gaming's most disturbed criminals through the gritty Shanghai underworld. Introducing a new visual experience, the design of Kane & Lynch 2: Dog Days has been inspired by documentary film-makers and the user-generated content era.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,13 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 488,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00604",
+            "BLES-00947",
+            "BLJM-60252",
+            "BLUS-30383"
+          ]
         },
         {
           "id": 94390,
@@ -67,7 +85,12 @@
           "igdbId": 488,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a606db731d30029173a3cedca5085ae9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9461cce28ebe3e76fb4b931c35a169b0.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/d09544555a3c3e0f06cf16074dd6a961.png"
+      }
     },
     {
       "id": 39857,
@@ -79,6 +102,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95318",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kane & Lynch: Dead Men",
           "source": "igdb",
@@ -87,6 +116,12 @@
         {
           "field": "original_name",
           "value": "Kane & Lynch: Dead Men",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A squad-based shooter centering around the uneasy alliance between ex-military mercenary Adam 'Kane' Marcus and the psychopathic James Lynch.",
           "source": "igdb",
           "manual": false
         },
@@ -104,7 +139,13 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 7032,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00167",
+            "BLJS-10025",
+            "BLJS-10059",
+            "BLUS-30102"
+          ]
         },
         {
           "id": 95318,
@@ -123,8 +164,33 @@
           "igdbId": 7032,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4b36a0f6a0b923eba8ad8a47845e065b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9366fb6cdeff0a5d6c1093d1ffcfe458.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/d245a31982cd0441c99f8a6ad0cecc6d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3310,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39857,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 39579,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

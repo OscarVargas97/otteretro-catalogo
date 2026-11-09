@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94162",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Darkness",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Darkness",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Darkness features a distinct blend of dark modern crime drama and supernatural horror with intense first person non-linear gameplay. The game is a dynamic first person shooter that allows players to call upon the forces of the evil underworld as they fight in gritty, urban environments.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,13 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1347,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00058",
+            "BLES-00059",
+            "BLJS-10023",
+            "BLUS-30035"
+          ]
         },
         {
           "id": 94163,
@@ -58,8 +76,146 @@
           "igdbId": 1347,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/729ee60ab58fdd04c0e42324cf4741ef.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/372680a47ac1b06023127cc5830f0441.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e601ac8ec15075e6c6d0831dbd5a9c81.png"
+      },
+      "ports": [
+        {
+          "id": 1179,
+          "platform": "x360",
+          "project": "Estacado-The-Darkness-Recomp",
+          "kind": "recomp",
+          "toolchain": "XenonRecomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/invinceble55-wq/Estacado-The-Darkness-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1180,
+          "platform": "x360",
+          "project": "The-Darkness-Recomp",
+          "kind": "recomp",
+          "toolchain": "XenonRecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/portingpete/The-Darkness-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
       ]
+    },
+    {
+      "id": 39632,
+      "nameEs": "The Darkness II",
+      "originalName": "The Darkness II",
+      "year": 2012,
+      "igdbId": 544,
+      "popularity": 266,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "94544",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "The Darkness II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "The Darkness II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Darkness II is an intense first person shooter that delivers a twisted and gripping narrative of tragedy, modern crime drama, and supernatural horror. Players will be taken down the brutal and personal path of Jackie Estacado, head of a New York crime family and wielder of an ancient and ruthless force of chaos and destruction known as The Darkness.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2012",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 94543,
+          "platform": "ps3",
+          "kind": "original",
+          "year": 2012,
+          "igdbId": 544,
+          "criteria": [],
+          "codes": [
+            "BLES-01388",
+            "BLES-01389",
+            "BLES-01390",
+            "BLJS-10137",
+            "BLKS-20307",
+            "BLUS-30743"
+          ]
+        },
+        {
+          "id": 94544,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2012,
+          "igdbId": 544,
+          "steamAppId": 67370,
+          "criteria": []
+        },
+        {
+          "id": 94545,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2012,
+          "igdbId": 544,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7d57783f3e3622fcbda6e50a9128094c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f6fc8ead7f341c8c1ac89688a1a4b450.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/c923d8f64e256dde7c28bf1614d53602.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3305,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39490,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 39632,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

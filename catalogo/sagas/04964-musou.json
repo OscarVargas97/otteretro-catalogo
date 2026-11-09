@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95549",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Warriors: Legends of Troy",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Warriors: Legends of Troy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "From the creators of Dynasty Warriors comes an unbelievable game that tells the tale of the epic Trojan War. In this ancient time, men and gods fought alongside one another for eternal glory. Carve your name into history as you experience amazing action and incredible mythology.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 7244,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01183",
+            "BLUS-30502"
+          ]
         },
         {
           "id": 95550,
@@ -58,7 +74,12 @@
           "igdbId": 7244,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b1a9d32db714f2d557d3a8fadda2076e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8769083ff1072c1494f119f9f0740b94.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/9493b40d57ad7be6c0da24d381015694.png"
+      }
     },
     {
       "id": 41109,
@@ -70,6 +91,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98138",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Warriors All-Stars",
           "source": "igdb",
@@ -78,6 +105,12 @@
         {
           "field": "original_name",
           "value": "Warriors All-Stars",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Warriors All-Stars is a crossover game that features characters from multiple Koei Tecmo published franchises and games. Along with some original characters, the game not only features an extensive battle system, but also an abundance of content for players to enjoy outside of combat! This includes the Sanctuary, which surrounds the game’s mighty Hot Springs.",
           "source": "igdb",
           "manual": false
         },
@@ -114,8 +147,33 @@
           "igdbId": 26180,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ab83c3f7ab622f1436e7b43d83195005.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/88e71a1993534c0fa5327a63fdeb75bd.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3cdf17c9bfe55686f99b6f313f5917d1.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3330,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39966,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 41109,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

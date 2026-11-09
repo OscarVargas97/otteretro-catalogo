@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "53764",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Oxide: Room 104",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Oxide: Room 104",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A bone-chilling body-horror game with escape room gameplay. Bad decisions have brought Matthew to this terrifying motel. Now it’s up to you to decide how to escape – will you make it out alive?\n\nCombining escape room gameplay and action, Oxide Room 104 is a bone-chilling single-player body-horror game set inside an old motel. Abducted, at the mercy of a ruthless scientist, and stalked by a horrible creature, you must try to escape using common sense, just as you would in real life. Can you get out of Oxide?",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 186663,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010038A016E92000"
+          ]
         }
       ],
       "images": {
@@ -119,6 +134,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Immerse yourself in the most brutal body horror with Oxide Room 208 – File Josh. In this first episode, you’ll step into the skin of Josh, a hustler caught in a shady deal, desperately searching for the blood-soaked remains of his partner Matt while fighting for his life.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2025",
           "source": "igdb",
@@ -134,7 +155,10 @@
           "igdbId": 392344,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobqg8.jpg"
+      }
     },
     {
       "id": 46926,
@@ -146,6 +170,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111233",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Oxide Room 208",
           "source": "igdb",
@@ -154,6 +184,12 @@
         {
           "field": "original_name",
           "value": "Oxide Room 208",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Eight people trapped in an old laboratory will try to survive their last moments of life in this frenetic body-horror full of action, blood and guts. Oxide Room 208 challenges you to face your fears in a dark and twisted environment where flesh and madness merge.",
           "source": "igdb",
           "manual": false
         },
@@ -198,8 +234,36 @@
           "igdbId": 240258,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co95n6.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1848,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 21741,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 46238,
+          "reason": "2025"
+        },
+        {
+          "position": 3,
+          "gameId": 46926,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

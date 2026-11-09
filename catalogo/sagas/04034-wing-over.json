@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Wing Over is an arcade flight sim released for the PS1 in 1997. Featuring system link support for multi-player and a full single player tournament system, as well as a large roster of characters and planes to choose from, Wing Over has earned the title of a cult classic on the PS1.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 67674,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00540",
+            "SLPS-00598"
+          ]
         }
       ],
       "images": {
@@ -79,6 +89,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel to the 1997's overlooked Wing Over, Wing Over 2 features a far more involved story mode and leaves behind the tournament-style gameplay which drove the first instalment.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -92,7 +108,10 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 67667,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-01375"
+          ]
         }
       ],
       "images": {
@@ -100,5 +119,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3101,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25017,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 25084,
+          "reason": "1998"
+        }
+      ]
+    }
+  ]
 }

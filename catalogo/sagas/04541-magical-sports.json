@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A golf simulation game released in Japan and Europe.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 60885,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51055",
+            "SLES-51055-GER"
+          ]
         }
       ],
       "images": {
@@ -77,6 +87,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The second baseball title in the Magical Sports series and the only one released outside of Japan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -90,7 +106,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 58522,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51718"
+          ]
         }
       ],
       "images": {
@@ -98,5 +117,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3231,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33569,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 33586,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

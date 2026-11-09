@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7119",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ankh: Reverse the Curse",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ankh: Reverse the Curse",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ankh is a point-and-click 3D adventure game by Deck13 Interactive. It features a fully three-dimensional environment with cineastic camera movement. All content is fully spoken and the soundtrack reflects an authentic Egyptian atmosphere. Humor is an important aspect of the game, and the influence of classic LucasArts adventure games is noticeable.\n\nThe player takes the role of Assil, the son of a respected architect in Cairo. Assil is a party animal but at some point one of his party-nights turned out sour. When he tries to have some fun in the pyramids with two friends of his, he accidentally breaks some urns and thus disturbs the mummy resting in the pyramid. The mummy punishes Assil by placing a death curse on him, and now he has 24 hours to remove the curse and save himself. Later in the game Assil meets the Arabian ambassador's daughter Thara, who is also a playable character.\n\nRequires a game patch which consists of an updated audio .dll file made for Vista to run on Windows Vista or Windows 7.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "remake",
           "year": 2005,
           "igdbId": 4849,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Aventura completa en su forma original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón es ideal para este género."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión de referencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y gráficos más nítidos."
+            }
+          ]
         },
         {
           "id": 7795,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 21271,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Historia adaptada, con menos contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "El lápiz funciona, pero con menos precisión."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con recortes."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos reducidos para DS."
+            }
+          ]
         }
       ],
       "images": {
@@ -85,6 +139,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Satisfy your intellectual curiosity while playing games. The culmination of 30 years of research into Egypt by Sakuji Yoshimura.\n\nWill you be able to get your hands on the Ankh, the fabric of life?\nCan you hand the Ankh over to the builder of the Great Pyramid, who waits for you in the underworld? Another epic adventure in Egypt.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -106,5 +166,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2288,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26224,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 3541,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

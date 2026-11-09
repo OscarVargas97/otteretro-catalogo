@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The 16-bit sequel to NES Play Action Football. Graphics are from the same three-quarters perspective as the original. There are now three levels of play to choose from: high school, college, or professional. All 28 real NFL teams are included, but Nintendo did not secure the NFLPA or NCAA licenses, so there are no real player names or real universities. College play features weekly poll rankings, conference schedules, and bowl games. NFL play includes both the regular season and playoffs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1992",
           "source": "igdb",
@@ -66,6 +72,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "11555",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "NES Play Action Football",
           "source": "igdb",
@@ -74,6 +86,12 @@
         {
           "field": "original_name",
           "value": "NES Play Action Football",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nintendo takes its game to the gridiron with NES Play Action Football. While Nintendo did not get the NFL license for this one, it did secure the license of the NFL Player's Association, so the 8 teams to choose from (all named after the appropriate NFL cities) are all stocked up with real pro players from the 1989 season. You can even substitute second-stringers for the \"skill\" positions (QB, RB, WR, TE, and FS/SS) when your starters get tired.",
           "source": "igdb",
           "manual": false
         },
@@ -91,7 +109,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 48194,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que NES."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado de estado y mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más limpia en pantalla grande."
+            }
+          ]
         },
         {
           "id": 11556,
@@ -99,7 +138,28 @@
           "kind": "original",
           "year": 1990,
           "igdbId": 48194,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control de época, sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Calidad estándar de 8 bits."
+            }
+          ]
         },
         {
           "id": 11949,
@@ -107,7 +167,28 @@
           "kind": "original",
           "year": 1991,
           "igdbId": 49052,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión recortada para portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Pantalla pequeña, jugadas difíciles de ver."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Monocromo y baja resolución."
+            }
+          ]
         }
       ],
       "images": {
@@ -115,5 +196,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2103,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5760,
+          "reason": "1990"
+        },
+        {
+          "position": 2,
+          "gameId": 565,
+          "reason": "1992"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9465",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mighty Gunvolt",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mighty Gunvolt",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Steam version and the Japanese only PlayStation Network port of the game includes the Nintendo 3DS DLC levels.\n\n\"Get ready for a blast from the 8-bit past with the all-new 2D action/platforming game, MIGHTY GUNVOLT! A loving nod to the retro side-scrollers of the late '80s, MIGHTY GUNVOLT offers simple controls, cute and colourful graphics, and a surprising amount of complexity and fun.\n\nPlay as one of three characters: Gunvolt, the star of Azure Striker GUNVOLT; Ekoro, an angel from Japan's Gal*Gun series; or Beck, the hero of Mighty No. 9. Each character possesses unique skills that will allow players to keep challenging each stage in new and creative ways!\"",
           "source": "igdb",
           "manual": false
         },
@@ -92,6 +104,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9744",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mighty Gunvolt Burst",
           "source": "igdb",
@@ -100,6 +118,12 @@
         {
           "field": "original_name",
           "value": "Mighty Gunvolt Burst",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"The Mighty Gunvolt series is back with Might Gunvolt Burst!\n\nThe game systems have been completely revamped and powered up with lots of new additions, including a deep character customiztion system that lets you mold and shape your character into the ultimate hero that works best for you!\n\nThe classic pixel style graphics have also been completely redone to blur the line between 8-bit and 16-bit and take you back to the golden age of 2d action games!\n\nGunvolt from Azrue Striker Gunvolt 2 and Beck from Mighty No.9 make their return as playable characters!\nFind out what happens when their home worlds intertwine int the realm of virtual reality!\"",
           "source": "igdb",
           "manual": false
         },
@@ -117,7 +141,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 29143,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control, pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor."
+            }
+          ]
         },
         {
           "id": 9744,
@@ -126,7 +171,28 @@
           "year": 2019,
           "igdbId": 29143,
           "steamAppId": 774651,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y estabilidad."
+            }
+          ]
         },
         {
           "id": 9745,
@@ -134,7 +200,31 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 29143,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil y en TV, muy cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Fluido y nítido."
+            }
+          ],
+          "codes": [
+            "01000E2003FA0000"
+          ]
         }
       ],
       "images": {
@@ -144,5 +234,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2352,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4635,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 4805,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Train board game simulation for PlayStation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Despite the numbering, Tetsudou-ou 2 is the third game in the Tetsudou-ou series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -90,7 +102,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 62952,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01012"
+          ]
         }
       ],
       "images": {
@@ -98,5 +113,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3096,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24915,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 25009,
+          "reason": "1997"
+        }
+      ]
+    }
+  ]
 }

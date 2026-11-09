@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A couple of Cheetahmen levels, different from anything seen before, that were found in an Action 52 prototype and labeled as \"Action Gamer\".",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 63348,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3lgt.jpg"
+      }
     },
     {
       "id": 43519,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Cheetahmen was the most marketed game in the Action 52 compilation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 243939,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6pew.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3430,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43519,
+          "reason": "1991"
+        },
+        {
+          "position": 2,
+          "gameId": 43194,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

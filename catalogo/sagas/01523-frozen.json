@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10233",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Frozen: Olaf's Quest",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Frozen: Olaf's Quest",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In this humorous epilogue to the motion picture, ‘Disney Frozen: Olaf’s Quest’ hands center spotlight to Olaf, the outgoing, innocent and comically carefree snowman from Disney’s epic comedy adventure. It pairs tightly tuned platforming action with light puzzle-solving elements across 60 imaginative levels, complete with hidden collectibles, side challenges and unlockable customization items.",
           "source": "igdb",
           "manual": false
         },
@@ -62,7 +74,105 @@
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1ryd.jpg"
       }
+    },
+    {
+      "id": 40287,
+      "nameEs": "Frozen Free Fall",
+      "originalName": "Frozen Free Fall",
+      "year": 2013,
+      "igdbId": 18131,
+      "popularity": 5,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "96370",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Frozen Free Fall",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Frozen Free Fall",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A block-matching game based on the 2013 Disney film, Frozen.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2013",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 96370,
+          "platform": "ps3",
+          "kind": "original",
+          "year": 2015,
+          "igdbId": 18131,
+          "criteria": []
+        },
+        {
+          "id": 96371,
+          "platform": "ps4",
+          "kind": "original",
+          "year": 2015,
+          "igdbId": 18131,
+          "criteria": []
+        },
+        {
+          "id": 96372,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2015,
+          "igdbId": 18131,
+          "criteria": []
+        },
+        {
+          "id": 96373,
+          "platform": "xone",
+          "kind": "original",
+          "year": 2015,
+          "igdbId": 18131,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3wby.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2364,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5034,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 40287,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

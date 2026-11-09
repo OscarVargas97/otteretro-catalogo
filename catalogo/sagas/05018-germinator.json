@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96312",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Germinator",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Germinator",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Something messy and contagious is festering in suburbia...",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 21019,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co60r3.jpg"
+      }
     },
     {
       "id": 40644,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97208",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ms. Germinator",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Ms. Germinator",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sequel to the action puzzle game by Creat Studios.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +132,31 @@
           "igdbId": 63059,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co619o.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3352,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40265,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 40644,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

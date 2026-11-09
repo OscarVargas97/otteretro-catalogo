@@ -3,7 +3,7 @@
   "name": "Persona",
   "igdbKind": "collection",
   "igdbId": 552,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -35,6 +35,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The dream meeting of Persona 3, 4, 5! Welcome to the movie world (Labyrinth).\nThe latest RPG in the Persona series! A new storyline in Persona Q, this time focusing on P5. The most number of party members in the Persona series with a total of 28 people! A dream RPG where P3, P4, and P5 characters meet to unravel the mystery begins!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡El sueño hecho realidad de Persona 3, 4 y 5! Bienvenido al mundo de la película (Labyrinth).\n¡El último RPG de la serie Persona! Una nueva historia para Persona Q, esta vez centrada en P5. Es el juego de la serie Persona con más miembros en el grupo, con un total de 28 personajes. ¡Un RPG de ensueño en el que los personajes de P3, P4 y P5 se reúnen para desentrañar el misterio!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2018",
           "source": "igdb",
@@ -48,7 +60,12 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 54220,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AQ2E",
+            "CTR-P-AQ2J",
+            "CTR-P-AQ2P"
+          ]
         }
       ],
       "images": {
@@ -58,14 +75,227 @@
       }
     },
     {
+      "id": 8615,
+      "nameEs": "Persona 4 Arena Ultimax",
+      "originalName": "Persona 4 Arena Ultimax",
+      "year": 2013,
+      "igdbId": 11445,
+      "popularity": 50,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "17121",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Persona 4 Arena Ultimax",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Persona 4 Arena Ultimax",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Persona 4 Arena Ultimax is a fighting video game developed by Arc System Works and Atlus. It is the direct sequel to Persona 4 Arena, which is itself a follow-up to the role-playing game Persona 4. The game was originally released in Japanese arcades on November 28, 2013, and later ported to home consoles. Unlike the previous game, it is not region locked.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Persona 4 Arena Ultimax es un videojuego de lucha desarrollado por Arc System Works y Atlus. Es la secuela directa de Persona 4 Arena, que a su vez es continuación del juego de rol Persona 4. El juego se lanzó originalmente en los salones recreativos japoneses el 28 de noviembre de 2013 y después se adaptó a consolas domésticas. A diferencia del juego anterior, no tiene bloqueo regional.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2013",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 17119,
+          "platform": "ps3",
+          "kind": "original",
+          "year": 2014,
+          "igdbId": 11445,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo; DLC aparte."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "En línea antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja."
+            }
+          ],
+          "codes": [
+            "BLES-02125",
+            "BLUS-31469"
+          ]
+        },
+        {
+          "id": 17120,
+          "platform": "ps4",
+          "kind": "original",
+          "year": 2022,
+          "igdbId": 11445,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejor netcode en línea."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD a 60 fps."
+            }
+          ]
+        },
+        {
+          "id": 17121,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2022,
+          "igdbId": 11445,
+          "steamAppId": 1602010,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejor netcode, teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y 60 fps."
+            }
+          ]
+        },
+        {
+          "id": 17122,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2014,
+          "igdbId": 11445,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo; DLC aparte."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "En línea antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja."
+            }
+          ]
+        },
+        {
+          "id": 17123,
+          "platform": "switch",
+          "kind": "original",
+          "year": 2022,
+          "igdbId": 11445,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejor netcode, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución."
+            }
+          ],
+          "codes": [
+            "010075A016A3A000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/447eec9fa7953954b234758a99667eae.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c316b1caa7c585393187d1711e789178.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/176bf6219855a6eb1f3a30903e34b6fb.png"
+      }
+    },
+    {
       "id": 12174,
       "nameEs": "Persona 5",
       "originalName": "Persona 5",
       "year": 2016,
       "igdbId": 9927,
       "popularity": 1138,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "31116",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Persona 5",
@@ -76,6 +306,18 @@
           "field": "original_name",
           "value": "Persona 5",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Persona 5, a turn-based JRPG with visual novel elements, follows a high school student with a criminal record for a crime he didn't commit. Soon he meets several characters who share similar fates to him, and discovers a metaphysical realm which allows him and his friends to channel their pent-up frustrations into becoming a group of vigilantes reveling in aesthetics and rebellion while fighting corruption.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Persona 5, un JRPG por turnos con elementos de novela visual, sigue a un estudiante de secundaria con antecedentes penales por un delito que no cometió. Pronto conoce a varios personajes que comparten destinos similares al suyo y descubre un mundo metafísico que le permite a él y a sus amigos canalizar sus frustraciones reprimidas para convertirse en un grupo de justicieros que disfrutan de la estética y la rebeldía mientras combaten la corrupción.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -92,7 +334,33 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 9927,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base sin Royal."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin mejoras de Royal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "720p, cargas largas."
+            }
+          ],
+          "codes": [
+            "BLES-02247",
+            "BLJM-61346",
+            "BLUS-31604"
+          ]
         },
         {
           "id": 29660,
@@ -100,7 +368,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 9927,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base sin Royal."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin mejoras de Royal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "1080p, mejor."
+            }
+          ]
         },
         {
           "id": 31114,
@@ -108,7 +397,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 114283,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Royal completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles pulidos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original ampliado."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "4K y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 31115,
@@ -116,7 +426,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 114283,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Royal: nuevo semestre, personaje y mazmorras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejoras de combate y exploración."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original ampliado."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sólida en PS4."
+            }
+          ]
         },
         {
           "id": 31116,
@@ -125,7 +456,28 @@
           "year": 2022,
           "igdbId": 114283,
           "steamAppId": 1687950,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Royal completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original ampliado."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y 60 fps."
+            }
+          ]
         },
         {
           "id": 31117,
@@ -133,7 +485,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 114283,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Royal completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Háptico, cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original ampliado."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "4K y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 31118,
@@ -141,7 +514,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 114283,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Royal completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles pulidos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original ampliado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y cargas menores."
+            }
+          ]
         },
         {
           "id": 31119,
@@ -149,7 +543,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 114283,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Royal completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original ampliado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fluidez menores."
+            }
+          ]
         }
       ],
       "images": {
@@ -168,6 +583,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "32018",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Persona 5 Strikers",
           "source": "igdb",
@@ -177,6 +598,18 @@
           "field": "original_name",
           "value": "Persona 5 Strikers",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Persona 5 Strikers is a crossover between Koei Tecmo's hack and slash Dynasty Warriors series and Atlus's turn-based role-playing game Persona series. As a result, it features gameplay elements from both, such as the real-time action combat of the former with the turn-based Persona-battling aspect of the latter. The game is set six months after the events of Persona 5, and follows Joker and the rest of the Phantom Thieves of Hearts as they end up in a mysterious version of Tokyo filled with supernatural enemies.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Persona 5 Strikers es un crossover entre la serie de hack and slash Dynasty Warriors de Koei Tecmo y la serie de juegos de rol por turnos Persona de Atlus. Como resultado, incluye elementos de jugabilidad de ambas, como el combate de acción en tiempo real de la primera junto con la mecánica de combate con Personas por turnos de la segunda. El juego se ambienta seis meses después de los acontecimientos de Persona 5 y sigue a Joker y al resto de los Ladrones Fantasma de Corazones, que acaban en una misteriosa versión de Tokio llena de enemigos sobrenaturales.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -210,13 +643,213 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 117731,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100801011C3E000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a2f8ef93b20f78c1814d9e083947a86d.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/e44e875c12109e4fa3716c05008048b2.png",
         "logo": "https://cdn2.steamgriddb.com/logo/05e374aeae418cba14cf28fc22ff2e18.png"
+      }
+    },
+    {
+      "id": 24123,
+      "nameEs": "Megami Ibunroku Persona",
+      "originalName": "Megami Ibunroku Persona",
+      "year": 1996,
+      "igdbId": 240506,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "65468",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Megami Ibunroku Persona",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Megami Ibunroku Persona",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "While the West got Persona: Revelations, an Americanized port for the Playstation, Japan got its first Persona game under Megami Ibunroku Persona. The West eventually got a more faithful and enhanced remake on the Playstation Portable titled, Shin Megami Tensei: Persona with changed UI and music.\n\nThis 1996 Atlus role-playing game takes you on an adventure throughout Mikage-cho, where your classmate, Maki Sonomura, suddenly goes missing. Battle against demons as you fight your way to the suspicious SEBEC branch president, Takahisa Kandori. Additionally, join the battle back at St. Hermelin and rival against the Snow Queen as she freezes the school and possesses your beloved homeroom teacher, Ms. Saeko.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mientras Occidente recibió Persona: Revelations, un port americanizado para PlayStation, Japón recibió su primer juego de Persona con el título Megami Ibunroku Persona. Occidente acabó recibiendo un remake más fiel y mejorado para PlayStation Portable, titulado Shin Megami Tensei: Persona, con una interfaz y una música modificadas.\n\nEste videojuego de rol de Atlus de 1996 te lleva a una aventura por Mikage-cho, donde tu compañero de clase, Maki Sonomura, desaparece de repente. Lucha contra demonios mientras te abres camino hasta el sospechoso presidente de la sucursal de SEBEC, Takahisa Kandori. Además, únete a la batalla de regreso en St. Hermelin y enfréntate a la Reina de las Nieves mientras congela el colegio y posee a tu querida profesora de clase, la Sra. Saeko.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1996",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 61184,
+          "platform": "pc",
+          "kind": "original",
+          "year": 1999,
+          "igdbId": 240506,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sin mejoras de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercano al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Puerto antiguo de PC con posibles problemas."
+            }
+          ]
+        },
+        {
+          "id": 61185,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 1996,
+          "igdbId": 240506,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base japonés, sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Combate y mazmorras duros, sin ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original japonesa."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas lentas típicas de PS1."
+            }
+          ]
+        },
+        {
+          "id": 61711,
+          "platform": "pc",
+          "kind": "original",
+          "year": 1996,
+          "igdbId": 11452,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Mismo contenido base; datos del puerto poco claros."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Misma jugabilidad antigua."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercano al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Puerto antiguo de PC, compatibilidad dudosa hoy."
+            }
+          ]
+        },
+        {
+          "id": 61712,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 1996,
+          "igdbId": 11452,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Probable edición occidental con contenido recortado y cambios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Igual de exigente, sin mejoras."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy editada y con nombres cambiados."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas lentas de PS1."
+            }
+          ]
+        },
+        {
+          "id": 65468,
+          "platform": "psp",
+          "kind": "remake",
+          "year": 2009,
+          "igdbId": 21842,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade escenas, ajustes de dificultad y localización completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Interfaz más clara, guardado y dificultad ajustable."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Fiel en historia, con cambios de sistema."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas cortas y buena fluidez en PSP."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co68aa.jpg"
       }
     },
     {
@@ -229,6 +862,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87538",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Persona 2: Innocent Sin",
           "source": "igdb",
@@ -238,6 +877,18 @@
           "field": "original_name",
           "value": "Persona 2: Innocent Sin",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Persona 2: Innocent Sin is a Japanese role-playing video game developed and released by Atlus It is the second entry in the Persona series and acts as a sequel to the original Persona. The original version was not localized for western territories, but the PSP version was released in North America and Europe under the title Shin Megami Tensei: Persona 2: Innocent Sin. Innocent Sin takes place in the fictional Sumaru City, focusing on a group of high school students from Seven Sisters High School. The main protagonist, Tatsuya Suou, and a group of friends must confront a villainous figure called the Joker, who is causing the spread of reality-warping rumors through the city. The group are aided in their quest by their Personas, personified aspects of their personalities. The gameplay features turn-based battle gameplay, where characters use their Personas in battle against demons, and a separate Rumor system, where rumors spread around the city can influence events in the characters' favor.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Persona 2: Innocent Sin es un videojuego de rol japonés desarrollado y publicado por Atlus. Es la segunda entrega de la serie Persona y funciona como secuela del Persona original. La versión original no fue localizada para los territorios occidentales, pero la versión de PSP se lanzó en Norteamérica y Europa con el título Shin Megami Tensei: Persona 2: Innocent Sin. Innocent Sin transcurre en la ciudad ficticia de Sumaru y se centra en un grupo de estudiantes de secundaria de la Seven Sisters High School. El protagonista principal, Tatsuya Suou, y un grupo de amigos deben enfrentarse a una figura villana llamada el Joker, que está provocando la propagación de rumores que distorsionan la realidad por la ciudad. El grupo cuenta con la ayuda de sus Personas, aspectos personificados de sus personalidades. La jugabilidad incluye combates por turnos, en los que los personajes usan sus Personas contra demonios, y un sistema de Rumores aparte, en el que los rumores que circulan por la ciudad pueden influir en los acontecimientos a favor de los personajes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -254,7 +905,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 11453,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Solo en japonés, sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Interfaz y cargas más incómodas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas largas de PS1."
+            }
+          ]
         },
         {
           "id": 87538,
@@ -262,11 +934,138 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 250931,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo juego con traducción oficial y escenas extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y menús mejorados."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel con retoques menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas más cortas, vídeo y arte más limpios."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co898j.jpg"
+      }
+    },
+    {
+      "id": 28059,
+      "nameEs": "Persona 5 Tactica",
+      "originalName": "Persona 5 Tactica",
+      "year": 2023,
+      "igdbId": 252729,
+      "popularity": 29,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "69597",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Persona 5 Tactica",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Persona 5 Tactica",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "After a strange incident, the Phantom Thieves wander into a bizarre realm where its citizens are living under tyrannical oppression. Surrounded by a military group named Legionnaires, they find themselves in grave danger until a mysterious revolutionary named Erina rescues them and offers an enticing deal in exchange for their help. What truth lies behind Erina and the deal she offers to the Phantom Thieves.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tras un extraño incidente, los Ladrones Fantasma se adentran en un reino extraño donde sus ciudadanos viven bajo una opresión tiránica. Rodeados por un grupo militar llamado Legionarios, se encuentran en grave peligro hasta que una misteriosa revolucionaria llamada Erina los rescata y les ofrece un trato tentador a cambio de su ayuda. ¿Qué verdad se esconde tras Erina y el trato que les ofrece a los Ladrones Fantasma?",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2023",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 69595,
+          "platform": "xseries",
+          "kind": "original",
+          "year": 2023,
+          "igdbId": 252729,
+          "criteria": []
+        },
+        {
+          "id": 69596,
+          "platform": "ps4",
+          "kind": "original",
+          "year": 2023,
+          "igdbId": 252729,
+          "criteria": []
+        },
+        {
+          "id": 69597,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2023,
+          "igdbId": 252729,
+          "steamAppId": 2254740,
+          "criteria": []
+        },
+        {
+          "id": 69598,
+          "platform": "ps5",
+          "kind": "original",
+          "year": 2023,
+          "igdbId": 252729,
+          "criteria": []
+        },
+        {
+          "id": 69599,
+          "platform": "xone",
+          "kind": "original",
+          "year": 2023,
+          "igdbId": 252729,
+          "criteria": []
+        },
+        {
+          "id": 69600,
+          "platform": "switch",
+          "kind": "original",
+          "year": 2023,
+          "igdbId": 252729,
+          "criteria": [],
+          "codes": [
+            "010087701B092000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e0fd7affb3327e747b5c8e79f0c67af1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4d47ef5c6f9830420bf34b1d92f58374.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/48af63907473b9bd6eae96d74eae218e.png"
       }
     },
     {
@@ -279,6 +1078,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "71574",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Megami Ibunroku Persona: Iku no Tou-hen",
           "source": "igdb",
@@ -288,6 +1093,18 @@
           "field": "original_name",
           "value": "Megami Ibunroku Persona: Iku no Tou-hen",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Megami Ibunroku Persona: Ikū no Tō Hen is an RPG developed by Atlus and Bbmf for mobile phones, specifically the high-end feature phones of the time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Megami Ibunroku Persona: Ikū no Tō Hen es un RPG desarrollado por Atlus y Bbmf para teléfonos móviles, concretamente para los teléfonos de gama alta de la época.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -332,6 +1149,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "75098",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Aegis: The First Mission",
           "source": "igdb",
@@ -341,6 +1164,18 @@
           "field": "original_name",
           "value": "Aegis: The First Mission",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Aegis: The First Mission is a game designed for Japanese feature phones that stars Aigis set in May of 1999, 10 years before the events of Persona 3.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Aegis: The First Mission es un juego diseñado para teléfonos móviles japoneses que protagoniza Aigis, ambientado en mayo de 1999, diez años antes de los acontecimientos de Persona 3.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -385,6 +1220,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82747",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Persona 3",
           "source": "igdb",
@@ -394,6 +1235,18 @@
           "field": "original_name",
           "value": "Persona 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shin Megami Tensei: Persona 3 is a role-playing video game developed by Atlus. In the game, the player takes the role of a male high-school student who joins the Specialized Extracurricular Execution Squad (SEES), a group of students investigating the Dark Hour, a time period between one day and the next that few people are aware of. During the Dark Hour, the player enters Tartarus, a large tower containing Shadows, creatures that feed on the minds of humans. To fight the Shadows, each member of SEES is able to summon a Persona, a manifestation of a person's inner self. In addition to the standard elements of role-playing games, Persona 3 includes elements of simulation games, as the game's protagonist progresses day by day through a school year, making friends and forming relationships that improve the strength of his Personas in battle.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Shin Megami Tensei: Persona 3 es un videojuego de rol desarrollado por Atlus. En el juego, el jugador asume el papel de un estudiante varón de secundaria que se une al Specialized Extracurricular Execution Squad (SEES), un grupo de estudiantes que investiga la Hora Oscura, un periodo de tiempo entre un día y el siguiente que muy pocas personas conocen. Durante la Hora Oscura, el jugador entra en Tartarus, una gran torre que contiene Sombras, criaturas que se alimentan de las mentes humanas. Para luchar contra las Sombras, cada miembro de SEES puede invocar a una Persona, una manifestación del yo interior de una persona. Además de los elementos habituales de los juegos de rol, Persona 3 incluye elementos de simulación, ya que el protagonista avanza día a día a lo largo de un curso escolar, haciendo amigos y forjando relaciones que mejoran la fuerza de sus Personas en combate.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -410,7 +1263,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 11416,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido de P3P."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismas mejoras de P3P."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como P3P."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla Vita más nítida."
+            }
+          ]
         },
         {
           "id": 67181,
@@ -418,7 +1292,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 11416,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Protagonista femenina, sin The Answer."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controlas al grupo y exploración simplificada."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambios fuertes de presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución portátil."
+            }
+          ]
         },
         {
           "id": 67226,
@@ -426,7 +1321,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 234701,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "P3P con ambos protagonistas, sin The Answer."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando moderno y guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como P3P."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución mejor, estilo de PSP."
+            }
+          ]
         },
         {
           "id": 67227,
@@ -434,7 +1350,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 234701,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido de P3P."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor control y guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como P3P."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "HD pero escenas simples."
+            }
+          ]
         },
         {
           "id": 67228,
@@ -443,7 +1380,28 @@
           "year": 2023,
           "igdbId": 234701,
           "steamAppId": 1809700,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido de P3P."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como P3P."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Estable, activos de PSP."
+            }
+          ]
         },
         {
           "id": 67229,
@@ -451,7 +1409,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 234701,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido de P3P."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor control y guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como P3P."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "HD sencillo."
+            }
+          ]
         },
         {
           "id": 67230,
@@ -459,7 +1438,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 234701,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido de P3P."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como P3P."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Estable, estilo PSP."
+            }
+          ]
         },
         {
           "id": 82447,
@@ -467,7 +1467,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 9577,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Sin The Answer ni extras de FES."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "No controlas a tu grupo; menús lentos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución de PS2."
+            }
+          ]
         },
         {
           "id": 82700,
@@ -475,7 +1496,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 11437,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "FES clásico de PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Igual que PS2."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a FES."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación PS2, algo más limpia."
+            }
+          ]
         },
         {
           "id": 82701,
@@ -483,7 +1525,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 11437,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye The Answer y extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Misma jugabilidad antigua."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original ampliado, fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución de PS2."
+            }
+          ]
         },
         {
           "id": 82743,
@@ -491,7 +1554,28 @@
           "kind": "remake",
           "year": 2024,
           "igdbId": 252647,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Remake completo; Episodio Aigis como DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Combate moderno, controles pulidos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Fiel en trama, con cambios y sin protagonista femenina."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Gran resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 82744,
@@ -499,7 +1583,28 @@
           "kind": "remake",
           "year": 2024,
           "igdbId": 252647,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido de Reload."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mismos controles modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como Reload."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena, con cargas y resolución menores."
+            }
+          ]
         },
         {
           "id": 82745,
@@ -507,7 +1612,28 @@
           "kind": "remake",
           "year": 2025,
           "igdbId": 252647,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido de Reload."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo, jugable en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como Reload."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena para Switch 2, por debajo de PS5/PC."
+            }
+          ]
         },
         {
           "id": 82746,
@@ -516,7 +1642,28 @@
           "year": 2024,
           "igdbId": 252647,
           "steamAppId": 2161700,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido de Reload."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como Reload."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "60 fps y alta resolución."
+            }
+          ]
         },
         {
           "id": 82747,
@@ -524,7 +1671,28 @@
           "kind": "remake",
           "year": 2024,
           "igdbId": 252647,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido de Reload."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Háptico y cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como Reload."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Cargas casi instantáneas, muy estable."
+            }
+          ]
         },
         {
           "id": 82748,
@@ -532,7 +1700,28 @@
           "kind": "remake",
           "year": 2024,
           "igdbId": 252647,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido de Reload."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como Reload."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "La más floja de consolas Xbox."
+            }
+          ]
         }
       ],
       "images": {
@@ -551,6 +1740,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "67185",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Persona 4",
           "source": "igdb",
@@ -560,6 +1755,18 @@
           "field": "original_name",
           "value": "Persona 4",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An entry in the JRPG/visual novel hybrid Persona series in which the player has to harness the power of Personas and fight entities called Shadows by forging bonds with the locals of Inaba, a rural Japanese town thrown into unrest by inexplicable murders committed under cover of foggy weather and rumours of a television channel said to broadcast mysterious images on rainy nights.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Una entrega del híbrido de JRPG y novela visual de la serie Persona, en la que el jugador debe aprovechar el poder de las Personas y luchar contra entidades llamadas Sombras, forjando lazos con los habitantes de Inaba, una ciudad rural japonesa sumida en el caos por asesinatos inexplicables cometidos bajo la cobertura de una niebla densa y por rumores de un canal de televisión que, según se dice, emite imágenes misteriosas en las noches lluviosas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -576,7 +1783,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 2985,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Golden: Marie, epílogo, más Social Links."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejoras de combate y guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original con añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Buena en Vita."
+            }
+          ]
         },
         {
           "id": 67183,
@@ -584,7 +1812,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 234702,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Golden completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo y moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Como Golden."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sólida a 60 fps."
+            }
+          ]
         },
         {
           "id": 67184,
@@ -592,7 +1841,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 234702,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Golden completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo y moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Como Golden."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sólida a 60 fps."
+            }
+          ]
         },
         {
           "id": 67185,
@@ -601,7 +1871,28 @@
           "year": 2020,
           "igdbId": 234702,
           "steamAppId": 1113000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Golden completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado libre, mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original con añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "60 fps y alta resolución."
+            }
+          ]
         },
         {
           "id": 67186,
@@ -609,7 +1900,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 234702,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Golden completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo y moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Como Golden."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena en Xbox One."
+            }
+          ]
         },
         {
           "id": 67187,
@@ -617,7 +1929,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 234702,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Golden completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Como Golden."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor en Switch."
+            }
+          ]
         },
         {
           "id": 82605,
@@ -625,7 +1958,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 9600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Original de PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Igual que PS2."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulado, algo mejor."
+            }
+          ]
         },
         {
           "id": 82606,
@@ -633,7 +1987,33 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 9600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base sin extras de Golden."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Menos comodidades."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución de PS2."
+            }
+          ],
+          "codes": [
+            "SLES-55474",
+            "SLPM-66978",
+            "SLPM-74278"
+          ]
         },
         {
           "id": 97886,
@@ -641,7 +2021,28 @@
           "kind": "remake",
           "year": 2027,
           "igdbId": 348210,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake aún no lanzado; sin datos fiables."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Estimado, sin confirmar."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Se espera fiel con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estimado, sin confirmar."
+            }
+          ]
         },
         {
           "id": 97887,
@@ -649,7 +2050,28 @@
           "kind": "remake",
           "year": 2027,
           "igdbId": 348210,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake aún no lanzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Estimado, sin confirmar."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Se espera fiel con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estimado, sin confirmar."
+            }
+          ]
         },
         {
           "id": 97888,
@@ -658,7 +2080,28 @@
           "year": 2027,
           "igdbId": 348210,
           "steamAppId": 2963950,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake aún no lanzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Estimado, sin confirmar."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Se espera fiel con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estimado, sin confirmar."
+            }
+          ]
         },
         {
           "id": 97889,
@@ -666,7 +2109,28 @@
           "kind": "remake",
           "year": 2027,
           "igdbId": 348210,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake aún no lanzado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Estimado, sin confirmar."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Se espera fiel con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estimado, sin confirmar."
+            }
+          ]
         }
       ],
       "images": {
@@ -685,6 +2149,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95050",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Persona 4 Arena",
           "source": "igdb",
@@ -694,6 +2164,18 @@
           "field": "original_name",
           "value": "Persona 4 Arena",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Persona 4 Arena is a fighting video game developed for Japanese arcades and later ported to home consoles. Based on Atlus' Persona role-playing game series, Arena serves as a direct sequel to Persona 4 and features characters from its predecessor, Persona 3. Atlus wrote the story to the game while Arc System Works handled the gameplay.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Persona 4 Arena es un videojuego de lucha desarrollado para los salones recreativos japoneses y posteriormente adaptado a consolas domésticas. Basado en la serie de juegos de rol Persona de Atlus, Arena es una secuela directa de Persona 4 y cuenta con personajes de su predecesor, Persona 3. Atlus escribió la historia del juego, mientras que Arc System Works se encargó de la jugabilidad.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -710,7 +2192,11 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 5650,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01738",
+            "BLUS-30985"
+          ]
         },
         {
           "id": 95051,
@@ -720,8 +2206,183 @@
           "igdbId": 5650,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a1f4e0c5472c47226bbab95204c55a41.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ad067202f83b4b1483f05bf382c22c1e.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/4324e8d0d37b110ee1a4f1633ac52df5.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 387,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24123,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 24290,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 28192,
+          "reason": "2006"
+        },
+        {
+          "position": 4,
+          "gameId": 33045,
+          "reason": "2006"
+        },
+        {
+          "position": 5,
+          "gameId": 29592,
+          "reason": "2007"
+        },
+        {
+          "position": 6,
+          "gameId": 33118,
+          "reason": "2008"
+        },
+        {
+          "position": 7,
+          "gameId": 39772,
+          "reason": "2012"
+        },
+        {
+          "position": 8,
+          "gameId": 8615,
+          "reason": "2013"
+        },
+        {
+          "position": 9,
+          "gameId": 12174,
+          "reason": "2016"
+        },
+        {
+          "position": 10,
+          "gameId": 4829,
+          "reason": "2018"
+        },
+        {
+          "position": 11,
+          "gameId": 12924,
+          "reason": "2020"
+        },
+        {
+          "position": 12,
+          "gameId": 28059,
+          "reason": "2023"
+        }
+      ]
+    },
+    {
+      "id": 3565,
+      "kind": "story",
+      "rationale": "La saga no tiene una historia continua: solo Persona 1 y Persona 2 comparten ciudad y personajes, y P3, P4 y P5 son historias independientes. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24123,
+          "reason": "Inicio de la saga y de la continuidad de Sumaru."
+        },
+        {
+          "position": 2,
+          "gameId": 24290,
+          "reason": "Continúa en Sumaru, con personajes de Persona 1."
+        },
+        {
+          "position": 3,
+          "gameId": 28192,
+          "reason": "Extra japonés de 2006, en orden de lanzamiento."
+        },
+        {
+          "position": 4,
+          "gameId": 33045,
+          "reason": "Nueva historia independiente."
+        },
+        {
+          "position": 5,
+          "gameId": 29592,
+          "reason": "Spin-off de P3 centrado en Aigis."
+        },
+        {
+          "position": 6,
+          "gameId": 33118,
+          "reason": "Historia independiente, en el mismo universo que P3."
+        },
+        {
+          "position": 7,
+          "gameId": 39772,
+          "reason": "Secuela directa de P4."
+        },
+        {
+          "position": 8,
+          "gameId": 8615,
+          "reason": "Continúa Arena y cierra el arco P3/P4."
+        },
+        {
+          "position": 9,
+          "gameId": 12174,
+          "reason": "Historia independiente."
+        },
+        {
+          "position": 10,
+          "gameId": 4829,
+          "reason": "Crossover de la saga en 3DS."
+        },
+        {
+          "position": 11,
+          "gameId": 12924,
+          "reason": "Secuela de P5."
+        },
+        {
+          "position": 12,
+          "gameId": 28059,
+          "reason": "Spin-off táctico de P5."
+        }
+      ]
+    },
+    {
+      "id": 3566,
+      "kind": "community",
+      "rationale": "Los juegos son independientes, así que la comunidad recomienda empezar por P5 Royal, seguir con P4 Golden y P3 Reload, y dejar Strikers para después. Se omiten P1, P2, los peleadores y los spin-offs menores; esta ruta no está verificada con fuentes.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12174,
+          "reason": "Es la mejor entrada para empezar hoy. Elige la edición Royal, que añade contenido y mejoras; la entrada no distingue cuál de las versiones es Royal."
+        },
+        {
+          "position": 2,
+          "gameId": 33118,
+          "recommendedVersionId": 67185,
+          "reason": "Se juega en su versión Golden, la definitiva. La edición de PC es la más accesible."
+        },
+        {
+          "position": 3,
+          "gameId": 33045,
+          "recommendedVersionId": 82746,
+          "reason": "Reload es el remake moderno, con mejores gráficos y calidad de vida. Reemplaza a las versiones antiguas."
+        },
+        {
+          "position": 4,
+          "gameId": 12924,
+          "reason": "Secuela de acción de P5, para quien quiera más de esos personajes."
+        }
+      ]
+    }
+  ]
 }

@@ -19,9 +19,15 @@
       "originalName": "A Bug's Life",
       "year": 1998,
       "igdbId": 2847,
-      "popularity": 64,
+      "popularity": 65,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "2172",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "A Bug's Life",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "A Bug's Life",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A Bug's Life is a video game based on the Disney/Pixar film of the same name. It was released for various systems in 1998 and in 1999. The game's storyline is similar to that of the movie, with a few changes. After completing levels the player can unlock real clips from the movie. Its Game.com, Sega Saturn, and Dreamcast versions were cancelled.\n\nThough the film was Roddy McDowall's final theatrical performance, the game was his final work before his death.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,14 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 2847,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NBYD",
+            "NBYE",
+            "NBYF",
+            "NBYI",
+            "NBYP"
+          ]
         },
         {
           "id": 2172,
@@ -91,6 +110,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "65116",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Disney's A Bug's Life: Active Play",
           "source": "igdb",
@@ -99,6 +124,12 @@
         {
           "field": "original_name",
           "value": "Disney's A Bug's Life: Active Play",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Laugh and play as you buzz through the fun-filled world of bugs. You'll be bug-eyed with excitement at all you can do as you scurry through this world of tiny creatures. In addition to lots of playful activities--a board game, puppet show, and swarms of surprises--your friend Flik is counting on you to help him save the colony by finding items he needs to build a grasshopper-keeper-outer invention. So get ready for a really big adventure into the tiny world of bugs. Hop to it!",
           "source": "igdb",
           "manual": false
         },
@@ -132,5 +163,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2147,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1151,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 26326,
+          "reason": "1998"
+        }
+      ]
+    }
+  ]
 }

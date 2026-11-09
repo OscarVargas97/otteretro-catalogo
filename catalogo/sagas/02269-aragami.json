@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19336",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Aragami",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Aragami",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Aragami is a third person stealth game that casts you as an undead assassin with the power to control the shadows. Teleport to any shadow, become invisible, materialize weapons or even summon a shadow dragon to infiltrate the enemy ranks and dispose of your targets.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 18853,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 19336,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 18853,
           "steamAppId": 280160,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fps."
+            }
+          ]
         },
         {
           "id": 19337,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 18853,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 19338,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 18853,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fps menores."
+            }
+          ]
         }
       ],
       "images": {
@@ -92,6 +188,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "38729",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Aragami 2",
           "source": "igdb",
@@ -100,6 +202,12 @@
         {
           "field": "original_name",
           "value": "Aragami 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Aragami 2 is a third person stealth game where you play as an assassin with the power to control the shadows. Join the shadow clan and fight the invider armies to protect your people.",
           "source": "igdb",
           "manual": false
         },
@@ -158,7 +266,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 138031,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100787018198000"
+          ]
         }
       ],
       "images": {
@@ -168,5 +279,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2576,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9150,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 14876,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85659",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zombie Tycoon",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Zombie Tycoon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "For those who avoid the stock market in times of recession, now you can apply your managerial skills to amassing live brains rather than cold, hard cash. In Zombie Tycoon, living dead videogame aficionados will encounter a completely new set of challenges in their role as zombie overlord. You are responsible for the overall strategy of attack and the well-being of your zombie troops as you attempt to spread the undead across the globe. Along with the fast-paced action found in games where players control more self-serving zombies, Frima Studios has added humorous strategies and managerial challenges into the gameplay for a new take on a classic genre.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 9295,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/51c12952e7d38a5f5fca6472af2b1fcc.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0a3b5a7a477d359746061d41c3a04fd6.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/206bb45f944accb7a4cd1f135786c415.png"
+      }
     },
     {
       "id": 40049,
@@ -70,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95752",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zombie Tycoon 2: Brainhov's Revenge",
           "source": "igdb",
@@ -78,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Zombie Tycoon 2: Brainhov's Revenge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Choose your side in the epic war between two masterminds of Evil: apprentice-gone-rogue Orville Tycoon and his army of heavy-duty zombies, or his vengeance-thirsty mentor Professor Brainhov and his rioting mass of twitchy brain-munchers.\n\nTriumph over other players in adrenaline-charged Multiplayer deathmatchers and seal the fate of the last survivors of Finkleville in the Single player campaign.",
           "source": "igdb",
           "manual": false
         },
@@ -114,8 +143,31 @@
           "igdbId": 9296,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c85217f5268d594e3fcc05c546a97834.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3262,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35139,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 40049,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

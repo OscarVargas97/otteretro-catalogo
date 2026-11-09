@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95487",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Blacklight: Tango Down",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Blacklight: Tango Down",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Blacklight: Tango Down, experience the bleeding edge of advanced warfare. Participate in the “NetWar”: a hyper-realistic battlefield letting you fight tomorrow’s conflicts with or against your friends in the gritty Blacklight universe. Make your stand across seven game modes with 12 different maps in intense online battles supporting up to 16 players. Or fight through four intense Black Ops missions co-operatively or alone; all the while gaining experience, collecting stats, and unlocking items. Earn new weapon attachments and items, improve your abilities, and engage your Hyper Reality Visor to locate enemies and take them out. Customize your character and weaponry from among thousands of combinations to become the soldier you always wanted to be.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 8481,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ad376d9cbafe5f2997094ebb111bd799.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/08fcb5ead4e963a6f0bbdbc971f4a3ee.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b8536aaea46484dd753df6bab1641dc7.png"
+      }
     },
     {
       "id": 41558,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98863",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Blacklight: Retribution",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Blacklight: Retribution",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Take firefights to a futuristic new level in Blacklight: Retribution, a free-to-play FPS. See through walls with the HRV, deploy mechanized Hardsuits, and customize your weapons to dominate the opposition.\n\nIn Blacklight, mastering the futuristic tech is half of victory. You'll need to carefully balance your loadout, from the extreme customization possible in designing your firearms, to the equipment you carry and the in-match bonuses you can unlock. The Hyper Reality Visor (HRV) allows you to look through walls and spot enemies, and attack from where they aren't expecting - but be careful, because you're vulnerable while using it.\n\nThe other half of victory? Raw skill, same as it's always been. Good hunting, Agent...",
           "source": "igdb",
           "manual": false
         },
@@ -115,8 +144,33 @@
           "steamAppId": 209870,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/27a776f3894b8fedae942a6e2ecd8082.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b432f34c5a997c8e7c806a895ecc5e25.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/7b6f112e7e54968fd8c34d5727e4996d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3327,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39938,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 41558,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

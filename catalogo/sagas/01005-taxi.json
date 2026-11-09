@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5631",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Taxi 3",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Taxi 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Taxi 3 is a Racing game, developed by Ubisoft Montreal and published by Ubisoft, which was released in Europe in 2003.\n\nThe game is based on the 2003 French action comedy film.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 138156,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51377"
+          ]
         },
         {
           "id": 5897,
@@ -72,13 +87,174 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 318501,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AXQF"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/f973e25e6749bfd38fc2ee9e19df2e8f.png"
       }
+    },
+    {
+      "id": 7565,
+      "nameEs": "Taxi 2",
+      "originalName": "Taxi 2",
+      "year": 2000,
+      "igdbId": 50041,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "13923",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Taxi 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Taxi 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Taxi 2 is a driving game, based on Luc Besson's movie. Both movie and video game share the same title.\n\nTaxi 2 features two game modes. The \"story mode\" follows the scenes from the movie and allows you to select from five missions. When a mission is completed, you can save your progress, but also play it in the \"arcade mode\". In this mode, you will face the same competitor, Jean-Louis Schlesser ! The objective is no longer specific to each mission, but is to win the race, after several laps. In this mode, you will not have to care about the temperature gauge, since it is removed from arcade mode.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2000",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 13923,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2000,
+          "igdbId": 50041,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión completa de la ciudad y misiones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y rendimiento."
+            }
+          ]
+        },
+        {
+          "id": 13924,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 2002,
+          "igdbId": 50041,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido cercano al original de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, pero con cargas largas."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Bastante cercano al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos aceptables con cargas."
+            }
+          ],
+          "codes": [
+            "SLES-03597"
+          ]
+        },
+        {
+          "id": 14026,
+          "platform": "gb",
+          "kind": "original",
+          "year": 2000,
+          "igdbId": 372840,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "1",
+              "text": "Versión portátil con contenido muy recortado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Juego muy simplificado."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Muy distinta del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Limitaciones graves de hardware."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0d75026770d571fb4e576b659149d102.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/d053411ffb79119eb911bd8687555dd3.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/0fb7704e25030f81e0e271dd790ca7f5.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2248,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7565,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 2923,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

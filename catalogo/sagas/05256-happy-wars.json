@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100897",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Happy Dungeons",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Happy Dungeons",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sequel to the Hit game Happy Wars. A game that shift's away from competitive action to a more cooperative play hack-and-slash dungeon-crawler.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 52238,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/875d513006a5abbccf93d6fd162b1955.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6c0b01d6831472c379462371445b4387.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/08306617071244c1971e2c03657590b1.png"
+      }
     },
     {
       "id": 48437,
@@ -70,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114891",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Happy Wars",
           "source": "igdb",
@@ -78,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Happy Wars",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Happy Wars is an action-packed massive online multiplayer game where you can play together with as many as 30 players in one online session. And, it’s free-to-play. Team up with players all over the world and go crazy in wacky melees in a fantastic realm of heated sieges and big magical battles. Get premium items of beautiful graphic quality through Happy Cards and other means to power up your character. Charge through battlefields with your own personalized character.",
           "source": "igdb",
           "manual": false
         },
@@ -95,7 +124,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 8410,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Más contenido acumulado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mejor resolución, con soporte incierto."
+            }
+          ]
         },
         {
           "id": 114890,
@@ -103,7 +153,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 8410,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Primera versión con menos contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos y carga más limitados."
+            }
+          ]
         },
         {
           "id": 114891,
@@ -111,10 +182,54 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 8410,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más contenido acumulado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando pulido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución y estabilidad."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2smp.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3411,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48437,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 42281,
+          "reason": "2016"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

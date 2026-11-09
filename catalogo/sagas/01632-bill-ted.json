@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bill & Ted navigate through time in this platformer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bill & Ted's Excellent Adventure is a single player graphic adventure video game for the Commodore 64, Amiga and MS-DOS platforms.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1989",
           "source": "igdb",
@@ -92,7 +104,10 @@
           "igdbId": 14302,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6nt6.jpg"
+      }
     },
     {
       "id": 43104,
@@ -116,6 +131,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bill & Ted's Excellent Video Game Adventure is a Nintendo Entertainment System adventure game based off of the Bill & Ted franchise. It was developed by Rocket Science and released in 1991 as a continuation of the film \"Bill & Ted's Excellent Adventure\".",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -131,8 +152,38 @@
           "igdbId": 155412,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/265b84306520fabdbd2f9d34c41f4258.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ad9a8ad852b1c036e6f7de30298765b2.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/40cc0de5d409e3c6634082a160677de8.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1584,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42746,
+          "reason": "1989"
+        },
+        {
+          "position": 2,
+          "gameId": 5832,
+          "reason": "1991"
+        },
+        {
+          "position": 3,
+          "gameId": 43104,
+          "reason": "1991"
+        }
+      ]
+    }
+  ]
 }

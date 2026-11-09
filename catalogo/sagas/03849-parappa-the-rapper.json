@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87574",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "PaRappa the Rapper",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "PaRappa the Rapper",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The original music video game.\n\nHelp Parappa rap with the best of the master rappers and straight into Sunny's heart.\n\nGuaranteed you'll be singin' and dancin' along with Parappa and his pals to the most fun music mixes.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,14 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 6080,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCPS-18002",
+            "SCPS-45051",
+            "SCPS-91070",
+            "SCPS-91307",
+            "SCUS-94183"
+          ]
         },
         {
           "id": 60760,
@@ -56,7 +75,14 @@
           "kind": "remaster",
           "year": 2006,
           "igdbId": 269666,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "UCAS-40135",
+            "UCES-00775",
+            "UCES-00775/ANZ",
+            "UCJS-10046",
+            "UCUS-98702"
+          ]
         },
         {
           "id": 87574,
@@ -71,7 +97,195 @@
         "cover": "https://cdn2.steamgriddb.com/grid/49d71abeb9511c049336143fee67cff7.png",
         "hero": "https://cdn2.steamgriddb.com/hero/ac69a1057edfcc8138896055948af5be.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/a8757ce9dc90ea5def6a29b19503dbbb.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 965,
+          "platform": "ps1",
+          "project": "PaRappaTheRapperRecomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/PaRappaTheRapperRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 966,
+          "platform": "ps1",
+          "project": "PaRappaTheRapperRecomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/kirby1237/PaRappaTheRapperRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
+    },
+    {
+      "id": 23905,
+      "nameEs": "Um Jammer Lammy",
+      "originalName": "Um Jammer Lammy",
+      "year": 1999,
+      "igdbId": 6081,
+      "popularity": 22,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "60477",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Um Jammer Lammy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Um Jammer Lammy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Um Jammer Lammy is a rhythm-based game that takes place in the PaRappa world and tells the story of the all-girl pop rock band, MilkCan. The game has very humorous and catchy music tracks, co-op gameplay, and a plethora of unlockables.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1999",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 60477,
+          "platform": "ps3",
+          "kind": "original",
+          "year": 2008,
+          "igdbId": 6081,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo y control de mando fácil de conseguir."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con opciones de escalado."
+            }
+          ]
+        },
+        {
+          "id": 60478,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 1999,
+          "igdbId": 6081,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Requiere consola y tarjeta de memoria antiguas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja y carga propia del disco."
+            }
+          ],
+          "codes": [
+            "SCES-01753",
+            "SCPS-18011",
+            "SCPS-91226",
+            "SCPS-91325",
+            "SCUS-94448"
+          ]
+        },
+        {
+          "id": 60479,
+          "platform": "psp",
+          "kind": "original",
+          "year": 2008,
+          "igdbId": 6081,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, con guardado rápido, pero botones menos cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña con imagen ampliada."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4ce303d9f8cce8032c9663a095fba124.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c091c668b03abceaef7ef656d431228a.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/05d0abb9a864ae4981e933685b8b915c.png"
+      },
+      "ports": [
+        {
+          "id": 1239,
+          "platform": "ps1",
+          "project": "UmJammerLammyRecomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/UmJammerLammyRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 32606,
@@ -83,6 +297,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81572",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "PaRappa the Rapper 2",
           "source": "igdb",
@@ -91,6 +311,12 @@
         {
           "field": "original_name",
           "value": "PaRappa the Rapper 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "THE ORIGINAL RAP STAR'S BACK IN THE HOUSE!\n\nSee if you have enough rhythm to keep the beat with everyone's favorite rappin' puppy. Parappa the Rapper returns with all new levels and songs to keep your head bobbin' & PlayStation 2 bumpin'.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +334,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 6082,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado en la consola y trofeos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen escalada y más nítida."
+            }
+          ]
         },
         {
           "id": 81573,
@@ -116,15 +363,85 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 6082,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin mejoras; depende de la consola y tarjeta antiguas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa de PS2."
+            }
+          ],
+          "codes": [
+            "PCPX-96320",
+            "SCES-50408",
+            "SCES-50408-ANZ",
+            "SCPS-15017",
+            "SCPS-19201",
+            "SCUS-97167"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/4570f5f8893ae3872ef8498d328b8dff.png",
         "hero": "https://cdn2.steamgriddb.com/hero/5f1b1033464158f9e53b88c7b9a8ba39.png",
         "logo": "https://cdn2.steamgriddb.com/logo/7421d74f57142680e679057ddc98edf5.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1413,
+          "platform": "ps2",
+          "project": "parappa2",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/parappadev/parappa2",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1866,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23803,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 23905,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 32606,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

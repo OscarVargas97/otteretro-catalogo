@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Night Striker (ナイトストライカー) is an arcade game developed by Taito. It is a futuristic on-the-rails shooter which plays similarly to Sega's Space Harrier, though has you pilot a hover vehicle instead.\n\nThe game was brought to the Sega Mega-CD in 1993, where graphically it was downscaled for the weaker hardware. It was also brought to the Sega Saturn as Night Striker S (ナイトストライカーＳ) in 1996 - essentially the same game, but with an extra \"Saturn Mode\" and a few small enhancements. No versions have ever left Japan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1989",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 307655,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00050"
+          ]
         }
       ],
       "images": {
@@ -67,6 +76,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "79802",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Night Striker Gear",
           "source": "igdb",
@@ -75,6 +90,12 @@
         {
           "field": "original_name",
           "value": "Night Striker Gear",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A brand new entry to the series, NIGHT STRIKER GEAR revitalizes the sprite scaling pseudo-3D style with polished graphics. The new GEAR System gives an added depth to the gameplay without sacrificing the intuitiveness. Feeling the rush of fast-paced music, strike through the night once more!",
           "source": "igdb",
           "manual": false
         },
@@ -101,7 +122,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 330380,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100830025018000"
+          ]
         }
       ],
       "images": {
@@ -110,5 +134,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3129,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26164,
+          "reason": "1989"
+        },
+        {
+          "position": 2,
+          "gameId": 31920,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

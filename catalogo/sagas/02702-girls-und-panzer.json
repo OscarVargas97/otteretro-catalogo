@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "31000",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Girls und Panzer: Dream Tank Match",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Girls und Panzer: Dream Tank Match",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Girls und Panzer: Dream Tank Match is a tank-based combat game that takes place after the events of Girls und Panzer der Film. The game features two campaigns, one recaping the events of the movie and one in which you select one of the teams as they participate in tournament against the other schools. In addition, there is an Extra Battles mode which allows you to play out matches from the anime, as well as a Free Match mode.",
           "source": "igdb",
           "manual": false
         },
@@ -95,6 +107,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "\"Dramatic tank action\" game based on the Girls und Panzer anime, where mock WWII-era tank battles have become a popular sport among teenage girls.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -110,8 +128,31 @@
           "igdbId": 42699,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co60r7.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2719,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41025,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 12192,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

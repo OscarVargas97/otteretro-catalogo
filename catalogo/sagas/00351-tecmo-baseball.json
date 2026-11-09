@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "It has 700 authentic MLBPA players including Ken Griffey Jr., Tony Gwynn and Barry Bonds to name a few. However, it does not feature an MLB license, so the cities nicknames and logos have been omitted, but all 28 teams with 1993 stats are still included.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1994",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Gameplay is similar to the many other baseball released for the NES. The camera angle when batting or pitching is from behind the pitcher. The pitcher can pitch the ball high and low, as well as curve it. Tecmo Baseball includes digitized voices for the umpire.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1989",
           "source": "igdb",
@@ -92,8 +104,31 @@
           "igdbId": 48228,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c29c171a0adeefbba169e160b93b511e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2120,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43048,
+          "reason": "1989"
+        },
+        {
+          "position": 2,
+          "gameId": 770,
+          "reason": "1994"
+        }
+      ]
+    }
+  ]
 }

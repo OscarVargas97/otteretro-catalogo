@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10453",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "WordsUp! Academy",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "WordsUp! Academy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Becoming part of the Academy is not easy; its most illustrious members are waiting for you, ready to challenge you in this extraordinary puzzle and skills game. Prove your mastery of language in WordsUp! Academy... and dare to challenge them and get their approval!",
           "source": "igdb",
           "manual": false
         },
@@ -87,6 +99,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Show your command of the language in 3, 2, 1... WordsUp!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -108,5 +126,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2371,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 18204,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 5216,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "318",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Math Blaster: Episode One - In Search of Spot",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Math Blaster: Episode One - In Search of Spot",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A follow-up to the original Math Blaster! games, Math Blaster: In Search of Spot is an educational title with arcade elements designed to help students learn maths while having fun.\n\nThe game allows students to practice basic addition, subtraction, multiplication, and division skills in addition to fractions, decimals, percents, estimation, and number patterns. The subjects can be practiced separately or together in review. Six levels of difficulty are provided. Like the previous titles, the game also includes an editor to create new problem sets (present in the PC version only).",
           "source": "igdb",
           "manual": false
         },
@@ -85,6 +97,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The award-winning PC edutainment series, Math Blaster in the Prime Adventure, is blasting its way on to the Nintendo DS with an all-new adventure. Put your math skills to the ultimate test in this action-packed adventure that adds up to total fun!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -98,7 +116,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 47927,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CKXE"
+          ]
         }
       ],
       "images": {
@@ -106,5 +127,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2080,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 207,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 17076,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

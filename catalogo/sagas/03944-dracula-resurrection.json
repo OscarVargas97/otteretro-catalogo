@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61572",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Drácula Resurección",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dracula: Resurrection",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dracula: Resurrection is a point-and-click adventure game set in Transylvania after the events of Bram Stoker’s *Dracula*. The player controls Jonathan Harker as he searches for Mina, who has returned to Count Dracula’s castle under mysterious circumstances. Gameplay focuses on exploration, puzzle-solving, and interacting with characters across pre-rendered environments.",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,17 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 9091,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02758",
+            "SLES-02758-0",
+            "SLES-02759",
+            "SLES-02759-0",
+            "SLES-12758",
+            "SLES-12758-1",
+            "SLES-12759",
+            "SLES-12759-1"
+          ]
         }
       ],
       "images": {
@@ -76,6 +98,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61598",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Drácula: El último santuario",
           "source": "igdb",
@@ -84,6 +112,12 @@
         {
           "field": "original_name",
           "value": "Dracula 2: The Last Sanctuary",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The blood-curdling sequel to Dracula: Resurrection brings an even scarier adventure to life.\n\nAfter saving Mina, Jonathan Harker and his beloved return to London carrying a mysterious Dragon Ring.",
           "source": "igdb",
           "manual": false
         },
@@ -102,7 +136,28 @@
           "year": 2000,
           "igdbId": 9092,
           "steamAppId": 289820,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo sin recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón encaja bien con la aventura apuntar y hacer clic y permite guardar libremente."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución más alta que en consola, aunque puede requerir parches o compatibilidad en Windows moderno."
+            }
+          ]
         },
         {
           "id": 61599,
@@ -110,7 +165,34 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 9092,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control con mando, menos preciso para este tipo de aventura."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel pero con la calidad visual reducida."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y cargas más lentas."
+            }
+          ],
+          "codes": [
+            "SLES-03348",
+            "SLES-03348-0",
+            "SLES-13348",
+            "SLES-13348-1"
+          ]
         }
       ],
       "images": {
@@ -120,5 +202,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3081,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24341,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 24357,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110348",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tainted Grail: The Fall of Avalon",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tainted Grail: The Fall of Avalon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tainted Grail: The Fall of Avalon is an open-world RPG set in a dark fantasy and reimagining the Arthurian legend.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 127697,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando correcto, menos opciones que en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original, adaptado a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento menos estable y con tiempos de carga mayores."
+            }
+          ]
         },
         {
           "id": 110348,
@@ -57,7 +90,28 @@
           "year": 2023,
           "igdbId": 127697,
           "steamAppId": 1466060,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todas las actualizaciones y soporte de mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos, guardado flexible y ajustes amplios."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original de lanzamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución y fps ajustables, aunque aún tiene errores ocasionales."
+            }
+          ]
         },
         {
           "id": 110349,
@@ -65,9 +119,35 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 127697,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando correcto, apuntado menos preciso que en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original, adaptado a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Carga rápida por SSD, pero fps y estabilidad inferiores a PC."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/eb7ae212773e953459a3ae1b436decd8.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1cbfed64b042551c60661543fbb9ea51.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/e5ded1bc28c3cc25f74b609f483ea4e3.png"
+      }
     },
     {
       "id": 49436,
@@ -79,6 +159,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "116502",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tainted Grail: Conquest",
           "source": "igdb",
@@ -87,6 +173,12 @@
         {
           "field": "original_name",
           "value": "Tainted Grail: Conquest",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A story-driven hybrid between RPG and deck-building roguelikes. Explore the ever-changing maps, fight with deadly enemies, and learn what happened to the cursed island of Avalon.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +215,33 @@
           "igdbId": 146424,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/942fc2059629f928676dcc1185179b9d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e08ca8642e12087150900c4e2f417b1a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/55fe20a5f413b106e0e7f5ba6a5daf29.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3478,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 49436,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 46621,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

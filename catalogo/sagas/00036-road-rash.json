@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "64200",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Road Rash",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Road Rash",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Road Rash is a high-octane motorcycle racing game where players become bikers competing in illegal races across the U.S.A. The game focuses on a series of races in California, which players must win to progress to more challenging competitions. Along the way, they engage in both unarmed and armed combat to outmaneuver other racers.",
           "source": "igdb",
           "manual": false
         },
@@ -72,7 +84,12 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 141271,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00158",
+            "SLPS-00243",
+            "SLUS-00035"
+          ]
         }
       ],
       "images": {
@@ -103,6 +120,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "180 MPH slap in the face, anyone? Multi-player modes for up to four players including Deathmatch, Cop Mode and Tag. New weapons and moves like the dreaded spoke jam. Intense pack brawling, including grudges and alliances. 200 miles of interconnected tracks and environments. Over 25 bikes and characters to choose from. Thrashin' soundtrack featuring Sugar Ray, The Mermen and more!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -116,14 +139,34 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3589,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NROE",
+            "NROP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/c7dfe95373bfe4bca2cfa4a1f7383fda.png",
         "hero": "https://cdn2.steamgriddb.com/hero/b8ba4466c47209f470ae8902069192a6.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/d9c892e2c283d74916880d3190eba780.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1026,
+          "platform": "n64",
+          "project": "RoadRash64Recompiled",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/linkssy2/RoadRash64Recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1697,
@@ -135,6 +178,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62298",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Road Rash: Jailbreak",
           "source": "igdb",
@@ -143,6 +192,12 @@
         {
           "field": "original_name",
           "value": "Road Rash: Jailbreak",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is the Game Boy Advance installment in the long-running motorcycle action series. Players fight for the trophy at the Great Bikers Convention, and burn rubber on the track to win the Wild Race, where driving style and weapons are part of the show. The objective is to defeat the winner of last year's contest and kick the hell out of his gang buddies while doing so. But watch your back: the County Police won't let you slow down for a sec. The Game Boy Advance version was developed by Magic Pockets for Destination Software.",
           "source": "igdb",
           "manual": false
         },
@@ -160,7 +215,32 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 49178,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido recortado para portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Vista y controles simplificados."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Adaptación muy distinta."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos limitados de GBA."
+            }
+          ],
+          "codes": [
+            "A9RE",
+            "A9RP"
+          ]
         },
         {
           "id": 62298,
@@ -168,7 +248,32 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 44897,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con motos, pistas y modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos para su época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "3D de PS1, con poda visible."
+            }
+          ],
+          "codes": [
+            "SLES-02552",
+            "SLUS-01053"
+          ]
         }
       ],
       "images": {
@@ -195,6 +300,12 @@
         {
           "field": "original_name",
           "value": "Road Rash II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Road Rashing isn't just a sport. It's an attitude! Road Rash II is the ultimate 2-player racing game with a radically unique split-screen for distinguishing between racers. Cruising cross-country was never this hairy! Spectacular new body-torquing wipe outs! More obstacles to crash into than ever before. Terrorize your opponents on 5 new tracks, each with 5 different levels. Swing a steel chain for some real heavy metal damage! 15 brand new, lightning-fast cycles, including nitro-equipped Super-Bikes!",
           "source": "igdb",
           "manual": false
         },
@@ -243,6 +354,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Road Rash 3-D is a 3D installment of the motorcycle racing game in which participants utilize violent tactics to win. The gameplay is quite similar to that of the previous games: the player-controlled racer must avoid oncoming cars and obstacles on the road, beating opponents with metal pipes, crowbars, and other assorted damage-inflicting tools. The player wins money upon the completion of the race, and eventually can afford to buy better bikes. The courses are formed from connecting points in an environmental grid, which means that the player can utilize different stretches of courses to advance.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -256,7 +373,13 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 45012,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00910",
+            "SLES-01157",
+            "SLES-01158",
+            "SLUS-00524"
+          ]
         }
       ],
       "images": {
@@ -266,5 +389,40 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 838,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 50,
+          "reason": "1991"
+        },
+        {
+          "position": 2,
+          "gameId": 6908,
+          "reason": "1992"
+        },
+        {
+          "position": 3,
+          "gameId": 24576,
+          "reason": "1998"
+        },
+        {
+          "position": 4,
+          "gameId": 1257,
+          "reason": "1999"
+        },
+        {
+          "position": 5,
+          "gameId": 1697,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

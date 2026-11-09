@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66709",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Nocturnal",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Nocturnal",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "After years of traveling, Ardeshir finds his native island covered in a mysterious fog. Carve your way with fire and steel to find out what happened to your people in this action-platformer game. You’re the only one who can discover the secrets that lie beyond the Mist.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 234740,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01009C2019510000"
+          ]
         }
       ],
       "images": {
@@ -84,22 +99,34 @@
     },
     {
       "id": 30522,
-      "nameEs": "Nocturnal II",
-      "originalName": "Nocturnal II",
+      "nameEs": "Nocturnal 2",
+      "originalName": "Nocturnal 2",
       "year": 2026,
       "igdbId": 310336,
       "popularity": 0,
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76315",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
-          "value": "Nocturnal II",
+          "value": "Nocturnal 2",
           "source": "igdb",
           "manual": false
         },
         {
           "field": "original_name",
-          "value": "Nocturnal II",
+          "value": "Nocturnal 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nocturnal 2 is an action-adventure game that lets you explore and rekindle the dark depths and towering heights of the city of Ytash.",
           "source": "igdb",
           "manual": false
         },
@@ -127,6 +154,14 @@
           "year": 2026,
           "igdbId": 310336,
           "criteria": []
+        },
+        {
+          "id": 118429,
+          "platform": "switch2",
+          "kind": "original",
+          "year": 2026,
+          "igdbId": 310336,
+          "criteria": []
         }
       ],
       "images": {
@@ -135,5 +170,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3177,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 27120,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 30522,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A full-body Kinect game that mixes tennis, Breakout and gratuitous explosions.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 20305,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2iha.jpg"
+      }
     },
     {
       "id": 49188,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Sequel to Boom Ball for Kinect, featuring 2 player co-op",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -89,7 +104,10 @@
           "igdbId": 56781,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2is6.jpg"
+      }
     },
     {
       "id": 49255,
@@ -113,6 +131,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "It's boom time again! Boom Ball 3 upgrades the classic Kinect ping-pong game with 50 scenic levels featuring a festival of cute cubic critters. Also includes improved 2-player mode and 3 new difficulty options for novices and veterans alike. Customize your paddles with pictures or take your own photos with Kinect. Suitable for all ages, shapes and sizes!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -128,8 +152,36 @@
           "igdbId": 83757,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2isa.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2056,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 49086,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 49188,
+          "reason": "2016"
+        },
+        {
+          "position": 3,
+          "gameId": 49255,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

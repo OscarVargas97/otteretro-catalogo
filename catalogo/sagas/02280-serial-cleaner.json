@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19525",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Serial Cleaner",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Serial Cleaner",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Serial Cleaner is a story-driven, fast-paced stealth/action game, characterized by a 1970s theme and aesthetics.",
           "source": "igdb",
           "manual": false
         },
@@ -73,12 +85,15 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 19450,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100818008004000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/05351c19fa1799429772751a4ea5b337.png",
-        "hero": "https://cdn2.steamgriddb.com/hero/82166899aa3db47b87226f5e2abfbca7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/bd5bcf28c0cfbe46018375d5e04a0a3a.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/9d405c24be657bbf7a5244815a908922.png"
       }
     },
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "37292",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Serial Cleaners",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Serial Cleaners",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Serial Cleaners is a single-player stealth action crime story in which you alternate between playing four eccentric mob cleaners taking on the bloodiest jobs the carefree 1990s had to offer. If you remember the nineties differently, their dirty work is the reason why.",
           "source": "igdb",
           "manual": false
         },
@@ -158,7 +185,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 134823,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01006FF017866000"
+          ]
         }
       ],
       "images": {
@@ -168,5 +198,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2582,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9197,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 14471,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hamster Monogatari 64 is a life simulation game which the player raise and take care of a hamster which the hamster are placed in a cage. The player can give the hamster attention but if the player give the hamster lots of attention, the hamster will be determine what they become either a loveable one or a savage and maniac one. As the hamster grow up and evolve, they gain new abilities for the hamster competitions. Players can raise up to four hamsters which players can take care of them in a variety of ways.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -48,12 +54,31 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 3509,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NHSJ"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3bf4781a1f3d0e5b99e40dce1492c2ca.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 778,
+          "platform": "n64",
+          "project": "Hamster64Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/SrBananaMan/Hamster64Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1947,
@@ -77,6 +102,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hamster Monogatari 2 GBA is a Strategy game, published by Culture Brain, which was released in Japan in 2001.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -90,7 +121,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 49591,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AHBJ"
+          ]
         }
       ],
       "images": {
@@ -119,6 +153,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hamster Monogatari 3 GBA, part of the Hamster Monogatari series, is a game that allows players to care for and manage hamsters, engaging in various activities and challenges. It continues the series' theme of hamster adventures, following earlier titles on other platforms.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -132,7 +172,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 49590,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "A83J"
+          ]
         }
       ],
       "images": {
@@ -161,6 +204,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hamster Monogatari Collection is a Miscellaneous game, published by Culture Brain, which was released in Japan in 2003.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -174,7 +223,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 49589,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BHCJ"
+          ]
         }
       ],
       "images": {
@@ -199,6 +251,12 @@
         {
           "field": "original_name",
           "value": "Hamster Monogatari GB + Magi Ham Mahou no Shoujo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Hamster Monogatari GB + Magi Ham Mahou no Shoujo is a Strategy game, published by Culture Brain, which was released in Japan in 2002.",
           "source": "igdb",
           "manual": false
         },
@@ -245,6 +303,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The first in a series of hamster-raising simulators from Culture Brain.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -258,7 +322,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 57393,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-02724"
+          ]
         }
       ],
       "images": {
@@ -266,5 +333,45 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 717,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25229,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 1387,
+          "reason": "2001"
+        },
+        {
+          "position": 3,
+          "gameId": 1947,
+          "reason": "2001"
+        },
+        {
+          "position": 4,
+          "gameId": 2087,
+          "reason": "2002"
+        },
+        {
+          "position": 5,
+          "gameId": 6729,
+          "reason": "2002"
+        },
+        {
+          "position": 6,
+          "gameId": 2131,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

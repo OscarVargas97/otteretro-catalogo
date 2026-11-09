@@ -14,39 +14,6 @@
   ],
   "games": [
     {
-      "id": 31951,
-      "nameEs": "Saiyuuki World",
-      "originalName": "Saiyuuki World",
-      "year": 1988,
-      "igdbId": 48403,
-      "popularity": 0,
-      "iconic": false,
-      "fields": [
-        {
-          "field": "name_es",
-          "value": "Saiyuuki World",
-          "source": "igdb",
-          "manual": false
-        },
-        {
-          "field": "original_name",
-          "value": "Saiyuuki World",
-          "source": "igdb",
-          "manual": false
-        },
-        {
-          "field": "year",
-          "value": "1988",
-          "source": "igdb",
-          "manual": false
-        }
-      ],
-      "versions": [],
-      "images": {
-        "cover": "https://cdn2.steamgriddb.com/grid/8f540321537620223a83ff46c7d9aed3.png"
-      }
-    },
-    {
       "id": 43089,
       "nameEs": "Saiyuuki World 2: Tenjoukai no Majin",
       "originalName": "Saiyuuki World 2: Tenjoukai no Majin",
@@ -68,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A game based in \"Journey to the west\" book.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1990",
           "source": "igdb",
@@ -83,8 +56,70 @@
           "igdbId": 48257,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6ouo.jpg"
+      }
+    },
+    {
+      "id": 50268,
+      "nameEs": "Saiyuuki World",
+      "originalName": "Saiyuuki World",
+      "year": 1988,
+      "igdbId": 48403,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Saiyuuki World",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Saiyuuki World",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Saiyuuki World is an action game based on Wonder Boy in Monster Land but modified with content from the classic Chinese novel Journey to the West.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1988",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8f540321537620223a83ff46c7d9aed3.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3187,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 50268,
+          "reason": "1988"
+        },
+        {
+          "position": 2,
+          "gameId": 43089,
+          "reason": "1990"
+        }
+      ]
+    }
+  ]
 }

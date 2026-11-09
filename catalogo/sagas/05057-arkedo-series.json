@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97053",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Arkedo Series: 03 Pixel!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Arkedo Series: 03 Pixel!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pixel is a reto style 2D platformer. The player plays the role of Pixel cat, whose task is to go through several stages in order to collect treasures and save his own world.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 77112,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f19a5667abe88ddd99b8754304737b73.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/7c728ca315bc0f6ebe16539af8f8da01.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/939b9fed93c76ce9339b8aa1b2d5c57c.png"
+      }
     },
     {
       "id": 40708,
@@ -70,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97339",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Arkedo Series: 01 Jump!",
           "source": "igdb",
@@ -78,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Arkedo Series: 01 Jump!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Jump! is an Xbox Live Indie platformer, developed by Arkedo Studios, in which the player must collect bombs before they explode.",
           "source": "igdb",
           "manual": false
         },
@@ -95,7 +124,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 79768,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que la versión de Xbox 360."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles equivalentes con el mando de PS3."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con cambios menores de plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Port estable, aunque PS3 es más difícil de conservar."
+            }
+          ]
         },
         {
           "id": 97339,
@@ -103,9 +153,33 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 79768,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo de Arkedo con todos sus niveles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles de salto precisos y guardado estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable en 2D, retrocompatible en Xbox modernas."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/ejfwoq0ocjmubhi1blsr.jpg"
+      }
     },
     {
       "id": 40709,
@@ -117,6 +191,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97340",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Arkedo Series: 02 Swap!",
           "source": "igdb",
@@ -125,6 +205,12 @@
         {
           "field": "original_name",
           "value": "Arkedo Series: 02 Swap!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SWAP! is a block matching puzzle game. Tile Swap is the main rule of the game, which consists in swapping the order of blocks in order to destroy them.",
           "source": "igdb",
           "manual": false
         },
@@ -152,8 +238,36 @@
           "igdbId": 80166,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/tnacxdd5taqtopg7oc5w.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2006,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40538,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 40708,
+          "reason": "2009"
+        },
+        {
+          "position": 3,
+          "gameId": 40709,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

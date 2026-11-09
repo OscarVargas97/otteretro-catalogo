@@ -19,9 +19,15 @@
       "originalName": "Doodle Jump",
       "year": 2009,
       "igdbId": 28729,
-      "popularity": 50,
+      "popularity": 51,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "7503",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Doodle Jump",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Doodle Jump",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Doodle Jump, the aim is to guide a four-legged animal called \"The Doodler\" up a never-ending series of platforms without falling.",
           "source": "igdb",
           "manual": false
         },
@@ -103,6 +115,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Jump into classic game and see just how high you can go!! Dangerous enemies, cool locations and great gameplay await the entire family!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -116,7 +134,10 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 85571,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "TDJE"
+          ]
         }
       ],
       "images": {
@@ -146,6 +167,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Doodle Jump for Kinect is a game in the Doodle Jump series for the Xbox 360 which uses the Xbox Kinect for movement.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -161,8 +188,36 @@
           "igdbId": 277680,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7edk.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1537,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3825,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 18247,
+          "reason": "2013"
+        },
+        {
+          "position": 3,
+          "gameId": 49014,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

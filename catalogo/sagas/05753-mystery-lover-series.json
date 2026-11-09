@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "70727",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mystery Lover: Nonexistent Summer",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "Mystery Lover: Nonexistent Summer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Wei who's in the supernatural club must solve the missing virtual idol incident with his girlfriend Bansha.",
           "source": "igdb",
           "manual": false
         },
@@ -66,6 +78,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "71700",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mystery Lover 2: Forgotten Truth",
           "source": "igdb",
@@ -74,6 +92,12 @@
         {
           "field": "original_name",
           "value": "Mystery Lover 2: Forgotten Truth",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In River City, there is an ordinary milk tea shop, but with one peculiar thing about it - almost every day there is a huge line in front of it. Is it just due to its popularity? Or is someone specifically hiring people to stand in that line? And if the second is true, then what is the reason for this - is someone playing some dirty game against the owner of the tea shop, or is there even greater conspiracy behind all this?",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +116,28 @@
           "year": 2022,
           "igdbId": 275490,
           "steamAppId": 1777430,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del lanzamiento original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con ratón, pero sin la comodidad portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con resolución flexible, sin diferencias notables."
+            }
+          ]
         },
         {
           "id": 71700,
@@ -100,7 +145,31 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 275490,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Se asume el mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles de mando y pantalla táctil, y se puede jugar en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel sin cambios relevantes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento adecuado para el género, sin problemas conocidos."
+            }
+          ],
+          "codes": [
+            "0100606020AF8000"
+          ]
         }
       ],
       "images": {
@@ -108,5 +177,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3522,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 28698,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 28433,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

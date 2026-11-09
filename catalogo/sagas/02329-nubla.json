@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "20371",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Nubla",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Nubla",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nubla is a graphical adventure, a journey through the world of the works inside the Thyssen-Bornemisza Museum. It tells the story of a unique inhabitant of the fantastic world existing inside the paintings of the museum, who seeks to discover who he is and to uncover his past by solving various puzzles.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 26813,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que las demás versiones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con mando, sin extras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fluidez correctas para un juego sencillo."
+            }
+          ]
         },
         {
           "id": 20371,
@@ -57,7 +90,28 @@
           "year": 2019,
           "igdbId": 26813,
           "steamAppId": 1101000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que las demás versiones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando y guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma experiencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fps configurables."
+            }
+          ]
         },
         {
           "id": 20372,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 26813,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma experiencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Carga rápida y fluidez estable."
+            }
+          ]
         },
         {
           "id": 20373,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 26813,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma experiencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución más modesta."
+            }
+          ],
+          "codes": [
+            "0100EA801AB00000"
+          ]
         }
       ],
       "images": {
@@ -98,6 +197,12 @@
         {
           "field": "original_name",
           "value": "Nubla 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nubla 2 continues the adventure of the characters we met in Nubla Episode 1 from the end of their boat trip. Once in the continent, they must begin their search for the City in the Center of the World, looking to return the memory to that world, now lost. But getting there will not be easy. The City is not a physical place: It is beyond the dreams and the trip will definitely be hard and dangerous for our characters, who now have not only Nubla to achieve their goal but with many other characters and inhabitants of that world will be finding in their way.\n\nNubla 2, as its predecessor, not only combines the narrative of the videogame and the concepts behind art and pictures in the Thyssen-Bornemisza National Museum, but rather to tell us much more: If the recurring theme in Nubla was the search for identity and memory, now the subject of borders, time and space, which makes us all refugees in a world that is no longer ours will be the main theme of Nubla 2.",
           "source": "igdb",
           "manual": false
         },
@@ -140,7 +245,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 118539,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010041201AB02000"
+          ]
         }
       ],
       "images": {
@@ -148,5 +256,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2599,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9404,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 12673,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

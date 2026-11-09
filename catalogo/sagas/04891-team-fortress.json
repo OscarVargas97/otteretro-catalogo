@@ -3,7 +3,7 @@
   "name": "Team Fortress",
   "igdbKind": "franchise",
   "igdbId": 2891,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2007,
       "igdbId": 891,
       "popularity": 903,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94183",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Team Fortress 2",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Team Fortress 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "One of the most popular online action games of all time, Team Fortress 2 delivers constant free updates—new game modes, maps, equipment and, most importantly, hats. Nine distinct classes provide a broad range of tactical abilities and personalities, and lend themselves to a variety of player skills.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Uno de los juegos de acción en línea más populares de todos los tiempos, Team Fortress 2 ofrece actualizaciones gratuitas constantes: nuevos modos de juego, mapas, equipamiento y, lo más importante, sombreros. Nueve clases distintas ofrecen una amplia gama de habilidades tácticas y personalidades, y se adaptan a muy diversos estilos de juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -67,7 +85,12 @@
           "igdbId": 891,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f64230dace882ba8b2d14ebfd24dc0a3.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c6e9701b682ec8f4cc3f8923c1dbb1f8.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/44b4596c7a979aa7e4fc820c07fd78fe.png"
+      }
     }
   ],
   "routes": []

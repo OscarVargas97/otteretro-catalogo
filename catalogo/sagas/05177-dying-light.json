@@ -3,7 +3,7 @@
   "name": "Dying Light",
   "igdbKind": "franchise",
   "igdbId": 1062,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2015,
       "igdbId": 3042,
       "popularity": 1082,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "99007",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dying Light",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Dying Light",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dying Light is a first-person, action survival horror game set in a vast and dangerous open world. During the day, players traverse an expansive urban environment overrun by a vicious outbreak, scavenging the world for supplies and crafting weapons to defend against the growing infected population. At night, the hunter becomes the hunted, as the infected become aggressive and more dangerous. Most frightening are the predators which only appear after sundown. Players must use everything in their power to survive until the morning’s first light.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dying Light es un juego de acción y terror de supervivencia en primera persona, ambientado en un mundo abierto vasto y peligroso. Durante el día, los jugadores recorren un extenso entorno urbano invadido por un brote virulento, buscando suministros y fabricando armas para defenderse de la creciente población infectada. De noche, el cazador se convierte en presa, ya que los infectados se vuelven más agresivos y peligrosos. Lo más aterrador son los depredadores, que solo aparecen después del anochecer. Los jugadores deben usar todo su poder para sobrevivir hasta la primera luz de la mañana.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 3042,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas y mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y 60 fps."
+            }
+          ]
         },
         {
           "id": 99006,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 3042,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Buen mando, con cargas algo largas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "1080p a 30 fps."
+            }
+          ]
         },
         {
           "id": 99007,
@@ -65,7 +125,28 @@
           "year": 2015,
           "igdbId": 3042,
           "steamAppId": 239140,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo, con mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón, mando y ajustes flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y cuadros por segundo muy altos."
+            }
+          ]
         },
         {
           "id": 99008,
@@ -73,7 +154,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 3042,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas y DualSense."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y 60 fps."
+            }
+          ]
         },
         {
           "id": 99009,
@@ -81,9 +183,35 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 3042,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Buen control, con cargas largas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Rendimiento similar a PS4."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/795ced384fdcad15310b46841a6f145c.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/ac90e5f00f7542d99231f63fb0dfeecf.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b69ac29d2300c14063391edd38df9910.png"
+      }
     },
     {
       "id": 42607,
@@ -91,9 +219,15 @@
       "originalName": "Dying Light 2: Stay Human",
       "year": 2022,
       "igdbId": 102584,
-      "popularity": 243,
+      "popularity": 244,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "101693",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dying Light 2: Stay Human",
@@ -104,6 +238,18 @@
           "field": "original_name",
           "value": "Dying Light 2: Stay Human",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The last great human settlement exists within an unforgiving, infected world. Exceptional agility and combat skills make you a powerful ally and a valuable commodity. With your unique abilities you have the power to be an agent of change within this decaying metropolis. Use it wisely.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El último gran asentamiento humano existe en un mundo infectado e implacable. Una agilidad y unas habilidades de combate excepcionales te convierten en un aliado poderoso y en un bien muy valioso. Con tus habilidades únicas tienes el poder de ser un agente de cambio en esta metrópolis en decadencia. Úsalo con sabiduría.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -155,7 +301,12 @@
           "igdbId": 102584,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a75fcb7222ddccf84b49f3b3efec8d48.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e5f69a36d50c3cb60dc35e49a62f4f24.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d773061e2a645bc7db7508d45aec693d.png"
+      }
     },
     {
       "id": 45582,
@@ -167,6 +318,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "108036",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dying Light: The Beast",
           "source": "igdb",
@@ -176,6 +333,18 @@
           "field": "original_name",
           "value": "Dying Light: The Beast",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dying Light: The Beast Restored Land is a new enhanced version of the game that includes the base game, all previously released updates and the premiere Restored Land content in one package. This includes Legend Levels, New Game+, Ray Tracing, Nightmare Mode, dozens of new brutal finishers, hundreds of parkour and gameplay improvements, and numerous visual and audio enhancements - delivering new ways to experience the apocalypse.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dying Light: The Beast Restored Land es una nueva versión mejorada del juego que incluye el juego base, todas las actualizaciones publicadas anteriormente y el contenido estrella de Restored Land en un solo paquete. Incluye Niveles de leyenda, New Game+, trazado de rayos, modo Pesadilla, decenas de nuevos remates brutales, cientos de mejoras en el parkour y la jugabilidad, y numerosas mejoras visuales y de audio, que ofrecen nuevas formas de vivir el apocalipsis.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -227,8 +396,92 @@
           "igdbId": 314252,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/496318368d2bbcf15e6fa22b0ea8ed73.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/8d5e076c8efbe9ce4ff98f3090e09035.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/31a810b7f276682519e8ef59dc27cb52.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2019,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41609,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 42607,
+          "reason": "2022"
+        },
+        {
+          "position": 3,
+          "gameId": 45582,
+          "reason": "2025"
+        }
+      ]
+    },
+    {
+      "id": 3635,
+      "kind": "story",
+      "rationale": "Crane protagoniza el primero y The Beast, que ocurre unos años después. Dying Light 2 pasa décadas más tarde con otro protagonista. Este orden es de memoria, sin verificar con fuentes.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41609,
+          "recommendedVersionId": 99007,
+          "reason": "Inicio de la historia con Kyle Crane en Harran. Versión PC por ser la más completa y con mods; elige la de tu consola si prefieres."
+        },
+        {
+          "position": 2,
+          "gameId": 45582,
+          "recommendedVersionId": 108036,
+          "reason": "Continúa la historia de Crane tras el primer juego. Versión PC; cualquier plataforma actual sirve."
+        },
+        {
+          "position": 3,
+          "gameId": 42607,
+          "recommendedVersionId": 101693,
+          "reason": "Es la parte más tardía de la cronología, con Aiden Caldwell. Versión PC; cualquier plataforma actual sirve."
+        }
+      ]
+    },
+    {
+      "id": 3636,
+      "kind": "community",
+      "rationale": "Se suele recomendar empezar por el primero y seguir en orden de lanzamiento. Cada juego se entiende por separado, aunque The Beast gana si conoces a Crane. Ruta sin fuentes verificadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41609,
+          "recommendedVersionId": 99007,
+          "reason": "Punto de partida recomendado: presenta el parkour y a Crane. Versión PC, o la de tu consola actual."
+        },
+        {
+          "position": 2,
+          "gameId": 42607,
+          "recommendedVersionId": 101693,
+          "reason": "Secuela independiente, más grande y con otro protagonista. Versión PC, o la de tu consola actual."
+        },
+        {
+          "position": 3,
+          "gameId": 45582,
+          "recommendedVersionId": 108036,
+          "reason": "Lo más reciente, que recupera a Crane. Versión PC, o la de tu consola actual."
+        }
+      ]
+    }
+  ]
 }

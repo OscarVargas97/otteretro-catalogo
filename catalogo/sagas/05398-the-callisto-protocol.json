@@ -19,9 +19,15 @@
       "originalName": "The Callisto Protocol",
       "year": 2022,
       "igdbId": 141538,
-      "popularity": 163,
+      "popularity": 164,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "102976",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Callisto Protocol",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Callisto Protocol",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In this narrative-driven, third-person survival horror game set 300 years in the future, the player will take on the role of Jacob Lee – a victim of fate thrown into Black Iron Prison, a maximum-security penitentiary located on Jupiter's moon, Callisto. When inmates begin to transform into monstrous creatures, the prison is thrown into chaos.",
           "source": "igdb",
           "manual": false
         },
@@ -83,7 +95,12 @@
           "igdbId": 141538,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e2dbb0b1c2c35fce380831d90d6f50a0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/153e27cda5d7cf186fbffaf5841fce1b.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/f1e848b69bde35a6e0f5792e51f2361f.png"
+      }
     },
     {
       "id": 47169,
@@ -95,6 +112,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111876",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "[Redacted]",
           "source": "igdb",
@@ -103,6 +126,12 @@
         {
           "field": "original_name",
           "value": "[Redacted]",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In [REDACTED], a fast-action isometric roguelike, a shadowy agent watches Black Iron Prison spiral into chaos. As one of the last guards, fight through monsters, rivals, and reanimated corpses of your fellow guards to escape the penitentiary alive.",
           "source": "igdb",
           "manual": false
         },
@@ -139,8 +168,33 @@
           "igdbId": 292844,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b7a45f49fd3791b9e892bc4fba378e31.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/05c1ef44295d8d7b0a71364446fea9d5.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/672f727464396910dfd3ca860b70a663.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3440,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43452,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 47169,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

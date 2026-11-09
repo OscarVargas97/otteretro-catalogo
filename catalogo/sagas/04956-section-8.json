@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95426",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Section 8",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Section 8",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Section 8 is a Sci-Fi first-person shooter that allows players to dynamically alter the flow of combat utilizing tactical assets and on-demand vehicle delivery. Your mission is to scout and secure difficult locations using the most advanced arsenal of military hardware known to man.",
           "source": "igdb",
           "manual": false
         },
@@ -66,7 +78,12 @@
           "igdbId": 7184,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d29086e1236e44097e5f4eb2238d9d3e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c00193e70e8e27e70601b26161b4ae86.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/207e384185cf2f7e2f4e1b2cedada218.png"
+      }
     },
     {
       "id": 40204,
@@ -78,6 +95,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96187",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Section 8: Prejudice",
           "source": "igdb",
@@ -86,6 +109,12 @@
         {
           "field": "original_name",
           "value": "Section 8: Prejudice",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "On the battlefield, prejudice takes many forms, knows no boundaries, and drives all conflict. In the distant future, humanity will call on its most fearless defenders to confront an emerging threat determined to eradicate all human life as we know it. Section 8: Prejudice is a sci-fi first-person shooter with dynamic combat, where every decision – from customizing equipment to activating team based objectives – drastically impacts the battlefield.",
           "source": "igdb",
           "manual": false
         },
@@ -122,8 +151,33 @@
           "igdbId": 19650,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a2720702f437d42f3e5b437208a6ef91.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4e79e96ebb5671bdb50111f18f263003.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/151ea8c2d98ce89c2336324c11b1e107.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3324,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39910,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 40204,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

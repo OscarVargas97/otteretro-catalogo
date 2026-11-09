@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101809",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tex Murphy: Mean Streets",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tex Murphy: Mean Streets",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The year is 2033. Your name is Tex Murphy, Private Investigator in San Francisco. You've been hired by the beautiful daughter of a university professor to uncover the facts about his death. As you begin your investigation you uncover the deaths of several prominent members of the scientific community. Are these deaths coincidental or is there something more sinister going on?\n\nAnd which characters could have a motive? Could it be J. Saint Gideon, former head of British Intelligence? Could Frank Schimming, president of the largest surveillance company in the world be hiding something? Or what about Sylvia, the professor's daughter. Is she as innocent as she seems? And why is an infamous Detroit hit man in town?",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2014,
           "igdbId": 1290,
           "steamAppId": 302330,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo de detective con investigación, conducción y arcade, tal como en 1989 (reedición 2014)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles de teclado y ratón antiguos, pero con configuración de DOSBox y guardado funcional."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el juego original de DOS sin cambios, solo empaquetado para PC moderno."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Corre estable en equipos modernos mediante DOSBox, con gráficos VGA/EGA originales y escalado."
+            }
+          ]
         },
         {
           "id": 101810,
@@ -57,9 +90,35 @@
           "kind": "original",
           "year": 1989,
           "igdbId": 1290,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "1",
+              "text": "No encuentro registro de un port oficial de NES; el contenido es dudoso y probablemente la entrada sea errónea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "1",
+              "text": "No verificable; no hay versión oficial de NES que pueda evaluar."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "El catálogo la marca como original de 1989, pero el original real fue para DOS, no NES."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Sin datos fiables, y no hay forma legítima de jugarla hoy."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fa780ee4e58b23151a7b4678b005c55d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2fbc1100819f2643119e04b3dc72dee2.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/13e68598294f19f79ceafd30aca06f05.png"
+      }
     }
   ],
   "routes": []

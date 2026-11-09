@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "328",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zombies Ate My Neighbors",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Zombies Ate My Neighbors",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the game you are a male or female protagonist (Zeke or Julia), fighting the vampires, mummies, zombies, etc. on over 50 levels (not including secrets) and saving all of the people you find. There are defined number of neighbors you save on every level. When they are free then \"Exit\" door opens and you jump on next level.The levels differ from mall and grocery store to beaches and football fields. Using different weapons such as bazooka or water gun you have to kill the bosses such as huge babies, dragons or ants at the end of levels. You can play the game with two players cooperatively.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 2162,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles originales, con contraseñas en vez de guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Hardware nativo, sin errores relevantes."
+            }
+          ]
         },
         {
           "id": 329,
@@ -56,15 +89,177 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2162,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Permite mando clásico; sigue usando contraseñas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port emulado idéntico."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con salida limpia, sin mejoras notables."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/f04fadf15f1bc7fac1043656f4d06394.png",
         "hero": "https://cdn2.steamgriddb.com/hero/6b3829244a3cb6ef04f4f11733faa5a2.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/d6dabcc412981d56c8733b52586a9d44.png"
+      },
+      "ports": [
+        {
+          "id": 500,
+          "platform": "snes",
+          "project": "zombies-ate-my-neighbors-pc-port",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/moshferatu/zombies-ate-my-neighbors-pc-port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
+    },
+    {
+      "id": 753,
+      "nameEs": "Ghoul Patrol",
+      "originalName": "Ghoul Patrol",
+      "year": 1994,
+      "igdbId": 42612,
+      "popularity": 8,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "1401",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Ghoul Patrol",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Ghoul Patrol",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the sequel to Zombies Ate My Neighbors you as the kids - Zeke or/and Julie - have to save the world from demon the lord of skeletons, ghouls, ghosts and etc. Shooting them by super-new weapons like Plasma Gun or Lobbing Smash Gun, you need to rescue ten trapped victims on each level and fight the boss at the end. But also you have to remember that ammo is limited.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1994",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 1401,
+          "platform": "snes",
+          "kind": "original",
+          "year": 1994,
+          "igdbId": 42612,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles originales, guardado por contraseñas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Hardware nativo, estable."
+            }
+          ]
+        },
+        {
+          "id": 1402,
+          "platform": "wii",
+          "kind": "original",
+          "year": 2010,
+          "igdbId": 42612,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control, con opción de mando clásico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port emulado fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable, sin mejoras notables."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/069b7c9d6abbb60f4ba258c841cfe671.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/255b398b892dc68dd354a9aa7b4db49c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d348627a08fabe278a8909ed03474447.png"
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2081,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 214,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 753,
+          "reason": "1994"
+        }
+      ]
+    }
+  ]
 }

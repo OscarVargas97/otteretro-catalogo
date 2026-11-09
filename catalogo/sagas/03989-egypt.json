@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62366",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Egypt II: The Heliopolis Prophecy",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Egypt II: The Heliopolis Prophecy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game is set in 1360 BC and Heliopolis, the City of the Sun, has been struck by a plague. The player's father has also been infected. In a first person perspective, the player must find a cure and save your father and the rest of Heliopolis.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 43781,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03373"
+          ]
         }
       ],
       "images": {
@@ -73,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62903",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Egypt 1156 B.C.: Tomb of the Pharaoh",
           "source": "igdb",
@@ -81,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Egypt 1156 B.C.: Tomb of the Pharaoh",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Prepare yourself for an adventure in a 3D world, in a time and place full of intrigue and mystery. You are Ramose, an ordinary man in extraordinary circumstances. Your father has been accused of stealing treasures from a royal tomb. Unless you can show the Pharaoh proof of innocence, your father will be executed and his name erased from history. Live everyday life in Egypt over 3000 years ago, as you experience the splendor, the passion and the mystery of a very special moment in time. Go now...into the tomb of the Pharaoh!",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +125,28 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 50398,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo sin recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón encaja con la aventura apuntar y hacer clic y permite guardar libremente."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución que en consola, aunque puede requerir compatibilidad en Windows moderno."
+            }
+          ]
         },
         {
           "id": 62904,
@@ -106,7 +154,31 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 50398,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control con mando, menos preciso para este tipo de aventura."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel pero con la calidad visual reducida."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y cargas más lentas."
+            }
+          ],
+          "codes": [
+            "SLES-01600"
+          ]
         }
       ],
       "images": {
@@ -114,5 +186,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3090,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25032,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 24738,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

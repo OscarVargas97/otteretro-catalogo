@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83831",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Beast Master and Princes",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Beast Master and Princes",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tiana wants to be a great animal tamer like her mother, and on the day that she arrives to her new home in Cattleya, she comes across four animals that she buys along with a strange brooch.\n\nBut soon the animals start talking to her, telling her that they are actually four princes who were struck with a curse, and they need her help...",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 52153,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente al resto; no se conocen extras ni recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil con guardado cómodo y controles más flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la experiencia original con pocos cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Pantalla OLED nítida y cargas rápidas desde descarga digital."
+            }
+          ]
         },
         {
           "id": 83832,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 52153,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "No consta contenido extra frente a las otras ediciones; se asume el juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola de sobremesa, sin mejoras de comodidad y con guardado en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original, tal como se concibió."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento de PS2, con cargas más lentas."
+            }
+          ]
         },
         {
           "id": 83876,
@@ -64,9 +118,33 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 221451,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente; podría haber recortes menores por el formato portátil, sin confirmar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Permite jugar en portátil y guardar en cualquier momento."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original, con posibles ajustes por el formato portátil."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña de baja resolución, con cargas aceptables desde UMD."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co60pk.jpg"
+      }
     },
     {
       "id": 34684,
@@ -78,6 +156,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84875",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Beast Master and Prince: Snow Bride",
           "source": "igdb",
@@ -86,6 +170,12 @@
         {
           "field": "original_name",
           "value": "Beast Master and Prince: Snow Bride",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fandisc of Beast Master and Prince.\nIncluded in the \"Story Jar\" app in English.",
           "source": "igdb",
           "manual": false
         },
@@ -113,8 +203,31 @@
           "igdbId": 221452,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5h1z.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3238,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33912,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 34684,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

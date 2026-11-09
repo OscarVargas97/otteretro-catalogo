@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Extreme-G is a futuristic racing game with an emphasis on speed. It also features many weapons and an F-Zero style energy shield and regeneration.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -48,14 +54,35 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3485,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NEGE",
+            "NEGJ",
+            "NEGP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/4092cce6014949383c30988c71d1e468.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/2ca586bb2adf43e68fb77b916b0fc7db.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/d7812894448c738c527100e62e151d5a.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 706,
+          "platform": "n64",
+          "project": "extreme-g",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://gitlab.com/sonicdcer/ExtremeGRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1158,
@@ -67,6 +94,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2183",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Extreme-G: XG2",
           "source": "igdb",
@@ -75,6 +108,12 @@
         {
           "field": "original_name",
           "value": "Extreme-G: XG2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Extreme-G is a futuristic racing game with an emphasis on speed. It also features many weapons and an F-Zero style energy shield and regeneration. You are able to break the sound barrier where you hear a sonic boom and all game audio drops out.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +131,12 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3486,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NG2E",
+            "NG2J",
+            "NG2P"
+          ]
         },
         {
           "id": 2183,
@@ -120,6 +164,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43342",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Extreme-G 3",
           "source": "igdb",
@@ -128,6 +178,12 @@
         {
           "field": "original_name",
           "value": "Extreme-G 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Futuristic, sci-fi themed racing game featuring ridiculously fast motorcycles (of sorts) that can travel in excess of 1000 mph. They can also be outfitted with weapons, making each race fast and nerve-wracking.",
           "source": "igdb",
           "manual": false
         },
@@ -170,6 +226,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43723",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "XGRA: Extreme G Racing Association",
           "source": "igdb",
@@ -178,6 +240,12 @@
         {
           "field": "original_name",
           "value": "XGRA: Extreme G Racing Association",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "XGRA: Extreme-G Racing Association is a futuristic racing video game, and the fourth in the Extreme-G series, following Extreme-G 3. This game features more tracks as well as a brand new weapon system.\nGameplay is similar but slightly different to previous games in the series. XGRA features a wide range of riders, tracks and bikes that can accelerate at an incredibly rapid rate, going from 0 to 300 mph in a matter of seconds. A returning feature is the ability to break sound barrier: upon reaching 750MPH, all sound effects will cut out, except for item collection sound, other tider's taunts, weapons firing, and in-game music.\n\nXGRA allows players to race for 8 different teams, with each team's bike having their own advantages and drawbacks such as Regeneration, Handling, Speed, Acceleration and Shielding.",
           "source": "igdb",
           "manual": false
         },
@@ -203,7 +271,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 4581,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GXAE-USA",
+            "DL-DOL-GXAP-EUR"
+          ]
         },
         {
           "id": 43724,
@@ -211,7 +283,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 4581,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51636",
+            "SLUS-20632"
+          ]
         }
       ],
       "images": {
@@ -221,5 +297,35 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1097,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1055,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 1158,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 16455,
+          "reason": "2001"
+        },
+        {
+          "position": 4,
+          "gameId": 16619,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

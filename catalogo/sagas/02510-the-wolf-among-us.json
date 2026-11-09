@@ -3,7 +3,7 @@
   "name": "The Wolf Among Us",
   "igdbKind": "collection",
   "igdbId": 2824,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24669",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Wolf Among Us 2",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "The Wolf Among Us 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Wolf Among Us 2 is an episodic graphic adventure game. It is a sequel to The Wolf Among Us and takes place six months following the events of the first game. Follow Bigby Wolf in a new story filled with not-so-colorful characters from famous fairy tales.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Wolf Among Us 2 es un videojuego de aventura gráfica por episodios. Es una secuela de The Wolf Among Us y transcurre seis meses después de los hechos del primer juego. Sigue a Bigby Wolf en una nueva historia llena de personajes no precisamente amables de cuentos de hadas famosos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -103,8 +121,14 @@
       "year": 2013,
       "igdbId": 2993,
       "popularity": 1225,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "93469",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Wolf Among Us",
@@ -115,6 +139,18 @@
           "field": "original_name",
           "value": "The Wolf Among Us",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Wolf Among Us is a five-episode series from the creators of the 2012 Game of the Year: The Walking Dead. Based on Fables (DC Comics/Vertigo), an award-winning comic book series, it is an often violent, mature and hard-boiled thriller where the characters and creatures of myth, lore and legend are real and exist in our world. As Bigby Wolf - The Big Bad Wolf in human form - you will discover that the brutal, bloody murder of a Fable is just a taste of things to come, in a game series where your every decision can have enormous consequences.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Wolf Among Us es una serie de cinco episodios de los creadores de The Walking Dead, Juego del Año de 2012. Basada en Fables (DC Comics/Vertigo), una serie de cómics galardonada, es un thriller a menudo violento, maduro y de cine negro, en el que los personajes y criaturas del mito, la tradición y la leyenda son reales y existen en nuestro mundo. Como Bigby Wolf, el Lobo Feroz en forma humana, descubrirás que el brutal y sangriento asesinato de un Fable es solo un anticipo de lo que vendrá, en una serie de juegos en la que cada una de tus decisiones puede tener consecuencias enormes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -189,7 +225,10 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 2993,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "PCSE-00352"
+          ]
         },
         {
           "id": 95135,
@@ -207,8 +246,73 @@
           "igdbId": 2993,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5fb272a4907bbea419e44c2d624fdb72.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1b56cc9502e48c2d42cbb7262dab2f8c.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/0584ce565c824b7b7f50282d9a19945b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2663,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39802,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 10655,
+          "reason": "2027"
+        }
+      ]
+    },
+    {
+      "id": 3647,
+      "kind": "story",
+      "rationale": "La secuela transcurre después del primer juego (el primero es una precuela de los cómics Fables), así que el orden de la historia coincide con el de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39802,
+          "reason": "Es el inicio de la historia y es necesario para entender la secuela. La versión da igual; la remasterizada mejora lo visual."
+        },
+        {
+          "position": 2,
+          "gameId": 10655,
+          "reason": "Continúa directamente los eventos del primero. Aún no sale, así que no hay versión recomendada."
+        }
+      ]
+    },
+    {
+      "id": 3648,
+      "kind": "community",
+      "rationale": "Se juega el primero y luego la secuela, que continúa su trama. Según lo que sé, la comunidad prefiere la versión remasterizada del primero. No pude verificarlo en la web.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39802,
+          "recommendedVersionId": 93466,
+          "reason": "La versión remasterizada de PC es la que suele recomendarse hoy por su mejor aspecto y soporte actual. No lo pude confirmar con fuentes."
+        },
+        {
+          "position": 2,
+          "gameId": 10655,
+          "recommendedVersionId": 24669,
+          "reason": "Secuela directa, para jugar tras el primero. Elegí PC por coherencia con la versión anterior; cámbiala si usas otra consola."
+        }
+      ]
+    }
+  ]
 }

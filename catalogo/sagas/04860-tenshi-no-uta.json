@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Tenshi no Uta is a standard JRPG that also incorporates monster negotiation to gain additional items through monster shops and monsters to fight alongside with during battles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 385075,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/gu9dybf3bi4cf34vaofj.jpg"
+      }
     },
     {
       "id": 37754,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The second entry in the Tenshi no Uta RPG series by Telenet.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 385074,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/jxqvgm1ioybsgivnbmrx.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3297,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 37752,
+          "reason": "1991"
+        },
+        {
+          "position": 2,
+          "gameId": 37754,
+          "reason": "1993"
+        }
+      ]
+    }
+  ]
 }

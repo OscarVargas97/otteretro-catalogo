@@ -26,6 +26,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Zegapain XOR was released in Japan on July 27, 2006. The game is similar in nature to Zone of the Enders. A mech action game, the player controls Cerebrant Toga Vital and the plot runs parallel to the events of the anime. Zegapain XOR is set on the Oceanus-class ship Dvaraka and commanded by Isola, a recurring character in the anime series. Several characters who appear in the game make brief appearances in the anime series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -41,7 +47,10 @@
           "igdbId": 68017,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2fox.jpg"
+      }
     },
     {
       "id": 48655,
@@ -65,6 +74,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Zegapain NOT, was released on December 7, 2006 in Japan. Also based on the anime series, Zegapain NOT is a sequel and companion to Zegapain XOR and continues the storyline of the previous game. The game features a special online mode that allows for cross-disc online play, enabling players with Zegapain XOR to play against players with Zegapain NOT. The game has over 3,000 ways to customize your character.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -80,8 +95,31 @@
           "igdbId": 68015,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2foy.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3524,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48653,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 48655,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

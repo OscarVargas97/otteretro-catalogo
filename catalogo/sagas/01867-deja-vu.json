@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102090",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Déjà Vu: A Nightmare Comes True!!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Déjà Vu: A Nightmare Comes True!!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Déjà Vu is a point-and-click adventure game that draws inspiration from \"noir\" detective novels that were popular in the 1940s.",
           "source": "igdb",
           "manual": false
         },
@@ -104,6 +116,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This time you wake up in Las Vegas with great headache and realize that you are Ace Harding, who has to find $112,000 of recently murdered Chicago's racketeer Joey Siegel for his boss and Las Vegas' mobster Tony Malone. You have a choice to find money in one week or classical \"or else\". Just for formality you are watched by Malone's thug Stogie Martin.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1988",
           "source": "igdb",
@@ -125,5 +143,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2455,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7166,
+          "reason": "1985"
+        },
+        {
+          "position": 2,
+          "gameId": 7170,
+          "reason": "1988"
+        }
+      ]
+    }
+  ]
 }

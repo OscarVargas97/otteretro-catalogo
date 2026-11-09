@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95334",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Condemned 2: Bloodshot",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Condemned 2: Bloodshot",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Condemned 2: Bloodshot, players will engage in visceral combat using a variety of firearms, blunt instruments and an all-new fighting system complete with defensive and offensive combo chains, as well as grapples and holds. To help track the killer and solve the mysteries behind Condemned 2: Bloodshot, players will crack open an all-new set of high-tech forensic tools. Using wits and brute strength, murders can be solved a number of different ways to keep players guessing throughout each suspenseful investigation.\n\nDelivering the most brutal hand-to-hand combat experience the first-person genre has ever seen, Condemned 2 follows Ethan Thomas through a string of gruesome murders. Use all-new fighting mechanics and high-tech tools to unravel the mysteries within.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 6943,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30115"
+          ]
         },
         {
           "id": 95335,
@@ -57,6 +72,28 @@
           "year": 2008,
           "igdbId": 6943,
           "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/93a77d951ae320600dc9619f3ddeee72.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/cfae31c0ae24e669e92ed186beb97a6a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5f94d747fbf97bbec48a0bc22602e968.png"
+      },
+      "ports": [
+        {
+          "id": 611,
+          "platform": "x360",
+          "project": "Condemned2Recomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/psxrestore/Condemned2Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
         }
       ]
     },
@@ -70,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102794",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Condemned: Criminal Origins",
           "source": "igdb",
@@ -78,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Condemned: Criminal Origins",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Investigate crime scenes, collect evidence, and bring to light the murderers terrorizing the city as Detective Ethan Thomas. With danger lurking around every corner, you’ll need whatever weapons you can find to stay alive.\n\nWhat twists the mind of an ordinary human into a serial killer? Assigned to the Serial Crimes Unit, Agent Ethan Thomas must answer this question, and bring the worst of society to justice. His solve rate is the best in the bureau....perhaps too good.",
           "source": "igdb",
           "manual": false
         },
@@ -106,8 +155,33 @@
           "igdbId": 6942,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2c213ea2f60d4916fa841b66b4859770.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/bd578998adcc95981af6429de69e53c9.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/cc5eafbcaff63bb2d5b8fa02b30cd8d8.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3321,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43372,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 39865,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

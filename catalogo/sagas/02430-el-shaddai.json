@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22760",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Lost Child",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Lost Child",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A first-person RPG dungeon crawler set in the present day and continuing the El Shaddai series.\nThe game uses random encounters and turn-based combat with a team of 5 characters. Creatures can be captured and added to your team, as well as being combined to create more powerful creatures.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 36535,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01008A000A404000"
+          ]
         }
       ],
       "images": {
@@ -83,6 +98,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "57269",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "El Shaddai: Ascension of the Metatron",
           "source": "igdb",
@@ -91,6 +112,12 @@
         {
           "field": "original_name",
           "value": "El Shaddai: Ascension of the Metatron",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "El Shaddai: Ascension of the Metatron, originally released in 2011, is a unique third-person action adventure filled with a deeply artistic world-building, outstanding aesthetics and thrilling battles.",
           "source": "igdb",
           "manual": false
         },
@@ -132,7 +159,13 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 6987,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCAS-20173",
+            "BLES-01163",
+            "BLJS-10117",
+            "BLUS-30466"
+          ]
         },
         {
           "id": 95564,
@@ -148,5 +181,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2643,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10094,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 22849,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

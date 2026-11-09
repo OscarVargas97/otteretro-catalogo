@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114636",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deathsmiles",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Deathsmiles",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Deathsmiles is CAVE's bullet-hell shoot-'em-up where you take the role of one of five Angels to defend the magical land of Gilverado from an invasion by Hell itself! Eradicate this devilish assault!",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2016,
           "igdbId": 6963,
           "steamAppId": 314180,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que X360, con los modos y las variantes del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Soporta mando y teclado, y permite rotar la pantalla vertical y ajustar opciones."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel al juego de X360, con pequeños cambios en la presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta, ajustes gráficos y rendimiento fluido de forma constante."
+            }
+          ]
         },
         {
           "id": 114637,
@@ -57,10 +90,106 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 6963,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye el juego completo con modos Arcade, Xbox 360 Mode y Add-on, además de logros."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles precisos con mando, pero sin opciones modernas de pantalla o ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión doméstica original, tal como se lanzó."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja y sin opciones gráficas, aunque rinde estable."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/94bafa0d176324dadbb5fe42e4cbb397.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/dff828a2db2702a3b0d2790e23acd705.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ecce75281c8b95a042dff4e7e24a477d.png"
+      }
+    },
+    {
+      "id": 48698,
+      "nameEs": "Deathsmiles II: Makai no Merry Christmas",
+      "originalName": "Deathsmiles II: Makai no Merry Christmas",
+      "year": 2009,
+      "igdbId": 68011,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Deathsmiles II: Makai no Merry Christmas",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Deathsmiles II: Makai no Merry Christmas",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Deathsmiles II: Makai no Merry Christmas is a horizontal side scrolling shoot 'em up arcade game by Japanese developer Cave, released in 2009. It is the third Cave shoot 'em up to be played using a horizontally-oriented monitor (preceded by Progear and the original Deathsmiles). Deathsmiles II is also the first CAVE arcade game to use polygons instead of their traditional sprites for graphics.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2009",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 115513,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2010,
+          "igdbId": 80459,
           "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/833ff341e67ca1a07b781a51ba98f74b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0dfd05ca6ca1b2aff14c86da376a77a1.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/086881cf2f795b21680c11c5aa37d7ff.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3500,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48279,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 48698,
+          "reason": "2009"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

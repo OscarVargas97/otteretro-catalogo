@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Quest: Shounen Yangus to Fushigi no Dungeon is a prequel and spin-off to Dragon Quest VIII, developed by Cavia and published by Square Enix,which was released in Japan in 2006.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -48,9 +54,17 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 75986,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCAJ-20175",
+            "SLPM-66363",
+            "SLPM-66781"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2xe6.jpg"
+      }
     },
     {
       "id": 41060,
@@ -62,6 +76,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98038",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mystery Chronicle: One Way Heroics",
           "source": "igdb",
@@ -70,6 +90,12 @@
         {
           "field": "original_name",
           "value": "Mystery Chronicle: One Way Heroics",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Play your way through the different maps generated with every playthrough, constantly on the move away from the calamity of light, the Shine Raid, to your left and on your final battle with the Fallen Angel Alma. There's no turning back, once this thrilling one-way adventure begins!",
           "source": "igdb",
           "manual": false
         },
@@ -106,8 +132,32 @@
           "igdbId": 23865,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7fa9a4cf715821bfdf1110a5133734da.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a5759a540f7c31111401ddf16fb5d5de.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3249,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34175,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 41060,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

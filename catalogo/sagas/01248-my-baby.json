@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Simulates baby care, or something.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 47709,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CBAE",
+            "CBAX"
+          ]
         }
       ],
       "images": {
@@ -77,6 +87,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Your Real Baby to Love and Care for! \n \nTaking care of a baby is not always easy: bathing, bottle-feeding, changing diapers... But what joy when you see your baby smile! My Baby allows you to discover a marvelous adventure filled with emotion.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -90,7 +106,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 47976,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BDJE",
+            "CGBE",
+            "CGBX"
+          ]
         }
       ],
       "images": {
@@ -107,6 +128,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "47066",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "My Baby: First Steps",
           "source": "igdb",
@@ -115,6 +142,12 @@
         {
           "field": "original_name",
           "value": "My Baby: First Steps",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Teach your Baby to Walk, Talk, and Play!\n\nYour baby has grown so fast! Can you believe that a year has already gone by? Take care of your baby from their 1st birthday until they're 3 years old. Your baby will discover its entire environment and learn from it, they'll walk, babble and speak, try to catch every object they can, and put everything in their mouth... Your baby will be the apple of your eye!",
           "source": "igdb",
           "manual": false
         },
@@ -132,7 +165,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 47910,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SB2E-USA-B0"
+          ]
         },
         {
           "id": 47066,
@@ -140,7 +176,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 144073,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BB2E"
+          ]
         }
       ],
       "images": {
@@ -148,5 +187,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1535,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3797,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 17060,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 18544,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

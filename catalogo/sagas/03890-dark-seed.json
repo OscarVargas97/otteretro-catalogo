@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61027",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dark Seed",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dark Seed",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You have just moved into a new house and you are experiencing some horrible nightmares. The nightmares are caused by the Aliens that made the \"dark world\" which the only access to is through the magic mirror. You've got to find whats behind those nightmares and get rid of the Aliens.",
           "source": "igdb",
           "manual": false
         },
@@ -75,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61094",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dark Seed II",
           "source": "igdb",
@@ -83,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Dark Seed II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dark Seed II continues the nightmare of Mike Dawson where the designs of H.R. Giger are pivotal in this horror point 'n click adventure.\n\nPlayers will be swapping between the Normal World and the Dark World, with 75 prerendered 3D locations in total. There are 40 characters to interact with. The goal is to overthrow the Behemoth of the Dark World and cut through the corruption of the Normal World.\n\nMovement, action and dialogue interaction modes are toggled between using the right mouse button, with the full screen used for location display unless the game menu or inventory bars are called into use.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +124,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 9261,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión completa original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "El ratón va mejor en una aventura gráfica."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y guardado libre."
+            }
+          ]
         },
         {
           "id": 61095,
@@ -108,7 +153,31 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 9261,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port con cambios menores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control con mando incómodo y guardado limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con adaptaciones."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y cargas lentas."
+            }
+          ],
+          "codes": [
+            "SLPS-00938"
+          ]
         }
       ],
       "images": {
@@ -118,5 +187,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3065,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24023,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 24065,
+          "reason": "1995"
+        }
+      ]
+    }
+  ]
 }

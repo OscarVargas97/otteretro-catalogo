@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3750",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gekido Advance: Kintaro's Revenge",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Gekido Advance: Kintaro's Revenge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's Time to Fight! \n \nA year has passed since the epic battle that decided the fate of mankind and claimed the life of the beloved Angela. Dark omens once again tell of the return of an evil presence. Ushi is the last remaining master of the ancient art of Shin-Ken, and he calls upon Tetsuo, his disciple and adopted son, to investigate some strange happenings in a faraway farming village outside the city.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 6418,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AGEE",
+            "AGEP"
+          ]
         },
         {
           "id": 3747,
@@ -100,6 +116,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61019",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gekido",
           "source": "igdb",
@@ -108,6 +130,12 @@
         {
           "field": "original_name",
           "value": "Gekido",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gekido (known as Gekido: Urban Fighters in Europe) is a beat 'em up for the PlayStation game console. The game uses a fast paced beat 'em up system, with many bosses and a colorful design in terms of graphics. The game features the music of Fatboy Slim and Apartment 26. Marvel comic book artist Joe Madureira also contributed. A version of Gekido was also released on the Game Boy Color in Europe. It was later followed by a GBA spin-off called Gekido Advance: Kintaro's Revenge. A second sequel has been announced, Gekido: The Dark Angel.",
           "source": "igdb",
           "manual": false
         },
@@ -143,5 +171,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2174,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23965,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 1613,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

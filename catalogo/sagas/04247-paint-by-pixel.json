@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "68818",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Paint by Pixel 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Paint by Pixel 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Create your pixel masterpiece today!",
           "source": "igdb",
           "manual": false
         },
@@ -65,7 +77,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 249203,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100E30020D40000"
+          ]
         }
       ],
       "images": {
@@ -82,6 +97,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "69192",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Paint by Pixel 3",
           "source": "igdb",
@@ -90,6 +111,12 @@
         {
           "field": "original_name",
           "value": "Paint by Pixel 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Unleash your creativity and paint your way pixel by pixel!",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +135,28 @@
           "year": 2023,
           "igdbId": 257485,
           "steamAppId": 2463720,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón es ideal para pintar por número."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y carga rápida."
+            }
+          ]
         },
         {
           "id": 69193,
@@ -116,7 +164,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 257485,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Con mando es más lento y menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 69194,
@@ -124,7 +193,31 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 257485,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "El táctil ayuda y el modo portátil es cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y cargas algo inferiores."
+            }
+          ],
+          "codes": [
+            "0100E97020DBC000"
+          ]
         }
       ],
       "images": {
@@ -141,6 +234,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111557",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Paint by Pixel",
           "source": "igdb",
@@ -149,6 +248,12 @@
         {
           "field": "original_name",
           "value": "Paint by Pixel",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Paint by Pixel is a relaxing puzzle game where you create beautiful works of art one pixel at a time.\n\nChoose between brush or fill mode, recolor your drawings to personalize them, and use zoom and the magnifying glass to focus on details.\nThe game also includes an autofill feature and hints to make things easier. With 95 levels to choose from, Paint by Pixel is the perfect game to unwind and explore your artistic side.",
           "source": "igdb",
           "manual": false
         },
@@ -176,8 +281,36 @@
           "igdbId": 286862,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co89kw.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1916,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 27784,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 27948,
+          "reason": "2023"
+        },
+        {
+          "position": 3,
+          "gameId": 47038,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

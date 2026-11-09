@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bakushou Jinsei 64: Mezase! Resort-ou is an interactive board game for the Nintendo 64 based on The Game of Life. It was released only in Japan in 1998.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 44039,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NBJJ"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bakusho!! Jinsei Kaido NOVA Usagi ga Miteruzo!! is a Japanese party game for up to four players, licensed by NOVA and the Tong King Show.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -92,8 +107,31 @@
           "igdbId": 269387,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co75qz.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2150,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1186,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 34814,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

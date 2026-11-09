@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86106",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Alien Zombie Death",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Alien Zombie Death",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Somewhere far far away in a random solar system, a lone space man dies... horribly. Take control of said fateful space man as he battles to his end against the dreaded Alien Zombies! Using a standard laser gun and a few pickups along the way, make sure you take out as many of those Alien Zombie suckers before they take you down. Its that simple. It's Alien Zombie Death.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 15189,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co70ox.jpg"
+      }
     },
     {
       "id": 40211,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96205",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Alien Zombie Megadeath",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Alien Zombie Megadeath",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Alien Zombie Megadeath is a gloriously intense platform shoot-em-up! You are the lone Spaceman, doing boring space work on a random space platform in deep space when suddenly a huge, relentless, alien force attacks! However these are not your normal everyday aliens...these are alien ZOMBIES! Even through his protective helmet, Spaceman is sickend by their smelliness.\n\nFor the sake of humanity... and Spacemans nostrils... you must take control of the ill-fated Spaceman and fend off the alien zombie hoards. Alien Zombie Megadeath is an oldschool 2D platform shoot-em-up with enemies coming at you from all sides, in all shapes and sizes. You MUST blast them all to smithereens.",
           "source": "igdb",
           "manual": false
         },
@@ -106,8 +133,33 @@
           "steamAppId": 110610,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6201a8c498ddef92d0ac8e9f0fc5b0c1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c16117de1309f508633dae03c0804a0b.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/799de6d3dae4c924142cf245a1d7f703.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3274,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35377,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 40211,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

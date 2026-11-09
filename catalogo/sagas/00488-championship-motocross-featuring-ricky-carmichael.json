@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2245",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Championship Motocross featuring Ricky Carmichael",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Championship Motocross featuring Ricky Carmichael",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Championship Motocross featuring Ricky Carmichael is a video game developed by Funcom Dublin and published by THQ for the PlayStation in 1999. It is the first of four motocross racing games published by THQ to be endorsed by professional motocross racer Ricky Carmichael.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 44830,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02200",
+            "SLUS-00790"
+          ]
         }
       ],
       "images": {
@@ -74,6 +90,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13867",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Championship Motocross 2001 featuring Ricky Carmichael",
           "source": "igdb",
@@ -82,6 +104,12 @@
         {
           "field": "original_name",
           "value": "Championship Motocross 2001 featuring Ricky Carmichael",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "THQ's second installment in their motocross franchise.",
           "source": "igdb",
           "manual": false
         },
@@ -99,7 +127,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 76978,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03252",
+            "SLUS-01230"
+          ]
         },
         {
           "id": 13867,
@@ -117,5 +149,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2153,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1198,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 7291,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

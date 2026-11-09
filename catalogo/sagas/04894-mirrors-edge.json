@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94259",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mirror's Edge",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mirror's Edge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mirror's Edge is a first-person action-adventure game focused on parkour and free-running. Set in a heavily surveilled city, players control Faith, a courier who traverses rooftops using wall-runs, jumps, and slides to deliver sensitive information. The gameplay emphasizes momentum and fluid movement over combat, with a focus on finding the fastest path through urban environments.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,13 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1051,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00322",
+            "BLJM-60104",
+            "BLKS-20094",
+            "BLUS-30179"
+          ]
         },
         {
           "id": 94259,
@@ -67,7 +85,12 @@
           "igdbId": 1051,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a82e1f1656c1bbbf26f4ed4c73623589.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9fb4651c05b2ed70fba5afe0b039a550.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9729c9467900e712f46044a2e54da67f.png"
+      }
     },
     {
       "id": 41636,
@@ -79,6 +102,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99087",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mirror's Edge Catalyst",
           "source": "igdb",
@@ -87,6 +116,12 @@
         {
           "field": "original_name",
           "value": "Mirror's Edge Catalyst",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mirror's Edge Catalyst is an action-adventure game and the reboot to Mirror's Edge. The story in the game explores the past of the protagonist Faith. Like in the previous game, the main gameplay in Mirror's Edge Catalyst involves traversing the city using parkour to reach certain objectives. Unlike the linear levels in Mirror's Edge, Mirror's Edge Catalyst features an open-world free-roaming environment. Combat has been overhauled and emphasized compared to the first game and Catalyst no longer allows the player to use weapons, instead focusing on melee attacks.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +158,33 @@
           "igdbId": 2112,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/de7253fe8c9508d52b2d38a1ddb4b5f3.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2810641ad4fe0ef85b460df52d7a48e8.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/cdb3fcd3d3fde62fe3b549a90793467e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3306,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39529,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 41636,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

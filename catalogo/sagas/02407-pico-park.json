@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "23243",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pico Park: Classic Edition",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Pico Park: Classic Edition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The rule is quite simple: \"Get all the keys and get to the goal and clear\", but all 48 levels have special gimmicks designed specifically for multiplayer. At most levels, different gimmicks will appear as you move forward, and you will need to consult with your peers and think about new ways to cooperate.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 288208,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido de la edición clásica de 2016."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cooperativo local en un solo teclado o con mandos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en PC."
+            }
+          ]
         },
         {
           "id": 23243,
@@ -57,7 +90,28 @@
           "year": 2021,
           "igdbId": 33027,
           "steamAppId": 1509960,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido clásico, relanzamiento en 2021."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cooperativo local con mandos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Versión de PC más actual y estable."
+            }
+          ]
         },
         {
           "id": 23244,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 33027,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido clásico."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Joy-Con compartidos facilitan el cooperativo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más limitado que PC."
+            }
+          ]
         }
       ],
       "images": {
@@ -84,6 +159,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76651",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pico Park 2",
           "source": "igdb",
@@ -92,6 +173,12 @@
         {
           "field": "original_name",
           "value": "Pico Park 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "PICO PARK is back with all new levels! Play with 2-8 players locally or online in this co-op action-puzzle game!",
           "source": "igdb",
           "manual": false
         },
@@ -126,7 +213,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 314933,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010035101E1CC000"
+          ]
         }
       ],
       "images": {
@@ -136,5 +226,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2634,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9909,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 30666,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

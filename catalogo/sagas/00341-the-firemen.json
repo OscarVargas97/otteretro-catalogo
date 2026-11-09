@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The fire is alive - and it's racing straight towards you!\nA fire has broken out in a high-tech chemical factory, where a highly explosive chemical, MDL, is being developed. It's up to you and your fire-fighting team to save the people trapped in the building, and stop the fire from reaching the MDL. Because if it does, the whole building is going to blow...\n\n-An action shooting game with a gripping storyline and 2D overhead perspective.\n-Evade sudden hazards and save survivors.\n-Multi-level action - crawl along the ground to advance, and hose the fire from both high and low levels.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1994",
           "source": "igdb",
@@ -67,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62717",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Firemen 2: Pete & Danny",
           "source": "igdb",
@@ -75,6 +87,12 @@
         {
           "field": "original_name",
           "value": "The Firemen 2: Pete & Danny",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"THE FIREMEN 2 Pete & Danny\" is an action adventure game. Play as fireman Pete or Danny to put out roaring fire, save lives and clear missions.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +110,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 51663,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que en PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo y mando moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación con salida digital."
+            }
+          ]
         },
         {
           "id": 62718,
@@ -100,7 +139,32 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 51663,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control fiel de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original."
+            }
+          ],
+          "codes": [
+            "SLPS-00148",
+            "SLPS-02090"
+          ]
         },
         {
           "id": 62719,
@@ -108,7 +172,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 51663,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que en PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, control algo incómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña pero estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -117,5 +202,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2119,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 732,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 24918,
+          "reason": "1995"
+        }
+      ]
+    }
+  ]
 }

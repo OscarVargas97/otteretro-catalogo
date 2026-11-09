@@ -3,7 +3,7 @@
   "name": "Crysis",
   "igdbKind": "collection",
   "igdbId": 36,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14916",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crysis 3",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Crysis 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The award-winning developer Crytek is back with Crysis 3, the first blockbuster shooter of 2013! Crysis 3 is the ultimate sandbox shooter, realized in the stunning visuals only Crytek and the latest version of CryENGINE can deliver. Available now on Xbox 360, PlayStation 3, and PC.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El galardonado desarrollador Crytek regresa con Crysis 3, el primer gran éxito de los shooters de 2013. Crysis 3 es el shooter sandbox definitivo, con los gráficos impresionantes que solo Crytek y la última versión de CryENGINE pueden ofrecer. Ya disponible en Xbox 360, PlayStation 3 y PC.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,14 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1268,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50497",
+            "BLES-01649",
+            "BLJM-60530",
+            "BLJM-61143",
+            "BLUS-30976LE"
+          ]
         },
         {
           "id": 14306,
@@ -141,6 +166,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "52079",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crysis 2",
           "source": "igdb",
@@ -150,6 +181,18 @@
           "field": "original_name",
           "value": "Crysis 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sequel to one of the greatest PC shooters ever, Crysis 2 offers console players their first taste of Crytek's unique shooter gameplay. Featuring futuristic war, gorgeous destruction and the chance to kick alien butt on the grandest stage of all, New York City, Crysis 2 is destined at the least to equal its predecessor, if not surpass it. Additional features include: challenging AI enemies in the single player campaign, 12-player support online, new and improved upgradable Nanosuit 2 technology and more.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Secuela de uno de los mejores shooters para PC de todos los tiempos, Crysis 2 ofrece a los jugadores de consola su primer contacto con la jugabilidad única de los shooters de Crytek. Con una guerra futurista, una destrucción espectacular y la oportunidad de dar una paliza a los alienígenas en el escenario más grande de todos, la ciudad de Nueva York, Crysis 2 está destinado, como mínimo, a igualar a su predecesor, si no a superarlo. Entre las características adicionales se incluyen: enemigos con IA desafiante en la campaña para un jugador, soporte para 12 jugadores en línea, la tecnología Nanosuit 2 mejorada y mejorable, y más.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -215,7 +258,14 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 471,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01060",
+            "BLES-01060/ANZ",
+            "BLJM-60311",
+            "BLUS-30631",
+            "BLUS-30631LE"
+          ]
         },
         {
           "id": 94446,
@@ -233,8 +283,75 @@
           "igdbId": 471,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9117a47742d87b8929f47eac8bc12924.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/afc86676da281b5e637228cee0e655f6.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/259d4db69e0d371dac1dfc193b5afaba.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2469,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39598,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 7727,
+          "reason": "2013"
+        }
+      ]
+    },
+    {
+      "id": 3985,
+      "kind": "story",
+      "rationale": "Crysis 3 continúa directamente la historia de Crysis 2. El catálogo no incluye el primer Crysis, así que la ruta solo cubre estos dos.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39598,
+          "recommendedVersionId": 52076,
+          "reason": "Primera parte de las dos disponibles. Se recomienda el remaster, que mejora gráficos y rendimiento."
+        },
+        {
+          "position": 2,
+          "gameId": 7727,
+          "recommendedVersionId": 14916,
+          "reason": "Continúa la historia de Crysis 2. Se recomienda el remaster por la misma razón."
+        }
+      ]
+    },
+    {
+      "id": 3986,
+      "kind": "community",
+      "rationale": "Se juegan en orden de lanzamiento con los remasters, que son la forma habitual de jugarlos hoy. No pude verificarlo con fuentes de comunidad.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39598,
+          "recommendedVersionId": 52076,
+          "reason": "Punto de partida con los juegos del catálogo. Versión remaster en PC por su mejor estabilidad y visuales."
+        },
+        {
+          "position": 2,
+          "gameId": 7727,
+          "recommendedVersionId": 14916,
+          "reason": "Cierra la trilogía. Versión remaster en PC."
+        }
+      ]
+    }
+  ]
 }

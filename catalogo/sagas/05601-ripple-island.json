@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114198",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ripple Island",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ripple Island",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An adventure game for the NES published by Sunsoft. A boy named Kyle must rescue the princess of a kingdom where very small humans and animals peacefully co-exist.\n\nRipple Island (occasionally seen translated as \"Lipple Island\") is a graphic adventure game where the player interacts with the world using a series of commands, such as \"pick up\", \"walk\" or \"use\".\n\nRather than the usual murder mystery games which were the trend at the time, Ripple Island instead adopts a fantasy storybook setting where smaller humans and friendly animals, such as raccoons and rabbits, co-exist peacefully. The kingdom is threatened by the arrival of Gerogeru, a self-styled Emperor of Darkness and giant frog, after he kidnaps the princess. Kyle, a young boy and the game's protagonist, is attempting to rescue her.\n\nThe game was never released outside of Japan. It was, however, re-released as part of a Japan-only PS2 compilation based on Sunsoft's works. It also received a manga adaptation.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 425055,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/21c9c3799d9c27e7629a7ae15c73d25f.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e1bd19e0aeef791fff4c371bf143f8aa.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5f340e5fe76862538a5f06a6975f53af.png"
+      }
     },
     {
       "id": 50197,
@@ -70,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "118325",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ripple Island: Kyle and Cal’s Restaurant",
           "source": "igdb",
@@ -78,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Ripple Island: Kyle and Cal’s Restaurant",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The restaurant is packed and business is booming! Join forces with the quirky and wonderful animals of Ripple Island to cook and serve tons of tasty food! Ripple Island: Kyle and Cal's Restaurant is a fast-paced cooperative cooking action game where up to 16 players work together to run an intensely busy restaurant.",
           "source": "igdb",
           "manual": false
         },
@@ -106,8 +135,31 @@
           "steamAppId": 3844150,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cod1qy.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3488,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 47873,
+          "reason": "1988"
+        },
+        {
+          "position": 2,
+          "gameId": 50197,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

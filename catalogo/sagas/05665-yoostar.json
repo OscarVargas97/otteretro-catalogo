@@ -14,6 +14,72 @@
   ],
   "games": [
     {
+      "id": 40195,
+      "nameEs": "Yoostar 2: In the Movies",
+      "originalName": "Yoostar 2: In the Movies",
+      "year": 2011,
+      "igdbId": 20164,
+      "popularity": 2,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "96167",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Yoostar 2: In the Movies",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Yoostar 2: In the Movies",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Everyone now has the opportunity to become a global movie star with Yoostar 2. In an instant you can step into the shoes of famous characters from hundreds of movies, play out the part and then share your performance with the world.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2011",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 96167,
+          "platform": "ps3",
+          "kind": "original",
+          "year": 2011,
+          "igdbId": 20164,
+          "criteria": [],
+          "codes": [
+            "BLES-01080",
+            "BLUS-30596"
+          ]
+        },
+        {
+          "id": 96168,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2011,
+          "igdbId": 20164,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co26kv.jpg"
+      }
+    },
+    {
       "id": 48426,
       "nameEs": "Yoostar on MTV",
       "originalName": "Yoostar on MTV",
@@ -35,6 +101,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Yoostar on MTV fulfills the dreams of pop culture fans and gamers alike by giving everyone the opportunity to star in the most iconic scenes to ever hit cable TV. With a huge library of live events, news, classic, reality, and original shows to choose from, as well as the inclusion of upcoming shows to maximize its cultural relevancy, the extensive archive of trend-setting and entertaining content leaves no stone unturned. Additionally, some of the most popular music videos in recent history will be playable in Yoostar on MTV, in which you can perform with your own voice or via lip dub.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -50,8 +122,31 @@
           "igdbId": 9593,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co26ku.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3504,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40195,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 48426,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

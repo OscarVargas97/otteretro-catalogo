@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Drakkhen",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Drakkhen",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The prophecy has been fulfilled. The world shall be ruled by the dragons. On an island far away, their lords prepare for the conquest of the lands. There is only one hope for mankind. The emperor sends out four heroes -- warriors and magicians -- to solve the puzzle of tears and prevent the invasion of the Drakkhen.\n\nDrakkhen is a role-playing game with a visual presentation that combines 3D landscapes and 2D interiors. The player's party will travel overland on a flat terrain made up of vectors, on which 2D objects are zoomed (The same type of engine was later used in Eternam). The player will encounter monsters and fight them in real-time combat, and discover the palaces of the dragon lords. Indoors, the player has to find a way through the maze of chambers, solving puzzles and defeating the minions of the Drakkhen. Party members are depicted in four status windows on the left side of the screen, thus allowing to see their current status and equipment at once.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1989,
           "igdbId": 12057,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles torpes y sin guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, imagen limitada."
+            }
+          ]
         },
         {
           "id": 22,
@@ -57,7 +90,28 @@
           "year": 2018,
           "igdbId": 12057,
           "steamAppId": 781220,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y opciones de comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen y sin errores de hardware."
+            }
+          ]
         }
       ],
       "images": {
@@ -76,6 +130,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1382",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon View",
           "source": "igdb",
@@ -84,6 +144,12 @@
         {
           "field": "original_name",
           "value": "Dragon View",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon View is an action role-playing game released for the Super Nintendo Entertainment System in 1994. It is a follow-up to Drakkhen and combines side-scrolling combat with exploration across a 3D overworld. Players control Alex as he searches for his kidnapped girlfriend, Katarina, and confronts threats across a fantasy kingdom.",
           "source": "igdb",
           "manual": false
         },
@@ -101,7 +167,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 42635,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado por batería, sin extras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original."
+            }
+          ]
         },
         {
           "id": 1382,
@@ -110,7 +197,28 @@
           "year": 2019,
           "igdbId": 42635,
           "steamAppId": 784010,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y mejor comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más limpia en pantallas modernas."
+            }
+          ]
         }
       ],
       "images": {
@@ -120,5 +228,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2059,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16,
+          "reason": "1989"
+        },
+        {
+          "position": 2,
+          "gameId": 734,
+          "reason": "1994"
+        }
+      ]
+    }
+  ]
 }

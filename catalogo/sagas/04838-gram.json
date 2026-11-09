@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "89383",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shirokoi Sakura Gram",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Shirokoi Sakura Gram",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is the fandisc for Haruoto Alice * Gram, containing after stories for each of the five heroines.\n\nThe main story concerns the arrival of new character Lilyetto and her proclamation of dissolving the Tasogare-bu. There’s also a route for sub-heroine Kozue, a side story where they visit the ALIA’s CARNIVAL! school, and a fantasy story where they end up in another world.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 370245,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobuir.jpg"
+      }
     },
     {
       "id": 41523,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98753",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Haruoto Alice Gram: Snow Drop",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Haruoto Alice Gram: Snow Drop",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Seiryou Gakuen is a popular high-ranked school in the seaside city of Minato which prides itself on the latest facilities and student independence. Since a year ago, it has been managed concurrently by the student council and the new entrant's council.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +132,31 @@
           "igdbId": 113585,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobuiq.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3294,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41523,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 37107,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

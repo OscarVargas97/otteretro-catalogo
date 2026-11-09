@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "116043",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Battle High 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Battle High 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Battle High 2 is the sequel to the indie fighting game Battle High: Elemental Revolt. A mysterious force has been causing illness within select students and stripping them of their powers. Each of the students has his or her own agenda during these times of turmoil. Some are investigating the power disruption. Some seek the source so that they can be normal again. Others have completely other scores to settle and others just want to watch the world burn.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 19093,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base del lanzamiento original en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funciona bien, pero sin las mejoras posteriores."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Estable, aunque menos pulida que la edición de 2017."
+            }
+          ]
         },
         {
           "id": 115143,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 19093,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido equivalente al lanzamiento original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Se juega bien con mando, pero con menos opciones."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original de 2013."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución y opciones limitadas del Xbox 360 indie."
+            }
+          ]
         },
         {
           "id": 116043,
@@ -65,7 +119,28 @@
           "year": 2017,
           "igdbId": 76497,
           "steamAppId": 755590,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición más completa y actualizada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejor control, opciones y soporte de mando y teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al diseño original con mejoras."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y configuración gráfica."
+            }
+          ]
         },
         {
           "id": 116044,
@@ -73,9 +148,33 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 76497,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Probablemente incluye ajustes y contenido posterior."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen soporte de mando y partidas locales en sofá."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la esencia con retoques menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Más nítida y estable que la de 360."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/31b0755256ea9ceebc50bd2a6d772992.png"
+      }
     },
     {
       "id": 48799,
@@ -87,6 +186,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115380",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Battle High: San Bruno",
           "source": "igdb",
@@ -95,6 +200,12 @@
         {
           "field": "original_name",
           "value": "Battle High: San Bruno",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "At San Bruno High School, a vicious gang known as \"The Rivals\" reigns supreme, terrorizing and oppressing their peers undetected and unpunished. Choose from 8 students as they battle for justice or greed in this fast-paced 2D fighter.",
           "source": "igdb",
           "manual": false
         },
@@ -122,8 +233,31 @@
           "igdbId": 91792,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1wpc.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3508,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48799,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 48624,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

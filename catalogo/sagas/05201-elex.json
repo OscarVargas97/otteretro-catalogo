@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99552",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Elex",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Elex",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An action, role-playing open world game for PC and Consoles, Elex was developed by Piranha Bytes, creators of the award winning Gothic series and is set in a brand new, post-apocalyptic, Science-Fantasy universe where magic meets mechs.\n\n\"Advanced in technology, civilized and with a population of billions, Magalan was a planet looking to the future. Then the meteor hit.\n\nThose who survived are now trapped in a battle to survive, a struggle to decide the fate of a planet. At the center of this fight is the element “Elex”. A precious, limited resource that arrived with the meteor, Elex can power machines, open the door to magic, or re-sculpt life into new, different forms.\n\nBut which of these choices should be the future of Magalan? Can technology or magic save this world? Or will this new power destroy all those left alive amongst the ruins?\"",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 11567,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4615fce1c79287b3eb4405ab878bbed6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b79be635901b01b11a2eadb9a587532b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/46a4378f835dc8040c8057beb6a2da52.png"
+      }
     },
     {
       "id": 42393,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101154",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Elex II",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Elex II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Several years after Jax defeated the Hybrid, a new threat arrives from the sky, unleashing the dangerous powers of dark Elex and endangering all life on the planet. In order to defend the peace on Magalan and the safety of his own family, Jax has to go on a mission to convince the factions to unite against the invaders.\n\nDive into a huge, hand-crafted, completely unique world with multiple factions and diverse environments set in a post-apocalyptic science fantasy universe. Explore the vast world of Magalan with your jetpack, and play through the epic story the way you want.",
           "source": "igdb",
           "manual": false
         },
@@ -139,8 +168,33 @@
           "igdbId": 55147,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c4283132ddb90ddc50882a41e7730b93.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/6efa4aae76d29c330a3636356fa5386c.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/495fc8d4cb2876570aa578a6a9fab3c6.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3394,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41796,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 42393,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

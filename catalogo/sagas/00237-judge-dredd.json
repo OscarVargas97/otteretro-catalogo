@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "632",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Judge Dredd",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Judge Dredd",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Judge Dredd is an action video game for the Super NES, Sega Genesis/Mega Drive, Game Gear and Game Boy originally released in 1995. The game is loosely based on the 1995 film Judge Dredd, which was a spin off from the Judge Dredd strip from 2000AD.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 4387,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego de acción con varios niveles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control aceptable aunque algo tosco."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original en consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto para 16 bits."
+            }
+          ]
         },
         {
           "id": 867,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 265036,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido reducido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Monocromo y pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 61354,
@@ -64,7 +118,32 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 36742,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego distinto, de disparos en 3D."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control tipo tanque poco cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "No es el mismo juego que el de 1995."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "3D tosco con carga y cámara débiles."
+            }
+          ],
+          "codes": [
+            "SLES-00755",
+            "SLUS-00630"
+          ]
         }
       ],
       "images": {
@@ -83,6 +162,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43767",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Judge Dredd: Dredd Vs. Death",
           "source": "igdb",
@@ -91,6 +176,12 @@
         {
           "field": "original_name",
           "value": "Judge Dredd: Dredd Vs. Death",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome to Mega-City One, a city of over 400 million people - every one of them a potential criminal. It is the third decade of the 22nd Century, unemployment is widespread, boredom is universal and only the Judges can prevent total anarchy. Empowered to dispense instant justice, they are Judge, Jury and Executioner all in one. The most feared and respected of all the Judges is you, Judge Dredd.\n\nPatrol the streets and mete out instant justice wherever it is needed. The Psi-Judges are predicting a terrible plague — is this the sudden outbreak of Vampires on the city, and are they the work of the malevolent Dark Judges?",
           "source": "igdb",
           "manual": false
         },
@@ -116,7 +207,12 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 3961,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GJDE-USA",
+            "DL-DOL-GJDX-EUR",
+            "DL-DOL-GJDY-EUU"
+          ]
         },
         {
           "id": 43767,
@@ -133,7 +229,12 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 3961,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51649",
+            "SLES-51650/GER",
+            "SLUS-20869"
+          ]
         }
       ],
       "images": {
@@ -143,5 +244,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2096,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 414,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 16633,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "11450",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "LovePlus",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "LovePlus",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "LovePlus is a dating sim where you can choose 1 among 3 girls to enjoy an intimate relationship.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 6850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido del juego base original, sin ampliaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sistema de citas con funciones básicas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la experiencia original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos de DS; corre en 3DS por retrocompatibilidad."
+            }
+          ]
         },
         {
           "id": 6621,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 6850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido del juego base original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sistema original, sin mejoras posteriores."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la experiencia original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos de DS con baja resolución."
+            }
+          ]
         },
         {
           "id": 6998,
@@ -64,7 +118,28 @@
           "kind": "remake",
           "year": 2012,
           "igdbId": 92165,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Nueva versión con personajes y eventos renovados."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Interacción táctil y 3D más moderna."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Rehecho con cambios notables de presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Modelos y gráficos rehechos para 3DS."
+            }
+          ]
         },
         {
           "id": 11450,
@@ -72,7 +147,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 136937,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "El más completo, con contenido extra acumulado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejores interacciones y mayor calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reinterpretación con más cambios que el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor presentación en 3DS, estable."
+            }
+          ]
         },
         {
           "id": 47080,
@@ -80,12 +176,48 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 124475,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición ampliada (LovePlus+) con escenas y eventos extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Más opciones de interacción que el base."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel, con añadidos menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Sigue limitado a la resolución de DS."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4260.jpg"
-      }
+      },
+      "ports": [
+        {
+          "id": 225,
+          "platform": "ds",
+          "project": "lp-engine",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/gage-marshall/lp-engine",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "melonDS"
+        }
+      ]
     }
   ],
   "routes": []

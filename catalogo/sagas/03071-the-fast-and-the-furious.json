@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42625",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fast & Furious: Spy Racers Rise of Sh1ft3r",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Fast & Furious: Spy Racers Rise of Sh1ft3r",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The criminal racing organization, SH1FT3R, is back! Use innovative gadgets and tear up the tracks in a globe-trotting tournament. Play as Tony Toretto and the Spy Racers in a bid to stop SH1FT3R from winning the ultimate high-tech vehicle!",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 150132,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010034C013624000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83201",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Fast and The Furious",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "The Fast and The Furious",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Fast and the Furious (Wild Speed in Japan) is a racing video game licensed by the film of the same name. The game was released in several versions, first was the so-called \"2D version\" developed and published by I-Play for mobile phones and released on March 4, 2004 and then the so-called \"arcade version\" developed and published by Raw Thrills for Arcade in July 2004 (the game is a spiritual successor to the saga Cruis'n; containing similar elements and the design of Eugene Jarvis), and later I-Play releases the so-called \"3D version\" developed by Juice Games for mobile phones in September 2005.",
           "source": "igdb",
           "manual": false
         },
@@ -141,7 +168,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 21383,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00973",
+            "ULUS-10198"
+          ]
         },
         {
           "id": 83201,
@@ -149,7 +180,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 21383,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54483",
+            "SLUS-21449"
+          ]
         }
       ],
       "images": {
@@ -159,5 +194,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2841,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19358,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 16282,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

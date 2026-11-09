@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6663",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "iCarly",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "iCarly",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join the cast of iCarly!\nJoin the cast of iCarly! Their latest web show has been deleted at the last minute and you need to help them go live by creating a new show from scratch! You'll recreate your favorite skits from iCarly and even create all-new skits with your very own backdrops, gameplay objects, music, and more. It's a whole new iCarly experience that you can play on your own or with your friends!",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,12 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 4921,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "VICE",
+            "VICP",
+            "VICU"
+          ]
         }
       ],
       "images": {
@@ -86,6 +103,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "iCarly: Groovy Foodie! is a riveting action puzzle game, based on the wildly popular Nickelodeon television series, iCarly, available exclusively for the Nintendo DS. In iCarly: Groovy Foodie!, Carly and Sam get into mischief at a local hot dog stand and could face time in juvie, unless they complete community service by feeding the citizens of Seattle! Play as the duo and help them out of trouble by serving wacky dishes to crazy customers in a fast-paced, action puzzle game that dishes out all the random hilarity from the show!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -99,7 +122,11 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 25187,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "TCLE",
+            "TCLP"
+          ]
         }
       ],
       "images": {
@@ -107,5 +134,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2279,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3398,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 3971,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86198",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Geronimo Stilton: Return to the Kingdom of Fantasy",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Geronimo Stilton: Return to the Kingdom of Fantasy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Geronimo Stilton, editor-in-chief of The Rodent’s Gazette, never thought he’d return to the Kingdom of Fantasy. But when the Queen of the Fairies sent him a letter asking for his help, he had the strangest feeling that a brand new adventure was just about to begin. Download Geronimo Stilton Return to the Kingdom of Fantasy The Videogame – and get ready for a spectacular story you’ll never forget. Compatible with PSP (PlayStationPortable) system only.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 42757,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3012570d4cc2c1e6173811f760b3d34f.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/881033020c988cb96041b1c5f6361bdf.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/d3ce42e434c7ec5146e8d29336ee393e.png"
+      }
     },
     {
       "id": 35639,
@@ -82,6 +99,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Meet Geronimo Stilton, editor of the Rodent’s Gazette, the most important newspaper in New Mouse City. Join Geronimo Stilton on a colourful quest through the Kingdom of Fantasy as he tackles puzzles, brain-teasers and action-packed challenges. Enjoy a fascinating and gripping story based on the hit books that will enthral children and parents alike.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -95,10 +118,37 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 42807,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "UCES-01535",
+            "UCES-01535/SPA"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e71d2e750ce9a7a39c273c634be1665d.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3276,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35639,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 35437,
+          "reason": "2012"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

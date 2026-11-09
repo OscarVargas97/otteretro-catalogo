@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7570",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Where's Waldo? The Fantastic Journey",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Where's Waldo? The Fantastic Journey",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join the search for Waldo, his friends and more!\n\nBased on the hit publishing series, Where's Waldo?: The Fantastic Journey is the ultimate search and find adventure for the whole family! Search and Find: Twelve fantastic worlds of oddities and adventure.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 21216,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SLWE-USA-B0"
+          ]
         },
         {
           "id": 7570,
@@ -64,7 +79,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 21216,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BWDE"
+          ]
         }
       ],
       "images": {
@@ -91,6 +109,12 @@
         {
           "field": "original_name",
           "value": "Where's Wally? Fantastic Journey 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Where's Wally? Fantastic Journey 2 is the second slice of the stripey one's retail appearance, so it shouldn't come as much of a surprise to you that it follows the exact same template as previous release Where's Wally? Fantastic Journey 1.\nThe aim of the game is to find Wally and his friends over four levels, with each environment offering specific characters and items to play too.",
           "source": "igdb",
           "manual": false
         },
@@ -133,6 +157,12 @@
         {
           "field": "original_name",
           "value": "Where's Wally? Fantastic Journey 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Keep up the search for Wally, his friends and more in Fantastic Journey 3!\nBased on the hit publishing series, Where's Wally? Fantastic Journey 3 provides the ultimate search and find fun inside the magical worlds of The Unfriendly Giants, The Underground Hunters, The Land of Waldos and many more! Challenge friends or go solo as you search for hidden items, and be ready for surprises and sabotage to fuel the fun!",
           "source": "igdb",
           "manual": false
         },
@@ -197,5 +227,35 @@
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1159,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3872,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 20698,
+          "reason": "2011"
+        },
+        {
+          "position": 3,
+          "gameId": 20701,
+          "reason": "2011"
+        },
+        {
+          "position": 4,
+          "gameId": 20872,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7862",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Battle City",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Battle City",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Battle City, also known as Tank 1990 or Tank in some pirate multicart releases, is a multi-directional shooter video game for the Family Computer produced and published in 1985 by Namco. The game was later released for the Game Boy and was included in the Japanese version of Star Fox: Assault. It is a port of the arcade game Tank Battalion with additional features (including two player simultaneous play and a level edit feature). There was also a rendition for Nintendo's Vs. System arcade cabinets.\n\nThe player, controlling a tank, must destroy enemy tanks in each level, which enter the playfield from the top of the screen. The enemy tanks attempt to destroy the player's base (represented on the map as a bird, eagle or Phoenix), as well as the human tank itself. A level is completed when the player destroys all 20 enemy tanks, but the game ends if the player's base is destroyed or the player loses all available lives.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 4596,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña, estable."
+            }
+          ]
         },
         {
           "id": 7861,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 4596,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando clásico bien, sin guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable en 480p."
+            }
+          ]
         },
         {
           "id": 7862,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 4596,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración y buenos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida 720p, estable."
+            }
+          ]
         },
         {
           "id": 7863,
@@ -72,7 +147,28 @@
           "kind": "original",
           "year": 1985,
           "igdbId": 4596,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con editor de niveles en la versión japonesa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles precisos, sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, parpadeo de sprites."
+            }
+          ]
         },
         {
           "id": 8846,
@@ -80,7 +176,28 @@
           "kind": "original",
           "year": 1991,
           "igdbId": 228787,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión de Game Boy con ajustes y menos opciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Pantalla diminuta y monocroma."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port adaptado, con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución, poco legible."
+            }
+          ]
         }
       ],
       "images": {
@@ -99,6 +216,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "73834",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tank Battalion",
           "source": "igdb",
@@ -107,6 +230,12 @@
         {
           "field": "original_name",
           "value": "Tank Battalion",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A maze game where the player controls a tank and battles enemy tanks that pursue and attack.",
           "source": "igdb",
           "manual": false
         },
@@ -140,5 +269,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2314,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 29102,
+          "reason": "1981"
+        },
+        {
+          "position": 2,
+          "gameId": 4007,
+          "reason": "1985"
+        }
+      ]
+    }
+  ]
 }

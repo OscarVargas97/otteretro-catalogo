@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "18560",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Modern Combat 5: Blackout",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Modern Combat 5: Blackout",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Step into the action as the latest installment in the best FPS series raises the bar for shooter games once more! Create a squad, add your friends and test your individual and team skills against other squads in dynamic multiplayer warfare!\n\nIs single player your thing? Then step into a world on the brink of anarchy and shoot your way out of one dire situation after another to expose a lunatic who’s trying to tear the world to shreds.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2014,
           "igdbId": 23409,
           "steamAppId": 921060,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña y multijugador completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado o mando; los servidores pueden estar poco activos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 18561,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 23409,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, con multijugador menos activo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Giroscopio y mando, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel pero rebajada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos y cuadros reducidos."
+            }
+          ]
         }
       ],
       "images": {
@@ -88,6 +142,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Rediscover at last what made multiplayer shooters so enjoyable!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -103,8 +163,33 @@
           "igdbId": 21081,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/407caba98d11921f5e918b98d753d42c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d6992ee17e4baa232407e82d4a2bf645.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/dd963e97344c865a73623e1a9988e048.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2561,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40189,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 8945,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

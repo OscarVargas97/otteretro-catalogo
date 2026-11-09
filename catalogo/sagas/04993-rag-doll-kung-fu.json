@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96031",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rag Doll Kung Fu",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rag Doll Kung Fu",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's a fighting computer game where you have string dolls fighting each other 1 Vs 1. You control your fighter by mouse. All moves are done by dragging your fighter body part (hand, leg or even head)\n\nRag Doll Kung Fu was the first 3rd party games to be sold on Steam.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 19349,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, con trofeos añadidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Adaptado a mando, menos preciso que el ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con cambios de control."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Corre bien en consola, pero con resolución fija."
+            }
+          ]
         },
         {
           "id": 96031,
@@ -57,9 +90,35 @@
           "year": 2005,
           "igdbId": 19349,
           "steamAppId": 1002,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con sus modos y editor de escenarios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El control con ratón es el pensado por el autor."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución ajustable y carga rápida."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/794029ce0ca4a8ed5ab2250eade9b61f.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/abffbd61825be76adbbe7bf96233f42b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/93bb49ede783ed9c09b650c9234be21a.png"
+      }
     },
     {
       "id": 40151,
@@ -83,6 +142,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Rag Doll Kung Fu: Fists of Plastic is a PSN exclusive game based on Mark Healey's independently created PC title Rag Doll Kung Fu.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -98,8 +163,33 @@
           "igdbId": 20705,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5f3ff97f921bc25f88172cf33e03b3e5.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/87064c139c707be62972ced58b6c5f9f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d4aac89cf9a63cc7ee5328725120289b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3338,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40125,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 40151,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

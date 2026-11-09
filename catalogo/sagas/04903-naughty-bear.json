@@ -19,9 +19,15 @@
       "originalName": "Naughty Bear",
       "year": 2010,
       "igdbId": 2633,
-      "popularity": 15,
+      "popularity": 14,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94379",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Naughty Bear",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Naughty Bear",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Naughty Bear, players take on the role of Naughty Bear, a bear driven to seek vengeance after the other bears don't invite him to the big birthday party. Scorned for the last time, Naughty Bear becomes hell bent on manipulating and terrorizing the blissful bears inhabiting the Island of Perfection.\n\nAs Naughty Bear, players will wreak havoc on every stuffing-filled foe that crosses their path. Featuring an array of weapons, objects and scare tactics, gamers strive to earn Naughty Points as they inflict physical and psychological harm on Naughty Bear's enemies. This all-new scare-based points system means players will win the most rewards for being deviant and maniacal. The variety allows for a completely new experience every time players pick up a controller and the ill-fated bears become more difficult to harass and terrorize as the game progresses.\n\nNaughty Bear features more than 30 levels to unlock, with unique characteristics and weaponry encountered at every stage. Gamers can search the game world and collect all the hidden party items locked away by the other bears.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 2633,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00945",
+            "BLUS-30507"
+          ]
         },
         {
           "id": 94380,
@@ -57,6 +73,27 @@
           "year": 2010,
           "igdbId": 2633,
           "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cb9078c5cafe2934e4eceadc54d585c5.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/42699380cdc9b654ffeb000a35e09272.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/15727725d8796a98b77975b777e43cb9.png"
+      },
+      "ports": [
+        {
+          "id": 935,
+          "platform": "x360",
+          "project": "NaughtyBear_ReStuff",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/MaxDeadBear/NaughtyBear_ReStuff",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
         }
       ]
     },
@@ -70,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95081",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Naughty Bear: Panic in Paradise",
           "source": "igdb",
@@ -78,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Naughty Bear: Panic in Paradise",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Naughty Bear: Panic in Paradise is a third-person shooter action video game released in June 2010 for the PlayStation 3 and Xbox 360 consoles. Players control the eponymous bear as they use various things to earn \"nasty Points\", with extra points being given for random missions.\n\nThe game is set on a paradisal island where teddy bears live in harmony. The main character, Naughty Bear, is a shabby teddy bear who has a tendency to be mischievous, which earns him the dislike of the other bears. Like the other teddy bears, he does not speak but instead conveys his emotions through a variety of sounds and facial expressions. His actions are influenced by an unseen narrator with a demeanor reminiscent of that of a young children's television show host.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +154,50 @@
           "igdbId": 6037,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fb77a4356523e7d8b9caa618a04fa217.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/99dcd74be0b9763c45900e812fc37e6f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2c9b51236ea6fede6bbcc787f72a912b.png"
+      },
+      "ports": [
+        {
+          "id": 934,
+          "platform": "x360",
+          "project": "restuff_inParadise",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/MaxDeadBear/restuff_inParadise",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 0
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3309,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39575,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 39783,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

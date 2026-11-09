@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114923",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mutant Storm: Reloaded",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mutant Storm: Reloaded",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mutant Storm progresses over 89 levels of twin-stick shooter mayhem! As you get deeper, you are ever more overcrowded with nasty beasties. This carnival of frenetic fun is showcased in a cutting edge graphics extravaganza.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2012,
           "igdbId": 16266,
           "steamAppId": 110630,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fluidez en PC moderno."
+            }
+          ]
         },
         {
           "id": 114924,
@@ -57,9 +90,35 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 16266,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con sus modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Doble palanca natural con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de 2005."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de Xbox 360."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a7d6ec2636542b971de49d71e972243e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/de073d2cffa991f936d6a7aa7bca3425.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/05ed40159ccfbe2f7830d1c8701c5a54.png"
+      }
     },
     {
       "id": 48477,
@@ -83,6 +142,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Battle through line after line of the emperor's minion horde, destroying absolutely everything you can! Blast through bunches of robots, crush colonies of aquatic monsters, smash swarms of UFOs, and demolish devastating bosses. It's a continuous adventure through four immense, strikingly vibrant worlds, and you can fight alone or join forces with a friend in two-player cooperative mode.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -98,7 +163,10 @@
           "igdbId": 21914,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/migpq3gm3ntm3y9uttm5.jpg"
+      }
     },
     {
       "id": 48645,
@@ -122,6 +190,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Mutant Storm is a multi-directional shoot 'em up developed by PomPom Games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -137,8 +211,36 @@
           "igdbId": 71688,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/ttqsu2f7ueepkpfiwxsc.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2054,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48645,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 48453,
+          "reason": "2005"
+        },
+        {
+          "position": 3,
+          "gameId": 48477,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

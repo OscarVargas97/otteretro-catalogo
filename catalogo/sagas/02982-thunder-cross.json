@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "40861",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Thunder Cross II",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Thunder Cross II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Thunder Cross II is an Action game, developed and published by Konami, which was released in 1991.",
           "source": "igdb",
           "manual": false
         },
@@ -75,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "41683",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Thunder Cross",
           "source": "igdb",
@@ -83,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Thunder Cross",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Thunder Cross is an Action game, developed and published by Konami, which was released in 1988.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +124,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 147101,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port arcade con opciones de pantalla y ajustes básicos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles precisos con mando; guardado de ajustes simple."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Arcade fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable a buena resolución."
+            }
+          ]
         },
         {
           "id": 41684,
@@ -108,7 +153,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 147101,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que la versión de PS4."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control; ideal en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Arcade fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable, resolución algo menor en portátil."
+            }
+          ]
         }
       ],
       "images": {
@@ -117,5 +183,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2812,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 15485,
+          "reason": "1988"
+        },
+        {
+          "position": 2,
+          "gameId": 15006,
+          "reason": "1991"
+        }
+      ]
+    }
+  ]
 }

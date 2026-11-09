@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "41921",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Coloring Book for Adults",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Coloring Book for Adults",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Boost your creativity with Coloring Book for Adults! Choose from a wide range of coloring pages within the app and experience coloring many different characters, patterns, and objects. Lose yourself in colors, forget about time and duties, say goodbye to stress!",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2020,
           "igdbId": 151330,
           "steamAppId": 1431240,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todas las láminas y herramientas de color."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón da más precisión para colorear."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y sin problemas."
+            }
+          ]
         },
         {
           "id": 41922,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 151330,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "La pantalla táctil ayuda, pero con menos precisión."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene la propuesta original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien, con menor resolución."
+            }
+          ],
+          "codes": [
+            "010076C01859C000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "78093",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Coloring Book for Adults 2",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Coloring Book for Adults 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Color your way to serenity in Coloring Book for Adults 2! Dive into a sea of vibrant shades, paint your stress away, and leaf through nature-inspired pages. From wild creatures to famous masterpieces, it’s time to make your mark!",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +177,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 323674,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01004A60219A8000"
+          ]
         }
       ],
       "images": {
@@ -116,5 +188,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2836,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16033,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 31241,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

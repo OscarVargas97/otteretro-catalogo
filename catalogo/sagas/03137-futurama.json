@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44516",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Futurama",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Futurama",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Futurama begins when Professor Farnsworth sells his delivery ship to Mom, an evil businesswoman, giving her ownership of more than 50 percent of Earth. Now, with Mom threatening to enslave humanity, it's up to you to travel back in time to stop the deal from taking place. You can play as Fry, Bender, Leela, and Dr. Zoidberg, each with unique fighting skills and weapons. With each character, you must master their power-ups and complete their tasks to emerge victorious against Mom and her death bot troopers.",
           "source": "igdb",
           "manual": false
         },
@@ -64,14 +76,34 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 5822,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51507",
+            "SLUS-20439"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/7eff6cd2ac4fe21916d9112687e554b1.png",
         "hero": "https://cdn2.steamgriddb.com/hero/62ff479880ad9a16a568691f85f90ba4.png",
         "logo": "https://cdn2.steamgriddb.com/logo/3006a068501fbf78748d4d51529610b8.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 164,
+          "platform": "xbox",
+          "project": "Futurama-The-Game-The-Recomp",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/hiburn8/Futurama-The-Game-The-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "xemu",
+          "emulatorLevel": 2
+        }
+      ]
     }
   ],
   "routes": []

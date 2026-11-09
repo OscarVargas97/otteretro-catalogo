@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Decay is an episodic thriller/horror adventure game released on Xbox Live Indie Games. The story and atmosphere are both very dark.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 66480,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6a36.jpg"
+      }
     },
     {
       "id": 48765,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The story continues in the sequel to Decay - Part 1. Decay - Part 2 is a thriller/horror adventure game with a very creepy atmosphere and challenging gameplay.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -89,7 +104,10 @@
           "igdbId": 66479,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6a35.jpg"
+      }
     },
     {
       "id": 48780,
@@ -128,7 +146,10 @@
           "igdbId": 92220,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6a34.jpg"
+      }
     },
     {
       "id": 48805,
@@ -152,6 +173,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This is the last game of the Decay series. With multiple endings, it's up to the player how the story will end.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -167,7 +194,10 @@
           "igdbId": 78124,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6a33.jpg"
+      }
     },
     {
       "id": 49063,
@@ -179,6 +209,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115742",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Decay: The Mare",
           "source": "igdb",
@@ -187,6 +223,12 @@
         {
           "field": "original_name",
           "value": "Decay: The Mare",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A new psychological horror adventure game from the creators of the successful Decay series: Sam is an addict who ends up in an institution named “Reaching Dreams”, hoping to kick his drug problem and sort out his miserable life. But during the first night, something goes horribly wrong and he gets stuck in an endless nightmare…\n\nDecay – The Mare is a 3D psychological horror adventure and homage to the Resident Evil and Silent Hill games, as well as to horror adventure games like Phantasmagoria, The 11th Hour and Gabriel Knight.\n\nFor the first time the compelling, high-tension Adventure is available in one package, including an exclusive third chapter that will bring Sam’s journey to an end.\n\nDecay’s developer Shining Gate Software is a small indie studio located in Stockholm, Sweden. The studio is best known for their work with DICE and Electronic Arts on the Battlefield franchise and for their own Decay series, released on multiple platforms.",
           "source": "igdb",
           "manual": false
         },
@@ -205,7 +247,28 @@
           "year": 2015,
           "igdbId": 10175,
           "steamAppId": 323720,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego de terror por episodios, hoy completo en Steam."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado y ratón o mando, guardado por escena."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y cuadros por segundo ajustables."
+            }
+          ]
         },
         {
           "id": 115743,
@@ -213,10 +276,71 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 10175,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Misma historia completa, en una sola entrega."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para mando, cómodo en consola."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel, sin cambios importantes."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y fluidez que en PC."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2eadd99cdd99c7f5a8c3b5450bd6f3eb.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/8cf05f0015bfb42a7c04df60a3c00f9a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/0f759c47d58b35fe0b2a45100f91e7c3.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1069,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48748,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 48765,
+          "reason": "2010"
+        },
+        {
+          "position": 3,
+          "gameId": 48780,
+          "reason": "2010"
+        },
+        {
+          "position": 4,
+          "gameId": 48805,
+          "reason": "2011"
+        },
+        {
+          "position": 5,
+          "gameId": 49063,
+          "reason": "2015"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

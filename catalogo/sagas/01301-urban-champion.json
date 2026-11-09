@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8886",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Urban Champion",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Urban Champion",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Urban Champion is a 2-player fighting game produced by Nintendo in 1984. It was inspired by the 1984 Game & Watch title, Boxing (also known as Punch-Out!!). It is also Nintendo's first 2D fighting game, followed by the 1993 Joy Mech Fight, released exclusively in Japan for the same platform.",
           "source": "igdb",
           "manual": false
         },
@@ -88,7 +100,66 @@
         "hero": "https://cdn2.steamgriddb.com/hero/cb1791d9672d69b321c67b55d0aa3db4.png",
         "logo": "https://cdn2.steamgriddb.com/logo/6c86a301d9a93e2748edb95e0a468a81.png"
       }
+    },
+    {
+      "id": 50247,
+      "nameEs": "Vs. Urban Champion",
+      "originalName": "Vs. Urban Champion",
+      "year": 1984,
+      "igdbId": 169998,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Vs. Urban Champion",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Vs. Urban Champion",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Vs. Urban Champion is the Nintendo VS. System (Arcade) port of Urban Champion (NES).",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1984",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co43op.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2312,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4004,
+          "reason": "1984"
+        },
+        {
+          "position": 2,
+          "gameId": 50247,
+          "reason": "1984"
+        }
+      ]
+    }
+  ]
 }

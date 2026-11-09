@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2787",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Doshin the Giant 1",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Doshin the Giant 1",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Doshin the Giant, (or Kyojin no Doshin) is a god simulation game for the Nintendo 64DD. It was originally released in Japan on December 1, 1999 as a launch title for the 64DD, for which a soundtrack by Tatsuhiko Asano was released on CD by Media Factory, early the next year. Both of these received positive reviews. An expansion was released five months later called Kyojin no Doshin Kaihou Sensen Chibikko Chikko Daishuugou (or Kyojin no Doshin 2), which takes a very different perspective of the game, featuring short animated clips that the player can unlock after playing the original game. The game had an enhanced port with better graphics for the Nintendo GameCube, which was released in Europe under the name \"Doshin the Giant\".\n\nEven though untranslated, the game has the English official title of Doshin the Giant 1, according to the official website (English version).",
           "source": "igdb",
           "manual": false
         },
@@ -85,6 +97,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kyojin no Doshin Kaihou Sensen Chibikko Chikko Daishuugou is a game for the Nintendo 64DD, and a successor to Doshin the Giant 1. It was one of the games which supported the Randnet online service.\n\nA game in which Doshin is imprisoned. Switching between this game and Doshin the Giant 1, the player must, as before, build various monuments. Special movies are unlocked while playing the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -106,5 +124,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2159,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1295,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 1328,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "64928",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "First Queen IV: Varcia Senki",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "First Queen IV: Varcia Senki",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Witch who fight, swordsman, archer, like sin, those who bother to sleep ...\nCharacters who battle royal with a variety of personalities, and sometimes more than 100!\nWatch the characters fight at their own will, or give instructions to the whole, to control the person, or rescued from the melee, the user, a large army fight the war.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 152384,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original, distribuido digitalmente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Emulación de PS1 en PS3 con estados de guardado limitados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable, imagen algo mejor."
+            }
+          ]
         },
         {
           "id": 64203,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 152384,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sin guardado rápido ni comodidades modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Hardware original con cargas y limitaciones de PS1."
+            }
+          ],
+          "codes": [
+            "SLPS-00604"
+          ]
         },
         {
           "id": 64204,
@@ -64,7 +121,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 152384,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, guardado cómodo en PSP."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta, pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 64928,
@@ -72,7 +150,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 409479,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Plataforma actual, con guardado rápido probable."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene el juego original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación moderna, estable y portátil."
+            }
+          ]
         }
       ],
       "images": {
@@ -101,6 +200,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A unique hybrid RTS/Action/RPG game first released in 1988. It was the first game by Kure Software Koubou and itnroduced their eventually popular Multiple Character gameplay system that they went on to use in many later games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1988",
           "source": "igdb",
@@ -122,5 +227,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3123,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 30539,
+          "reason": "1988"
+        },
+        {
+          "position": 2,
+          "gameId": 25745,
+          "reason": "1994"
+        }
+      ]
+    }
+  ]
 }

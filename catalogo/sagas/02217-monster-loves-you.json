@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "18456",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Monster Loves You!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Monster Loves You!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Live the life of a Monster, from birth to elderhood and beyond, making decisions that affect the world of Monsters and Humans.\n\nYou live in the village of Omen, and your favorite snack is the fingers of small children. As a Monster, you pop up in the most interesting places — what do you do when three angry bears discover a young child in their cabin? Or when you spy a wolf hunting down that woman with the red cloak?\n\nAs a Monsterling, your choices are simple ones. Do you chase those poor little mice (+1 Ferocity) or protect them from the dogs (+1 Kindness)? Do you come clean about that fungus your friends ate (+1 Honesty) or cover for them (+1 Bravery)? As a youth, your choices determine your personality.\n\nBut all youngins must grow up. Monsters and Humans have been at odds for centuries, and there are Human villages on the other side of the enchanted woods. When Human children get lost in those dark and winding thickets, do you terrorize them for fun (+1 Ferocity)? Do you help return them to Human civilization to prove that not all Monsters are to be feared and hated (+1 Kindness)? Or do you fatten them up for Human foie gras — a Monster delicacy? All this, to the backdrop of increasing tensions between Monster- and Humankind.Key features:Balance Bravery, Cleverness, Ferocity, Honesty, Kindness, and Respect to wield political power.\nOver 900 choices to make. Devour Little Red Riding Hood. Gobble up Hansel and Gretel. Eat the Three Little Pigs.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 15414,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 18456,
@@ -57,7 +90,28 @@
           "year": 2013,
           "igdbId": 15414,
           "steamAppId": 226740,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado y ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fluidez altas."
+            }
+          ]
         },
         {
           "id": 18457,
@@ -65,7 +119,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 15414,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ],
+          "codes": [
+            "0100B7700BB7A000"
+          ]
         }
       ],
       "images": {
@@ -83,6 +161,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58438",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Monster Loves You Too!",
           "source": "igdb",
@@ -91,6 +175,12 @@
         {
           "field": "original_name",
           "value": "Monster Loves You Too!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Live the life of a Monster within a society of fantastic creatures. Hunt for food, make friends and allies, and battle your own instincts in order to rise above your humble origins in the sequel to the best-selling Monster Loves You!",
           "source": "igdb",
           "manual": false
         },
@@ -117,7 +207,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 214153,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100ACF01824A000"
+          ]
         }
       ],
       "images": {
@@ -125,5 +218,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2560,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8915,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 23200,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

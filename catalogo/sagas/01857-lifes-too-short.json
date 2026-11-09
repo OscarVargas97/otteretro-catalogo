@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13229",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Life's Too Short",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Life's Too Short",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Life's Too Short, you take on the role of a celestial marriage councilor as you're tasked with repairing a rift between two vampires who have dramatically fallen out and confined themselves to their respective coffins...\n\nYou'll need to explore the mansion, meet various spooky characters and solve simple puzzles in order to put the mansion back together and mend the rift in the vampires' relationship!",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2026,
           "igdbId": 199909,
           "steamAppId": 4209750,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Probablemente la versión más completa (no verificado)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado o mando, con guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel en lo esencial, con mejoras de presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y rendimiento estable en PC."
+            }
+          ]
         },
         {
           "id": 13421,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 261131,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido probablemente reducido por el formato de Game Boy (no verificado)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles simples, guardado limitado a lo que ofrece el cartucho."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana a la idea original, con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y color limitados por el hardware."
+            }
+          ]
         }
       ],
       "images": {
@@ -86,6 +140,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In Life's Too Short: A Christmas Spirit, you once again take on the role of a celestial problem-solver called back to the vampire's mansion. This time it's the count and countess themselves making the call...A rash decision has been made and it's your job to save Christmas!\n\nYou'll need to explore the mansion, meet various spooky characters and solve simple puzzles in order to ensure baby Vlad's first Christmas isn't ruined.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2023",
           "source": "igdb",
@@ -107,5 +167,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2450,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7104,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 7406,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

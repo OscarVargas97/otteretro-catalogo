@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99014",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Grow Home",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Grow Home",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Grow Home you play as BUD (Botanical Utility Droid), a robot on a mission to save his home planet by harvesting the seeds of a giant alien plant. On his quest BUD will discover a beautiful world of floating islands that are home to some rather strange plants and animals.\nGrow the giant plant and use your unique climbing abilities to reach ever higher ground, but be careful…one wrong move and it’s a long way down!",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,12 @@
           "steamAppId": 323320,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/bb053e19fd02a0e5a374e90a3ddf16fc.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/291597a100aadd814d197af4f4bab3a7.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/dbb422937d7ff56e049d61da730b3e11.png"
+      }
     },
     {
       "id": 41910,
@@ -71,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99881",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Grow Up",
           "source": "igdb",
@@ -79,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Grow Up",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "BUD is back! Join this adorable wobbly robot on his fantastical acroBUDic adventure to the moon.\n\n\"Grow Up is a joyful and ageless fantasy game. BUD, a clumsy and charming robot, is on a mission to find MOM, his parental spaceship. Leap, bounce, and float in a vast open world as BUD explores the new planet in this beautiful acrobatic adventure.\"",
           "source": "igdb",
           "manual": false
         },
@@ -115,8 +144,33 @@
           "igdbId": 19552,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5782efc436ca617a069a0cbc86f5f371.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/d045c59a90d7587d8d671b5f5aec4e7c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9d068c869fd3e03fc606ec297fcd00be.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3390,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41611,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 41910,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

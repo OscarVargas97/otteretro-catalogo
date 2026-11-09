@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1228",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Great Waldo Search",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Great Waldo Search",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The pictures are slightly animated images of Waldo scenes, the player has to scroll along the long picture to survey the scape while searching for Waldo and other objects. The directional buttons control a magnifying glass and is used in order to \"find\" objects. Waldo's dog Woof is also in each level and by finding him the player gets to play a small bonus game to collect points while controlling Woof on a flying carpet.",
           "source": "igdb",
           "manual": false
         },
@@ -87,6 +99,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Your goal is to find Waldo in various pictures in order to progress through the game.\n\nThe pictures are still images the size of the screen in the Easy and Practice levels. In the Medium and Hard levels, the player has to scroll to the side to see the rest of the area. The directional buttons control a magnifying glass and once the player finds Waldo, they get to go to the next level and a new picture.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1991",
           "source": "igdb",
@@ -102,8 +120,33 @@
           "igdbId": 10618,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cad3e26a05ca54789d3b2eba8cf2c3de.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/84e442982e657fc263eca32c826d2bcb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/817aa10dc004e9231063188905af4b52.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2108,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42856,
+          "reason": "1991"
+        },
+        {
+          "position": 2,
+          "gameId": 587,
+          "reason": "1992"
+        }
+      ]
+    }
+  ]
 }

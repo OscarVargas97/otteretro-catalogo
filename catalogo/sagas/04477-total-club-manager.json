@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82198",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Total Club Manager 2004",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Total Club Manager 2004",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Total Club Manager 2004 is a football-oriented computer game in the FIFA Manager series, the first sequel to Total Club Manager 2003.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 6207,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52022"
+          ]
         }
       ],
       "images": {
@@ -83,6 +98,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82282",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Total Club Manager 2005",
           "source": "igdb",
@@ -91,6 +112,12 @@
         {
           "field": "original_name",
           "value": "Total Club Manager 2005",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Total Club Manager 2005 is EA's third game in the Total Club Manager series. If the usual presentation of EA Sports games was left untouched, other features were changed from the TCM 2004: The 16 player attributes ranging from -1 to 2 become 30 in a 0-99 scale, the 3D engine was retouched with new AI and presentation, and finally, if the player is tired of world class footballing, now there's the opportunity to create a new club, and bring it up from the bottom leagues.",
           "source": "igdb",
           "manual": false
         },
@@ -124,7 +151,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 6210,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52674"
+          ]
         }
       ],
       "images": {
@@ -132,5 +162,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3215,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32889,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 32938,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

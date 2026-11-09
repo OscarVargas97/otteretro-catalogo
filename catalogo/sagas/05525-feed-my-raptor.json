@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "108786",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Feed My Raptor 2",
           "source": "igdb",
@@ -58,7 +64,10 @@
           "igdbId": 340528,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9s4m.jpg"
+      }
     },
     {
       "id": 47230,
@@ -100,5 +109,25 @@
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3471,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 47230,
+          "reason": "2024"
+        },
+        {
+          "position": 2,
+          "gameId": 45934,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8966",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Luigi's Mansion",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Luigi's Mansion",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Luigi steps out from the shadow of his brother Mario and into the gloomy shadows of a very haunted house in this, his first-ever starring role. When Luigi learns that he's the proud new owner of a creepy old mansion, he's thrilled. Of course, his feelings immediately shift when his brother, the storied Mario, disappears from the house. Now, you'll have to help Luigi track his brother down, making your way through expansive 3D levels. Each stage is packed with ghosts and ghouls to put you on edge; and you'll be armed with a flashlight and a vacuum cleaner to help you capture your foes. Armed with a flashlight and a customized vacuum cleaner, Luigi must rid the mansion of Boos and ghouls -- and find his missing brother to boot!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 2485,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base completo, sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles con dos palancas del GC, pero guardado manual en cada área."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Estable a 480p; se ve bien pero con resolución limitada."
+            }
+          ]
         },
         {
           "id": 8069,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 2485,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido equivalente al juego base; no pude verificar esta entrada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Depende de la versión real; probablemente similar a la de GameCube."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original, con la reserva de la incertidumbre."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Sin datos verificados."
+            }
+          ]
         },
         {
           "id": 8868,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 339799,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Mismo contenido que el juego de 2001."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Igual que el original, sin mejoras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Prácticamente idéntica al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Edición regional casi idéntica en rendimiento."
+            }
+          ]
         },
         {
           "id": 8966,
@@ -72,14 +147,65 @@
           "kind": "remake",
           "year": 2018,
           "igdbId": 90109,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade modo cooperativo, Scarescraper y jefes rediseñados."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Autoguardado, mejor control y más cómodo de jugar hoy."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Fiel en espíritu, con cambios de diseño y de jefes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Fluido en 3DS, aunque con menos detalle de luces y sombras."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/ac7c433007ac68a863d12dd75b2d13eb.png",
         "hero": "https://cdn2.steamgriddb.com/hero/eb163727917cbba1eea208541a643e74.png",
         "logo": "https://cdn2.steamgriddb.com/logo/c9d9edbf9b9e23eb5d4819bbcce9b078.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 848,
+          "platform": "gc",
+          "project": "luigis-mansion-recompiled",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/rob646464/luigis-mansion-recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1389,
+          "platform": "gc",
+          "project": "lm-decomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/ThePlayerRolo/lm-decomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 4241,
@@ -91,6 +217,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9025",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Luigi's Mansion: Dark Moon",
           "source": "igdb",
@@ -99,6 +231,12 @@
         {
           "field": "original_name",
           "value": "Luigi's Mansion: Dark Moon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Luigi is back on a mission to remove a bunch of stubborn ghosts from some spooky mansions. Armed with his trusty Poltergust ghost-sucking vacuum cleaner, Mario's brother takes center stage to capture these pesky phantoms. Luigi's Mansion 2: Dark Moon gives players multiple mansions to explore, a variety of puzzles to solve and new ghosts to capture. Armed with the Poltergust 5000, a ghost-sucking, vacuum-like invention, Luigi must complete a number of missions assigned to him by Professor E. Gadd.",
           "source": "igdb",
           "manual": false
         },
@@ -116,7 +254,11 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 2476,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AGGE",
+            "CTR-P-AGGK"
+          ]
         },
         {
           "id": 9025,
@@ -139,7 +281,7 @@
       "originalName": "Luigi's Mansion 3",
       "year": 2019,
       "igdbId": 109455,
-      "popularity": 234,
+      "popularity": 235,
       "iconic": false,
       "fields": [
         {
@@ -151,6 +293,12 @@
         {
           "field": "original_name",
           "value": "Luigi's Mansion 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Luigi embarks on a dream vacation with Mario and friends upon receiving an invitation to a luxurious hotel. However, his dream quickly becomes a nightmare when King Boo reveals everything had been a ploy to capture Mario and friends. With the assistance of Professor E. Gadd once again, the reluctant and cowardly hero Luigi traverses up and down treacherous floors of the now-ominous hotel on a quest to save them.",
           "source": "igdb",
           "manual": false
         },
@@ -168,7 +316,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 109455,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100DCA0064A6000"
+          ]
         }
       ],
       "images": {
@@ -178,5 +329,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1545,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4090,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 4241,
+          "reason": "2013"
+        },
+        {
+          "position": 3,
+          "gameId": 12023,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

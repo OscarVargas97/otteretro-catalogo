@@ -29,6 +29,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "25732",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Supraland",
           "source": "igdb",
@@ -37,6 +43,12 @@
         {
           "field": "original_name",
           "value": "Supraland",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Supraland is a first-person metroidvania puzzle game. Explore, solve puzzles, beat up monsters, find secret upgrades and new abilities that help you reach new places.",
           "source": "igdb",
           "manual": false
         },
@@ -79,7 +91,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 89354,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100A6E01201C000"
+          ]
         }
       ],
       "images": {
@@ -94,9 +109,15 @@
       "originalName": "Supraland: Six Inches Under",
       "year": 2022,
       "igdbId": 172903,
-      "popularity": 24,
+      "popularity": 25,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "53583",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Supraland: Six Inches Under",
@@ -106,6 +127,12 @@
         {
           "field": "original_name",
           "value": "Supraland: Six Inches Under",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Supraland Six Inches Under has exploration, puzzles, and combat! A first-person-metroidvania taking place six inches under Supraland.",
           "source": "igdb",
           "manual": false
         },
@@ -174,5 +201,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2677,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11004,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 21687,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

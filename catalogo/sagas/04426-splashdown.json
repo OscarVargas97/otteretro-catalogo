@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81579",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Splashdown",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Splashdown",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Splashdown is a water racing video game for the Xbox and Sony PlayStation 2. It can be played by one or two players. Splashdown is quite similar to Nintendo's Wave Race series. Players take control of a personal water craft as they race against each other on various courses. Players must pass the correct side of buoys on the way or the personal water craft may stall as a penalty or they get splashed by a whales tail.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,13 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 6149,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50486",
+            "SLES-504862",
+            "SLPM-65113",
+            "SLUS-20223"
+          ]
         }
       ],
       "images": {
@@ -87,6 +105,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Splashdown: Rides Gone Wild is a 2003 jetski racing video game developed by Rainbow Studios and published by THQ for PlayStation 2 and mobile. It is a sequel to the original Splashdown for the PlayStation 2 and Xbox",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -100,7 +124,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 6150,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-20686"
+          ]
         }
       ],
       "images": {
@@ -110,5 +137,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3199,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32609,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 32630,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

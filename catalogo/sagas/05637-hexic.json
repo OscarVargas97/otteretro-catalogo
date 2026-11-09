@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hexic HD is the next puzzle hit from Alexey Pajitnov, the original creator of \"Tetris.\" Rotate groups of three hexes to form clusters of like-colored tiles. Use bonus pieces and starflowers to boost your score and discover new ways to play. But watch out for bombs - clear them before they explode or it's game over.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 2732,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2n6p.jpg"
+      }
     },
     {
       "id": 48472,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hexic 2 adds multiplayer to this already-popular puzzle game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -89,8 +104,32 @@
           "igdbId": 21834,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b64eb26f5d9f3409a694b699617b9ded.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a2c632d58be9c79d4d114d0a85a5cc42.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3498,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48213,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 48472,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

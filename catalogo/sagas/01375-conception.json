@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8427",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Conception II: Children of the Seven Stars",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Conception II: Children of the Seven Stars",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Conception II: Children of the Seven Stars is a Japanese role-playing video game and a follow-up to Conception: Ore no Kodomo o Undekure!. The player control a student at a high school that doubles as a training facility for demon hunters. The protagonist possesses an extremely high amount of ether in his body, which allows him to conceive Star Children to fight demons by \"classmating\" with his other classmates. During battle, fighters can be strategically placed around the enemies, allowing players to either safely target weak points or charge head on for bigger rewards.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,31 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 4701,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego completo, con menos extras que otras versiones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos, con pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos más simples y resolución baja."
+            }
+          ],
+          "codes": [
+            "CTR-P-BCCE"
+          ]
         },
         {
           "id": 8427,
@@ -57,7 +93,28 @@
           "year": 2016,
           "igdbId": 4701,
           "steamAppId": 458730,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con el contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando o teclado, guardado cómodo y buen ritmo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego con el contenido original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 8428,
@@ -65,7 +122,31 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 4701,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control y juego portátil cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mejor imagen que 3DS, pero resolución limitada."
+            }
+          ],
+          "codes": [
+            "PCSE-00376"
+          ]
         }
       ],
       "images": {
@@ -84,6 +165,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85826",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Conception: Ore no Kodomo wo Undekure!",
           "source": "igdb",
@@ -92,6 +179,12 @@
         {
           "field": "original_name",
           "value": "Conception: Ore no Kodomo wo Undekure!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Conception: Ore no Kodomo o Undekure! is a Japanese role-playing game and the first game in Spike Chunsoft's Conception series. The player's goal is to charm pure, innocent girls from Granvania National Star God Academy, raise their affection for Itsuki, then produce and take the \"Star Children\" to explore dungeons and battle \"impurities\".",
           "source": "igdb",
           "manual": false
         },
@@ -128,8 +221,31 @@
           "steamAppId": 906510,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7844be3b74f5ca2ccf17b12866c65afe.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2329,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35182,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 4259,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

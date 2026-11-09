@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "48680",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "MDK2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "MDK2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kurt Hectic in his snazzy suit with ribbon chute is back to save the universe. This time he is teamed with the genius Dr. Hawkins and the 6-legged gun-toting robotic dog, Max. Together they must out-sneak, out-blast and out-think their enemies as they attempt to reclaim the Earth from a vile alien menace.\n\nAll three characters - Kurt, Doctor Hawkins and Max are playable, each has his own levels, powers and items and a completely different gameplay focus. Kurt is about stealth and sniping, the Doctor has a few direct attacks but also has the ability to create items and effects out of simple household objects, while Max is a cigar smoking, quad gun toting demolition squad of a dog.",
           "source": "igdb",
           "manual": false
         },
@@ -101,6 +113,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60262",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "MDK",
           "source": "igdb",
@@ -109,6 +127,12 @@
         {
           "field": "original_name",
           "value": "MDK",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game tells the story of Kurt Hectic, a janitor who reluctantly must attempt to save Earth from an alien invasion of gigantic strip mining city-size vehicles named \"Minecrawlers\". These Minecrawlers are not only removing all of earth's natural resources, but are also crushing any people and cities that get in their way. Aided by his boss, the (possibly) insane inventor/scientist Dr. Fluke Hawkins, and a genetically engineered robotic two-legged/four-armed dog named Bones (although he prefers Max), Kurt must infiltrate each Minecrawler, and fight his way to the pilot, whom he must then kill before returning to Hawkins' in-orbit space station, the Jim Dandy.",
           "source": "igdb",
           "manual": false
         },
@@ -127,7 +151,28 @@
           "year": 2009,
           "igdbId": 219,
           "steamAppId": 38450,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo en digital."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejores controles y guardado más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel al original de PC."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución alta y rendimiento fluido."
+            }
+          ]
         },
         {
           "id": 60263,
@@ -135,15 +180,76 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 219,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola algo toscos y guardado limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y cuadros inestables."
+            }
+          ],
+          "codes": [
+            "SCPS-10052",
+            "SLED-01069",
+            "SLES-00599",
+            "SLUS-00426"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3aca62adf17c838f9c55c3e61d1cb88c.png",
         "hero": "https://cdn2.steamgriddb.com/hero/ad177a1b319fe986e2030fc03d2df126.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/2f61bc8be89fcc808b4679e1d5de7c60.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 237,
+          "platform": "pc",
+          "project": "mdk-sdl",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/nautilusbits/mdk-sdl",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2934,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23811,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 19356,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

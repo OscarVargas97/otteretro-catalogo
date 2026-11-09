@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "16668",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Battle Kid: Fortress of Peril",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Battle Kid: Fortress of Peril",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Battle Kid: Fortress Of Peril is a homebrew 2D platform video game, released in February 2010 for the Nintendo Entertainment System, created by Sivak Games, and published through Retrozone with the cover art designed by Larry Bundy Jr. Unlike most games in the modern era, Battle Kid is available for purchase only on a physical NES cartridge. While there has been a demand for a downloadable version, the developer has stated that the game is currently not planned to be released on any other formats due to a contract with Retrozone.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 11145,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Añade ayudas como guardado y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con ayudas modernas."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 16667,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 11145,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Muy difícil y sin extras de comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware real de NES, necesita cartucho."
+            }
+          ]
         },
         {
           "id": 16668,
@@ -64,7 +118,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 11145,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil con ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con ayudas modernas."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ],
+          "codes": [
+            "0100A28019D42000"
+          ]
         }
       ],
       "images": {
@@ -95,6 +173,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel to Battle Kid: Fortress of Peril by Sivak Games. Battle Kid 2 is a homebrew game, sold via Retrozone on unlicensed NES carts.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -110,8 +194,33 @@
           "igdbId": 48370,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cb4a0083cd8d421c95da19aae5e6e921.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/eae846c7d1ca51474ebc7230ace47bf2.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b6862731daebe8849b5913ef4a279fd3.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2508,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8507,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 43202,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

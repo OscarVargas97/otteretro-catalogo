@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43557",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Outlaw Golf",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Outlaw Golf",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Golf meets strippers, ex-cons, and wannabe rappers. In Outlaw Golf, you can step into the shoes of all kinds of criminals and compete in 30 tour events. With each event, you'll unlock new characters and better equipment and improve your character's skills. Challenge three of your friends in eight different games, including stroke, match, skins, best ball, casino, and more. Play like a pro and the game gets easier; play poorly and the game becomes tougher.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 3438,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GOFE-USA",
+            "DL-DOL-GOFP-EUR-01"
+          ]
         },
         {
           "id": 43557,
@@ -75,6 +91,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43961",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Outlaw Golf 2",
           "source": "igdb",
@@ -83,6 +105,12 @@
         {
           "field": "original_name",
           "value": "Outlaw Golf 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The crude cast of Outlaw Golf is back with new friends, courses, fighting moves, and more. Choose from 11 wild characters--including babes, rappers, and thugs--and take on the challenges from eight courses, ranging from the arctic to the jungle. By playing through the tour and winning events, you can unlock more clubs, balls, and outfits. In addition to tournament mode, the game features match, time attack, and baseball golf modes. Just remember--even if your golf game is off, you can still beat up your opponents, or even your caddy.",
           "source": "igdb",
           "manual": false
         },
@@ -124,7 +152,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 3437,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52965",
+            "SLUS-21030"
+          ]
         }
       ],
       "images": {
@@ -155,6 +187,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Slippery slopes, ice-covered greens, frozen distractions and where else can you beat-up Santa to better your score?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -170,8 +208,36 @@
           "igdbId": 47311,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coc8r3.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1782,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16540,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 48143,
+          "reason": "2003"
+        },
+        {
+          "position": 3,
+          "gameId": 16705,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

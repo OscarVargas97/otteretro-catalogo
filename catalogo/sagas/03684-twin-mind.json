@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "53247",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Twin Mind: Power of Love - Collector's Edition",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Twin Mind: Power of Love - Collector's Edition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Famed twin detectives go on a new case! They are the only people skilled enough to find out what happened to a woman that vanished in the broad daylight. But it seems like they need your help to uncover this mystery.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2021,
           "igdbId": 181998,
           "steamAppId": 1767580,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición de coleccionista completa con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón preciso para buscar objetos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y carga rápida."
+            }
+          ]
         },
         {
           "id": 53248,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 181998,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismos extras de la edición de coleccionista."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil útil en portátil, menos preciso con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor y cargas algo más lentas."
+            }
+          ],
+          "codes": [
+            "010040701D36C000"
+          ]
         }
       ],
       "images": {
@@ -75,6 +132,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "55797",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Twin Mind: Ghost Hunter - Collector's Edition",
           "source": "igdb",
@@ -83,6 +146,12 @@
         {
           "field": "original_name",
           "value": "Twin Mind: Ghost Hunter - Collector's Edition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Can the twin detectives solve a new case? You are the only one who can help them catch the killer. Are you up for the challenge?",
           "source": "igdb",
           "manual": false
         },
@@ -109,7 +178,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 195849,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100F8501D36A000"
+          ]
         }
       ],
       "images": {
@@ -127,6 +199,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66115",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Twin Mind: Nobody's Here - Collector's Edition",
           "source": "igdb",
@@ -135,6 +213,12 @@
         {
           "field": "original_name",
           "value": "Twin Mind: Nobody's Here - Collector's Edition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Science has never been more dangerous! Death is in the air... Sounds pretty ominous, doesn't it? Help the twin detectives solve a new case!",
           "source": "igdb",
           "manual": false
         },
@@ -161,7 +245,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 226582,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01007C801B72E000"
+          ]
         }
       ],
       "images": {
@@ -170,5 +257,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1845,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 21558,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 22397,
+          "reason": "2022"
+        },
+        {
+          "position": 3,
+          "gameId": 26874,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

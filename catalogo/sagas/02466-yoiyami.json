@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "23566",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Yoiyami Dreamer: Voice of the Dreambringer",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Yoiyami Dreamer: Voice of the Dreambringer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Yoiyami Dreamer is a 2D fixed screen heartful action game, developed and published by tripper room, which was released in Japan in 2015.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 69353,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 23565,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 69353,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 23566,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 69353,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -81,6 +156,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "26383",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Yoiyami Dancers",
           "source": "igdb",
@@ -89,6 +170,12 @@
         {
           "field": "original_name",
           "value": "Yoiyami Dancers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dodge bullets to the rhythm and take down everything that moves! A rhythmical danmaku action game based on Touhou Project series.",
           "source": "igdb",
           "manual": false
         },
@@ -107,7 +194,28 @@
           "year": 2017,
           "igdbId": 100556,
           "steamAppId": 1998530,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 26383,
@@ -115,7 +223,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 100556,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -123,5 +252,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2653,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10313,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 11193,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

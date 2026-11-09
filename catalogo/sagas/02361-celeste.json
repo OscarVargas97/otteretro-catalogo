@@ -3,7 +3,7 @@
   "name": "Celeste",
   "igdbKind": "collection",
   "igdbId": 3109,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2018,
       "igdbId": 26226,
       "popularity": 1488,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "21091",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Celeste",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Celeste",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Help Madeline survive her inner demons on her journey to the top of Celeste Mountain, in this super-tight platformer from the creators of TowerFall. Brave hundreds of hand-crafted challenges, uncover devious secrets, and piece together the mystery of the mountain.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Ayuda a Madeline a superar sus demonios interiores en su viaje a la cima de Celeste Mountain, en este plataformas de precisión extrema de los creadores de TowerFall. Enfréntate a cientos de desafíos diseñados a mano, descubre secretos retorcidos y reconstruye el misterio de la montaña.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -73,7 +91,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 26226,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01002B30028F6000"
+          ]
         }
       ],
       "images": {

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Silent Mobius: Genei no Datenshi is a Role-Playing game, developed by TechnoSoft and published by Bandai Visual, which was released in Japan in 1998.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "65439",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Silent Mobius",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Silent Mobius",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Silent Mobius\" (called \"Silent Mobius Case: Titanic\" on the PSX) was an adventure game developed by Gainax based off the manga and anime series of the same name.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +108,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 214432,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo y mando familiar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable en pantalla grande."
+            }
+          ]
         },
         {
           "id": 65440,
@@ -98,7 +137,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 214432,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin comodidades modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original con cargas de PS1."
+            }
+          ]
         },
         {
           "id": 65441,
@@ -106,7 +166,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 214432,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable, pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -114,5 +195,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3127,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26165,
+          "reason": "1990"
+        },
+        {
+          "position": 2,
+          "gameId": 25898,
+          "reason": "1998"
+        }
+      ]
+    }
+  ]
 }

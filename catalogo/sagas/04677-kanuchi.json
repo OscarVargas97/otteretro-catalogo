@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An otome PS2 game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -48,9 +54,17 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 218643,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-55054",
+            "SLPM-55055",
+            "SLPM-55059"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5bwl.jpg"
+      }
     },
     {
       "id": 34981,
@@ -74,6 +88,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A sequel to Kanuchi: Shiroki Tsubasa no Shou.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -87,10 +107,37 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 218646,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-55160",
+            "SLPM-55161"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5bwm.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3258,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34969,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 34981,
+          "reason": "2009"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

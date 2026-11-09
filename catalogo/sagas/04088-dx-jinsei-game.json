@@ -48,7 +48,11 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 93455,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00155",
+            "SLPS-91025"
+          ]
         }
       ],
       "images": {
@@ -77,6 +81,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "DX Jinsei Game II is a Miscellaneous game, published by Takara.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -90,7 +100,11 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 97571,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00918",
+            "SLPS-91095"
+          ]
         }
       ],
       "images": {
@@ -98,5 +112,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3114,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25333,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 25455,
+          "reason": "1997"
+        }
+      ]
+    }
+  ]
 }

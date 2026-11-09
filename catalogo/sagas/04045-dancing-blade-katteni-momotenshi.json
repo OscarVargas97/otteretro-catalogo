@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62978",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dancing Blade Katteni Momotenshi!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dancing Blade Katteni Momotenshi!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dancing Blade is an anime FMV game. The player simply watches each scene as it proceeds; the only interaction is occasionally selecting dialogue choices when prompted. Depending on the player's choices, they will reach one of four different endings. Once an ending is reached, the scenario leading to that ending can later be replayed without interruption. Any scene already viewed can also be freely revisited.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 64856,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Depende de tarjeta de memoria y hardware antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución nativa de PS1 y cargas largas."
+            }
+          ]
         },
         {
           "id": 62978,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 64856,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original, sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado más cómodo y juego portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original, solo cambia el formato."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable, algo más limpia en pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -85,6 +139,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel to \"Dancing Blade Katteni Momotenshi!\"",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -106,5 +166,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3104,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25076,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 25117,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

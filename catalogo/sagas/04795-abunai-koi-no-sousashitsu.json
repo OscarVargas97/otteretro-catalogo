@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A visual novel released in 2012 for PSP.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 197859,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7vdy.jpg"
+      }
     },
     {
       "id": 41269,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A sequel to Otome game from PSP called \"Abunai Koi ☆ no Sousashitsu\" released for the PlayStation Vita.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 60422,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4oge.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3286,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36056,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 41269,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

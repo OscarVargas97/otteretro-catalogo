@@ -3,7 +3,7 @@
   "name": "Angry Birds",
   "igdbKind": "franchise",
   "igdbId": 1049,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8158",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Angry Birds Seasons",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Angry Birds Seasons",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Angry Birds Seasons is a special edition of Angry Birds that takes the furious fowl through the world’s celebrations! Enjoy Christmas, Halloween, Valentine’s Day, St. Patrick’s Day, Moon Festival and other great moments with the Angry Birds!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Angry Birds Seasons es una edición especial de Angry Birds que lleva a las furiosas aves por las celebraciones del mundo. ¡Disfruta de la Navidad, Halloween, San Valentín, el Día de San Patricio, el Festival de la Luna y otros grandes momentos con los Angry Birds!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 19275,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Menos niveles por ser una versión de 2012."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con lápiz o botones, menos cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, pero reducida."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja de 3DS."
+            }
+          ]
         },
         {
           "id": 8158,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 19275,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más niveles de temporadas por las actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón preciso y guardado sencillo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y fluida."
+            }
+          ]
         }
       ],
       "images": {
@@ -72,8 +132,14 @@
       "year": 2009,
       "igdbId": 2035,
       "popularity": 240,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "85675",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Angry Birds",
@@ -84,6 +150,18 @@
           "field": "original_name",
           "value": "Angry Birds",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Angry Birds is a 2009 physics-based casual puzzle video game developed by Finnish video game developer Rovio Entertainment. Players control a flock of multi-colored birds on a mission to rescue their eggs from green-colored pigs. Using a slingshot, they launch the birds at these pigs stationed in or around different structures. The goal is to eliminate all the pigs on each level with a limited number of birds.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Angry Birds es un juego de rompecabezas casual basado en física, lanzado en 2009 y desarrollado por la compañía finlandesa Rovio Entertainment. Los jugadores controlan una bandada de pájaros de colores en una misión para rescatar sus huevos de los cerdos verdes. Usando una honda, lanzan a los pájaros contra estos cerdos, situados dentro o alrededor de distintas estructuras. El objetivo es eliminar a todos los cerdos de cada nivel con un número limitado de pájaros.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -118,8 +196,75 @@
           "igdbId": 2035,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f28f9ee41ab19badef1ebf0e3ca129fe.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/5da361ad62b75317c5c92cc168f95877.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b20bd2a22c7f0aef29ab5a4cb1934f71.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2317,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35145,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 4120,
+          "reason": "2010"
+        }
+      ]
+    },
+    {
+      "id": 3983,
+      "kind": "story",
+      "rationale": "La saga no tiene historia continua: son niveles de puzles sin trama que seguir. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35145,
+          "recommendedVersionId": 85675,
+          "reason": "Juego original. La versión de PC es la más accesible."
+        },
+        {
+          "position": 2,
+          "gameId": 4120,
+          "recommendedVersionId": 8158,
+          "reason": "Variante con niveles temáticos de cada temporada. Versión de PC."
+        }
+      ]
+    },
+    {
+      "id": 3984,
+      "kind": "community",
+      "rationale": "Basta con empezar por el original. Seasons es más de lo mismo con temáticas, y se puede jugar si se quiere más contenido.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35145,
+          "recommendedVersionId": 85675,
+          "reason": "Es el juego que define la saga y el mejor punto de partida. Versión de PC."
+        },
+        {
+          "position": 2,
+          "gameId": 4120,
+          "recommendedVersionId": 8158,
+          "reason": "Opcional: añade niveles festivos. Versión de PC."
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A role playing game developed by Level 5 exclusively for the 3DS as part of the ongoing Danball Senki/Little Battlers Xperience .series",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A Level 5 developed 3DS exclusive entry into the Danball Senki/Little Battlers Xperience series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -90,7 +102,10 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 59404,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BDNJ"
+          ]
         }
       ],
       "images": {
@@ -107,6 +122,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10854",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Danball Senki",
           "source": "igdb",
@@ -115,6 +136,12 @@
         {
           "field": "original_name",
           "value": "Danball Senki",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Danball Senki is a PSP game developed by Level 5 involving small plastic model robots known as LBXs (standing for \"Little Battler eXperience\") that fight on dioramas made out of cardboard, and the main character Ban Yamano setting out to battle against LBXs created by other characters. For international release, Level-5 adopted the English language title \"Little Battlers eXperience.\"",
           "source": "igdb",
           "manual": false
         },
@@ -132,7 +159,28 @@
           "kind": "remake",
           "year": 2012,
           "igdbId": 136914,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión rehecha para 3DS con contenido ampliado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor control y efecto 3D."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reinterpreta el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos más actuales."
+            }
+          ]
         },
         {
           "id": 86835,
@@ -140,7 +188,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 72572,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base en PSP."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de PSP sin mejoras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla de PSP, cargas normales."
+            }
+          ]
         },
         {
           "id": 86974,
@@ -148,9 +217,33 @@
           "kind": "remake",
           "year": 2011,
           "igdbId": 146768,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Revisión con posibles cambios de contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Probables ajustes de jugabilidad."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reinterpreta el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mismo hardware de PSP."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co71fg.jpg"
+      }
     },
     {
       "id": 35902,
@@ -162,6 +255,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86904",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Danball Senki W",
           "source": "igdb",
@@ -170,6 +269,12 @@
         {
           "field": "original_name",
           "value": "Danball Senki W",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Danball Senki W is the second installment of the Danball Senki series of games, a sequel to the game Danball Senki (PSP).",
           "source": "igdb",
           "manual": false
         },
@@ -195,10 +300,46 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 80087,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-06096"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3urz.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1178,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35848,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 35902,
+          "reason": "2012"
+        },
+        {
+          "position": 3,
+          "gameId": 4584,
+          "reason": "2013"
+        },
+        {
+          "position": 4,
+          "gameId": 4595,
+          "reason": "2013"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

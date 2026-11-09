@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114483",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "World War II Combat: Road to Berlin",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "World War II Combat: Road to Berlin",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "World War II Combat: Road to Berlin, also known as Battlestrike: Secret Weapons, is a budget-priced first-person shooter, developed by Direct Action Games and published by Groove Games. Despite its low-budget price, it has been panned by users and reviewers as having shoddy control, and a rushed, unfinished feel. The game was followed by World War II Combat: Iwo Jima.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 6243,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/88c4df5598d72cae6ac2f53a9d8e34a8.jpg"
+      }
     },
     {
       "id": 48196,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114489",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "World War II Combat: Iwo Jima",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "World War II Combat: Iwo Jima",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "World War II Combat: Iwo Jima is a budget-priced first-person shooter developed by Direct Action Games and published by Groove Games. Like its predecessor, World War II Combat: Road to Berlin, it received extremely negative reviews from reviewers and users alike. It suffered from many of the same problems of the first game.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +132,31 @@
           "igdbId": 6242,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e1c62d2e81ef79f4773da7a3344c2c7b.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3497,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48192,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 48196,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

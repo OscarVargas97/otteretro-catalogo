@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2294",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Superman: The New Superman Adventures",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Superman: The New Superman Adventures",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Superman: The New Adventures, often referred to as Superman 64, is a 1999 adventure video game developed and published by Titus Software for the Nintendo 64 video game console. The game is based on the television series Superman: The Animated Series. In the game, Lex Luthor has trapped Jimmy Olsen, Lois Lane, and Professor Hamilton in a virtual reality version of Metropolis that he created with the help of Brainiac, leaving it up to Superman to save them and dismantle the virtual world. The game shifts between outdoor levels, where the player flies through rings while rescuing civilians, and indoor levels, where the player searches for access cards, activates computers, and battles villains.",
           "source": "igdb",
           "manual": false
         },
@@ -48,14 +60,56 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3005,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con misiones de la serie animada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles torpes y niebla constante."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja fluidez y distancia de dibujo muy corta."
+            }
+          ]
         },
         {
           "id": 2879,
           "platform": "ps1",
           "kind": "remake",
           "igdbId": 207162,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "No pude confirmar su contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Incierto."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Figura como remake sin datos."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Incierto."
+            }
+          ]
         }
       ],
       "images": {
@@ -86,6 +140,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Lois Lane has been kidnapped, and only the Man of Steel can save her! Agents from the lava-scarred planet Apokolips have come to Metropolis to humiliate Superman before the entire world, right in his own hometown. Enlisting the aid of local mob kingpin Bruno Mannheim, leader of the notorious Intergang, wicked emissary Kanto supplies the gang with out-of-this-world weaponry possessing the power to bring down Superman. While Superman is busy bringing the thugs of Intergang to justice, the beastlike Kalibak seizes the opportunity to abduct Lois and spirit her away to a remote, clandestine location. In the meantime, bad bundle of energy Livewire has busted out of Strykers Island Prison, and she is out for vengeance against the man who put her there--Superman. There is no rest for the Last Son of Krypton as the Countdown to Apokolips begins!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -99,7 +159,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 49216,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ASUE",
+            "ASUP"
+          ]
         }
       ],
       "images": {
@@ -117,6 +181,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43491",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Superman: Shadow of Apokolips",
           "source": "igdb",
@@ -125,6 +195,12 @@
         {
           "field": "original_name",
           "value": "Superman: Shadow of Apokolips",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Based on the Superman Animated Series, you play as Superman saving citizens in Metropolis and battling villains like Lex Luthor, Metallo, Livewire, Parasite and Darkseid. It uses cel-shaded graphics and voice-actors from the tv series.",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +218,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 4190,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GSUE-USA",
+            "DL-DOL-GSUP-EUR"
+          ]
         },
         {
           "id": 43492,
@@ -150,7 +230,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 4190,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50795",
+            "SLUS-20235"
+          ]
         }
       ],
       "images": {
@@ -160,5 +244,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1445,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1224,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 16518,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 1659,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

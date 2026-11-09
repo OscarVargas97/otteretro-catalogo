@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Self-titled GBC game of the crazy bird.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -67,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13155",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Woody Woodpecker Racing",
           "source": "igdb",
@@ -75,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Woody Woodpecker Racing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Woody Woodpecker Racing brings all of the classic Woody Woodpecker characters to the Game Boy Color. You can race as 10 different characters on 16 unique tracks. The racing action takes place in four different modes: Extreme, Grand Prix, Sprint, and Time Trial. Extreme has players trying to earn cups in a series of races, where the ultimate goal is to win first place in each race. Grand Prix stages races on the same tracks, but players are awarded points based on where they finish. Doing well in the races in both modes allows you to upgrade your vehicle. Both the Sprint and Time Trial modes allow for competition without the bloodlust of the other two modes. If you want to compete against another person, you can via a link cable. Race with a hyperactive bird in WOODY WOODPECKER RACING.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +118,11 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 8013,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02972",
+            "SLUS-01188"
+          ]
         },
         {
           "id": 13398,
@@ -126,6 +148,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13575",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Woody Woodpecker: Escape from Buzz Buzzard Park",
           "source": "igdb",
@@ -134,6 +162,12 @@
         {
           "field": "original_name",
           "value": "Woody Woodpecker: Escape from Buzz Buzzard Park",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Woody Woodpecker: Escape from Buzz Buzzard Park is an adventure game in the third person, in which the player controls his character in an environment modeled in computer graphics and real-time 3D , with the camera placed behind or around the figure. The game consists of twenty-one levels of type platform. The progress in the game is based primarily on the skill and dexterity needed to overcome obstacles that present themselves (to cross chasms, climb walls) or unblock access to the following level by manipulating objects (Woody sometimes needs use its beak to that effect). When Woody must skip a cross indicates in advance the precise location where it is about to fall, thus aiming at best. The game also includes a battle against the minions from Buzz Buzzard Woody can attack in different ways, using its beak or special attacks. Besides Woody Woodpecker himself, the player can also choose to play Knothead or Splinter once Woody found one of them.",
           "source": "igdb",
           "manual": false
         },
@@ -174,8 +208,47 @@
         "cover": "https://cdn2.steamgriddb.com/grid/8f3f0b7199ba7a7f6cb2a56d66282acd.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/9db2cedc975177d34a0ff8cb327c7790.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/c1668a8c812623e6b48756debbfe8994.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 490,
+          "platform": "pc",
+          "project": "WoodyRE",
+          "kind": "remake",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/jjmhalew/WoodyRE",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1596,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7037,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 6479,
+          "reason": "2001"
+        },
+        {
+          "position": 3,
+          "gameId": 7306,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

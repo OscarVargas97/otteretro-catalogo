@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Cyberball is an Atari Games arcade game of 7-man American football, using robotic avatars of different speeds, sizes, and skill sets. The game replaced the standard downs system with an explosive ball that progresses from \"cool\" to \"warm\", \"hot\", and \"critical\" status as it is used. Players can only defuse the ball, resetting it from its current state back to \"cool\" by crossing the 50 yard line or by change of possession, whether through touchdown, interception or fumble. A robot holding a critical ball while being tackled is destroyed along with the ball. The robots also possess finite durability. As offensive units are tackled, they wear down, finally issuing smoke and then flames after a number of hits. A flaming robot will explode when hit, thereby fumbling the ball. Players can upgrade robots with faster and more durable units using money bonuses they earn during play.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1988",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 12022,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6nu8.jpg"
+      }
     },
     {
       "id": 48450,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In 1989, Atari Games released a sequel to the original Cyberball in both the same large dual-monitor cabinet, titled Tournament Cyberball 2072, and a standalone two-player cabinet titled Cyberball 2072. The sequel featured improved gameplay, including refined player movement and more offensive plays and defensive formations, and changed its setting to 2072.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1989",
           "source": "igdb",
@@ -89,8 +104,33 @@
           "igdbId": 23070,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a6ebbf20c610d0bddf5706c8df3e5143.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/319924350eea783a6954f7568fc390d1.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/051120281a9b47e326abaa75c8b8d916.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3420,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42683,
+          "reason": "1988"
+        },
+        {
+          "position": 2,
+          "gameId": 48450,
+          "reason": "1989"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Treasure Isle is rumored to hide a vast bounty of gold said to be guarded by the legendary beast \"Yamawara\", which Kindaichi and other treasure hunters gather to search for. But the host is killed before the group even arrives, and a bloody slaying takes place during a time in which none of the people on the island could have done it. Will the island's mythical monster-guardian claim more victims?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -90,7 +96,13 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 167061,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01340",
+            "SLPS-01340-0",
+            "SLPS-01341",
+            "SLPS-01341-1"
+          ]
         }
       ],
       "images": {
@@ -140,5 +152,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1904,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25787,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 25842,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 25950,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

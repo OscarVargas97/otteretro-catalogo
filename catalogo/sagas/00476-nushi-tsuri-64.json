@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fishing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fishing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -98,5 +110,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2149,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1166,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 1331,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114657",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crash Time II",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Crash Time II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Solve exciting criminal cases on the mean streets as member of the autobahn police force - or freely explore the open game world while chasing down high-octane racers. Escort politicians, transport precious goods or take down the criminal element with over 500HP and close to 200MPH. With fully destructible cars, arcade gameplay, outstanding graphics and stunning slow-mo effects, Crash Time 2 puts you right in the driver seat, ready to burn rubber.",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,12 @@
           "igdbId": 6946,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/424879ef3e291fe863b03041dcc80efb.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9a5748a2fbaa6564d05d7f2ae29a9355.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/41c831141b8539bbbfc233928f6bf831.png"
+      }
     },
     {
       "id": 48304,
@@ -71,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114675",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crash Time III",
           "source": "igdb",
@@ -79,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Crash Time III",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Like its predecessors, Crash Time 3, the new installment of the well-known action racing game series, offers varied gameplay in top quality. The German game forge Synetic has once more taken the graphics engine a significant step further.",
           "source": "igdb",
           "manual": false
         },
@@ -107,8 +136,33 @@
           "igdbId": 6947,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6d8a1d94651a63cd8cb385dc3e96a3a0.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/15ae6e4df22b4f882654f0dc81350aad.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/996a7fa078cc36c46d02f9af3bef918b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3501,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48294,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 48304,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

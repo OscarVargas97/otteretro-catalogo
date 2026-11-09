@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "21148",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Minit",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Minit",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Minit is a peculiar little adventure played sixty seconds at a time.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 26970,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100ED600A87A000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "39721",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Minit Fun Racer",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Minit Fun Racer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Hop on your scooter into the twisting traffic of the bustling city and the debris covered sands of the barren desert just in time to watch the sunset. Befriend your local shopkeeper, chase coins, hit big jumps, and accomplish fun goals along each lap until you’ve seen it all!",
           "source": "igdb",
           "manual": false
         },
@@ -118,7 +145,28 @@
           "year": 2021,
           "igdbId": 143806,
           "steamAppId": 1503530,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y estable."
+            }
+          ]
         },
         {
           "id": 39722,
@@ -126,7 +174,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 143806,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ideal para partidas rápidas y multijugador local."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en portátil."
+            }
+          ],
+          "codes": [
+            "0100862019F68000"
+          ]
         }
       ],
       "images": {
@@ -135,5 +207,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2615,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9632,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 15177,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

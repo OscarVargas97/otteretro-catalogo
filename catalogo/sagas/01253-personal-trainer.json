@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7483",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Personal Trainer: Cooking",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Personal Trainer: Cooking",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Personal Trainer: Cooking includes more than 200 recipes from around the world and transforms the Nintendo DS into an electronic, interactive cookbook, complete with a glossary of terms and even instructional videos.",
           "source": "igdb",
           "manual": false
         },
@@ -87,6 +99,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Personal Trainer: Math is a math training game that is played by holding the Nintendo DS vertically like a book. It supports both right- and left-handed users, allowing them to view the exercises on the message screen while they note down their answers with the stylus on the Touch Screen. The user can play against up to 15 other Nintendo DS users by using the DS Download Play option or with multiple game cards.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -100,7 +118,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 78996,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AIZE"
+          ]
         }
       ],
       "images": {
@@ -129,6 +150,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Nintendo has trained people's brains and made fitness fun. Now Personal Trainer: Walking gives the simple act of walking a high-tech twist.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -142,7 +169,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 71901,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "IMWE"
+          ]
         }
       ],
       "images": {
@@ -151,5 +181,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1536,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17408,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 3810,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 17535,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

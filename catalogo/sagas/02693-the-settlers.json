@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "29390",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Settlers: New Allies",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Settlers: New Allies",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Nearly 30 years after the debut of The Settlers, the legendary build-up real-time strategy series returns to Windows PC.\"\n\n\"Forced to leave their homelands after a devastating earthquake of mysterious origins, the Settlers set sail towards the unknown in the hopes of finding a new home. Not only will they face countless new challenges, they will also become part of an ancient mystery that will change their lives forever.\"",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 107233,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100F3200E7CA000"
+          ]
         }
       ],
       "images": {
@@ -119,6 +134,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The goal of this game is to build a prosperous and well-organized city and to gain control of the enemy cities. This might initially seem simple to do, but in reality, it is much more complex. Settlers II is much more complex and with better graphics than the original Settlers game. The Gold Edition features the original game and the Mission CD expansion.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -140,5 +161,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2713,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17807,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 12124,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

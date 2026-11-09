@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "109433",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Beauty Clicker",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Beauty Clicker",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Beauty Clicker combines the thrill of a fast-paced timing challenge with the charm of anime artistry.\n\nWatch as PlayStation’s iconic button symbols fall rhythmically onto the screen. Hit the right button at the perfect moment to reveal pieces of high-resolution anime girl illustrations hidden behind a dark background. With every completed puzzle, a new and captivating illustration awaits.\n\nFeaturing eye-catching artwork, simple yet addictive gameplay, and the familiar PlayStation controls, this experience will appeal to both anime fans and players who enjoy short but satisfying gaming sessions.\n\nBeauty Clicker — With every perfect hit, uncover the most beautiful side of art.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 371612,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coavua.jpg"
+      }
     },
     {
       "id": 46340,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "109658",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Beauty Clicker 2",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Beauty Clicker 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Beauty Clicker 2 is the sequel that once again brings together the fast-paced timing challenge of the first game, Beauty Clicker, with the allure of anime art",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +132,31 @@
           "igdbId": 389646,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobqrr.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3473,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46236,
+          "reason": "2025"
+        },
+        {
+          "position": 2,
+          "gameId": 46340,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

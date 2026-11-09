@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95497",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shank",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Shank",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shank is the cult-classic revival of the sidescrolling beat-em-up. Play as Shank in an over-the-top grindhouse game, packed to the rim with enemies, bosses, combos, and more by the award-winning team at Klei Entertainment.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 7518,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/df1cd9015c1cd8dd15d874bade18d868.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0cbe83932e5b5da3bde646d45c809f90.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/024d2d699e6c1a82c9ba986386f4d824.png"
+      }
     },
     {
       "id": 39999,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95629",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shank 2",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Shank 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The fan-favorite 2D brawler is back as ex-mob hit man Shank returns to action in Shank 2. With those closest to him under attack, Shank is once again forced on the offensive. Now he must put his trusty arsenal of handguns, shotguns, automatic weapons, chainsaws, machetes, grenades, plus all-new weaponry and moves to use in order to protect those close to him. The original game set a new standard for its visual style and Shank 2 raises the bar. Shank 2 expands on the original game’s amazing combat system to redefine the 2D side-scrolling brawler.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +152,33 @@
           "igdbId": 9623,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b4b6a4686b2ca011ee0f72d0bc1e7b50.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/308794a90ec43d779df31a2e865a6f36.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2be5f9c2e3620eb73c2972d7552b6cb5.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3328,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39944,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 39999,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "47173",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Boogie",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Boogie",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Boogie is a music video game developed by Electronic Arts for the Wii and PlayStation 2. The karaoke gameplay is similar to other singing games such as SingStar and Karaoke Revolution. The game comes packaged with a USB microphone.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 4725,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RBOE-USA",
+            "RVL-RBOP-EUR"
+          ]
         },
         {
           "id": 47173,
@@ -56,7 +72,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 4725,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-55007",
+            "SLES-55007/ANZ",
+            "SLUS-21681"
+          ]
         },
         {
           "id": 47624,
@@ -64,7 +85,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 210265,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YBOE",
+            "YBOP"
+          ]
         }
       ],
       "images": {
@@ -95,6 +120,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Boogie SuperStar, the sequel to Boogie, is a dancing and karaoke game. It can be played with either the included microphone for singing or with the wii remote for dancing. Players need to match the rhythm and pitch to sing, or follow a specific dance routine by performing sequences of dance moves and combos to dance. The objective of the game is to work your way to stardom by competing in the star show where you can earn tokens that can be redeemed for reward packages. These contain new songs, dance moves, combos, dance routines, dressing room items as well as style skill progression.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -108,7 +139,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 4726,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RG6E-USA",
+            "RVL-RG6P-EUR"
+          ]
         }
       ],
       "images": {
@@ -117,5 +152,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2921,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 18729,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 19443,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

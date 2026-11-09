@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60955",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Croc: Legend of the Gobbos",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Croc: Legend of the Gobbos",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "All is not well in Croc's world. His friends, the Gobbos, have been captured by the evil Baron Dante. It is your mission in this 3D platformer to search through 42 different levels to save all of your friends before it's too late.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,12 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 7901,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00593",
+            "SLUS-00530",
+            "SLUS-00530GH"
+          ]
         },
         {
           "id": 12945,
@@ -113,7 +130,10 @@
           "kind": "remaster",
           "year": 2025,
           "igdbId": 315020,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100FB2021B0E000"
+          ]
         }
       ],
       "images": {
@@ -132,6 +152,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61001",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Croc 2",
           "source": "igdb",
@@ -140,6 +166,12 @@
         {
           "field": "original_name",
           "value": "Croc 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Croc 2 is a platformer that follows the cute crocodile protagonist, Croc, in his adventure to free his furry friends the gobbos from the forces of evil. On his way Croc collects gems in order to buy items that will assist his quest.",
           "source": "igdb",
           "manual": false
         },
@@ -165,7 +197,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 7902,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02088",
+            "SLUS-00634"
+          ]
         },
         {
           "id": 12960,
@@ -215,6 +251,14 @@
           "year": 2026,
           "igdbId": 411706,
           "criteria": []
+        },
+        {
+          "id": 118465,
+          "platform": "xone",
+          "kind": "original",
+          "year": 2026,
+          "igdbId": 411706,
+          "criteria": []
         }
       ],
       "images": {
@@ -245,6 +289,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Croc’s Dynamite Blast is an explosive arcade action game full of strategy, chaos, and fun! Join Croc and his friends in a fun game where dynamite is your best weapon!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2025",
           "source": "igdb",
@@ -258,10 +308,41 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 377008,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100D06025462000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coatsa.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1599,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6624,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 6653,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 37539,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

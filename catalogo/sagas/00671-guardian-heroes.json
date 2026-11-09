@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Based on the Sega Saturn's Guardian Heroes, Advance Guardian Heroes brings a classic game to life on your Game Boy Advance. Not your ordinary side-scrolling fighter, the game features more than 20 playable characters, 160 powerful moves, and different multiplayer scenarios. Each fighter has unique moves and abilities, which you can upgrade as you progress through the game. Whether you play solo, with friends, or against friends, you can delve into a variety of challenges and battle arenas.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -48,7 +54,12 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 6300,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BAGJ",
+            "BGCE",
+            "BGCP"
+          ]
         }
       ],
       "images": {
@@ -79,6 +90,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A remastered version of Guardian Heroes supporting a 16:9 aspect ratio, new user interface, and upscaling filter.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -94,8 +111,31 @@
           "igdbId": 51635,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5rcj.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2180,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1758,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 48819,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

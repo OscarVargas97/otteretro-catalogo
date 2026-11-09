@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6127",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Runaway 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Runaway 2: The Dream of the Turtle",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Runaway 2: The Dream of the Turtle is a point and click adventure game released by Péndulo Studios, S.L. in 2006. It's a sequel to Runaway: A Road Adventure.\n\nTravel to the four corners of the world with Brian and Gina in a crazy story packed full of surprises. Pirates, spies, surfers, soldiers, and even aliens get in on the act - all combining to create a wonderfully rewarding experience to savour and remember forever.\n\nWith loveable characters, rib-cracking humour, brain-tickling puzzles and stunning graphics, Runaway, The Dream of the Turtle is a glorious sight to behold.\nRunaway, The Dream of the Turtle is an adventure game that is a pure pleasure to play.\n\nA beautifully produced adventure game, with rich scenarios, ever-present humour and captivating puzzles. Hundreds of places to explore throughout the world. Over an hour of superb animated sequences bring to life the intrigue, plot twists and many comic moments.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 13227,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión de Wii casi completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con puntero, aceptable."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Bastante fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución estándar de Wii."
+            }
+          ]
         },
         {
           "id": 6127,
@@ -57,7 +90,28 @@
           "year": 2006,
           "igdbId": 13227,
           "steamAppId": 7220,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión completa de la aventura."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ideal con ratón y guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y buen rendimiento."
+            }
+          ]
         },
         {
           "id": 6128,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 13227,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de DS con contenido recortado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Pantalla táctil, algo limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y gráficos reducidos."
+            }
+          ]
         }
       ],
       "images": {
@@ -84,6 +159,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6703",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Runaway 3: A Twist of Fate",
           "source": "igdb",
@@ -92,6 +173,12 @@
         {
           "field": "original_name",
           "value": "Runaway 3: A Twist of Fate",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Runaway: A Twist of Fate is a point-and-click graphical adventure. It is a game developed by Péndulo Studios, S.L. and the sequel of Runaway 2: The Dream of The Turtle, as well as the third and final chapter in the Runaway series.",
           "source": "igdb",
           "manual": false
         },
@@ -128,5 +215,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2260,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3140,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 3416,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

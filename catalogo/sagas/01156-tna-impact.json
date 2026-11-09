@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6755",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "TNA Impact!: Cross the Line",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "TNA Impact!: Cross the Line",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "TNA iMPACT!: Cross the Line is the first handheld video game released by the professional wrestling promotion, Total Nonstop Action Wrestling (TNA).The DS version was built from the ground up and features a much smaller roster but does include new playable characters such as Hulk Hogan, Creed, Foley, and Curry Man. It also features a new sort of career mode which includes Bound for Glory and Victory Road as your route to the top of TNA. In Bound for Glory, run a gauntlet of opponents as your favorite superstar. Make friends and enemies on your way to the top in a story unique to each wrestler. In Victory Road, choose to climb to the top of the heavyweight division, create the ultimate tag team or dominate Ultimate X. The DS Version game featured new match types such as Six Sides of Steel, Cage Match, Four Corners Match(Four Way Elimination Match), and many more new match types. Also included are match type such as Singles, Tag, Ultimate X, and many more fan favorites. The DS Version featured new arenas in: Orlando, Florida; Mexico; Armory; Tokyo, Japan; London, England; Freedom Center; and Las Vegas, Nevada.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 5229,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-01305",
+            "ULUS-10436"
+          ]
         },
         {
           "id": 6755,
@@ -74,6 +90,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49025",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "TNA Impact!",
           "source": "igdb",
@@ -82,6 +104,12 @@
         {
           "field": "original_name",
           "value": "TNA Impact!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "TNA Wrestling is the exclusive Total Nonstop Action Wrestling game based on the top-rated weekly television show, TNA Impact! Enter the signature six-sided ring and prepare for all of the high-flying slams and takedowns with more than 20 TNA stars like Kurt Angle, AJ Styles and Samoa Joe. Or, build the ultimate wrestler with custom appearance, moves and style to deliver the hard-hitting, adrenaline pumping action seen only in TNA Wrestling!",
           "source": "igdb",
           "manual": false
         },
@@ -130,8 +158,45 @@
         "cover": "https://cdn2.steamgriddb.com/grid/bc2dda5eaff3b63a9ec6a4182569494a.png",
         "hero": "https://cdn2.steamgriddb.com/hero/ff22192942900d826b366bc1ba92e665.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/0b3b938796828be23653c958d23cafd0.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1216,
+          "platform": "x360",
+          "project": "TNA-IMPACT-Recomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/dotGrx/TNA-IMPACT-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2282,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19681,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 3445,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

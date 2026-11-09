@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "30429",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Clea",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Clea",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Clea is a survival horror title that emphasizes wits over cheap scares. Outsmart the Chaos Servants and escape from the Whitlock Mansion.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 112617,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto en PS4."
+            }
+          ]
         },
         {
           "id": 30429,
@@ -57,7 +90,28 @@
           "year": 2019,
           "igdbId": 112617,
           "steamAppId": 981020,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo de sigilo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado o mando, buen control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y ajustes gráficos."
+            }
+          ]
         },
         {
           "id": 30430,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 112617,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto en Xbox One."
+            }
+          ]
         },
         {
           "id": 30431,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 112617,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y rendimiento."
+            }
+          ],
+          "codes": [
+            "010058900F52E000"
+          ]
         }
       ],
       "images": {
@@ -90,6 +189,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "38511",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Clea 2",
           "source": "igdb",
@@ -98,6 +203,12 @@
         {
           "field": "original_name",
           "value": "Clea 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Clea 2 is a jump scare free, skill-based survival horror sequel to the 2019 adventure.",
           "source": "igdb",
           "manual": false
         },
@@ -140,7 +251,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 139516,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010045E0142A4000"
+          ]
         }
       ],
       "images": {
@@ -148,5 +262,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2727,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12460,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 14818,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

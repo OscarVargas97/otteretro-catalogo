@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The first PSP installment in the Jikkyou Powerful Pro Yakyuu series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 67133,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co727q.jpg"
+      }
     },
     {
       "id": 42516,
@@ -89,8 +98,31 @@
           "igdbId": 98014,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2qgi.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3283,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35796,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 42516,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

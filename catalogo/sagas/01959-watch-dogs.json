@@ -3,7 +3,7 @@
   "name": "Watch Dogs",
   "igdbKind": "collection",
   "igdbId": 2173,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2014,
       "igdbId": 1121,
       "popularity": 1183,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "14518",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Watch Dogs",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Watch Dogs",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Set in Chicago, where a central network of computers connects everyone and everything, Watch Dogs explores the impact of technology within our society. Using the city as your weapon, you will embark on a personal mission to inflict your own brand of justice. Chicago's overarching network is known as the Central Operating System (ctOS), and it controls almost all of the city's technology and information - including key data on all of the city's residents.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Ambientado en Chicago, donde una red central de computadoras conecta a todos y a todo, Watch Dogs explora el impacto de la tecnología en nuestra sociedad. Usando la ciudad como arma, emprenderás una misión personal para impartir tu propia forma de justicia. La red general de Chicago se conoce como Sistema Operativo Central (ctOS), y controla casi toda la tecnología e información de la ciudad, incluidos datos clave sobre todos sus residentes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,16 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 1121,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50658",
+            "BLAS-50718",
+            "BLES-01854",
+            "BLES-01933",
+            "BLES-01934/RUS",
+            "BLJM-61054",
+            "BLUS-31176"
+          ]
         },
         {
           "id": 14517,
@@ -108,6 +135,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99928",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Watch Dogs 2",
           "source": "igdb",
@@ -117,6 +150,18 @@
           "field": "original_name",
           "value": "Watch Dogs 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Explore a massive and dynamic open world offering an incredible variety of gameplay possibilities. Hack your way through traffic while you engage in dangerous car chases through the winding streets of San Francisco, traverse the rooftops of the colorful and vibrant neighborhoods of Oakland, and infiltrate the cutting-edge offices of Silicon Valley companies. There are many secrets to uncover in the birthplace of the tech revolution.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Explora un enorme mundo abierto y dinámico que ofrece una increíble variedad de posibilidades de juego. Hackea el tráfico mientras participas en peligrosas persecuciones en coche por las sinuosas calles de San Francisco, recorre los tejados de los coloridos y vibrantes barrios de Oakland e infíltrate en las modernas oficinas de las empresas de Silicon Valley. Hay muchos secretos por descubrir en la cuna de la revolución tecnológica.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -152,7 +197,12 @@
           "igdbId": 19441,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8757d7e24549036de3f2d715b2c06018.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/2d1bcedd27b586d2a9562a0f8e076b41.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ad92301430dc5fe354e6d0b1946e537f.png"
+      }
     },
     {
       "id": 42603,
@@ -164,6 +214,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101681",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Watch Dogs: Legion",
           "source": "igdb",
@@ -173,6 +229,18 @@
           "field": "original_name",
           "value": "Watch Dogs: Legion",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Watch Dogs: Legion, near future London is facing its downfall... Unless you do something about it. Build a resistance, fight back, and give the city back to the people. It's time to rise up.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En Watch Dogs: Legion, el Londres del futuro cercano se enfrenta a su caída... a menos que hagas algo al respecto. Crea una resistencia, contraataca y devuelve la ciudad a su gente. Ha llegado el momento de levantarse.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -224,8 +292,92 @@
           "igdbId": 100413,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/69e88cc7a3714f0027e87fcf3bc46813.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/5f1db7a13730fea2764ea1c0a3de2939.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/1dc7b8d3a70a972cda120ec7ebb61012.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1612,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7787,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 41928,
+          "reason": "2016"
+        },
+        {
+          "position": 3,
+          "gameId": 42603,
+          "reason": "2020"
+        }
+      ]
+    },
+    {
+      "id": 3619,
+      "kind": "story",
+      "rationale": "La saga comparte universo (ctOS y Blume) y los juegos se suceden en orden de lanzamiento: Watch Dogs, Watch Dogs 2 y Legion. No hay una cronología distinta, así que se repite el orden de lanzamiento. Las historias son bastante independientes.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7787,
+          "recommendedVersionId": 14518,
+          "reason": "Inicia la historia de Aiden Pearce y presenta ctOS. Se recomienda la versión de PC por rendimiento y mods."
+        },
+        {
+          "position": 2,
+          "gameId": 41928,
+          "recommendedVersionId": 99928,
+          "reason": "Sigue en el mismo universo con Marcus y DedSec en San Francisco. Se recomienda PC por rendimiento."
+        },
+        {
+          "position": 3,
+          "gameId": 42603,
+          "recommendedVersionId": 101681,
+          "reason": "Cierra la línea temporal con DedSec en Londres tras un Brexit ficticio. Se recomienda PC."
+        }
+      ]
+    },
+    {
+      "id": 3620,
+      "kind": "community",
+      "rationale": "Muchos jugadores recomiendan empezar por Watch Dogs 2, el mejor valorado y con historia autónoma. Después vienen el primero, si interesa su tono más serio, y Legion. No se omite ningún juego. Esta ruta no está respaldada por fuentes consultadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41928,
+          "recommendedVersionId": 99928,
+          "reason": "Es el más querido y no exige conocer el primero. Se recomienda PC o la versión más estable de tu consola."
+        },
+        {
+          "position": 2,
+          "gameId": 7787,
+          "recommendedVersionId": 14518,
+          "reason": "Es opcional y aporta contexto y el origen de ctOS. Se recomienda PC o consola actual, no las de generación anterior."
+        },
+        {
+          "position": 3,
+          "gameId": 42603,
+          "recommendedVersionId": 101681,
+          "reason": "Es el más reciente y funciona solo, aunque la comunidad lo valora menos. Se recomienda PC o consola actual."
+        }
+      ]
+    }
+  ]
 }

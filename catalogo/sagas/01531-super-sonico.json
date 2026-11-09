@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SoniPro is a management simulation and rhythm game featuring Nitroplus' mascot character Super Sonico for the Nintendo 3DS.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97226",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Heroine Chronicle",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Super Heroine Chronicle",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Heroine Chronicle is a crossover SRPG featuring characters from many different anime franchises.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +108,10 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 63311,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLJS-10244"
+          ]
         },
         {
           "id": 97227,
@@ -100,7 +121,10 @@
           "igdbId": 63311,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2zlh.jpg"
+      }
     },
     {
       "id": 40731,
@@ -112,6 +136,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97373",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SoniComi",
           "source": "igdb",
@@ -120,6 +150,12 @@
         {
           "field": "original_name",
           "value": "SoniComi",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Sonico is a cheerful, hardworking college student and amateur musician who's about to make her modeling debut. As her personal photographer, you will be responsible for Sonico's image, balancing the needs of your clients with your own vision for Sonico's future. Cute, sexy, weird -- the costumes you choose will determine her path as a model. Will you cultivate mainstream appeal? Make Sonico a subculture icon? Or will she become something even you can't imagine? It all depends on you!",
           "source": "igdb",
           "manual": false
         },
@@ -138,7 +174,28 @@
           "year": 2011,
           "igdbId": 33528,
           "steamAppId": 444140,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución ajustable."
+            }
+          ]
         },
         {
           "id": 97521,
@@ -146,10 +203,61 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 93600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución fija en PS3."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cfccca319397a5ea2bb11bd90b0d925d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0d22da4bd124d386f5546323c45bc924.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/35f48f3c40b10f6acbdd1cd1a8093252.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1570,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40731,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 5104,
+          "reason": "2014"
+        },
+        {
+          "position": 3,
+          "gameId": 40654,
+          "reason": "2014"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99530",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Surge",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Surge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Surge is a sci-fi spin on Dark Souls, from the Lords of the Fallen team.\nA catastrophic event has knocked you out during the first day on the job... you wake up equipped with a heavy-grade exoskeleton, in a destroyed section of the complex. Robots gone haywire, insane augmented co-workers and rogue AI - everything wants you dead.\nDefy deadly enemies and huge bosses in tight, visceral melee combat. Target and slice specific limbs off your foes, with a next-gen loot system where you loot what you dismember. Equip, upgrade and craft new weapons and armors sliced from enemies, and make yourself stronger through a fresh take on leveling-up.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 11590,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a4ae4b5c818128c1be44da52102a4fd8.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/fc8fdb29501a6289b7bc8b0bdd8155df.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/682e0e796084e163c5ca053dd8573b0c.png"
+      }
     },
     {
       "id": 42598,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101668",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Surge 2",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "The Surge 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Surge 2 keeps what fans and critics loved about the original while also expanding greatly upon the formula. The Surge 2 takes place in a brand new environment: a sprawling, devastated city with larger, more ambitious level design and improved engine. Combat is more brutal and tactical than ever, with even more options thanks to an expanded limb targeting system.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +152,33 @@
           "igdbId": 86477,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4c4e9d5d540537b6b99b0c741f909ecb.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b154e7b21b2ff0a14d96affa6d3fb958.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/c061abe12b79ffb077e88ecf5e4bcf01.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3392,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41788,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 42598,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

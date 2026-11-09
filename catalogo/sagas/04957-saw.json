@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95437",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Saw",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Saw",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The story centers on Detective David Tapp who awakens in a decrepit, abandoned asylum. He has been captured by his longtime nemesis, Jigsaw. Obsessed with catching this serial killer, Tapp’s mission has consumed him and ruined his family, resulting in divorce, mental imbalance, and abandonment. Worse yet, this frantic hunt destroyed Tapp’s career while he watched his long-time friend and partner get killed by one of Jigsaw's traps. Now Jigsaw has the upper hand and has captured the detective. Tapp must play a deadly game—the likes of which he has been investigating for years—to escape, and in order to do so he must survive the lethal traps and puzzles that Jigsaw has put in place for him and others. But each victim has a dark connection to Tapp. Will Tapp save them? Can he survive his obsession to find the Jigsaw killer?",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,12 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 7176,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00676",
+            "BLES-00793",
+            "BLUS-30358"
+          ]
         },
         {
           "id": 95437,
@@ -66,7 +83,12 @@
           "igdbId": 7176,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/94d8526a5fae933806f65b8a0f49301a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f418185daf34ef61913e33895a0f8996.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f5496252609c43eb8a3d147ab9b9c006.png"
+      }
     },
     {
       "id": 39951,
@@ -78,6 +100,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95516",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Saw II: Flesh & Blood",
           "source": "igdb",
@@ -86,6 +114,12 @@
         {
           "field": "original_name",
           "value": "Saw II: Flesh & Blood",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The demented serial killer Jigsaw returns with more gruesome torture puzzles designed to test the limits of human ethics in Saw II: Flesh & Blood. Set between the second and third Saw films, Flesh & Blood puts players in the shoes of Michael, son of the first game's protagonist Detective David Tapp, as he looks for clues as to his father's death and becomes the latest target of Jigsaw and his strange apprentice Pighead II. The gameplay once again mixes heavy doses of survival horror and puzzle-solving with mild combat elements, as players attempt to help themselves, and others, out of life-and-death situations by successfully completing mini-games and quick-time events. The combat comes in two forms, with gamers using melee attacks and a variety of weapons in physical battles against Jigsaw's thugs, or executing puzzle-based attacks that make use of traps and environmental hazards. Various case files are strewn about the hotels, factories, and sewers in which the game is set, and players can also collect a number of Billy the Puppet dolls hidden throughout each level. As was the case with its predecessor, Saw II: Flesh & Blood includes multiple endings based on choices gamers make throughout the story.",
           "source": "igdb",
           "manual": false
         },
@@ -103,7 +137,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 7177,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01050",
+            "BLUS-30548"
+          ]
         },
         {
           "id": 95517,
@@ -113,8 +151,50 @@
           "igdbId": 7177,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/945ca62485f074e7d36f804e14fa278a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8163b7222f935b48b27fd7e63635645f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6de0a4c1c7ed5e0e94706e6eb75f4e68.png"
+      },
+      "ports": [
+        {
+          "id": 1037,
+          "platform": "x360",
+          "project": "Saw2Recomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Matt-code-d/Saw2Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3325,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39915,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 39951,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

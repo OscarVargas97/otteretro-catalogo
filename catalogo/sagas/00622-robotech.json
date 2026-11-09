@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "41459",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Robotech: The Macross Saga",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Robotech: The Macross Saga",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A classic 2D shooter that artfully mixes side-scrolling and forced perspective gameplay. Play as a mighty fighter from the hit Robotech series as you battle to save planet Earth from total destruction. Auto cannon fire lights up the skies in this epic intergalactic war with the Zentradi legions. The best defense that Earth has is the Veritech Valkyrie, a fast-changing fighter that moves through the air with the grace of a dancer and packs the punch of an armored division!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,31 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 6563,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles originales, guardado tradicional."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa de GBA."
+            }
+          ],
+          "codes": [
+            "ARBE"
+          ]
         },
         {
           "id": 41459,
@@ -56,7 +92,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 146993,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original, según lo esperado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Probablemente incluye guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mismo juego con cambios de presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Más nítido en TV y portátil sin hardware de GBA."
+            }
+          ]
         }
       ],
       "images": {
@@ -75,6 +132,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43488",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Robotech: Battlecry",
           "source": "igdb",
@@ -83,6 +146,12 @@
         {
           "field": "original_name",
           "value": "Robotech: Battlecry",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's a desperate struggle to save the Earth in over 40+ missions with 40 Veritech fighters on land, air and outer space.\nTake the role of intrepid fighter pilot Jack Archer, who must put his skills to the test in the ultimate battle against the forces of the alien Zentraedi. Sit at the controls of a Veritech fighter, a unique mecha capable of ground-based fighting in robot form. Or have the option to instantaneously change into a fast attack fighter for aerial dog fighting, plus the hybrid Guardian mode that blends some of the strengths and weaknesses of the other two modes.\n\nBattlecry's combination of fast-paced gameplay, freedom of movement, and dramatic storyline make for a unique combat experience.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +177,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 4090,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GRBE-USA",
+            "DL-DOL-GRBP-EUR"
+          ]
         },
         {
           "id": 43489,
@@ -116,7 +189,12 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 4090,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51322",
+            "SLKA-25044",
+            "SLUS-20244"
+          ]
         }
       ],
       "images": {
@@ -135,6 +213,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81733",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Robotech: Invasion",
           "source": "igdb",
@@ -143,6 +227,12 @@
         {
           "field": "original_name",
           "value": "Robotech: Invasion",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the 21st century, humankind was freed from the confines of the solar system through the discovery of an alien technology known as Robotech. Contact with the stars also brought war with the Invid, a race of parasitic aliens bent on conquering and transforming the Earth into their new home world.",
           "source": "igdb",
           "manual": false
         },
@@ -168,7 +258,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 6015,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52944",
+            "SLUS-20823"
+          ]
         }
       ],
       "images": {
@@ -178,5 +272,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1461,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1605,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 16516,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 32674,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

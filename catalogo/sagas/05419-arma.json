@@ -51,7 +51,12 @@
           "steamAppId": 107410,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fef19d742c3c2ab67e029ef349803b7a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/57cd30d9088b0185cf0ebca1a472ff1d.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/c92b32fbc94e2dff3e5516401d9bb463.png"
+      }
     },
     {
       "id": 46806,
@@ -63,6 +68,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110891",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Arma Reforger",
           "source": "igdb",
@@ -71,6 +82,12 @@
         {
           "field": "original_name",
           "value": "Arma Reforger",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Powered by the new Enfusion engine, Arma Reforger lets you fight for supremacy over 51 km2 of incredible island terrain in an authentic Cold War setting, or create unique scenarios in real-time with the Game Master curation mode. Return to Everon, the war-driven microstate from the hit game that started it all, Arma: Cold War Assault.",
           "source": "igdb",
           "manual": false
         },
@@ -88,7 +105,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 201789,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego base, con menos soporte de mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando menos preciso para un shooter táctico."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, pero adaptado a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento más limitado que en PC."
+            }
+          ]
         },
         {
           "id": 110891,
@@ -97,7 +135,28 @@
           "year": 2022,
           "igdbId": 201789,
           "steamAppId": 1874900,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y mods del Workshop."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado y ratón, y servidores personalizados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original de desarrollo."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Escalable y de buen rendimiento según el equipo."
+            }
+          ]
         },
         {
           "id": 110892,
@@ -105,10 +164,54 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 201789,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego base, con menos soporte de mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando adecuado, pero menos preciso que ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, pero adaptado a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor rendimiento que en Xbox Series."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ee6f9f30d1cd3ffaac20874035d7c6b6.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3446,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43748,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 46806,
+          "reason": "2023"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "12973",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Traumatarium",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Traumatarium",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A randomly generated Game Boy dungeon crawler",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "remaster",
           "year": 2023,
           "igdbId": 268457,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100E5701C20A000"
+          ]
         }
       ],
       "images": {
@@ -73,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13764",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Traumatarium: Penitent",
           "source": "igdb",
@@ -81,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Traumatarium: Penitent",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A dungeon crawler inspired by the Fighting Fantasy books and Warhammer Quest 1995.\n\nThe followup to Traumatarium, Penitent aims to improve on the success of the original, while improving and expanding on almost all aspects. You have three distinct dungeons to overcome, all while managing scarce resources and making hard decisions on when to push on, or use a map to return to the safety of one of the few outposts found in those dark halls.\n\nTraumatarium Penitent takes place well after the events of the original game. The kingdom's knights have broken into two factions: the Penitents, who swore to pay off their sins in defense of the kingdom, and the Ebon Legion, who aim to bring forth again the evil spirits that once haunted the land.",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +125,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 307745,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo según lo que conozco."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles originales de Game Boy, sin extras de comodidad conocidos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña de Game Boy y hardware real o emulación."
+            }
+          ]
         },
         {
           "id": 13764,
@@ -106,7 +154,31 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 307745,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "No consta contenido quitado; posible igual al original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en Switch, probablemente con guardado más flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Parece conservar el diseño original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen en pantalla grande y sin cartucho."
+            }
+          ],
+          "codes": [
+            "01002830287B4000"
+          ]
         }
       ],
       "images": {
@@ -114,5 +186,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2434,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6841,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 7486,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

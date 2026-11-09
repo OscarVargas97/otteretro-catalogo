@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Virtua Striker series returns with 32 national soccer teams from around the world. Whether you play as France, Brazil or Argentina, you can lead your team to the International Cup final for a chance to win the trophy. On the way to the International Cup, you will meet more than 1,400 different players with their own statistics and you will play in 13 stadiums.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97301",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Virtua Striker",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Virtua Striker",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Virtua Striker is the first three-dimensional computer graphic soccer gameby Sega, bringing extreme competition to the arcades.\n\nState of the art texture mapping provides sophisticated reproduction of the World Cup atmosphere, with incredibly immersive game action and realistic backgrounds. It uses the same architecture as Virtua Fighter 2.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +108,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 46765,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port arcade clásico con modos básicos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles arcade simples, sin extras modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade de 1994."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación sencilla de resolución baja."
+            }
+          ]
         },
         {
           "id": 97008,
@@ -98,7 +137,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 46765,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port arcade clásico con modos básicos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles arcade simples, sin extras modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade de 1994."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación sencilla de resolución baja."
+            }
+          ]
         },
         {
           "id": 97301,
@@ -106,7 +166,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 313318,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión HD con más opciones y modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor respuesta y opciones de configuración."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Respeta el arcade con mejoras visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen en HD y funcionamiento estable."
+            }
+          ]
         },
         {
           "id": 97302,
@@ -114,10 +195,56 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 313318,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión HD con más opciones y modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor respuesta y opciones de configuración."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Respeta el arcade con mejoras visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen en HD y funcionamiento estable."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7de6dae0e0edc982c86a2c46174b80df.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/b92afeb2882c392461a392286477a7ab.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/34e666735a865c4b27fcd34427a849d5.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2857,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40508,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 16794,
+          "reason": "2001"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }
