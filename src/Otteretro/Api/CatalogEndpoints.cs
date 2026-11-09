@@ -152,6 +152,21 @@ public static class CatalogEndpoints
                 catch (Exception e) when (e is TaskException or HttpRequestException) { }
             return TypedResults.Ok(await Recipes.Status(db, main, GitHubToken(db, s, box), ct: ct));
         });
+        // Descartar lo no publicado (#109): vuelve a la de main; si main no la tiene, se borra de la base local.
+        api.MapDelete("/recipes/{id}", async Task<Results<NoContent, Conflict<ApiError>>> (string id, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            if (Publisher(db, s, box) is not { } publisher) return TypedResults.Conflict(ApiError.Of("publish.noKey"));
+            try { return Recipes.Discard(db, id, await publisher.MainRecipes(ct)) ? TypedResults.NoContent() : TypedResults.Conflict(ApiError.Of("recipes.noMain")); }
+            catch (Exception e) when (e is TaskException or HttpRequestException) { return TypedResults.Conflict(ApiError.Of("recipes.noMain")); }
+        });
+        // «Probar la descarga» (#109): baja el archivo a una carpeta temporal, informa y la borra.
+        api.MapPost("/recipes/{id}/test", async Task<Results<Ok<RecipeTest>, Conflict<ApiError>>> (string id, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            var (result, error) = await Recipes.Test(db, id, GitHubToken(db, s, box), ct);
+            return error is null ? TypedResults.Ok(result!) : TypedResults.Conflict(error);
+        });
         // Las de main, con sus bytes, mientras la base local no las tenga.
         api.MapPost("/recipes/import", async Task<Results<Ok<int>, Conflict<ApiError>>> (AppSession s, SecretBox box, CancellationToken ct) =>
         {

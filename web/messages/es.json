@@ -394,7 +394,9 @@
     "noConsole": "Sin consola",
     "emptyTab": "No hay recetas de este tipo.",
     "card": {
-      "edit": "Editar", "latest": "Última release", "matches": "Calza", "noMatch": "No calza",
+      "edit": "Editar", "duplicate": "Duplicar", "openRepo": "Abrir el repo", "discard": "Descartar cambios", "test": "Probar la descarga", "testing": "Descargando…",
+      "discardConfirm": "¿Descartar lo no publicado de {id}? Vuelve a la de main; si no está en main, se borra de este catálogo.",
+      "testResult": "{file} · {size} MB · versión {tag}", "testFound": "Detecta {detect} dentro del archivo.", "testNotFound": "No se encontró {detect} dentro del archivo.", "testUnknown": "No se puede mirar dentro de este archivo; se esperaba {detect}.", "copySuffix": "-copia", "copyName": "{name} (copia)", "latest": "Última release", "matches": "Calza", "noMatch": "No calza",
       "noMatchHint": "El patrón del archivo no calza con ningún archivo de la última release.",
       "published": "Publicada", "changed": "Sin publicar", "changedHint": "Cambió y todavía no está en main: Publicar la lleva al PR."
     },
@@ -430,7 +432,9 @@
       "noRelease": "{repo} no tiene releases publicadas.",
       "noAsset": "Ninguna release de {repo} tiene un archivo que calce con {pattern}.",
       "sourceFailed": "No se pudo consultar {repo}: {detail}",
-      "badRepo": "Esa dirección no es un repo de GitHub, Forgejo o Gitea."
+      "badRepo": "Esa dirección no es un repo de GitHub, Forgejo o Gitea.",
+      "notFound": "No hay una receta {id}.",
+      "noMain": "No se pudo leer main: sin eso no se sabe a qué volver."
     },
     "path": {
       "notAbsolute": "La ruta tiene que ser completa, por ejemplo E:\\Otteretro.",

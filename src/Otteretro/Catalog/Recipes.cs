@@ -11,7 +11,7 @@ using Otteretro.Data;
 namespace Otteretro.Catalog;
 
 /// <summary>Una receta en la lista de «Emuladores» (#95).</summary>
-public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false);
+public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false, string? Url = null);
 /// <summary>Una receta entera, como JSON.</summary>
 public record RecipeText(string Json);
 /// <summary>
@@ -20,6 +20,11 @@ public record RecipeText(string Json);
 /// Release y calce van null si la receta no tiene fuente con releases o no se pudo consultar; State, si no se pudo leer main.
 /// </summary>
 public record RecipeStatus(string Id, string? Tag, string? PublishedAt, bool? Matches, string? State);
+/// <summary>
+/// El resultado de «Probar la descarga» (#109): la release, el archivo que bajó y su tamaño, y si adentro está el ejecutable de la receta
+/// (<c>detect</c>). Found es null si no se puede mirar adentro (un .7z, por ejemplo).
+/// </summary>
+public record RecipeTest(string Tag, string File, long Size, string Detect, bool? Found);
 /// <summary>La URL del repo de un emulador (GitHub, Forgejo o Gitea).</summary>
 public record RepoRequest(string Url);
 
@@ -49,8 +54,12 @@ public static partial class Recipes
     {
         var r = JsonNode.Parse(json)!;
         return new RecipeInfo((string)r["id"]!, (string?)r["name"] ?? "", (string?)r["kind"] ?? "", (string?)r["folder"] ?? "",
-            r["consoles"]?.AsArray().Select(x => (string)x!).ToList() ?? [], local);
+            r["consoles"]?.AsArray().Select(x => (string)x!).ToList() ?? [], local, RepoUrl(r));
     }
+
+    static string? RepoUrl(JsonNode r) => (string?)r["updates"]?["repo"] is { } repo
+        ? (string?)r["updates"]?["source"] switch { "github" => "https://github.com/" + repo, "forgejo" when (string?)r["updates"]?["host"] is { } h => $"https://{h}/{repo}", _ => null }
+        : null;
 
     public static List<RecipeInfo> List(Database db, string? local = null)
     {
@@ -224,7 +233,82 @@ public static partial class Recipes
         return (latest.Tag, latest.PublishedAt, pattern is null ? null : latest.Assets.Any(a => Regex.IsMatch(a, pattern)));
     }
 
-    sealed record Release(string Tag, string? PublishedAt, List<string> Assets);
+    sealed record Release(string Tag, string? PublishedAt, List<string> Assets, Dictionary<string, string>? Urls = null);
+
+    /// <summary>
+    /// Descarta lo no publicado (#109): la receta vuelve a la de main (<paramref name="main"/>) o, si main no la tiene, se borra de la base
+    /// local. Devuelve false si no se pudo leer main (no hay con qué comparar).
+    /// </summary>
+    public static bool Discard(Database db, string id, string? main)
+    {
+        if (main is null) return false;
+        var file = Path.Combine(main, Path.GetFileName(id) + ".json");
+        using var c = db.Open();
+        if (File.Exists(file))
+        {
+            var text = File.ReadAllText(file);
+            using var doc = JsonDocument.Parse(text);
+            Store(c, doc.RootElement, text);
+        }
+        else
+        {
+            c.Execute("DELETE FROM recipe_console WHERE recipe_id = @id", new { id });
+            c.Execute("DELETE FROM recipe WHERE id = @id", new { id });
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// «Probar la descarga» (#109): baja el archivo de la última release que calza con el patrón a una carpeta temporal propia, mira qué
+    /// es y la borra. Solo se borra esa carpeta, que este método crea.
+    /// </summary>
+    public static async Task<(RecipeTest? Result, ApiError? Error)> Test(Database db, string id, string? token, CancellationToken ct = default)
+    {
+        if (Get(db, id) is not { } json) return (null, ApiError.Of("recipes.notFound", ("id", id)));
+        var r = JsonNode.Parse(json)!;
+        var source = (string?)r["updates"]?["source"];
+        var repo = (string?)r["updates"]?["repo"];
+        var host = (string?)r["updates"]?["host"];
+        var pattern = (string?)r["asset"];
+        if (source is not ("github" or "forgejo") || repo is null || pattern is null || source == "forgejo" && host is null) return (null, ApiError.Of("recipes.noRepo"));
+        var dir = Path.Combine(Path.GetTempPath(), "otteretro-catalogo-test-" + Guid.NewGuid().ToString("N"));
+        try
+        {
+            var releases = await Releases(source, host, repo, token, ct);
+            if (releases.Count == 0) return (null, ApiError.Of("recipes.noRelease", ("repo", repo)));
+            var latest = releases[0];
+            var name = latest.Assets.FirstOrDefault(a => Regex.IsMatch(a, pattern));
+            if (name is null || latest.Urls?.GetValueOrDefault(name) is not { } url) return (null, ApiError.Of("recipes.noAsset", ("repo", repo), ("pattern", pattern)));
+            Directory.CreateDirectory(dir);
+            var path = Path.Combine(dir, Path.GetFileName(name));
+            using (var response = await Http.GetAsync(url, HttpCompletionOption.ResponseHeadersRead, ct))
+            {
+                if (!response.IsSuccessStatusCode) throw new HttpRequestException($"{url}: {(int)response.StatusCode}");
+                await using var file = File.Create(path);
+                await response.Content.CopyToAsync(file, ct);
+            }
+            var detect = (string?)r["detect"] ?? "";
+            var wanted = detect.Replace('\\', '/').TrimEnd('/');
+            var leaf = wanted[(wanted.LastIndexOf('/') + 1)..];
+            bool? found = null;
+            if (string.Equals(Path.GetFileName(path), leaf, StringComparison.OrdinalIgnoreCase)) found = true;
+            else if (path.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
+            {
+                using var zip = System.IO.Compression.ZipFile.OpenRead(path);
+                found = zip.Entries.Any(e => e.FullName.Equals(wanted, StringComparison.OrdinalIgnoreCase) || e.Name.Equals(leaf, StringComparison.OrdinalIgnoreCase)
+                    || e.FullName.StartsWith(wanted + "/", StringComparison.OrdinalIgnoreCase));
+            }
+            return (new RecipeTest(latest.Tag, Path.GetFileName(path), new FileInfo(path).Length, detect, found), null);
+        }
+        catch (Exception e) when (e is HttpRequestException or JsonException or IOException or InvalidDataException or TaskCanceledException && !ct.IsCancellationRequested)
+        {
+            return (null, ApiError.Of("recipes.sourceFailed", ("repo", repo), ("detail", e.Message)));
+        }
+        finally
+        {
+            if (Directory.Exists(dir)) Directory.Delete(dir, true);
+        }
+    }
 
     /// <summary>Las releases publicadas (sin borradores) de un repo de GitHub, o de Forgejo o Gitea (la misma API, en <paramref name="host"/>).</summary>
     static async Task<List<Release>> Releases(string source, string? host, string repo, string? token, CancellationToken ct)
@@ -238,7 +322,8 @@ public static partial class Recipes
         if (!response.IsSuccessStatusCode) throw new HttpRequestException($"{url}: {(int)response.StatusCode}");
         var list = JsonNode.Parse(await response.Content.ReadAsStringAsync(ct))!.AsArray();
         return list.Where(g => g?["draft"]?.GetValue<bool>() != true)
-            .Select(g => new Release((string?)g!["tag_name"] ?? "", (string?)g["published_at"], g["assets"]?.AsArray().Select(a => (string)a!["name"]!).ToList() ?? []))
+            .Select(g => new Release((string?)g!["tag_name"] ?? "", (string?)g["published_at"], g["assets"]?.AsArray().Select(a => (string)a!["name"]!).ToList() ?? [],
+                g["assets"]?.AsArray().Where(a => (string?)a!["browser_download_url"] is not null).ToDictionary(a => (string)a!["name"]!, a => (string)a!["browser_download_url"]!, StringComparer.Ordinal)))
             .OrderByDescending(g => g.PublishedAt ?? "").ToList();
     }
 

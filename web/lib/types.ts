@@ -57,3 +57,4 @@ export type PlatformInfo = Schemas["PlatformInfo"];
 export type RecipeInfo = Schemas["RecipeInfo"];
 export type RecipeText = Schemas["RecipeText"];
 export type RecipeStatus = Schemas["RecipeStatus"];
+export type RecipeTest = Schemas["RecipeTest"];

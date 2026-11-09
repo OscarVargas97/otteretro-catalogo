@@ -51,6 +51,14 @@ export default function Emulators() {
     onSuccess: (r) => setEditing({ recipe: JSON.parse(r.json), create: false }),
   });
 
+  const duplicate = useMutation({
+    mutationFn: (id: string) => request<RecipeText>(`/api/recipes/${encodeURIComponent(id)}`),
+    onSuccess: (r) => {
+      const src = JSON.parse(r.json) as Recipe;
+      setEditing({ recipe: { ...src, id: `${src.id}${t("card.copySuffix")}`, name: t("card.copyName", { name: String(src.name ?? src.id) }) }, create: true });
+    },
+  });
+
   // Las de la pestaña, por su primera consola (la tarjeta nombra las demás); las sin consola van al final.
   const groups = new Map<string, RecipeInfo[]>();
   for (const r of (recipes.data ?? []).filter((r) => r.kind === kind)) groups.set(r.consoles[0] ?? "", [...(groups.get(r.consoles[0] ?? "") ?? []), r]);
@@ -64,7 +72,7 @@ export default function Emulators() {
         <button className="ot-btn ot-btn-primary" type="submit" disabled={!url.trim() || draft.isPending}>{t("fromRepo")}</button>
         <span className="small muted tabular toolbar-total" aria-live="polite">{recipes.data ? t("total", { count: recipes.data.length }) : ""}</span>
       </form>
-      {[draft.error, open.error, recipes.error, importMain.error].filter(Boolean).map((e, i) => <p key={i} className="error small" role="alert">{describe(e)}</p>)}
+      {[draft.error, open.error, duplicate.error, recipes.error, importMain.error].filter(Boolean).map((e, i) => <p key={i} className="error small" role="alert">{describe(e)}</p>)}
       {editing && <RecipeForm key={String(editing.recipe.id)} recipe={editing.recipe} create={editing.create} onDone={() => setEditing(null)} />}
       {recipes.data?.length === 0 && (
         <section className="panel">
@@ -79,7 +87,7 @@ export default function Emulators() {
           <div key={key} style={{ display: "grid", gap: 8 }}>
             <h2 className="console-group">{title(key)}</h2>
             {list.map((r) => (
-              <RecipeCard key={r.id} recipe={r} status={statusOf.get(r.id)} editing={editing?.recipe.id === r.id} busy={open.isPending} onEdit={() => open.mutate(r.id)} />
+              <RecipeCard key={r.id} recipe={r} status={statusOf.get(r.id)} editing={editing?.recipe.id === r.id} busy={open.isPending || duplicate.isPending} onEdit={() => open.mutate(r.id)} onDuplicate={() => duplicate.mutate(r.id)} />
             ))}
           </div>
         ))}

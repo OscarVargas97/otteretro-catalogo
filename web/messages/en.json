@@ -394,7 +394,9 @@
     "noConsole": "No console",
     "emptyTab": "There are no recipes of this type.",
     "card": {
-      "edit": "Edit", "latest": "Latest release", "matches": "Matches", "noMatch": "No match",
+      "edit": "Edit", "duplicate": "Duplicate", "openRepo": "Open the repo", "discard": "Discard changes", "test": "Test the download", "testing": "Downloading…",
+      "discardConfirm": "Discard what is unpublished in {id}? It goes back to main's; if it is not in main, it is deleted from this catalog.",
+      "testResult": "{file} · {size} MB · version {tag}", "testFound": "Detects {detect} inside the file.", "testNotFound": "{detect} was not found inside the file.", "testUnknown": "Cannot look inside this file; {detect} was expected.", "copySuffix": "-copy", "copyName": "{name} (copy)", "latest": "Latest release", "matches": "Matches", "noMatch": "No match",
       "noMatchHint": "The file pattern matches no file in the latest release.",
       "published": "Published", "changed": "Unpublished", "changedHint": "Changed and not in main yet: Publish takes it to the PR."
     },
@@ -430,7 +432,9 @@
       "noRelease": "{repo} has no published releases.",
       "noAsset": "No release of {repo} has a file matching {pattern}.",
       "sourceFailed": "Could not query {repo}: {detail}",
-      "badRepo": "That address is not a GitHub, Forgejo or Gitea repo."
+      "badRepo": "That address is not a GitHub, Forgejo or Gitea repo.",
+      "notFound": "There is no recipe {id}.",
+      "noMain": "Could not read main: without it there is nothing to go back to."
     },
     "path": {
       "notAbsolute": "The path must be complete, for example E:\\Otteretro.",
