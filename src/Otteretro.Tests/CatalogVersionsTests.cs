@@ -30,13 +30,16 @@ public class CatalogVersionsTests
                     {
                         tag_name = Tag, published_at = "2026-11-09T12:00:00Z",
                         assets = new[] { new { name = "catalogo.db.gz", browser_download_url = "https://github.com/dl/catalogo.db.gz" },
-                            new { name = "catalogo.db.gz.json", browser_download_url = "https://github.com/dl/catalogo.db.gz.json" } },
+                            new { name = "catalogo.db.gz.json", browser_download_url = "https://github.com/dl/catalogo.db.gz.json" },
+                            new { name = "cambios.json", browser_download_url = "https://github.com/dl/cambios.json" } },
                     },
                 },
                 $"GET repos/{Repo}/commits/{Tag}" => new { sha = Commit },
                 $"GET repos/{Repo}/zipball/base1" => baseZip,
                 "GET dl/catalogo.db.gz" => gz,
                 "GET dl/catalogo.db.gz.json" => Encoding.UTF8.GetBytes(manifest),
+                // #105: el historial de cambios que muestra Ajustes › Catálogo.
+                "GET dl/cambios.json" => Encoding.UTF8.GetBytes($$$"""{"versions":["{{{Tag}}}"],"entries":[{"version":"{{{Tag}}}","kind":"game","change":"added","id":13,"name":"Final Fantasy XII"}],"images":{"{{{Tag}}}":2}}"""),
                 _ => throw new InvalidOperationException("Llamada inesperada: " + call),
             };
             return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
@@ -98,7 +101,11 @@ public class CatalogVersionsTests
         var github = new FakeGitHub(Zip(baseFolder), File.ReadAllBytes(gzFile), System.Text.Json.JsonSerializer.Serialize(manifest, new System.Text.Json.JsonSerializerOptions(System.Text.Json.JsonSerializerDefaults.Web)));
         var versions = new CatalogVersions(f.Db, new GitHubPublisher(f.Db, "secreto", github) { Work = f.Tmp["trabajo"] });
 
-        Assert.Equal([Tag], (await versions.List()).Select(v => v.Tag));
+        var page = await versions.Page();
+        Assert.Equal(("base1", 2L, 3L), (page.Base, page.Sagas, page.Games));
+        var listed = Assert.Single(page.Versions);
+        Assert.Equal((Tag, false, 2), (listed.Tag, listed.Current, listed.Images));
+        Assert.Equal("Final Fantasy XII", Assert.Single(listed.Changes).Name);
         var result = await versions.Apply(Tag);
 
         Assert.Equal((Commit, 1), (result.Commit, result.Conflicts));

@@ -13,7 +13,12 @@ namespace Otteretro.Catalog;
 /// <summary>Una versión publicada del catálogo: una release `catalogo-*` del repo al que se publica (#104, decisión 362).</summary>
 /// <param name="Commit">El commit de main del tag (los 7 caracteres del final).</param>
 /// <param name="Current">Es la base del catálogo local.</param>
-public record CatalogRelease(string Tag, string Commit, DateTimeOffset? Published, bool Current);
+/// <param name="Changes">Lo que trajo según `cambios.json` (#105); vacío si la versión no tiene historial.</param>
+/// <param name="Images">Cuántos juegos cambiaron de imagen en ella.</param>
+public record CatalogRelease(string Tag, string Commit, DateTimeOffset? Published, bool Current, List<PublishedChange> Changes, int Images);
+/// <summary>Ajustes › Catálogo (#105, decisión 363): la base, lo que hay en la base local y las versiones publicadas.</summary>
+/// <param name="Base">El commit de main del que parte el catálogo local; null si no se fijó.</param>
+public record CatalogVersionsPage(string? Base, long Sagas, long Games, long Images, List<CatalogRelease> Versions);
 /// <param name="Inserted">Filas que entraron, cambiaron o se quitaron con la versión, sumando todas las tablas.</param>
 /// <param name="Conflicts">Campos o filas en conflicto que quedan para elegir (<see cref="CatalogVersions.Conflicts"/>).</param>
 public record CatalogApplyResult(string Tag, string Commit, int Inserted, int Updated, int Deleted, int Conflicts);
@@ -30,22 +35,39 @@ public record CatalogConflict(long Id, string Version, string Table, string Key,
 /// </summary>
 public sealed class CatalogVersions(Database db, GitHubPublisher github)
 {
-    const string Prefix = "catalogo-", DbAsset = "catalogo.db.gz", ManifestAsset = "catalogo.db.gz.json";
+    const string Prefix = "catalogo-", DbAsset = "catalogo.db.gz", ManifestAsset = "catalogo.db.gz.json", HistoryAsset = "cambios.json";
 
     /// <summary>Lo publicado (<see cref="InitialCatalog"/>.Shared sin `claude_fingerprint`, que no se publica), padres antes que hijos.</summary>
     static readonly string[] Tables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced", "version_code", "port"];
     /// <summary>Columnas que lo publicado rellena con otra cosa: `port.game` es el nombre de la fuente acá y el del juego en lo compilado.</summary>
     static readonly HashSet<string> Ignored = ["port.game"];
 
-    /// <summary>Las versiones `catalogo-*` publicadas, la más nueva primero.</summary>
+    /// <summary>Las versiones `catalogo-*` publicadas, la más nueva primero, con lo que trajo cada una.</summary>
     public async Task<List<CatalogRelease>> List(CancellationToken ct = default)
     {
         var baseSha = Base();
-        return (await Releases(ct))
-            .Select(r => (Tag: r["tag_name"]!.GetValue<string>(), Date: r["published_at"]?.GetValue<string>() is { } d ? DateTimeOffset.Parse(d, System.Globalization.CultureInfo.InvariantCulture) : (DateTimeOffset?)null))
-            .Select(r => new CatalogRelease(r.Tag, r.Tag.Split('-')[^1], r.Date, baseSha is not null && baseSha.StartsWith(r.Tag.Split('-')[^1], StringComparison.Ordinal)))
-            .OrderByDescending(r => r.Published).ToList();
+        var releases = (await Releases(ct))
+            .Select(r => (Node: r, Tag: r["tag_name"]!.GetValue<string>(), Date: r["published_at"]?.GetValue<string>() is { } d ? DateTimeOffset.Parse(d, System.Globalization.CultureInfo.InvariantCulture) : (DateTimeOffset?)null))
+            .OrderByDescending(r => r.Date).ToList();
+        // `cambios.json` acumula todo el historial (#31): basta el de la más nueva que lo tenga.
+        var history = releases.Select(r => AssetUrl(r.Node, HistoryAsset)).FirstOrDefault(u => u is not null) is { } url
+            ? JsonSerializer.Deserialize<PublishedHistory>(await github.Bytes(url, ct), JsonSerializerOptions.Web)
+            : null;
+        return releases.Select(r => new CatalogRelease(r.Tag, r.Tag.Split('-')[^1], r.Date, baseSha is not null && baseSha.StartsWith(r.Tag.Split('-')[^1], StringComparison.Ordinal),
+            history?.Entries.Where(e => e.Version == r.Tag).ToList() ?? [], history?.Images?.GetValueOrDefault(r.Tag) ?? 0)).ToList();
     }
+
+    /// <summary>La pestaña entera: la base, los totales de la base local y las versiones.</summary>
+    public async Task<CatalogVersionsPage> Page(CancellationToken ct = default)
+    {
+        var versions = await List(ct);
+        using var c = db.Open();
+        return new(Base(), c.ExecuteScalar<long>("SELECT count(*) FROM saga"), c.ExecuteScalar<long>("SELECT count(*) FROM game"),
+            c.ExecuteScalar<long>("SELECT count(*) FROM image"), versions);
+    }
+
+    static string? AssetUrl(JsonNode release, string name) =>
+        release["assets"]?.AsArray().FirstOrDefault(a => a?["name"]?.GetValue<string>() == name)?["browser_download_url"]?.GetValue<string>();
 
     async Task<List<JsonNode>> Releases(CancellationToken ct) =>
         ((await github.Get($"repos/{GitHubPublisher.Repo}/releases?per_page=100", ct))?.AsArray() ?? [])
@@ -65,8 +87,7 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
         if (Conflicts(db).Count is > 0 and var pending) throw new TaskException(ApiError.Of("publish.pendingConflicts", ("count", pending.ToString())));
         var baseSha = Base() ?? throw new TaskException(ApiError.Of("publish.noBase"));
         var release = (await Releases(ct)).FirstOrDefault(r => r["tag_name"]!.GetValue<string>() == tag) ?? throw new TaskException(ApiError.Of("publish.noRelease", ("tag", tag)));
-        string Asset(string name) => release["assets"]?.AsArray().FirstOrDefault(a => a?["name"]?.GetValue<string>() == name)?["browser_download_url"]?.GetValue<string>()
-            ?? throw new TaskException(ApiError.Of("publish.noRelease", ("tag", tag)));
+        string Asset(string name) => AssetUrl(release, name) ?? throw new TaskException(ApiError.Of("publish.noRelease", ("tag", tag)));
         var commit = (await github.Must(HttpMethod.Get, $"repos/{GitHubPublisher.Repo}/commits/{tag}", null, ct))["sha"]!.GetValue<string>();
 
         var gz = await github.Bytes(Asset(DbAsset), ct);

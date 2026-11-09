@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Suspense } from "react";
 import { TaskSettings } from "@/components/TaskSettings";
+import { CatalogVersion } from "@/components/CatalogVersion";
 import { ConsoleSettings } from "@/components/ConsoleSettings";
 import { CredentialsSettings } from "@/components/Credentials";
 import { ImagesFolder } from "@/components/ImagesFolder";
@@ -12,8 +13,8 @@ import { UpdateChannel, VersionAndUpdate } from "@/components/Update";
 import { useAppState } from "@/components/Shell";
 import { Tabs } from "@/components/Tabs";
 
-/** Las pestañas de Ajustes, en orden (#97, #111). La que viene en `?s=` se abre; sin ella, la primera. */
-const SECTIONS = ["credentials", "consoles", "tasks", "general"] as const;
+/** Las pestañas de Ajustes, en orden (#97, #111; Catálogo, #105). La que viene en `?s=` se abre; sin ella, la primera. */
+const SECTIONS = ["credentials", "consoles", "catalog", "tasks", "general"] as const;
 /** Las pestañas de antes (#111, #199; la carpeta de datos es parte de Almacenamiento, #208). */
 const OLD: Record<string, Section> = { claude: "tasks" }; // la pestaña Claude pasó a ser Tareas (#58)
 type Section = (typeof SECTIONS)[number];
@@ -28,7 +29,7 @@ function SettingsTabs() {
   const router = useRouter();
   const asked = useSearchParams().get("s");
   const current: Section = SECTIONS.find((s) => s === asked) ?? OLD[asked ?? ""] ?? SECTIONS[0];
-  const title = (s: Section) => t(s === "consoles" ? "consoles.title" : s === "tasks" ? "claude.title" : s);
+  const title = (s: Section) => t(s === "consoles" ? "consoles.title" : s === "catalog" ? "catalog.title" : s === "tasks" ? "claude.title" : s);
 
   return (
     <div className="content">
@@ -50,6 +51,7 @@ function Panel({ section }: { section: Section }) {
   switch (section) {
     case "credentials": return <CredentialsSettings />;
     case "consoles": return <ConsoleSettings />;
+    case "catalog": return <CatalogVersion />;
     case "tasks": return <TaskSettings />;
     case "general": return (
       <div className="settings-blocks">

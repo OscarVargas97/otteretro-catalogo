@@ -34,6 +34,10 @@ public record RegionsRequest(List<string> Order);
 public record ConvertRequest(string Console);
 /// <param name="Ids">Las filas de <c>source</c> que se quitan del disco (#224).</param>
 public record TrashRequest(List<long> Ids);
+/// <summary>La versión publicada a bajar (#105).</summary>
+public record CatalogApplyRequest(string Tag);
+/// <param name="UseRemote">True: lo de la versión; false: lo local se queda.</param>
+public record ConflictChoice(bool UseRemote);
 
 /// <summary>Pantallas del catálogo (F1.9): sagas, colección, ficha, seguimiento, búsqueda y avisos de Inicio.</summary>
 public static class CatalogEndpoints
@@ -188,6 +192,29 @@ public static class CatalogEndpoints
             catch (TaskException e) { return TypedResults.Conflict(e.Error); }
             catch (HttpRequestException) { return TypedResults.Conflict(ApiError.Of("publish.offline")); }
         });
+
+        // Ajustes › Catálogo (#105): las versiones publicadas del mismo repo al que se publica, bajar una y elegir sus conflictos.
+        api.MapGet("/catalog/versions", async Task<Results<Ok<CatalogVersionsPage>, Conflict<ApiError>>> (AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            if (Publisher(db, s, box) is not { } publisher) return TypedResults.Conflict(ApiError.Of("publish.noKey"));
+            try { return TypedResults.Ok(await new CatalogVersions(db, publisher).Page(ct)); }
+            catch (TaskException e) { return TypedResults.Conflict(e.Error); }
+            catch (HttpRequestException) { return TypedResults.Conflict(ApiError.Of("publish.offline")); }
+        });
+        api.MapPost("/catalog/version/apply", async Task<Results<Ok<CatalogApplyResult>, Conflict<ApiError>>> (CatalogApplyRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            if (Publisher(db, s, box) is not { } publisher) return TypedResults.Conflict(ApiError.Of("publish.noKey"));
+            try { return TypedResults.Ok(await new CatalogVersions(db, publisher).Apply(request.Tag, ct)); }
+            catch (TaskException e) { return TypedResults.Conflict(e.Error); }
+            catch (HttpRequestException) { return TypedResults.Conflict(ApiError.Of("publish.offline")); }
+        });
+        api.MapGet("/catalog/conflicts", Results<Ok<List<CatalogConflict>>, Conflict<ApiError>> (AppSession s) =>
+            Db(s) is { } db ? TypedResults.Ok(CatalogVersions.Conflicts(db)) : NoData());
+        // Elegir un lado; devuelve los que quedan.
+        api.MapPost("/catalog/conflicts/{id:long}", Results<Ok<List<CatalogConflict>>, NotFound, Conflict<ApiError>> (long id, ConflictChoice request, AppSession s) =>
+            Db(s) is not { } db ? NoData() : CatalogVersions.Resolve(db, id, request.UseRemote) ? TypedResults.Ok(CatalogVersions.Conflicts(db)) : TypedResults.NotFound());
 
         api.MapGet("/search", Results<Ok<SearchResults>, Conflict<ApiError>> (AppSession s, string? q) =>
         {
