@@ -73,6 +73,13 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     /// <summary>Qué cambiaría el PR: lo publicado de lo elegido, comparado con main, y si el resultado pasa la validación.</summary>
     public async Task<PublishPreview> Preview(PublishRequest request, CancellationToken ct = default)
     {
+        await Gate.WaitAsync(ct);
+        try { return await PreviewLocked(request, ct); }
+        finally { Gate.Release(); }
+    }
+
+    async Task<PublishPreview> PreviewLocked(PublishRequest request, CancellationToken ct)
+    {
         var plan = await MakePlan(request, ct);
         var (owner, _) = await Target(createFork: false, ct);
         var open = owner is null ? null : await OpenPr(owner, plan.Branch, ct);
@@ -81,6 +88,13 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
 
     /// <summary>Crea la rama con lo elegido y abre el PR, o actualiza el que ya estaba abierto.</summary>
     public async Task<PublishResult> Publish(PublishRequest request, CancellationToken ct = default)
+    {
+        await Gate.WaitAsync(ct);
+        try { return await PublishLocked(request, ct); }
+        finally { Gate.Release(); }
+    }
+
+    async Task<PublishResult> PublishLocked(PublishRequest request, CancellationToken ct)
     {
         var plan = await MakePlan(request, ct);
         if (plan.Files.Count == 0) throw new TaskException(ApiError.Of("publish.nothingChanged"));
@@ -165,19 +179,34 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         if (title is null) throw new TaskException(ApiError.Of(request.Kind == "saga" ? "edit.noSaga" : "edit.noGame", ("id", request.Id.ToString())));
 
         var head = (await Must(HttpMethod.Get, $"repos/{Repo}/git/ref/heads/main", null, ct))["object"]!["sha"]!.GetValue<string>();
+        var baseSha = c.ExecuteScalar<string?>("SELECT value FROM setting WHERE machine_id = '' AND name = @BaseSetting", new { BaseSetting });
+        // #85: la comparación se reusa mientras no cambien main, la base ni la base de datos local; volver al diálogo o publicar no la rehace.
+        var key = string.Join('|', request.Kind, request.Id, head, baseSha, Work, Fingerprint(db.FilePath), Fingerprint(db.CatalogPath));
+        if (Cache is { } saved && saved.Key == key) return saved.Plan;
+
         var main = await MainFolder(head, ct);
+        // La base de la que parte el catálogo local: lo que cambió en main después se compara archivo por archivo (#85).
+        var origin = baseSha is not null && baseSha != head ? await MainFolder(baseSha, ct) : null;
         var local = Path.Combine(Work, "local");
         if (Directory.Exists(local)) Directory.Delete(local, true);
         Published.Write(db, local);
 
         var paths = Affected(request, main, local);
         var files = new List<(PublishChange, string?)>();
+        var conflicts = new List<string>();
         foreach (var path in paths.Order(StringComparer.Ordinal))
         {
             var (before, after) = (Path.Combine(main, path), Path.Combine(local, path));
+            if (Same(before, after)) continue;
+            if (origin is not null)
+            {
+                var start = Path.Combine(origin, path);
+                // Lo que no tocaste y cambió en main: tu copia está atrasada, no es un cambio tuyo. No se publica (lo revertiría).
+                if (Same(start, after)) continue;
+                // Cambiaste algo que también cambió en main: no se pisa.
+                if (!Same(start, before)) conflicts.Add($"{Folder}/{path}");
+            }
             var (had, has) = (File.Exists(before), File.Exists(after));
-            if (had && has && File.ReadAllText(before) == File.ReadAllText(after)) continue;
-            if (!had && !has) continue;
             files.Add((new PublishChange(path, !had ? "added" : !has ? "deleted" : "modified", Details(path, had ? before : null, has ? after : null)), has ? after : null));
         }
 
@@ -197,15 +226,39 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         }
         var errors = files.Count == 0 ? [] : Published.Validate(result);
 
-        var baseSha = c.ExecuteScalar<string?>("SELECT value FROM setting WHERE machine_id = '' AND name = @BaseSetting", new { BaseSetting });
-        var conflicts = new List<string>();
-        if (baseSha is not null && baseSha != head && files.Count > 0)
-        {
-            var changed = (await Must(HttpMethod.Get, $"repos/{Repo}/compare/{baseSha}...{head}", null, ct))["files"]?.AsArray()
-                .Select(f => f!["filename"]!.GetValue<string>()).ToHashSet() ?? [];
-            conflicts = files.Select(f => $"{Folder}/{f.Item1.Path}").Where(changed.Contains).ToList();
-        }
-        return new(head, title, request.Kind == "all" ? "catalogo/todo" : $"catalogo/{request.Kind}-{request.Id}", files, errors, conflicts, baseSha is not null);
+        var plan = new Plan(head, title, request.Kind == "all" ? "catalogo/todo" : $"catalogo/{request.Kind}-{request.Id}", files, errors, conflicts, baseSha is not null);
+        Cache = (key, plan);
+        return plan;
+    }
+
+    /// <summary>
+    /// El último plan armado (#85). Uno solo: armar otro reescribe la carpeta de trabajo de la que lee el anterior.
+    /// </summary>
+    static (string Key, Plan Plan)? Cache;
+    /// <summary>
+    /// Un plan a la vez (#85): la barra de arriba cuenta mientras el diálogo compara, y los dos escriben la misma carpeta de trabajo.
+    /// Publicar también lo toma, porque lee los archivos del plan.
+    /// </summary>
+    // ponytail: un solo candado para todo el programa; por carpeta de trabajo si alguna vez hay más de un catálogo abierto.
+    static readonly SemaphoreSlim Gate = new(1, 1);
+
+    /// <summary>
+    /// Cambia cuando se escribe la base: SQLite toca el archivo o su -wal.
+    /// </summary>
+    // ponytail: fecha y tamaño de los archivos, no un contador de cambios; cualquier escritura (también la de una tarea) recalcula.
+    static string Fingerprint(string file) =>
+        string.Join(',', new[] { file, file + "-wal" }.Select(f => new FileInfo(f)).Select(f => f.Exists ? $"{f.LastWriteTimeUtc.Ticks}:{f.Length}" : "-"));
+
+    /// <summary>Mismo contenido, o los dos no existen.</summary>
+    static bool Same(string a, string b) =>
+        File.Exists(a) == File.Exists(b) && (!File.Exists(a) || File.ReadAllText(a) == File.ReadAllText(b));
+
+    /// <summary>Cuántos archivos llevaría «Publicar todo» (#85), para el botón de la barra de arriba.</summary>
+    public async Task<int> CountAll(CancellationToken ct = default)
+    {
+        await Gate.WaitAsync(ct);
+        try { return (await MakePlan(new("all", 0), ct)).Files.Count; }
+        finally { Gate.Release(); }
     }
 
     /// <summary>

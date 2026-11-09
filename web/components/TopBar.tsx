@@ -14,6 +14,7 @@ import { UpdateTask, useUpdate } from "./Update";
 import { MoveTask, useMove } from "./DataFolder";
 import { ClearTasks, TaskRows, upsertTask, useTasks } from "./Tasks";
 import { Empty, useAppState } from "./Shell";
+import { PublishButton } from "./Publish";
 
 /** Título de la pantalla (en Saga y Juego, el camino), búsqueda global (Ctrl+K) y panel de tareas en segundo plano. Fija al bajar (#169). */
 export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/game" }) {
@@ -71,6 +72,7 @@ export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/
         <span className="search-text">{t("search")}</span>
         <span className="kbd">{t("shortcut")}</span>
       </button>
+      <PublishButton kind="all" id={0} />
       <button className="ot-btn" type="button" aria-expanded={tasksOpen} onClick={() => setTasksOpen(!tasksOpen)}>
         <span className="dot" data-connected={connected} data-busy={busy} />
         {t("tasks")}
