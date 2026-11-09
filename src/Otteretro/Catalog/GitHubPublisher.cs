@@ -254,8 +254,9 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     /// Cambia cuando se escribe la base: SQLite toca el archivo o su -wal.
     /// </summary>
     // ponytail: fecha y tamaño de los archivos, no un contador de cambios; cualquier escritura (también la de una tarea) recalcula.
+    // Un -wal vacío vale lo mismo que ninguno: SQLite lo crea al abrir y lo borra al cerrar la última conexión, sin cambiar nada.
     static string Fingerprint(string file) =>
-        string.Join(',', new[] { file, file + "-wal" }.Select(f => new FileInfo(f)).Select(f => f.Exists ? $"{f.LastWriteTimeUtc.Ticks}:{f.Length}" : "-"));
+        string.Join(',', new[] { file, file + "-wal" }.Select(f => new FileInfo(f)).Select(f => f.Exists && f.Length > 0 ? $"{f.LastWriteTimeUtc.Ticks}:{f.Length}" : "-"));
 
     /// <summary>Mismo contenido, o los dos no existen.</summary>
     static bool Same(string a, string b) =>

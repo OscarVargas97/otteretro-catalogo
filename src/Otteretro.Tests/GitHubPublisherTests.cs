@@ -260,6 +260,8 @@ public class GitHubPublisherTests
     {
         var (f, _, publisher) = Setup(canPush: true, f => Assert.Null(Editing.SetIconic(f.Db, 33, true)));
         await using var _ = f;
+        // Pasa lo escrito del -wal a la base ahora: si no, lo hace el ClearAllPools de otra prueba a mitad de esta y la base cambia de huella.
+        Microsoft.Data.Sqlite.SqliteConnection.ClearAllPools();
         var mark = Path.Combine(publisher.Work, "local", "marca");
 
         Assert.Single((await publisher.Preview(new("saga", 33))).Files);
