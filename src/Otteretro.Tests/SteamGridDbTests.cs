@@ -270,6 +270,7 @@ public class SteamGridDbTests
 }
 
 /// <summary>#9: las imágenes van en el disco ★ de Otteretro y lo siguen.</summary>
+[Collection(nameof(ImageHomeTests))] // cambia ImageHome.OtteretroConfig, que es estático: con otras pruebas en paralelo, su Fixture ve un Otteretro instalado
 public class ImageHomeTests : IDisposable
 {
     readonly TempDir tmp = new();
@@ -360,3 +361,6 @@ public class ImageHomeTests : IDisposable
         Assert.False(Directory.Exists(d));
     }
 }
+
+[CollectionDefinition(nameof(ImageHomeTests), DisableParallelization = true)]
+public class ImageHomeCollection;

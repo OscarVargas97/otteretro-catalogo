@@ -26,6 +26,8 @@
     <EmbeddedResource Include="Data\Migrations\*.sql" />
     <EmbeddedResource Include="Catalog\ports-extras.json" LogicalName="ports-extras.json" />
     <EmbeddedResource Include="..\..\prompts\*.md" LogicalName="prompts/%(Filename)%(Extension)" />
+    <!-- #95: «Emuladores» revisa cada receta al guardarla con el mismo esquema que el PR. -->
+    <EmbeddedResource Include="..\..\catalogo\recetas\receta.schema.json" LogicalName="receta.schema.json" />
     <None Include="nutria.ico" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 

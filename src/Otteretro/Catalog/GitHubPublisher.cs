@@ -204,7 +204,10 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
                 // cambió solo acá se suma, y lo que ya está igual en los dos lados no es cambio. Solo un mismo campo distinto es conflicto.
                 var (inMain, here) = (Load(before), Load(after));
                 var found = new List<string>();
-                var merged = JsonMerge.Merge(Load(Path.Combine(origin, path)), inMain, here, found);
+                // Una receta que llegó a main después de la base se trae con «Traer las recetas de main»: su origen es la de main
+                // (sin eso, cualquier campo editado acá contaría como conflicto).
+                var from = Load(Path.Combine(origin, path)) ?? (path.StartsWith("recetas/", StringComparison.Ordinal) ? inMain : null);
+                var merged = JsonMerge.Merge(from, inMain, here, found);
                 if (JsonMerge.Same(merged, inMain)) continue;
                 if (found.Count > 0) conflicts.Add($"{Folder}/{path}: {string.Join(", ", found.Take(5))}{(found.Count > 5 ? "…" : "")}");
                 else if (!JsonMerge.Same(merged, here))
@@ -262,6 +265,18 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     static bool Same(string a, string b) =>
         File.Exists(a) == File.Exists(b) && (!File.Exists(a) || File.ReadAllText(a) == File.ReadAllText(b));
 
+    /// <summary>La carpeta de recetas de main (#95), para traerlas a «Emuladores».</summary>
+    public async Task<string> MainRecipes(CancellationToken ct = default)
+    {
+        await Gate.WaitAsync(ct);
+        try
+        {
+            var head = (await Must(HttpMethod.Get, $"repos/{Repo}/git/ref/heads/main", null, ct))["object"]!["sha"]!.GetValue<string>();
+            return Path.Combine(await MainFolder(head, ct), Published.RecipesFolder);
+        }
+        finally { Gate.Release(); }
+    }
+
     static JsonNode? Load(string file) => File.Exists(file) ? JsonNode.Parse(File.ReadAllText(file)) : null;
 
     /// <summary>Cuántos archivos llevaría «Publicar todo» (#85), para el botón de la barra de arriba.</summary>
@@ -284,8 +299,8 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         {
             foreach (var folder in new[] { main, local })
                 paths.UnionWith(Directory.GetFiles(folder, "*.json", SearchOption.AllDirectories).Select(f => Path.GetRelativePath(folder, f).Replace('\\', '/'))
-                    // #94: las recetas no salen de la base local (Write no las escribe): sin esto, Publicar todo las borraría de main.
-                    .Where(p => !p.StartsWith(Published.RecipesFolder + "/", StringComparison.Ordinal)));
+                    // #94, #95: una receta va solo si está en la base local (las de «Emuladores»): Publicar todo nunca borra una de main.
+                    .Where(p => folder == local || !p.StartsWith(Published.RecipesFolder + "/", StringComparison.Ordinal)));
             return paths;
         }
         var (mainGames, localGames) = (Published.GameFiles(main), Published.GameFiles(local));

@@ -113,6 +113,12 @@ public static partial class Published
             .Select(k => new PublishedConsole(k.Id, k.Name, k.Company, k.Status, platforms[k.Id].ToList())).ToList());
         Save(Path.Combine(folder, ReplacedFile), c.Query<(string Kind, long OldId, long? NewId)>("SELECT kind, old_id AS OldId, new_id AS NewId FROM replaced ORDER BY kind, old_id")
             .Select(r => new PublishedReplacement(r.Kind, r.OldId, r.NewId)).ToList());
+        // #95: las recetas de «Emuladores», tal como se guardaron (las traídas de main conservan sus bytes).
+        foreach (var (id, json) in c.Query<(string Id, string Json)>("SELECT id, json FROM recipe ORDER BY id"))
+        {
+            Directory.CreateDirectory(Path.Combine(folder, RecipesFolder));
+            File.WriteAllText(Path.Combine(folder, RecipesFolder, id + ".json"), json, new UTF8Encoding(false));
+        }
     }
 
     static string Slug(string name)

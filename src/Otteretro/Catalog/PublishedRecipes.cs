@@ -8,7 +8,7 @@ public record PublishedRecipe(string Id, string Kind, List<string> Consoles, str
 
 /// <summary>
 /// Las recetas de emuladores (#94, decisión 349 de Otteretro): un archivo por receta en `recetas/`, con su esquema `recetas/receta.schema.json`.
-/// Por ahora los archivos son la fuente: `Write` no las toca y Publicar no las lleva (las edita la sección «Emuladores», #95).
+/// Se editan en «Emuladores» (#95), en la base local como las sagas: `Write` escribe las que hay ahí y Publicar lleva las que cambiaron.
 /// </summary>
 public static partial class Published
 {
@@ -55,6 +55,16 @@ public static partial class Published
                     errors.Add($"La receta {name} tiene otro id: {doc.RootElement.GetProperty("id").GetString()} (el archivo se llama como su id).");
             }
         }
+    }
+
+    /// <summary>Lo que no cumple el esquema de una receta, con el que trae el programa (#95: «Emuladores» la revisa al guardarla).</summary>
+    public static List<string> CheckRecipe(JsonElement recipe)
+    {
+        using var stream = typeof(Published).Assembly.GetManifestResourceStream(RecipeSchemaFile)!;
+        using var schema = JsonDocument.Parse(stream);
+        var problems = new List<string>();
+        CheckSchema(schema.RootElement, schema.RootElement, recipe, "", problems);
+        return problems;
     }
 
     /// <summary>

@@ -13,6 +13,7 @@
     "saga": "Saga",
     "game": "Juego",
     "review": "Revisar",
+    "emulators": "Emuladores",
     "settings": "Ajustes",
     "pending": "{count, plural, one {# por revisar} other {# por revisar}}",
     "comingIn": "Llega en la fase {phase}",
@@ -379,9 +380,47 @@
     },
     "withSystemBadge": "Con el sistema"
   },
+  "emulators": {
+    "repoUrl": "Dirección del repo",
+    "repoPlaceholder": "https://github.com/dueño/repo",
+    "fromRepo": "Crear desde su repo",
+    "total": "{count, plural, one {# receta} other {# recetas}}",
+    "empty": "Todavía no hay recetas en este catálogo.",
+    "importMain": "Traer las recetas de main",
+    "newTitle": "Receta nueva",
+    "editTitle": "Receta {id}",
+    "commas": "separadas por comas",
+    "others": "Los demás campos, en JSON",
+    "checkNote": "Al guardar se revisa el esquema y que la fuente tenga una release con un archivo que calce con «asset». Publicar la lleva al PR.",
+    "badOthers": "Los demás campos no son un JSON válido.",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "checking": "Revisando…",
+    "kinds": { "emulator": "Emulador", "port": "Port", "complement": "Complemento", "tool": "Herramienta" },
+    "sources": { "github": "GitHub", "forgejo": "Forgejo o Gitea", "dolphin": "Dolphin" },
+    "versionFrom": { "exe": "Del ejecutable", "date": "Fecha de la release", "fixed": "Fija" },
+    "field": {
+      "id": "Id", "kind": "Tipo", "name": "Nombre", "folder": "Carpeta", "detect": "Archivo que la detecta", "parent": "Receta madre",
+      "game": "Juego", "link": "Enlace", "license": "Licencia", "asset": "Archivo de la release (patrón)", "saveAs": "Guardar como",
+      "consoles": "Consolas", "baseFor": "Base de", "formats": "Formatos", "saves": "Partidas", "config": "Configuración", "content": "Contenido",
+      "version": "Versión", "versionValue": "Valor de la versión", "source": "Fuente", "repo": "Repo", "host": "Servidor",
+      "dev": "Versión de desarrollo", "experimental": "Experimental", "devOnly": "Solo desarrollo"
+    }
+  },
   "errors": {
     "http": "La app respondió con un error ({status}).",
     "unknown": "Algo salió mal ({code}).",
+    "recipes": {
+      "badJson": "La receta no es un JSON válido: {detail}",
+      "schema": "La receta no cumple el esquema: {problems}",
+      "idChanged": "El id no se puede cambiar: la receta es {id}.",
+      "exists": "Ya hay una receta {id}.",
+      "noRepo": "Falta el repo de la fuente (y el servidor, si es Forgejo).",
+      "noRelease": "{repo} no tiene releases publicadas.",
+      "noAsset": "Ninguna release de {repo} tiene un archivo que calce con {pattern}.",
+      "sourceFailed": "No se pudo consultar {repo}: {detail}",
+      "badRepo": "Esa dirección no es un repo de GitHub, Forgejo o Gitea."
+    },
     "path": {
       "notAbsolute": "La ruta tiene que ser completa, por ejemplo E:\\Otteretro.",
       "isFile": "Esa ruta es un archivo, no una carpeta.",
