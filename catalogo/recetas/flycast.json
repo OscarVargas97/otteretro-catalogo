@@ -1,0 +1,21 @@
+{
+  "id": "flycast",
+  "name": "Flycast",
+  "kind": "emulator",
+  "folder": "Dreamcast",
+  "detect": "flycast.exe",
+  "version": { "from": "date" },
+  "consoles": ["dc"],
+  "baseFor": ["dc"],
+  "license": "GPL-2.0-only",
+  "config": ["emu.cfg"],
+  "perGame": { "config": "emu.cfg", "apply": "section", "mods": ["data/textures/{gameId}"] },
+  "options": [
+    { "name": "resolution", "file": "emu.cfg", "format": "cfg", "key": "rend.Resolution" },
+    { "name": "aspectRatio", "file": "emu.cfg", "format": "cfg", "key": "rend.WideScreen" },
+    { "name": "vsync", "file": "emu.cfg", "format": "cfg", "key": "rend.vsync" },
+    { "name": "filter", "file": "emu.cfg", "format": "cfg", "key": "rend.TextureFiltering" }
+  ],
+  "updates": { "source": "github", "repo": "flyinghead/flycast" },
+  "asset": "^flycast-win64-[0-9.]+\\.zip$"
+}

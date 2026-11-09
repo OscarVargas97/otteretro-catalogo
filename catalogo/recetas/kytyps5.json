@@ -1,0 +1,15 @@
+{
+  "id": "kytyps5",
+  "name": "KytyPS5",
+  "kind": "emulator",
+  "folder": "PlayStation 5",
+  "detect": "kyty_launcher.exe",
+  "version": { "from": "date" },
+  "consoles": ["ps5"],
+  "baseFor": ["ps5"],
+  "license": "GPL-2.0-only",
+  "experimental": true,
+  "devOnly": true,
+  "updates": { "source": "github", "repo": "KytyPS5/KytyPS5" },
+  "asset": "^KytyPS5-.+-Windows-x64\\.zip$"
+}

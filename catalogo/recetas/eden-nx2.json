@@ -1,0 +1,18 @@
+{
+  "id": "eden-nx2",
+  "name": "Eden NX2",
+  "kind": "emulator",
+  "folder": "Switch 2",
+  "detect": "eden.exe",
+  "version": { "from": "date" },
+  "consoles": ["switch2"],
+  "experimental": true,
+  "devOnly": true,
+  "portable": [{ "type": "folder", "path": "user" }],
+  "config": ["user/config"],
+  "content": ["user/nand"],
+  "perGame": { "args": ["-g", "{rom}"] },
+  "updates": { "source": "forgejo", "repo": "Takoroka/eden-nx2", "host": "git.eden-emu.dev", "dev": true },
+  "asset": "^Eden-Windows-nx2-.*-amd64-msvc-standard\\.zip$",
+  "formats": ["nsp", "xci", "nca", "nro"]
+}

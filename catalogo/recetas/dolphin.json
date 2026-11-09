@@ -1,0 +1,43 @@
+{
+  "id": "dolphin",
+  "name": "Dolphin",
+  "kind": "emulator",
+  "folder": "GameCube",
+  "detect": "Dolphin.exe",
+  "version": { "from": "date" },
+  "consoles": ["gc", "wii"],
+  "baseFor": ["gc", "wii"],
+  "license": "GPL-2.0-or-later",
+  "portable": [{ "type": "file", "path": "portable.txt", "system": "windows" }],
+  "saves": ["User/GC", "User/Wii", "User/StateSaves"],
+  "config": ["User/Config", "User/GameSettings"],
+  "gamePaths": [{ "file": "User/Config/Dolphin.ini", "format": "ini", "key": "ISOPath*" }],
+  "settings": [
+    { "file": "User/Config/Dolphin.ini", "format": "ini", "section": "General", "key": "RecursiveISOPaths", "value": "True" }
+  ],
+  "perGame": {
+    "config": "User/GameSettings/{gameId}.ini",
+    "apply": "file",
+    "mods": ["User/Load/Textures/{gameId}"],
+    "args": ["-e", "{rom}"],
+    "modsEnable": [{ "file": "User/Config/GFX.ini", "format": "ini", "section": "Settings", "key": "HiresTextures", "value": "True" }]
+  },
+  "input": {
+    "profiles": ["User/Config/Profiles/GCPad", "User/Config/Profiles/Wiimote"],
+    "section": "Controls",
+    "keys": ["PadProfile1", "PadProfile2", "PadProfile3", "PadProfile4", "WiimoteProfile1", "WiimoteProfile2", "WiimoteProfile3", "WiimoteProfile4"]
+  },
+  "options": [
+    { "name": "resolution", "file": "User/Config/GFX.ini", "format": "ini", "section": "Settings", "gameSection": "Video_Settings", "key": "InternalResolution" },
+    { "name": "aspectRatio", "file": "User/Config/GFX.ini", "format": "ini", "section": "Settings", "gameSection": "Video_Settings", "key": "AspectRatio" },
+    { "name": "antialiasing", "file": "User/Config/GFX.ini", "format": "ini", "section": "Settings", "gameSection": "Video_Settings", "key": "MSAA" },
+    { "name": "vsync", "file": "User/Config/GFX.ini", "format": "ini", "section": "Hardware", "gameSection": "Video_Hardware", "key": "VSync" },
+    { "name": "anisotropy", "file": "User/Config/GFX.ini", "format": "ini", "section": "Enhancements", "gameSection": "Video_Enhancements", "key": "MaxAnisotropy" },
+    { "name": "filter", "file": "User/Config/GFX.ini", "format": "ini", "section": "Enhancements", "gameSection": "Video_Enhancements", "key": "OutputResampling" },
+    { "name": "renderer", "file": "User/Config/Dolphin.ini", "format": "ini", "section": "Core", "key": "GFXBackend" },
+    { "name": "speed", "file": "User/Config/Dolphin.ini", "format": "ini", "section": "Core", "key": "EmulationSpeed" }
+  ],
+  "updates": { "source": "dolphin", "dev": true },
+  "asset": "-x64\\.7z$",
+  "formats": ["iso", "gcm", "rvz", "wbfs", "ciso", "gcz", "wia"]
+}

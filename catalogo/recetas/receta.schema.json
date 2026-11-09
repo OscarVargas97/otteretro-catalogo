@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/OscarVargas97/otteretro/recetas/receta.schema.json",
+  "title": "Receta de Otteretro",
+  "description": "Cómo se instala, se deja portable y se mueve un emulador, port o complemento (REQUISITOS §8.1). saves y content son del emulador, no de la versión: los comparten todas sus versiones (decisión 308). La comparten Otteretro (Windows) y PlayOS (Nix, #135).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "kind", "folder", "detect"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "description": "Nombre de la carpeta de la instalación en Herramientas" },
+    "kind": { "enum": ["emulator", "port", "complement", "tool"], "description": "tool: una herramienta que no es emulador ni port (Steam ROM Manager), en Herramientas/<Nombre>/<versión>" },
+    "folder": { "type": "string", "description": "Consola (emulador o port) o nombre del emulador o port padre (complemento): el segundo nivel de su carpeta. Una herramienta no lo usa en la ruta: solo agrupa" },
+    "game": { "type": "string", "description": "Port: el juego que cubre (#193)" },
+    "parent": { "type": "string", "description": "Complemento: id de la receta del emulador o port al que pertenece" },
+    "detect": { "type": "string", "description": "Ruta relativa que identifica la instalación (el ejecutable; en un complemento, su carpeta dentro del padre)" },
+    "version": {
+      "type": "object", "additionalProperties": false, "required": ["from"],
+      "properties": {
+        "from": { "enum": ["exe", "date", "fixed"], "description": "exe: versión del ejecutable (detect); date: fecha del ejecutable; fixed: value" },
+        "value": { "type": "string" }
+      }
+    },
+    "portable": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["type", "path"],
+        "properties": {
+          "type": { "enum": ["file", "folder", "junction", "rename"], "description": "file: crea path vacío si falta; folder: crea la carpeta path; junction: enlaza link (fuera de la instalación) a path; rename: si existe from y no path, renombra from a path (la carpeta de una receta anterior)" },
+          "path": { "type": "string" },
+          "from": { "type": "string", "description": "Con rename: la ruta vieja dentro de la instalación" },
+          "link": { "type": "string", "description": "Con junction: ruta con variables de entorno (%APPDATA%). Con rename: el enlace viejo de fuera que apuntaba a from; se quita" },
+          "system": { "enum": ["windows", "linux"] }
+        }
+      }
+    },
+    "link": { "type": "string", "description": "Complemento: dónde tiene que aparecer dentro del padre (se enlaza con una junction)" },
+    "saves": { "type": "array", "items": { "type": "string" } },
+    "config": { "type": "array", "items": { "type": "string" } },
+    "gamePaths": {
+      "type": "array", "description": "Rutas internas a juegos que se reescriben al moverlos",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["file", "format", "key"],
+        "properties": {
+          "file": { "type": "string" },
+          "format": { "enum": ["ini", "json"] },
+          "key": { "type": "string", "description": "Clave; en ini, un * al final acepta cualquier sufijo (ISOPath*)" },
+          "section": { "type": "string", "description": "En ini: la sección donde se agregan las carpetas de contentPaths (una lista de Qt, <key>\\N\\path, como Eden)" }
+        }
+      }
+    },
+    "settings": {
+      "type": "array", "description": "Valores que la instalación necesita (se escriben al dejarla portable)",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["file", "format", "key", "value"],
+        "properties": {
+          "file": { "type": "string" },
+          "format": { "enum": ["ini", "json"] },
+          "section": { "type": "string" },
+          "key": { "type": "string" },
+          "value": { "type": "string" }
+        }
+      }
+    },
+    "formats": { "type": "array", "items": { "type": "string" } },
+    "consoles": { "type": "array", "items": { "type": "string" }, "description": "Emulador: las consolas que corre, con su id del catálogo (relación muchos a muchos, decisión 286)" },
+    "baseFor": { "type": "array", "items": { "type": "string" }, "description": "Las consolas de las que es el emulador base (decisión 291); salen de consoles" },
+    "license": { "type": "string", "description": "Licencia (SPDX; LicenseRef-<nombre> si no tiene). Las no comerciales se pueden usar, pero no redistribuir modificadas" },
+    "experimental": { "type": "boolean", "description": "Corre pocos juegos: se instala para probar (decisión 291, PS5)" },
+    "devOnly": { "type": "boolean", "description": "Solo publica versiones de desarrollo: se instala la última con aviso (decisión 292)" },
+    "updates": {
+      "type": "object", "additionalProperties": false, "required": ["source"],
+      "description": "Dónde publica sus versiones, para avisar de las nuevas (decisión 294)",
+      "properties": {
+        "source": { "enum": ["github", "forgejo", "dolphin"], "description": "github y forgejo: sus releases (las prereleases son de desarrollo); dolphin: su servidor de actualizaciones" },
+        "repo": { "type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$" },
+        "host": { "type": "string", "description": "Con forgejo: el servidor (codeberg.org)" },
+        "dev": { "type": "boolean", "description": "También avisa de las versiones de desarrollo (como mucho una vez por semana)" },
+        "devRepo": { "type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$", "description": "Las versiones de desarrollo están en otro repo del mismo servidor (Ryubing Canary). Sin dev, no se avisa de ellas: se piden a mano" },
+        "devPattern": { "type": "string", "format": "regex", "description": "Los tags que cuentan como de desarrollo aunque no vengan marcados como prerelease (Eden: -rc)" }
+      }
+    },
+    "asset": { "type": "string", "format": "regex", "description": "El archivo de Windows de cada release de updates (expresión regular sobre su nombre)" },
+    "perGame": {
+      "type": "object", "additionalProperties": false,
+      "description": "Lo de un juego (perfiles, decisión 286). Plantillas: {titleId}, {serial}, {crc}, {gameId}, {rom} (nombre de la ROM sin extensión), {game} (carpeta del juego) y, en args, {config}",
+      "properties": {
+        "config": { "type": "string", "description": "Su configuración: el archivo por juego o, con section, el archivo compartido donde va su sección" },
+        "apply": { "enum": ["file", "section", "swap", "argument"], "description": "file: archivo por juego; section: solo su sección de un archivo compartido; swap: sin config por juego, se cambia la global al lanzar y se restaura al cerrar; argument: un archivo completo que se pasa con args" },
+        "mods": { "type": "array", "items": { "type": "string" }, "description": "Carpetas (o archivos) de mods de ese juego: se enlazan a las del perfil activo" },
+        "args": { "type": "array", "items": { "type": "string" }, "description": "Argumentos al lanzar el juego con su perfil ({rom}: la ROM); también abren el emulador en el juego (#276)" },
+        "idCase": { "enum": ["upper", "lower"], "description": "{titleId} en mayúsculas (Eden) o en minúsculas (Ryubing), como lo escribe el emulador" },
+        "full": { "type": "boolean", "description": "La configuración del juego es una copia completa de la global (Ryubing), no solo lo que difiere: se crea desde la global" },
+        "files": { "type": "array", "items": { "type": "string" }, "description": "Otros archivos del juego que van con el perfil (mods activos, UPD y DLC elegidos)" },
+        "modsArg": { "type": "string", "description": "Argumento que apunta los mods a la carpeta del perfil al lanzar, en lugar del enlace (Dusklight --mods)" },
+        "modsEnable": { "type": "array", "items": { "$ref": "#/properties/settings/items" }, "description": "Valores que activan los mods" }
+      }
+    },
+    "content": { "type": "array", "items": { "type": "string" }, "description": "Contenido instalado dentro del emulador (NAND, dev_hdd0, mlc01). Como saves, es del emulador y no de la versión: lo comparten todas sus versiones" },
+    "install": {
+      "type": "array", "description": "Instalar contenido por línea de comandos (decisión 295); {file} es el archivo y {zrif} la licencia",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["formats", "args"],
+        "properties": {
+          "formats": { "type": "array", "items": { "type": "string" } },
+          "args": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "options": {
+      "type": "array", "description": "Los ajustes más usados, para cambiarlos desde la app (decisión 298). Son los de la versión investigada (2026-11); en toml y yml, key es la ruta con puntos",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["name", "file", "format", "key"],
+        "properties": {
+          "name": { "enum": ["resolution", "renderer", "aspectRatio", "filter", "vsync", "speed", "anisotropy", "fps", "antialiasing"] },
+          "file": { "type": "string" },
+          "format": { "enum": ["ini", "json", "toml", "yml", "cfg"] },
+          "section": { "type": "string" },
+          "key": { "type": "string" },
+          "since": { "type": "string", "description": "Versión desde la que vale la clave, si cambió de nombre: la app usa la de since más alta que no pase la versión instalada (decisión 298)" },
+          "gameSection": { "type": "string", "description": "Sección en la configuración del juego, si no es la de la global (Dolphin: GFX.ini [Settings] es [Video_Settings] en GameSettings)" }
+        }
+      }
+    },
+    "optionsUpTo": { "type": "string", "description": "La versión más nueva en que se revisaron las claves de options: con una más nueva instalada, la app usa esas y avisa (decisión 298)" },
+    "optionFlags": { "enum": ["yuzu"], "description": "yuzu (Eden, Citron): cada valor va con clave\\default=false y, en la configuración del juego, clave\\use_global=false" },
+    "contentPaths": {
+      "type": "array", "description": "Dónde se apuntan las actualizaciones y los DLC sin copiarlos (decisión 295). Se reescriben al mover, como gamePaths",
+      "items": { "$ref": "#/properties/gamePaths/items" }
+    },
+    "input": {
+      "type": "object", "additionalProperties": false, "description": "Mandos",
+      "properties": {
+        "profiles": { "type": "array", "items": { "type": "string" }, "description": "Carpetas de los perfiles de mando con nombre" },
+        "arg": { "type": "string", "description": "Argumento que elige el perfil al lanzar" },
+        "section": { "type": "string" },
+        "keys": { "type": "array", "items": { "type": "string" }, "description": "Claves de perGame.config que eligen el perfil o guardan los mandos" }
+      }
+    },
+    "saveAs": { "type": "string", "description": "Si lo bajado no es un zip (un .exe con la versión en el nombre), con qué nombre se guarda en la instalación: el de detect (#268)" },
+    "downloads": {
+      "type": "array", "description": "Por versión y sistema: URL y hash SRI (Nix las arma en PlayOS; Otteretro las descarga en Windows, F5)",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["version", "system", "url", "hash"],
+        "properties": {
+          "version": { "type": "string" },
+          "system": { "enum": ["windows", "linux"] },
+          "url": { "type": "string" },
+          "hash": { "type": "string", "pattern": "^sha256-" }
+        }
+      }
+    }
+  }
+}

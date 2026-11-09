@@ -202,10 +202,11 @@ public static partial class Published
             else if (known.Contains(r.OldId)) errors.Add($"{r.Kind} {r.OldId} figura como reemplazado, pero sigue en el catálogo.");
             else if (r.NewId is { } to && !known.Contains(to)) errors.Add($"{r.Kind} {r.OldId} se reemplaza por algo que no existe: {to}.");
         }
+        ValidateRecipes(folder, errors);
         return errors;
     }
 
-    static readonly string[] ContentTables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced", "version_code", "port"];
+    static readonly string[] ContentTables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced", "version_code", "port", "recipe", "recipe_console"];
 
     /// <summary>
     /// SHA-256 de todas las filas publicadas, tabla por tabla y ordenadas por todas sus columnas (#44). La base comprimida no sale igual byte a
@@ -297,6 +298,12 @@ public static partial class Published
                                 new { RouteId = r.Id, step.Position, step.GameId, step.RecommendedVersionId, step.Reason }, t);
                     }
                 foreach (var r in all.Replaced) c.Execute("INSERT INTO catalog.replaced (kind, old_id, new_id) VALUES (@Kind, @OldId, @NewId)", r, t);
+                foreach (var r in ReadRecipes(folder))
+                {
+                    c.Execute("INSERT INTO catalog.recipe (id, kind, json) VALUES (@Id, @Kind, @Json)", r, t);
+                    foreach (var console in r.Consoles.Distinct())
+                        c.Execute("INSERT INTO catalog.recipe_console (recipe_id, console_id) VALUES (@Id, @console)", new { r.Id, console }, t);
+                }
                 t.Commit();
             }
             var plain = Path.Combine(work, "publicado.db");

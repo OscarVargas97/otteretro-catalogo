@@ -1,0 +1,18 @@
+{
+  "id": "eglantine",
+  "name": "Eglantine",
+  "kind": "emulator",
+  "folder": "Switch 2",
+  "detect": "eglantine.exe",
+  "version": { "from": "date" },
+  "consoles": ["switch2"],
+  "experimental": true,
+  "devOnly": true,
+  "portable": [{ "type": "folder", "path": "user" }],
+  "config": ["user/config"],
+  "content": ["user/nand"],
+  "perGame": { "args": ["-g", "{rom}"] },
+  "updates": { "source": "github", "repo": "Djihads80/Eglantine", "dev": true },
+  "asset": "^eglantine-windows-x86_64\\.zip$",
+  "formats": ["nsp", "xci", "nca", "nro"]
+}

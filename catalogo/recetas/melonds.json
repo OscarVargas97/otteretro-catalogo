@@ -1,0 +1,14 @@
+{
+  "id": "melonds",
+  "name": "melonDS",
+  "kind": "emulator",
+  "folder": "Nintendo DS",
+  "detect": "melonDS.exe",
+  "version": { "from": "date" },
+  "consoles": ["ds"],
+  "baseFor": ["ds"],
+  "license": "GPL-3.0-only",
+  "perGame": { "apply": "swap" },
+  "updates": { "source": "github", "repo": "melonDS-emu/melonDS" },
+  "asset": "^melonDS-[0-9.]+-windows-x86_64\\.zip$"
+}

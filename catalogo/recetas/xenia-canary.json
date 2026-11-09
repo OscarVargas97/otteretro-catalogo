@@ -1,0 +1,24 @@
+{
+  "id": "xenia-canary",
+  "name": "Xenia Canary",
+  "kind": "emulator",
+  "folder": "Xbox 360",
+  "detect": "xenia_canary.exe",
+  "version": { "from": "date" },
+  "consoles": ["x360"],
+  "baseFor": ["x360"],
+  "license": "BSD-3-Clause",
+  "devOnly": true,
+  "saves": ["content"],
+  "config": ["xenia-canary.config.toml", "config"],
+  "content": ["content"],
+  "perGame": { "config": "config/{titleId}.config.toml", "apply": "file" },
+  "options": [
+    { "name": "renderer", "file": "xenia-canary.config.toml", "format": "toml", "section": "GPU", "key": "gpu" },
+    { "name": "vsync", "file": "xenia-canary.config.toml", "format": "toml", "section": "GPU", "key": "vsync" },
+    { "name": "speed", "file": "xenia-canary.config.toml", "format": "toml", "section": "GPU", "key": "framerate_limit" },
+    { "name": "anisotropy", "file": "xenia-canary.config.toml", "format": "toml", "section": "GPU", "key": "anisotropic_override" }
+  ],
+  "updates": { "source": "github", "repo": "xenia-canary/xenia-canary-releases" },
+  "asset": "^xenia_canary_windows_?\\.zip$"
+}

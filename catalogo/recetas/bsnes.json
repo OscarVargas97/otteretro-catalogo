@@ -1,0 +1,14 @@
+{
+  "id": "bsnes",
+  "name": "bsnes",
+  "kind": "emulator",
+  "folder": "SNES",
+  "detect": "bsnes.exe",
+  "version": { "from": "date" },
+  "consoles": ["snes"],
+  "license": "GPL-3.0-only",
+  "config": ["settings.bml"],
+  "perGame": { "apply": "swap" },
+  "updates": { "source": "github", "repo": "bsnes-emu/bsnes" },
+  "asset": "^bsnes(_v[0-9]+)?-windows\\.zip$"
+}

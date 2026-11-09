@@ -1,0 +1,36 @@
+{
+  "id": "eden",
+  "name": "Eden",
+  "kind": "emulator",
+  "folder": "Switch",
+  "detect": "eden.exe",
+  "version": { "from": "date" },
+  "consoles": ["switch"],
+  "baseFor": ["switch"],
+  "portable": [{ "type": "folder", "path": "user" }],
+  "config": ["user/config"],
+  "content": ["user/nand"],
+  "contentPaths": [{ "file": "user/config/qt-config.ini", "format": "ini", "key": "Paths\\external_content_dirs*", "section": "UI" }],
+  "perGame": {
+    "config": "user/config/custom/{titleId}.ini",
+    "apply": "file",
+    "idCase": "upper",
+    "mods": ["user/load/{titleId}"],
+    "args": ["-g", "{rom}"]
+  },
+  "input": { "profiles": ["user/config/input"], "arg": "--input-profile" },
+  "optionFlags": "yuzu",
+  "options": [
+    { "name": "resolution", "file": "user/config/qt-config.ini", "format": "ini", "section": "Renderer", "key": "resolution_setup" },
+    { "name": "renderer", "file": "user/config/qt-config.ini", "format": "ini", "section": "Renderer", "key": "backend" },
+    { "name": "filter", "file": "user/config/qt-config.ini", "format": "ini", "section": "Renderer", "key": "scaling_filter" },
+    { "name": "aspectRatio", "file": "user/config/qt-config.ini", "format": "ini", "section": "Renderer", "key": "aspect_ratio" },
+    { "name": "antialiasing", "file": "user/config/qt-config.ini", "format": "ini", "section": "Renderer", "key": "anti_aliasing" },
+    { "name": "anisotropy", "file": "user/config/qt-config.ini", "format": "ini", "section": "Renderer", "key": "max_anisotropy" },
+    { "name": "vsync", "file": "user/config/qt-config.ini", "format": "ini", "section": "Renderer", "key": "use_vsync" },
+    { "name": "speed", "file": "user/config/qt-config.ini", "format": "ini", "section": "Core", "key": "speed_limit" }
+  ],
+  "updates": { "source": "forgejo", "repo": "eden-emu/eden", "host": "git.eden-emu.dev", "devPattern": "-rc[0-9]*$" },
+  "asset": "^Eden-Windows-v.*-amd64-clang-pgo\\.zip$",
+  "formats": ["nsp", "xci", "nca", "nro"]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mesence",
+  "name": "MesenCE",
+  "kind": "emulator",
+  "folder": "NES",
+  "detect": "Mesen.exe",
+  "version": { "from": "date" },
+  "consoles": ["nes", "snes", "gb", "gba"],
+  "baseFor": ["nes"],
+  "license": "GPL-3.0-only",
+  "saves": ["Saves", "SaveStates"],
+  "config": ["settings.json"],
+  "perGame": { "apply": "swap" },
+  "updates": { "source": "github", "repo": "nesdev-org/MesenCE" },
+  "asset": "^Mesen_[0-9.]+_Windows\\.zip$"
+}

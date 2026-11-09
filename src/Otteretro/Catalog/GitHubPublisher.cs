@@ -272,7 +272,9 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         if (request.Kind == "all")
         {
             foreach (var folder in new[] { main, local })
-                paths.UnionWith(Directory.GetFiles(folder, "*.json", SearchOption.AllDirectories).Select(f => Path.GetRelativePath(folder, f).Replace('\\', '/')));
+                paths.UnionWith(Directory.GetFiles(folder, "*.json", SearchOption.AllDirectories).Select(f => Path.GetRelativePath(folder, f).Replace('\\', '/'))
+                    // #94: las recetas no salen de la base local (Write no las escribe): sin esto, Publicar todo las borraría de main.
+                    .Where(p => !p.StartsWith(Published.RecipesFolder + "/", StringComparison.Ordinal)));
             return paths;
         }
         var (mainGames, localGames) = (Published.GameFiles(main), Published.GameFiles(local));

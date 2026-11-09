@@ -1,0 +1,23 @@
+{
+  "id": "citron",
+  "name": "Citron",
+  "kind": "emulator",
+  "folder": "Switch",
+  "detect": "citron.exe",
+  "version": { "from": "date" },
+  "consoles": ["switch"],
+  "license": "GPL-3.0-or-later",
+  "portable": [{ "type": "folder", "path": "user" }],
+  "config": ["user/config"],
+  "content": ["user/nand"],
+  "perGame": {
+    "config": "user/config/custom/{titleId}.ini",
+    "apply": "file",
+    "idCase": "upper",
+    "mods": ["user/load/{titleId}"]
+  },
+  "input": { "profiles": ["user/config/input"] },
+  "updates": { "source": "github", "repo": "citron-neo/emulator" },
+  "asset": "^Citron-windows-.*-x64-msvc\\.zip$",
+  "formats": ["nsp", "xci", "nca", "nro"]
+}
