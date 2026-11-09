@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94442",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Homefront",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Homefront",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Featuring a compelling single player story crafted by John Milius (Apocalypse Now, Red Dawn), Homefront immerses gamers in an interactive and cinematic FPS experience where they will assume an infantry role or take command of a wide variety of aerial and ground vehicles. In addition to the single-player experience, Homefront will deliver a robust multiplayer experience. In a land stripped of freedom, the brave will fight for their home.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,13 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1885,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00962",
+            "BLES-00962/ANZ",
+            "BLJS-10119",
+            "BLUS-30530"
+          ]
         },
         {
           "id": 94442,
@@ -67,7 +85,12 @@
           "igdbId": 1885,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/06de5b4f3d0ee8a0749bf6a5af99d224.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/160994f39d798d2894a3f0a756ecb6b5.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/73f490f3f868edbcd80b5d3f7cedc403.png"
+      }
     },
     {
       "id": 41635,
@@ -79,6 +102,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99084",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Homefront: The Revolution",
           "source": "igdb",
@@ -87,6 +116,12 @@
         {
           "field": "original_name",
           "value": "Homefront: The Revolution",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Homefront: The Revolution is an open-world first person shooter where you must lead the Resistance movement in guerrilla warfare against a superior military force.A living, breathing, open world responds to your actions - you and your Resistance Cell can inspire a rebellion on the streets and turn Occupation into Revolution, as oppressed civilians take up the fight.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +158,33 @@
           "igdbId": 1886,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b6f34d74a87978f6ae4b0c75dd65849e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/798b4516b6f9b87813b7cc0d703b7d9d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ee20e3bc4bd9eab997d7825b883b7359.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3311,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39596,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 41635,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

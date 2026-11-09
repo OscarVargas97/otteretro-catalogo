@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "40867",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Miitopia",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Miitopia",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Since the dawn of ever, warriors have banded together to fight evil. Now… Mii characters based on your favorite people must unite to do turn-based battle and save Miitopia! Cast them in roles across the kingdom, manage friendships, and give them jobs with distinct stats, abilities, gear, and a custom look. Then behold as awesomeness unfolds! Guide your team of Mii characters on a quest to defeat the Dark Lord and restore the stolen faces of the citizens of Miitopia. As you watch with bated breath, Mii characters will mingle over food, camping, exercise, sleeping arrangements, and yes, combat! In these wild, yet traditional RPG battles, your party’s relationships affect the outcome. Enemies attack while you explore the world map, which is littered with hidden paths and treasures. Talk about a win-win!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,33 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 26926,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base completo, aunque sin los añadidos de la versión de Switch."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos, pero con guardado y menús más lentos y sin mejoras modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla pequeña de baja resolución y cargas más lentas."
+            }
+          ],
+          "codes": [
+            "CTR-P-ADQE",
+            "CTR-P-ADQJ",
+            "CTR-P-ADQP"
+          ]
         },
         {
           "id": 40867,
@@ -56,7 +94,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 143620,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye todo el contenido y algunos extras, como más opciones de personalización."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejor calidad de vida, interfaz más ágil y juego en TV o portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel, con pequeños ajustes y mejoras."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución, cargas rápidas y rendimiento estable."
+            }
+          ],
+          "codes": [
+            "01003DA010E8A000"
+          ]
         }
       ],
       "images": {
@@ -87,6 +149,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Miitopia needs YOU…to cast Mii characters for the three trailers in the Casting Call demo. Fill the roles with characters you create, or choose characters made by others. Then cast them, sit back, and watch your actors play their parts!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -108,5 +176,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2357,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4764,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 5584,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

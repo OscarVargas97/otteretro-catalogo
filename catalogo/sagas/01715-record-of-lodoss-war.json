@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A boardgame for Game Boy Color based on the Record of Lodoss War series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "27344",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Record of Lodoss War: Deedlit in Wonder Labyrinth",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Record of Lodoss War: Deedlit in Wonder Labyrinth",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Record of Lodoss War-Deedlit in Wonder Labyrinth is a 2D-style Metroidvania (action-exploration) game based on Record of Lodoss War. Immerse yourself in the gorgeous pixel animations, and take advantage of abilities such as swapping weapons, and get help from elemental spirits on your journey to solve the arcane mysteries of the labyrinth.",
           "source": "igdb",
           "manual": false
         },
@@ -131,7 +149,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 96394,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100EF0015A9A000"
+          ]
         }
       ],
       "images": {
@@ -141,5 +162,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2407,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6263,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 11514,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

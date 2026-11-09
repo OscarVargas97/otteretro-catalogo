@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "26287",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Demon's Rise: War for the Deep",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Demon's Rise: War for the Deep",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A turn-based, tactical RPG with 30 character classes and 50+ hours of gameplay.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2018,
           "igdbId": 99656,
           "steamAppId": 843900,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y configurable."
+            }
+          ]
         },
         {
           "id": 26288,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 99656,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución."
+            }
+          ],
+          "codes": [
+            "0100C3501094E000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "26518",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Demon's Rise - Lords of Chaos",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Demon's Rise - Lords of Chaos",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Demon’s Rise: Lords of Chaos is a turn-based, tactical RPG set in a brutal and unforgiving fantasy world. Taking place amidst a horrific war in the cold north, the campaign will see your party fight innumerable enemies, huge monsters and powerful sorcerers. Victory will require the tactical use of terrain, morale, formations and magic. Build an increasingly powerful war band, command demonic allies, and crush those that stand against you.",
           "source": "igdb",
           "manual": false
         },
@@ -102,7 +171,28 @@
           "year": 2018,
           "igdbId": 97899,
           "steamAppId": 844420,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y configurable."
+            }
+          ]
         },
         {
           "id": 26519,
@@ -110,7 +200,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 97899,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución."
+            }
+          ],
+          "codes": [
+            "0100E29013818000"
+          ]
         }
       ],
       "images": {
@@ -120,5 +234,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2683,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11153,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 11253,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

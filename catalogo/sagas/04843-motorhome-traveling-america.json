@@ -22,6 +22,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "89827",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Motorhome: Traveling America",
           "source": "igdb",
@@ -45,7 +51,28 @@
           "platform": "pc",
           "kind": "original",
           "igdbId": 338049,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Probablemente versión previa o demo, sin confirmar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Menos pulida."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Primera versión."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Posibles errores no corregidos."
+            }
+          ]
         },
         {
           "id": 89827,
@@ -54,7 +81,28 @@
           "year": 2025,
           "igdbId": 356772,
           "steamAppId": 3480690,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles flexibles y guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Experiencia original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor rendimiento y opciones."
+            }
+          ]
         },
         {
           "id": 89828,
@@ -62,7 +110,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 356772,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Experiencia original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con cargas rápidas."
+            }
+          ]
         },
         {
           "id": 89829,
@@ -70,7 +139,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 356772,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo con mando y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Experiencia original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y rendimiento."
+            }
+          ]
         }
       ]
     },
@@ -84,6 +174,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "90290",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Motorhome: Traveling North America 2 - Collector's Edition",
           "source": "igdb",
@@ -92,6 +188,12 @@
         {
           "field": "original_name",
           "value": "Motorhome: Traveling North America 2 - Collector's Edition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "New adventure in a motorhome! Explore the vast expanses of North America, find hidden objects and solve tricky puzzles. An unforgettable trip to the most scenic spots begins now!",
           "source": "igdb",
           "manual": false
         },
@@ -128,7 +230,10 @@
           "igdbId": 377671,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coaucs.jpg"
+      }
     },
     {
       "id": 37677,
@@ -140,6 +245,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "90734",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Motorhome: Traveling North America 3 - Collector's Edition",
           "source": "igdb",
@@ -148,6 +259,12 @@
         {
           "field": "original_name",
           "value": "Motorhome: Traveling North America 3 - Collector's Edition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A journey across America in a cozy motorhome. Relaxing mini-games, hidden object scenes, collectible baseball caps, and a Polaroid travel album make every stop unique and memorable.",
           "source": "igdb",
           "manual": false
         },
@@ -174,10 +291,40 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 377672,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01002F5026EFC000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coccqz.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1993,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 37475,
+          "reason": "2025"
+        },
+        {
+          "position": 2,
+          "gameId": 37677,
+          "reason": "2026"
+        },
+        {
+          "position": 3,
+          "gameId": 37251
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84377",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zill O'll",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Zill O'll",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Zill O'll is a nonlinear fantasy role-playing game set on the continent of Vyashion. Following the fall of Emperor Balor, a fragile peace settles over the land as a new threat begins to emerge with the awakening of the Dragon King. Players create their own protagonist and choose from different starting scenarios before setting out on an open-ended adventure. The game's free-scenario system allows events to unfold according to the player's actions and the passage of time, affecting relationships, the fate of major characters, political conflicts and the eventual ending. Combat is turn-based, while character development revolves around the game's Soul system.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,32 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 94007,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base del juego original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles y guardado de la época, sin mejoras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y cargas propias del PS1."
+            }
+          ],
+          "codes": [
+            "SLPM-86311",
+            "SLPM-86703"
+          ]
         },
         {
           "id": 84377,
@@ -56,7 +93,28 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 80486,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición ampliada con contenido extra respecto al original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ajustes y mejoras sobre el original."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la esencia con añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen y cargas que en PS1."
+            }
+          ]
         }
       ],
       "images": {
@@ -85,6 +143,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Zill O'll Infinite Plus is an enhanced portable edition of Zill O'll Infinite released for the PSP. In addition to carrying over the content of the PlayStation 2 version, it introduces a new starting scenario, more recruitable characters, additional story events and further character-specific routes. More than 120 new events were added, along with new scenarios and endings, bringing the total number of possible endings to 53. Several gameplay systems were also adjusted to make progression and repeated playthroughs more convenient.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -98,9 +162,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 94824,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-05410"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a9872cf0cfe8c78fbfd853363696c61b.png"
+      }
     },
     {
       "id": 39957,
@@ -124,6 +194,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Trinity: Souls of Zill O'll is an action fantasy role-playing video game set in part of the Zill O'll series. The game is a prequel, taking place five years before the events in Zill O'll.\nDownloadable content that included additional quests and alternate costumes for the main party was released only in Japan and was not translated for other regions.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -137,10 +213,44 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 7475,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01184",
+            "BLUS-30503"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0e348bf2ca5f7b252e1e4094cd865d1b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f71605bb9314f2099c9a95580c988038.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9fd3dc148733fd20d350ff5114d53c70.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1902,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25612,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 36100,
+          "reason": "2009"
+        },
+        {
+          "position": 3,
+          "gameId": 39957,
+          "reason": "2010"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

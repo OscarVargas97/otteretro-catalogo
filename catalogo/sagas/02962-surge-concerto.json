@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "38482",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ar nosurge: Ode to an Unborn Star",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ar nosurge: Ode to an Unborn Star",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Part of the Surge Concerto franchise, Ar Nosurge is an RPG that serves as a prequel to the Ar Tonelico game series. Series director Akira Tsuchiya continues his opus with a deep and robust world. A world where songs are magic, and emotions are strong enough to form bonds. Ar nosurge: Ode to an Unborn Star is a story of love, emotional bonds and the frailty of existence.\n\nAr Nosurge is a sci-fi, ‘7 Dimension’ RPG, that takes place in a world where music and song can create magic. It tells the compelling story of a civilization that lost their planet and has been roaming the edge of space for 2000 years in search of a new home. The game follows two sets of characters: Delta and Casty, whose goal is to protect humanity and save the world, and Ion & Earthes, who are trying to find Ion a way home to Earth. The player can interchange between both pairs and soon discover a way to combine their storylines and strengths to eventually solve the mystery that shrouds their ongoing struggle.",
           "source": "igdb",
           "manual": false
         },
@@ -72,7 +84,11 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 7273,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-02087",
+            "BLUS-31478"
+          ]
         },
         {
           "id": 95829,
@@ -90,7 +106,10 @@
           "igdbId": 91029,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2fax.jpg"
+      }
     },
     {
       "id": 40980,
@@ -102,6 +121,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "38485",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ciel Nosurge",
           "source": "igdb",
@@ -110,6 +135,12 @@
         {
           "field": "original_name",
           "value": "Ciel Nosurge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Set in a distant world on the verge of collapse, Ciel Nosurge follows the mysterious girl Ionasal as she attempts to recover her lost memories and communicate with a player from another dimension. Combining visual novel storytelling, life simulation elements and music-driven science fantasy worldbuilding, the game explores themes of connection, identity and reconstruction across worlds. Originally released episodically on PlayStation Vita, the story was expanded over multiple downloadable chapters and world packs.",
           "source": "igdb",
           "manual": false
         },
@@ -161,8 +192,31 @@
           "igdbId": 104966,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2xqa.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2803,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40980,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 40079,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

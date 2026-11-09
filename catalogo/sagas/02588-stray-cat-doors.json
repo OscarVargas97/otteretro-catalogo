@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "26396",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Stray Cat Doors",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Stray Cat Doors",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Let's escape from the door by exploring the world like a picture book.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2026,
           "igdbId": 95811,
           "steamAppId": 4474150,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón cómodo para los puzles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Ligero y estable."
+            }
+          ]
         },
         {
           "id": 26397,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 95811,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control táctil y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sin problemas."
+            }
+          ],
+          "codes": [
+            "01002D200CF50000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "36503",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Stray Cat Doors 2",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Stray Cat Doors 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An escape adventure game with a cumulative total of 1 million downloads worldwide The latest work from \"Stray Cat Doors\" is finally here!\n\nLet's travel again with a girl in a white cat hat.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +169,28 @@
           "year": 2022,
           "igdbId": 135435,
           "steamAppId": 2190190,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Ligero y estable."
+            }
+          ]
         },
         {
           "id": 36504,
@@ -108,7 +198,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 135435,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sin problemas."
+            }
+          ]
         }
       ],
       "images": {
@@ -137,6 +248,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A stage by stage puzzle adventure with a cute girl with cat-ear hats adventuring in people's dreams.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2024",
           "source": "igdb",
@@ -158,5 +275,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1715,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11198,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 14272,
+          "reason": "2020"
+        },
+        {
+          "position": 3,
+          "gameId": 28988,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

@@ -14,6 +14,110 @@
   ],
   "games": [
     {
+      "id": 5473,
+      "nameEs": "Pretty Rhythm: Rainbow Live Kira-kira My Design",
+      "originalName": "Pretty Rhythm: Rainbow Live Kira-kira My Design",
+      "year": 2013,
+      "igdbId": 177581,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "11461",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Pretty Rhythm: Rainbow Live Kira-kira My Design",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Pretty Rhythm: Rainbow Live Kira-kira My Design",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pretty Rhythm: Rainbow Live: Kira-kira My Design features the main female cast as playable characters along with a new character, Cosmo Hojo, as well as the female cast from Pretty Rhythm: Aurora Dream and Pretty Rhythm: Dear My Future. The limited edition of the game came with an exclusive Prism Stone featuring the Miracle Fantasy Rainbow Dress, which was usable on Pretty Rhythm arcade machines.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2013",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 10938,
+          "platform": "3ds",
+          "kind": "original",
+          "year": 2013,
+          "igdbId": 177581,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido de la primera edición."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Diseño y ritmo funcionales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento normal de 3DS."
+            }
+          ]
+        },
+        {
+          "id": 11461,
+          "platform": "3ds",
+          "kind": "original",
+          "year": 2015,
+          "igdbId": 177578,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Probablemente con más temas y piezas de diseño."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles, con ajustes posibles."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la base con novedades."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento similar en 3DS."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co40ou.jpg"
+      }
+    },
+    {
       "id": 14086,
       "nameEs": "PriPara: All Idol Perfect Stage",
       "originalName": "PriPara: All Idol Perfect Stage",
@@ -31,6 +135,12 @@
         {
           "field": "original_name",
           "value": "PriPara: All Idol Perfect Stage",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Idol Time PriPara revolves the story of Yui who lives in a town called Paparajuku. Her ultimate dream is to become an idol. However, such dream also made her realize that it is quite impossible for her to achieve. Then suddenly, the PriPara idol theme park will open in her town. And together with this, Yui’s idol, Laala, will also be there. This made Yui’s dream of becoming an idol even bigger. Unfortunately, due to some changes to the concepts and some system error, Laala is longer able to go to PriPara.",
           "source": "igdb",
           "manual": false
         },
@@ -58,5 +168,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2784,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5473,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 14086,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

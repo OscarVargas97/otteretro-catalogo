@@ -3,7 +3,7 @@
   "name": "Megami Tensei",
   "igdbKind": "franchise",
   "igdbId": 592,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -32,6 +32,18 @@
           "field": "original_name",
           "value": "Jack Bros.",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The portal between Earth and another mysterious dimension has opened, and the intrepid Jack Brothers have come through for an adventure in our world. Having lost track of time, they now have only one hour to return to their home or be banished forever. Help them battle hoards of loathsome enemies through six electrifying 3-D levels, each with many floors to explore and conquer. This is one phenomenal adventure you can't afford to miss!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El portal entre la Tierra y otra dimensión misteriosa se ha abierto, y los intrépidos hermanos Jack han llegado para una aventura en nuestro mundo. Tras perder la noción del tiempo, ahora solo tienen una hora para regresar a casa o quedar desterrados para siempre. Ayúdalos a combatir hordas de enemigos repugnantes a través de seis niveles 3D electrizantes, cada uno con muchos pisos por explorar y conquistar. ¡Es una aventura fenomenal que no te puedes perder!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -67,6 +79,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5527",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shin Megami Tensei",
           "source": "igdb",
@@ -76,6 +94,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shin Megami Tensei is a remaster of the original Super Famicom game with improved graphics and gameplay along with a new difficulty mode.\n\nThe gameplay uses first-person navigation of dungeons and turn-based battles against demons. The player can recruit demons as allies by talking to them rather than fighting them, and two to three demons can be fused to create new demons.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Shin Megami Tensei es una remasterización del juego original de Super Famicom, con gráficos y jugabilidad mejorados, además de un nuevo modo de dificultad.\n\nLa jugabilidad usa navegación en primera persona por las mazmorras y combates por turnos contra demonios. El jugador puede reclutar demonios como aliados hablando con ellos en lugar de combatirlos, y se pueden fusionar dos o tres demonios para crear nuevos demonios.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -100,7 +130,10 @@
           "kind": "remaster",
           "year": 2001,
           "igdbId": 248790,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-03170"
+          ]
         },
         {
           "id": 5527,
@@ -116,7 +149,10 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 250196,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AAUJ"
+          ]
         },
         {
           "id": 15064,
@@ -153,9 +189,15 @@
       "originalName": "Shin Megami Tensei: Strange Journey",
       "year": 2009,
       "igdbId": 15467,
-      "popularity": 35,
-      "iconic": false,
+      "popularity": 36,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "7029",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Shin Megami Tensei: Strange Journey",
@@ -166,6 +208,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei: Strange Journey",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the near future, a mysterious, growing, black void appears at the Earth's southern pole. Unable to determine its cause and powerless to stop its deadly encroachment, humanity sends an elite team of explorers into the heart of the phenomenon, just as Strange Journey's look and feel represent a return to the heart of Shin Megami Tensei, bringing to mind the all-time classic Nocturne. With over 300 demons to bribe, coerce, and negotiate with to gain assistance in battle, Strange Journey is every bit the deep, rewarding RPG experience fans have come to expect from the SMT franchise, yet delivered with a fresh new sci-fi story that taps into mature themes of morality and introspection.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En un futuro cercano, aparece en el polo sur terrestre un misterioso vacío negro que crece. Incapaz de determinar su causa y sin poder para detener su avance mortal, la humanidad envía a un equipo élite de exploradores al corazón del fenómeno. El aspecto y la sensación de Strange Journey representan un regreso al corazón de Shin Megami Tensei, que recuerda al clásico eterno Nocturne. Con más de 300 demonios a los que sobornar, coaccionar y con quienes negociar para obtener ayuda en combate, Strange Journey es una experiencia de RPG tan profunda y gratificante como la que los fans esperan de la franquicia SMT, pero con una nueva historia de ciencia ficción que aborda temas maduros de moralidad e introspección.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -182,7 +236,32 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 15467,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mazmorras duras y sin ayudas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de DS."
+            }
+          ],
+          "codes": [
+            "BMTE",
+            "BMTJ"
+          ]
         },
         {
           "id": 7029,
@@ -190,7 +269,28 @@
           "kind": "remake",
           "year": 2017,
           "igdbId": 27959,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade una ruta, personajes y misiones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mapa mejorado y dificultad ajustable."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con mejoras."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución mayor y 3D."
+            }
+          ]
         }
       ],
       "images": {
@@ -206,7 +306,7 @@
       "year": 2013,
       "igdbId": 6886,
       "popularity": 85,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -218,6 +318,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei IV",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Building on the styles of ATLUS' Persona, Devil Summoner, and Devil Survivor titles, SMTIV is the first true successor to 2004's Shin Megami Tensei: Nocturne. The story of SMTIV revolves around the Samurai, the sacred protectors of the Eastern Kingdom of Mikado. As a newly appointed Samurai, players will struggle with factions that have nefarious designs on the world as they defend their home kingdom from a growing army of demons. Decisions players make throughout the course of the story will have lasting repercussions, as the fate of the world hangs in the balance.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Basándose en los estilos de los títulos Persona, Devil Summoner y Devil Survivor de ATLUS, SMTIV es el primer verdadero sucesor de Shin Megami Tensei: Nocturne (2004). La historia de SMTIV gira en torno a los samuráis, los sagrados protectores del Reino Oriental de Mikado. Como samuráis recién nombrados, los jugadores lucharán contra facciones con designios perversos sobre el mundo mientras defienden su reino de un ejército de demonios cada vez mayor. Las decisiones que tomen a lo largo de la historia tendrán repercusiones duraderas, ya que el destino del mundo pende de un hilo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -234,14 +346,35 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 6886,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AMXE",
+            "CTR-P-AMXJ",
+            "CTR-P-AMXZ"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/08bedd4580031e9633ef1ca96093868c.png",
         "hero": "https://cdn2.steamgriddb.com/hero/0aaf61723a352ba7ea1be4502df85765.png",
         "logo": "https://cdn2.steamgriddb.com/logo/7d37e3cbff8e2f569ee74d9393c5a4a1.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1047,
+          "platform": "3ds",
+          "project": "smt4-recomp",
+          "kind": "recomp",
+          "toolchain": "3dsrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Invictus-potens/smt4-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Azahar"
+        }
+      ]
     },
     {
       "id": 4379,
@@ -265,6 +398,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Shin Megami Tensei IV: Apocalypse is a post-apocalyptic role-playing video game developed and published by Atlus for the Nintendo 3DS. It is set in the same universe as Shin Megami Tensei IV and forms part of the Shin Megami Tensei series, the central series of the Megami Tensei franchise.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Shin Megami Tensei IV: Apocalypse es un videojuego de rol postapocalíptico desarrollado y publicado por Atlus para Nintendo 3DS. Se ambienta en el mismo universo que Shin Megami Tensei IV y forma parte de la serie Shin Megami Tensei, la serie principal de la franquicia Megami Tensei.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -278,7 +423,11 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 19329,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BG4E",
+            "CTR-P-BG4P"
+          ]
         }
       ],
       "images": {
@@ -297,6 +446,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10712",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Megami Tensei Gaiden: Last Bible II",
           "source": "igdb",
@@ -306,6 +461,18 @@
           "field": "original_name",
           "value": "Megami Tensei Gaiden: Last Bible II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Megami Tensei Gaiden: Last Bible II is a role-playing video game series developed by Multimedia Intelligence Transfer, Sega, and Menue, and published by Atlus and Sega for multiple platforms. Players explore the game world and fight monsters in menu-based battles; players can also attempt to recruit monsters to their party, and can fuse two allied monsters into a single new one to try to get stronger monsters.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Megami Tensei Gaiden: Last Bible II es una serie de videojuegos de rol desarrollada por Multimedia Intelligence Transfer, Sega y Menue, y publicada por Atlus y Sega para múltiples plataformas. Los jugadores exploran el mundo del juego y luchan contra monstruos en combates basados en menús; también pueden intentar reclutar monstruos para su grupo, y pueden fusionar dos monstruos aliados en uno nuevo para intentar obtener monstruos más fuertes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -355,6 +522,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10710",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Megami Tensei Gaiden: Last Bible",
           "source": "igdb",
@@ -364,6 +537,18 @@
           "field": "original_name",
           "value": "Megami Tensei Gaiden: Last Bible",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Megami Tensei Gaiden: Last Bible is a role-playing game for the Game Boy and the first entry in the Last Bible series, created as a spin-off of Megami Tensei. It follows a young seeker of the power known as Gaia who travels with two companions to investigate beasts that have begun appearing from the sky and attacking people.\n\nGameplay consists of exploring fields and towns, managing equipment and magic, and fighting command-based battles. The party can include the protagonist, two human companions, and up to three recruited beasts. During encounters, beasts can be negotiated with and recruited as allies, while recruited beasts can be fused to create new creatures. Human characters gain experience and levels, and the player can improve selected attributes as they progress.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Megami Tensei Gaiden: Last Bible es un videojuego de rol para Game Boy y la primera entrega de la serie Last Bible, creada como spin-off de Megami Tensei. Sigue a un joven buscador del poder conocido como Gaia, que viaja con dos compañeros para investigar las bestias que han empezado a aparecer desde el cielo y atacar a las personas.\n\nLa jugabilidad consiste en explorar campos y pueblos, gestionar el equipo y la magia, y combatir en batallas basadas en comandos. El grupo puede incluir al protagonista, dos compañeros humanos y hasta tres bestias reclutadas. Durante los encuentros, se puede negociar con las bestias y reclutarlas como aliadas, mientras que las bestias reclutadas pueden fusionarse para crear nuevas criaturas. Los personajes humanos ganan experiencia y niveles, y el jugador puede mejorar atributos seleccionados a medida que avanza.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -427,6 +612,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Once upon a time, there was a huge war between the humans and the demons. After prolonged battles, both sides came to an agreement and established peace. But now, things start changing. A demon cult is becoming popular, and demons no longer wish to live in peace with the humans. Only you, the Hero of the game (nameless), aided by the Heroine (also nameless) and other friends, is able to bring peace back to the planet.\n\nThe Heroine has a special ability: she can talk to the demons you meet in random battles and persuade them to join your party. You can store those demons, collect them, and summon them in battles. Demons are divided into various races and species. Otherwise, the game uses a standard turn-based combat with physical attacks and magic spells.\n\nThis is spin-off turn-based strategy game, based on the Megami Tensei Gaiden series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Hace mucho tiempo hubo una gran guerra entre los humanos y los demonios. Tras batallas prolongadas, ambos bandos llegaron a un acuerdo y establecieron la paz. Pero ahora las cosas empiezan a cambiar. Un culto demoníaco se está haciendo popular, y los demonios ya no desean vivir en paz con los humanos. Solo tú, el Héroe del juego (sin nombre), ayudado por la Heroína (también sin nombre) y otros amigos, puedes devolver la paz al planeta.\n\nLa Heroína tiene una habilidad especial: puede hablar con los demonios que encuentras en combates aleatorios y persuadirlos para que se unan a tu grupo. Puedes almacenar esos demonios, coleccionarlos e invocarlos en batalla. Los demonios se dividen en diversas razas y especies. Por lo demás, el juego usa un combate estándar por turnos con ataques físicos y hechizos mágicos.\n\nSe trata de un juego de estrategia por turnos derivado de la serie Megami Tensei Gaiden.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -444,7 +641,7 @@
         }
       ],
       "images": {
-        "cover": "https://cdn2.steamgriddb.com/grid/3ab7488eb36b7af176c755098a99278e.png",
+        "cover": "https://cdn2.steamgriddb.com/grid/6d9de8a97fb84537a236d95e8dfc4f70.png",
         "hero": "https://cdn2.steamgriddb.com/hero/f735bcca7ea8464fdb9b46a4f7383f63.png",
         "logo": "https://cdn2.steamgriddb.com/logo/778a547f86b9926eed381d68c9cbebdd.png"
       }
@@ -456,8 +653,14 @@
       "year": 1994,
       "igdbId": 23879,
       "popularity": 20,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "5580",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Shin Megami Tensei II",
@@ -468,6 +671,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fifty years have passed since the hero of Shin Megami Tensei followed the neutral path, defeated the leaders of Law and Chaos, and founded a state where followers of both ideologies could live freely. But his reign of freedom doesn't last long. The Messian faith gains power, expanding the Cathedral into a new enclosed environment named Tokyo Millennium. The Gaians rise up, but their rebellion is repressed by the Messians' elite warrior class, the Temple Knights. People flock into the encapsulated city, submitting themselves to the strict hierarchy imposed by the Messian Center, where only the privileged living in the Center district are safe from demonic assaults.\n\nA few years later, a retired arena fighter Okamoto rescues a man named Hawk, who was fighting for his life against a demon. He trains him to fight in the arena of the Valhalla district, hoping that he would win the tournament, which will grant them both citizenship in the Center district. When Hawk succeeds, he is brought before a Messian bishop, and learns the shocking truth about his own origins and the role he is supposed to play in the grand scheme of events. A new battle for a better future begins.\n\nShin Megami Tensei II retains all the gameplay features of the previous game. The player is able to summon demons, fuse them to create more powerful ones, make them participate in battles, talk to random enemies and receive information from them, etc. The combat is turn-based, and the player explores the complex, maze-like dungeons from a first-person perspective view. Like in the first game, the Law, Chaos, and Neutral alignments play an important role: during the course of the game, the player will have to make choices that influence the alignment of the protagonist, steering the storyline into different directions.\n\nNew features include a \"magic succession\" system, which allows demons to carry over their original magic spells when they are fused into new ones, a few additional spells and abilities, and the possibility to play at the casino and win unique items.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Han pasado cincuenta años desde que el héroe de Shin Megami Tensei siguió el camino neutral, derrotó a los líderes de la Ley y del Caos, y fundó un estado en el que los seguidores de ambas ideologías podían vivir libremente. Pero su reinado de libertad no dura mucho. La fe Messian gana poder y expande la Catedral hasta convertirla en un nuevo entorno cerrado llamado Tokyo Millennium. Los Gaians se levantan, pero su rebelión es reprimida por la clase guerrera de élite de los Messian, los Temple Knights. La gente acude en masa a la ciudad encapsulada, sometiéndose a la estricta jerarquía impuesta por el Centro Messian, donde solo los privilegiados que viven en el distrito Center están a salvo de los ataques demoníacos.\n\nUnos años después, un antiguo luchador de arena, Okamoto, rescata a un hombre llamado Hawk, que luchaba por su vida contra un demonio. Lo entrena para combatir en la arena del distrito Valhalla, con la esperanza de que gane el torneo, lo que les concederá a ambos la ciudadanía en el distrito Center. Cuando Hawk gana, lo llevan ante un obispo Messian, y descubre la impactante verdad sobre sus propios orígenes y el papel que se supone que debe desempeñar en el gran esquema de los acontecimientos. Comienza una nueva batalla por un futuro mejor.\n\nShin Megami Tensei II conserva todas las características de jugabilidad del juego anterior. El jugador puede invocar demonios, fusionarlos para crear otros más poderosos, hacer que participen en batallas, hablar con enemigos aleatorios y recibir información de ellos, etc. El combate es por turnos, y el jugador explora mazmorras complejas y laberínticas desde una perspectiva en primera persona. Como en el primer juego, los alineamientos Ley, Caos y Neutral desempeñan un papel importante: a lo largo del juego, el jugador deberá tomar decisiones que influyen en el alineamiento del protagonista, dirigiendo la historia por distintos caminos.\n\nLas novedades incluyen un sistema de «sucesión mágica», que permite a los demonios conservar sus hechizos originales cuando se fusionan en otros nuevos, además de algunos hechizos y habilidades adicionales, y la posibilidad de jugar en el casino y ganar objetos únicos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -492,7 +707,10 @@
           "kind": "remaster",
           "year": 2002,
           "igdbId": 252800,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-86924"
+          ]
         },
         {
           "id": 5580,
@@ -508,7 +726,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 253144,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "A5TJ"
+          ]
         },
         {
           "id": 15091,
@@ -563,6 +784,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Last Bible III is the final entry in the Last Bible trilogy. Unlike the first two games, this game was not released on a portable system.\nThe game follows Ciel, a boy who leaves his home town to travel to go on a journey.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Last Bible III es la última entrega de la trilogía Last Bible. A diferencia de los dos primeros juegos, este no se lanzó en una consola portátil.\nEl juego sigue a Ciel, un chico que abandona su pueblo natal para emprender un viaje.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -592,8 +825,14 @@
       "year": 2021,
       "igdbId": 26775,
       "popularity": 51,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "73845",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Shin Megami Tensei V",
@@ -604,6 +843,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei V",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shin Megami Tensei V, the fifth numbered game of the Shin Megami Tensei series, is a role-playing video game set in modern-day Tokyo. It will feature returning gameplay elements from previous games, such as the ability to fuse demons, along with new mechanics.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Shin Megami Tensei V, el quinto juego numerado de la serie Shin Megami Tensei, es un videojuego de rol ambientado en el Tokio actual. Incluirá elementos de jugabilidad de entregas anteriores, como la posibilidad de fusionar demonios, junto con mecánicas nuevas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -620,7 +871,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 26775,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base sin la segunda historia."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin mejoras posteriores."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución dinámica y caídas de cuadros."
+            }
+          ]
         },
         {
           "id": 73843,
@@ -628,7 +900,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 287850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido extra y nueva historia."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejoras de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia la estructura original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable con buena resolución."
+            }
+          ]
         },
         {
           "id": 73844,
@@ -636,7 +929,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 287850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido extra y nueva historia."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejoras de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia la estructura original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable con buena resolución."
+            }
+          ]
         },
         {
           "id": 73845,
@@ -645,7 +959,28 @@
           "year": 2024,
           "igdbId": 287850,
           "steamAppId": 1875830,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido extra y nueva historia."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejoras de calidad de vida y ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia la estructura original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y cuadros altos."
+            }
+          ]
         },
         {
           "id": 73846,
@@ -653,7 +988,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 287850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido extra y nueva historia."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejoras de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia la estructura original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Muy estable y nítido."
+            }
+          ]
         },
         {
           "id": 73847,
@@ -661,7 +1017,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 287850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido extra y nueva historia."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejoras de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia la estructura original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable con buena resolución."
+            }
+          ]
         },
         {
           "id": 73848,
@@ -669,7 +1046,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 287850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye contenido extra y nueva historia."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejoras de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia la estructura original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mejor que 2021 pero limitado."
+            }
+          ]
         }
       ],
       "images": {
@@ -688,6 +1086,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50427",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shin Megami Tensei if...",
           "source": "igdb",
@@ -697,6 +1101,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei if...",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shin Megami Tensei If... is a RPG that was developed as a change from previous Shin Megami Tensei titles, focusing on a small-scale environment and threat rather than a large-scale environment as in previous titles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Shin Megami Tensei If... es un RPG que se desarrolló como un cambio respecto a los títulos anteriores de Shin Megami Tensei, centrándose en un entorno y una amenaza de pequeña escala, en lugar de un entorno a gran escala como en los títulos anteriores.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -713,7 +1129,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 79726,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo, en japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido en Consola Virtual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 50858,
@@ -721,7 +1158,28 @@
           "kind": "remake",
           "year": 2010,
           "igdbId": 270672,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo, en japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación PS1."
+            }
+          ]
         },
         {
           "id": 50859,
@@ -729,7 +1187,32 @@
           "kind": "remake",
           "year": 2002,
           "igdbId": 270672,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo, en japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Combate antiguo, guardado en tarjeta."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS1."
+            }
+          ],
+          "codes": [
+            "SLPM-87153",
+            "SLPM-87154"
+          ]
         },
         {
           "id": 50860,
@@ -737,7 +1220,28 @@
           "kind": "remake",
           "year": 2010,
           "igdbId": 270672,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo, en japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación PS1."
+            }
+          ]
         }
       ],
       "images": {
@@ -756,6 +1260,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60062",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Megami Tensei Gaiden: Shinyaku Last Bible",
           "source": "igdb",
@@ -765,6 +1275,18 @@
           "field": "original_name",
           "value": "Megami Tensei Gaiden: Shinyaku Last Bible",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Megami Tensei Gaiden: Shinyaku Last Bible New Testament is a spin off Megami Tensei title for Legacy Mobile devices.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Megami Tensei Gaiden: Shinyaku Last Bible New Testament es un título spin-off de la serie Megami Tensei para dispositivos móviles Legacy.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -808,6 +1330,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60069",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Megami Tensei Gaiden: Shinyaku Last Bible II - Hajimari no Fukuin",
           "source": "igdb",
@@ -817,6 +1345,18 @@
           "field": "original_name",
           "value": "Megami Tensei Gaiden: Shinyaku Last Bible II - Hajimari no Fukuin",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Boy, be the light that illuminates the world. The gospel of the beginning rings out in the land covered with despair.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Muchacho, sé la luz que ilumina el mundo. El evangelio del comienzo resuena en la tierra cubierta de desesperación.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -860,6 +1400,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "67205",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Megami Tensei Gaiden: Shinyaku Last Bible III - Mugen no Eiyuu",
           "source": "igdb",
@@ -869,6 +1415,18 @@
           "field": "original_name",
           "value": "Megami Tensei Gaiden: Shinyaku Last Bible III - Mugen no Eiyuu",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Megami Tensei Gaiden: Shinyaku Last Bible III: Mugen no Eiyuu is a Japan exclusive RPG developed by Atlus and Menue for mobile phones.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Megami Tensei Gaiden: Shinyaku Last Bible III: Mugen no Eiyuu es un RPG exclusivo de Japón desarrollado por Atlus y Menue para teléfonos móviles.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -912,6 +1470,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81027",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shin Megami Tensei: 20XX",
           "source": "igdb",
@@ -921,6 +1485,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei: 20XX",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shin Megami Tensei: 20XX is a Japanese cellphone game, created as a prequel to Shin Megami Tensei II, showing what happened in Valhalla before Aleph was born.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Shin Megami Tensei: 20XX es un juego japonés para teléfonos móviles, creado como precuela de Shin Megami Tensei II, que muestra lo ocurrido en Valhalla antes del nacimiento de Aleph.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -963,6 +1539,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81048",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shin Megami Tensei: Tokyo Requiem",
           "source": "igdb",
@@ -972,6 +1554,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei: Tokyo Requiem",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shin Megami Tensei: Tokyo Requiem is an RPG developed by Atlus and Bbmf for mobile phones.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Shin Megami Tensei: Tokyo Requiem es un RPG desarrollado por Atlus y Bbmf para teléfonos móviles.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1021,8 +1615,14 @@
       "year": 2003,
       "igdbId": 336392,
       "popularity": 0,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "36742",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Shin Megami Tensei III: Nocturne",
@@ -1033,6 +1633,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei III: Nocturne",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Shin Megami Tensei III: Nocturne, the player takes on the role of a young boy who is caught up in The Conception while visiting his sick teacher, Yuko Takao, with his two classmates Chiaki Hayasaka and Isamu Nitta. The young boy is transformed into a demon known as the Demi-fiend and he must survive in the newly created Vortex World with the powers granted to him through Magatama.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En Shin Megami Tensei III: Nocturne, el jugador asume el papel de un niño pequeño que queda atrapado en The Conception mientras visita a su maestro enfermo, Yuko Takao, junto con sus dos compañeros de clase, Chiaki Hayasaka e Isamu Nitta. El niño se transforma en un demonio conocido como Demi-fiend y debe sobrevivir en el recién creado Vortex World con los poderes que le otorga Magatama.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1133,6 +1745,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87492",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shin Megami Tensei: Devil Summoner",
           "source": "igdb",
@@ -1142,6 +1760,18 @@
           "field": "original_name",
           "value": "Shin Megami Tensei: Devil Summoner",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is the original 1995 Devil Summoner game on the Sega Saturn and was released only in Japan. It was later ported to PSP in 2005.\n\nAbandoning the post-apocalyptic themes of the original series, the story takes place in modern Japan. The player character is an unnamed college student who is attacked by demons along with his girlfriend; they are saved by the timely appearance of a suave demon-hunter named Kyouji. Shortly thereafter, Kyouji is found dead under suspicious circumstances. The protagonist is then trapped inside of a warehouse and murdered by a deranged killer named Sid. Rather than stay dead, the player finds himself in the reanimated body of the slain Kyouji, and escapes from the morgue. With the help of Kyouji's voice, which guides the player from inside his head, the main character joins up with Kyouji's female partner Rei in order to save the life of his girlfriend, who is still in danger.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Esta es la versión original de Devil Summoner de 1995 para Sega Saturn, que se lanzó solo en Japón. Posteriormente fue adaptada a PSP en 2005.\n\nAbandonando los temas postapocalípticos de la serie original, la historia transcurre en el Japón moderno. El protagonista es un estudiante universitario sin nombre que es atacado por demonios junto con su novia; los salva la oportuna aparición de un apuesto cazador de demonios llamado Kyouji. Poco después, Kyouji aparece muerto en circunstancias sospechosas. El protagonista queda entonces atrapado en un almacén y asesinado por un asesino desquiciado llamado Sid. En lugar de quedarse muerto, el jugador se encuentra en el cuerpo reanimado de Kyouji y escapa de la morgue. Con la ayuda de la voz de Kyouji, que lo guía desde dentro de su cabeza, el personaje principal se une a la compañera de Kyouji, Rei, para salvar la vida de su novia, que sigue en peligro.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1158,7 +1788,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 23088,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cómodo en pantalla grande."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación con escalado simple."
+            }
+          ]
         },
         {
           "id": 87492,
@@ -1166,9 +1817,40 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 357453,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien."
+            }
+          ],
+          "codes": [
+            "UCAS-40047",
+            "ULJM-05053",
+            "ULJM-05237"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/93ca3433312d4278349715d4b0bf3ba1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9b01ea73aa4de36440a527d52e63870a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/0a6ba2015b149d525d80696217b5d2af.png"
+      }
     },
     {
       "id": 48103,
@@ -1192,6 +1874,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Shin Megami Tensei: Nine was published by Atlus and released on Xbox, exclusively in Japan, in 2002.\n\nForming part of the Megami Tensei series, Nine takes place in the period of time between Shin Megami Tensei and its sequel, with the survivors of Tokyo's destruction sheltering in underground bunkers. Taking on the role of a debugger, the player navigates the Idea Space virtual world set up by the survivors of Tokyo's destruction, which has come under attack by demonic beings called \"noise\". The gameplay has the player navigating a customized avatar in third-person through the virtual world of Tokyo, battling enemies using a real-time command-based battle system. Despite its title, it is the eighth game in the Megami Tensei series. The game's title instead refers to the number of possible moral alignments available to players.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Shin Megami Tensei: Nine fue publicado por Atlus y lanzado en Xbox, exclusivamente en Japón, en 2002.\n\nComo parte de la serie Megami Tensei, Nine transcurre en el periodo entre Shin Megami Tensei y su secuela, con los supervivientes de la destrucción de Tokio refugiados en búnkeres subterráneos. El jugador asume el papel de un depurador (debugger) y navega por Idea Space, el mundo virtual creado por los supervivientes de la destrucción de Tokio, que ha sido atacado por seres demoníacos llamados «ruido» (noise). La jugabilidad consiste en manejar un avatar personalizado en tercera persona a través del mundo virtual de Tokio, combatiendo a los enemigos mediante un sistema de batalla en tiempo real basado en comandos. A pesar de su título, es el octavo juego de la serie Megami Tensei. El título del juego se refiere, en cambio, al número de alineamientos morales posibles para los jugadores.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -1207,8 +1901,226 @@
           "igdbId": 6050,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a91efbbeb8cc9eaaa564efdcabd9aeb0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/899c1c8a781f99a484216fa7c9addd7f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/55d9057dcb2bed6c5984ce33d52dc925.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 243,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5894,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 7917,
+          "reason": "1994"
+        },
+        {
+          "position": 3,
+          "gameId": 20439,
+          "reason": "1994"
+        },
+        {
+          "position": 4,
+          "gameId": 961,
+          "reason": "1995"
+        },
+        {
+          "position": 5,
+          "gameId": 6211,
+          "reason": "1995"
+        },
+        {
+          "position": 6,
+          "gameId": 7920,
+          "reason": "1995"
+        },
+        {
+          "position": 7,
+          "gameId": 36103,
+          "reason": "1995"
+        },
+        {
+          "position": 8,
+          "gameId": 5336,
+          "reason": "1999"
+        },
+        {
+          "position": 9,
+          "gameId": 2861,
+          "reason": "2001"
+        },
+        {
+          "position": 10,
+          "gameId": 48103,
+          "reason": "2002"
+        },
+        {
+          "position": 11,
+          "gameId": 32860,
+          "reason": "2003"
+        },
+        {
+          "position": 12,
+          "gameId": 31972,
+          "reason": "2004"
+        },
+        {
+          "position": 13,
+          "gameId": 23314,
+          "reason": "2007"
+        },
+        {
+          "position": 14,
+          "gameId": 31973,
+          "reason": "2007"
+        },
+        {
+          "position": 15,
+          "gameId": 23317,
+          "reason": "2008"
+        },
+        {
+          "position": 16,
+          "gameId": 3393,
+          "reason": "2009"
+        },
+        {
+          "position": 17,
+          "gameId": 26793,
+          "reason": "2010"
+        },
+        {
+          "position": 18,
+          "gameId": 4248,
+          "reason": "2013"
+        },
+        {
+          "position": 19,
+          "gameId": 4379,
+          "reason": "2016"
+        },
+        {
+          "position": 20,
+          "gameId": 9744,
+          "reason": "2021"
+        }
+      ]
+    },
+    {
+      "id": 3721,
+      "kind": "story",
+      "rationale": "Megami Tensei no tiene una cronología única: cada subserie y juego tiene su propio mundo. Se repite el orden de lanzamiento con los juegos principales.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5894,
+          "reason": "Inicio de la rama Last Bible."
+        },
+        {
+          "position": 2,
+          "gameId": 7917,
+          "reason": "Secuela directa de la línea SMT clásica."
+        },
+        {
+          "position": 3,
+          "gameId": 20439,
+          "reason": "Spin-off de instituto."
+        },
+        {
+          "position": 4,
+          "gameId": 36103,
+          "reason": "Inicio de Devil Summoner."
+        },
+        {
+          "position": 5,
+          "gameId": 5336,
+          "reason": "Segunda Last Bible."
+        },
+        {
+          "position": 6,
+          "gameId": 2861,
+          "reason": "Primer SMT."
+        },
+        {
+          "position": 7,
+          "gameId": 32860,
+          "reason": "SMT III Nocturne."
+        },
+        {
+          "position": 8,
+          "gameId": 3393,
+          "reason": "Strange Journey."
+        },
+        {
+          "position": 9,
+          "gameId": 4248,
+          "reason": "SMT IV."
+        },
+        {
+          "position": 10,
+          "gameId": 4379,
+          "reason": "Continuación de SMT IV."
+        },
+        {
+          "position": 11,
+          "gameId": 9744,
+          "reason": "SMT V."
+        }
+      ]
+    },
+    {
+      "id": 3722,
+      "kind": "community",
+      "rationale": "La comunidad suele empezar por Nocturne o SMT V. Esta ruta va de lo más accesible a lo más exigente y se salta spin-offs y juegos antiguos.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32860,
+          "recommendedVersionId": 36743,
+          "reason": "Punto de entrada clásico; el remaster HD mejora la calidad de vida."
+        },
+        {
+          "position": 2,
+          "gameId": 3393,
+          "recommendedVersionId": 7029,
+          "reason": "Se recomienda la versión Redux de 3DS, más pulida que la de DS."
+        },
+        {
+          "position": 3,
+          "gameId": 4248,
+          "recommendedVersionId": 8401,
+          "reason": "Más accesible; sirve de base para Apocalypse."
+        },
+        {
+          "position": 4,
+          "gameId": 4379,
+          "recommendedVersionId": 8747,
+          "reason": "Continuación directa de SMT IV."
+        },
+        {
+          "position": 5,
+          "gameId": 9744,
+          "recommendedVersionId": 21575,
+          "reason": "Entrega moderna; también es buen primer juego si prefieres empezar por ella."
+        }
+      ]
+    }
+  ]
 }

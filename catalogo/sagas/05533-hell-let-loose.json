@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110082",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hell Let Loose",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Hell Let Loose",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fight in the most iconic battles of the Second World War, including El Alamein, Stalingrad, Omaha Beach, and Foy! This is combat at a whole new scale.. with lumbering tanks dominating the battlefield, and crucial supply chains fuelling the frontlines, you are a cog in the machine of colossal combined arms warfare. Hell Let Loose puts you in the chaos of war, complete with deep player-controlled vehicles, a dynamically evolving front line, and crucial unit-focused gameplay that commands the tide of battle.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 32365,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, con actualizaciones algo posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando adaptado, menos preciso al apuntar."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con ajustes para consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fps limitados frente a PC."
+            }
+          ]
         },
         {
           "id": 110082,
@@ -57,7 +90,28 @@
           "year": 2019,
           "igdbId": 32365,
           "steamAppId": 686810,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todo el contenido y actualizaciones, primero en llegar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado dan precisión y mejor comunicación."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fps configurables."
+            }
+          ]
         },
         {
           "id": 110083,
@@ -65,9 +119,35 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 32365,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, con actualizaciones algo posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando adaptado, menos preciso al apuntar."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con ajustes para consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fps limitados frente a PC."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/bf5415d7a2eb32071c00310c1776f519.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a55703897794aad1d95721677a93c826.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/8efd459b1ae6784271ee710598a488cd.png"
+      }
     },
     {
       "id": 47595,
@@ -79,6 +159,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112990",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hell Let Loose: Vietnam",
           "source": "igdb",
@@ -87,6 +173,12 @@
         {
           "field": "original_name",
           "value": "Hell Let Loose: Vietnam",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Step into the explosive fury of war with Hell Let Loose: Vietnam. Play a decisive role in one of the most iconic conflicts in history with expansive 50v50 player battles, where teamwork, tactics and an arsenal of destructive weapons combine to shape the battlefield in your favour.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +215,33 @@
           "igdbId": 362063,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/987e6c2c82acf33d7724a9c305ee79a8.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8a3317644a5aa3ec092d2a794b84e3cf.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b05b02309da2f4c4aed342d1bad07a65.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3474,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46528,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 47595,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

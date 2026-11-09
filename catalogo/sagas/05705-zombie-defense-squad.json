@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Zombie Defense Squad is a first-person shooter in which the player has to defend a small town from zombie waves. To win a round, a certain amount of zombies have to eradicated from the map. Each killed zombie is rewarded with experience points (which leads to level-ups and automatically assigned bonuses like faster reloads or higher walking speed) and money. The latter is used between rounds to buy better weapons and ammo in the store. Each round adds zombies to the wave.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 59550,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/iajstp4of5cs9v47gvcu.jpg"
+      }
     },
     {
       "id": 48910,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The follow-up to the original Zombie Defense Squad.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 59549,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cjvp4dgrannszncbp8jb.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3512,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48886,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 48910,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Join Jo on the world's weirdest summer vacation. Jo is into Kendo, Japanese fencing, so her parents sent her to Japan to study under Osaki sensei. Osaki is the greatest sword master of all time, but he looks like a green haired cyberpunk. Just to crank up the strangeness Osaki gives you a talisman that transforms you into a seventies super hero. You've never seen action this crazy or fun. Kendo Rage is the rage.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -67,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61049",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Makeruna! Makendo 2: Kimero Yokai Souri",
           "source": "igdb",
@@ -75,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Makeruna! Makendo 2: Kimero Yokai Souri",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Makenko used to be a normal boy—until he was kidnapped by the brain monster Dr. Mud and transformed into a cyborg capable of destroying both the monster and human worlds! On his quest for vengeance, he is inadvertently joined by Makendo, a fellow monster hunter who would prefer not to be, and her little sister Hikari who would like nothing better! Dastardly demons and wacky monsters abound as the trio fight the bad guys to kick some monster butt, and get Makenko's body back!",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +110,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 38265,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, relanzamiento digital."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Permite trofeos y guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación con mejor imagen."
+            }
+          ]
         },
         {
           "id": 61050,
@@ -100,7 +139,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 38265,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control clásico, sin ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS1, con cargas."
+            }
+          ]
         },
         {
           "id": 61051,
@@ -108,7 +168,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 38265,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, relanzamiento digital."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable en pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -116,5 +197,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2073,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 156,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 24041,
+          "reason": "1995"
+        }
+      ]
+    }
+  ]
 }

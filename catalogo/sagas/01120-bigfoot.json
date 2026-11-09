@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6521",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bigfoot: Collision Course",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Bigfoot: Collision Course",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Since its inception, BIGFOOT has been the leader of the pack in innovation and development in the monster truck industry. Get ready for some mind blowing 4x4 car crushing action starring \"The Original Monster Truck: BIGFOOT!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 4714,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RVFE-USA",
+            "RVL-RVFE-USA-B0",
+            "RVL-RVFP-EUR-B0"
+          ]
         },
         {
           "id": 6521,
@@ -64,7 +81,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 4714,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CFXE",
+            "CVFP"
+          ]
         }
       ],
       "images": {
@@ -95,6 +116,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bigfoot is a monster-truck racing game developed by Beam Software Company for the Nintendo Entertainment System.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1990",
           "source": "igdb",
@@ -110,8 +137,32 @@
           "igdbId": 13398,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/62de215d5c2187f35089061565a0a7dc.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/361922255dd163c62e86f435c907bf2a.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2272,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42791,
+          "reason": "1990"
+        },
+        {
+          "position": 2,
+          "gameId": 3327,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

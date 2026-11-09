@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49078",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ski-Doo: Snowmobile Challenge",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ski-Doo: Snowmobile Challenge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ski-Doo Snowmobile Challenge is a snowmobile racing game and a follow up to the PlayStation 2 game Ski-Doo Snow X Racing. The game is similar to its predecessor but has a larger number of tracks, with 25 different events taking place in five different countries: Canada, Russia, Sweden, USA and Norway. There are four different types of events: cross country, snowcross, hill cross and freestyle.\n\nLike other extreme sports games doing tricks is a central part of the game.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 5158,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01486",
+            "BLUS-30272"
+          ]
         },
         {
           "id": 49079,
@@ -56,7 +72,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 5158,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R87E-USA-B0"
+          ]
         },
         {
           "id": 49080,
@@ -95,6 +114,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ski-Doo Snow X Racing is a snowmobile racing game featuring authentic Ski-Doo machines across 18 tracks in Canada, Russia, Sweden, and the USA. Perform trick moves to earn speed boosts, customize your snowmobile with parts and decals, and compete in career mode or multiplayer races against friends.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -108,7 +133,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 21419,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-21591",
+            "SLUS-21591F"
+          ]
         }
       ],
       "images": {
@@ -116,5 +145,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2956,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33495,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 19711,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

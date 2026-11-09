@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22004",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Men of Yoshiwara: Kikuya",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Men of Yoshiwara: Kikuya",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"The Men of Yoshiwara\" is a popular romance game for women.\nAt the end, to whom is it that you will be talking of love?",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2015,
           "igdbId": 34964,
           "steamAppId": 381100,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Historia completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado funcionan bien."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sin problemas, sin ventajas notables."
+            }
+          ]
         },
         {
           "id": 22004,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 34964,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Historia completa, igual que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil y con pantalla táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable para una novela visual."
+            }
+          ],
+          "codes": [
+            "0100E95006B30000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22145",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Men of Yoshiwara: Ohgiya",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "The Men of Yoshiwara: Ohgiya",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"The Men of Yoshiwara: Ohgiya\" is a romance game for women, with the famous Yoshiwara pleasure districts as the setting -- but with the roles of men and women reversed!",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +169,28 @@
           "year": 2016,
           "igdbId": 33398,
           "steamAppId": 447200,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Historia completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado funcionan bien."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sin problemas, sin ventajas notables."
+            }
+          ]
         },
         {
           "id": 22145,
@@ -108,7 +198,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 33398,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Historia completa, igual que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil y con pantalla táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable para una novela visual."
+            }
+          ],
+          "codes": [
+            "0100F4E006B32000"
+          ]
         }
       ],
       "images": {
@@ -117,5 +231,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2630,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9858,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 9903,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

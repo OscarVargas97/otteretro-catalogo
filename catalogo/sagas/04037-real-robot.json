@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62909",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Real Robots Final Attack",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Real Robots Final Attack",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A mecha combat game created by the makers of the Super Robot Wars series. This game features machines from various anime.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 68026,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01125"
+          ]
         }
       ],
       "images": {
@@ -85,6 +100,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A Banpresto published mech based action game released exclusively in Japan for the PlayStation 2.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -98,7 +119,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 59332,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-20072"
+          ]
         }
       ],
       "images": {
@@ -106,5 +130,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3102,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25036,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 33590,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

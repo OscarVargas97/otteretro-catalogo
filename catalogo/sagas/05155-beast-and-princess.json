@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Released as Moujuu-tachi to Ohime-sama in Japan for Vita. In English it was Included in the \"Story Jar\" app by NTT Solmare.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 136469,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co60pl.jpg"
+      }
     },
     {
       "id": 41495,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Sequel to Beast and Princess.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 136470,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5512.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3380,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41455,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 41495,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

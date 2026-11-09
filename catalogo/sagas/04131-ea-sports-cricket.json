@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "64042",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cricket 2000",
           "source": "igdb",
@@ -56,7 +62,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 79891,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02495"
+          ]
         }
       ],
       "images": {
@@ -73,6 +82,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81801",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cricket 2005",
           "source": "igdb",
@@ -81,6 +96,12 @@
         {
           "field": "original_name",
           "value": "Cricket 2005",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game was released in three different region-based covers. Adam Gilchrist appeared on the Australian cover, Daniel Vettori on the New Zealand cover and Andrew Flintoff on the English cover. It was the last game to have all real player names.",
           "source": "igdb",
           "manual": false
         },
@@ -114,7 +135,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 5790,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53342"
+          ]
         }
       ],
       "images": {
@@ -132,6 +156,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82496",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cricket 07",
           "source": "igdb",
@@ -140,6 +170,12 @@
         {
           "field": "original_name",
           "value": "Cricket 07",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Cricket 07 is a cricket game from EA Sports and developed by HB Studios.It features a number of game types, including limited overs matches (50, 20, 10 or 5 overs), 4-day first-class matches and full-length test matches.You may select different pitches and different weather conditions in different venues.",
           "source": "igdb",
           "manual": false
         },
@@ -165,7 +201,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 10619,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54396",
+            "SLES-54396/ANZ"
+          ]
         }
       ],
       "images": {
@@ -183,6 +223,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "84501",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Cricket 2002",
@@ -217,9 +263,15 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 92314,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50424"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobqcp.jpg"
+      }
     },
     {
       "id": 34451,
@@ -231,6 +283,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84586",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cricket 2004",
           "source": "igdb",
@@ -239,6 +297,12 @@
         {
           "field": "original_name",
           "value": "Cricket 2004",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Cricket 2004 is based on the sport of Cricket, developed by HB Studios for the EA Sports catalog. It features full day-night matches, all new weather effects and pitch types.\n\nThe game contains the licenses of all the international teams registered to the International Cricket Council for the year 2003, with the official Cricket 2003 World Cup fully playable along with many more tournaments. Domestic Teams for England and Australian leagues are fully licensed.",
           "source": "igdb",
           "manual": false
         },
@@ -264,10 +328,53 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 94521,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52123"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/52a92d460cab1d98da714c37231de52f.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ddd65013f9f3507850f6bd4b5a68f901.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/8910f41d3f22b34450934ea4c13eacf5.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1035,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25686,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 34379,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 34451,
+          "reason": "2004"
+        },
+        {
+          "position": 4,
+          "gameId": 32702,
+          "reason": "2005"
+        },
+        {
+          "position": 5,
+          "gameId": 33069,
+          "reason": "2006"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

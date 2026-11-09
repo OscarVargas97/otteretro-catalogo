@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "18342",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ms. Splosion Man",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ms. Splosion Man",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You got a problem? Yo, she’ll splode it. At the Big Science after-party celebrating the capture of Splosion Man, a spill of champagne shorts out the safety protocols on the splosionatrix and from it emerges Ms. Splosion Man. The latest creation from Twisted Pixel Games, the creators of Splosion Man, The Maw, and Comic Jumper, Ms. Splosion man comes packed with fifty levels of single player and a separate fifty level co-op multiplayer campaign.\n\nExpanded map features, tons of unlockables, ghost replays, and countless other improvements make this the definitive edition for any splosion connoisseur.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2013,
           "igdbId": 15140,
           "steamAppId": 105420,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control preciso con mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 18343,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 15140,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control bueno con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "720p estable."
+            }
+          ]
         },
         {
           "id": 18344,
@@ -65,7 +119,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 15140,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en 1080p."
+            }
+          ],
+          "codes": [
+            "01005EF00B4BC000"
+          ]
         }
       ],
       "images": {
@@ -96,6 +174,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Unlock Splosion Man, one of the most awesome games of all time. The full version of Splosion Man includes an unlockable premium dashboard theme, free gamerpics, and even avatar accessories! You’ve sploded the rest, now splode the best. Splosion Man has a fifty level single-player campaign and a separate fifty level multiplayer cooperative campaign.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -111,8 +195,33 @@
           "igdbId": 8354,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ac37107a0d1cfa757c863143b080dcb7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5c1e4de49d8575440b98077731e7a25f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b7f0b1c1761095727bb5513df24a3302.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2557,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48385,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 8886,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

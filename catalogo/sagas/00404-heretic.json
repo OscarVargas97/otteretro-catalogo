@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2866",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hexen: Beyond Heretic",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Hexen: Beyond Heretic",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "While you were battling the evil forces of D'Sparil, the other Serpent Riders were busy sowing the seeds of destruction in other dimensions. One such dimension is the decaying world where Hexen takes place. A world littered with the mangled corpses of nonbelievers and inhabited by the undead followers that executed them. Only three humans; a warrior, a mage and a cleric; have escaped the leaders' vicious spell. Now these brave souls have sworn to crush the evil regime that threatens to destroy the world forever. Separated upon entering the mystical portal, the three are forced to attempt on their own what they had hoped to do together: find Korax's stronghold, destroy him and restore order in the physical world.\n\nBecome one of 3 heroes. Wield superhuman powers and lethal weapons.\nWalk. Run. Fly. Look all around. Inflict serious pain.\nPillage your way through earthquakes, crumbling bridges and fog.\nTrack down powerful artifacts and cast wicked spells.\nFour sick individuals can wreak havoc via network, two by modem.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 93643,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00972"
+          ]
         },
         {
           "id": 2643,
@@ -148,6 +163,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "88963",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Heretic: Shadow of the Serpent Riders",
           "source": "igdb",
@@ -215,7 +236,10 @@
           "igdbId": 360246,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coa8z3.jpg"
+      }
     },
     {
       "id": 43687,
@@ -226,6 +250,12 @@
       "popularity": 98,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "103680",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Heretic",
@@ -252,7 +282,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 6362,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funcional, con configuración manual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Puede requerir ajustes para sistemas modernos."
+            }
+          ]
         },
         {
           "id": 103680,
@@ -260,10 +311,61 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 166491,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, sin extras notables."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor compatibilidad y comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Más estable en Windows actuales."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c46269770def083aca28a5ad93d79e18.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/138aab288c363726990120413c62acee.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/388966d8d6ed9d50cf2224bb52890be8.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1436,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43687,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 1000,
+          "reason": "1995"
+        },
+        {
+          "position": 3,
+          "gameId": 36903,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

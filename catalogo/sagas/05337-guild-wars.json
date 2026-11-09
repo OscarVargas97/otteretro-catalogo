@@ -3,7 +3,7 @@
   "name": "Guild Wars",
   "igdbKind": "collection",
   "igdbId": 172,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,7 +20,7 @@
       "year": 2012,
       "igdbId": 1183,
       "popularity": 332,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -51,7 +51,12 @@
           "steamAppId": 1284210,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/bba9394daa8c273105960cfedd1d51d9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/eb3a18f3f8a41a3c913ab5bf1db59cd6.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/617c81b47e4758942128b6bd2319d9c1.png"
+      }
     },
     {
       "id": 43719,
@@ -60,8 +65,14 @@
       "year": 2005,
       "igdbId": 234,
       "popularity": 118,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "103696",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Guild Wars",
@@ -99,8 +110,75 @@
           "steamAppId": 29720,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/48e7d743564284618815d66684b12328.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/97fc91afc6acbb8df4563a90b8b1c4fa.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/5d188b044333b4c62676e0d4f53dade7.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3427,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43719,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 42973,
+          "reason": "2012"
+        }
+      ]
+    },
+    {
+      "id": 4003,
+      "kind": "story",
+      "rationale": "Guild Wars 2 transcurre unos 250 años después de Guild Wars, así que el orden de la historia coincide con el de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43719,
+          "recommendedVersionId": 103696,
+          "reason": "Es el inicio de la historia y del lore de Tyria. Se recomienda la versión remaster del catálogo por ser la edición actualizada."
+        },
+        {
+          "position": 2,
+          "gameId": 42973,
+          "recommendedVersionId": 102176,
+          "reason": "Continúa la historia siglos después, con consecuencias directas de los eventos del primero. Solo existe esta versión."
+        }
+      ]
+    },
+    {
+      "id": 4004,
+      "kind": "community",
+      "rationale": "Para quien empieza hoy, suele recomendarse Guild Wars 2 primero porque está más activo y es más accesible. Guild Wars queda como opción para quienes quieren el lore completo. Las fuentes no se pudieron consultar.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42973,
+          "recommendedVersionId": 102176,
+          "reason": "Es el juego con más jugadores y se entiende sin conocer el primero. Solo tiene una versión."
+        },
+        {
+          "position": 2,
+          "gameId": 43719,
+          "recommendedVersionId": 103696,
+          "reason": "Opcional, para profundizar en el lore y en una jugabilidad más clásica. Se elige el remaster por ser la edición actualizada."
+        }
+      ]
+    }
+  ]
 }

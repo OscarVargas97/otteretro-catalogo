@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95215",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Evil Within",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Evil Within",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Evil Within embodies the meaning of pure survival horror. Highly-crafted environments, horrifying anxiety, and an intricate story are combined to create an immersive world that will bring you to the height of tension. With limited resources at your disposal, you’ll fight for survival and experience profound fear in this perfect blend of horror and action.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,15 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 4786,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCAS-20333",
+            "BCKS-10276",
+            "BLES-01916",
+            "BLES-01916/E",
+            "BLES-02093",
+            "BLUS-31374"
+          ]
         },
         {
           "id": 95214,
@@ -83,7 +103,12 @@
           "igdbId": 4786,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4cc2dcaa39f04d7bd2cbf75976f4a6bb.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c652aee4df4084c621a094692ee6f6c9.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/58efaf15321bf4da55b2e668b73657c3.png"
+      }
     },
     {
       "id": 42330,
@@ -95,6 +120,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100994",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Evil Within 2",
           "source": "igdb",
@@ -103,6 +134,12 @@
         {
           "field": "original_name",
           "value": "The Evil Within 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Evil Within 2 is the latest evolution of survival horror. Detective Sebastian Castellanos has lost it all. But when given a chance to save his daughter, he must descend once more into the nightmarish world of STEM.\n\nHorrifying threats emerge from every corner as the world twists and warps around him. Will Sebastian face adversity head on with weapons and traps, or sneak through the shadows to survive.",
           "source": "igdb",
           "manual": false
         },
@@ -139,8 +176,33 @@
           "igdbId": 36813,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/231a171b205742febf998a329042ba9c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/77b1ae6be955316d7234f2bc5a409cdd.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/02d4e7c4ef4dd4117dd1340b1c61b975.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3318,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39823,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 42330,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

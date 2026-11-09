@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Spot the difference with an old favourite for lots of fun.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -54,7 +60,79 @@
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6ccz.jpg"
       }
+    },
+    {
+      "id": 20069,
+      "nameEs": "Heathcliff: The Fast and The Furriest",
+      "originalName": "Heathcliff: The Fast and The Furriest",
+      "year": 2010,
+      "igdbId": 24375,
+      "popularity": 1,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Heathcliff: The Fast and The Furriest",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Heathcliff: The Fast and The Furriest",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Alien cat-like creatures have spent an eternity travelling through space, looking for a new place to call home, and have landed just outside Heathcliff's hometown! They abduct Sonja, and demand Heathcliff win a racing challenge to get her back.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2010",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 49756,
+          "platform": "wii",
+          "kind": "original",
+          "year": 2010,
+          "igdbId": 24375,
+          "criteria": [],
+          "codes": [
+            "RVL-SH9E-USA-B0",
+            "RVL-SH9P-EUR-B0"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fffbf07fb6d16bfe6d9df466146ad511.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2910,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20069,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 18248,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

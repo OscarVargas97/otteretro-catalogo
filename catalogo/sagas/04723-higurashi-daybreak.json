@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86230",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Higurashi Daybreak Portable",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Higurashi Daybreak Portable",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Higurashi Daybreak Portable is a remake of Higurashi Daybreak featuring enhanced graphics and new content for the PlayStation Portable by Alchemist.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "remake",
           "year": 2008,
           "igdbId": 38477,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar con ajustes propios de la edición revisada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Jugabilidad equivalente, sin grandes mejoras de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Se aleja ligeramente del original por los cambios del remake."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mismo hardware PSP, rendimiento parecido."
+            }
+          ]
         },
         {
           "id": 86230,
@@ -56,9 +89,35 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 38478,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición más completa y definitiva del juego en PSP."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles y guardado correctos, sin mejoras especiales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de referencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable en PSP."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/15b2d0f57604f1c8ba4fc2abc8f42935.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0598165d8f7d7e39e209a26fe86d8d6a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/527ce3ffcf479afc3c8429636fc69187.png"
+      }
     }
   ],
   "routes": []

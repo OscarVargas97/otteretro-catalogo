@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "57907",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "D.C.4: Da Capo 4 - Fortunate Departures",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "D.C.4: Da Capo 4 - Fortunate Departures",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A little time has passed since the love story that changed the world…",
           "source": "igdb",
           "manual": false
         },
@@ -73,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "73014",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "D.C.5: Da Capo 5 Future Link",
           "source": "igdb",
@@ -96,9 +114,30 @@
           "id": 73013,
           "platform": "ps4",
           "kind": "original",
-          "year": 2024,
+          "year": 2027,
           "igdbId": 283543,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente, pero aún no disponible."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sin lanzar, no verificable."
+            }
+          ]
         },
         {
           "id": 73014,
@@ -106,15 +145,57 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 283543,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo disponible hoy."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón, guardado libre y salto de texto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y con buena resolución."
+            }
+          ]
         },
         {
           "id": 73015,
           "platform": "switch",
           "kind": "original",
-          "year": 2024,
+          "year": 2027,
           "igdbId": 283543,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente, pero aún no disponible."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Sin lanzar, no verificable."
+            }
+          ]
         }
       ],
       "images": {
@@ -131,6 +212,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87341",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "D.C. Girl's Symphony",
           "source": "igdb",
@@ -139,6 +226,12 @@
         {
           "field": "original_name",
           "value": "D.C. Girl's Symphony",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Da Capo: Girl's Symphony is otome game spin-off of Da Capo series.",
           "source": "igdb",
           "manual": false
         },
@@ -156,7 +249,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 72661,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión completa original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Novela visual cómoda con ratón y guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, resolución de la época."
+            }
+          ]
         },
         {
           "id": 87531,
@@ -164,10 +278,59 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 221833,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido adaptado a consola, con posibles recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil con guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de PSP."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5j9k.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1858,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36168,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 23073,
+          "reason": "2022"
+        },
+        {
+          "position": 3,
+          "gameId": 29275,
+          "reason": "2024"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

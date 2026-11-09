@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22080",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Astro Duel",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Astro Duel",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Astro Duel is a competitive local multiplayer party game. Rounds are quick and death is sudden. Blast your friends using asteroid-style ships. Run over their helpless bodies for good measure.",
           "source": "igdb",
           "manual": false
         },
@@ -82,6 +94,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "59743",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Astro Duel 2",
           "source": "igdb",
@@ -90,6 +108,12 @@
         {
           "field": "original_name",
           "value": "Astro Duel 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Astro Duel 2 is a sci-fi combat game combining top-down space dog fights with up-close platforming action. Whether versus or co-op, battle through space and on foot at the same time! Strike within the fully-destructible arenas or just nuke ‘em from orbit.",
           "source": "igdb",
           "manual": false
         },
@@ -116,7 +140,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 217131,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100C9B01A416000"
+          ]
         }
       ],
       "images": {
@@ -126,5 +153,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2632,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9883,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 23652,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76352",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Echo Generation",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Echo Generation",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Echo Generation is a turn-based adventure game that follows a gang of kids through otherworldly adventures as they investigate mysterious and supernatural events in their hometown that will change the course of their lives forever.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 135989,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido del lanzamiento original, sin extras posteriores conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles de mando sólidos y guardado normal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la experiencia original de 2021."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento en Xbox Series con carga rápida."
+            }
+          ]
         },
         {
           "id": 75137,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 135989,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido del lanzamiento original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Soporta teclado y mando sin problemas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Experiencia original de 2021."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución y fps flexibles según el equipo."
+            }
+          ]
         },
         {
           "id": 75138,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 135989,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido del lanzamiento original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Experiencia original de 2021."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más limitado en resolución y carga que en Series."
+            }
+          ]
         },
         {
           "id": 76352,
@@ -73,7 +148,28 @@
           "year": 2024,
           "igdbId": 304747,
           "steamAppId": 1072300,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo, con las actualizaciones posteriores incluidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado y mando con ajustes de calidad de vida."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Conserva fielmente la visión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y rendimiento escalable."
+            }
+          ]
         },
         {
           "id": 76353,
@@ -81,7 +177,31 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 304747,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo, equivalente al de PC 2024."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en modo portátil, aunque con menos opciones."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Conserva la visión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento más modestos en Switch."
+            }
+          ],
+          "codes": [
+            "01007BC018C1C000"
+          ]
         }
       ],
       "images": {
@@ -100,6 +220,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "118216",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Echo Generation 2",
           "source": "igdb",
@@ -108,6 +234,12 @@
         {
           "field": "original_name",
           "value": "Echo Generation 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Embark on a sci-fi deckbuilding RPG odyssey. Gather your crew, craft powerful decks, and battle across the stars to find your way home. Deal the cards. Defy the cosmos. Embrace the adventure.",
           "source": "igdb",
           "manual": false
         },
@@ -136,8 +268,31 @@
           "steamAppId": 1115990,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/ar5bcb.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3172,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 30081,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 50140,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

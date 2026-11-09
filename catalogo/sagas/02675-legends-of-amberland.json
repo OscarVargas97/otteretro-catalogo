@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "28873",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Legends of Amberland: The Forgotten Crown",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Legends of Amberland: The Forgotten Crown",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game is a classic western RPG inspired by the games from the 90s. Basically, it’s the kind of game I personally find missing nowadays. Light, fairy tale, epic, heroic and slightly humorous. One that does not take tons of hours to complete or require endless grind to progress.",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 109543,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01007170100AA000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +91,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "59699",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Legends of Amberland II: The Song of Trees",
           "source": "igdb",
@@ -84,6 +105,12 @@
         {
           "field": "original_name",
           "value": "Legends of Amberland II: The Song of Trees",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Legends of Amberland II: The Song of Trees is a classic western RPG inspired by great 90s era games such as Might & Magic, Wizardry, Ultima, the Gold Box series. Light, fairy tale, epic, heroic, slightly humorous adventure.",
           "source": "igdb",
           "manual": false
         },
@@ -102,7 +129,28 @@
           "year": 2023,
           "igdbId": 220604,
           "steamAppId": 2110840,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado ideales para el RPG."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Nítido y estable."
+            }
+          ]
         },
         {
           "id": 59700,
@@ -110,7 +158,31 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 220604,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Interfaz menos cómoda con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Correcto en Switch."
+            }
+          ],
+          "codes": [
+            "010025702389E000"
+          ]
         }
       ],
       "images": {
@@ -118,5 +190,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2707,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11990,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 23641,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Real-time strategy is taken to a new level by blending classical tower defense gameplay with offensive counterattacks and dynamic AI.Defend your territory with a variety of weapons. Use specialized units to fight off attacks and rush your enemies with massive armies.Fight your way through action packed levels in Campaign mode or challenge your friends in Battle mode. Stunning 1080p graphics with music by Synaesthesia.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 21246,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5ff85dfb1943e87364646b881a20ab07.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f2b489efd726db529335e31c83509c73.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/dfdf7b461087da6e55c885b947e09966.png"
+      }
     },
     {
       "id": 42314,
@@ -74,6 +85,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Comet Crash 2, a PS4 exclusive, is the sequel to the award-winning PS3 exclusive title. It brings an extensive new campaign, new boss and various online multiplayer modes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -89,8 +106,31 @@
           "igdbId": 52155,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2ps1.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3356,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40385,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 42314,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

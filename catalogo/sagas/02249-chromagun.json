@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "18921",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "ChromaGun",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "ChromaGun",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "ChromaGun is a first person puzzler about colors. The basic principle is as easy as applying it is complex: exit the chambers via the exit doors. Use the ChromaGun to colorize walls and WorkerDroids to progress in the chambers. WorkerDroids (the players' main cause of headaches in ChromaGun) are attracted to walls of the same color and can be used for a variety of tasks like opening doors, activating triggers or removing the danger of deadly electrified floor-tiles by mercilessly sacrificing them. ChromaGun encompasses eight chapters of mind-melting puzzles and witty background-narrative.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 23245,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 18921,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 23245,
           "steamAppId": 408650,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntería precisa con ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 18922,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 23245,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 18923,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 23245,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Giroscopio ayuda a apuntar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución."
+            }
+          ],
+          "codes": [
+            "010039A008E76000"
+          ]
         }
       ],
       "images": {
@@ -91,6 +190,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111988",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "ChromaGun 2: Dye Hard",
           "source": "igdb",
@@ -99,6 +204,12 @@
         {
           "field": "original_name",
           "value": "ChromaGun 2: Dye Hard",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shoot paint, mix colors, and solve puzzles in this adventure about friendship and redemption. Just don't enter that portal to another universe, and everything will be perfectly fine.",
           "source": "igdb",
           "manual": false
         },
@@ -124,7 +235,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 305224,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "040065A023ABA000"
+          ]
         },
         {
           "id": 111988,
@@ -143,8 +257,33 @@
           "igdbId": 305224,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f1f3e76c6642970e58a5f4bc9decda63.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2a511f83cf2dd20b017ae99136aa4729.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/42ed691d80e8063be11a2070c475e93b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2566,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9042,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 47205,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

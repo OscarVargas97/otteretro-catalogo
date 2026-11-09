@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10356",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SmileBasic",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "SmileBasic",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Let's play in programming! Create, Pop-up and Carry around!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 84879,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Entorno de programación completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Pantalla táctil y doble pantalla ideales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña pero estable."
+            }
+          ]
         },
         {
           "id": 10633,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 222292,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "GamePad sirve, menos cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida en HD al televisor."
+            }
+          ]
         }
       ],
       "images": {
@@ -85,6 +139,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This is the programming software, \"SmileBASIC 4\", that allows you to create and play games with Nintendo Switch! The programming language is \"SmileBASIC\" which is the most suitable language for creating games. Because it is based on the language \"BASIC\" that is easy to understand even for beginners and it has been developed for program learning. So, even those who have never experienced programming can work on their projects. Moreover, there are many materials and various tools to support your work development.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2020",
           "source": "igdb",
@@ -98,7 +158,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147701,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100C9100B06A000"
+          ]
         }
       ],
       "images": {
@@ -115,6 +178,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "45361",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Petit Computer",
           "source": "igdb",
@@ -123,6 +192,12 @@
         {
           "field": "original_name",
           "value": "Petit Computer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A DSiWare title that allows you to program in BASIC and share your creations.",
           "source": "igdb",
           "manual": false
         },
@@ -156,5 +231,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1571,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17331,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 5134,
+          "reason": "2014"
+        },
+        {
+          "position": 3,
+          "gameId": 15611,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

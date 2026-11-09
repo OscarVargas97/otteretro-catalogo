@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "68534",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ebola Village",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ebola Village",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A classic horror inspired by the original survival games of the 90s, Ebola Village is a modern take on a first-person adventure where the main character, Maria, investigates a series of mysterious events.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 238788,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010014902640A000"
+          ]
         }
       ],
       "images": {
@@ -106,6 +121,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "106291",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ebola 3",
           "source": "igdb",
@@ -114,6 +135,12 @@
         {
           "field": "original_name",
           "value": "Ebola 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ebola 3 is created in the spirit of the great classics of survival horrors. In this game, you will control the main character with a first-person camera which makes you feel like you’re in a real horror movie.",
           "source": "igdb",
           "manual": false
         },
@@ -131,7 +158,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 216312,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona con mando, pero es menos flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel de la versión de PC."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento fijos de consola."
+            }
+          ]
         },
         {
           "id": 106291,
@@ -140,10 +188,54 @@
           "year": 2022,
           "igdbId": 216312,
           "steamAppId": 1547860,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles de teclado y ratón, guardado estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento flexible en PC, ajustable."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co57ry.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3152,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 44827,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 27683,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43795",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "True Crime: Streets of LA",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "True Crime: Streets of LA",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "True Crime: Streets of LA is a free-roaming driving and action game similar in concept to Grand Theft Auto III. The game's structure is mission-based; most of the missions are dictated by the story and initiate following a cutscene that advances it. Failing a mission still allows the player to continue playing through the chapter and undertake subsequent missions; in some cases this will lead to branching paths and optional missions. However, in order to complete the whole chapter the player must eventually succeed in all the main missions.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,13 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 4216,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GTLE-USA",
+            "DL-DOL-GTLE-USA-01",
+            "DL-DOL-GTLP-UKV",
+            "DL-DOL-GTLX-EUR"
+          ]
         },
         {
           "id": 43795,
@@ -72,7 +90,17 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 4216,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51753",
+            "SLES-51753-ANZ",
+            "SLES-51753-P",
+            "SLES-51753-P-ANZ",
+            "SLES-51754",
+            "SLPM-65729",
+            "SLPM-66098",
+            "SLUS-20550"
+          ]
         }
       ],
       "images": {
@@ -91,6 +119,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44117",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "True Crime: New York City",
           "source": "igdb",
@@ -99,6 +133,12 @@
         {
           "field": "original_name",
           "value": "True Crime: New York City",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Be a good cop or a bad cop in the streetwise action game True Crime: New York City. You can explore the authentically modeled streets of New York City as a police officer tracking down criminals and administering justice. The game features a diverse weapon set, as well as a mixed offering of fighting styles that you can use to take out those who stand in your way. In addition to combat on foot, the game features driving sequences and shootouts. Laurence Fishburne, Christopher Walken, and Mickey Rourke contribute their voice talent to the game as well.",
           "source": "igdb",
           "manual": false
         },
@@ -124,7 +164,13 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 4215,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-G2CD-NOE",
+            "DL-DOL-G2CE-USA",
+            "DL-DOL-G2CP-UKV",
+            "DL-DOL-G2CX-EUR"
+          ]
         },
         {
           "id": 44117,
@@ -140,7 +186,16 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 4215,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53616",
+            "SLES-53616/ANZ",
+            "SLES-53617",
+            "SLES-53618",
+            "SLPM-66473",
+            "SLPM-74243",
+            "SLUS-21106"
+          ]
         }
       ],
       "images": {
@@ -150,5 +205,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2853,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16640,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 16764,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

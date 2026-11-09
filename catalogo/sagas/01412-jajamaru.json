@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9105",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Maru's Mission",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Maru's Mission",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Master Traveler takes on the Monsters of the World.\n\nPlay as the ninja Maru in this action-packed side-scrolling game that will take you on a journey across the world. While Maru is out for a walk with his girlfriend Cori, an evil samurai named Muramasa suddenly appears and kidnaps her. In Maru's efforts to track her down and rescue her, he must face a number of mythological monsters while gaining new and powerful weapons in order to defeat them. Using the hints that are left behind by his enemies, Maru will follow a trail that will lead him across six different locations - including the bug-infested forests of America and the scorching deserts of Egypt. Help our hero on his mission as he fights to rescue Cori.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 49039,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, sin cambios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración y menú de consola virtual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor pantalla y emulación estable."
+            }
+          ]
         },
         {
           "id": 9106,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 1990,
           "igdbId": 49039,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin guardado rápido ni ayudas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla monocromática de GB original."
+            }
+          ]
         }
       ],
       "images": {
@@ -83,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Ninja JaJaMaru-kun: Sakura-hime to Karyu no Himitsu",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Take JaJaMaru and Shizuha against treacherous forces to rescue Princess Sakura.",
           "source": "igdb",
           "manual": false
         },
@@ -117,6 +177,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "33558",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ninja JaJaMaru: The Great Yokai Battle",
           "source": "igdb",
@@ -125,6 +191,12 @@
         {
           "field": "original_name",
           "value": "Ninja JaJaMaru: The Great Yokai Battle",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A new Ninja JaJaMaru-kun game being released in the series collection, planned for release by the end of 2019 in Japan.",
           "source": "igdb",
           "manual": false
         },
@@ -175,6 +247,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "56008",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ninja JaJaMaru: The Great Yokai Battle + Hell",
           "source": "igdb",
@@ -183,6 +261,12 @@
         {
           "field": "original_name",
           "value": "Ninja JaJaMaru: The Great Yokai Battle + Hell",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A new game in the Ninja JaJaMaru series, with updated mechanics.",
           "source": "igdb",
           "manual": false
         },
@@ -209,7 +293,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 199764,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01006AC018B4E000"
+          ]
         }
       ],
       "images": {
@@ -240,6 +327,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ninja-themed 3D action game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -263,5 +356,40 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 935,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4425,
+          "reason": "1990"
+        },
+        {
+          "position": 2,
+          "gameId": 25397,
+          "reason": "1997"
+        },
+        {
+          "position": 3,
+          "gameId": 4994,
+          "reason": "2013"
+        },
+        {
+          "position": 4,
+          "gameId": 13366,
+          "reason": "2019"
+        },
+        {
+          "position": 5,
+          "gameId": 22493,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87558",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tokyo Yamanote Boys Super Mint Disc",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tokyo Yamanote Boys Super Mint Disc",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super mint disc focus on the three main guys for entry no.4-6: Kirishima Iori (Entry no.4), Lucy (Entry no.5), and Kujou Takumi (Entry no.6)",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 221953,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Depende de un PC con soporte japonés."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Puede fallar con configuración regional en Windows moderno."
+            }
+          ]
         },
         {
           "id": 87558,
@@ -56,9 +89,33 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 221954,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Probablemente igual o con extras menores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, guardado y control cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en hardware o emulador."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5jo7.jpg"
+      }
     },
     {
       "id": 36218,
@@ -70,6 +127,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87559",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tokyo Yamanote Boys Dark Cherry Disc",
           "source": "igdb",
@@ -78,6 +141,12 @@
         {
           "field": "original_name",
           "value": "Tokyo Yamanote Boys Dark Cherry Disc",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dark cherry disc focus on the three main guys for entry no.7-9: Rudo Jesus (Entry no.7), Moroboshi Tetsu (Entry no.8), and Hamada Shinnosuke (Entry no.9)",
           "source": "igdb",
           "manual": false
         },
@@ -95,7 +164,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 221955,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Depende de un PC con soporte japonés."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Puede fallar con configuración regional en Windows moderno."
+            }
+          ]
         },
         {
           "id": 87559,
@@ -103,9 +193,33 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 221956,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Probablemente igual o con extras menores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, guardado y control cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en hardware o emulador."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5joa.jpg"
+      }
     },
     {
       "id": 36250,
@@ -129,6 +243,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A port for PSP.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -142,10 +262,41 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 221952,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-06171"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5jo6.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1989,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36211,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 36218,
+          "reason": "2011"
+        },
+        {
+          "position": 3,
+          "gameId": 36250,
+          "reason": "2012"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

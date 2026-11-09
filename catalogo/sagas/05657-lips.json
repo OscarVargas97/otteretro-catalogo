@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "\"Lips\" is a Karaoke game similar to the SingStar franchise. \"Lips\" comes bundled with two motion-sensing, LED-lit microphones for $69.99 US. In addition to the 40 songs that come on the disc, players can plug in their MP3 player and sing along to their own music.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 7050,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/sljd65mxy4knibsqyjmr.jpg"
+      }
     },
     {
       "id": 48393,
@@ -62,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114818",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lips: Number One Hits",
           "source": "igdb",
@@ -70,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Lips: Number One Hits",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lips: Number One Hits is a karaoke video game for the Xbox 360 console, and the follow-up to the 2008 title Lips. Like its predecessor, the game was developed by iNiS and published by Microsoft Game Studios. It was released on October 20, 2009 in North America and October 23 in Europe and received generally average reviews. Spin-offs of the game have also been released, including Lips: Deutsche Partyknaller and Lips: Canta en Español.\n\nLips: Number One Hits features the use of motion-sensitive microphones, which is also compatible with other music video games such as The Beatles: Rock Band.[1] The game is sold separately, and in packages including one and two microphones.\n\nEach copy of Lips: Number One Hits includes a redemption code for downloading one of three 5-song track packs for free.[2]",
           "source": "igdb",
           "manual": false
         },
@@ -87,16 +108,61 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 7053,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Repertorio completo del lanzamiento de 2009."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Karaoke estándar con micrófono."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión de referencia con año verificado."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Rendimiento estable en 360."
+            }
+          ]
         },
         {
           "id": 114917,
           "platform": "x360",
           "kind": "original",
           "igdbId": 268854,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo repertorio de canciones, sin diferencias conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mismos controles con micrófono."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios conocidos; probable duplicado o región distinta."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mismo rendimiento en 360."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/dbg9qoiiva4yebchffkg.jpg"
+      }
     },
     {
       "id": 48395,
@@ -135,7 +201,10 @@
           "igdbId": 7051,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/kewffiwweu5jrsomb92v.jpg"
+      }
     },
     {
       "id": 48398,
@@ -159,6 +228,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The 3rd in the Lips Franchise, this time focusing on well known party hits from the past 40 years including I Will Survive, YMCA and Its Not Unusual.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -174,7 +249,10 @@
           "igdbId": 7054,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/xauv04rc3pdtsqwqikwo.jpg"
+      }
     },
     {
       "id": 48402,
@@ -198,6 +276,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "4th installment in the Lips series with tracks from Duran Duran, Pat Benatar, Huey Lewis and the News and Devo.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -213,8 +297,46 @@
           "igdbId": 7052,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co20l8.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1068,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48370,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 48393,
+          "reason": "2009"
+        },
+        {
+          "position": 3,
+          "gameId": 48395,
+          "reason": "2009"
+        },
+        {
+          "position": 4,
+          "gameId": 48398,
+          "reason": "2010"
+        },
+        {
+          "position": 5,
+          "gameId": 48402,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22740",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "West of Loathing",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "West of Loathing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Say howdy to West of Loathing - a single-player slapstick, stick-figure comedy adventure role-playing game set in the wild west of the Kingdom of Loathing universe. Traverse snake-infested gulches, punch skeletons wearing cowboy hats, grapple with demon cows, and investigate a wide variety of disgusting spittoons.",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 44516,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010031B00A4E8000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +91,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66043",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shadows Over Loathing",
           "source": "igdb",
@@ -84,6 +105,12 @@
         {
           "field": "original_name",
           "value": "Shadows Over Loathing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A slapstick-figure comedy adventure-RPG full of mobsters, monsters, and mysteries.",
           "source": "igdb",
           "manual": false
         },
@@ -101,7 +128,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 225615,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Bien adaptado a mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, con resolución correcta."
+            }
+          ]
         },
         {
           "id": 66043,
@@ -110,7 +158,28 @@
           "year": 2022,
           "igdbId": 225615,
           "steamAppId": 1939160,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con las actualizaciones y correcciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado, ratón o mando, guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 66044,
@@ -118,7 +187,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 225615,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Bien adaptado a mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y cargas muy rápidas."
+            }
+          ]
         },
         {
           "id": 66045,
@@ -126,7 +216,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 225615,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo con mando y en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y cargas más largas."
+            }
+          ],
+          "codes": [
+            "010066E01A9E2000"
+          ]
         }
       ],
       "images": {
@@ -136,5 +250,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2642,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10088,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 26839,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

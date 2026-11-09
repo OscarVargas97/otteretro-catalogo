@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111046",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Starship Troopers: Extermination",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Starship Troopers: Extermination",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Starship Troopers: Extermination drops up to 16 players right into the fight against the Bug menace in this co-op first person shooter. Suit up and ship out to a far-off front as a Trooper in the Deep Space Vanguard, an elite Special Forces group within the Mobile Infantry. It’s up to squads like yours to battle against hundreds of bloodthirsty insectoid aliens and take back fallen colonies for the Federation. The only good Bug is a dead Bug!",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 228175,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b714215b54a8b436eaed7921d4d23fb9.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/64bda1131f8d344c22f751954fce1221.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/64e3249678b5be2b02dff3ac0f83df2d.png"
+      }
     },
     {
       "id": 47681,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113214",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Starship Troopers: Ultimate Bug War!",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Starship Troopers: Ultimate Bug War!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lock and load into the Starship Troopers universe and join the Mobile Infantry in the most realistic depiction of war ever made ! Experience an original story in this action-packed, first-person retro shooter. Would you like to know more?",
           "source": "igdb",
           "manual": false
         },
@@ -112,7 +141,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 380415,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0400A2B02653E000"
+          ]
         },
         {
           "id": 113214,
@@ -131,8 +163,33 @@
           "igdbId": 380415,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f8e2991e8827106862c7ea05e1d40ac9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4ad6e6e14b2af185821ec27f58ae22cd.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/964600108ca49f80f65c962d5ee47b9b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3484,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46859,
+          "reason": "2024"
+        },
+        {
+          "position": 2,
+          "gameId": 47681,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

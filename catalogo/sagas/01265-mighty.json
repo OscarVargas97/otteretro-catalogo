@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7525",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mighty Flip Champs!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mighty Flip Champs!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mighty Flip Champs! is a puzzle/platform game hybrid, requiring players to explore stages that vary from having two areas to up to eight areas. The objective is to get the player-character, Alta, through the stage and to find the Fishman.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 29079,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo original: niveles de puzles con el giro de gravedad y jefes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles y diseño pensados para la consola; respuesta precisa y guardado simple."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de DS, pero fluido y con cargas casi nulas."
+            }
+          ]
         },
         {
           "id": 86622,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 44522,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego, sin extras relevantes conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con mando adaptados; cómodo, aunque la pantalla dual se reorganiza."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel, con cambios por la adaptación de pantalla."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Salida en pantalla grande y más nítida que en DS."
+            }
+          ]
         },
         {
           "id": 86623,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 44522,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego, sin extras relevantes conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con botones adaptados; portátil y práctico."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel, con cambios por la adaptación de pantalla."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Pantalla más grande y nítida que la de DS, rendimiento estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -93,6 +168,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Developed by Wayforward, Mighty Milky Way follows an alien named Luna as she destroys and creates planets on the way to her ultimate goal.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -116,5 +197,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2304,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3844,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 17785,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

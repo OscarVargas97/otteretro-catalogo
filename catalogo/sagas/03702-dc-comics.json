@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "53790",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "DC League of Super-Pets: The Adventures of Krypto and Ace",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "DC League of Super-Pets: The Adventures of Krypto and Ace",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "DC League of Super-Pets: The Adventures of Krypto and Ace is a 2022 video game tie-in to the 2022 movie DC League of Super-Pets.\n\nThe player controls Krypto and Ace as they take to the skies to protect the animal population of Metropolis from a new and looming threat.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 183648,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100F95015DD6000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66560",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "DC Justice League: Caos Cósmico",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "DC's Justice League: Cosmic Chaos",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Suit up as Batman, Wonder Woman and Superman and take on some of the most powerful Super-Villains in the DC universe with DC’s Justice League: Cosmic Chaos.",
           "source": "igdb",
           "manual": false
         },
@@ -174,7 +201,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 228740,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100157015DD8000"
+          ]
         }
       ],
       "images": {
@@ -184,5 +214,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3013,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 21746,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 27079,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "88523",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wrack: Reclamation",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Wrack: Reclamation",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Inspired by classics like DOOM and Quake, Wrack is an arcade-style FPS. Mow down enemies one after another, and become more powerful the more you kill. Amass a deadly arsenal, discover secret powers... and save your world!",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2025,
           "igdbId": 344806,
           "steamAppId": 3709080,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del remake, sin recortes conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado dan la mejor precisión de apuntado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo remake, sin cambios de diseño por plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fps ajustables según el equipo."
+            }
+          ]
         },
         {
           "id": 88524,
@@ -57,7 +90,28 @@
           "kind": "remake",
           "year": 2026,
           "igdbId": 344806,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el resto de plataformas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Con mando funciona bien, pero apuntar es menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo remake, sin cambios de diseño por plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable pero fijo, sin opciones de ajuste."
+            }
+          ]
         },
         {
           "id": 88525,
@@ -65,9 +119,36 @@
           "kind": "remake",
           "year": 2026,
           "igdbId": 344806,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el resto de plataformas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Con mando va bien y permite jugar en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo remake, sin cambios de diseño por plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fps probablemente menores por el hardware."
+            }
+          ],
+          "codes": [
+            "01002C10270EE000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/71a512ffef1f09f9cef3097d12cabda6.png"
+      }
     }
   ],
   "routes": []

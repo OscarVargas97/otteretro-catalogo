@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Megpoid the Music is a rhythm game developed by ParaPhray for the Playstation Portable. The game focuses on the Vocaloid GUMI and features 30 tracks of her solo catalog from various artists in the Vocaloid community.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 38484,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2f64.jpg"
+      }
     },
     {
       "id": 41061,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "IA Visual Tracks -COLORFUL- (also known as \"IA/VT -COLORFUL-\") is a game produced for the PS Vita by MARVELOUS Inc. It stars 1st Place Co., Ltd.'s VOCALOID, IA in her first video game role. The game was initially due for its Japanese release on July 31, 2014, but after several delays was released on July 30, 2015. \n \nWhen Marvelous released official apology notices about the game delays, there were no officially statement as to the reason behind the delay, although it was mentioned that \"the further improvement of quality\" was a key factor.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -89,8 +104,33 @@
           "igdbId": 26994,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8c0e3bb779a95f85e0d88d180a8c08ac.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/196268d973fe71025e5e9a9b6ef4c6f1.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/51516ca3355ddd1669176f3c766ff881.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3278,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35443,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 41061,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

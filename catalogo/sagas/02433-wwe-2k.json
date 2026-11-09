@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22805",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "WWE 2K18",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "WWE 2K18",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This latest entry in 2k Sports WWE series boasts a next generation graphics engine, the largest roster of any WWE game before it with the rosters updated gimmick sets and show stylings to closely resembles the current TV product, and the first WWE 2k only be released on current generation hardware.\n\nSeth Rollins was revealed to be the cover star, and the game's slogan is \"Be Like No One.\"",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 31558,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010009800203E000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96536",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "WWE 2K16",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "WWE 2K16",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Get in the ring and Raise Some Hell with WWE 2K16 The undisputed champion of wrestling video games with the biggest roster in WWE games history. Play as your favourite Superstars from the past, present and future and experience the most authentic, comprehensive, in-your-face WWE video game of all-time.",
           "source": "igdb",
           "manual": false
         },
@@ -117,7 +144,12 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 11057,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-02190",
+            "BLKS-20513",
+            "BLUS-31565"
+          ]
         },
         {
           "id": 96535,
@@ -152,6 +184,28 @@
           "igdbId": 11057,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/37a000a8a60b69ef9d1093e8d7cbdb47.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/aab0450469b230c97548d249d4e7ed71.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d5cc7743b1af1094b27afd0cccd8faee.png"
+      },
+      "ports": [
+        {
+          "id": 1280,
+          "platform": "x360",
+          "project": "wwe2k16-pc",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/itsbybanshee/wwe2k16-pc",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 0
+        }
       ]
     },
     {
@@ -164,6 +218,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101613",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "WWE 2K19",
           "source": "igdb",
@@ -172,6 +232,12 @@
         {
           "field": "original_name",
           "value": "WWE 2K19",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "WWE 2K19 showcases a massive roster of popular WWE Superstars, Legends and Hall of Famers, as well as NXT favorites. Experience authentic WWE gameplay, extensive creation options, engaging match types, fan-favorite modes and much more!",
           "source": "igdb",
           "manual": false
         },
@@ -208,8 +274,38 @@
           "igdbId": 102805,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/37b4c628adfaf121d8156071d9d1fead.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4dd3479a7d8a13e22518a22202f4da7b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d34ff18d819ea9dfeda0f638eae589f0.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1689,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40336,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 10107,
+          "reason": "2017"
+        },
+        {
+          "position": 3,
+          "gameId": 42580,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

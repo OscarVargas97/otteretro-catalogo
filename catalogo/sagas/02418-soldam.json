@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22510",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Soldam: Lanza, Conecta, Elimina",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Soldam: Drop, Connect, Erase",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Play one of the original tile-matching games from the 90’s. Dispatch Games brings back the Jaleco arcade classic with, Soldam: Drop, Connect, Erase. The game has been refreshed with updated graphics and gameplay, but retains its arcade charm with its catchy music and unique style that have been fan favorites for many years.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 36816,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100A290048B0000"
+          ]
         }
       ],
       "images": {
@@ -73,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "54220",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Soldam",
           "source": "igdb",
@@ -81,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Soldam",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Soldam is a puzzle game where the goal is to match soldam fruits along an entire row. The fruits drop down from the top in a 2x2 square which can be rotated. If the edge pieces match color, all of the fruits in the direction of the matching edge pieces will change their color to match. Matching edge pieces can be made horizontally, vertically, or diagonally.",
           "source": "igdb",
           "manual": false
         },
@@ -114,5 +141,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2638,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 21395,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 10020,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

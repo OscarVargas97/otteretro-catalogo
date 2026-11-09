@@ -3,7 +3,7 @@
   "name": "Far Cry",
   "igdbKind": "franchise",
   "igdbId": 1466,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -19,9 +19,15 @@
       "originalName": "Far Cry 2",
       "year": 2008,
       "igdbId": 361,
-      "popularity": 571,
+      "popularity": 573,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94244",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Far Cry 2",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Far Cry 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Far Cry 2 is an open-world first-person shooter set in an unnamed African country. Players take the role of a mercenary who roams a large environment of desert, savannah, and jungle, completing missions for rival factions and allied characters known as Buddies. Missions can be approached through direct assault or stealth, and the game emphasizes systemic, reactive elements such as spreading fire, degrading scavenged weapons, and enemies that respond to the player's tactics. Survival mechanics feature heavily, including recurring bouts of malaria that must be treated with medicine and companions who can be lost permanently if not helped in time. A competitive multiplayer mode and a level editor are also included.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Far Cry 2 es un shooter en primera persona de mundo abierto ambientado en un país africano sin nombre. Los jugadores asumen el papel de un mercenario que recorre un vasto entorno de desierto, sabana y selva, completando misiones para facciones rivales y personajes aliados conocidos como Compañeros. Las misiones pueden abordarse mediante un asalto directo o con sigilo, y el juego enfatiza elementos sistémicos y reactivos, como el fuego que se propaga, el deterioro de las armas recogidas y enemigos que responden a las tácticas del jugador. Las mecánicas de supervivencia tienen un peso importante, incluidos los brotes recurrentes de malaria que deben tratarse con medicamentos, y compañeros que pueden perderse de forma permanente si no se les ayuda a tiempo. También incluye un modo multijugador competitivo y un editor de niveles.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,16 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 361,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50076",
+            "BLES-00324",
+            "BLES-00324/E",
+            "BLES-00324/P",
+            "BLES-00325",
+            "BLJM-60108",
+            "BLUS-30178"
+          ]
         },
         {
           "id": 94244,
@@ -67,7 +94,12 @@
           "igdbId": 361,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/64afb346ce729c37acd43dcabd7648e6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9eb8eff225298ae9cdc871bff8b16b7d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e3a0629cee6dbd0a211ab379a406f0fb.png"
+      }
     },
     {
       "id": 39664,
@@ -75,9 +107,15 @@
       "originalName": "Far Cry 3",
       "year": 2012,
       "igdbId": 529,
-      "popularity": 2248,
-      "iconic": false,
+      "popularity": 2250,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94641",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Far Cry 3",
@@ -88,6 +126,18 @@
           "field": "original_name",
           "value": "Far Cry 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Explore an island playground as stunningly beautiful as it is diverse – from mountain ranges to swampy grasslands and white sandy beaches. Fight your way through the island’s towns, temples, river ports and more.\n\nEncounter a diverse and realistic cast of characters, including one of Far Cry’s most notorious villains: Vaas Montenegro. Dive into this deep and enriching story where morals are questionable and hope is all but abandoned.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Explora un parque de isla tan impresionante como diverso, desde cadenas montañosas hasta praderas pantanosas y playas de arena blanca. Abre camino a través de los pueblos, templos, puertos fluviales y mucho más de la isla.\n\nTe cruzarás con un elenco de personajes diverso y realista, incluido uno de los villanos más infames de Far Cry: Vaas Montenegro. Sumérgete en una historia profunda y enriquecedora, donde la moral es cuestionable y la esperanza casi ha sido abandonada.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -104,7 +154,38 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 529,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña y multijugador completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "720p y fps inestables."
+            }
+          ],
+          "codes": [
+            "BLAS-50543",
+            "BLES-01137",
+            "BLES-01137/E",
+            "BLES-01138",
+            "BLES-01138/RUS",
+            "BLJM-60532",
+            "BLJM-61164",
+            "BLUS-30687"
+          ]
         },
         {
           "id": 94641,
@@ -113,7 +194,28 @@
           "year": 2012,
           "igdbId": 529,
           "steamAppId": 220240,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fps."
+            }
+          ]
         },
         {
           "id": 94642,
@@ -121,7 +223,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 529,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "720p y fps bajos."
+            }
+          ]
         },
         {
           "id": 94833,
@@ -129,7 +252,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 86389,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y fps sólidos."
+            }
+          ]
         },
         {
           "id": 94834,
@@ -137,7 +281,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 86389,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando, cargas cortas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p, fps más estables."
+            }
+          ]
         },
         {
           "id": 94835,
@@ -145,7 +310,28 @@
           "kind": "original",
           "year": 2027,
           "igdbId": 86389,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento portátil (no verificado)."
+            }
+          ]
         },
         {
           "id": 94836,
@@ -153,7 +339,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 86389,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y fps sólidos."
+            }
+          ]
         },
         {
           "id": 94837,
@@ -161,9 +368,35 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 86389,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p, estable."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/00c9157a614a13927382c42cc26dbfd4.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/163f02c08eeb3462cf1be9be349d02df.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/39027dfad5138c9ca0c474d71db915c3.png"
+      }
     },
     {
       "id": 39679,
@@ -175,6 +408,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94683",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Far Cry 3: Blood Dragon",
           "source": "igdb",
@@ -184,6 +423,18 @@
           "field": "original_name",
           "value": "Far Cry 3: Blood Dragon",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "There’s only one force powerful enough to stop an army of rampaging killer cyborgs, mutated scientists, metal sharks and vicious Blood Dragons that shoot lasers from their eyes – that force is you. Your name is Sergeant Rex Power Colt, a Mark IV Cyber Commando. Lock and load as you and your seven favorite fully customizable killing implements tackle a bizarre open world island crawling with evil. Take down the enemy with ninja stars, guns or even just good old explosives. Your battle. Your way. Their tough luck.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Solo hay una fuerza lo bastante poderosa para detener a un ejército de ciborgs asesinos desbocados, científicos mutados, tiburones de metal y feroces Dragones de Sangre que disparan láseres por los ojos: esa fuerza eres tú. Tu nombre es el sargento Rex Power Colt, un Comando Cibernético Mark IV. Carga y prepárate mientras tú y tus siete instrumentos de matanza favoritos, totalmente personalizables, os enfrentáis a una extraña isla de mundo abierto plagada de maldad. Derrota al enemigo con estrellas ninja, armas o simplemente con explosivos de toda la vida. Tu batalla. A tu manera. Mala suerte para ellos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -200,7 +451,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 2001,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "720p, fps irregulares."
+            }
+          ]
         },
         {
           "id": 94683,
@@ -209,7 +481,28 @@
           "year": 2013,
           "igdbId": 2001,
           "steamAppId": 233270,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fps."
+            }
+          ]
         },
         {
           "id": 94684,
@@ -217,7 +510,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 2001,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "720p, fps irregulares."
+            }
+          ]
         },
         {
           "id": 94856,
@@ -225,7 +539,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 188063,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Muy fluido."
+            }
+          ]
         },
         {
           "id": 94857,
@@ -233,7 +568,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 188063,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución mayor y estable."
+            }
+          ]
         },
         {
           "id": 94858,
@@ -241,7 +597,28 @@
           "kind": "original",
           "year": 2027,
           "igdbId": 188063,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil cómoda."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento esperado."
+            }
+          ]
         },
         {
           "id": 94859,
@@ -249,7 +626,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 188063,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Muy fluido."
+            }
+          ]
         },
         {
           "id": 94860,
@@ -257,9 +655,35 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 188063,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/84aaa84129e365590aeb86b57697edb9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/18b16aa4f6882ecd819ad38f21394925.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/505e7b6c365f16ba42ce62517d54001f.png"
+      }
     },
     {
       "id": 39825,
@@ -267,9 +691,15 @@
       "originalName": "Far Cry 4",
       "year": 2014,
       "igdbId": 6801,
-      "popularity": 1190,
-      "iconic": false,
+      "popularity": 1191,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "95226",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Far Cry 4",
@@ -280,6 +710,18 @@
           "field": "original_name",
           "value": "Far Cry 4",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Discover the most diverse Far Cry world ever created. With terrain spanning from lush forests to the snowcapped Himalayas, the entire world is alive… and deadly. From leopards, rhinos, black eagles, and vicious honey badgers, Kyrat is home to abundant wildlife. As you embark on your hunt for resources, know that something may be hunting you...\n\nScout enemy territory from above in the all-new gyrocopter and then plummet back to earth in your wing suit. Climb aboard the back of a six-ton elephant and unleash its raw power on your enemies. Choose the right weapon for the job, no matter how insane or unpredictable that job might be. With a diverse arsenal, you’ll be prepared for anything.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Descubre el mundo de Far Cry más diverso jamás creado. Con un terreno que abarca desde bosques exuberantes hasta los nevados Himalayas, todo el mundo está vivo… y es mortal. Desde leopardos, rinocerontes, águilas negras y feroces melívoras, Kyrat alberga una abundante fauna. Mientras te lanzas a la caza de recursos, ten en cuenta que algo podría estar cazándote a ti...\n\nObserva el territorio enemigo desde las alturas con el nuevo giroscopio y luego lánzate en picado hacia la tierra con tu traje alar. Súbete al lomo de un elefante de seis toneladas y desata su fuerza bruta contra tus enemigos. Elige el arma adecuada para cada trabajo, por muy descabellado o impredecible que sea. Con un arsenal variado, estarás preparado para cualquier cosa.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -296,7 +738,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 6801,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas muy rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y 60 fps."
+            }
+          ]
         },
         {
           "id": 95224,
@@ -304,7 +767,36 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6801,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y tirones."
+            }
+          ],
+          "codes": [
+            "BLES-02011",
+            "BLES-02012",
+            "BLJM-61179",
+            "BLJM-61336",
+            "BLKS-20498",
+            "BLUS-31420"
+          ]
         },
         {
           "id": 95225,
@@ -312,7 +804,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6801,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p estable."
+            }
+          ]
         },
         {
           "id": 95226,
@@ -321,7 +834,28 @@
           "year": 2014,
           "igdbId": 6801,
           "steamAppId": 298110,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fps."
+            }
+          ]
         },
         {
           "id": 95227,
@@ -329,7 +863,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 6801,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas, háptica."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y 60 fps."
+            }
+          ]
         },
         {
           "id": 95228,
@@ -337,7 +892,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6801,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y tirones."
+            }
+          ]
         },
         {
           "id": 95229,
@@ -345,9 +921,35 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6801,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p estable."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/19e8eca3844064c94a2f9c838df1541d.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/b7087c1f4f89e63af8d46f3b20271153.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/faf52985ce74facadda5d45f61224084.png"
+      }
     },
     {
       "id": 40689,
@@ -355,9 +957,15 @@
       "originalName": "Far Cry",
       "year": 2004,
       "igdbId": 306,
-      "popularity": 555,
+      "popularity": 556,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "97311",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Far Cry",
@@ -368,6 +976,18 @@
           "field": "original_name",
           "value": "Far Cry",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A tropical paradise seethes with hidden evil in Far Cry, a cunningly detailed action shooter that pushed the boundaries of combat to shocking new levels.Freelance mariner Jack Carver is cursing the day he ever came to this island. A week ago, a brash female reporter named Valerie had offered him an incredible sum of cash to take her to this unspoiled paradise. Shortly after docking, however, Jack's boat was greeted by artillery fire from a mysterious militia group swarming about the island.\n\nWith his boat destroyed, his money gone, and the gorgeous Valerie suddenly missing, Jack now finds himself facing an army of mercenaries amidst the wilds of the island, with nothing but a gun and his wits to survive. But the further he pushes into the lush jungle canopy, the stranger things become.\n\nJack encounters an insider within the militia group who reveals the horrific details of the mercenaries' true intentions. He presents Jack with an unsettling choice: battle the deadliest mercenaries, or condemn the human race to a maniac's insidious agenda.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un paraíso tropical esconde un mal oculto en Far Cry, un shooter de acción de meticuloso diseño que llevó los límites del combate a niveles impactantes.\n\nEl marinero independiente Jack Carver maldice el día en que llegó a esta isla. Una semana antes, una osada periodista llamada Valerie le había ofrecido una cantidad increíble de dinero para llevarla a este paraíso virgen. Sin embargo, poco después de atracar, el bote de Jack fue recibido con fuego de artillería por un misterioso grupo de milicianos que se movía por la isla.\n\nCon su bote destruido, su dinero perdido y la espléndida Valerie desaparecida de repente, Jack se encuentra ahora frente a un ejército de mercenarios en la espesura de la isla, con nada más que un arma y su ingenio para sobrevivir. Pero cuanto más se adentra en la exuberante cubierta de la selva, más extrañas se vuelven las cosas.\n\nJack se encuentra con un infiltrado dentro del grupo miliciano, que le revela los horribles detalles de las verdaderas intenciones de los mercenarios. Le plantea una inquietante elección: enfrentarse a los mercenarios más letales o condenar a la raza humana a la insidiosa agenda de un maníaco.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -384,7 +1004,28 @@
           "kind": "remake",
           "year": 2005,
           "igdbId": 5831,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego distinto (Instincts) con modo multijugador y editor."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola, mutaciones, guardado por puntos."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Reinterpretación muy distinta."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja de Xbox."
+            }
+          ]
         },
         {
           "id": 44637,
@@ -392,7 +1033,28 @@
           "kind": "remake",
           "year": 2005,
           "igdbId": 5831,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Datos de la entrada dudosos; contenido tipo Instincts."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Muy distinto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja."
+            }
+          ]
         },
         {
           "id": 44638,
@@ -400,7 +1062,28 @@
           "kind": "remake",
           "year": 2005,
           "igdbId": 5831,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Variante tipo Instincts con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Muy distinto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Algo mejor que la generación anterior."
+            }
+          ]
         },
         {
           "id": 44639,
@@ -408,7 +1091,28 @@
           "kind": "remake",
           "year": 2005,
           "igdbId": 5831,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Variante tipo Instincts."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de consola."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Muy distinto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "La más limitada técnicamente."
+            }
+          ]
         },
         {
           "id": 97311,
@@ -417,7 +1121,28 @@
           "year": 2004,
           "igdbId": 306,
           "steamAppId": 13520,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña completa y editor de mapas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles de ratón precisos, guardado libre, algo antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Necesita parches para pantallas modernas."
+            }
+          ]
         },
         {
           "id": 97519,
@@ -425,7 +1150,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 95013,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Classic: campaña sin editor ni multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo, trofeos y guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con pequeños cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p y 60 fps estables."
+            }
+          ]
         },
         {
           "id": 97520,
@@ -433,9 +1179,35 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 95013,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Classic: igual que PS3."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo y logros."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con pequeños cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p y 60 fps."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/37a05c2bc9e34c4228911a726d0da702.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f8c1f23d6a8d8d7904fc0ea8e066b3bb.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/a684eceee76fc522773286a895bc8436.png"
+      }
     },
     {
       "id": 41745,
@@ -447,6 +1219,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99409",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Far Cry: Primal",
           "source": "igdb",
@@ -456,6 +1234,18 @@
           "field": "original_name",
           "value": "Far Cry: Primal",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Far Cry Primal is a first-person action game set in 10,000 BC during the transition from the Upper Paleolithic to the Mesolithic period. As part of the Far Cry series, it replaces modern firearms with prehistoric weapons including spears, clubs, and bows. Players take the role of Takkar, a Wenja tribesman who can tame wild animals such as sabertooth cats and wolves to use as companions in combat. The open world takes place in the fictional Oros valley and features a day-night cycle with dynamic wildlife behavior, tribal warfare, and resource crafting. The game's characters speak a constructed language based on reconstructed Proto-Indo-European.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Far Cry Primal es un juego de acción en primera persona ambientado en el 10 000 a. C., durante la transición del Paleolítico Superior al Mesolítico. Como parte de la serie Far Cry, sustituye las armas de fuego modernas por armas prehistóricas, como lanzas, mazas y arcos. Los jugadores asumen el papel de Takkar, un miembro de la tribu wenja que puede domesticar animales salvajes, como tigres dientes de sable y lobos, para usarlos como compañeros en combate. El mundo abierto se desarrolla en el valle ficticio de Oros e incluye un ciclo de día y noche con un comportamiento de la fauna dinámico, guerras tribales y fabricación de objetos a partir de recursos. Los personajes del juego hablan un idioma construido basado en el protoindoeuropeo reconstruido.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -472,7 +1262,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 13182,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fps."
+            }
+          ]
         },
         {
           "id": 99408,
@@ -480,7 +1291,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 13182,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "1080p, 30 fps."
+            }
+          ]
         },
         {
           "id": 99409,
@@ -489,7 +1321,28 @@
           "year": 2016,
           "igdbId": 13182,
           "steamAppId": 371660,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fps."
+            }
+          ]
         },
         {
           "id": 99410,
@@ -497,7 +1350,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 13182,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fps."
+            }
+          ]
         },
         {
           "id": 99411,
@@ -505,9 +1379,35 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 13182,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "30 fps."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fb50ca0b9070d89dec37223c0c8e8c6d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/05cd9795646d1077a743ada13fbc2c62.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3fab5890d8113d0b5a4178201dc842ad.png"
+      }
     },
     {
       "id": 42232,
@@ -515,9 +1415,15 @@
       "originalName": "Far Cry 5",
       "year": 2018,
       "igdbId": 28552,
-      "popularity": 883,
+      "popularity": 884,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "100776",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Far Cry 5",
@@ -528,6 +1434,18 @@
           "field": "original_name",
           "value": "Far Cry 5",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome to Hope County, Montana, land of the free and the brave, but also home to a fanatical doomsday cult known as The Project at Eden’s Gate that is threatening the community's freedom. Stand up to the cult’s leader, Joseph Seed and the Heralds, and spark the fires of resistance that will liberate the besieged community.\n\nIn this expansive world, your limits and creativity will be tested against the biggest and most ruthless baddest enemy Far Cry has ever seen. It’ll be wild and it’ll get weird, but as long as you keep your wits about you, the residents of Hope County can rest assured knowing you’re their beacon of hope.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bienvenido a Hope County, Montana, tierra de los libres y los valientes, pero también hogar de una fanática secta del fin del mundo conocida como El Proyecto del Edén, que amenaza la libertad de la comunidad. Enfréntate al líder de la secta, Joseph Seed, y a los Heraldos, y enciende las llamas de la resistencia que liberarán a la comunidad asediada.\n\nEn este vasto mundo, tus límites y tu creatividad se pondrán a prueba frente al enemigo más despiadado y duro que Far Cry haya presentado jamás. Será salvaje y se volverá extraño, pero mientras mantengas la cabeza fría, los habitantes de Hope County podrán confiar en que eres su faro de esperanza.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -544,7 +1462,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 28552,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas muy rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Hasta 60 fps y 4K."
+            }
+          ]
         },
         {
           "id": 100775,
@@ -552,7 +1491,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 28552,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "30 fps, cargas largas."
+            }
+          ]
         },
         {
           "id": 100776,
@@ -561,7 +1521,28 @@
           "year": 2018,
           "igdbId": 28552,
           "steamAppId": 379060,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fps."
+            }
+          ]
         },
         {
           "id": 100777,
@@ -569,7 +1550,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 28552,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Hasta 60 fps y 4K."
+            }
+          ]
         },
         {
           "id": 100778,
@@ -577,9 +1579,35 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 28552,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "30 fps, cargas largas."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c60b6031ae9ebbef03aa963a21ab7ef9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/caa0bd048dd3104968cbe5082662af42.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/414e773d5b7e5c06d564f594bf6384d0.png"
+      }
     },
     {
       "id": 43428,
@@ -587,9 +1615,15 @@
       "originalName": "Far Cry New Dawn",
       "year": 2019,
       "igdbId": 113111,
-      "popularity": 264,
+      "popularity": 265,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "102882",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Far Cry New Dawn",
@@ -600,6 +1634,18 @@
           "field": "original_name",
           "value": "Far Cry New Dawn",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dive into a transformed vibrant post-apocalyptic Hope County, Montana, 17 years after a global nuclear catastrophe. Lead the fight against the Highwaymen, as they seek to take over the last remaining resources.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Sumérgete en un Hope County de Montana transformado y vibrante, en un mundo postapocalíptico 17 años después de una catástrofe nuclear global. Lidera la lucha contra los Highwaymen, que pretenden apoderarse de los últimos recursos que quedan.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -616,7 +1662,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 113111,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas muy rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y 60 fps."
+            }
+          ]
         },
         {
           "id": 102881,
@@ -624,7 +1691,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 113111,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "30 fps."
+            }
+          ]
         },
         {
           "id": 102882,
@@ -633,7 +1721,28 @@
           "year": 2019,
           "igdbId": 113111,
           "steamAppId": 939960,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fps."
+            }
+          ]
         },
         {
           "id": 102883,
@@ -641,7 +1750,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 113111,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y 60 fps."
+            }
+          ]
         },
         {
           "id": 102884,
@@ -649,9 +1779,35 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 113111,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "30 fps."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4608cc95c91a636d1ad8eff5b0f93666.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/e6fc583511b1b88c34bd2a2610248a8c.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/5d8c6ee0d8964e66a3225458f981522d.png"
+      }
     },
     {
       "id": 43445,
@@ -663,6 +1819,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102945",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Far Cry 6",
           "source": "igdb",
@@ -672,6 +1834,18 @@
           "field": "original_name",
           "value": "Far Cry 6",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dive into the gritty world of a modern-day guerrilla revolution to liberate a nation from its oppressive dictators. Welcome to Yara, a tropical paradise frozen in time. Far Cry 6 thrusts players into a modern-day guerrilla revolution. As dictator of Yara, Anton Castillo is intent on restoring his nation back to its former glory by any means, with his son, Diego, following in his bloody footsteps. Become a guerrilla fighter and liberate Yara.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Sumérgete en el mundo crudo de una revolución guerrillera moderna para liberar a una nación de sus dictadores opresores. Bienvenido a Yara, un paraíso tropical congelado en el tiempo. Far Cry 6 te lanza a una revolución guerrillera moderna. Como dictador de Yara, Antón Castillo está decidido a devolver a su nación a su antigua gloria por cualquier medio, con su hijo Diego siguiendo sus sangrientos pasos. Conviértete en guerrillero y libera Yara.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -723,7 +1897,12 @@
           "igdbId": 126290,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/58f5943211aaec61b42950b53bb60527.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/6677753c451487e9632f1fa7612f1745.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/2963f719387bad92c085606ac18042bc.png"
+      }
     },
     {
       "id": 48194,
@@ -735,6 +1914,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114485",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Far Cry Instincts: Evolution",
           "source": "igdb",
@@ -744,6 +1929,18 @@
           "field": "original_name",
           "value": "Far Cry Instincts: Evolution",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A sequel to Far Cry: Instincts with a different campaign.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Una secuela de Far Cry Instincts con una campaña diferente.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -760,7 +1957,28 @@
           "kind": "remake",
           "year": 2006,
           "igdbId": 4854,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Vengeance: campaña reeditada, menos multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control por movimiento irregular."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy cambiado."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos recortados."
+            }
+          ]
         },
         {
           "id": 114485,
@@ -768,10 +1986,214 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 22584,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña, Evolution y multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control sólido de mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen; compatible con 360."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ful.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 458,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40689,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 48194,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 39524,
+          "reason": "2008"
+        },
+        {
+          "position": 4,
+          "gameId": 39664,
+          "reason": "2012"
+        },
+        {
+          "position": 5,
+          "gameId": 39679,
+          "reason": "2013"
+        },
+        {
+          "position": 6,
+          "gameId": 39825,
+          "reason": "2014"
+        },
+        {
+          "position": 7,
+          "gameId": 41745,
+          "reason": "2016"
+        },
+        {
+          "position": 8,
+          "gameId": 42232,
+          "reason": "2018"
+        },
+        {
+          "position": 9,
+          "gameId": 43428,
+          "reason": "2019"
+        },
+        {
+          "position": 10,
+          "gameId": 43445,
+          "reason": "2021"
+        }
+      ]
+    },
+    {
+      "id": 3571,
+      "kind": "story",
+      "rationale": "Far Cry no tiene una historia continua: cada entrega tiene otros personajes y otro lugar. Solo New Dawn continúa directamente a Far Cry 5, así que se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40689,
+          "recommendedVersionId": 97311,
+          "reason": "Primera entrega, historia independiente. Se recomienda la versión original de PC."
+        },
+        {
+          "position": 2,
+          "gameId": 48194,
+          "recommendedVersionId": 114485,
+          "reason": "Reinterpretación de Far Cry en consola, con historia propia. Se recomienda la versión original de Xbox."
+        },
+        {
+          "position": 3,
+          "gameId": 39524,
+          "recommendedVersionId": 94244,
+          "reason": "Historia independiente en África. Versión de PC por rendimiento."
+        },
+        {
+          "position": 4,
+          "gameId": 39664,
+          "recommendedVersionId": 94641,
+          "reason": "Historia independiente con Vaas y Jason. Versión de PC."
+        },
+        {
+          "position": 5,
+          "gameId": 39679,
+          "recommendedVersionId": 94683,
+          "reason": "Spin-off parodia ambientado en un futuro alternativo. Versión de PC."
+        },
+        {
+          "position": 6,
+          "gameId": 39825,
+          "recommendedVersionId": 95226,
+          "reason": "Historia independiente en Kyrat. Versión de PC."
+        },
+        {
+          "position": 7,
+          "gameId": 41745,
+          "recommendedVersionId": 99409,
+          "reason": "Historia independiente en la prehistoria. Versión de PC."
+        },
+        {
+          "position": 8,
+          "gameId": 42232,
+          "recommendedVersionId": 100776,
+          "reason": "Historia independiente en Montana. Es la base de New Dawn. Versión de PC."
+        },
+        {
+          "position": 9,
+          "gameId": 43428,
+          "recommendedVersionId": 102882,
+          "reason": "Secuela directa de Far Cry 5. Hay que jugarlo justo después. Versión de PC."
+        },
+        {
+          "position": 10,
+          "gameId": 43445,
+          "recommendedVersionId": 102945,
+          "reason": "Historia independiente en Yara. Versión de PC."
+        }
+      ]
+    },
+    {
+      "id": 3572,
+      "kind": "community",
+      "rationale": "Se suele recomendar empezar por Far Cry 3, que define la fórmula moderna, y seguir con las entregas siguientes. Se omiten Far Cry 1, Instincts y Far Cry 2 por ser antiguos y de jugabilidad distinta; Far Cry 2 queda como opcional.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39664,
+          "recommendedVersionId": 94641,
+          "reason": "Mejor puerta de entrada y entrega muy querida. Versión de PC, la más completa."
+        },
+        {
+          "position": 2,
+          "gameId": 39679,
+          "recommendedVersionId": 94683,
+          "reason": "Corto y divertido, con la fórmula de Far Cry 3. Versión de PC."
+        },
+        {
+          "position": 3,
+          "gameId": 39825,
+          "recommendedVersionId": 95226,
+          "reason": "Refina la fórmula de Far Cry 3. Versión de PC."
+        },
+        {
+          "position": 4,
+          "gameId": 41745,
+          "recommendedVersionId": 99409,
+          "reason": "Variante prehistórica que sirve de pausa entre entregas. Versión de PC."
+        },
+        {
+          "position": 5,
+          "gameId": 42232,
+          "recommendedVersionId": 100776,
+          "reason": "Mundo abierto más amplio y muy popular. Versión de PC."
+        },
+        {
+          "position": 6,
+          "gameId": 43428,
+          "recommendedVersionId": 102882,
+          "reason": "Continúa Far Cry 5 y es corto. Versión de PC."
+        },
+        {
+          "position": 7,
+          "gameId": 43445,
+          "recommendedVersionId": 102945,
+          "reason": "Entrega más reciente y con más contenido. Versión de PC."
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

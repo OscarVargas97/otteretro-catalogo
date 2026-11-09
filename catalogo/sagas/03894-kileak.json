@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61043",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kileak: The DNA Imperative",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Kileak: The DNA Imperative",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Deep beneath the South Pole permafrost, a crazed scientist has unearthed an ancient DNA code, dormant for over 2,000,000,000 years. Is this the discovery of the \"ultimate evolution\"? Or does he now hold the damnation of mankind in his grasp? Only YOU can stop him.\n\n* A REAL-TIME shooter where minutes are too long, hours not enough! In-future-tense!\n* Amazing 1st person view. You ARE a one-man assault squad.\n* An arsenal of weapons, ammunition and armor. Have you been doing your push-ups?\n* Robot assassins with even more advanced A.I. than the military's most powerful computers.\n* Secret rooms and strategy-oriented challenge where seconds count!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 20255,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo y control con stick."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con escalado."
+            }
+          ]
         },
         {
           "id": 61044,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 20255,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado con memory card; control con doble stick opcional."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos 3D de PS1 con baja resolución."
+            }
+          ],
+          "codes": [
+            "SCUS-94102"
+          ]
         },
         {
           "id": 61045,
@@ -64,12 +121,49 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 20255,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Un solo stick en PSP complica el control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña, emulación correcta."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2u13.jpg"
-      }
+      },
+      "ports": [
+        {
+          "id": 820,
+          "platform": "ps1",
+          "project": "KTDIR",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/NJH-1001/KTDIR",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     }
   ],
   "routes": []

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Date A Live: Rinne Utopia is a dating sim produced by Compile Heart and Sting Entertainment and the first game based on the Date A Live light novel franchise. The game introduces a new heroine named Sonogami Rinne. The only gameplay system is choosing which girl you want to talk to, and the game itself is centred on dating the heroines. Features animated CGs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -48,9 +54,16 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 11504,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLJM-61047",
+            "BLJM-61048"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2puz.jpg"
+      }
     },
     {
       "id": 40301,
@@ -74,6 +87,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Date A Live: Ars Install is a Japanese visual novel and the second game based on the Date A Live light novel franchise. It features a new characters named Maria Ars and Marina Ars. Chronologically the game takes place after the seventh volume in the light novel series. The game has eight endings based on the characters and one true ending.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -87,9 +106,16 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 11829,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLJM-61189",
+            "BLJM-61190"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5un4.jpg"
+      }
     },
     {
       "id": 40921,
@@ -113,6 +139,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Date A Live Twin Edition: Rio Reincarnation is a Japanese visual novel and the third game based on the Date A Live light novel franchise. It features the stories from the first two games, Rinne Utopia and Ars Install, as well as a sequel story set after the first two games, Rio Reincarnation. Rio Reincarnation can be started after either clearing the first two stories or clearing the digest version of the first two stories.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -128,7 +160,10 @@
           "igdbId": 11830,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3urv.jpg"
+      }
     },
     {
       "id": 43974,
@@ -140,6 +175,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "104067",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Date A Live: Ren Dystopia",
           "source": "igdb",
@@ -148,6 +189,12 @@
         {
           "field": "original_name",
           "value": "Date A Live: Ren Dystopia",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Play as Shido and unravel the secrets of the mysterious spirit Ren in the visual novel follow-up to Date A Live: Rio Reincarnation, based on the acclaimed light novel and anime series.",
           "source": "igdb",
           "manual": false
         },
@@ -165,7 +212,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 114150,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo de la novela visual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo con mando, con guardado y saltos de texto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución limitada de PS4."
+            }
+          ]
         },
         {
           "id": 104067,
@@ -174,10 +242,66 @@
           "year": 2024,
           "igdbId": 114150,
           "steamAppId": 2627780,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que PS4."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón o mando, con guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y opciones gráficas."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7mm8.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/5a4f1f43b549b302f141eef356f3852d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/7672c5e94976e73a8ceaced625d484bf.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1379,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40277,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 40301,
+          "reason": "2014"
+        },
+        {
+          "position": 3,
+          "gameId": 40921,
+          "reason": "2015"
+        },
+        {
+          "position": 4,
+          "gameId": 43974,
+          "reason": "2020"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

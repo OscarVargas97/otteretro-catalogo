@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "105558",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Expanse: A Telltale Series",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Expanse: A Telltale Series",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the near future on the outskirts of the asteroid belt, a bloody mutiny breaks loose on the Artemis. You take the role of XO Camina Drummer, where your choices determine the fate of the ship. What will you do with the truth, Bosmang?",
           "source": "igdb",
           "manual": false
         },
@@ -83,7 +95,12 @@
           "igdbId": 185239,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/25d6ebc3f18f18be86b3e48b3aa24d9d.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/2f9e2b5cf0b130e6316aa43850581086.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/36e04ba5cc871b368cb111192d706d73.png"
+      }
     },
     {
       "id": 47624,
@@ -95,6 +112,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113079",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Expanse: Osiris Reborn",
           "source": "igdb",
@@ -103,6 +126,12 @@
         {
           "field": "original_name",
           "value": "The Expanse: Osiris Reborn",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Expanse: Osiris Reborn is a third-person Action RPG set in The Expanse universe. You’re no hero — just a merc caught in the wrong place at the wrong time, trying to hold your crew together and keep the ship up and running. Your choices will shape your story.",
           "source": "igdb",
           "manual": false
         },
@@ -139,8 +168,33 @@
           "igdbId": 347869,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6091b5047eb539297b1f23919fd963b6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2f2eb9099a6cfbba208113179bce672e.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/fb9801f8859096ddc819cbc84c5539ec.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3463,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 44469,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 47624,
+          "reason": "2027"
+        }
+      ]
+    }
+  ]
 }

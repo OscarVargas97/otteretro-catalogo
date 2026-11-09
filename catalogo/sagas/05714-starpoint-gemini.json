@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115705",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Starpoint Gemini 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Starpoint Gemini 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Captain your own space ship and roam the galaxy in 3D in this tactical space simulator with tons of RPG depth ! Space has never looked so inviting - but images can betray...",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,12 @@
           "igdbId": 8818,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b1a3f5837d7acb688b1c1980c175f20d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/99c21323790ff1b0d80e980918d15f0b.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/e4d158c2fb9de2080b2405b21027d836.png"
+      }
     },
     {
       "id": 49109,
@@ -71,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115823",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Starpoint Gemini Warlords",
           "source": "igdb",
@@ -79,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Starpoint Gemini Warlords",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A unique blend of space sim, RPG and 4X games. Conduct research and construction in your own gigantic space station, command your war fleets and heroic companions to invade enemy territory, build up your stronghold, trade, mine, salvage and remind your enemies why they fear you.",
           "source": "igdb",
           "manual": false
         },
@@ -107,8 +136,33 @@
           "igdbId": 23905,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8578599928f2e5f2eb348964b20ce615.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b8e8d8c36c2c061505f275bb913dbdc5.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/952285b9b7e7a1be5aa7849f32ffff05.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3515,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 49045,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 49109,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

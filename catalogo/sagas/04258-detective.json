@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "69660",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Detective: Stella Porta case",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Detective: Stella Porta case",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Detective: Stella Porta Case, puts you in the shoes of a detective who investigates three strange disappearances. In all cases there is a contract signed by the disappeared, that contract is from an organization called \"Stella Porta\".",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 249072,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01005AB01DAD0000"
+          ]
         }
       ],
       "images": {
@@ -106,6 +121,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111619",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Detective: Minerva Case",
           "source": "igdb",
@@ -114,6 +135,12 @@
         {
           "field": "original_name",
           "value": "Detective: Minerva Case",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "DETECTIVE Minerva Case is a crime deduction and solving game, with an adult and original story. Visit the crime scene, look for all the evidence and understand what happened.",
           "source": "igdb",
           "manual": false
         },
@@ -158,7 +185,10 @@
           "igdbId": 275334,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co87ey.jpg"
+      }
     },
     {
       "id": 47414,
@@ -170,6 +200,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112544",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Detective: The Test",
           "source": "igdb",
@@ -178,6 +214,12 @@
         {
           "field": "original_name",
           "value": "Detective: The Test",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Test your detective instincts across three challenging cases. No hints, no help—just you, your intuition, and your ability to piece together the truth. Can you solve the mystery?",
           "source": "igdb",
           "manual": false
         },
@@ -206,8 +248,36 @@
           "igdbId": 336114,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9jzq.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1919,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 28075,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 47070,
+          "reason": "2024"
+        },
+        {
+          "position": 3,
+          "gameId": 47414,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

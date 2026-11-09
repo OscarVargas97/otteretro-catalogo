@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "117060",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dune: Imperium",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dune: Imperium",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Dune: Imperium, you'll step into the role of one of the leaders of the Great Houses of the Imperium in a struggle to control the planet Arrakis and the invaluable Spice it provides.\n\nThe game plays out in a series of ten rounds, each of which is defined by a new Conflict on the surface of the planet; some award critical resources, and some provide Victory Points that will propel you to dominance. But choose your battles wisely: spread your forces too thin, and you'll find your enemies growing too strong to oppose.\n\nEach round, you'll draw a hand of five cards from your deck, which will get stronger over the course of the game as you acquire new cards. Each card can be played in one of two ways: To send an Agent out into the Imperium to gather resources, or to Reveal at the end of the round to purchase new powerful cards. You must maintain a careful balance to get the most of the resources available to you. How will you find your path?\n\nAs your game progresses, you'll vie for Influence with four factions of the Imperium: The Emperor, the economically powerful Spacing Guild, the mysterious Bene Gesserit, and the ferocious Fremen of the deep deserts. Earning Influence among the various groups helps you to earn the Victory Points you need...but will you compete with your rivals for their favor, or abandon alliances to pursue other opportunities?\n\nMany strategies are at your disposal, and many paths to victory. The cards are dealt. The choice is yours. The Imperium awaits.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 263201,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6738023cd595573ab21ae90ace403670.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/da9c95526a74cd7acbe3276b30f59b73.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/21120b5b9040b874d4d98edb8eed9626.png"
+      }
     },
     {
       "id": 50062,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "118066",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dune: Spice Wars",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Dune: Spice Wars",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dune: Spice Wars is a real-time strategy game with 4X elements, from the developers of the critically acclaimed Northgard. Set in Frank Herbert’s groundbreaking Dune universe, you must lead your faction and battle for control and dominance over the harsh desert planet of Arrakis. Best your opponents through political intrigue, crush them in combat, and undermine them with your network of illusive spies.",
           "source": "igdb",
           "manual": false
         },
@@ -115,8 +144,33 @@
           "steamAppId": 1605220,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a2cefe0b65384604c9b0892d0812d55e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f2735a800fe6b68a5117504cbec84752.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/43e3f815cf7fe4dc813ba16eef04e1da.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3521,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 50062,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 49693,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

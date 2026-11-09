@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A SNES platformer loosely based on the movie The Wizard of Oz. The game allows the player to play as all three of Dorothy's friends, as well as Dorothy herself.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -78,6 +84,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Wizard of Oz: Beyond the Yellow Brick Road, known in Japan as RIZ-ZOAWD, is a role-playing video game developed by Media.Vision for the Nintendo DS. The game is an adaptation of L. Frank Baum's 1900 novel The Wonderful Wizard of Oz, using its characters, locations and plot. The game was originally published in Japan by D3 Publisher on December 25, 2008. Xseed Games published the game in North America on September 29, 2009.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -91,7 +103,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 21116,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "COZE"
+          ]
         }
       ],
       "images": {
@@ -122,6 +137,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A match-puzzle game based on the 2013 CGI animated film.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -135,7 +156,11 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 57055,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BDTE",
+            "CTR-P-BDTP"
+          ]
         }
       ],
       "images": {
@@ -143,5 +168,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1429,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 647,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 3812,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 4618,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

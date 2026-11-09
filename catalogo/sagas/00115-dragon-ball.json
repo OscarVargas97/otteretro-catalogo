@@ -3,7 +3,7 @@
   "name": "Dragon Ball",
   "igdbKind": "franchise",
   "igdbId": 56,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1993,
       "igdbId": 2545,
       "popularity": 32,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "264",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dragon Ball Z",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Super Butouden",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The first fighting game bearing the Dragon Ball license, Super Butouden covers some of the series's key battles (from Goku's battle with Piccolo to the Cell Games).",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El primer juego de lucha con la licencia de Dragon Ball. Super Butouden abarca algunas de las batallas clave de la serie, desde la pelea de Goku con Piccolo hasta los Juegos de Cell.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 2545,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles clásicos de SNES."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona nativo sin latencia añadida."
+            }
+          ]
         },
         {
           "id": 265,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 2545,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido (sin verificar)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Posibles ayudas de emulación."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel salvo emulación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -84,6 +144,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Super Butouden 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The second installment of the Super Butoden series focuses on the battles during (and shortly after) the \"Cell Saga\" arc of the Dragon Ball series. It is one of the few games in the series to focus on stories from the series's animated films.\n\nAlthough having a French release, the first time the game was released in North America was when it was distributed as a bonus digital copy for the consumers who pre-ordered Dragon Ball Z: Extreme Butouden. This version was untranslated from Japanese and still with the Japanese title.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La segunda entrega de la serie Super Butouden se centra en las batallas durante (y poco después de) el arco de la «Saga de Cell» de Dragon Ball. Es uno de los pocos juegos de la serie que se basan en historias de sus películas animadas.\n\nAunque tuvo un lanzamiento en Francia, la primera vez que el juego salió en Norteamérica fue como copia digital de regalo para los consumidores que reservaron Dragon Ball Z: Extreme Butouden. Esa versión no estaba traducida del japonés y conservaba el título japonés.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -131,6 +203,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The third and final installment of the original Super Butouden trilogy brings the series to the Majin Buu Saga of the Dragon Ball Z story.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La tercera y última entrega de la trilogía original de Super Butouden lleva la serie hasta la Saga de Majin Buu de la historia de Dragon Ball Z.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1994",
           "source": "igdb",
@@ -172,6 +256,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Hyper Dimension",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball Z: Hyper Dimension is a 2D fighting game and the last DBZ game made for the Super Famicom (SNES). It is based around the most memorable battles from DBZ and introduces more traditional and fluid combat mechanics.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Hyper Dimension es un juego de lucha 2D y el último juego de DBZ creado para la Super Famicom (SNES). Se basa en las batallas más memorables de DBZ e introduce una mecánica de combate más tradicional y fluida.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -219,6 +315,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: The Legacy of Goku II was released on June 17, 2003. The plot of the game picks up where The Legacy of Goku left off, and continues until the end of the Cell Games Saga when Gohan defeats the evil android Cell. The game introduced several new concepts to the series. The first was transformations, which allowed characters to become temporarily stronger, at the cost of slowly draining their energy. It also introduced the scouter, which allowed players to look up the stats of other characters in the game, as well as basic information about them. The game also introduced charged melee attacks, which allowed characters to unleash a powerful physical strike after a short charging period. The game also allowed characters to further supplement their stats with capsules that were scattered around the game world. Despite being titled \"The Legacy of Goku\" this game featured the most limited play as the character Goku.\n\nDue to the game's success, a second version was released titled Dragon Ball Z: The Legacy of Goku II International exclusive to Japan on July 23, 2004. In this version all characters were given new profile images and their names were reverted to their original Japanese. However, Mister Satan still retains his English name \"Hercule\" on the front of his parade float.\n\n[Source] - Wikipedia.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: The Legacy of Goku II salió a la venta el 17 de junio de 2003. La trama retoma donde terminó The Legacy of Goku y continúa hasta el final de la Saga de los Juegos de Cell, cuando Gohan derrota al malvado androide Cell. El juego introdujo varios conceptos nuevos en la serie. El primero fueron las transformaciones, que permitían a los personajes volverse temporalmente más fuertes a costa de perder energía poco a poco. También introdujo el scouter, que permitía consultar las estadísticas de otros personajes del juego, así como información básica sobre ellos. Además, incorporó los ataques cuerpo a cuerpo cargados, que permitían liberar un poderoso golpe físico tras un breve periodo de carga. El juego también permitía mejorar las estadísticas con cápsulas dispersas por el mundo del juego. Pese a llamarse «The Legacy of Goku», esta entrega ofrecía el modo de juego más limitado con el personaje de Goku.\n\nDebido al éxito del juego, se lanzó una segunda versión, titulada Dragon Ball Z: The Legacy of Goku II International, exclusiva de Japón, el 23 de julio de 2004. En esta versión, todos los personajes recibieron nuevas imágenes de perfil y sus nombres volvieron a ser los originales en japonés. Sin embargo, Mister Satán conserva su nombre en inglés, «Hercule», en la parte delantera de su carroza de desfile.\n\n[Fuente] - Wikipedia.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -232,14 +340,34 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 19834,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ALFE",
+            "ALFP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/fae504c7f3bdce5b17da7664b3efeded.png",
         "hero": "https://cdn2.steamgriddb.com/hero/a5a8cd6b5daceee703832115ea4e73e6.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/1fbcf885f8f5c9afc9f37188b3f00afc.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 686,
+          "platform": "gba",
+          "project": "DragonBallZLegacyofGokuIIRecomp",
+          "kind": "recomp",
+          "toolchain": "gbarecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/DragonBallZLegacyofGokuIIRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "mGBA"
+        }
+      ]
     },
     {
       "id": 1708,
@@ -263,6 +391,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Heroes and villains collide in the latest Dragon Ball Z brawler. Dragon Ball Z: Taiketsu lets you play as one of 15 of the greatest warriors from the DBZ universe, including the mighty Broly, in a fight for dominance. Unleash devastating combos and super moves alone or against friends in huge multiplayer battles. You can fight on land or in the air, but just don't be caught off guard.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Héroes y villanos chocan en el último juego de lucha de Dragon Ball Z. Dragon Ball Z: Taiketsu te permite jugar con uno de 15 de los guerreros más grandes del universo de DBZ, incluido el poderoso Broly, en una lucha por la supremacía. Desata combos devastadores y superataques en solitario o contra amigos, en enormes batallas multijugador. Puedes luchar en tierra o en el aire, pero no te descuides.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -276,7 +416,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 2580,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BDBE",
+            "BDBP"
+          ]
         }
       ],
       "images": {
@@ -307,6 +451,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Aerial Assault Begins!\n\nPick your DBZ Dream Team and shake the Dragon Ball Z universe with free-flight combat! Bombard opponents with punishing attacks on the ground and in the air. It's thunderous DBZ fighting unlike anything you've ever seen before!\n\n-Fight as one of 15 characters\n-Uncover alternate endings to famous DBZ storylines\n-Survive tag team mayhem for 2 players via Game Boy Advance Game Link Cable\n-Upgrade fighting skills as you advance",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Comienza el asalto aéreo!\n\n¡Elige tu equipo soñado de DBZ y sacude el universo de Dragon Ball Z con combates de vuelo libre! Bombardea a los oponentes con ataques demoledores en el suelo y en el aire. ¡Es una lucha de DBZ atronadora como nunca has visto antes!\n\n- Lucha con uno de 15 personajes\n- Descubre finales alternativos de historias famosas de DBZ\n- Sobrevive al caos de equipos para 2 jugadores mediante el cable Game Link de Game Boy Advance\n- Mejora tus habilidades de lucha a medida que avanzas",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -320,7 +476,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 2576,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AZJE",
+            "AZJP"
+          ]
         }
       ],
       "images": {
@@ -351,6 +511,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: Buu's Fury is the third and final game in the series. It was released on September 14, 2004 in North America. The game focuses on the final parts of the Dragon Ball Z series (season 7), namely the battles with Majin Buu. The game added several new additions to the series. First, the game added equipment, which could be equipped to characters to alter their stats and provide various other benefits. The game also allowed players to allocate their own stat points, of which three were given per level. Also added was the ability to block by holding the R button, and also to energy block by holding the B button while blocking. Using the energy block slowly drains the user's energy gauge. Both techniques greatly decrease the amount of damage that is received from attacks. The game also added various other features such as fusions and the ability to transform into a Super Saiyan 3. Although many features were added, the ability to use charge attacks by holding and releasing the A button was eliminated.\n\nThe dialogues used in the English edition of the game are very similar, and sometimes identical, to the ones used in the English dubbed animated series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Buu's Fury es la tercera y última entrega de la serie. Se lanzó el 14 de septiembre de 2004 en Norteamérica. El juego se centra en las partes finales de la serie Dragon Ball Z (temporada 7), es decir, las batallas contra Majin Buu. Añadió varias novedades a la serie. En primer lugar, incorporó equipamiento, que podía equiparse a los personajes para alterar sus estadísticas y ofrecer otros beneficios. El juego también permitía al jugador asignar sus propios puntos de estadísticas, de los que se obtenían tres por nivel. Además, se añadió la posibilidad de bloquear manteniendo pulsado el botón R, y de bloquear con energía manteniendo pulsado el botón B mientras se bloquea. Usar el bloqueo de energía agota lentamente el medidor de energía del usuario. Ambas técnicas reducen considerablemente el daño recibido por los ataques. El juego también incluía otras funciones, como las fusiones y la posibilidad de transformarse en Super Saiyajin 3. Aunque se añadieron muchas funciones, se eliminó la posibilidad de usar ataques cargados manteniendo y soltando el botón A.\n\nLos diálogos de la edición en inglés del juego son muy parecidos, y a veces idénticos, a los de la serie animada doblada al inglés.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -364,14 +536,47 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 19835,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BG3E"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/1dc43796fb1b397a7f2b43180068b580.png",
         "hero": "https://cdn2.steamgriddb.com/hero/c7c46d4baf816bfb07c7f3bf96d88544.png",
         "logo": "https://cdn2.steamgriddb.com/logo/4ef42b32bccc9485b10b8183507e5d82.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 684,
+          "platform": "gba",
+          "project": "DragonBallZBuusFuryRecomp",
+          "kind": "recomp",
+          "toolchain": "GBARecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/novapowers0/DragonBallZBuusFuryRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "mGBA"
+        },
+        {
+          "id": 685,
+          "platform": "gba",
+          "project": "DragonBallZBuusFuryRecomp",
+          "kind": "recomp",
+          "toolchain": "gbarecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/DragonBallZBuusFuryRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "mGBA"
+        }
+      ]
     },
     {
       "id": 1787,
@@ -395,6 +600,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Join Goku in his very first epic adventure as he defends the earth from the relentless Red Ribbon Army. Start down his path to power, and help turn an ordinary boy into the ultimate champion.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Acompaña a Goku en su primera gran aventura mientras defiende la Tierra del implacable Ejército Lazo Rojo. Emprende su camino hacia el poder y ayuda a convertir a un chico corriente en el campeón definitivo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -408,7 +625,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 6386,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BDVE",
+            "BDVP"
+          ]
         }
       ],
       "images": {
@@ -439,6 +660,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball GT: Transformation is a Game Boy Advance action game based on the Japanese cartoon Dragon Ball GT. Transformation follows the Dragon Ball GT storyline from the Child Goku Saga to the Baby Saga. You can create three-man teams from seven playable characters--such as Goku, Trunks, and Uub--and choose who you control in the middle of a battle.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball GT: Transformation es un juego de acción para Game Boy Advance basado en la serie animada japonesa Dragon Ball GT. Transformation sigue la historia de Dragon Ball GT desde la Saga del Goku niño hasta la Saga del Bebé. Puedes crear equipos de tres personajes con siete personajes jugables, como Goku, Trunks y Uub, y elegir a quién controlas en mitad de una batalla.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -452,7 +685,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 24269,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BT4E"
+          ]
         }
       ],
       "images": {
@@ -483,6 +719,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: Collectible Card Game is a video game for the Game Boy Advance based on the Dragon Ball Z Collectible Card Game of the Dragon Ball franchise. Its Story Mode covers from the start of the Saiyan Saga to the end of the Cell Games Saga.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Collectible Card Game es un videojuego para Game Boy Advance basado en el juego de cartas coleccionables Dragon Ball Z de la franquicia Dragon Ball. Su modo historia abarca desde el inicio de la Saga de los Saiyajin hasta el final de la Saga de los Juegos de Cell.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -496,7 +744,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 78230,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ADZE"
+          ]
         }
       ],
       "images": {
@@ -527,6 +778,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Supersonic Warriors 2 is the DS sequel to the GBA fighting game Dragon Ball Z: Supersonic Warriors, based on Akira Toriyama's Dragon Ball series.\n\nThe game features one-on-one battles between over 30 characters with their own movement and combos. There is a main path in the story mode that coincides with Toriyama's story for every character and some other paths played out as \"what if?\" scenarios, adding replayability to the game. Next to the story mode, there is the Z battle, the VS battle, Maximum, Free battle and Practice mode. The game has three difficulty levels. In team battles the player can tap the touchscreen to select another fighter. Touch can also be used to perform a powerful combined attack when it is available.\n\nThe sequel moves away from the level system of the first game, where reaching a new character level led to upgraded statistics, or new sprites and attacks. This is replaced by individual characters that become available when a sufficient amount of Dragon Points is available.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Supersonic Warriors 2 es la secuela para DS del juego de lucha de GBA Dragon Ball Z: Supersonic Warriors, basado en la serie Dragon Ball de Akira Toriyama.\n\nEl juego presenta combates uno contra uno entre más de 30 personajes, cada uno con sus propios movimientos y combos. El modo historia tiene un camino principal que coincide con la historia de Toriyama para cada personaje, y otros caminos que se desarrollan como escenarios de «¿y si...?», lo que añade rejugabilidad. Además del modo historia, hay batalla Z, batalla VS, Maximum, batalla libre y modo práctica. El juego tiene tres niveles de dificultad. En los combates por equipos, el jugador puede tocar la pantalla táctil para seleccionar a otro luchador. El tacto también sirve para ejecutar un poderoso ataque combinado cuando está disponible.\n\nLa secuela se aleja del sistema de niveles del primer juego, en el que alcanzar un nuevo nivel de personaje suponía mejorar las estadísticas o obtener nuevos sprites y ataques. En su lugar, aparecen personajes individuales que se desbloquean al reunir suficientes Puntos Dragón.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -540,7 +803,11 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 2577,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "A2SE",
+            "ADBP"
+          ]
         }
       ],
       "images": {
@@ -568,6 +835,18 @@
           "field": "original_name",
           "value": "Dragon Ball Kai: Ultimate Butouden",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball Kai: Ultimate Butouden is a fighting video game based on the anime series Dragon Ball Kai.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Kai: Ultimate Butouden es un videojuego de lucha basado en la serie de anime Dragon Ball Kai.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -615,6 +894,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: Harukanaru Densetsu is a card based role-playing video game for the Nintendo DS. The game takes place from the beginning of the Saiyan Saga to the end of the Cell Saga. Players choose from one of the four main character, Goku, Gohan, Piccolo, and Vegeta. Other characters also appear, but only as either enemies or support cards.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Harukanaru Densetsu es un videojuego de rol por cartas para Nintendo DS. El juego transcurre desde el inicio de la Saga Saiyajin hasta el final de la Saga de Cell. Los jugadores eligen entre uno de los cuatro personajes principales: Goku, Gohan, Piccolo y Vegeta. También aparecen otros personajes, pero solo como enemigos o como cartas de apoyo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -628,7 +919,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 21426,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "A5LE"
+          ]
         }
       ],
       "images": {
@@ -659,6 +953,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball: Origins follows Goku and his clever sidekick Bulma as they travel the world overcoming enemies and obstacles to collect the 7 Dragon Balls. In the shoes of Goku, the player must protect Bulma from incoming enemy attacks using special skills, such as fighting with his power pole, or unleashing a kamehameha. Combined with Bulma’s ability to invent machines and weapons, the intrepid pair make a formidable team able to defeat even the strongest enemies or trickiest of obstacles.\n\nThe innovative controls mean the player uses only the touch pad to control Goku. Players must draw lines or shapes to direct the character and control the action by tapping on the screen, for example a double tap on Goku followed by tapping on the Ka-me-ha-me-ha letters unleashes his devastating signature move.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball: Origins sigue a Goku y a su astuta compañera Bulma mientras recorren el mundo superando enemigos y obstáculos para reunir las 7 Esferas del Dragón. En la piel de Goku, el jugador debe proteger a Bulma de los ataques enemigos usando habilidades especiales, como luchar con su bastón de poder o lanzar un kamehameha. Combinada con la capacidad de Bulma para inventar máquinas y armas, la intrépida pareja forma un equipo formidable capaz de derrotar incluso a los enemigos más fuertes o a los obstáculos más complicados.\n\nLos controles innovadores hacen que el jugador controle a Goku usando solo la pantalla táctil. Los jugadores deben trazar líneas o formas para dirigir al personaje y controlar la acción tocando la pantalla; por ejemplo, un doble toque sobre Goku seguido de tocar las letras de Ka-me-ha-me-ha desata su devastador movimiento característico.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -672,7 +978,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 19308,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CDZE",
+            "CDZP"
+          ]
         }
       ],
       "images": {
@@ -703,6 +1013,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The game follows the Saiyan Saga of the original DBZ story starting from the World Tournament and Goku's triumphant defeat of Piccolo. Players take the role of Goku and travel the DBZ universe from jungle to Snow Mountain on their quest to victory. Dragon Ball Z: Attack of the Saiyans features a host of original features which will be sure to thrill fans, such as brand new gameplay, unique game modes, fun side quests and content never before seen in either the anime or manga series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El juego sigue la Saga Saiyajin de la historia original de DBZ, desde el Torneo Mundial y la victoria triunfal de Goku sobre Piccolo. Los jugadores asumen el papel de Goku y recorren el universo de DBZ desde la selva hasta la Montaña Nevada en su búsqueda de la victoria. Dragon Ball Z: Attack of the Saiyans incluye numerosas características originales que emocionarán a los fans, como una jugabilidad completamente nueva, modos de juego únicos, misiones secundarias divertidas y contenido que nunca antes se había visto en la serie de anime ni en el manga.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -716,7 +1038,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 21196,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BRPE",
+            "BRPP"
+          ]
         }
       ],
       "images": {
@@ -747,6 +1073,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In Dragon Ball: Origins 2, players battle through the Red Ribbon Army saga covering Goku’s first encounters with the nefarious Red Ribbon Army up to the resurrection of Upa’s father, a member of the native tribe who serve as the guardians of the mystical Korin Tower. The new action-adventure game includes an array of features including the ability to play as different characters along the way and the option to team up with a friend for co-op multiplayer challenges.\n\nExtra game included within:\n\n+ Dragon Ball (Famicom) [only available within the JP version]",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En Dragon Ball: Origins 2, los jugadores luchan a través de la saga del Ejército Lazo Rojo, desde los primeros encuentros de Goku con el malvado Ejército Lazo Rojo hasta la resurrección del padre de Upa, miembro de la tribu nativa que custodia la mística Torre Korin. El nuevo juego de acción y aventura incluye diversas características, como la posibilidad de jugar con distintos personajes a lo largo del camino y la opción de unirse a un amigo para desafíos multijugador cooperativos.\n\nJuego extra incluido:\n\n+ Dragon Ball (Famicom) [solo disponible en la versión japonesa]",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -760,7 +1098,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 20412,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BDBE",
+            "BDBP"
+          ]
         }
       ],
       "images": {
@@ -791,6 +1133,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: Extreme Butōden (ドラゴンボールZ 超究極武闘伝, Doragon Bōru Z Chō Kyūkyoku Butōden, lit. \"Dragon Ball Z Super Ultimate Fighter\") is an fighting game released on the Nintendo 3DS.\n\nThe game was first announced on the April issue of Shueisha's magazine on Saturday that the 2D fighting game will arrive on the 3DS this summer.\n\nThe game features over 100 fighters in both one-on-one and team battles. It will have a story mode where you go through sagas as either the heros or villains. A demo has been released for Japanese 3DS's with the help of a code. In the demo you can play as Goku, Vegeta, Teen Gohan, and Buu. You can play on 5 stages.\n\nIt was released on June 11, 2015 in Japan. On June 9, 2015, two days before the Japanese release, there were reports that the game was classified on June 4th, on the Australian ratings board, which hinted the localization of the game. It was confirmed by Bandai Namco on June 23 that the game will be released in the West in mid to late October.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Extreme Butōden (ドラゴンボールZ 超究極武闘伝, Doragon Bōru Z Chō Kyūkyoku Butōden, literalmente «Dragon Ball Z Super Ultimate Fighter») es un videojuego de lucha lanzado para Nintendo 3DS.\n\nEl juego se anunció por primera vez en el número de abril de la revista de Shueisha, publicado el sábado, en el que se indicaba que el juego de lucha 2D llegaría a la 3DS este verano.\n\nEl juego cuenta con más de 100 luchadores, tanto en combates uno contra uno como por equipos. Tendrá un modo historia en el que se avanza por las sagas como héroes o como villanos. Se publicó una demo para las 3DS japonesas mediante un código. En la demo se puede jugar con Goku, Vegeta, Gohan adolescente y Buu, en 5 escenarios.\n\nSe lanzó el 11 de junio de 2015 en Japón. El 9 de junio de 2015, dos días antes del lanzamiento japonés, hubo informes de que el juego había sido clasificado el 4 de junio por la junta de clasificación de Australia, lo que sugería su localización. Bandai Namco confirmó el 23 de junio que el juego saldría en Occidente a mediados o finales de octubre.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -804,7 +1158,10 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 20033,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BDVJ"
+          ]
         }
       ],
       "images": {
@@ -833,6 +1190,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "RPG based on the famous manga Dragon Ball. In the game the player has the possibility to fuse together the characters (using a special bracelet), in order to obtain new heroes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "RPG basado en el famoso manga Dragon Ball. En el juego, el jugador puede fusionar personajes (usando una pulsera especial) para obtener nuevos héroes.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -846,7 +1215,12 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 19314,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BDLE",
+            "CTR-P-BDLJ",
+            "CTR-P-BDLP"
+          ]
         }
       ],
       "images": {
@@ -877,6 +1251,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Heroes: Ultimate Mission X is a card-based fighting game that is a portable-port of the arcade game Dragon Ball Heroes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Heroes: Ultimate Mission X es un juego de lucha por cartas, versión portátil del juego arcade Dragon Ball Heroes.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -890,7 +1276,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 26865,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BD9J"
+          ]
         }
       ],
       "images": {
@@ -918,6 +1307,18 @@
           "field": "original_name",
           "value": "Dragon Ball Heroes",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball Heroes is a Japanese arcade game developed by Dimps. The game allows the usage of many characters from the Dragon Ball series, as well as characters new to the series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Heroes es un videojuego de arcade japonés desarrollado por Dimps. El juego permite usar muchos personajes de la serie Dragon Ball, así como personajes nuevos en la serie.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -960,6 +1361,18 @@
           "field": "original_name",
           "value": "DragonBall Heroes: Ultimate Mission 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The expanded world of Dragon Ball returns to 3DS with another card battle game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El mundo expandido de Dragon Ball regresa a la 3DS con otro juego de batallas por cartas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1007,6 +1420,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: Goku Hishou-den is a RPG/Strategy oriented game, as the player chooses when to move, charge energy, punch, kick, or do any number of different special attacks, then watches as the events take place. The player must take an active part in dodging attacks by pressing appropriate buttons at just the right moments.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Goku Hishou-den es un juego de rol y estrategia en el que el jugador decide cuándo moverse, cargar energía, golpear, patear o usar cualquiera de los distintos ataques especiales, y luego observa cómo se desarrollan los hechos. El jugador debe participar activamente esquivando los ataques, pulsando los botones adecuados en el momento justo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1994",
           "source": "igdb",
@@ -1046,6 +1471,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Goku Gekitou-den",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball Z: Goku Gekitou-den takes place immediately after Goku's battle with Vegeta and ends with Goku's final battle with Frieza (similar to the 1991 video game Dragon Ball Z II: Gekishin Freeza). Most characters from the Namek Saga can be fought during the story mode, including ones such as Zarbon and Frieza's transformed states.\n\nThe game features five playable characters, as well as Goku's Super Saiyan transformation. In Goku Gekitōden, moving about and fighting is in real time, unlike its predecessor. The game also features many extras, such as minigames and a tournament mode.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Goku Gekitō-den transcurre inmediatamente después de la batalla de Goku con Vegeta y termina con la batalla final de Goku contra Freezer (similar al videojuego de 1991 Dragon Ball Z II: Gekishin Freeza). En el modo historia se puede luchar contra la mayoría de los personajes de la Saga de Namek, incluidos Zarbon y las formas transformadas de Freezer.\n\nEl juego presenta cinco personajes jugables, además de la transformación de Goku en Super Saiyajin. En Goku Gekitō-den, moverse y luchar se hace en tiempo real, a diferencia de su predecesor. El juego también incluye muchos extras, como minijuegos y un modo torneo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1091,6 +1528,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: Legendary Super Warriors is a mixture of a card game and a turn-based fighting game for the Game Boy Color. The game is played with original in-game cards for attacks, techniques and support items and initially has only two modes trade and story. Legendary Super Warriors’ story spans from the Saiyan saga to the end of the Buu Saga. Once beaten, a battle mode is unlocked, allowing players to square off with random enemies. Once the game is beaten, any character is usable in any battle, such as Frieza vs. Cell.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Legendary Super Warriors es una mezcla de juego de cartas y de lucha por turnos para Game Boy Color. Se juega con cartas originales del juego para ataques, técnicas y objetos de apoyo, y al principio solo tiene dos modos: intercambio e historia. La historia de Legendary Super Warriors abarca desde la Saga de los Saiyajin hasta el final de la Saga de Buu. Una vez superado, se desbloquea un modo batalla que permite enfrentarse a enemigos aleatorios. Al terminar el juego, cualquier personaje puede usarse en cualquier batalla, como Freezer contra Cell.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -1120,8 +1569,14 @@
       "year": 2016,
       "igdbId": 19449,
       "popularity": 144,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "19377",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dragon Ball: Xenoverse 2",
@@ -1132,6 +1587,18 @@
           "field": "original_name",
           "value": "Dragon Ball: Xenoverse 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "DRAGON BALL XENOVERSE 2 builds upon the highly popular DRAGON BALL XENOVERSE with enhanced graphics that will further immerse players into the largest and most detailed Dragon Ball world ever developed.\n\nDRAGON BALL XENOVERSE 2 will deliver a new hub city and the most character customization choices to date among a multitude of new features and special upgrades.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "DRAGON BALL XENOVERSE 2 parte del éxito de DRAGON BALL XENOVERSE con gráficos mejorados que sumergirán aún más a los jugadores en el mundo de Dragon Ball más grande y detallado jamás creado.\n\nDRAGON BALL XENOVERSE 2 incluirá una nueva ciudad central y la mayor cantidad de opciones de personalización de personajes hasta la fecha, junto con multitud de nuevas características y mejoras especiales.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1148,7 +1615,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 19449,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cargas."
+            }
+          ]
         },
         {
           "id": 19375,
@@ -1156,7 +1644,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 19449,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cargas largas, 1080p."
+            }
+          ]
         },
         {
           "id": 19376,
@@ -1165,7 +1674,28 @@
           "year": 2016,
           "igdbId": 19449,
           "steamAppId": 454650,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles, mods posibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento con SSD."
+            }
+          ]
         },
         {
           "id": 19377,
@@ -1173,7 +1703,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 19449,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cargas."
+            }
+          ]
         },
         {
           "id": 19378,
@@ -1181,7 +1732,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 19449,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cargas largas, 1080p."
+            }
+          ]
         },
         {
           "id": 19379,
@@ -1189,7 +1761,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 19449,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, mismos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y fps."
+            }
+          ]
         }
       ],
       "images": {
@@ -1205,8 +1798,14 @@
       "year": 2018,
       "igdbId": 36911,
       "popularity": 250,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "22860",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dragon Ball FighterZ",
@@ -1217,6 +1816,18 @@
           "field": "original_name",
           "value": "Dragon Ball FighterZ",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball FighterZ is born from what makes the Dragon Ball series so loved and famous: endless spectacular fights with its all-powerful fighters.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball FighterZ nace de lo que hace tan querida y famosa a la serie Dragon Ball: combates espectaculares e interminables protagonizados por sus luchadores todopoderosos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1233,7 +1844,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 36911,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Plantel completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cargas."
+            }
+          ]
         },
         {
           "id": 22859,
@@ -1241,7 +1873,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 36911,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Plantel completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "60 fps estables."
+            }
+          ]
         },
         {
           "id": 22860,
@@ -1250,7 +1903,28 @@
           "year": 2018,
           "igdbId": 36911,
           "steamAppId": 1725510,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Plantel completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado, mando o arcade."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "60 fps y alta resolución."
+            }
+          ]
         },
         {
           "id": 22861,
@@ -1258,7 +1932,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 36911,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Plantel completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cargas."
+            }
+          ]
         },
         {
           "id": 22862,
@@ -1266,7 +1961,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 36911,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Plantel completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "60 fps estables."
+            }
+          ]
         },
         {
           "id": 22863,
@@ -1274,7 +1990,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 36911,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Plantel completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, buen control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución, caídas ocasionales."
+            }
+          ],
+          "codes": [
+            "0100A250097F0000"
+          ]
         }
       ],
       "images": {
@@ -1293,6 +2033,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "30303",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Dragon Ball Heroes: World Mission",
           "source": "igdb",
@@ -1302,6 +2048,18 @@
           "field": "original_name",
           "value": "Super Dragon Ball Heroes: World Mission",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "- Deep card battle gameplay featuring over one-thousand cards & 350 characters from the Dragon Ball franchise. Includes Dragon Ball characters from different series, including Dragon Ball Super, Dragon Ball Xenoverse 2, and Dragon Ball FighterZ.\n\n- Embark on an epic journey as you interact with the Dragon Ball world and its characters through an arcade game.\n\n- Create your own missions.\n\n- Test your might and take the battle online.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "- Profundo juego de batallas por cartas con más de mil cartas y 350 personajes de la franquicia Dragon Ball. Incluye personajes de Dragon Ball de distintas series, como Dragon Ball Super, Dragon Ball Xenoverse 2 y Dragon Ball FighterZ.\n\n- Emprende una épica aventura interactuando con el mundo de Dragon Ball y sus personajes a través de un juego arcade.\n\n- Crea tus propias misiones.\n\n- Pon a prueba tu poder y disputa las batallas en línea.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1319,7 +2077,28 @@
           "year": 2019,
           "igdbId": 111054,
           "steamAppId": 798510,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 30304,
@@ -1327,7 +2106,31 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 111054,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, mismos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución."
+            }
+          ],
+          "codes": [
+            "0100E5E00C464000"
+          ]
         }
       ],
       "images": {
@@ -1343,8 +2146,14 @@
       "year": 2020,
       "igdbId": 114009,
       "popularity": 109,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "30595",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dragon Ball Z: Kakarot",
@@ -1355,6 +2164,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Kakarot",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Relive the story of Goku in Dragon Ball Z: Kakarot! Beyond the epic battles, experience life in the Dragon Ball Z world as you fight, fish, eat, and train with Goku. Explore the new areas and adventures as you advance through the story and form powerful bonds with other heroes from the Dragon Ball Z universe.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Revive la historia de Goku en Dragon Ball Z: Kakarot! Más allá de las batallas épicas, vive la vida en el mundo de Dragon Ball Z mientras luchas, pescas, comes y entrenas con Goku. Explora nuevas zonas y aventuras mientras avanzas en la historia y forjas lazos poderosos con otros héroes del universo de Dragon Ball Z.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1371,7 +2192,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 114009,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cargas."
+            }
+          ]
         },
         {
           "id": 30593,
@@ -1379,7 +2221,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 114009,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cargas largas, 1080p."
+            }
+          ]
         },
         {
           "id": 30594,
@@ -1388,7 +2251,28 @@
           "year": 2020,
           "igdbId": 114009,
           "steamAppId": 851850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento."
+            }
+          ]
         },
         {
           "id": 30595,
@@ -1396,7 +2280,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 114009,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cargas."
+            }
+          ]
         },
         {
           "id": 30596,
@@ -1404,7 +2309,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 114009,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cargas largas, 1080p."
+            }
+          ]
         },
         {
           "id": 30597,
@@ -1412,7 +2338,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 114009,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, mismos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y fps."
+            }
+          ]
         }
       ],
       "images": {
@@ -1428,8 +2375,14 @@
       "year": 2002,
       "igdbId": 2563,
       "popularity": 96,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "44296",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dragon Ball Z: Budokai",
@@ -1440,6 +2393,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Budokai",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join us on a wild ride through the best action cartoon series on TV, Dragonball Z. The story begins after Goku defeats Piccolo at the World Marital Arts Tournament and he comes to visit Master Roshi, when all of a sudden, his brother Raditz appears and kidnaps his son, Gohan, after he saves him he is sent to Other World to train with King Kai for for two more powerful Saiyan arriving one year later. This wild ride story takes you from the Saiyan to the Cell Games Saga.\n\nThere are also several options in the game: there is a world tournament mode where you could buy new moves and a practice mode where you can sharpen your skills before entering story mode. You could also summon Shenron when you collect all 7 Dragonballs. So, buckle up, hold on to your seat and enjoy the ride of Dragonball Z!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Acompáñanos en un viaje salvaje por la mejor serie de acción animada de la televisión, Dragon Ball Z. La historia comienza cuando Goku derrota a Piccolo en el Torneo Mundial de Artes Marciales y visita al Maestro Roshi; de repente aparece su hermano Raditz, que secuestra a su hijo Gohan. Tras rescatarlo, Goku es enviado al Otro Mundo para entrenar con Kaiosama durante un año, mientras llegan dos saiyajin aún más poderosos. Esta historia te lleva desde la Saga de los Saiyajin hasta la Saga de los Juegos de Cell.\n\nEl juego ofrece también varias opciones: un modo torneo mundial, donde puedes comprar nuevos movimientos, y un modo práctica para afinar tus habilidades antes de entrar en el modo historia. También puedes invocar a Shenron cuando reúnas las 7 esferas del dragón. ¡Así que abróchate el cinturón, agárrate bien y disfruta del viaje de Dragon Ball Z!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1456,7 +2421,33 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 2563,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando de GameCube menos cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Un poco más nítido que PS2."
+            }
+          ],
+          "codes": [
+            "DL-DOL-GD7E-USA",
+            "DL-DOL-GD7E-USA-01",
+            "DL-DOL-GD7P-EUR"
+          ]
         },
         {
           "id": 43568,
@@ -1464,7 +2455,35 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 2563,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de PS2."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja."
+            }
+          ],
+          "codes": [
+            "SLES-51233",
+            "SLES-51233-P-GER",
+            "SLES-51233-P/9087",
+            "SLUS-20591",
+            "SLUS-20591GH"
+          ]
         },
         {
           "id": 44296,
@@ -1472,7 +2491,28 @@
           "kind": "remaster",
           "year": 2012,
           "igdbId": 288866,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego con trofeos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más fluido y moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con retoques visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p a 60 fps."
+            }
+          ]
         },
         {
           "id": 44297,
@@ -1480,14 +2520,65 @@
           "kind": "remaster",
           "year": 2012,
           "igdbId": 288866,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego con logros."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más fluido y moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con retoques visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p a 60 fps."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/fc5d2ffcd6a10b1863e56d5ec5859bab.png",
         "hero": "https://cdn2.steamgriddb.com/hero/93c50ef27ca621e50cac3c72bf1b6229.png",
         "logo": "https://cdn2.steamgriddb.com/logo/e6a3684de5e80c535db4f65de1d27041.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 636,
+          "platform": "x360",
+          "project": "DBZ1",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/WistfulHopes/DBZ1",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary"
+        },
+        {
+          "id": 681,
+          "platform": "x360",
+          "project": "DBZ-Budokai-1-HD-Collection",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/novapowers0/DBZ-Budokai-1-HD-Collection",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary"
+        }
+      ]
     },
     {
       "id": 16648,
@@ -1499,6 +2590,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43819",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball Z: Budokai 2",
           "source": "igdb",
@@ -1508,6 +2605,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Budokai 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Go to the next level in the Dragon Ball Z saga. Dragon Ball Z: Budokai 2 improves upon the first installment by adding an all-new single player mode, new characters and explosive attacks. Experience the new match-ups, character cameos and challenging missions in \"Dragon World.\" Pick your favorite DBZ hero or enemy and take on a friend in \"Vs.\" and \"Tournament\" modes. If you're really good, you will soon come face-to-face with Buu, the most lethal DBZ villain.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Da el siguiente paso en la saga de Dragon Ball Z. Dragon Ball Z: Budokai 2 mejora la primera entrega con un modo para un jugador completamente nuevo, nuevos personajes y ataques explosivos. Vive los nuevos enfrentamientos, las apariciones de personajes y las misiones desafiantes de «Dragon World». Elige a tu héroe o enemigo favorito de DBZ y enfréntate a un amigo en los modos «Vs.» y «Torneo». Si eres realmente bueno, pronto te encontrarás cara a cara con Buu, el villano de DBZ más letal.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1524,7 +2633,32 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 2564,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando de GameCube menos cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con port diferente."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Algo más nítido, con progresivo."
+            }
+          ],
+          "codes": [
+            "DL-DOL-GZ3E-USA",
+            "DL-DOL-GZ3P-EUR"
+          ]
         },
         {
           "id": 43819,
@@ -1532,7 +2666,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 2564,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando de PS2 adecuado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS2."
+            }
+          ]
         },
         {
           "id": 81422,
@@ -1540,7 +2695,28 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 2565,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Reedición de PS2, mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Igual que la PS2 inicial."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Prácticamente idéntico."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS2."
+            }
+          ]
         }
       ],
       "images": {
@@ -1556,8 +2732,14 @@
       "year": 2007,
       "igdbId": 2254,
       "popularity": 283,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "48347",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dragon Ball Z: Budokai Tenkaichi 3",
@@ -1568,6 +2750,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Budokai Tenkaichi 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Budokai Tenkaichi 3 is a 1vs1 fighting game based on the anime/manga Dragon Ball by Akira Toriyama. It includes the apocalyptic battles and the essence of the Dragon Ball series following the main story of the popular manga. As in the previous games of the series, you'll have to select your character (over 162 characters with their own movements and combos) and fight against a friend or the computer in many different game modes with many different stages and weather/time conditions.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Budokai Tenkaichi 3 es un juego de lucha 1 contra 1 basado en el anime y el manga Dragon Ball, de Akira Toriyama. Incluye las batallas apocalípticas y la esencia de la serie Dragon Ball, siguiendo la historia principal del popular manga. Como en los juegos anteriores de la serie, deberás elegir tu personaje (más de 162 personajes, cada uno con sus propios movimientos y combos) y luchar contra un amigo o contra la computadora en muchos modos de juego diferentes, con numerosos escenarios y distintas condiciones climáticas y de hora del día.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1584,7 +2778,32 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 2254,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Plantel completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando clásico o movimiento."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con control extra."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "480p progresivo."
+            }
+          ],
+          "codes": [
+            "RVL-RDSE-USA",
+            "RVL-RDSP-EUR"
+          ]
         },
         {
           "id": 48348,
@@ -1592,14 +2811,57 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 2254,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Plantel completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando de PS2 preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión de referencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480i en PS2."
+            }
+          ],
+          "codes": [
+            "SLES-54945",
+            "SLES-54945/ANZ",
+            "SLES-54945/P",
+            "SLUS-21678"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/2fcd824d9156e24ad1f7344c8723ab5f.png",
         "hero": "https://cdn2.steamgriddb.com/hero/2488df38e83023b0ff8293b5fef87340.png",
         "logo": "https://cdn2.steamgriddb.com/logo/3f759649abddb57c47adfbbefebf9dcc.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 125,
+          "platform": "ps2",
+          "project": "Tenkaichi3Decomp",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/z3xox/Tenkaichi3Decomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 20008,
@@ -1623,6 +2885,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Heading back to the early days of the Dragon Ball story, players control Kid Goku as he sets out on fantastic adventures with his friends. The title faithfully reproduces the uniqueness and special humour of the early Dragon Ball series, while adding an original blend of action and adventure to the mix. With the original Japanese music and voiceover included for maximum authenticity, Dragon Ball: Revenge of King Piccolo offers fans a dazzling new experience with the characters and universe they know and love.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Volviendo a los primeros días de la historia de Dragon Ball, el jugador controla a Goku niño mientras se embarca en fantásticas aventuras junto a sus amigos. El título reproduce fielmente la singularidad y el humor especial de la primera etapa de Dragon Ball, a la vez que añade una mezcla original de acción y aventura. Incluye la música y las voces originales en japonés para lograr la máxima autenticidad, lo que ofrece a los fans una experiencia renovada con los personajes y el universo que conocen y aman.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -1636,7 +2910,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 19309,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R7GE-USA-B0",
+            "RVL-R7GP-EUR-B0"
+          ]
         }
       ],
       "images": {
@@ -1655,6 +2933,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "51148",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball Z: Budokai Tenkaichi 2",
           "source": "igdb",
@@ -1664,6 +2948,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Budokai Tenkaichi 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tenkaichi 2 is a fighting game with more than 120 playable characters, the biggest amount ever featured in a Dragon Ball game. The main Dragon Adventure mode follows an epic story mode that covers the first Dragon Ball Z saga (Saiyan Saga) right up to the last Dragon Ball GT saga (Dragon Saga), including all of the major battles, making it one of the most comprehensive Dragon Ball Z games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tenkaichi 2 es un juego de lucha con más de 120 personajes jugables, la mayor cantidad jamás incluida en un juego de Dragon Ball. El modo principal, Dragon Adventure, sigue una épica historia que abarca desde la primera saga de Dragon Ball Z (la Saga Saiyajin) hasta la última saga de Dragon Ball GT (la Saga del Dragón), incluyendo todas las batallas importantes, lo que lo convierte en uno de los juegos de Dragon Ball Z más completos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1680,7 +2976,34 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 2252,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando de PS2 preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480i en PS2."
+            }
+          ],
+          "codes": [
+            "SLES-54164",
+            "SLES-54164-ANZ",
+            "SLES-54164/P",
+            "SLUS-21441"
+          ]
         },
         {
           "id": 51148,
@@ -1688,7 +3011,33 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 291555,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, con modos de movimiento."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando clásico o movimiento."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con control extra."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "480p progresivo."
+            }
+          ],
+          "codes": [
+            "RVL-RDBE-USA",
+            "RVL-RDBP-EUR",
+            "RVL-RDBP-EUR-B0"
+          ]
         }
       ],
       "images": {
@@ -1707,6 +3056,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "53857",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball: The Breakers",
           "source": "igdb",
@@ -1716,6 +3071,18 @@
           "field": "original_name",
           "value": "Dragon Ball: The Breakers",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball: The Breakers is a 1-on-7 online asymmetrical action game in which a band of seven everyday humans tries to survive the Raider (a classic Dragon Ball rival such as Cell and Frieza) who will hunt and evolve into an unstoppable force.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball: The Breakers es un juego de acción asimétrico en línea de 1 contra 7, en el que un grupo de siete humanos corrientes intenta sobrevivir al Raider, un rival clásico de Dragon Ball como Cell o Freezer, que los cazará y evolucionará hasta convertirse en una fuerza imparable.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1732,7 +3099,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 182179,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 53857,
@@ -1741,7 +3129,28 @@
           "year": 2022,
           "igdbId": 182179,
           "steamAppId": 1692200,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 53858,
@@ -1749,7 +3158,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 182179,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 53859,
@@ -1757,7 +3187,31 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 182179,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y fps."
+            }
+          ],
+          "codes": [
+            "010093F011A26000"
+          ]
         }
       ],
       "images": {
@@ -1788,6 +3242,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: Ultimate Battle 22 gives you 22 playable characters, each with an arsenal of unique moves, kicks, spins, slashes, and specialties, an additional five bonus characters can be unlocked with one command, including Master Roshi, Kid Goku, Super Saiyan 3 Goku, Vegeto, and Mr. Hercule Satan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Ultimate Battle 22 ofrece 22 personajes jugables, cada uno con un arsenal de movimientos, patadas, giros, cortes y especialidades propias. Con un solo comando se pueden desbloquear otros cinco personajes adicionales, entre ellos el Maestro Roshi, Goku niño, Goku Super Saiyajin 3, Vegeto y Mr. Satán (Mr. Hercule Satan).",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -1801,7 +3267,18 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 2543,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00291",
+            "SLES-03736",
+            "SLES-03737",
+            "SLES-03738",
+            "SLES-03739",
+            "SLPS-00073",
+            "SLPS-91017",
+            "SLUS-01550",
+            "SLUS-01550GH"
+          ]
         }
       ],
       "images": {
@@ -1829,6 +3306,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: The Legend",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball Z: Legends is a fighting game which utilizes a unique system of play that is different from most other fighters. The graphics feature 2-D sprites in a three dimensional world. Although each battle begins on the ground, the majority of the action is featured skyward.\n\nThe story mode of the game is divided into episodes, and it encompasses all of Dragon Ball Z, featuring the most important battles of the series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Legends es un juego de lucha con un sistema de juego único, diferente de la mayoría de los juegos del género. Los gráficos presentan sprites 2D en un mundo tridimensional. Aunque cada combate comienza en el suelo, la mayor parte de la acción transcurre en el cielo.\n\nEl modo historia del juego se divide en episodios y abarca toda la serie Dragon Ball Z, con sus batallas más importantes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1876,6 +3365,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "After achieving cult hit status around the globe, Dragon Ball GT has finally arrived in the U.S. This polygon rendered fighting game features 10 of the best warriors from the animated television series going head-to-head in a no-holds-barred tournament. Each player has devastating finishing moves, including the infamous \"Meteor Smash\", which can be countered by an opponent, resulting in some of the most incredible power struggles you'll ever see! There are also 8 playable hidden characters and a practice mode that lets you build up the skills of each fighter. Now, you can find out what gamers around the world already know -- Dragon Ball GT is the ultimate fighting game!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tras alcanzar un estatus de culto en todo el mundo, Dragon Ball GT por fin llega a Estados Unidos. Este juego de lucha con gráficos poligonales reúne a 10 de los mejores guerreros de la serie animada en un torneo sin reglas. Cada jugador tiene movimientos finales devastadores, incluido el infame «Meteor Smash», que el oponente puede contrarrestar, dando lugar a algunas de las luchas de poder más impresionantes que verás jamás. También hay 8 personajes ocultos jugables y un modo práctica que te permite mejorar las habilidades de cada luchador. Ahora puedes descubrir lo que los jugadores de todo el mundo ya saben: ¡Dragon Ball GT es el juego de lucha definitivo!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -1889,14 +3390,47 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 2558,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-00493"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3ec1585f3300499603b65a8a29846e87.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/75ae27f0f99ac626ce95d3dfcf3f1e9e.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/60cd8f7f49edf3259e2ba98a026d396c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 678,
+          "platform": "ps1",
+          "project": "DragonBallGTFinalBoutRecomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/DragonBallGTFinalBoutRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 679,
+          "platform": "ps1",
+          "project": "DB-Final-Bout-Recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/novapowers0/DB-Final-Bout-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 32534,
@@ -1905,8 +3439,14 @@
       "year": 2004,
       "igdbId": 2566,
       "popularity": 147,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "81476",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Dragon Ball Z: Budokai 3",
@@ -1917,6 +3457,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Budokai 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The third installment in the Dragon Ball Z: Budokai series begins another tournament of champions where only one fighter can prevail. As one of the characters from the Dragon Ball Z animated series, you can master an all-new fighting system that lets you teleport, juggle opponents, fly, and attack in a variety of ways. As you progress through the tournament, you can unlock up to 40 bonus characters from the DBZ universe. You can also post and retrieve character profiles from the Internet.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La tercera entrega de la serie Dragon Ball Z: Budokai inicia otro torneo de campeones en el que solo uno puede prevalecer. Como uno de los personajes de la serie animada Dragon Ball Z, puedes dominar un sistema de combate totalmente nuevo que te permite teletransportarte, hacer malabares con los oponentes, volar y atacar de múltiples formas. A medida que avanzas en el torneo, puedes desbloquear hasta 40 personajes adicionales del universo DBZ. También puedes publicar y consultar perfiles de personajes en Internet.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1933,7 +3485,34 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 2566,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles sólidos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS2."
+            }
+          ],
+          "codes": [
+            "SLES-52730",
+            "SLES-52730-ANZ",
+            "SLUS-20998",
+            "SLUS-20998GH"
+          ]
         },
         {
           "id": 81476,
@@ -1941,7 +3520,28 @@
           "kind": "remaster",
           "year": 2012,
           "igdbId": 288870,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido con trofeos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más fluido; online ya inactivo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con retoques visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p a 60 fps."
+            }
+          ]
         },
         {
           "id": 81477,
@@ -1949,14 +3549,51 @@
           "kind": "remaster",
           "year": 2012,
           "igdbId": 288870,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido con logros."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más fluido; online ya inactivo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con retoques visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p a 60 fps."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/16ed9d22b7fdde24ca7eb7baf3637d8f.png",
         "hero": "https://cdn2.steamgriddb.com/hero/ed522c05fd81623453ef42551467ce68.png",
         "logo": "https://cdn2.steamgriddb.com/logo/63804679e4088cefae696e44187e1a5d.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 680,
+          "platform": "x360",
+          "project": "DBZ-Budokai-3-HD-Collection",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/novapowers0/DBZ-Budokai-3-HD-Collection",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary"
+        }
+      ]
     },
     {
       "id": 32553,
@@ -1980,6 +3617,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: Budokai Tenkaichi lets you play as more than 60 characters from the Dragon Ball Z TV series. You can battle using authentic special attacks of each character as you run, fly, and swim through fully destructible and free-roaming levels. Design your own character by assigning and upgrading 10 different attributes. Dragon Ball Z: Budokai Tenkaichi has multiple game modes for both one and two players.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Budokai Tenkaichi te permite jugar con más de 60 personajes de la serie de televisión Dragon Ball Z. Puedes luchar con los ataques especiales auténticos de cada personaje mientras corres, vuelas y nadas por escenarios totalmente destructibles y de libre exploración. Diseña tu propio personaje asignando y mejorando 10 atributos diferentes. Dragon Ball Z: Budokai Tenkaichi tiene múltiples modos de juego para uno y dos jugadores.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -1993,7 +3642,13 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 2253,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53200",
+            "SLES-53200/ANZ-P",
+            "SLES-53200/P",
+            "SLUS-21227"
+          ]
         }
       ],
       "images": {
@@ -2024,6 +3679,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Based on the arcade game, this is a fighting game in the Dragon Ball Z universe, developed by Craft and Master (whose team members include former Street Fighter producer Noritaka Funamizu. Super DBZ is a cell-shaded fighter featuring your favorite Dragon Ball characters. Each character has his own special abilities, with Frieza making use of warps and Trunks using swords for up-close attacks. The game uses a four button setup. Two buttons are reserved for strong and weak attacks. One button is used for guarding with another used for making your character jump. The guard and jump button can be pressed together to execute a dash move. Super DBZ features both ground-based and air-based fighting. Stages are multi-layered, and you can move between different areas, taking the fight to an area that's more advantageous to your character.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Basado en el juego de recreativa, es un juego de lucha en el universo de Dragon Ball Z, desarrollado por Craft and Master (cuyo equipo incluye al exproductor de Street Fighter Noritaka Funamizu). Super DBZ es un juego de lucha con sombreado cel que presenta a tus personajes favoritos de Dragon Ball. Cada personaje tiene sus propias habilidades especiales: Freezer usa teletransportaciones y Trunks usa espadas para los ataques cuerpo a cuerpo. El juego usa una configuración de cuatro botones. Dos botones se reservan para los ataques fuertes y débiles, uno para bloquear y otro para saltar. Los botones de bloqueo y salto pueden pulsarse juntos para ejecutar un movimiento de carrera rápida. Super DBZ incluye combate en el suelo y en el aire. Los escenarios tienen varias capas, y puedes moverte entre distintas zonas, llevando la pelea a un área más ventajosa para tu personaje.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -2037,7 +3704,12 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 2581,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54161",
+            "SLPS-25642",
+            "SLUS-21442"
+          ]
         }
       ],
       "images": {
@@ -2068,6 +3740,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z: Infinite World combines all the best elements of previous Dragon Ball Z games, while boasting new features such as “Dragon Missions”, new battle types and drama scenes for fans to delve deeper than ever before into the Dragon Ball Z universe. The new “Dragon Missions” Dragon Ball Z Infinite World include many famous scenes from the Dragon Ball Z series never before seen in a video game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Infinite World combina lo mejor de los juegos anteriores de Dragon Ball Z y añade nuevas características, como las «Misiones Dragón», nuevos tipos de batalla y escenas dramáticas para que los fans se adentren más que nunca en el universo de Dragon Ball Z. Las nuevas «Misiones Dragón» incluyen muchas escenas famosas de la serie Dragon Ball Z que nunca antes habían aparecido en un videojuego.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -2081,7 +3765,13 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2570,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-55347",
+            "SLKA-25444",
+            "SLPS-25905",
+            "SLUS-21842"
+          ]
         }
       ],
       "images": {
@@ -2112,6 +3802,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The wildly popular Dragon Ball Z series makes its first appearance on the PlayStation Portable with Dragon Ball Z: Shin Budokai. Play as the good guys or the bad guys in this high-energy fighting game. You can use flight and energy abilities, transformations, and counterattacks, as well as character-specific attacks featured in the Dragon Ball Z TV show. There are 18 playable characters and seven story modes to choose from. Challenge other gamers to multiplayer duels via the PSP Wi-Fi connection.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La muy popular serie Dragon Ball Z llega por primera vez a PlayStation Portable con Dragon Ball Z: Shin Budokai. Juega como los buenos o como los malos en este juego de lucha de alta energía. Puedes usar habilidades de vuelo y de energía, transformaciones y contraataques, además de ataques específicos de los personajes que aparecen en la serie de televisión de Dragon Ball Z. Hay 18 personajes jugables y siete modos historia para elegir. Desafía a otros jugadores en duelos multijugador a través de la conexión Wi-Fi de PSP.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -2125,9 +3827,19 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 2567,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00309",
+            "ULJS-00049",
+            "ULUS-10081"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/61170dd37765bf9bee70ec952a5170b0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/72b7d885d0da927fbe2636f5ef2d77bb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6885c00c2e4452e327d27def589a9b61.png"
+      }
     },
     {
       "id": 35108,
@@ -2151,6 +3863,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The plot of \"Dragon Ball Z: Shin Budokai - Another Road\" is a brand-new story revolving around Majin Buu being released in Future Trunks' Alternate Timeline. Like most of the Dragon Ball movies, Another Road is considered a side story to the Dragon Ball series.\n\nGameplay is very similar to the game's predecessor. The controls remain the same, but there are some additional functions that can be used during gameplay. The story mode gameplay features something similar to what was in the other PS2 games, such as flying around.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La trama de Dragon Ball Z: Shin Budokai - Another Road es una historia completamente nueva que gira en torno a la liberación de Majin Boo en la línea temporal alternativa de Trunks del futuro. Como la mayoría de las películas de Dragon Ball, Another Road se considera una historia paralela a la serie.\n\nLa jugabilidad es muy similar a la de su predecesor. Los controles se mantienen, pero hay algunas funciones adicionales que se pueden usar durante el juego. El modo historia incluye elementos similares a los de otros juegos de PS2, como volar por el escenario.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -2164,9 +3888,17 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 2568,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULUS-10234"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/beac797b340f530d5d971e8650122b51.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/951f526b140175b8ddfdc13795b81ec4.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/cb452a055afac7b677e7241a531b617d.png"
+      }
     },
     {
       "id": 35126,
@@ -2190,6 +3922,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In Dragon Ball: Evolution for the PSP system, ultimate powers collide as players match up against their favorite characters from the film release and battle for control of the seven sacred Dragon Balls that have the power to grant any wish. Dragon Ball: Evolution employs an easy-to-learn yet difficult to master fighting system which provides everyone the power to pull off stylish and dynamic attacks. Ki (energy) management will be essential to gain the upper hand and unleash a devastating attack on their unsuspecting opponents.\n\nParticipating in intense battles, gamers are invited to follow the path of Goku to his predestined fight against the evil Lord Piccolo in Story mode. Players can also battle against a number of opponents in Arcade mode, accept challenges in Mission mode or hone their technique in Training mode. Dragon Ball: Evolution also lets players challenge friends to tests of strength in multiplayer battles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En Dragon Ball: Evolution para PSP, los poderes definitivos chocan: los jugadores se enfrentan a sus personajes favoritos de la película y luchan por el control de las siete Esferas del Dragón sagradas, capaces de conceder cualquier deseo. Dragon Ball: Evolution emplea un sistema de combate fácil de aprender pero difícil de dominar, que permite a cualquiera ejecutar ataques elegantes y dinámicos. La gestión del ki (energía) será esencial para ganar ventaja y desatar un ataque devastador sobre los rivales desprevenidos.\n\nAl participar en batallas intensas, los jugadores pueden seguir el camino de Goku hacia su combate predestinado contra el malvado Lord Piccolo en el modo Historia. También pueden enfrentarse a varios oponentes en el modo Arcade, aceptar desafíos en el modo Misión o perfeccionar su técnica en el modo Entrenamiento. Dragon Ball: Evolution también permite desafiar a amigos en pruebas de fuerza en batallas multijugador.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -2205,7 +3949,10 @@
           "igdbId": 2571,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3tsf.jpg"
+      }
     },
     {
       "id": 35159,
@@ -2229,6 +3976,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "For the first time ever Dragon Ball Z fans can enter into high-impact two vs. two combat in Dragon Ball Z: Tenkaichi Tag Team for the PSP system. Play solo or team up via Ad Hoc mode to tackle memorable battles in a variety of single player and multiplayer modes, including Dragon Walker, Battle 100, and Survival Mode. Dragon Walker Mode takes fans through the entire epic Dragon Ball Z story arc from the Saiyan saga to the Majin Buu saga. Battle 100 Mode tasks players to relive the most epic encounters and newly created situations from the Dragon Ball Z world in ever increasingly difficult situations. With more than 70 playable and deeply customizable characters, multiple modes, and Ad Hoc Party gameplay, Dragon Ball Z: Tenkaichi Tag Team is chock full of gameplay for your portable PSP system.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Por primera vez, los fans de Dragon Ball Z pueden disfrutar de combates de alto impacto de dos contra dos en Dragon Ball Z: Tenkaichi Tag Team para PSP. Juega en solitario o únete a otros mediante el modo Ad Hoc para afrontar batallas memorables en diversos modos individuales y multijugador, como Dragon Walker, Battle 100 y Modo Supervivencia. El modo Dragon Walker lleva a los fans por toda la épica historia de Dragon Ball Z, desde la saga Saiyajin hasta la saga de Majin Boo. El modo Battle 100 invita a los jugadores a revivir los encuentros más épicos y las situaciones nuevas del mundo de Dragon Ball Z, en niveles de dificultad cada vez mayores. Con más de 70 personajes jugables y muy personalizables, múltiples modos y el juego en grupo Ad Hoc, Dragon Ball Z: Tenkaichi Tag Team ofrece una gran cantidad de contenido para tu PSP.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -2242,9 +4001,18 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 2572,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-01456",
+            "ULUS-10537"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c712432e90fe2cf27685888065aca70f.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a20f378f67e0d2904f6887dfc24ed316.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6e9feef0d48ead6730ce88ecc22b34cc.png"
+      }
     },
     {
       "id": 39513,
@@ -2256,6 +4024,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94219",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball Z: Burst Limit",
           "source": "igdb",
@@ -2265,6 +4039,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Burst Limit",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Dragon Ball Z universe makes its first appearance on the seventh generation of consoles with the release of Dragon Ball Z: Burst Limit. It features the detailed graphics and dramatic, seamless battles expected from a next-generation console. During each battle, you will find conditions that create new dramatic scenes with characters and movement reminiscent of the original animation. After the battles, watch a unique story unfold each time you play. There is also a stronger element of offense and defense, due to added energy saving and fighting techniques. Use of special skills will no longer drain energy. The lower your energy, the stronger you get, making for a possible turnaround of the battle.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El universo de Dragon Ball Z llega por primera vez a la séptima generación de consolas con el lanzamiento de Dragon Ball Z: Burst Limit. Cuenta con los gráficos detallados y las batallas dramáticas y fluidas que se esperan de una consola de nueva generación. Durante cada batalla encontrarás condiciones que crean nuevas escenas dramáticas, con personajes y movimientos que recuerdan a la animación original. Después de los combates, podrás ver una historia única que se desarrolla cada vez que juegas. También hay un elemento de ataque y defensa más fuerte, gracias a nuevas técnicas de ahorro de energía y de combate. El uso de habilidades especiales ya no consume energía. Cuanto menor sea tu energía, más fuerte te volverás, lo que puede dar un giro a la batalla.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2281,7 +4067,35 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2569,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p estable."
+            }
+          ],
+          "codes": [
+            "BLAS-50054",
+            "BLES-00231",
+            "BLES-00282",
+            "BLJS-10020",
+            "BLUS-30117"
+          ]
         },
         {
           "id": 94220,
@@ -2289,7 +4103,50 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2569,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p estable."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/62bc0b1c257153633bc172df411281f6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2f1f0bdbb82e8f2a7ab031d8f2a13ee1.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2ef71cbbdf71f4b87711026b12e879da.png"
+      },
+      "ports": [
+        {
+          "id": 683,
+          "platform": "x360",
+          "project": "DBZ-Burst-Limit-Recompiled",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/iExplosiveRage/DBZ-Burst-Limit-Recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
         }
       ]
     },
@@ -2303,6 +4160,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94517",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball Z: Ultimate Tenkaichi",
           "source": "igdb",
@@ -2312,6 +4175,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Ultimate Tenkaichi",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kamehameha! Prepare to dive into the world of Dragon Ball Z with Earth-shaking combat, a massive character selection, faithful manga-style graphics, and exciting new features in Dragon Ball Z: Ultimate Tenkaichi! Delivering an explosive DBZ fighting experience, this game features upgraded environmental and character graphics, with designs drawn from the original manga series. Destructible battlefields, including massive craters and ki blasts cutting across the sky deliver a more dynamic experience and immediate sense of urgency to the exhilarating fights. An enhanced story mode drops players into the rich Dragon Ball Z universe, filled with beloved characters and powerful enemies. An accessible battle system allows gamers of all ages to hold their own in fast-paced battles, while still retaining tactical depth for hardcore fans.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Kamehameha! Prepárate para sumergirte en el mundo de Dragon Ball Z con combates que sacuden la tierra, una gran selección de personajes, gráficos fieles al estilo del manga y nuevas características emocionantes en Dragon Ball Z: Ultimate Tenkaichi. Con una experiencia de lucha explosiva de DBZ, este juego presenta gráficos de escenarios y personajes mejorados, con diseños basados en la serie de manga original. Los campos de batalla destructibles, con enormes cráteres y ráfagas de ki que cruzan el cielo, aportan una experiencia más dinámica y una sensación inmediata de urgencia a los intensos combates. Un modo historia mejorado sumerge a los jugadores en el rico universo de Dragon Ball Z, lleno de personajes queridos y enemigos poderosos. Un sistema de combate accesible permite que jugadores de todas las edades se defiendan en combates rápidos, sin dejar de ofrecer profundidad táctica para los fans más exigentes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2328,7 +4203,32 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 2574,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento similar."
+            }
+          ],
+          "codes": [
+            "BLES-01401",
+            "BLUS-30823"
+          ]
         },
         {
           "id": 94518,
@@ -2336,9 +4236,35 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 2574,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento similar."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/503f8c3ef7315e8121029b489706306e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/488a6b6c95734ec7a3ae607dc71fa28c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a34749339048166867bb85d0fcc4a015.png"
+      }
     },
     {
       "id": 39701,
@@ -2350,6 +4276,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94753",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball Z: Battle of Z",
           "source": "igdb",
@@ -2359,6 +4291,18 @@
           "field": "original_name",
           "value": "Dragon Ball Z: Battle of Z",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball Z: Battle of Z delivers over-the-top anime action and intensity, presented in new cell-shaded HD graphics. Focusing on team battles, players will be able to battle online with or against their friends in frantic 4-player co-op or up to 8-player vs. Battle of Z’s expanded team battle and co-op modes allows players to create teams of four characters to take on opponents across the globe.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z: Battle of Z ofrece acción e intensidad de anime desbordantes, presentadas con nuevos gráficos HD con sombreado cel. Centrado en las batallas por equipos, los jugadores podrán luchar en línea con o contra sus amigos en un intenso modo cooperativo de 4 jugadores o en enfrentamientos de hasta 8 jugadores. Los modos ampliados de batalla por equipos y cooperativo de Battle of Z permiten crear equipos de cuatro personajes para enfrentarse a oponentes de todo el mundo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2375,7 +4319,34 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 2583,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo; online muerto o limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p."
+            }
+          ],
+          "codes": [
+            "BLAS-50684",
+            "BLES-019412",
+            "BLJS-10234",
+            "BLUS-31314"
+          ]
         },
         {
           "id": 94754,
@@ -2383,7 +4354,31 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 2583,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Casi igual, recorte menor."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, controles más limitados."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación reducida."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución."
+            }
+          ],
+          "codes": [
+            "PCSB-00396"
+          ]
         },
         {
           "id": 94755,
@@ -2391,9 +4386,35 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 2583,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo; online muerto o limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7f683f95d99b6793941b293c50f09956.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c45abc54772e0b9c55e56e7ffc66b4fd.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/a995b410d5e76ed56523533b47e3786a.png"
+      }
     },
     {
       "id": 40161,
@@ -2405,6 +4426,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96095",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball: Raging Blast",
           "source": "igdb",
@@ -2414,6 +4441,18 @@
           "field": "original_name",
           "value": "Dragon Ball: Raging Blast",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Interactive and destructible environments bring a new layer of intensity to the battle stages featured in Dragon Ball: Raging Blast. Smash opponents into rocks to increase their damage count and gain the upper hand in battles. Featuring the series’ trademark combat style, the game hosts a variety of the most popular characters taken from the series, all of which have enhanced features such as facial expressions for a deeper level of immersion into the Dragon Ball universe. Dragon Ball: Raging Blast boasts superior graphics that enhance the sense of the characters’ speed and power. In addition to classic signature moves, characters also benefit from a new \"Super Rising\" move which allows more variety in the battle stages and lets players explore new areas of the Dragon Ball universe.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Los escenarios interactivos y destructibles añaden una nueva capa de intensidad a los escenarios de batalla de Dragon Ball: Raging Blast. Empuja a los oponentes contra las rocas para aumentar su daño y obtener ventaja en los combates. Con el estilo de combate característico de la serie, el juego incluye a algunos de los personajes más populares, todos ellos con mejoras como expresiones faciales para una inmersión más profunda en el universo de Dragon Ball. Dragon Ball: Raging Blast ofrece gráficos superiores que realzan la sensación de velocidad y poder de los personajes. Además de los movimientos característicos clásicos, los personajes también cuentan con un nuevo movimiento «Super Rising» que permite más variedad en los escenarios de batalla y que los jugadores exploren nuevas zonas del universo de Dragon Ball.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2430,7 +4469,33 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 19310,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p, rendimiento similar."
+            }
+          ],
+          "codes": [
+            "BLES-00693",
+            "BLJS-10066",
+            "BLUS-30431"
+          ]
         },
         {
           "id": 96096,
@@ -2438,9 +4503,35 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 19310,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p, rendimiento similar."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c67c29b9af254fbd6163531370a74369.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/547fea559b630cf990be414555101911.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9f33e74a83082c54d4394de2ce8866da.png"
+      }
     },
     {
       "id": 40182,
@@ -2452,6 +4543,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96146",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball: Raging Blast 2",
           "source": "igdb",
@@ -2461,6 +4558,18 @@
           "field": "original_name",
           "value": "Dragon Ball: Raging Blast 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball Z fans can rest assured that the destructible environment, and character trademark attacks and transformations will be true to the series. These include signature Pursuit Attacks which enable players to initiate attack combo strings, juggling your opponent in a string of devastating strikes throughout the environment. Additionally, Dragon Ball: Raging Blast 2 will sport the new Raging Soul System which enables characters to reach a special state, increasing their combat abilities to the ultimate level. Sporting more than 90 characters, 20 of which are brand new to the Raging Blast series, new modes, and additional environmental effects, Dragon Ball: Raging Blast 2 is the next evolution in the home console series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Los fans de Dragon Ball Z pueden estar tranquilos: el entorno destructible y los ataques y transformaciones característicos de los personajes serán fieles a la serie. Entre ellos están los característicos Ataques de Persecución, que permiten iniciar cadenas de combos y mantener al oponente en el aire mientras recibe una sucesión de golpes devastadores por todo el escenario. Además, Dragon Ball: Raging Blast 2 incluirá el nuevo Sistema Raging Soul, que permite a los personajes alcanzar un estado especial que aumenta sus habilidades de combate al máximo nivel. Con más de 90 personajes, 20 de ellos nuevos en la saga Raging Blast, nuevos modos y efectos ambientales adicionales, Dragon Ball: Raging Blast 2 es la siguiente evolución de la serie para consolas de sobremesa.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2477,7 +4586,34 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 19311,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p, rendimiento similar."
+            }
+          ],
+          "codes": [
+            "BLES-00978",
+            "BLES-00978/E",
+            "BLJS-10085",
+            "BLUS-30581"
+          ]
         },
         {
           "id": 96147,
@@ -2485,7 +4621,49 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 19311,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p, rendimiento similar."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/69bf9cd653bc84c1cbadac3ccf277e78.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e97f4360f6ecf96cf0b3b580ad4c43eb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c9da108374dde45533baccabee5beb23.png"
+      },
+      "ports": [
+        {
+          "id": 637,
+          "platform": "x360",
+          "project": "RB2",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/WistfulHopes/RB2",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary"
         }
       ]
     },
@@ -2499,6 +4677,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102708",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball",
           "source": "igdb",
@@ -2508,6 +4692,18 @@
           "field": "original_name",
           "value": "Dragon Ball",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dragon Ball (also known as Dragon Ball: Le Secrets du Dragon and Dragon Ball: Shenron no Nazo) is the second video game based on the Dragon Ball series (its predecessor being Dragon Ball: Dragon Daihikyou) and the first Dragon Ball game produced and distributed by Bandai. It is an action game developed by TOSE Software Company. It was released for the Family Computer on November 27, 1986 in Japan. Outside Japan, a graphically altered version released for the North American market in March 1988 under the title of Dragon Power, which divorced the game from the Dragon Ball licensing. A European version which retained the license, simply titled Dragon Ball, was also released in 1990 primarily for the French market.\n\nShenron no Nazo is included as a bonus feature in the Japanese release of Dragon Ball: Origins 2 for Nintendo DS, and it is one of the games included in the game compilation J Legend Retsuden for Nintendo 3DS.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball (también conocido como Dragon Ball: Le Secrets du Dragon y Dragon Ball: Shenron no Nazo) es el segundo videojuego basado en la serie Dragon Ball (su predecesor fue Dragon Ball: Dragon Daihikyou) y el primer juego de Dragon Ball producido y distribuido por Bandai. Es un juego de acción desarrollado por TOSE Software Company. Se lanzó para la Family Computer el 27 de noviembre de 1986 en Japón. Fuera de Japón, una versión con gráficos modificados para el mercado norteamericano salió en marzo de 1988 con el título Dragon Power, que desvinculaba el juego de la licencia de Dragon Ball. En 1990 también se lanzó una versión europea que conservaba la licencia, titulada simplemente Dragon Ball, principalmente para el mercado francés.\n\nShenron no Nazo se incluye como contenido adicional en la versión japonesa de Dragon Ball: Origins 2 para Nintendo DS, y es uno de los juegos incluidos en la recopilación J Legend Retsuden para Nintendo 3DS.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2524,7 +4720,28 @@
           "kind": "original",
           "year": 1990,
           "igdbId": 48678,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Entrada de 1990, contenido sin verificar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de NES de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware NES estándar."
+            }
+          ]
         },
         {
           "id": 102708,
@@ -2532,9 +4749,33 @@
           "kind": "original",
           "year": 1988,
           "igdbId": 48697,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Entrada de 1988, contenido sin verificar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de NES de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware NES estándar."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4vw1.jpg"
+      }
     },
     {
       "id": 47852,
@@ -2546,6 +4787,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113661",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dragon Ball: Xenoverse 3",
           "source": "igdb",
@@ -2555,6 +4802,18 @@
           "field": "original_name",
           "value": "Dragon Ball: Xenoverse 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Step into a brand-new future Dragon ball universe filled with unique, original characters brought to life by Akira Toriyama, the original author of Dragon Ball. In Age 1000, journey through developed and vibrant West City. Explore the bustling city, encounter characters, and uncover exciting new stories.\nTake your place in the story and experience what awaits in West City.\nGuided into the ranks of the Great Saiyan Squad, you’ll fight alongside allies as events there begin to take shape.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Adéntrate en un universo de Dragon Ball completamente nuevo y futurista, lleno de personajes originales y únicos creados por Akira Toriyama, autor original de Dragon Ball. En la Era 1000, recorre la bulliciosa y vibrante Ciudad del Oeste. Explora la ciudad, conoce a sus personajes y descubre historias nuevas y emocionantes.\n\nOcupa tu lugar en la historia y descubre lo que te espera en Ciudad del Oeste.\n\nAl ser admitido en las filas del Gran Escuadrón Saiyajin, lucharás junto a tus aliados mientras los acontecimientos allí empiezan a tomar forma.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2571,7 +4830,28 @@
           "kind": "original",
           "year": 2027,
           "igdbId": 387020,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Sin diferencias conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Sin datos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento esperado alto."
+            }
+          ]
         },
         {
           "id": 113660,
@@ -2580,7 +4860,28 @@
           "year": 2027,
           "igdbId": 387020,
           "steamAppId": 1857810,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Sin diferencias conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Sin datos; mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Depende del equipo."
+            }
+          ]
         },
         {
           "id": 113661,
@@ -2588,9 +4889,33 @@
           "kind": "original",
           "year": 2027,
           "igdbId": 387020,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Sin diferencias conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Sin datos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento esperado alto."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coby8b.jpg"
+      }
     },
     {
       "id": 48248,
@@ -2614,6 +4939,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dragon Ball Z for Kinect used the unique gameplay abilities of the Kinect motion sensor to let gamers become part of the DBZ world. It features all the classic action and intensity of the Dragon Ball Z universe but with the unprecedented sense of immersion that only Kinect can deliver. Players will be able to unleash over 100 moves upon their enemies, including the legendary Kamehameha, with their very own fists as they battle their way to victory in this ultimate evolution of the unstoppable franchise.\n\nDragon Ball Z For Kinect also packs a double dose of exclusive content for Dragon Ball Z fans! The game includes the Dragon Ball Z anime episode \"Episode of Bardock\" and will feature Bardock Super Saiyan as a playable character for the first time ever in the history of Dragon Ball Z video games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dragon Ball Z para Kinect aprovechó las capacidades de juego únicas del sensor de movimiento Kinect para que los jugadores formen parte del mundo de DBZ. Incluye toda la acción clásica y la intensidad del universo de Dragon Ball Z, pero con una sensación de inmersión sin precedentes que solo Kinect puede ofrecer. Los jugadores podrán desatar más de 100 movimientos contra sus enemigos, incluido el legendario Kamehameha, usando sus propios puños mientras luchan para alcanzar la victoria en esta evolución definitiva de la imparable franquicia.\n\nDragon Ball Z para Kinect también ofrece una doble dosis de contenido exclusivo para los fans: incluye el episodio de anime «Episodio de Bardock» y presenta por primera vez en la historia de los videojuegos de Dragon Ball Z a Bardock Super Saiyajin como personaje jugable.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -2629,8 +4966,191 @@
           "igdbId": 2575,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0496990fdbbc5b49df47d934cff28cfb.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f728de606e3ec59ef3f99da96c3ce788.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/452fe7a27b163a122cb31dbe0a95857e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 136,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento de los juegos principales de cada línea. Se omiten spin-offs menores, portátiles y juegos de cartas. Xenoverse 3 aún no sale.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43023,
+          "recommendedVersionId": 102708,
+          "reason": "El primero de la lista, de 1986."
+        },
+        {
+          "position": 2,
+          "gameId": 172,
+          "recommendedVersionId": 264,
+          "reason": "Inicio de Super Butouden, versión original de SNES."
+        },
+        {
+          "position": 3,
+          "gameId": 245,
+          "recommendedVersionId": 381,
+          "reason": "Secuela directa en SNES."
+        },
+        {
+          "position": 4,
+          "gameId": 326,
+          "recommendedVersionId": 503,
+          "reason": "Cierre de la trilogía Super Butouden."
+        },
+        {
+          "position": 5,
+          "gameId": 16545,
+          "recommendedVersionId": 43568,
+          "reason": "Inicio de Budokai, PS2 original."
+        },
+        {
+          "position": 6,
+          "gameId": 16648,
+          "recommendedVersionId": 43819,
+          "reason": "Secuela de Budokai en PS2."
+        },
+        {
+          "position": 7,
+          "gameId": 32534,
+          "recommendedVersionId": 81264,
+          "reason": "Budokai 3, PS2 original."
+        },
+        {
+          "position": 8,
+          "gameId": 32553,
+          "recommendedVersionId": 81308,
+          "reason": "Primer Budokai Tenkaichi."
+        },
+        {
+          "position": 9,
+          "gameId": 20773,
+          "recommendedVersionId": 50915,
+          "reason": "Tenkaichi 2 en PS2."
+        },
+        {
+          "position": 10,
+          "gameId": 19404,
+          "recommendedVersionId": 48348,
+          "reason": "Tenkaichi 3 en PS2."
+        },
+        {
+          "position": 11,
+          "gameId": 40161,
+          "recommendedVersionId": 96095,
+          "reason": "Raging Blast, generación PS3."
+        },
+        {
+          "position": 12,
+          "gameId": 40182,
+          "recommendedVersionId": 96146,
+          "reason": "Raging Blast 2."
+        },
+        {
+          "position": 13,
+          "gameId": 9160,
+          "recommendedVersionId": 19376,
+          "reason": "Xenoverse 2, versión de PC."
+        },
+        {
+          "position": 14,
+          "gameId": 10123,
+          "recommendedVersionId": 22859,
+          "reason": "FighterZ, pelea 2D moderna."
+        },
+        {
+          "position": 15,
+          "gameId": 12511,
+          "recommendedVersionId": 30594,
+          "reason": "Kakarot, RPG que cuenta la historia de Z."
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "kind": "story",
+      "rationale": "La saga no tiene una historia continua entre juegos: cada uno readapta el manga o el anime. Se usan los que adaptan la historia, de Dragon Ball a Z.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3756,
+          "recommendedVersionId": 7410,
+          "reason": "Adapta el inicio de Dragon Ball."
+        },
+        {
+          "position": 2,
+          "gameId": 3901,
+          "recommendedVersionId": 7617,
+          "reason": "Continúa Dragon Ball."
+        },
+        {
+          "position": 3,
+          "gameId": 20008,
+          "recommendedVersionId": 49649,
+          "reason": "Adapta el arco del Rey Piccolo."
+        },
+        {
+          "position": 4,
+          "gameId": 12511,
+          "recommendedVersionId": 30594,
+          "reason": "Cubre la saga Z."
+        },
+        {
+          "position": 5,
+          "gameId": 9160,
+          "recommendedVersionId": 19376,
+          "reason": "Historia propia en líneas temporales de Z."
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "kind": "community",
+      "rationale": "Sin fuentes verificadas (la búsqueda web no estuvo disponible); revisar. Empieza por Kakarot por la historia y sigue con los juegos de pelea más queridos. Deja fuera portátiles y spin-offs.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12511,
+          "recommendedVersionId": 30594,
+          "reason": "Forma cómoda de vivir la historia de Z hoy; PC."
+        },
+        {
+          "position": 2,
+          "gameId": 32534,
+          "recommendedVersionId": 81264,
+          "reason": "Budokai 3 es un clásico; el original de PS2 es el más jugado."
+        },
+        {
+          "position": 3,
+          "gameId": 19404,
+          "recommendedVersionId": 48348,
+          "reason": "Tenkaichi 3 tiene la plantilla más grande; PS2."
+        },
+        {
+          "position": 4,
+          "gameId": 10123,
+          "recommendedVersionId": 22859,
+          "reason": "FighterZ es el más pulido en lo competitivo."
+        },
+        {
+          "position": 5,
+          "gameId": 9160,
+          "recommendedVersionId": 19376,
+          "reason": "Xenoverse 2 tiene mucho contenido."
+        }
+      ]
+    }
+  ]
 }

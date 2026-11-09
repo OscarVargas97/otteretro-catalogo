@@ -51,7 +51,12 @@
           "steamAppId": 1343400,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/815d61d9cf44d1fd4373be8b544152b9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/69b09198d4248b8f24494f27a01367b9.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/28a1faa9dd2f69eeef4279da40dcdfe0.png"
+      }
     },
     {
       "id": 43743,
@@ -91,7 +96,12 @@
           "steamAppId": 1343370,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1b4b06061780bcd36f904094d8403e87.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/26c8106f0f28bd50208678b59c7f722d.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/a39878ae282a18ea051ad89e7875a272.png"
+      }
     },
     {
       "id": 47485,
@@ -103,6 +113,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112719",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "RuneScape: Dragonwilds",
           "source": "igdb",
@@ -111,6 +127,12 @@
         {
           "field": "original_name",
           "value": "RuneScape: Dragonwilds",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "On RuneScape’s forgotten continent of Ashenfall, dragons have awoken. Gather, build, skill and craft to survive in this co-operative (1-4) survival crafting game. Only by mastering survival and uncovering ancient secrets can they hope to slay the Dragon Queen—alone or with allies.",
           "source": "igdb",
           "manual": false
         },
@@ -136,7 +158,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 337712,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "04004E8025EC4000"
+          ]
         },
         {
           "id": 112719,
@@ -155,8 +180,38 @@
           "igdbId": 337712,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/54036554a9858230db7403a506421829.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/a29377d88980b451cdca4d24a00ee69d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6f634acbf34442b6d6146d430172311d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2030,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43348,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 43743,
+          "reason": "2013"
+        },
+        {
+          "position": 3,
+          "gameId": 47485,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

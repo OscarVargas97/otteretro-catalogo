@@ -3,7 +3,7 @@
   "name": "Rock Band",
   "igdbKind": "collection",
   "igdbId": 518,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "47068",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "LEGO Rock Band",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "LEGO Rock Band",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "LEGO Rock Band is a blending of Rock Band and LEGO series. Players get to start a band and hire band members who will play with them. Just like with real Lego, players can mix and match bodies, torsos, legs and heads to create a character any way they want. The main game has players touring around the world at various locations, like the original Rock Band games. Unlike Rock Band however, LEGO Rock Band also has special levels where you must perform outrageous tasks such as fighting an octopus or demolishing a building using your rock concert. As players make their way through the song lists, they earn \"Studs\", the game's currency. Studs can be used to purchase Lego items to decorate your Rock Den, hire new staff, buy new clothes or instruments.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "LEGO Rock Band combina Rock Band con la serie LEGO. Los jugadores pueden formar una banda y contratar a sus miembros, que tocarán con ellos. Como con las piezas LEGO reales, los jugadores pueden combinar cuerpos, torsos, piernas y cabezas para crear un personaje a su gusto. El juego principal consiste en una gira por el mundo, con paradas en diversos lugares, como en los juegos originales de Rock Band. A diferencia de Rock Band, LEGO Rock Band también tiene niveles especiales en los que hay que realizar tareas descabelladas, como luchar contra un pulpo o demoler un edificio con tu concierto de rock. A medida que avanzan por las listas de canciones, los jugadores ganan «Studs», la moneda del juego. Con los Studs se pueden comprar artículos LEGO para decorar tu Rock Den, contratar personal nuevo, comprar ropa nueva o instrumentos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2695,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00636",
+            "BLUS-30382"
+          ]
         },
         {
           "id": 46855,
@@ -56,7 +78,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2695,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R6LE-USA-B0",
+            "RVL-R6LP-EUR-B0"
+          ]
         },
         {
           "id": 46856,
@@ -72,7 +98,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 194934,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLRE",
+            "BLRP"
+          ]
         }
       ],
       "images": {
@@ -88,8 +118,14 @@
       "year": 2010,
       "igdbId": 2691,
       "popularity": 45,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "47085",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Rock Band 3",
@@ -100,6 +136,18 @@
           "field": "original_name",
           "value": "Rock Band 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rock Band 3 adds 83 new songs to the Rock Band library and for the first time supports a keyboard/keytar peripheral.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Rock Band 3 añade 83 canciones nuevas a la biblioteca de Rock Band y, por primera vez, es compatible con el periférico de teclado/keytar.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -116,7 +164,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 2691,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00986",
+            "BLUS-30463"
+          ]
         },
         {
           "id": 46934,
@@ -124,7 +176,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 2691,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SZBE-USA-B0",
+            "RVL-SZBP-EUR-B0"
+          ]
         },
         {
           "id": 46935,
@@ -140,14 +196,34 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 206953,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "B5RE",
+            "B5RP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/86295b14143e2c01dceb07f0f52310da.png",
         "hero": "https://cdn2.steamgriddb.com/hero/7c9a78d4cbeacba4b35f3b445d01f055.png",
         "logo": "https://cdn2.steamgriddb.com/logo/809c33ece92310241f9c12af3fa34d04.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1432,
+          "platform": "wii",
+          "project": "rb3",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/DarkRTA/rb3",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 19416,
@@ -156,8 +232,14 @@
       "year": 2007,
       "igdbId": 2685,
       "popularity": 119,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "48381",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Rock Band",
@@ -168,6 +250,18 @@
           "field": "original_name",
           "value": "Rock Band",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rock Band is a music video game that allows up to four players to simulate the performance of popular rock music songs by playing with controllers modeled after musical instruments.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Rock Band es un videojuego musical que permite a hasta cuatro jugadores simular la interpretación de canciones de rock populares, tocando con mandos con forma de instrumentos musicales.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -184,7 +278,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 2685,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00228",
+            "BLUS-30050"
+          ]
         },
         {
           "id": 48379,
@@ -192,7 +290,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2685,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RKXE-USA",
+            "RVL-RKXP-UKV"
+          ]
         },
         {
           "id": 48380,
@@ -208,7 +310,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 2685,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-55039",
+            "SLES-55039/ANZ",
+            "SLUS-21682"
+          ]
         }
       ],
       "images": {
@@ -224,8 +331,14 @@
       "year": 2008,
       "igdbId": 2692,
       "popularity": 120,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "48423",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Rock Band 2",
@@ -236,6 +349,18 @@
           "field": "original_name",
           "value": "Rock Band 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rock Band 2 is the sequel to the 2007 musical simulation game Rock Band and offers similar gameplay. Directly competing with Guitar Hero: World Tour, the game allows different people to play together as in a band, with the same peripherals as the first game: lead guitar, bass guitar, microphone and a drum set.\n\nThe new drum and guitar controllers for this version, bundled or sold separately, have been revised and older controllers are also supported. The guitar controller, modelled after the Fender Stratocaster, has five additional fret buttons near the neck, for fast fingertapping sessions. There is also an effect switch to toggle between five different effects. Players use the instruments to match notes on the screen, divided in different portions for different instruments, along with the lyrics for the singer who need to match the pitch.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Rock Band 2 es la secuela del juego de simulación musical Rock Band de 2007 y ofrece una jugabilidad similar. Compitiendo directamente con Guitar Hero: World Tour, el juego permite que distintas personas toquen juntas como si fueran una banda, con los mismos periféricos que el primer juego: guitarra solista, bajo, micrófono y batería.\n\nLos nuevos controles de batería y guitarra de esta versión, incluidos en paquetes o vendidos por separado, han sido rediseñados, y también se admiten los controles antiguos. El mando de guitarra, inspirado en la Fender Stratocaster, tiene cinco botones de traste adicionales cerca del mástil, para sesiones rápidas de *tapping* con los dedos. También cuenta con un selector de efectos para alternar entre cinco efectos diferentes. Los jugadores usan los instrumentos para hacer coincidir las notas que aparecen en pantalla, divididas en distintas secciones según el instrumento, además de la letra para el cantante, que debe acertar el tono.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -252,7 +377,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2692,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00385",
+            "BLUS-30147"
+          ]
         },
         {
           "id": 48421,
@@ -260,7 +389,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2692,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SZAE-USA",
+            "RVL-SZAP-EUR-B0"
+          ]
         },
         {
           "id": 48422,
@@ -276,7 +409,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2692,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-55451",
+            "SLUS-21800"
+          ]
         }
       ],
       "images": {
@@ -295,6 +432,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "48494",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Beatles: Rock Band",
           "source": "igdb",
@@ -304,6 +447,18 @@
           "field": "original_name",
           "value": "The Beatles: Rock Band",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Beatles: Rock Band is a 2009 music video game. It is the third major console release in the Rock Band music video game series, in which players can simulate the playing of rock music by using controllers shaped like musical instruments. The Beatles: Rock Band is the first band-centric game in the series, and it is centered on the popular English rock group the Beatles.\nThe game features virtual portrayals of the four band members performing the songs throughout the band's history, including depictions of some of their famous live performances, as well as a number of \"dreamscape\" sequences for songs from the Abbey Road Studios recording sessions during the group's studio years.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Beatles: Rock Band es un videojuego musical de 2009. Es el tercer gran lanzamiento para consola de la serie de videojuegos musicales Rock Band, en la que los jugadores pueden simular la interpretación de música rock usando mandos con forma de instrumentos musicales. The Beatles: Rock Band es el primer juego de la serie centrado en una banda, y gira en torno al popular grupo de rock inglés The Beatles.\nEl juego presenta recreaciones virtuales de los cuatro miembros de la banda interpretando las canciones a lo largo de su historia, incluidas representaciones de algunas de sus famosas actuaciones en directo, así como varias secuencias de «dreamscape» para canciones de las sesiones de grabación en los estudios Abbey Road durante sus años de estudio.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -320,7 +475,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2693,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00532",
+            "BLUS-30282"
+          ]
         },
         {
           "id": 48495,
@@ -328,7 +487,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2693,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R9JE-USA-B0",
+            "RVL-R9JP-EUR-B0"
+          ]
         },
         {
           "id": 48496,
@@ -343,7 +506,23 @@
         "cover": "https://cdn2.steamgriddb.com/grid/c1474d7b98a1150c6f0a3044f89f7982.png",
         "hero": "https://cdn2.steamgriddb.com/hero/8357ebc8e1db498622c8933ea5319243.png",
         "logo": "https://cdn2.steamgriddb.com/logo/02f931a5fd1b2102d1a8d35e98f15efc.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1176,
+          "platform": "x360",
+          "project": "thebeatlesrockband-pcport",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mercurialw0rld/thebeatlesrockband-pcport",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary"
+        }
+      ]
     },
     {
       "id": 19499,
@@ -355,6 +534,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "48540",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Green Day: Rock Band",
           "source": "igdb",
@@ -364,6 +549,18 @@
           "field": "original_name",
           "value": "Green Day: Rock Band",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Green Day: Rock Band is a music video game developed by Harmonix Music Systems, published by MTV Games and distributed by Electronic Arts. It is the fifth major console release in the Rock Band music video game series and, like other games in the series, it allows players to simulate the playing of rock music by using controllers shaped like musical instruments.\n\nThe game's setlist consists of songs by the American punk rock band Green Day. Green Day: Rock Band features virtual depictions of the three band members performing the songs in new venues designed for the game. The game incorporates existing Green Day songs already released for the Rock Band series as downloadable content, and allows players to export its full tracklist to the other Rock Band game titles except The Beatles: Rock Band.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Green Day: Rock Band es un videojuego musical desarrollado por Harmonix Music Systems, publicado por MTV Games y distribuido por Electronic Arts. Es el quinto gran lanzamiento para consola de la serie de videojuegos musicales Rock Band y, como los demás juegos de la serie, permite a los jugadores simular la interpretación de música rock usando mandos con forma de instrumentos musicales.\n\nEl repertorio del juego está formado por canciones de la banda estadounidense de punk rock Green Day. Green Day: Rock Band presenta recreaciones virtuales de los tres miembros de la banda interpretando las canciones en nuevos escenarios diseñados para el juego. El juego incorpora canciones de Green Day que ya se habían publicado para la serie Rock Band como contenido descargable, y permite exportar la lista completa de temas a los otros títulos de Rock Band, excepto The Beatles: Rock Band.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -380,7 +577,12 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 2694,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00787",
+            "BLUS-30350",
+            "BLUS-30573"
+          ]
         },
         {
           "id": 48541,
@@ -388,7 +590,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 2694,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R36E-USA-B0",
+            "RVL-R36P-EUR-B0"
+          ]
         },
         {
           "id": 48542,
@@ -415,6 +621,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49054",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "AC/DC Live: Rock Band - Track Pack",
           "source": "igdb",
@@ -424,6 +636,18 @@
           "field": "original_name",
           "value": "AC/DC Live: Rock Band - Track Pack",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The majestic power of AC/DC is about to be unleashed... and you are in the band! Firing cannons, shattering eardrums and leaving nobody un-rocked, you are there as AC/DC plays one of its landmark gigs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡El poder majestuoso de AC/DC está a punto de desatarse... y tú formas parte de la banda! Disparando cañones, destrozando tímpanos y sin dejar a nadie sin rockear, estás allí mientras AC/DC toca en uno de sus conciertos más emblemáticos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -440,7 +664,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 6467,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30235"
+          ]
         },
         {
           "id": 49052,
@@ -448,7 +675,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 6467,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R33E-USA"
+          ]
         },
         {
           "id": 49053,
@@ -464,7 +694,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 6467,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-21848"
+          ]
         }
       ],
       "images": {
@@ -483,6 +716,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50056",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rock Band: Track Pack - Volume 1",
           "source": "igdb",
@@ -492,6 +731,18 @@
           "field": "original_name",
           "value": "Rock Band: Track Pack - Volume 1",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is the first of track packs for Rock Band, released for the platforms that do not support downloadable content. The original game is not required to play and Volume 1 includes twenty master recordings of songs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Este es el primero de los packs de canciones para Rock Band, lanzado para las plataformas que no admiten contenido descargable. No se necesita el juego original para jugarlo, y el Volumen 1 incluye veinte grabaciones originales de canciones.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -508,7 +759,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 43593,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RREE-USA"
+          ]
         },
         {
           "id": 50056,
@@ -516,7 +770,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 43593,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-21758"
+          ]
         }
       ],
       "images": {
@@ -533,6 +790,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50511",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rock Band: Track Pack - Volume 2",
           "source": "igdb",
@@ -542,6 +805,18 @@
           "field": "original_name",
           "value": "Rock Band: Track Pack - Volume 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is the second of retail track packs for Rock Band. While the first pack was only made available for the platforms that do not support downloadable content, this one covers all major platforms. The original game is not required to play and Volume 2 includes twenty songs. The game also includes a code to export the songs to a hard drive for use in other Rock Band games (PS3/Xbox 360).",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Este es el segundo de los packs de canciones en formato físico para Rock Band. Mientras que el primer pack solo se puso a disposición de las plataformas que no admiten contenido descargable, este abarca todas las plataformas principales. No se necesita el juego original para jugarlo, y el Volumen 2 incluye veinte canciones. El juego también incluye un código para exportar las canciones a un disco duro y usarlas en otros juegos de Rock Band (PS3/Xbox 360).",
+          "source": "claude",
           "manual": false
         },
         {
@@ -558,7 +833,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 80287,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30195"
+          ]
         },
         {
           "id": 50509,
@@ -566,7 +844,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 80287,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RRDE-USA"
+          ]
         },
         {
           "id": 50510,
@@ -582,7 +863,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 80287,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-21830"
+          ]
         }
       ],
       "images": {
@@ -599,6 +883,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50567",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rock Band Track Pack: Classic Rock",
           "source": "igdb",
@@ -608,6 +898,18 @@
           "field": "original_name",
           "value": "Rock Band Track Pack: Classic Rock",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rock Band Track Pack Classic Rock is a standalone title that allows owners of Rock Band and Rock Band 2 to keep the party going with 20 seminal hits from the heyday of classic rock and beyond, hand-picked with care by Harmonix.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Rock Band Track Pack Classic Rock es un título independiente que permite a quienes tengan Rock Band y Rock Band 2 seguir la fiesta con 20 éxitos fundamentales de la época dorada del rock clásico y de otras épocas, seleccionados con cuidado por Harmonix.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -624,7 +926,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 91207,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30327"
+          ]
         },
         {
           "id": 50565,
@@ -632,7 +937,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 91207,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R3ZE-USA"
+          ]
         },
         {
           "id": 50566,
@@ -648,7 +956,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 91207,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-21876"
+          ]
         }
       ],
       "images": {
@@ -665,6 +976,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50587",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rock Band: Country Track Pack",
           "source": "igdb",
@@ -674,6 +991,18 @@
           "field": "original_name",
           "value": "Rock Band: Country Track Pack",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rock Band Country Track Pack is a standalone game that wraps up 21 country songs into one retail package. The songs are a collection of previously released DLC, as well as new tracks that have yet to appear in any Rock Band game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Rock Band Country Track Pack es un juego independiente que reúne 21 canciones de country en un solo paquete comercial. Las canciones son una recopilación de contenido descargable publicado anteriormente, además de nuevos temas que aún no habían aparecido en ningún juego de Rock Band.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -690,7 +1019,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 68407,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30351"
+          ]
         },
         {
           "id": 50585,
@@ -698,7 +1030,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 68407,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R34E-USA-B0"
+          ]
         },
         {
           "id": 50586,
@@ -714,7 +1049,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 68407,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-21888"
+          ]
         }
       ],
       "images": {
@@ -732,6 +1070,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50618",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rock Band: Metal Track Pack",
           "source": "igdb",
@@ -741,6 +1085,18 @@
           "field": "original_name",
           "value": "Rock Band: Metal Track Pack",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rock Band Metal Track Pack is a standalone game that packages up 20 metal songs from Rock Band's library. It includes songs from Black Tide, Judas Priest, Rage Against The Machine, and more.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Rock Band Metal Track Pack es un juego independiente que reúne 20 canciones de metal de la biblioteca de Rock Band. Incluye temas de Black Tide, Judas Priest, Rage Against The Machine y otros.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -757,7 +1113,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 67778,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30352"
+          ]
         },
         {
           "id": 50616,
@@ -765,7 +1124,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 67778,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R37E-USA-B0"
+          ]
         },
         {
           "id": 50617,
@@ -781,7 +1143,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 67778,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-21889"
+          ]
         }
       ],
       "images": {
@@ -798,6 +1163,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50765",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rock Band Country Track Pack 2",
           "source": "igdb",
@@ -807,6 +1178,18 @@
           "field": "original_name",
           "value": "Rock Band Country Track Pack 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rock Band Country Track Pack 2 is a musical expansion to the Rock Band platform, the smash-hit collaborative, competitive, and single-player music game experience. Rock Band lets you and your friends form your own band and live out your rock and roll fantasies to music's greatest soundtrack - now with a down-home country twang!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Rock Band Country Track Pack 2 es una expansión musical para la plataforma Rock Band, la experiencia de juego musical colaborativa, competitiva y para un jugador de gran éxito. Rock Band te permite a ti y a tus amigos formar vuestra propia banda y vivir vuestras fantasías de rock and roll con la mejor banda sonora de la música: ¡ahora con un toque country!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -823,7 +1206,10 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 91206,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30623"
+          ]
         },
         {
           "id": 50766,
@@ -831,7 +1217,10 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 91206,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SRCE-USA-B0"
+          ]
         },
         {
           "id": 50767,
@@ -868,6 +1257,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Rock Band Unplugged is an expansion of the Rock Band series of music video games.\nGame modes are similar to Rock Band's, and the soundtrack includes a number of songs that have already been a part of the Rock Band series. Additional tracks will be a time-limited exclusive to Unplugged before they are released as downloadable content for the console games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Rock Band Unplugged es una expansión de la serie de videojuegos musicales Rock Band.\nLos modos de juego son similares a los de Rock Band, y la banda sonora incluye varias canciones que ya formaban parte de la serie Rock Band. Otros temas serán exclusivos de Unplugged durante un tiempo limitado, antes de publicarse como contenido descargable para las versiones de consola.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -881,9 +1282,18 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2721,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-01243",
+            "ULUS-10418"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6b5908b61f5e719a919a03ffadc3dffb.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5bcb07e4d6212798b9dbbe3a8253966a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/8edc11921a229fd1d98e63b0921313e0.png"
+      }
     },
     {
       "id": 39780,
@@ -895,6 +1305,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95074",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rock Band Blitz",
           "source": "igdb",
@@ -904,6 +1320,18 @@
           "field": "original_name",
           "value": "Rock Band Blitz",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rock Band Blitz is an arcade-style rhythm game from Harmonix that is \"fast, and loud, and silly, and a little over the top, and bright, and fun, and quick.\" It is capable of using every song from a player's Rock Band library.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Rock Band Blitz es un juego de ritmo de estilo arcade de Harmonix que es «rápido, ruidoso, tonto, un poco exagerado, brillante, divertido y ágil». Puede usar cualquier canción de la biblioteca de Rock Band del jugador.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -930,7 +1358,12 @@
           "igdbId": 2696,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/76bedfaa27870523301332d13b10c5d1.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/ed924d520ed1f8559df02ddc121ae835.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/812bd578410a8061543c13b369b7befe.png"
+      }
     },
     {
       "id": 41723,
@@ -942,6 +1375,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99347",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rock Band 4",
           "source": "igdb",
@@ -951,6 +1390,18 @@
           "field": "original_name",
           "value": "Rock Band 4",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rock Band, the award-winning social and interactive music performance experience, is back! Form your own band, rock the world, and live out your ultimate rock and roll fantasy, with your friends, family, or as a solo act. Rock Band 4 delivers the ultimate platform for gamers to experience music, giving players the chance to rock in the shoes of the biggest guitarists, bassists, drummers, and singers of all time. Rock Band 4 delivers the most authentic music game ever, challenging rockers to master lead guitar, bass guitar, drums, and vocals.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Rock Band, la premiada experiencia social e interactiva de interpretación musical, ha vuelto! Forma tu propia banda, conquista el mundo y vive tu fantasía de rock and roll definitiva, con tus amigos, tu familia o en solitario. Rock Band 4 ofrece la plataforma definitiva para que los jugadores vivan la música, dando la oportunidad de tocar en la piel de los guitarristas, bajistas, bateristas y cantantes más grandes de todos los tiempos. Rock Band 4 ofrece el juego musical más auténtico de la historia, con el reto de dominar la guitarra solista, el bajo, la batería y la voz.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -977,8 +1428,175 @@
           "igdbId": 10128,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/92d573364425dd9ecf9f9e5c4c9b793b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2da9373fa49a3e4e55d3a9008d94d12c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/554c0a0cbf2801f5b0ae39d67b921606.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 303,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19416,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 19439,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 19697,
+          "reason": "2008"
+        },
+        {
+          "position": 4,
+          "gameId": 20158,
+          "reason": "2008"
+        },
+        {
+          "position": 5,
+          "gameId": 20498,
+          "reason": "2008"
+        },
+        {
+          "position": 6,
+          "gameId": 18545,
+          "reason": "2009"
+        },
+        {
+          "position": 7,
+          "gameId": 19481,
+          "reason": "2009"
+        },
+        {
+          "position": 8,
+          "gameId": 20536,
+          "reason": "2009"
+        },
+        {
+          "position": 9,
+          "gameId": 20551,
+          "reason": "2009"
+        },
+        {
+          "position": 10,
+          "gameId": 20573,
+          "reason": "2009"
+        },
+        {
+          "position": 11,
+          "gameId": 35129,
+          "reason": "2009"
+        },
+        {
+          "position": 12,
+          "gameId": 18607,
+          "reason": "2010"
+        },
+        {
+          "position": 13,
+          "gameId": 19499,
+          "reason": "2010"
+        },
+        {
+          "position": 14,
+          "gameId": 20686,
+          "reason": "2011"
+        },
+        {
+          "position": 15,
+          "gameId": 39780,
+          "reason": "2012"
+        },
+        {
+          "position": 16,
+          "gameId": 41723,
+          "reason": "2015"
+        }
+      ]
+    },
+    {
+      "id": 3771,
+      "kind": "story",
+      "rationale": "Rock Band no tiene historia continua; se repite el orden de lanzamiento de los juegos principales. Se omiten los track packs, spin-offs y juegos de bandas concretas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19416,
+          "recommendedVersionId": 48378,
+          "reason": "El primer juego de la saga; versión PS3 por ser la más completa."
+        },
+        {
+          "position": 2,
+          "gameId": 19439,
+          "recommendedVersionId": 48420,
+          "reason": "Segunda entrega, mejora el original."
+        },
+        {
+          "position": 3,
+          "gameId": 19481,
+          "recommendedVersionId": 48494,
+          "reason": "Entrega dedicada a The Beatles."
+        },
+        {
+          "position": 4,
+          "gameId": 18607,
+          "recommendedVersionId": 46933,
+          "reason": "Añade teclados y modo Pro."
+        },
+        {
+          "position": 5,
+          "gameId": 41723,
+          "recommendedVersionId": 99346,
+          "reason": "Entrega actual; PS4 por su compatibilidad con DLC antiguo."
+        }
+      ]
+    },
+    {
+      "id": 3772,
+      "kind": "community",
+      "rationale": "Hoy lo más práctico es empezar por Rock Band 4, que funciona en consolas actuales y reutiliza DLC. Después se recomienda Rock Band 3 y, si gusta, Rock Band 2 y The Beatles. Se omiten track packs y spin-offs menores. No pude consultar fuentes, así que la ruta es de memoria.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41723,
+          "recommendedVersionId": 99346,
+          "reason": "Es el único con soporte actual y gran catálogo de DLC; versión PS4."
+        },
+        {
+          "position": 2,
+          "gameId": 18607,
+          "recommendedVersionId": 46933,
+          "reason": "Considerado el mejor juego de disco, con modo Pro; versión PS3."
+        },
+        {
+          "position": 3,
+          "gameId": 19439,
+          "recommendedVersionId": 48420,
+          "reason": "Gran lista de canciones; versión PS3."
+        },
+        {
+          "position": 4,
+          "gameId": 19481,
+          "recommendedVersionId": 48494,
+          "reason": "Opcional, muy valorado por su presentación; versión PS3."
+        }
+      ]
+    }
+  ]
 }

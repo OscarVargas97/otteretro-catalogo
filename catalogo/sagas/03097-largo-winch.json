@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43469",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Largo Winch: Empire Under Threat",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Largo Winch: Empire Under Threat",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Abandoned at birth, an orphan for the first few years of his life. That's how it all began with Largo Winch. Based off the comic series of the same name that's sold in excess of 2.3 million copies, Largo Winch follows Largo Winch, a 26-year-old who, after his adopted father dies, inherits a fortune that surpasses anything seen before. After falling through the cracks of the corporate world Largo finds himself in a place with more evil and corruption than he ever suspected to find.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 3971,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GLGP-EUR"
+          ]
         },
         {
           "id": 43469,
@@ -72,7 +87,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 3971,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50841",
+            "SLES-51093"
+          ]
         }
       ],
       "images": {
@@ -102,6 +121,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Largo Winch, playboy billionaire and international crime fighter, attends the opening of a new chemical factory in Venezuela when the complex is suddenly attacked by terrorists. They plant a bomb and take Tania Kournakova hostage, a journalist friend. Use a combination of stealth and hand-to-hand combat to infiltrate high tech offices, desert fortresses and a remote oil rig. Next to regular weapons, Largo can also use a brainwave scanner to scan the position and status of guards, a radio, and a toolbox to hack or modify electronic systems.\n\nThis third-person, stealth action game is based on the Belgian Largo Winch comic book series by Philippe Francq and Jean Van Hamme, edited by Dupuis.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -115,7 +140,12 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 78290,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03687",
+            "SLES-03688",
+            "SLUS-01441"
+          ]
         }
       ],
       "images": {
@@ -123,5 +153,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2850,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16509,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 25723,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

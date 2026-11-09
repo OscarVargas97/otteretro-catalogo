@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Your retro-console has never sounded this good before!\n\nFeaturing more than 15 original compositions by popular Japanese artists, 8-Bit Music Power Final puts chiptunes in your console, charming visualizer graphics on your TV, and the power to remix and control the experience in real-time in your hands!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 150565,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co31ow.jpg"
+      }
     },
     {
       "id": 43245,
@@ -61,6 +70,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "102598",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "8Bit Music Power Encore",
@@ -97,8 +112,31 @@
           "igdbId": 206584,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6nrt.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3431,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43236,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 43245,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "D-Pad Hero is a homebrew for NES based on Guitar Hero.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 163218,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/91b2b284b842744cc071164e81cd82e9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ed92a84322af78676356e91b8c4bc18f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b74ba0de6df81b65b9befa0ebeaa4e1f.png"
+      }
     },
     {
       "id": 43186,
@@ -74,6 +85,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Grab your controller and join in on the action in the ultimate rhythm music game for your Nintendo Entertainment System! Defeat the headbanging rock masters and reclaim the title of D-Pad Hero!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -89,8 +106,33 @@
           "igdbId": 48649,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/31da1ee94ac96fc5ce3b9e742a12b31c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/7ed1b61f7418895d90fe1d84f164dbb9.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/55672bc9adc5ccd5b44bb19386bab5f4.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3429,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43183,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 43186,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

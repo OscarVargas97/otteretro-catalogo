@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "508",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "MTV's Beavis and Butt-Head",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "MTV's Beavis and Butt-Head",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Based on the successful cartoon 'Beavis and Butt-head', the game is very faithful to the series.\n\nIt game stars at the home of Beavis and Butt-head - and from there you can choose to go to different locations like: Turbo mall 2000, the street, burger world, hospital, GWAR concert and more... your main goal is to find money to the GWAR concert.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 7777,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control sólido para su época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos y sonido completos."
+            }
+          ]
         },
         {
           "id": 919,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 307114,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control simple, pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Adaptación recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Monocromo y sonido limitado."
+            }
+          ]
         }
       ],
       "images": {
@@ -73,6 +127,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60155",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "MTV's Beavis and Butt-head in Virtual Stupidity",
           "source": "igdb",
@@ -81,6 +141,12 @@
         {
           "field": "original_name",
           "value": "MTV's Beavis and Butt-head in Virtual Stupidity",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Beavis and Butt-Head in Virtual Stupidity is a point and click adventure computer game based on the American animated television series created by Mike Judge, Beavis and Butt-Head, that was developed by ICOM Simulations and published by Viacom New Media. It was released on August 31, 1995.",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +164,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 8457,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón ideal para apuntar y hacer clic."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución, puede requerir compatibilidad."
+            }
+          ]
         },
         {
           "id": 60156,
@@ -106,7 +193,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 8457,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, con posibles ajustes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "El mando es incómodo para este género."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas largas y menor resolución."
+            }
+          ]
         }
       ],
       "images": {
@@ -114,5 +222,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2087,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 330,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 23761,
+          "reason": "1995"
+        }
+      ]
+    }
+  ]
 }

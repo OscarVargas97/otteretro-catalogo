@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2001",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rampage World Tour",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rampage World Tour",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rampage World Tour is a updated version of the classic Rampage. Rampage World Tour starts off at Scumlabs International where three lab technicians, George, Lizzy, and Ralph have mutated in an accident involving toxic waste. George has turned into a gigantic ape, Lizzy a gigantic lizard or dinosaur, and Ralph some sort of gigantic wolf. The three destroy the lab they previously worked at and then embark on a path of destruction encompassing the entire globe.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 3056,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en consola moderna."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 1999,
@@ -56,7 +89,32 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3056,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo con multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control aceptable."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos más borrosos."
+            }
+          ],
+          "codes": [
+            "NRPE",
+            "NRPP"
+          ]
         },
         {
           "id": 2000,
@@ -64,7 +122,28 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3056,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con teclado, torpe."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mayor resolución, pero con problemas de compatibilidad."
+            }
+          ]
         },
         {
           "id": 2001,
@@ -72,7 +151,32 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3056,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo con multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con pad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cargas largas."
+            }
+          ],
+          "codes": [
+            "SLES-01011",
+            "SLUS-00549"
+          ]
         },
         {
           "id": 2669,
@@ -80,14 +184,51 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 249132,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Jugable, pero simple."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Monocromo y limitado."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/ae33efa892803f0b563cf05c92f1f995.png",
         "hero": "https://cdn2.steamgriddb.com/hero/20086683a16f0f9ff5ee662afa9fbfbf.png",
         "logo": "https://cdn2.steamgriddb.com/logo/7481bf1c256a66dac3bf1f5721056ca6.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1006,
+          "platform": "n64",
+          "project": "Rampage",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sp00nznet/Rampage",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1212,
@@ -99,6 +240,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2274",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rampage 2: Universal Tour",
           "source": "igdb",
@@ -107,6 +254,12 @@
         {
           "field": "original_name",
           "value": "Rampage 2: Universal Tour",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Players choose one of the three original monsters to rescue. The player then uses the characters in the part of the world where the rescue is held. They work as a collective to break buildings, eat people, and destroy cars and this creates competition among players. When a player (literally) unlocks George, Lizzie, or Ralph, then they become playable characters. Once all the monsters are rescued, aliens begin to invade the earth, leaving the monsters the only ones who can save the planet they just helped partially destroy. After fending off the invasion on Earth, the monsters rescue Myukus (a cyclops-like alien) from Area 51 before chasing the aliens through space, destroying the aliens' bases throughout the Solar System and eventually rampaging through their homeworld.",
           "source": "igdb",
           "manual": false
         },
@@ -124,7 +277,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3583,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "N2PE",
+            "N2PP"
+          ]
         },
         {
           "id": 2275,
@@ -132,7 +289,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3583,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02021",
+            "SLUS-00742"
+          ]
         },
         {
           "id": 2698,
@@ -171,6 +332,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Using a similar game style to the Game Boy classic, Tetris Attack, a line of blocks sits above the play field which you can change the order of and drop two at a time onto the blocks below. Once a Detoblock (a block that is different in appearance to the usual blocks) appears, drop it onto the corresponding colour to clear those blocks from the field.\n\nPlay modes include Clear (clean the playfield of all blocks), Puzzle (try and clear all blocks within a set number of drops), Marathon (the usual play as far as you can mode) and Rescue Mode, where you must clear the blocks from the top of a cage, in which the many monsters from the arcade hit, Rampage World Tour, are trapped in.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -184,7 +351,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 6552,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ARXE"
+          ]
         }
       ],
       "images": {
@@ -203,6 +373,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17645",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rampage Knights",
           "source": "igdb",
@@ -211,6 +387,12 @@
         {
           "field": "original_name",
           "value": "Rampage Knights",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rampage Knights is a cooperative beat 'em up game mixed up with randomized dungeon crawling and exploration which you can play alone or with a friend online.\n\nYou play as a hero trapped by a spell in a magical forest. All paths lead you to a nearby ruined castle, infested with goblins, skeletons and other foul creatures. Gear up with awesome and ridiculous weapons and spells and descend into the deep labyrinth below the ruin to face its sinister master!\n\nTry to get as far as possible in a dungeon with randomized items, spells, traps and encounters. Your hero is upgraded along the way (both visually and gameplay-wise) as you find better weapons, items, magic powers and fight harder and harder monsters.",
           "source": "igdb",
           "manual": false
         },
@@ -229,7 +411,28 @@
           "year": 2015,
           "igdbId": 12513,
           "steamAppId": 314410,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en PC."
+            }
+          ]
         },
         {
           "id": 17645,
@@ -237,7 +440,31 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 12513,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil y cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ],
+          "codes": [
+            "0100D2E00C4CC000"
+          ]
         }
       ],
       "images": {
@@ -245,6 +472,175 @@
         "hero": "https://cdn2.steamgriddb.com/hero/3d8fe53b02cd5791092fcb7cad6d117c.png",
         "logo": "https://cdn2.steamgriddb.com/logo/9f0fd032f17effe47439a28c1ac69e77.png"
       }
+    },
+    {
+      "id": 16780,
+      "nameEs": "Rampage: Total Destruction",
+      "originalName": "Rampage: Total Destruction",
+      "year": 2006,
+      "igdbId": 2634,
+      "popularity": 24,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "44158",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Rampage: Total Destruction",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Rampage: Total Destruction",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Total Destruction features four game modes. The first is a campaign in which players work to progressively take out cities around the world. King of the City and King of the World are competitive modes where up to four players compete. In King of the City, players strive to rule a city by dominating the most districts. King of the World is a series of King of the City competitions across various cities. The fourth mode is a time trial where players must complete all the districts of a city within a time limit.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2006",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 44158,
+          "platform": "gc",
+          "kind": "original",
+          "year": 2006,
+          "igdbId": 2634,
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GXNE-USA"
+          ]
+        },
+        {
+          "id": 44159,
+          "platform": "wii",
+          "kind": "original",
+          "year": 2006,
+          "igdbId": 2634,
+          "criteria": [],
+          "codes": [
+            "RVL-RPGE-USA",
+            "RVL-RPGP-EUR"
+          ]
+        },
+        {
+          "id": 44160,
+          "platform": "ps2",
+          "kind": "original",
+          "year": 2006,
+          "igdbId": 2634,
+          "criteria": [],
+          "codes": [
+            "SLES-53800",
+            "SLUS-21323"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ab63243d415513c2307a6ff350832d10.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/3b09598db9f9231513fff10ba7aae16f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/80e95d403709b12e758a590b74d9965e.png"
+      },
+      "ports": [
+        {
+          "id": 315,
+          "platform": "ps2",
+          "project": "RampageRE",
+          "kind": "port",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/jjmhalew/RampageRE",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        }
+      ]
+    },
+    {
+      "id": 24717,
+      "nameEs": "Rampage Through Time",
+      "originalName": "Rampage Through Time",
+      "year": 2000,
+      "igdbId": 45091,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Rampage Through Time",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Rampage Through Time",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rampage is a series of video games released by Midway for various consoles. The basic premise of the series is that the player controls a human transformed into a giant monster by a lab accident. The gameplay revolves around using your monster to destroy cities around the world while attacking or avoiding military forces.\n\nRampage Through Time is the fourth game in the Rampage series. It was released on June 9, 2000. Its predecessor is Rampage 2: Universal Tour and it is followed by Rampage: Total Destruction. In the game, 7 previous Scumlabs monsters, plus a new one, use a time machine to rampage through time.\n\nThe world is again rebuilding after the events of Universal Tour. To clean up the mess quicker, Scumlabs invent a time machine to send people back in time to fix the mess without having to do it in the present. Unfortunately, the monsters, who have somehow made it back to Earth, appear and run into the machine. They begin terrorizing the past, present, and future, messing up the time stream.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2000",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 62334,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 2000,
+          "igdbId": 45091,
+          "criteria": [],
+          "codes": [
+            "SLES-02849",
+            "SLUS-01065"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/99e338ed3400abc5e21f64082286fba8.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f1789ccc93eb2d21cbd35a2f223d8922.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/10722f67bfcb15fea02a5dcdb40fcc02.png"
+      },
+      "ports": [
+        {
+          "id": 1005,
+          "platform": "ps1",
+          "project": "Rampage---Through-Time-Recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/TechnicallyComputers/Rampage---Through-Time-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 43488,
@@ -268,6 +664,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Rampage is a game where players control giant monsters/mutated humans. Players must smash buildings while destroying vehicles such as tanks, planes, and trains to advance to the next level. Smashing windows will sometimes reveals items of interest that the player may use.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1986",
           "source": "igdb",
@@ -283,8 +685,58 @@
           "igdbId": 278053,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/220e525782d33b3f74bdbffa4fe89cb5.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f44a35ae44562842a316f6c1ae2a41d1.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/4da8436532c0f2de8aad2adef6e04914.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 619,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43488,
+          "reason": "1986"
+        },
+        {
+          "position": 2,
+          "gameId": 1053,
+          "reason": "1997"
+        },
+        {
+          "position": 3,
+          "gameId": 1212,
+          "reason": "1999"
+        },
+        {
+          "position": 4,
+          "gameId": 24717,
+          "reason": "2000"
+        },
+        {
+          "position": 5,
+          "gameId": 1521,
+          "reason": "2001"
+        },
+        {
+          "position": 6,
+          "gameId": 16780,
+          "reason": "2006"
+        },
+        {
+          "position": 7,
+          "gameId": 8743,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17759",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SpeedRunners",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "SpeedRunners",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Cut-throat multiplayer running game that pits 4 players against each other, locally and/or online. Run, jump, swing around, and use devious weapons and pick-ups to knock opponents off-screen",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 9527,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando, comunidad menor."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 17759,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 9527,
           "steamAppId": 207140,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y taller de mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles precisos y más jugadores en línea."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y de alta resolución."
+            }
+          ]
         },
         {
           "id": 17760,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 9527,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando, comunidad menor."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 17761,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 9527,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ideal para partidas locales."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución."
+            }
+          ],
+          "codes": [
+            "0100C8B00C4AE000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +191,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "80970",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SpeedRunners 2: King of Speed",
           "source": "igdb",
@@ -100,6 +205,12 @@
         {
           "field": "original_name",
           "value": "SpeedRunners 2: King of Speed",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The ultimate competitive platformer is back! Outrun, outjump, and outsmart your rivals in cutthroat online/local races, now up to 8 players. Master the movement, learn meticulously designed maps, use powerful pick-ups, swing around with a grappling hook, and don't get knocked off-screen!",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +253,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 339614,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01004CC023582000"
+          ]
         }
       ],
       "images": {
@@ -151,5 +265,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2544,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8771,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 32420,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

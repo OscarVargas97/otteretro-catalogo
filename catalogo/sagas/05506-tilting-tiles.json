@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ultimate Remix is a movement based puzzle game. Each level is a carefully crafted challenge and your goal is to find the most efficient route through the level. Examine each level carefully to solve your way across the terrain using special moves and the environment to your advantage to stay within the move limit.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2022",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 228766,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5vu0.jpg"
+      }
     },
     {
       "id": 45144,
@@ -62,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "107040",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tilting Tiles: Micro Challenge",
           "source": "igdb",
@@ -70,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Tilting Tiles: Micro Challenge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tilting Tiles: Micro Challenge is the third installment in the Tilting Tiles series. Micro Challenge brings an entire new take on the unique puzzle series by adding new player movement options and new terrain tiles. Whether you are a fan of the series or a first time player, this is the perfect place to start.",
           "source": "igdb",
           "manual": false
         },
@@ -87,7 +108,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 250553,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido de base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles simples y adecuados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto en PS4."
+            }
+          ]
         },
         {
           "id": 107040,
@@ -95,9 +137,33 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 250553,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido de base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles simples, con posible uso del DualSense."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Misma experiencia en hardware nuevo."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Cargas más rápidas y mejor rendimiento en PS5."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6rs2.jpg"
+      }
     },
     {
       "id": 45667,
@@ -108,6 +174,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "108215",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Tilting Tiles: Fires of Industry",
@@ -144,8 +216,36 @@
           "igdbId": 319945,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8yir.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2036,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 45014,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 45144,
+          "reason": "2023"
+        },
+        {
+          "position": 3,
+          "gameId": 45667,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

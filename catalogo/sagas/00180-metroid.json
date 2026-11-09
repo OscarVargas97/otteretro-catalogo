@@ -3,7 +3,7 @@
   "name": "Metroid",
   "igdbKind": "franchise",
   "igdbId": 756,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1994,
       "igdbId": 1103,
       "popularity": 1087,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "431",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Super Metroid",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Super Metroid",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Space Pirates, merciless agents of the evil Mother Brain, have stolen the last Metroid from a research station, and once again Mother Brain threatens the safety of the galaxy! Samus Aran must don her awesome array of high-tech weaponry to retrieve the deadly Metroid hidden deep within the cave-riddled planet Zebes. Super Metroid features excellent graphics, with a huge variety of enemies and worlds to explore. The side-view action will be familiar to many players, only now there are new weapons and items, including the Grappling Beam, which allows Samus to swing across large chasms, and the X-Ray Scope, which reveals secret passages.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Los Piratas Espaciales, agentes despiadados del malvado Mother Brain, han robado el último Metroid de una estación de investigación, ¡y una vez más Mother Brain amenaza la seguridad de la galaxia! Samus Aran debe ponerse su impresionante arsenal de armamento de alta tecnología para recuperar el mortífero Metroid oculto en las profundidades del planeta Zebes, lleno de cuevas. Super Metroid cuenta con gráficos excelentes, una enorme variedad de enemigos y mundos por explorar. La acción en vista lateral resultará familiar a muchos jugadores, solo que ahora hay armas y objetos nuevos, entre ellos el Grappling Beam, que permite a Samus balancearse sobre grandes abismos, y el X-Ray Scope, que revela pasadizos secretos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 1103,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado en cartucho, control excelente."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Hardware original, imagen nativa."
+            }
+          ]
         },
         {
           "id": 430,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1103,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Suspensión útil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "480p, estable."
+            }
+          ]
         },
         {
           "id": 431,
@@ -64,7 +124,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1103,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Suspensión y mando clásico o Pro."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "720p, estable."
+            }
+          ]
         },
         {
           "id": 432,
@@ -72,14 +153,77 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 1103,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Solo New 3DS, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/167248f62dbaf61aff4b7d1be9439282.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/2dec8d122fa3447e2baa42fbe4fe7918.png",
         "logo": "https://cdn2.steamgriddb.com/logo/ddfa8a1fa86914072eb6e3e55c253856.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 407,
+          "platform": "snes",
+          "project": "sm",
+          "kind": "remake",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/snesrev/sm",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 1147,
+          "platform": "snes",
+          "project": "SuperMetroidRecomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/SuperMetroidRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 1309,
+          "platform": "snes",
+          "project": "Super Metroid Launcher",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/RadzPrower/Super-Metroid-Launcher",
+          "source": "readonlymemo.com",
+          "added": "2026-10-14",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 1620,
@@ -87,9 +231,15 @@
       "originalName": "Metroid Fusion",
       "year": 2002,
       "igdbId": 1104,
-      "popularity": 315,
+      "popularity": 316,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "3234",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Metroid Fusion",
@@ -100,6 +250,18 @@
           "field": "original_name",
           "value": "Metroid Fusion",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Metroid Fusion is a side-scrolling action-adventure game that combines exploration, combat, and progression within a structured environment. Players navigate distinct sectors, acquire new abilities, and unlock access to previously restricted areas as they advance.\nThe game emphasizes guided objectives alongside ability-based traversal, with a focus on atmospheric tension, evolving threats, and progression through upgrades.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Metroid Fusion es un juego de aventuras y acción de desplazamiento lateral que combina exploración, combate y progresión dentro de un entorno estructurado. Los jugadores recorren sectores diferenciados, adquieren nuevas habilidades y desbloquean el acceso a zonas antes restringidas a medida que avanzan.\nEl juego pone énfasis en los objetivos guiados junto con el desplazamiento basado en habilidades, con un enfoque en la tensión ambiental, las amenazas cambiantes y la progresión mediante mejoras.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -116,7 +278,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1104,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Suspensión, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación en pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 3234,
@@ -124,7 +307,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 1104,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Suspensión y mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p, estable."
+            }
+          ]
         },
         {
           "id": 3235,
@@ -132,14 +336,56 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 1104,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado en cartucho, controles ágiles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Nativo, pantalla pequeña."
+            }
+          ],
+          "codes": [
+            "AMTE",
+            "AMTJ",
+            "AMTP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/1883a19a4983372e803beab695ee77f1.png",
         "hero": "https://cdn2.steamgriddb.com/hero/c31de86411f643ec08e04b38ae397efc.png",
         "logo": "https://cdn2.steamgriddb.com/logo/33b3214d792caf311e1f00fd22b392c5.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 891,
+          "platform": "gba",
+          "project": "MetroidFusionRecomp",
+          "kind": "recomp",
+          "toolchain": "GBARecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Zaxaerith/MetroidFusionRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "mGBA"
+        }
+      ]
     },
     {
       "id": 2822,
@@ -151,6 +397,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3386",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Metroid",
           "source": "igdb",
@@ -160,6 +412,18 @@
           "field": "original_name",
           "value": "Metroid",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's you against the evil Mother Brain in the thrilling battle of Metroid! You're inside the fortress planet Zebes. The planet of endless secret passageways where the Metroid are multiplying. Left alone the Metroid are harmless. But in the wrong hands they could destroy the galaxy. It's up to you to prevent the Mother Brain that controls Zebes from using the Metroid for evil purposes. But that won't be easy. You'll have to use your spacesuit to absorb valuable energy for your search to gain the use of power items like the Ice Beam, Wave Beam, High Jump Boots and Varia. If you survive, it will be you and your acquired powers against the Mother Brain.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Tú contra el malvado Mother Brain en la emocionante batalla de Metroid! Estás dentro del planeta fortaleza Zebes, el planeta de pasadizos secretos sin fin donde los Metroid se están multiplicando. Si se los deja solos, los Metroid son inofensivos. Pero en las manos equivocadas podrían destruir la galaxia. Depende de ti evitar que Mother Brain, que controla Zebes, use a los Metroid con fines malignos. Pero no será fácil. Tendrás que usar tu traje espacial para absorber energía valiosa durante tu búsqueda, con el fin de utilizar los power-ups como el Ice Beam, el Wave Beam, las High Jump Boots y la Varia. Si sobrevives, serás tú y tus poderes adquiridos contra Mother Brain.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -176,7 +440,28 @@
           "kind": "remake",
           "year": 2014,
           "igdbId": 1107,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Remake con jefes nuevos y zona extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mapa, control ágil y puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reimaginación fiel al espíritu."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Salida en 720p, estable."
+            }
+          ]
         },
         {
           "id": 3387,
@@ -184,7 +469,28 @@
           "kind": "remake",
           "year": 2004,
           "igdbId": 1107,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Remake con jefes nuevos y zona extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mapa, guardado y control ágil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reimaginación fiel al espíritu."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en GBA, pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 5235,
@@ -192,7 +498,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1101,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola virtual del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión, pantalla portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable en pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 5236,
@@ -200,7 +527,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1101,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola virtual del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Puntos de suspensión ayudan."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480p, emulación estable."
+            }
+          ]
         },
         {
           "id": 5237,
@@ -208,7 +556,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1101,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola virtual del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión, mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida en 720p."
+            }
+          ]
         },
         {
           "id": 5238,
@@ -216,7 +585,28 @@
           "kind": "original",
           "year": 1987,
           "igdbId": 1101,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Aventura corta y básica."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Contraseñas, sin mapa, movimiento rígido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, imagen 8 bits."
+            }
+          ]
         },
         {
           "id": 5370,
@@ -224,7 +614,28 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 76247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port del juego de NES."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado en cartucho, control antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta en pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 7868,
@@ -232,7 +643,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 342602,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola virtual del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión, pantalla portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable en pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 7869,
@@ -240,7 +672,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 342602,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola virtual del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión de partida disponible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480p, emulación estable."
+            }
+          ]
         },
         {
           "id": 7870,
@@ -248,14 +701,51 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 342602,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola virtual del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión, mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida en 720p."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3f1f477b13ae93243c16cc90e518ee09.png",
         "hero": "https://cdn2.steamgriddb.com/hero/c27fd893ee6d8a013d57f9c6ed6c3163.png",
         "logo": "https://cdn2.steamgriddb.com/logo/440924c5948e05070663f88e69e8242b.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 897,
+          "platform": "nes",
+          "project": "MetroidNESRecomp",
+          "kind": "recomp",
+          "toolchain": "nesrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/MetroidNESRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Mesen"
+        }
+      ]
     },
     {
       "id": 3087,
@@ -279,6 +769,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Samus Aran's entry into the bumper-and-flipper world is a sleek, sci-fi classic gaming adventure that has her careening into gigantic boss monsters and bouncing through a variety of exciting pinball tables. Play tables across two screens at the same time using the touch screen to nudge the pinball table. Battle deadly enemies and experience a number of special modes such as Clone Machine Multiball and the Wall-Jump Challenge while you blast and bomb your high score into a state of pure pinball pandemonium.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La incursión de Samus Aran en el mundo de los flippers y los bumpers es un clásico de la ciencia ficción, elegante y lleno de aventura, en el que se estrella contra enormes monstruos jefe y rebota por una variedad de emocionantes mesas de pinball. Juega en dos pantallas a la vez usando la pantalla táctil para empujar la mesa de pinball. Combate a enemigos mortales y disfruta de varios modos especiales, como Clone Machine Multiball y el Wall-Jump Challenge, mientras disparas y bombardeas tu puntuación hasta llevarla a un estado de puro caos pinballístico.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -292,7 +794,12 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 1109,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AP2E",
+            "AP2J",
+            "AP2P"
+          ]
         }
       ],
       "images": {
@@ -311,6 +818,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6065",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Metroid Prime Hunters",
           "source": "igdb",
@@ -320,6 +833,18 @@
           "field": "original_name",
           "value": "Metroid Prime Hunters",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Metroid Prime Hunters is a first-person action-adventure game that combines exploration, shooting, and competitive multiplayer gameplay. Set across interconnected locations, it features objective-based progression alongside encounters with rival bounty hunters, each with distinct abilities and weapons.\nThe game emphasizes fast-paced combat, environmental navigation, and upgrade-driven progression, with both single-player and multiplayer modes supporting a variety of playstyles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Metroid Prime Hunters es un juego de acción y aventura en primera persona que combina exploración, disparos y modo multijugador competitivo. Se desarrolla en ubicaciones interconectadas e incluye una progresión basada en objetivos, junto con encuentros con cazarrecompensas rivales, cada uno con habilidades y armas distintas.\nEl juego pone énfasis en el combate rápido, la navegación por el entorno y la progresión basada en mejoras, con modos para un jugador y multijugador que se adaptan a diversos estilos de juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -336,7 +861,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1110,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo; online cerrado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil en el GamePad, suspensión."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor nitidez."
+            }
+          ]
         },
         {
           "id": 6066,
@@ -344,14 +890,61 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 1110,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo; online cerrado hoy."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control táctil original."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña de DS."
+            }
+          ],
+          "codes": [
+            "AMHE",
+            "AMHJ",
+            "AMHK",
+            "AMHP",
+            "NTRJ",
+            "WUP-N-DAPE",
+            "WUP-N-DAPJ",
+            "WUP-N-DAPP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/bfa22713f10ab2395b2edc4555fb072e.png",
         "hero": "https://cdn2.steamgriddb.com/hero/8a1ce8873f0ebe6634da275019155b10.png",
         "logo": "https://cdn2.steamgriddb.com/logo/2cd2915e69546904e4e5d4a2ac9e1652.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 893,
+          "platform": "ds",
+          "project": "MetroidPrimeHuntersRecomp",
+          "kind": "recomp",
+          "toolchain": "ndsrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/MetroidPrimeHuntersRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "melonDS"
+        }
+      ]
     },
     {
       "id": 4039,
@@ -363,6 +956,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8961",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Metroid II: Return of Samus",
           "source": "igdb",
@@ -372,6 +971,18 @@
           "field": "original_name",
           "value": "Metroid II: Return of Samus",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A Sinister Planet Threatens the Galaxy!\n\nBattle through a sprawling underworld, seeking out every last Metroid, and build up your arsenal by discovering mysterious artefacts.\n\nEnjoy new abilities like the Spider Ball, and powerful new weapons like the Plasma Beam, as you attempt to eradicate the Metroids once and for all.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Un planeta siniestro amenaza la galaxia! Atraviésa un inframundo extenso, busca hasta el último Metroid y amplía tu arsenal descubriendo artefactos misteriosos.\n\nDisfruta de nuevas habilidades como la Spider Ball y armas poderosas como el Plasma Beam, mientras intentas erradicar a los Metroid de una vez por todas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -388,7 +999,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1102,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Aventura completa pero austera."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión y colores ayudan."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 7961,
@@ -396,7 +1028,28 @@
           "kind": "original",
           "year": 1991,
           "igdbId": 1102,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Aventura completa pero austera."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Pantalla monocroma, sin mapa, controles rígidos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Hardware antiguo, imagen difícil de leer."
+            }
+          ]
         },
         {
           "id": 8961,
@@ -404,7 +1057,28 @@
           "kind": "remake",
           "year": 2017,
           "igdbId": 37140,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Habilidades Aeion, amiibo y modo difícil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mapa, apuntado libre, guardado automático."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Rehecho con mecánicas nuevas."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en 3DS, 3D."
+            }
+          ]
         }
       ],
       "images": {
@@ -435,6 +1109,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "\"The galaxy is not at peace. The war between the Galactic Federation and the Space Pirates is far from over. Enlist with the Federation Force to join a four-player local or online squad in this co-op sci-fi shooter. Fight alongside teammates in your specialized Mech to eliminate the Space Pirate menace and any threat that stands in your way.\n\nMake it a solitary mission or join 3 friends for increased firepower and deeper strategies. In each mission, you'll choose your role on the team by selecting from different subweapons and MODs to customize your Mech and maximize your chance of survival. Whether you focus on healing allies or increasing your arsenal, your greatest asset is teamwork. Work together, tackle missions, take down bosses, and defeat hostile creatures as one powerful unit. The dangerous Metroid Prime universe is now at your mercy. Honor your vow to protect it and fight back...before there’s nothing left to fight for. The next chapter in the Metroid Prime saga is here.\"",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "\"La galaxia no está en paz. La guerra entre la Federación Galáctica y los Piratas Espaciales está lejos de terminar. Alístate en la Federation Force para unirte a un escuadrón cooperativo de cuatro jugadores, locales o en línea, en este shooter de ciencia ficción. Lucha junto a tus compañeros en tu Mech especializado para eliminar la amenaza de los Piratas Espaciales y cualquier peligro que se interponga en tu camino.\n\nHazlo como misión en solitario o únete a 3 amigos para obtener más potencia de fuego y estrategias más profundas. En cada misión, elegirás tu papel en el equipo seleccionando entre distintas subarmas y MODs para personalizar tu Mech y maximizar tus posibilidades de supervivencia. Ya sea que te concentres en curar a los aliados o en aumentar tu arsenal, tu mayor recurso es el trabajo en equipo. Colaboren, afronten misiones, derroten a los jefes y eliminen criaturas hostiles como una sola unidad poderosa. El peligroso universo de Metroid Prime está ahora a tu merced. Cumple tu promesa de protegerlo y contraataca… antes de que no quede nada por lo que luchar. El siguiente capítulo de la saga Metroid Prime ya está aquí.\"",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -448,7 +1134,12 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 11217,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BCAE",
+            "CTR-P-BCAJ",
+            "CTR-P-BCAP"
+          ]
         }
       ],
       "images": {
@@ -476,6 +1167,18 @@
           "field": "original_name",
           "value": "Metroid Prime: Blast Ball",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Blast Ball is a multiplayer mode and in-universe sport game that appear in Metroid Prime: Federation Force.\nBlast Ball can be played alone or against local or online players. Players who do not possess a copy of Federation Force will be able to play this mode through Nintendo 3DS Download Play.\n\nThe game mode has been released as a standalone title, Metroid Prime: Blast Ball, in the Nintendo eShop as a free downloadable demo in both the European and American storefronts.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Blast Ball es un modo multijugador y un deporte del propio universo del juego que aparece en Metroid Prime: Federation Force.\nBlast Ball puede jugarse en solitario o contra jugadores locales o en línea. Los jugadores que no tengan una copia de Federation Force podrán jugar este modo mediante Descarga de juego de Nintendo 3DS.\n\nEl modo se ha publicado como título independiente, Metroid Prime: Blast Ball, en Nintendo eShop como demo descargable gratuita, tanto en las tiendas europea como en la estadounidense.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -509,6 +1212,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14166",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Metroid: Other M",
           "source": "igdb",
@@ -518,6 +1227,18 @@
           "field": "original_name",
           "value": "Metroid: Other M",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A part of the Metroid series, it features gameplay in both first- and third-person perspectives, and is the first installment of the franchise to feature melee attacks which could only be executed when an enemy's health was reduced to a certain degree.\nThe game gave significant focus on plot and characterization, with extensive usage of cinematics and voice acting.\n\nThe regular gameplay features a third person perspective, where players hold the Wii Remote horizontally. Samus can jump, fire the arm cannon, and turn into a morph ball, which can roll into narrow passages and drop energy bombs. While gameplay is similar to early Metroid titles, the game's environments are three-dimensional and movement is not limited to a two-dimensional plane. Other M is the first in the series to feature a melee combat system. With well-timed button presses, players can use special techniques such as the Sense Move, which allows them to dodge enemy attacks, and the Overblast, where Samus jumps on the enemy and fires a charged shot at point-blank range.\n\nWhen the Wii Remote is pointed towards the screen, the angle switches to a first-person view, where players can lock onto targets and fire missiles; however, players cannot move in this perspective. There are several instances where players will have to constantly switch between play modes; for example, fighting off a horde of flying enemies in third person, while switching to first person to destroy their spawn points. Additionally, the first-person mode is also used in exploration, such as locating hidden items.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Parte de la serie Metroid, presenta jugabilidad tanto en primera como en tercera persona y es la primera entrega de la franquicia que incluye ataques cuerpo a cuerpo, que solo podían ejecutarse cuando la salud de un enemigo se reducía a un cierto nivel.\nEl juego dio gran importancia a la trama y a la caracterización, con un uso extenso de escenas cinemáticas y actuación de voz.\n\nLa jugabilidad habitual tiene una perspectiva en tercera persona, en la que los jugadores sostienen el Wii Remote en horizontal. Samus puede saltar, disparar el cañón de brazo y convertirse en una morph ball, que puede rodar por pasajes estrechos y soltar bombas de energía. Aunque la jugabilidad es similar a la de los primeros títulos de Metroid, los entornos del juego son tridimensionales y el movimiento no se limita a un plano bidimensional. Other M es la primera de la serie que incluye un sistema de combate cuerpo a cuerpo. Con pulsaciones de botón bien cronometradas, los jugadores pueden usar técnicas especiales como el Sense Move, que les permite esquivar los ataques enemigos, y el Overblast, en el que Samus salta sobre el enemigo y dispara un tiro cargado a quemarropa.\n\nCuando el Wii Remote apunta a la pantalla, el ángulo cambia a una vista en primera persona, en la que los jugadores pueden fijar objetivos y disparar misiles; sin embargo, no pueden moverse en esta perspectiva. Hay varias situaciones en las que los jugadores deberán cambiar constantemente de modo de juego; por ejemplo, combatir a una horda de enemigos voladores en tercera persona mientras cambian a primera persona para destruir sus puntos de aparición. Además, el modo en primera persona también se usa en la exploración, por ejemplo, para localizar objetos ocultos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -534,7 +1255,33 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 1113,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con Wiimote de lado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480p."
+            }
+          ],
+          "codes": [
+            "RVL-R3OE-USA-E0",
+            "RVL-R3OJ-JPN-E0",
+            "RVL-R3OP-EUR-E0"
+          ]
         },
         {
           "id": 14166,
@@ -542,7 +1289,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 1113,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control, con suspensión."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p."
+            }
+          ]
         }
       ],
       "images": {
@@ -557,7 +1325,7 @@
       "originalName": "Metroid Dread",
       "year": 2021,
       "igdbId": 15698,
-      "popularity": 223,
+      "popularity": 224,
       "iconic": false,
       "fields": [
         {
@@ -570,6 +1338,18 @@
           "field": "original_name",
           "value": "Metroid Dread",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join intergalactic bounty hunter Samus Aran in her first new 2D Metroid story in 19 years. Samus’ story continues after the events of the Metroid Fusion game when she descends upon planet ZDR to investigate a mysterious transmission sent to the Galactic Federation. The remote planet has become overrun by vicious alien lifeforms and chilling mechanical menaces. Samus is more agile and capable than ever, but can she overcome the inhuman threat stalking the depths of ZDR?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Únete al cazarrecompensas intergaláctico Samus Aran en su primera nueva historia en 2D de Metroid en 19 años. La historia de Samus continúa tras los acontecimientos del juego Metroid Fusion, cuando desciende al planeta ZDR para investigar una misteriosa transmisión enviada a la Federación Galáctica. El planeta remoto está infestado de feroces formas de vida alienígenas y amenazas mecánicas escalofriantes. Samus es más ágil y capaz que nunca, pero ¿podrá superar la amenaza inhumana que acecha en las profundidades de ZDR?",
+          "source": "claude",
           "manual": false
         },
         {
@@ -586,14 +1366,33 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 15698,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010093801237C000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/63c07e376dcf5799fc02381033f7c121.png",
         "hero": "https://cdn2.steamgriddb.com/hero/aa5d5b1b36318c95dffe1d6c4e153f2d.png",
         "logo": "https://cdn2.steamgriddb.com/logo/feb78ee29377237a3bfa93e3b61c1655.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 890,
+          "platform": "switch",
+          "project": "Metroid-Dread-Recomp",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/yozander2009-stack/Metroid-Dread-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 10207,
@@ -605,6 +1404,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "23163",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Metroid Prime 4: Beyond",
           "source": "igdb",
@@ -614,6 +1419,18 @@
           "field": "original_name",
           "value": "Metroid Prime 4: Beyond",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Deadly sharpshooter Sylux has finally caught up with renowned bounty hunter Samus Aran! After an unexpected accident in the wake of their clash, Samus finds herself transported to Viewros— a mysterious planet once inhabited by an ancient race. Now she must explore this planet, all while battling the strange creatures that inhabit it, to find her way home.\n\nScan your surroundings for clues, make the most of your equipment and weapons, and use Samus's newfound psychic abilities— and her technologically advanced bike, the Vi-O-La— to traverse and explore the environment. Operate mechanisms, control your charge beam, and more— you'll need every tool at your disposal to survive and escape Viewros!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡La temible tiradora Sylux ha alcanzado por fin a la célebre cazarrecompensas Samus Aran! Tras un accidente inesperado durante su enfrentamiento, Samus se encuentra transportada a Viewros, un misterioso planeta que antaño habitó una raza antigua. Ahora debe explorar este planeta, mientras combate a las extrañas criaturas que lo habitan, para encontrar el camino de regreso a casa.\n\nEscanea tus alrededores en busca de pistas, aprovecha al máximo tu equipo y tus armas, y usa las nuevas habilidades psíquicas de Samus, así como su moto tecnológicamente avanzada, la Vi-O-La, para desplazarte y explorar el entorno. Opera mecanismos, controla tu rayo de carga y mucho más: ¡necesitarás todas las herramientas a tu disposición para sobrevivir y escapar de Viewros!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -638,14 +1455,33 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 37136,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010019A01E2F2000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a59a415362cdf470a098d7ee3dfc46bc.png",
         "hero": "https://cdn2.steamgriddb.com/hero/cbf4fcaa1ff6715bc78e0b76043d35e7.png",
         "logo": "https://cdn2.steamgriddb.com/logo/5a226c0a768ad5ff4a1f9c169c6cb3bb.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 892,
+          "platform": "switch",
+          "project": "mp4-recomp",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/linuxopt/mp4-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        }
+      ]
     },
     {
       "id": 16554,
@@ -657,6 +1493,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44330",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Metroid Prime",
           "source": "igdb",
@@ -666,6 +1508,18 @@
           "field": "original_name",
           "value": "Metroid Prime",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A 3D exploration-focused metroidvania with first-person shooting mechanics and the first 3D entry in the Metroid series, Metroid Prime follows Samus Aran after the events of Metroid (1986) as she boards a Space Pirate frigate, then chases her escaping archrival Ridley into the intricately structured Tallon IV, a planet full of deadly wildlife and former home to the advanced and ancient Chozo race.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un metroidvania tridimensional centrado en la exploración, con mecánicas de disparo en primera persona y la primera entrega en 3D de la serie Metroid. Metroid Prime sigue a Samus Aran tras los acontecimientos de Metroid (1986) mientras sube a bordo de una fragata de los Piratas Espaciales y, después, persigue a su archirrival Ridley, que huye, hasta Tallon IV, un planeta lleno de fauna mortal y antiguo hogar de la avanzada y antigua raza Chozo, con una estructura intrincada.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -682,7 +1536,14 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 1105,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GM8E-KOR",
+            "DL-DOL-GM8E-USA",
+            "DL-DOL-GM8J-JPN",
+            "DL-DOL-GM8P-EUR",
+            "DL-DOL-GM8P-EUR-01"
+          ]
         },
         {
           "id": 44281,
@@ -690,7 +1551,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 134257,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R3IJ-JPN"
+          ]
         },
         {
           "id": 44330,
@@ -705,7 +1569,37 @@
         "cover": "https://cdn2.steamgriddb.com/grid/0327d825efc9703e56afaa2e9e1cef9e.png",
         "hero": "https://cdn2.steamgriddb.com/hero/007202387c4274c570d9cb72943fc873.png",
         "logo": "https://cdn2.steamgriddb.com/logo/3b0fe5925876bc505ee9d4903569918d.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 244,
+          "platform": "gc",
+          "project": "MetroidPrimePort",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Odrannnn/MetroidPrimePort",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        },
+        {
+          "id": 1397,
+          "platform": "gc",
+          "project": "prime",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/PrimeDecomp/prime",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 16708,
@@ -717,6 +1611,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44282",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Metroid Prime 2: Echoes",
           "source": "igdb",
@@ -726,6 +1626,18 @@
           "field": "original_name",
           "value": "Metroid Prime 2: Echoes",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An exploration-driven 3D metroidvania/first-person shooter hybrid and sequel to Metroid Prime (2002) in which Samus lands on Aether, an intricate planet torn into light and dark versions of itself, to help its remaining inhabitants defend against the invaders from its dark incarnation by traversing both the light and dark worlds, acquiring new power-ups and braving oppressive environments.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un híbrido de metroidvania tridimensional centrado en la exploración y de shooter en primera persona, secuela de Metroid Prime (2002). En ella, Samus aterriza en Aether, un planeta intrincado dividido en versiones de luz y de oscuridad de sí mismo, para ayudar a sus habitantes que quedan a defenderse de los invasores de su encarnación oscura. Para lograrlo, debe recorrer tanto el mundo de la luz como el de la oscuridad, adquirir nuevos power-ups y soportar entornos opresivos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -742,7 +1654,33 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1108,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye multijugador local."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control clásico, bloqueo de objetivo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480p, 4:3."
+            }
+          ],
+          "codes": [
+            "DL-DOL-G2ME-USA",
+            "DL-DOL-G2MP-EUR",
+            "DL-DOL-P2ME-USA"
+          ]
         },
         {
           "id": 44282,
@@ -750,14 +1688,65 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 134258,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Sin multijugador, pero con ajustes extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control con puntero, más preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mismo juego, control distinto."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Widescreen y 480p."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a811009cca17955a869190961a215997.png",
         "hero": "https://cdn2.steamgriddb.com/hero/c0f971d8cd24364f2029fcb9ac7b71f5.png",
         "logo": "https://cdn2.steamgriddb.com/logo/4158f6d19559955bae372bb00f6204e4.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 243,
+          "platform": "gc",
+          "project": "MetroidPrime2Port",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Odrannnn/MetroidPrime2Port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        },
+        {
+          "id": 1396,
+          "platform": "gc",
+          "project": "echoes",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/PrimeDecomp/echoes",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 18281,
@@ -778,6 +1767,18 @@
           "field": "original_name",
           "value": "Metroid Prime Hunters: First Hunt",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An episode in the Metroid Prime series which started on the GameCube, this game takes place between Metroid Prime and Metroid Prime 2: Echoes. Interstellar bounty hunter Samus Aran is sent to the distant Alimbic Cluster by the Galactic Federation to investigate a message saying that the source of ultimate power lies in this desolate part of the galaxy, once home to an advanced culture.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un episodio de la serie Metroid Prime que comenzó en GameCube. Este juego transcurre entre Metroid Prime y Metroid Prime 2: Echoes. La cazarrecompensas interestelar Samus Aran es enviada por la Federación Galáctica al lejano Cúmulo Alimbic para investigar un mensaje que indica que la fuente del poder supremo se encuentra en esta región desolada de la galaxia, antaño hogar de una cultura avanzada.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -825,6 +1826,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The trilogy closes as corruption creeps over the universe… and into Samus Aran. Using the Wii Remote and Nunchuk, players control Samus as she partners with other bounty hunters, shoots down enemies, and explores alien worlds in a harrowing mission to stop the mutagenic Phazon from spreading across the galaxy.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La trilogía se cierra mientras la corrupción se extiende por el universo… y llega hasta Samus Aran. Usando el Wii Remote y el Nunchuk, los jugadores controlan a Samus mientras se alía con otros cazarrecompensas, dispara a los enemigos y explora mundos alienígenas en una misión angustiante para detener la expansión por la galaxia del mutágeno Phazon.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -838,7 +1851,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1111,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RM3E-USA",
+            "RVL-RM3J-JPN",
+            "RVL-RM3P-EUR"
+          ]
         }
       ],
       "images": {
@@ -869,6 +1887,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "It’s eat or be eaten! Take control of Samus Aran, a renowned bounty hunter ambushed by unknown attackers and marooned on an unfamiliar moon. Gather your arsenal, navigate a maze of corridors, hunt down powerful bosses, and use your newly awakened Metroid instincts to devour your foes. You’ll need to strike quickly and aggressively with beams, missiles, and more—lest you become the enemy’s next meal.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Come o te comen! Toma el control de Samus Aran, una célebre cazarrecompensas emboscada por atacantes desconocidos y abandonada en una luna desconocida. Reúne tu arsenal, recorre un laberinto de pasillos, caza a jefes poderosos y usa tus instintos Metroid recién despertados para devorar a tus enemigos. Tendrás que atacar con rapidez y agresividad, con rayos, misiles y mucho más, o te convertirás en la próxima comida del enemigo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2027",
           "source": "igdb",
@@ -884,8 +1914,239 @@
           "igdbId": 408719,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocvaz.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 291,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2822,
+          "reason": "1987"
+        },
+        {
+          "position": 2,
+          "gameId": 4039,
+          "reason": "1991"
+        },
+        {
+          "position": 3,
+          "gameId": 287,
+          "reason": "1994"
+        },
+        {
+          "position": 4,
+          "gameId": 1620,
+          "reason": "2002"
+        },
+        {
+          "position": 5,
+          "gameId": 16554,
+          "reason": "2002"
+        },
+        {
+          "position": 6,
+          "gameId": 16708,
+          "reason": "2004"
+        },
+        {
+          "position": 7,
+          "gameId": 18281,
+          "reason": "2004"
+        },
+        {
+          "position": 8,
+          "gameId": 3087,
+          "reason": "2005"
+        },
+        {
+          "position": 9,
+          "gameId": 3103,
+          "reason": "2006"
+        },
+        {
+          "position": 10,
+          "gameId": 19398,
+          "reason": "2007"
+        },
+        {
+          "position": 11,
+          "gameId": 7683,
+          "reason": "2010"
+        },
+        {
+          "position": 12,
+          "gameId": 4391,
+          "reason": "2016"
+        },
+        {
+          "position": 13,
+          "gameId": 4730,
+          "reason": "2016"
+        },
+        {
+          "position": 14,
+          "gameId": 9287,
+          "reason": "2021"
+        },
+        {
+          "position": 15,
+          "gameId": 10207,
+          "reason": "2025"
+        },
+        {
+          "position": 16,
+          "gameId": 50223,
+          "reason": "2027"
+        }
+      ]
+    },
+    {
+      "id": 3557,
+      "kind": "story",
+      "rationale": "Cronología interna según la línea temporal oficial. Se omiten los spin-offs sin historia relevante (Pinball, Blast Ball, First Hunt). La posición de Prime 4 y de Federation Force es la que menos certeza tiene.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2822,
+          "recommendedVersionId": 3387,
+          "reason": "Inicio de la historia. Se usa el remake de GBA (Zero Mission), que cuenta la misma historia con mejor jugabilidad."
+        },
+        {
+          "position": 2,
+          "gameId": 16554,
+          "recommendedVersionId": 44330,
+          "reason": "Ocurre entre Metroid y Metroid II. El remaster de Switch es la versión más cómoda y actual."
+        },
+        {
+          "position": 3,
+          "gameId": 3103,
+          "recommendedVersionId": 6066,
+          "reason": "Se sitúa entre Prime y Prime 2. Su historia es secundaria."
+        },
+        {
+          "position": 4,
+          "gameId": 16708,
+          "recommendedVersionId": 43967,
+          "reason": "Continúa la trilogía Prime. Se usa el original de GameCube."
+        },
+        {
+          "position": 5,
+          "gameId": 19398,
+          "recommendedVersionId": 48336,
+          "reason": "Cierra la trilogía Prime. Solo existe en Wii."
+        },
+        {
+          "position": 6,
+          "gameId": 10207,
+          "recommendedVersionId": 23163,
+          "reason": "Sucede tras Corruption. Se usa la versión de Switch 2, la principal."
+        },
+        {
+          "position": 7,
+          "gameId": 4039,
+          "recommendedVersionId": 8961,
+          "reason": "Samus viaja a SR388. Se usa el remake de 3DS (Samus Returns), más moderno que el original de Game Boy."
+        },
+        {
+          "position": 8,
+          "gameId": 287,
+          "recommendedVersionId": 429,
+          "reason": "Continúa directamente tras Metroid II. Se usa el original de SNES."
+        },
+        {
+          "position": 9,
+          "gameId": 7683,
+          "recommendedVersionId": 14165,
+          "reason": "Ocurre después de Super Metroid y antes de Fusion."
+        },
+        {
+          "position": 10,
+          "gameId": 1620,
+          "recommendedVersionId": 3235,
+          "reason": "Sigue a Other M. Se usa el original de GBA."
+        },
+        {
+          "position": 11,
+          "gameId": 9287,
+          "recommendedVersionId": 19897,
+          "reason": "Es el final de la línea temporal y continúa Fusion."
+        }
+      ]
+    },
+    {
+      "id": 3558,
+      "kind": "community",
+      "rationale": "Ruta habitual: empezar por Zero Mission para conocer el origen, seguir con los clásicos 2D y Prime, y terminar con los juegos modernos. Se salta Other M, Federation Force y los spin-offs menores.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2822,
+          "recommendedVersionId": 3387,
+          "reason": "Zero Mission es una buena puerta de entrada: es corto, accesible y recorre la historia del primer juego."
+        },
+        {
+          "position": 2,
+          "gameId": 287,
+          "recommendedVersionId": 429,
+          "reason": "Es el clásico de la saga. Se juega el original de SNES."
+        },
+        {
+          "position": 3,
+          "gameId": 1620,
+          "recommendedVersionId": 3235,
+          "reason": "Es más lineal y narrativo, y prepara el terreno para Dread."
+        },
+        {
+          "position": 4,
+          "gameId": 16554,
+          "recommendedVersionId": 44330,
+          "reason": "Remaster de Switch con mejores controles y gráficos. Es el mejor punto de entrada a Prime."
+        },
+        {
+          "position": 5,
+          "gameId": 16708,
+          "recommendedVersionId": 43967,
+          "reason": "Segunda parte de la trilogía. Se usa la versión de GameCube."
+        },
+        {
+          "position": 6,
+          "gameId": 19398,
+          "recommendedVersionId": 48336,
+          "reason": "Cierra la trilogía. Solo está en Wii."
+        },
+        {
+          "position": 7,
+          "gameId": 4039,
+          "recommendedVersionId": 8961,
+          "reason": "Samus Returns es la versión recomendada frente al original de Game Boy."
+        },
+        {
+          "position": 8,
+          "gameId": 9287,
+          "recommendedVersionId": 19897,
+          "reason": "Es el cierre moderno de la línea 2D y se juega mejor tras Fusion."
+        },
+        {
+          "position": 9,
+          "gameId": 10207,
+          "recommendedVersionId": 23163,
+          "reason": "Es el juego más reciente de la serie Prime. Se usa la versión de Switch 2."
+        }
+      ]
+    }
+  ]
 }

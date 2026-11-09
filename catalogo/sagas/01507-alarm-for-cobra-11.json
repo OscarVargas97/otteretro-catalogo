@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10040",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crash Time 4: The Syndicate",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Crash Time 4: The Syndicate",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Crash Time 4: The Syndicate is the eighth game based on the German TV series Alarm für Cobra 11. Once again the player takes the role of Ben Jäger and Semir Gerkhan to cause a lot of explosions in the city based on Cologne. Well, the goal is actually to monitor and neutralize a criminal syndicate that wants to take over the city.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,31 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 19973,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en Xbox 360."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles adecuados con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Equivale al original en otra consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Similar a Xbox 360, con alguna caída de cuadros."
+            }
+          ],
+          "codes": [
+            "BLES-01427"
+          ]
         },
         {
           "id": 10039,
@@ -56,7 +92,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 19973,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo de la versión principal."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buenos controles con mando, teclado menos adecuado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Plataforma original del lanzamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Alta resolución, pero con errores y optimización irregular."
+            }
+          ]
         },
         {
           "id": 10040,
@@ -64,7 +121,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 19973,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo de la versión principal."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Diseñado para mando y se juega con comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original de lanzamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable, resolución moderada."
+            }
+          ]
         },
         {
           "id": 10611,
@@ -72,7 +150,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 65544,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión recortada con menos contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles limitados y simplificados."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Adaptación muy distinta al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Gráficos muy reducidos y baja calidad."
+            }
+          ]
         }
       ],
       "images": {
@@ -89,6 +188,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96337",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crash Time 5: Undercover",
           "source": "igdb",
@@ -97,6 +202,12 @@
         {
           "field": "original_name",
           "value": "Crash Time 5: Undercover",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Crash Time 5: Undercover is a Racing game, developed and published by DTP Entertainment, which was released in Europe in 2013.",
           "source": "igdb",
           "manual": false
         },
@@ -114,7 +225,10 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 19974,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01620"
+          ]
         },
         {
           "id": 96337,
@@ -132,8 +246,33 @@
           "igdbId": 19974,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c849e992ddcf44e546e7732e34499746.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/696da1bad4e94add182d1bb931aebfef.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c16a7e3093b6e1fcda114bd033eadfd6.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2359,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4877,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 40274,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

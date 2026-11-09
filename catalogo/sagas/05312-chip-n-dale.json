@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Chip 'n Dale Rescue Rangers is a platformer video game developed and published by Capcom based on the Disney animated series of the same name. Originally released for the Nintendo Entertainment System in Japan and North America in 1990, it came to Europe the next year, and was ported to the Nintendo PlayChoice-10 arcade system. It sold approximately 1.2 million copies worldwide.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1990",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 6490,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2pqr.jpg"
+      }
     },
     {
       "id": 42919,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Chip and Dale, those tiny but daring detectives, have learned of some terrifying news: The notorious criminal cat has escaped from prison and he's stolen the Urn of the Pharaoh. The Rescue Rangers must once again assemble to help crack the case of the missing urn and return the feline felon, Fat Cat, back to the slammer. Join Chip and Dale and the rest of the Rangers in their wacky new adventure. Help them explore the dangerous levels of the downtown restaurant and meet the exploding personality of Water Rabbit. Aid them on their escape through the freezing floors of the giant refrigerator. Search the ghostly walls of the haunted warehouse and find the final clue to unravel the secret headquarters of Fat Cat.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 6518,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3ri5.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3423,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42783,
+          "reason": "1990"
+        },
+        {
+          "position": 2,
+          "gameId": 42919,
+          "reason": "1993"
+        }
+      ]
+    }
+  ]
 }

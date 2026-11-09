@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5569",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "High Heat Major League Baseball 2003",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "High Heat Major League Baseball 2003",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "High Heat Major League Baseball 2003 was the second-to-last of a series of baseball computer games, released on PlayStation 2, PC, and Game Boy Advance. The game, featuring the official licensed team and player names from all 30 MLB teams, was created by games company 3DO, who later filed for bankruptcy in May 2003.[4",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,13 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 6435,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50638",
+            "SLPM-62190",
+            "SLPM-64535",
+            "SLUS-20298"
+          ]
         },
         {
           "id": 5867,
@@ -64,7 +82,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 248753,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AHHE",
+            "AHXJ"
+          ]
         }
       ],
       "images": {
@@ -82,6 +104,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60483",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "High Heat Baseball 2000",
           "source": "igdb",
@@ -90,6 +118,12 @@
         {
           "field": "original_name",
           "value": "High Heat Baseball 2000",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "High Heat Major League Baseball was a series of baseball computer games, released on PlayStation, Xbox, PlayStation 2 and PC. There were six annual versions of the game released, started with High Heat Baseball 1999, and ending with High Heat Major League Baseball 2004.\n\nThe game, featuring the official licensed team and player names from all 30 MLB teams, was created by games company 3DO which subsequently filed for bankruptcy in 2003 soon after the release of the final version of the series, High Heat Major League Baseball 2004. In August 2003, Microsoft purchased the rights to the High Heat franchise from 3DO, however, Microsoft has yet to develop a new title in the series.\n\nHigh Heat was traditionally known for possessing more simulation-style qualities than competitors World Series Baseball, All Star Baseball, or Triple Play Baseball, but frequently lagged behind in graphical quality. At the core of High Heat′s gameplay was its batter-pitcher interface, which was often hailed as the most realistic of its era.",
           "source": "igdb",
           "manual": false
         },
@@ -115,7 +149,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 746,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-00830"
+          ]
         }
       ],
       "images": {
@@ -124,5 +161,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2246,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23908,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 2891,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

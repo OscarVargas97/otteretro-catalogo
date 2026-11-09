@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "109375",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mel The Cat",
           "source": "igdb",
@@ -82,7 +88,10 @@
           "igdbId": 375433,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coar9p.jpg"
+      }
     },
     {
       "id": 46357,
@@ -93,6 +102,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "109691",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Mel The Space Cat",
@@ -153,7 +168,10 @@
           "igdbId": 387482,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobdjy.jpg"
+      }
     },
     {
       "id": 46496,
@@ -164,6 +182,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "110004",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Mel The Pyramid Cat",
@@ -224,8 +248,36 @@
           "igdbId": 401742,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coc2h3.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2041,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46210,
+          "reason": "2025"
+        },
+        {
+          "position": 2,
+          "gameId": 46357,
+          "reason": "2026"
+        },
+        {
+          "position": 3,
+          "gameId": 46496,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

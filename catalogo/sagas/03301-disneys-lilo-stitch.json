@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This game is a sequel to Disney Stitch Jam, exclusive to Japan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 98569,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "B3IJ"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The game takes place before the Lilo & Stitch film begins, showing the massive space universe only hinted at in the movie. The player controls Stitch, using his powers to the fullest: climbing walls and ceilings, dashing with amazing speed, shooting up to four weapons at once (one in each hand), flying with the jetpack, and swinging using the grapple gun. The game features several of the film's memorable characters, including Jumba, Gantu, and Grand Councilwoman.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -90,7 +105,16 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 25911,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-509572",
+            "SCES-50959",
+            "SCES-509602",
+            "SCES-50966",
+            "SCUS-97145",
+            "SLKA-25024",
+            "SLUS-21053"
+          ]
         }
       ],
       "images": {
@@ -100,5 +124,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2905,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33215,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 18063,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

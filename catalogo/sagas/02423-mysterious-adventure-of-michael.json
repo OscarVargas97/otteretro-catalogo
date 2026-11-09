@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22692",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mysterious Adventure of Michael",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mysterious Adventure of Michael",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is a 2D action game where the bears adventure.\nLet's adventure various worlds and collect dream stars.\nDream star is one stage clear, you can get one further if you take all the coins.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2017,
           "igdbId": 44205,
           "steamAppId": 670340,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo, sin diferencias de contenido conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, guardado cómodo en cualquier momento."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y cargas casi instantáneas."
+            }
+          ]
         },
         {
           "id": 22693,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 44205,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo con mando y jugable en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del juego original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución y rendimiento algo menores que en PC."
+            }
+          ],
+          "codes": [
+            "0100E4701BCC6000"
+          ]
         }
       ],
       "images": {
@@ -75,6 +132,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "54914",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mysterious Adventure of Michael 2",
           "source": "igdb",
@@ -83,6 +146,12 @@
         {
           "field": "original_name",
           "value": "Mysterious Adventure of Michael 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Action game of dreams and hopes.",
           "source": "igdb",
           "manual": false
         },
@@ -101,7 +170,28 @@
           "year": 2022,
           "igdbId": 190103,
           "steamAppId": 1866840,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo, sin diferencias de contenido conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 54915,
@@ -109,7 +199,31 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 190103,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Buen control con mando y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Algo menos nítido que en PC."
+            }
+          ],
+          "codes": [
+            "01007DE01DCEA000"
+          ]
         }
       ],
       "images": {
@@ -117,5 +231,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2640,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10073,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 22140,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

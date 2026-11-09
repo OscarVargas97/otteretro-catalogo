@@ -3,7 +3,7 @@
   "name": "Xeno",
   "igdbKind": "franchise",
   "igdbId": 4564,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2010,
       "igdbId": 2364,
       "popularity": 151,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "34411",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Xenoblade Chronicles",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Xenoblade Chronicles",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Xenoblade Chronicles follows Shulk and his band of friends as they search for answers about the mysterious \"Monado\" sword and defend their homeland from violent robotic creatures known as the Mechon. The game contains an open world design and strongly emphasizes exploration due to the world's large size. The game was very well received by critics, with many citing it as a great example of innovation and improvement in Japanese role-playing video games. The game has spawned a sub-series of the larger \"Xeno\" series, including Xenoblade Chronicles X (Wii U) and Xenoblade Chronicles 2 (Switch).",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Xenoblade Chronicles sigue a Shulk y a su grupo de amigos mientras buscan respuestas sobre la misteriosa espada «Monado» y defienden su patria de las violentas criaturas robóticas conocidas como Mechon. El juego tiene un diseño de mundo abierto y pone un fuerte énfasis en la exploración debido al gran tamaño del mundo. Fue muy bien recibido por la crítica, que lo citó con frecuencia como un gran ejemplo de innovación y mejora en los videojuegos de rol japoneses. El juego ha dado origen a una subserie dentro de la saga «Xeno», que incluye Xenoblade Chronicles X (Wii U) y Xenoblade Chronicles 2 (Switch).",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,33 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 2364,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Interfaz antigua."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja."
+            }
+          ],
+          "codes": [
+            "RVL-SX4E-MDE-E0",
+            "RVL-SX4E-USA-E0",
+            "RVL-SX4P-EUR-E0"
+          ]
         },
         {
           "id": 8155,
@@ -56,7 +100,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 2364,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Interfaz antigua."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja."
+            }
+          ]
         },
         {
           "id": 8943,
@@ -64,7 +129,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 9553,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base adaptado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, pocos botones."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptado."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Texturas reducidas."
+            }
+          ]
         },
         {
           "id": 34411,
@@ -72,14 +158,51 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 122238,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye epílogo Future Connected y más."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Interfaz y mapa mejorados."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Visuales rediseñados."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mucho más nítido."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/2bf1128e96b524718d0afd1239610fb1.png",
         "hero": "https://cdn2.steamgriddb.com/hero/58d4d1e7b1e97b258c9ed0b37e02d087.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/bbbe7ef28a0018c4484eaa8b2d0a0328.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1481,
+          "platform": "wii",
+          "project": "xenoblade",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/xbret/xenoblade",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 7816,
@@ -87,9 +210,15 @@
       "originalName": "Xenoblade Chronicles X",
       "year": 2015,
       "igdbId": 2366,
-      "popularity": 91,
+      "popularity": 92,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "78856",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Xenoblade Chronicles X",
@@ -100,6 +229,18 @@
           "field": "original_name",
           "value": "Xenoblade Chronicles X",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Xenoblade Chronicles X is an action role-playing video game and part of the Xeno series, serving as a spiritual successor to Xenoblade Chronicles on the Wii. Similar to the original, the game is an open-world role-playing video game with an emphasis on exploration. Traveling can take place on foot or in large humanoid robots, approximately four times the height of the average playable character, called \"Skells\" (\"Dolls\" in the Japanese version), that the player may opt to control. The Skells can fly, traverse water, and transform into vehicles such as motorcycles or tanks. Aerial battles will also take place in the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Xenoblade Chronicles X es un videojuego de rol de acción y parte de la serie Xeno, y es el sucesor espiritual de Xenoblade Chronicles de Wii. Al igual que el original, es un videojuego de rol de mundo abierto con énfasis en la exploración. Los desplazamientos pueden hacerse a pie o en grandes robots humanoides, de unas cuatro veces la altura de un personaje jugable promedio, llamados «Skells» («Dolls» en la versión japonesa), que el jugador puede optar por controlar. Los Skells pueden volar, atravesar el agua y transformarse en vehículos como motocicletas o tanques. También habrá batallas aéreas en el juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -116,7 +257,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 2366,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Interfaz con GamePad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja."
+            }
+          ]
         },
         {
           "id": 78856,
@@ -124,7 +286,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 321048,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, edición mejorada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Calidad de vida mejorada."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mejorado."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 78857,
@@ -132,7 +315,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 321048,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Definitive con contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Calidad de vida mejorada."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mejorado."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mucho más nítido."
+            }
+          ]
         }
       ],
       "images": {
@@ -148,8 +352,14 @@
       "year": 2017,
       "igdbId": 26766,
       "popularity": 212,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "118384",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Xenoblade Chronicles 2",
@@ -160,6 +370,18 @@
           "field": "original_name",
           "value": "Xenoblade Chronicles 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The next adventure is on the Nintendo Switch console set on the backs of colossal, living Titans. Discover each Titan's diverse regions, culture, wildlife, equipment, and hidden secrets. Find, bond with, and command weaponized life forms known as Blades to earn abilities and enhance them. Uncover the history of Alrest and the mystery of its endless ocean of clouds.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La próxima aventura llega a la consola Nintendo Switch, sobre el lomo de colosales Titanes vivientes. Descubre las diversas regiones, culturas, fauna, equipo y secretos ocultos de cada Titán. Encuentra, crea vínculos con y dirige a las formas de vida armadas conocidas como Blades para obtener habilidades y mejorarlas. Descubre la historia de Alrest y el misterio de su océano infinito de nubes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -176,7 +398,31 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 26766,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución dinámica baja."
+            }
+          ],
+          "codes": [
+            "0100E95004038000"
+          ]
         },
         {
           "id": 118384,
@@ -184,14 +430,51 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 405447,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma obra."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Más nítido y estable."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/5ef6efaa8d75619baf4cb6a9cf2df5a6.png",
         "hero": "https://cdn2.steamgriddb.com/hero/0baa10f95ef302bf877f1f11e8ffef58.png",
         "logo": "https://cdn2.steamgriddb.com/logo/8ccf849734993abe369360d16d262328.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1295,
+          "platform": "switch",
+          "project": "xc2-recomp",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/jmars125/xc2-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 11841,
@@ -203,6 +486,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "28423",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Xenoblade Chronicles 2: Torna - The Golden Country",
           "source": "igdb",
@@ -212,6 +501,18 @@
           "field": "original_name",
           "value": "Xenoblade Chronicles 2: Torna - The Golden Country",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Guide a group of legendary warriors on a journey through the tragic history that doomed a kingdom and drove a hero down a dark path 500 years before the events of the Xenoblade Chronicles 2 game. Defend yourself from Malos and his forces using all the fury of this refined battle system, allowing you to fight as both the artificial lifeforms known as Blades and their masters, the Drivers.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Guía a un grupo de guerreros legendarios en un viaje por la trágica historia que condenó a un reino y empujó a un héroe por un camino oscuro, 500 años antes de los acontecimientos del juego Xenoblade Chronicles 2. Defiéndete de Malos y sus fuerzas usando toda la furia de este depurado sistema de combate, que te permite luchar tanto como los seres de vida artificial conocidos como Blades como con sus maestros, los Drivers.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -228,7 +529,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 103340,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma obra."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Más nítido y estable."
+            }
+          ]
         },
         {
           "id": 28424,
@@ -236,7 +558,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 103340,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución dinámica baja."
+            }
+          ],
+          "codes": [
+            "0100C9F009F7A000"
+          ]
         }
       ],
       "images": {
@@ -252,8 +598,14 @@
       "year": 2022,
       "igdbId": 191411,
       "popularity": 70,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "118389",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Xenoblade Chronicles 3",
@@ -264,6 +616,18 @@
           "field": "original_name",
           "value": "Xenoblade Chronicles 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A vast world awaits in Xenoblade Chronicles 3, the next game in the acclaimed RPG series from developer Monolithsoft. Players will step into the roles of protagonists Noah and Mio amid turmoil between the hostile nations of Keves and Agnus. Six characters hailing from those nations will take part in a grand tale with “life” as its central theme. Explore a new world that will connect the futures of both Xenoblade Chronicles and Xenoblade Chronicles 2.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un vasto mundo te espera en Xenoblade Chronicles 3, el próximo juego de la aclamada serie de RPG del desarrollador Monolithsoft. Los jugadores asumirán los papeles de los protagonistas Noah y Mio en medio de la agitación entre las naciones hostiles de Keves y Agnus. Seis personajes originarios de esas naciones participarán en una gran historia cuyo tema central es la «vida». Explora un nuevo mundo que conectará los futuros de Xenoblade Chronicles y Xenoblade Chronicles 2.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -280,7 +644,31 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 191411,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución dinámica baja."
+            }
+          ],
+          "codes": [
+            "010074F013262000"
+          ]
         },
         {
           "id": 118389,
@@ -288,7 +676,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 405448,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma obra."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Más nítido y estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -304,8 +713,14 @@
       "year": 1998,
       "igdbId": 1346,
       "popularity": 127,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "60382",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Xenogears",
@@ -316,6 +731,18 @@
           "field": "original_name",
           "value": "Xenogears",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Xenogears Blends Authentic RPG Gameplay with Exquisite Hand-Drawn and Computer-Generated Animation in a Grand Science Fiction Tale. An intricate storyline involving many human and non-human characters will prove to captivate audiences of all ages.\n\nPlayers can rotate the amazingly detailed 3D gameplay maps 360 degrees, and have the ability to navigate around the environment by jumping and climbing. In battle, mega-robots can be controlled, adding great variety to play. A new real-time combat system eliminates restrictive menus, using button commands to provide fast-paced, intuitive action. Players can wield dramatic magical spells or engage in real-time polygonal robot vs. robot battles. Combined with dynamic camera angles and intense lighting effects, Xenogears is an experience that won't be forgotten.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Xenogears combina una jugabilidad de RPG auténtica con animación dibujada a mano y generada por computadora en un gran relato de ciencia ficción. Una trama compleja con numerosos personajes humanos y no humanos cautivará a público de todas las edades.\n\nLos jugadores pueden rotar los mapas 3D de gran detalle 360 grados y desplazarse por el entorno saltando y escalando. En combate se pueden controlar mega-robots, lo que aporta mucha variedad. Un nuevo sistema de combate en tiempo real elimina los menús restrictivos y usa comandos de botones para ofrecer una acción rápida e intuitiva. Los jugadores pueden lanzar espectaculares hechizos mágicos o enfrentarse en batallas poligonales en tiempo real, robot contra robot. Combinado con ángulos de cámara dinámicos e intensos efectos de iluminación, Xenogears es una experiencia que no se olvidará.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -332,7 +759,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1346,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo y mando moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación sin mejoras."
+            }
+          ]
         },
         {
           "id": 60383,
@@ -340,7 +788,48 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 1346,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado en tarjeta, cargas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS1."
+            }
+          ],
+          "codes": [
+            "SLPS-01160",
+            "SLPS-01160-0",
+            "SLPS-01161",
+            "SLPS-01161-1",
+            "SLPS-02775",
+            "SLPS-02775-0",
+            "SLPS-02776",
+            "SLPS-02776-1",
+            "SLPS-91436",
+            "SLPS-91436-0",
+            "SLUS-00664",
+            "SLUS-00664-0",
+            "SLUS-00664GH",
+            "SLUS-00664GH-0",
+            "SLUS-00669",
+            "SLUS-00669-1",
+            "SLUS-00669GH",
+            "SLUS-00669GH-1"
+          ]
         },
         {
           "id": 60384,
@@ -348,14 +837,90 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1346,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, texto pequeño."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación sin mejoras."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/ec730b8d8c471f0e7a0b4855ec716d0d.png",
         "hero": "https://cdn2.steamgriddb.com/hero/8537c711d2b026147cef3b55aa03f7ea.png",
         "logo": "https://cdn2.steamgriddb.com/logo/747b1c61428eed8634179b88106a045c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 495,
+          "platform": "ps1",
+          "project": "xenogears-decomp-port",
+          "kind": "decomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Blizz127/xenogears-decomp-port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 496,
+          "platform": "ps1",
+          "project": "Weltall",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Roman215/Weltall",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 1297,
+          "platform": "ps1",
+          "project": "xenogears-recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/OpokXeno/xenogears-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 1482,
+          "platform": "ps1",
+          "project": "xenogears-decomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/ladysilverberg/xenogears-decomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 32469,
@@ -367,6 +932,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81116",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Xenosaga Episode I: Der Wille zur Macht",
           "source": "igdb",
@@ -376,6 +947,18 @@
           "field": "original_name",
           "value": "Xenosaga Episode I: Der Wille zur Macht",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Xenosaga: Episode I - Der Wille zur Macht, the first chapter of a trilogy, is a Japanese-style sci-fi role-playing game, sharing many common themes and gameplay elements with Xenogears.\n\nThe battle system is not unlike the one used in Xenogears (combo attacks, AP and EP gauges, etc.), but random encounters are eliminated. Instead, the enemies are now visible and battles can be avoided. During combat the few upcoming ally and enemy turns are shown onscreen, allowing the player to make strategic decisions based on who will act next. A rolling slot moves with each turn as well, conferring a bonus such as added damage or bonus XP for any action on that turn. If the enemy would be in position to take an advantage then the player can expend a character's \"boost\" gauge to cut in and act next, although enemies can boost as well, and enemy boosts always over-ride player boosts.\n\nEach character has a unique tree of Ether spells they can learn by spending Ether points earned in battle, with lower spells requiring spells above them to be purchased first. After a spell is purchased, so long is it does not require a unique talent of that character, the spell can also be purchased and learned by any other character that can afford double its normal cost. The Anti-Gnosis Weapon Systems can be equipped with different weapons and accessories and can be used in combat provided that a character has enough AP on that turn to board their AGWS.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Xenosaga Episode I: Der Wille zur Macht, primer capítulo de una trilogía, es un juego de rol de ciencia ficción de estilo japonés que comparte muchos temas y elementos de juego con Xenogears.\n\nEl sistema de batalla no es muy distinto al de Xenogears (ataques combinados, medidores de AP y EP, etc.), pero se eliminan los encuentros aleatorios. En su lugar, los enemigos son visibles y se pueden evitar las batallas. Durante el combate se muestran en pantalla los próximos turnos de los aliados y enemigos, lo que permite al jugador tomar decisiones estratégicas según quién actuará después. Una ranura giratoria también avanza con cada turno y otorga una bonificación, como daño adicional o XP extra, a cualquier acción de ese turno. Si el enemigo estuviera en posición de obtener una ventaja, el jugador puede gastar el medidor de «impulso» de un personaje para intervenir y actuar a continuación, aunque los enemigos también pueden usar impulsos, y los impulsos enemigos siempre anulan los del jugador.\n\nCada personaje tiene un árbol único de hechizos Ether que puede aprender gastando los puntos Ether obtenidos en batalla; los hechizos inferiores requieren que se compren primero los superiores. Una vez comprado un hechizo, siempre que no requiera un talento único de ese personaje, cualquier otro personaje que pueda pagar el doble de su coste normal también puede comprarlo y aprenderlo. Los Sistemas de Armas Anti-Gnosis pueden equiparse con distintas armas y accesorios, y se pueden usar en combate siempre que el personaje tenga suficiente AP en ese turno para subirse a su AGWS.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -431,6 +1014,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Xenosaga Episode II: Jenseits von Gut und Böse is a direct sequel to the first episode of the science-fiction RPG Xenosaga series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Xenosaga Episode II: Jenseits von Gut und Böse es una secuela directa del primer episodio de la serie de RPG de ciencia ficción Xenosaga.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -444,7 +1039,25 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1228,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCAJ-20086",
+            "SCAJ-20086-0",
+            "SCAJ-20087",
+            "SCAJ-20087-1",
+            "SLPS-25366",
+            "SLPS-25366-0",
+            "SLPS-25367",
+            "SLPS-25367-1",
+            "SLPS-25368",
+            "SLPS-25368-0",
+            "SLPS-25369",
+            "SLPS-25369-1",
+            "SLPS-73224",
+            "SLPS-73224-0",
+            "SLPS-73225",
+            "SLPS-73225-1"
+          ]
         }
       ],
       "images": {
@@ -473,6 +1086,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The story of Xenosaga III starts a year after \"Xenosaga II\" ended. Shion has resigned from Vector Industries after learning that the company is deeply connected to the appearance of the Gnosis. She instead joins Scientia, an underground organization working to unveil Vector's secrets in order to bring them down. Uncover the truth and save mankind in the finale of the Xenosaga series which boasts over 3 hours of movies, an updated battle system, and an improved customization feature with more in-depth character specialization and diversification and higher rewards for strategic party management. This RPG also includes an easily accessible database feature, the \"Xeno Bible\" and a mini-game with over 50 levels that challenges both you and your friends.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La historia de Xenosaga III comienza un año después del final de «Xenosaga II». Shion ha renunciado a Vector Industries tras descubrir que la empresa está profundamente relacionada con la aparición de Gnosis. En cambio, se une a Scientia, una organización clandestina que trabaja para desvelar los secretos de Vector y derribarla. Descubre la verdad y salva a la humanidad en el final de la serie Xenosaga, que incluye más de 3 horas de películas, un sistema de combate actualizado y una función de personalización mejorada, con una especialización y diversificación de personajes más profunda y mayores recompensas por una gestión estratégica del grupo. Este RPG también incluye una base de datos de fácil acceso, la «Xeno Bible», y un minijuego con más de 50 niveles que te desafía a ti y a tus amigos.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -486,7 +1111,18 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 1229,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-61147",
+            "SLPS-25640",
+            "SLPS-25640-0",
+            "SLPS-25641",
+            "SLPS-25641-1",
+            "SLUS-21389",
+            "SLUS-21389-0",
+            "SLUS-21417",
+            "SLUS-21417-1"
+          ]
         }
       ],
       "images": {
@@ -517,6 +1153,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Xenosaga Freaks was only released in Japan and it contains 2 games, an Encyclopedia of terms used in Xenosaga Episode 1, and a demo for Xenosaga Episode 2.\n\nThe main game is XenoComi, an illustrated and voice acted text adventure. It has 6 scenarios to go through involving the main characters from Episode 1 and a 7th is unlocked when the other 6 have been played. It takes place at some point during Episode 1 and is much more light hearted. It focuses on the events caused by a rampaging cat-eared KOS-MOS and the event that led to the situation.\n\nThe other game is Kotoba no Puzzle: Xenopittan, a Xenosaga themed word puzzle game. Based off the game Kotoba no Puzzle: Mojipittan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Xenosaga Freaks solo se lanzó en Japón y contiene 2 juegos, una enciclopedia de términos usados en Xenosaga Episode 1 y una demo de Xenosaga Episode 2.\n\nEl juego principal es XenoComi, una aventura de texto ilustrada y con voces. Tiene 6 escenarios que recorrer, con los personajes principales de Episode 1, y se desbloquea un séptimo cuando se completan los otros seis. Transcurre en algún momento de Episode 1 y tiene un tono mucho más distendido. Se centra en los sucesos causados por una KOS-MOS con orejas de gato que se desboca, y en el hecho que condujo a esa situación.\n\nEl otro juego es Kotoba no Puzzle: Xenopittan, un juego de puzle de palabras con temática de Xenosaga, basado en el juego Kotoba no Puzzle: Mojipittan.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -530,7 +1178,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 25021,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25353"
+          ]
         }
       ],
       "images": {
@@ -549,6 +1200,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "92768",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Xenosaga: Pied Piper",
           "source": "igdb",
@@ -558,6 +1215,18 @@
           "field": "original_name",
           "value": "Xenosaga: Pied Piper",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Xenosaga: Pied Piper is a role-playing video game co-developed by Monolith Soft, Namco Mobile, and Tom Create. The game was published by Namco in 2004 for mobile devices.\n\nThe game was only released in Japan, originally in 2004 as 6 Vodafone apps, starting on July 14th and fully released on October 13th. They were available as 3 chapter purchases, each split into 2 parts released within weeks of each other.\nThe game was made available for i-mode devices on July 6th 2006, through Namco's monthly subscription service.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Xenosaga: Pied Piper es un videojuego de rol desarrollado conjuntamente por Monolith Soft, Namco Mobile y Tom Create. Namco lo publicó en 2004 para dispositivos móviles.\n\nEl juego solo se lanzó en Japón. Originalmente salió en 2004 como 6 aplicaciones para Vodafone, a partir del 14 de julio y con lanzamiento completo el 13 de octubre. Se vendía en 3 compras de capítulos, cada uno dividido en 2 partes que se publicaron con pocas semanas de diferencia.\nEl juego estuvo disponible para dispositivos i-mode el 6 de julio de 2006, a través del servicio de suscripción mensual de Namco.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -585,8 +1254,202 @@
           "igdbId": 398625,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2ppo.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 419,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23864,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 32469,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 32519,
+          "reason": "2004"
+        },
+        {
+          "position": 4,
+          "gameId": 33317,
+          "reason": "2004"
+        },
+        {
+          "position": 5,
+          "gameId": 38232,
+          "reason": "2004"
+        },
+        {
+          "position": 6,
+          "gameId": 32576,
+          "reason": "2006"
+        },
+        {
+          "position": 7,
+          "gameId": 4118,
+          "reason": "2010"
+        },
+        {
+          "position": 8,
+          "gameId": 7816,
+          "reason": "2015"
+        },
+        {
+          "position": 9,
+          "gameId": 9606,
+          "reason": "2017"
+        },
+        {
+          "position": 10,
+          "gameId": 11841,
+          "reason": "2018"
+        },
+        {
+          "position": 11,
+          "gameId": 22229,
+          "reason": "2022"
+        }
+      ]
+    },
+    {
+      "id": 3867,
+      "kind": "story",
+      "rationale": "Son tres historias independientes, sin continuidad entre sí. Se ordenan por franquicia: Xenogears, Xenosaga I-III y la serie Xenoblade, con Torna antes de XC2 por ser su precuela. Sin fuentes verificadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23864,
+          "recommendedVersionId": 60383,
+          "reason": "Historia autónoma y origen de la saga. La versión de PS1 es la original."
+        },
+        {
+          "position": 2,
+          "gameId": 32469,
+          "recommendedVersionId": 81116,
+          "reason": "Inicio de la trilogía Xenosaga."
+        },
+        {
+          "position": 3,
+          "gameId": 32519,
+          "recommendedVersionId": 81226,
+          "reason": "Continúa el Episodio I."
+        },
+        {
+          "position": 4,
+          "gameId": 32576,
+          "recommendedVersionId": 81352,
+          "reason": "Cierra la trilogía."
+        },
+        {
+          "position": 5,
+          "gameId": 4118,
+          "recommendedVersionId": 34411,
+          "reason": "Primer Xenoblade. La edición de Switch es la más cómoda de jugar."
+        },
+        {
+          "position": 6,
+          "gameId": 7816,
+          "recommendedVersionId": 78857,
+          "reason": "Historia separada, sin relación directa con el resto. Se juega en Switch."
+        },
+        {
+          "position": 7,
+          "gameId": 11841,
+          "recommendedVersionId": 28424,
+          "reason": "Precuela de Xenoblade 2, situada 500 años antes."
+        },
+        {
+          "position": 8,
+          "gameId": 9606,
+          "recommendedVersionId": 21068,
+          "reason": "Continúa tras los hechos de Torna."
+        },
+        {
+          "position": 9,
+          "gameId": 22229,
+          "recommendedVersionId": 55205,
+          "reason": "Une los mundos de XC1 y XC2, así que va al final."
+        }
+      ]
+    },
+    {
+      "id": 3868,
+      "kind": "community",
+      "rationale": "Se recomienda empezar por Xenoblade, que es lo más accesible, y dejar Xenogears y Xenosaga como clásicos opcionales. Se omiten Freaks y Pied Piper por ser extras menores. No pude verificar fuentes.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4118,
+          "recommendedVersionId": 34411,
+          "reason": "Mejor puerta de entrada, con la Definitive Edition de Switch."
+        },
+        {
+          "position": 2,
+          "gameId": 9606,
+          "recommendedVersionId": 21068,
+          "reason": "Se juega antes que Torna, que se disfruta más como epílogo."
+        },
+        {
+          "position": 3,
+          "gameId": 11841,
+          "recommendedVersionId": 28424,
+          "reason": "Después de XC2, porque revela spoilers si se juega antes."
+        },
+        {
+          "position": 4,
+          "gameId": 22229,
+          "recommendedVersionId": 55205,
+          "reason": "Para jugarlo después de XC1 y XC2, que dan contexto al final."
+        },
+        {
+          "position": 5,
+          "gameId": 7816,
+          "recommendedVersionId": 78857,
+          "reason": "Opcional. Es un mundo abierto aparte y se puede jugar en cualquier momento."
+        },
+        {
+          "position": 6,
+          "gameId": 23864,
+          "recommendedVersionId": 60383,
+          "reason": "Clásico de culto para quien quiera volver a los orígenes."
+        },
+        {
+          "position": 7,
+          "gameId": 32469,
+          "recommendedVersionId": 81116,
+          "reason": "Opcional. Trilogía de PS2 para fans de la ciencia ficción filosófica."
+        },
+        {
+          "position": 8,
+          "gameId": 32519,
+          "recommendedVersionId": 81226,
+          "reason": "Continúa el Episodio I."
+        },
+        {
+          "position": 9,
+          "gameId": 32576,
+          "recommendedVersionId": 81352,
+          "reason": "Cierra la trilogía."
+        }
+      ]
+    }
+  ]
 }

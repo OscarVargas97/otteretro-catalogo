@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6609",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Blood Bowl",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Blood Bowl",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Blood Bowl is a combination of a tactical and sports game. The basics are extremely simple: two teams, one ball. The team that carries the ball into the opponent's end zone scores a touchdown, the team with the most touchdowns at the end of the game is the winner. However, it’s how you decide to do this that makes things interesting, the ends justify the means! It’s not just the players you have at your disposal either. You can bribe the referee to look the other way as you cripple or trample annoying opponents and hire illegal wizards to give you a hand directly from the crowd… Blood Bowl severely tests the finest tacticians' strategies.\n\nThere are many races to accommodate every player’s profile (23 in the Chaos Edition, 20 in the Legendary Edition, 9 in the Standard Edition) and even more strategies for experimenting. Winning a game requires a strong game-sense and a lot of self-control.\n\nFor the player's enjoyment, omnipresent humour and the use of spells, weapons, and other non-regulatory actions place Blood Bowl outside of the classic sport simulation genre.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 5649,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-01230",
+            "ULUS-10516"
+          ]
         },
         {
           "id": 6611,
@@ -72,7 +88,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 5649,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CBZP"
+          ]
         }
       ],
       "images": {
@@ -89,6 +108,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "39018",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Blood Bowl III",
           "source": "igdb",
@@ -97,6 +122,12 @@
         {
           "field": "original_name",
           "value": "Blood Bowl III",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Brutal, crazy, tactical… this is Blood Bowl! The iconic death sport returns with the new video game of fantasy football faithfully using the latest board game rules and new content. Create your team, then crush, mulch and cheat your way to the top... leaving your opponents in the graveyard.",
           "source": "igdb",
           "manual": false
         },
@@ -174,6 +205,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99039",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Blood Bowl 2",
           "source": "igdb",
@@ -182,6 +219,12 @@
         {
           "field": "original_name",
           "value": "Blood Bowl 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Blood Bowl 2 smashes Warhammer and American football together, in an explosive cocktail of turn-based strategy, humor and brutality, adapted from Games Workshop’s famous board game.",
           "source": "igdb",
           "manual": false
         },
@@ -218,8 +261,38 @@
           "igdbId": 6059,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4aaa6510f8ce2cc7155ccbc962541b84.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e74c0d42b4433905293aab661fcf8ddb.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/6cf8ae4c2312ba4a0103e20d0ace1ea3.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1518,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3373,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 41621,
+          "reason": "2015"
+        },
+        {
+          "position": 3,
+          "gameId": 14944,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

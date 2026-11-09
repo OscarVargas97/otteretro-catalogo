@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Shoot, known in Japan as Shooting Studio, is a rail shooter which uses the PlayStation Move controllers. The premise of the game involves participating in the filming of action movies; instead of the usual lives the player character's attempts to succeed are measured by \"takes\". The player-controlled B-Movie star shoots his way through multiple themed sets, filled with cardboard enemies and obviously fake environments.\n\nThe game features five movies, all spoofing different movie genres, such as Horror and Westerns. Throughout these movies the protagonist is tasked with defeating enemies, freeing the civilians and putting on the best possible performance by activating motion-based power-ups. The player can shoot into the floor to send out a shockwave to vanquish all enemies on the screen. It is also possible to spin on the spot to slow down time and get a more accurate shot. Shooting into the sky activates Rampage, a powerful machine gun.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -48,9 +54,18 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 20408,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00463",
+            "BCES-00463/RUS",
+            "BCES-01058",
+            "BCUS-98222"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co937u.jpg"
+      }
     },
     {
       "id": 40588,
@@ -62,6 +77,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97122",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Real Steel",
           "source": "igdb",
@@ -70,6 +91,12 @@
         {
           "field": "original_name",
           "value": "Real Steel",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A robot boxing game based on the film, REAL STEEL. Assume the role of a robot owner and battle against different rival robots to become the champion of robot boxing. Earn in-game cash by winning matches, and use this cash to periodically improve your robot so it can compete against stronger rivals. The vast amount of customizable parts and selectable equipment makes for over 100 million possibilities of custom robots! Stronger opponents from all around the world are waiting for you online! Build your own custom robot and aim for the top of robot boxing!",
           "source": "igdb",
           "manual": false
         },
@@ -97,8 +124,33 @@
           "igdbId": 47447,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4112cd2e8ed2b50659b0749d428af9f6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ce2b8aedd1777f1977b0cc55b4dc8866.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/ee935469799a9e68ed930c5edcede795.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3344,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40181,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 40588,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

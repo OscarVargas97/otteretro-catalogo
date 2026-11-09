@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60586",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vagrant Story",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Vagrant Story",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Adventure into a world of unparalleled depth and danger with SquareSoft's Vagrant Story. In this sweeping dungeon-crawling epic you play as Ashley Riot, a young assassin and spy for the organization known as Riskbreakers. Your goal is to unravel a deep and twisted plot and come to terms with the recent death of your wife and child. If this sounds a bit too cerebral never fear. Your path to recapturing your sense of humanity hinges on the destruction of countless vicious monsters and the exploration of dark and dangerous dungeons. Vagrant Story is awash in gorgeous scenery and features designs from Yasumi Matsuno and Akihiko Yoshida, the acclaimed artists and creators behind Final Fantasy Tactics.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2216,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado fácil y trofeos; mismos controles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación de PS1 con escalado y sin cargas largas."
+            }
+          ]
         },
         {
           "id": 60587,
@@ -56,7 +89,39 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 2216,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado en memory card, sin extras de comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de PS1, pero estable."
+            }
+          ],
+          "codes": [
+            "SCPS-45486",
+            "SLES-02754",
+            "SLES-02755",
+            "SLES-02756",
+            "SLPM-87393",
+            "SLPS-02377",
+            "SLPS-91457",
+            "SLUS-01040",
+            "SLUS-01040GH"
+          ]
         },
         {
           "id": 60588,
@@ -64,14 +129,77 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2216,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y guardado cómodo; sólo un stick en PSP."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña, emulación correcta."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/ca4b48b1d7cc3755fa151c151d6e3fb5.png",
         "hero": "https://cdn2.steamgriddb.com/hero/ab28ad5cc818e94cad99e7f95055dd22.png",
         "logo": "https://cdn2.steamgriddb.com/logo/5fd2c06f558321eff612bbbe455f6fbd.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 475,
+          "platform": "ps1",
+          "project": "VS-NativePort",
+          "kind": "decomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/JEschete/VS-NativePort",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 1242,
+          "platform": "ps1",
+          "project": "vagrantstory_recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/riotashley81-jpg/vagrantstory_recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 1474,
+          "platform": "ps1",
+          "project": "rood-reverse",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/ser-pounce/rood-reverse",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "DuckStation"
+        }
+      ]
     }
   ],
   "routes": []

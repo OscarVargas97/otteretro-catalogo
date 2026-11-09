@@ -48,9 +48,15 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 56552,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-06023"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4n17.jpg"
+      }
     },
     {
       "id": 35668,
@@ -74,6 +80,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "12 Ji no Cinderella's sister game, featuring Rosalia, Odette's warm and impulsive stepsister.\nWhen her stepfather dies in a carriage accident, it’s discovered that he had lots of debts, and the four women have to sell the house and move to a creaky apartment downtown, working to live.\nRosalia finds some strange papers one day, one with the emblem of the royal family, and the other the emblem of the Scarlet family. The game is partly trying to find out the meaning behind this.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -87,9 +99,15 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 56551,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-06168"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4nzd.jpg"
+      }
     },
     {
       "id": 35679,
@@ -100,6 +118,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "86596",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "0-ji no Kane to Cinderella: Halloween Wedding",
@@ -126,7 +150,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 56549,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente al de PSP, sin extras confirmados."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor pantalla y comodidad en Vita, con guardado normal."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel al original, con ajustes menores de plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución de pantalla y ejecución fluida en Vita."
+            }
+          ]
         },
         {
           "id": 86597,
@@ -134,9 +179,37 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 56549,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base de la historia de Halloween Wedding."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos en PSP, con menos comodidad de uso hoy."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original de lanzamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PSP, estable pero más limitada."
+            }
+          ],
+          "codes": [
+            "ROSE-00025",
+            "ULJM-06272"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co21ur.jpg"
+      }
     },
     {
       "id": 41268,
@@ -175,8 +248,41 @@
           "igdbId": 60348,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co21us.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1365,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35652,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 35668,
+          "reason": "2012"
+        },
+        {
+          "position": 3,
+          "gameId": 35679,
+          "reason": "2013"
+        },
+        {
+          "position": 4,
+          "gameId": 41268,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

@@ -19,9 +19,15 @@
       "originalName": "Planetarian: The Reverie of a Little Planet",
       "year": 2004,
       "igdbId": 11413,
-      "popularity": 11,
+      "popularity": 12,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "18173",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Planetarian: The Reverie of a Little Planet",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Planetarian: The Reverie of a Little Planet",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Planetarian: The Reverie of a Little Planet is a Japanese post-apocalyptic visual novel developed by Key and is rated for all ages. The story centers on a middle-aged man who comes across a malfunctioning robot in a dead city. The man, known simply as \"the junker\", stays with this robot for a time and attempts to fix the projector of the planetarium where the story takes place.",
           "source": "igdb",
           "manual": false
         },
@@ -108,6 +120,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "51905",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Planetarian: Snow Globe",
           "source": "igdb",
@@ -116,6 +134,12 @@
         {
           "field": "original_name",
           "value": "Planetarian: Snow Globe",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Planetarian: Snow Globe is a kinetic novel based on a short light novel by the same name that occurs before the events of Planetarian: The Reverie of a Little Planet.",
           "source": "igdb",
           "manual": false
         },
@@ -134,7 +158,28 @@
           "year": 2021,
           "igdbId": 155835,
           "steamAppId": 2983350,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Novela visual completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón o teclado, guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y carga rápida."
+            }
+          ]
         },
         {
           "id": 51906,
@@ -142,7 +187,31 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 155835,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo con botones o táctil en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, con resolución adecuada."
+            }
+          ],
+          "codes": [
+            "010031C01F410000"
+          ]
         }
       ],
       "images": {
@@ -151,5 +220,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2504,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8482,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 21162,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

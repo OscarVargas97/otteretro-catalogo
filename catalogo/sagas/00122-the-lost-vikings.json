@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "820",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Lost Vikings",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Lost Vikings",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Lost Vikings is a puzzle-platform video game developed by Silicon & Synapse (now Blizzard Entertainment) and published by Interplay.\n\nThe game features infinite opportunities of retries in case the player loses one of the Vikings.\n\nIn 2015, The Lost Vikings were added as a playable hero in Heroes of the Storm, allowing players to control the three Vikings as individual units, making a unique departure from the typical heroes available.\n\nCharacter abilities:\n\nAll three Vikings (Erik, Baleog and Olaf) have three health points which they can lose by getting hurt by enemies or by falling from great heights, and the ability to carry and use items, mainly keys, bombs, and food (which restore health points). Each of the Vikings has a unique set of abilities:\n\nErik can run faster than the other two, can jump, and can bash through some walls (and enemies) with his helmet.\nBaleog can kill enemies with his sword, or from a distance with his bow (and a \"life-time supply of arrows\"). The bow can also be used to hit switches from a distance.\nOlaf can block enemies and their projectiles with his shield, and use his shield as a hang glider. Olaf's shield can also be used as a stepping stone for Erik to enable him to reach higher ground, which would not be possible without the shield.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 454,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Con contraseñas, sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original."
+            }
+          ]
         },
         {
           "id": 820,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 214736,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión completa con extras de reedición."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado de estados y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor imagen y estable."
+            }
+          ]
         },
         {
           "id": 940,
@@ -64,7 +118,32 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 144422,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego con pequeños ajustes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y con guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port con ligeros cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña y menos espacio visual."
+            }
+          ],
+          "codes": [
+            "ALVE",
+            "ALVP"
+          ]
         }
       ],
       "images": {
@@ -83,6 +162,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "914",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Lost Vikings 2",
           "source": "igdb",
@@ -91,6 +176,12 @@
         {
           "field": "original_name",
           "value": "The Lost Vikings 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Will the Vikings find their way home across time and space? Will Erik lead his brothers to safety without bonking himself back into thinking he's an iguana? Will Olaf be reunited with his wife and daughters? Will Baleog ever to get a date with Freya, that Valkyrie babe on the \"Resume Game\" screen? Stay tuned...",
           "source": "igdb",
           "manual": false
         },
@@ -132,5 +223,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2076,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 184,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 468,
+          "reason": "1997"
+        }
+      ]
+    }
+  ]
 }

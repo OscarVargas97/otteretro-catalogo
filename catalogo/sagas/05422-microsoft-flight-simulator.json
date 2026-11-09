@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103507",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Microsoft Flight Simulator",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Microsoft Flight Simulator",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Microsoft Flight Simulator is the next generation of one of the most beloved simulation franchises. From light planes to wide-body jets, fly highly detailed and stunning aircraft in an incredibly realistic world. Create your flight plan and fly anywhere on the planet. Enjoy flying day or night and face realistic, challenging weather conditions.",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,12 @@
           "steamAppId": 1250410,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7b0ff7682796d0b90b1dd565c942dda1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2dc78e6026928309d3d26dc6dbd0276e.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/cf62365fe3fb1f6e44ca45af14daa212.png"
+      }
     },
     {
       "id": 46987,
@@ -71,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111404",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Microsoft Flight Simulator 2024",
           "source": "igdb",
@@ -79,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Microsoft Flight Simulator 2024",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pursue your dream of an aviation career with Microsoft Flight Simulator 2024. This brand-new simulator is designed to take advantage of the latest technologies in simulation, cloud, machine learning, graphics and gaming to create the most sophisticated, immersive and awe-inspiring flight simulator of all time. To achieve this unprecedented level of accuracy, Microsoft Flight Simulator 2024 is powered by the significantly evolved Asobo Studio engine.",
           "source": "igdb",
           "manual": false
         },
@@ -115,8 +144,31 @@
           "igdbId": 252830,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co91qm.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3447,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43778,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 46987,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

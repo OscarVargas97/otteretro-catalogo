@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "279",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cool Spot",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Cool Spot",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Cool Spot is a mascot for 7 Up, introduced in 1987. During this time, the red spot in the 7 Up logo was anthropomorphized: given arms, legs, a mouth, and sunglasses. British video games developer Virgin Interactive's American studio produced a platform game starring the 7 Up Spot, entitled Cool Spot.",
           "source": "igdb",
           "manual": false
         },
@@ -75,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "906",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Spot Goes to Hollywood",
           "source": "igdb",
@@ -83,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Spot Goes to Hollywood",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The central character in the game is, of course, Spot. Spot has somehow become trapped in a movie projector. As he jumps from film to film, he encounters many classic film genres; these make up the various levels of the game. The main levels are a pirate movie, an adventure movie, and a horror movie, but there are many other bonus films to unlock.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +132,12 @@
           "kind": "remaster",
           "year": 1996,
           "igdbId": 344044,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00330",
+            "SLPS-00394",
+            "SLUS-00014"
+          ]
         }
       ],
       "images": {
@@ -139,6 +168,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Another game based on the adventures of 7-UP's mascot, Spot. Known in Europe as McDonaldland.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -161,5 +196,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1413,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 180,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 6529,
+          "reason": "1993"
+        },
+        {
+          "position": 3,
+          "gameId": 440,
+          "reason": "1995"
+        }
+      ]
+    }
+  ]
 }

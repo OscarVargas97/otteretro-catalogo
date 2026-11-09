@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3105",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Magical Vacation",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Magical Vacation",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Once upon a time, war erupted for three days in the magic kingdom Kovomaka. This war was kept a secret from ordinary citizens, but one man began to travel all around the country in preparation for the next battle, and several years later, the game's main character enters the magic school Will-O-Wisp at the invitation of the school's principal. The main character possessed the ability to see and interact with spirits since youth, and was ostracized because of this ability.\n\nThe students of the Will-O-Wisp school are sent away to a summer school by the Valencia seaside despite warnings that several students from other schools had gone missing on the beach in the past. One afternoon, a strange monster called an Enigma appears on the beach, abducting some of the students. The hero must find the missing students and uncover the mysteries of the Enigma and war that occurred in the kingdom.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 6502,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Permite guardado rápido y control en el GamePad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con cambios mínimos de presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Reescalado a HD, estable y sin cargas."
+            }
+          ]
         },
         {
           "id": 3106,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 6502,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original en japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Solo guardado en batería; sin ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa GBA, sin problemas, pantalla pequeña."
+            }
+          ],
+          "codes": [
+            "AMVJ"
+          ]
         }
       ],
       "images": {
@@ -87,6 +144,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The students of Will O'Wisp magical academy have a little problem: Their teacher has mysteriously disappeared. After commandeering a handful of rockets to rescue her, they've wound up on a strange (and sometimes scary) adventure through outer space. Now players must rescue both their classmates AND their teacher - and just maybe the whole solar system while they're at it. Explore strange planets. Players see the sights of this strange, sci-fi fantasy setting as they uncover the secret behind their teacher's disappearance in this epic role-playing game. The stylus controls everything, from combat to conversations to outfitting allies. Simple controls make it easy to play but a challenge to master. Players can link up wirelessly with five friends and explore the amigo dungeon together - they'll find unending challenges and incredible rewards as they delve into the depths of this unique multiplayer experience.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -100,7 +163,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 15839,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AVCE",
+            "AVCP"
+          ]
         }
       ],
       "images": {
@@ -110,5 +177,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2171,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1527,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 3113,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

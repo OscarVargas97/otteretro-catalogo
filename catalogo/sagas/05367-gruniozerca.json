@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Gruniożerca is a homebrew arcade-style game for the NES.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 195503,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8dgu.jpg"
+      }
     },
     {
       "id": 43256,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Gruniożerca 2 is a puzzle platform homebrew game for the NES.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2018",
           "source": "igdb",
@@ -89,7 +104,10 @@
           "igdbId": 195505,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4lsp.jpg"
+      }
     },
     {
       "id": 43601,
@@ -128,8 +146,36 @@
           "igdbId": 308402,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8xkd.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2028,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43233,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 43256,
+          "reason": "2018"
+        },
+        {
+          "position": 3,
+          "gameId": 43601,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

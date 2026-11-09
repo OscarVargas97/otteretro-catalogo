@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96201",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Red Johnson's Chronicles",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Red Johnson's Chronicles",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Get ready to solve a unique puzzle-based investigation that will immerse you in a noir world. Red Johnson, one of the best private investigators in Metropolis City has recently gained a fame that turns out to be deadly. A price on his head and a brother that has been abducted will force him to give the best of himself. To sort out this situation, you will need to use you wit, your persuasion skills and even your fists sometimes.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 21148,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocvr6.jpg"
+      }
     },
     {
       "id": 40444,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96806",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Red Johnson's Chronicles: One Against All",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Red Johnson's Chronicles: One Against All",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Get ready to solve a unique puzzle-based investigation that will immerse you in a noir world with Red Johnson's Chronicles: One Against All. Red Johnson, one of the best private investigators in Metropolis City has recently gained a fame that turns out to be deadly. A price on his head and a brother that has been abducted will force him to give the best of himself. To sort out this situation, you will need to use you wit, your persuasion skills and even your fists sometimes.",
           "source": "igdb",
           "manual": false
         },
@@ -113,8 +140,31 @@
           "igdbId": 25177,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/oamold0bg1mnagucrjv4.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3347,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40209,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 40444,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

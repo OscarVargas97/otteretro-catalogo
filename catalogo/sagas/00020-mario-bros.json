@@ -3,7 +3,7 @@
   "name": "Mario Bros.",
   "igdbKind": "franchise",
   "igdbId": 24,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1990,
       "igdbId": 1070,
       "popularity": 2051,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "36",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Super Mario World",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Super Mario World",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A 2D platformer and first entry on the SNES in the Super Mario franchise, Super Mario World follows Mario as he attempts to defeat Bowser's underlings and rescue Princess Peach from his clutches. The game features a save system, a less linear world map, an expanded movement arsenal and numerous new items for Mario, alongside new approaches to level design and art direction.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Plataformas 2D y primera entrega de la franquicia Super Mario en la SNES. Super Mario World sigue a Mario mientras intenta derrotar a los secuaces de Bowser y rescatar a la Princesa Peach de sus garras. El juego incluye un sistema de guardado, un mapa del mundo menos lineal, un arsenal de movimientos ampliado y numerosos objetos nuevos para Mario, junto con nuevos enfoques en el diseño de niveles y en la dirección de arte.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1991,
           "igdbId": 1070,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control clásico, guardado por batería."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen nítida en hardware."
+            }
+          ]
         },
         {
           "id": 35,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 1070,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena imagen."
+            }
+          ]
         },
         {
           "id": 36,
@@ -64,7 +124,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1070,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Suspensión y varios mandos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Imagen HD limpia."
+            }
+          ]
         },
         {
           "id": 37,
@@ -72,7 +153,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 1070,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, suspensión."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña (solo New 3DS)."
+            }
+          ]
         },
         {
           "id": 932,
@@ -80,14 +182,77 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 270346,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade Luigi y extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambios en sonido y presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla pequeña y sonido alterado."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/2bf887cd37fa5ba4ce0ba9713013a4f7.png",
         "hero": "https://cdn2.steamgriddb.com/hero/1e0b98ffbf6e647bbcfb5f1032f21ce5.png",
         "logo": "https://cdn2.steamgriddb.com/logo/a14ac55a4f27472c5d894ec1c3c743d2.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 406,
+          "platform": "snes",
+          "project": "smw",
+          "kind": "remake",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/snesrev/smw",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 1146,
+          "platform": "snes",
+          "project": "SuperMarioWorldRecomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/SuperMarioWorldRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 1310,
+          "platform": "snes",
+          "project": "SMAS Launcher",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/stephini/SMAS_Launcher",
+          "source": "readonlymemo.com",
+          "added": "2026-10-14",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 1428,
@@ -96,8 +261,14 @@
       "year": 1985,
       "igdbId": 358,
       "popularity": 1334,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "1288",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Super Mario Bros.",
@@ -108,6 +279,18 @@
           "field": "original_name",
           "value": "Super Mario Bros.",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A side scrolling 2D platformer and first entry in the Super Mario franchise, Super Mario Bros. follows Italian plumber Mario as he treks across many levels of platforming challenges featuring hostile enemies to rescue Princess Peach from the evil king Bowser.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Plataformas 2D de desplazamiento lateral y primera entrega de la franquicia Super Mario. Super Mario Bros. sigue al fontanero italiano Mario mientras recorre numerosos niveles de desafíos de plataformas, con enemigos hostiles, para rescatar a la Princesa Peach del malvado rey Bowser.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -164,7 +347,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 18065,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "FSMJ"
+          ]
         },
         {
           "id": 8901,
@@ -195,7 +381,36 @@
         "cover": "https://cdn2.steamgriddb.com/grid/75f29e87a3923053bde594667a5e33d3.png",
         "hero": "https://cdn2.steamgriddb.com/hero/105f777347c73908a23cbf0de0c33d3b.png",
         "logo": "https://cdn2.steamgriddb.com/logo/a368b0de8b91cfb3f91892fbf1ebd4b2.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 399,
+          "platform": "nes",
+          "project": "Super-Mario-Bros.-Remastered-Public",
+          "kind": "remake",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/JHDev2006/Super-Mario-Bros.-Remastered-Public",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Mesen"
+        },
+        {
+          "id": 1132,
+          "platform": "nes",
+          "project": "SuperMarioBrosNESRecomp",
+          "kind": "recomp",
+          "toolchain": "nesrecomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/mstan/SuperMarioBrosNESRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Mesen"
+        }
+      ]
     },
     {
       "id": 2404,
@@ -207,6 +422,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1289",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Mario Bros.: The Lost Levels",
           "source": "igdb",
@@ -216,6 +437,18 @@
           "field": "original_name",
           "value": "Super Mario Bros.: The Lost Levels",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Mario Bros.: The Lost Levels is a direct sequel to Super Mario Bros. Not to be confused with the western Super Mario Bros. 2, this sequel to Super Mario Bros. is very much an expansion to the original, with many reused graphics and concepts, though new ones are also present. The game was initially released for the Japan-only Family Computer Disk System.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Mario Bros.: The Lost Levels es una secuela directa de Super Mario Bros. No debe confundirse con Super Mario Bros. 2 occidental: esta secuela es, en realidad, una expansión del original, con muchos gráficos y conceptos reutilizados, aunque también incluye otros nuevos. El juego se lanzó inicialmente solo en Japón, para el Family Computer Disk System.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -279,9 +512,15 @@
       "originalName": "New Super Mario Bros.",
       "year": 2006,
       "igdbId": 1076,
-      "popularity": 415,
+      "popularity": 416,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "6074",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "New Super Mario Bros.",
@@ -292,6 +531,18 @@
           "field": "original_name",
           "value": "New Super Mario Bros.",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "New Super Mario Bros. is a side-scrolling 2.5D action-adventure platformer game for the Nintendo DS, starring Mario and Luigi. The game features a solo story mode with Mario or Luigi, a two-player wireless game Mario Vs. Luigi, as well as a minigame mode for up to four players. The gameplay of New Super Mario Bros. is very much like that of the classic 2D platformers, mostly Super Mario Bros. and Super Mario Bros. 3, and substantially builds upon them to create gameplay both classic and contemporary. As the game is on DS, the touch screen allows players to store an additional power-up and view the distance still to go in a level.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "New Super Mario Bros. es un juego de acción y aventuras de plataformas en 2.5D con desplazamiento lateral para Nintendo DS, protagonizado por Mario y Luigi. Incluye un modo historia para un solo jugador con Mario o Luigi, un modo inalámbrico para dos jugadores, Mario Vs. Luigi, así como un modo de minijuegos para hasta cuatro jugadores. Su jugabilidad es muy similar a la de los plataformas clásicos en 2D, principalmente Super Mario Bros. y Super Mario Bros. 3, y la amplía sustancialmente para crear una experiencia tanto clásica como contemporánea. Como el juego es para DS, la pantalla táctil permite a los jugadores guardar un potenciador adicional y ver la distancia que queda por recorrer en un nivel.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -308,7 +559,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1076,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo (minijuegos adaptados)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Suspensión, mandos cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel salvo el uso táctil."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen ampliada limpia."
+            }
+          ]
         },
         {
           "id": 6075,
@@ -316,14 +588,59 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 1076,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego y minijuegos completos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil para minijuegos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ],
+          "codes": [
+            "A2DE",
+            "A2DJ",
+            "A2DK",
+            "A2DP",
+            "WUP-N-DADE",
+            "WUP-N-DADJ",
+            "WUP-N-DADP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/e9720a717745574cd81f22b988c3d190.png",
         "hero": "https://cdn2.steamgriddb.com/hero/cfbeb8c0061096de29c629242fc41dbf.png",
         "logo": "https://cdn2.steamgriddb.com/logo/02785fa8c305e5f22c101f65923d6de4.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1410,
+          "platform": "ds",
+          "project": "nsmb",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/NSMB-Decomp/nsmb",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "melonDS"
+        }
+      ]
     },
     {
       "id": 4017,
@@ -332,8 +649,14 @@
       "year": 1988,
       "igdbId": 1068,
       "popularity": 1749,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "1291",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Super Mario Bros. 3",
@@ -344,6 +667,18 @@
           "field": "original_name",
           "value": "Super Mario Bros. 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Mario Bros. 3, the third entry in the Super Mario Bros. series and Super Mario franchise, sees Mario or Luigi navigate a nonlinear world map containing platforming levels and optional minigames and challenges. The game features more diverse movement options and new items alongside more complex level designs and boss battles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Mario Bros. 3, la tercera entrega de la serie Super Mario Bros. y de la franquicia Super Mario, permite a Mario o Luigi recorrer un mapa del mundo no lineal que contiene niveles de plataformas, minijuegos opcionales y desafíos. El juego presenta opciones de movimiento más variadas y nuevos objetos, además de diseños de niveles más complejos y batallas contra jefes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -407,7 +742,23 @@
         "cover": "https://cdn2.steamgriddb.com/grid/c5279e07367ef7ba59d6e772bfd9ac5d.png",
         "hero": "https://cdn2.steamgriddb.com/hero/07e1cd7dca89a1678042477183b7ac3f.png",
         "logo": "https://cdn2.steamgriddb.com/logo/495dabfd0ca768a3c3abd672079f48b6.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1130,
+          "platform": "nes",
+          "project": "mushroomrecompiled",
+          "kind": "recomp",
+          "toolchain": "nesrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Adoregabriel2005/mushroomrecompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Mesen"
+        }
+      ]
     },
     {
       "id": 4020,
@@ -419,6 +770,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7914",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Mario Land",
           "source": "igdb",
@@ -428,6 +785,18 @@
           "field": "original_name",
           "value": "Super Mario Land",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Mario Land is the first Mario's outing on the Game Boy. It is a side-scrolling platformer much in the vein of the previous Super Mario Bros. This time, Mario must save Princess Daisy, rather than Princess Toadstool, from her kidnapper Tatanga, a mysterious spaceman. The game follows largely the same formula of its aforementioned predecessor, with Mario defeating enemies by jumping on them and collecting coins and power ups by hitting floating blocks, with each world leading up to a boss fight which is defeated using by collapsing the floor. A unique feature of this installment is two scrolling shoot-'em-up levels, the first of which Mario pilots a submarine, and the second an aeroplane.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Mario Land es la primera aventura de Mario en Game Boy. Es un juego de plataformas de desplazamiento lateral muy en la línea de Super Mario Bros. Esta vez, Mario debe rescatar a la Princesa Daisy, en lugar de a la Princesa Toadstool, de su secuestrador Tatanga, un misterioso astronauta. El juego sigue en gran medida la misma fórmula de su predecesor: Mario derrota enemigos saltando sobre ellos y recoge monedas y potenciadores golpeando bloques flotantes, y cada mundo culmina en un combate contra un jefe que se vence haciendo que el suelo se derrumbe. Una característica única de esta entrega son dos niveles de disparos de desplazamiento: en el primero, Mario pilota un submarino, y en el segundo, un avión.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -444,7 +813,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1069,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Suspensión y puntos de reanudación."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Pantalla más nítida."
+            }
+          ]
         },
         {
           "id": 7915,
@@ -452,7 +842,28 @@
           "kind": "original",
           "year": 1989,
           "igdbId": 1069,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla verde y borrosa."
+            }
+          ]
         }
       ],
       "images": {
@@ -471,6 +882,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7978",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Mario Land 2: 6 Golden Coins",
           "source": "igdb",
@@ -480,6 +897,18 @@
           "field": "original_name",
           "value": "Super Mario Land 2: 6 Golden Coins",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Mario Land 2: 6 Golden Coins is a platforming game for the Game Boy and the sequel to Super Mario Land. It also marks the debut of Mario's self-proclaimed arch rival Wario, who would later become a recurring character in the Mario series as well as a protagonist in his own series. The game features new graphics, power-ups, challenges, and a completely original storyline.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Super Mario Land 2: 6 Golden Coins es un juego de plataformas para Game Boy y secuela de Super Mario Land. También marca el debut de Wario, el archirrival autoproclamado de Mario, que más tarde se convertiría en un personaje recurrente de la serie Mario y en protagonista de su propia saga. El juego presenta gráficos nuevos, potenciadores, desafíos y una trama completamente original.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -496,7 +925,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1071,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Suspensión y reanudación."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Pantalla más nítida."
+            }
+          ]
         },
         {
           "id": 7979,
@@ -504,14 +954,64 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 1071,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado por batería."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla borrosa."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/634939760577ca8da325de06151f6281.png",
         "hero": "https://cdn2.steamgriddb.com/hero/6f43ca9ef6cd328df991fdcebd2be91c.png",
         "logo": "https://cdn2.steamgriddb.com/logo/b294504229c668e750dfcc4ea9617f0a.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 402,
+          "platform": "gb",
+          "project": "sml2-rs",
+          "kind": "remake",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/patricksmill/sml2-rs",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "SameBoy"
+        },
+        {
+          "id": 1136,
+          "platform": "gb",
+          "project": "SuperMarioLand2Recomp",
+          "kind": "recomp",
+          "toolchain": "gb-recompiled",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/SuperMarioLand2Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "SameBoy"
+        }
+      ]
     },
     {
       "id": 4198,
@@ -535,6 +1035,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "New Super Mario Bros. 2 is a side-scrolling 2.5D action-adventure platform game for the Nintendo 3DS. As the direct sequel to New Super Mario Bros., it is an indirect follow-up to New Super Mario Bros. Wii. The game's main focus is on coins, with the primary goal being to collect one million. To reach the goal, the game includes many new items to aid the player, such as the Gold Flower, which turns Mario into Gold Mario.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "New Super Mario Bros. 2 es un juego de acción y aventuras de plataformas en 2.5D con desplazamiento lateral para Nintendo 3DS. Como secuela directa de New Super Mario Bros., es una continuación indirecta de New Super Mario Bros. Wii. Su enfoque principal son las monedas, y el objetivo principal es reunir un millón. Para lograrlo, el juego incluye muchos objetos nuevos que ayudan al jugador, como la Flor Dorada, que convierte a Mario en Mario Dorado.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -548,7 +1060,14 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1080,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-ABEE",
+            "CTR-P-ABEJ",
+            "CTR-P-ABEK",
+            "CTR-P-ABEP",
+            "CTR-P-ABEW"
+          ]
         }
       ],
       "images": {
@@ -567,6 +1086,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24724",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mario Bros.",
           "source": "igdb",
@@ -576,6 +1101,18 @@
           "field": "original_name",
           "value": "Mario Bros.",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mario Bros. is an arcade game published by Nintendo and developed by Shigeru Miyamoto. The platform puzzle which first introduced Luigi to the world has both single and multiplayer action with two differing game types, but with the same objective. Crabs, turtles and fighter flies must be cleared out by jumping underneath the platform they sit on, then kicking them away. Each level is cleared when a set number of coins is collected. For the two player mode, the first to collect the set amount of coins wins.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mario Bros. es un videojuego de arcade publicado por Nintendo y desarrollado por Shigeru Miyamoto. El juego de rompecabezas de plataformas que presentó por primera vez a Luigi al mundo ofrece acción para uno o varios jugadores, con dos tipos de juego distintos pero con el mismo objetivo. Los cangrejos, las tortugas y las moscas luchadoras deben eliminarse saltando por debajo de la plataforma en la que se encuentran y luego pateándolos para alejarlos. Cada nivel se completa al reunir una cantidad determinada de monedas. En el modo para dos jugadores, gana quien reúna primero esa cantidad de monedas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -592,7 +1129,28 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 170287,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Clásico de NES con multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Con guardado y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port de NES."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 24724,
@@ -600,7 +1158,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 67197,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Arcade con modos y puntuación."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo, con guardado de estado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Imagen limpia y sin retardo."
+            }
+          ]
         },
         {
           "id": 102737,
@@ -608,7 +1187,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 172250,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Port de NES con menos fases y elementos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Aceptable en NES."
+            }
+          ]
         }
       ],
       "images": {
@@ -618,5 +1218,165 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 465,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5309,
+          "reason": "1983"
+        },
+        {
+          "position": 2,
+          "gameId": 1428,
+          "reason": "1985"
+        },
+        {
+          "position": 3,
+          "gameId": 2404,
+          "reason": "1986"
+        },
+        {
+          "position": 4,
+          "gameId": 4017,
+          "reason": "1988"
+        },
+        {
+          "position": 5,
+          "gameId": 4020,
+          "reason": "1989"
+        },
+        {
+          "position": 6,
+          "gameId": 24,
+          "reason": "1990"
+        },
+        {
+          "position": 7,
+          "gameId": 4047,
+          "reason": "1992"
+        },
+        {
+          "position": 8,
+          "gameId": 3109,
+          "reason": "2006"
+        },
+        {
+          "position": 9,
+          "gameId": 4198,
+          "reason": "2012"
+        }
+      ]
+    },
+    {
+      "id": 3573,
+      "kind": "story",
+      "rationale": "La saga no tiene una historia continua: cada juego es una aventura independiente. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5309,
+          "reason": "Arcade original de 1983; da igual la versión."
+        },
+        {
+          "position": 2,
+          "gameId": 1428,
+          "recommendedVersionId": 2941,
+          "reason": "Inicio de la saga de plataformas; versión original de NES."
+        },
+        {
+          "position": 3,
+          "gameId": 2404,
+          "reason": "Secuela muy difícil; da igual la versión."
+        },
+        {
+          "position": 4,
+          "gameId": 4017,
+          "recommendedVersionId": 7901,
+          "reason": "Versión original de NES."
+        },
+        {
+          "position": 5,
+          "gameId": 4020,
+          "recommendedVersionId": 7915,
+          "reason": "Aventura de Game Boy ambientada en Sarasaland; original."
+        },
+        {
+          "position": 6,
+          "gameId": 24,
+          "recommendedVersionId": 34,
+          "reason": "Versión original de SNES."
+        },
+        {
+          "position": 7,
+          "gameId": 4047,
+          "recommendedVersionId": 7979,
+          "reason": "Introduce a Wario; original de Game Boy."
+        },
+        {
+          "position": 8,
+          "gameId": 3109,
+          "recommendedVersionId": 6075,
+          "reason": "Regreso al 2D clásico; original de DS."
+        },
+        {
+          "position": 9,
+          "gameId": 4198,
+          "recommendedVersionId": 8325,
+          "reason": "Única versión disponible, en 3DS."
+        }
+      ]
+    },
+    {
+      "id": 3574,
+      "kind": "community",
+      "rationale": "Se empieza por los grandes clásicos 2D y se dejan para después el arcade, The Lost Levels (muy difícil) y Super Mario Land. Sin fuentes consultadas: no pude acceder a la web.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1428,
+          "recommendedVersionId": 2941,
+          "reason": "Base de todo el género; el original de NES es la referencia."
+        },
+        {
+          "position": 2,
+          "gameId": 4017,
+          "recommendedVersionId": 7901,
+          "reason": "Considerado uno de los mejores de la saga; original de NES."
+        },
+        {
+          "position": 3,
+          "gameId": 24,
+          "recommendedVersionId": 34,
+          "reason": "Cumbre del 2D clásico; el original de SNES es la versión recomendada."
+        },
+        {
+          "position": 4,
+          "gameId": 4047,
+          "recommendedVersionId": 7979,
+          "reason": "Opcional: buena aventura portátil con mucha personalidad."
+        },
+        {
+          "position": 5,
+          "gameId": 3109,
+          "recommendedVersionId": 6075,
+          "reason": "Opcional: el 2D moderno con control pulido."
+        },
+        {
+          "position": 6,
+          "gameId": 2404,
+          "reason": "Solo para quien busca desafío extra; se deja al final."
+        }
+      ]
+    }
+  ]
 }

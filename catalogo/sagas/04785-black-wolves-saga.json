@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Black Wolves Saga: Last Hope is a continuation of Bloody Nightmare focusing more on the historical aspect and Rath Vogart's past.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -48,9 +54,16 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 62372,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJM-06219",
+            "ULJM-06220"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2zrs.jpg"
+      }
     },
     {
       "id": 39176,
@@ -62,6 +75,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94114",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Black Wolves Saga: Weiβ und Schwarz",
           "source": "igdb",
@@ -70,6 +89,12 @@
         {
           "field": "original_name",
           "value": "Black Wolves Saga: Weiβ und Schwarz",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Compilation game that compiles -Bloody Nightmares- and -Last Hope- into one game for new fans.",
           "source": "igdb",
           "manual": false
         },
@@ -87,7 +112,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 132091,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base de la novela visual, sin diferencias conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Novela visual con guardado estándar; pantalla pequeña de Vita."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de Vita; funciona bien pero con tiempos de carga normales."
+            }
+          ]
         },
         {
           "id": 94114,
@@ -95,10 +141,54 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 414563,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base; no consta contenido extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más cómoda en Switch, con modo TV y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y consola vigente."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co307d.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3285,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35906,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 39176,
+          "reason": "2017"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

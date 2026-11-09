@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49085",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Little King's Story",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Little King's Story",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Initially released for Wii to rave reviews, this cult classic real-time strategy game juxtaposes cutesy fairytale visuals with some decidedly adult cynicism for a zany, irreverent adventure to build, enhance, and maintain a mystical, magical kingdom. Making its way to PC for the first time, this edition of the game remains faithful to the Wii original, but brings all its charming, sassy fun to a new audience. Can you keep Alpoko safe from the Onii and help our little hero become king of the whole world?\"",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,32 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 4974,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original de Wii."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con Wiimote y nunchuk correcto, pero con cámara y guardado básicos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la experiencia original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución 480p y rendimiento irregular en escenas con muchos personajes."
+            }
+          ],
+          "codes": [
+            "RVL-RO3E-USA-B0",
+            "RVL-RO3P-EUR"
+          ]
         },
         {
           "id": 49085,
@@ -57,7 +94,28 @@
           "year": 2016,
           "igdbId": 4974,
           "steamAppId": 390310,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Admite mando o teclado y es cómodo de jugar hoy."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel, con pequeños cambios de control y presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y mejor fluidez, aunque es una conversión con algunos fallos."
+            }
+          ]
         }
       ],
       "images": {
@@ -88,6 +146,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "New Little King's Story is a re-imagined version of the Nintendo Wii game \"Little King's Story\" that was released in 2009. The vita version changes a lot of the original mechanics, contains a new story, and uses touch based controls.\n\n\"New Little King's Story comes to PS Vita for the very first time! Based on the classic action adventure RPG, players can enter the role of King Corobo and experience his incredible journey to win back his kingdom. Rise up to regain all that was lost to the Devil King, The Nightmare. As King, you will visit seven different locations and take on battles against evil dark lords that have captured the royal princesses. Lead your Royal Guard in every grand battle. Charge and retreat with a single command! Plan your attacks wisely and you can increase your army of citizens and broaden your territories! It’s an exciting adventure you won’t want to miss!\"",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -101,10 +165,38 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 19911,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "PCSB-00109"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9b551edccdbe0b4fa24e4815e900682e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/17642f168c28dfb8656664961cc39197.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/21f1e5c663d0a272cc09ac9f74861de0.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2958,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19715,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 40977,
+          "reason": "2012"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

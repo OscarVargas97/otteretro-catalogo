@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "You can make dot pictures of cute Friends.There are 300 Picross and Mega-Picross puzzles! Plus Clip Picross, where you solve puzzle pieces to complete an image. Help functions and tutorials to help new players. Friends will appear in the Gallery when you clear a puzzle. Mimamori Friends watch over your progress in the corner of the screen.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2018",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 107655,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01004B100BDA2000"
+          ]
         }
       ],
       "images": {
@@ -66,6 +75,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "104025",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Kemono Friends 3",
@@ -92,7 +107,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 114000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego, puede ir con retraso en eventos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando menos natural."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto en PS4."
+            }
+          ]
         },
         {
           "id": 104025,
@@ -100,10 +136,54 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 114000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y eventos al día."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control táctil o ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en PC."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6fzg.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2704,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11869,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 43960,
+          "reason": "2019"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

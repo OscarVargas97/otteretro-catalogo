@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "12950",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Blade",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Blade",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Blade is an action game based on the 1998 film Blade. It was developed by HammerHead for the PlayStation in 2000, and by HAL Laboratory and Avit Inc. for the Game Boy Color. The game was published by Activision and serves as a prequel to the movie, following the adventure of Blade with help of his mentor and friend Abraham Whistler. Reviews were mixed, with criticism of the graphics, camera, controls, and voice acting.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,13 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 8719,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03213",
+            "SLES-03214",
+            "SLES-03215",
+            "SLUS-01215"
+          ]
         },
         {
           "id": 12950,
@@ -75,6 +93,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82862",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Blade II",
           "source": "igdb",
@@ -83,6 +107,12 @@
         {
           "field": "original_name",
           "value": "Blade II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "For countless generations there was very little to stand between vampires and their human prey--until now. In Blade II, you are a vampire hunter who possesses all the strengths of a vampire, and none of its weaknesses. Skilled in martial arts, guns, and swordplay, you must protect humans from the hungering darkness. Keep the evil forces at bay with your 360-degree combat system and unstoppable rage powers. High-tech weaponry, destructive rage abilities, and over-the-top finishing moves turn every enemy encounter into an action-packed bloodbath.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +138,12 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 22220,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51013",
+            "SLES-51014",
+            "SLUS-20360"
+          ]
         }
       ],
       "images": {
@@ -118,5 +153,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2430,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6696,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 33231,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

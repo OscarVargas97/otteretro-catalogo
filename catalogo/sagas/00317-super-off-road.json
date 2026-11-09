@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Off Road: The Baja is a sequel of Super Off Road. Unlike its predecessor which uses an isometric top-down view of a single-screen track, this arcade racing game is made specifically for the SNES and uses its Mode 7 hardware for a 3D racing experience with a 3rd person perspective.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -67,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1819",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ivan ''Ironman'' Stewart's Super Off Road",
           "source": "igdb",
@@ -75,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Ivan ''Ironman'' Stewart's Super Off Road",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Enter the world of off-road racing as 4 vehicles will face each other, on a series of tracks which are based around flipped and reversed versions of a core selection. Fame, glory and bikini clad women await your victories and the taste of dirt awaits if you fail. Let a computer car beat you and you lose one of your 3 credits.\n\nSuccessful races bring more money, which can be used to soup up their machine. Boosts to top speed, grip and acceleration can be purchased, and your nitro boost must be kept topped up. If you are desperate for upgrades, you can buy into your spare credits.\n\nOnly your off-road driving abilities will be enough to pull you to first place in these races. Play alone or with up to 3 other players (depending on the version) in this classic arcade game.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +110,28 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 365878,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más pistas y detalles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control más fluido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejores gráficos y sonido."
+            }
+          ]
         },
         {
           "id": 14014,
@@ -100,7 +139,28 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 365683,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Monocromo."
+            }
+          ]
         },
         {
           "id": 103355,
@@ -108,7 +168,28 @@
           "kind": "original",
           "year": 1990,
           "igdbId": 365887,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Carreras y mejoras, menos pulida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de NES."
+            }
+          ]
         }
       ],
       "images": {
@@ -139,6 +220,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The END of the ROAD is only the BEGINNING. Strap yourself in and get ready to ride! Players battle the elements and each other in a race that takes them across 6 rugged courses including the Mojave Desert, Las Vegas and Pike's Peak! Choose Circuit Mode and climb your way to the top of the heap. Course terrain includes snow, water, asphalt, dirt, sand, rocks and mud. Four selectable trucks and four hidden trucks. Players can customize trucks in the Speed Shop.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -152,7 +239,11 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3567,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NOFE",
+            "NOFP"
+          ]
         }
       ],
       "images": {
@@ -162,5 +253,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1430,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 902,
+          "reason": "1989"
+        },
+        {
+          "position": 2,
+          "gameId": 652,
+          "reason": "1993"
+        },
+        {
+          "position": 3,
+          "gameId": 1022,
+          "reason": "1997"
+        }
+      ]
+    }
+  ]
 }

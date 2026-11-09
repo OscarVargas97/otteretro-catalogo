@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42424",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Woden GP",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "Super Woden GP",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Feel the excitement of the 90s with the isometric perspective, its huge number of vehicles and its brilliant soundtrack. More than 60 cars from six manufacturers from different countries to buy, an extensive campaign mode, dozens of circuits, rally stages, championships, and much more awaits you!",
           "source": "igdb",
           "manual": false
         },
@@ -80,7 +92,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 150979,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01002F1017DF4000"
+          ]
         }
       ],
       "images": {
@@ -99,6 +114,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66879",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Woden GP 2",
           "source": "igdb",
@@ -107,6 +128,12 @@
         {
           "field": "original_name",
           "value": "Super Woden GP 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Super Woden GP 2 is a love letter to the world of motor sports, offering a unique experience. Arcade-style isometric racing meets unrivaled campaign depth and a huge variety of vehicles to buy, sell and unlock.",
           "source": "igdb",
           "manual": false
         },
@@ -175,5 +202,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3465,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16230,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 27165,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

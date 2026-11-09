@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A Game Boy port of \"Nyan to Wonderful\", a pet-raising simulation game originally released on PlayStation. You can raise up to four pets at a time and improve their stats by feeding them and playing mini-games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "64247",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Nyan to Wonderful",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Nyan to Wonderful",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nyan to Wonderful is a pet simulation game that is about training a cat or a dog. The game features different cat and dogs species and uses a 3D engine with different camera angles.\n\nThe player can use different toys and musics to train his pet, and give him or her different kind of meals. There is a photograph mode and a gallery mode can also be unlocked. The game features other game modes that can be unlocked playing the main game.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +108,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 143674,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el de PS1 (relanzamiento digital)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Emulación con guardado cómodo en pantalla grande."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con cargas algo menores y mejor imagen en TV."
+            }
+          ]
         },
         {
           "id": 64248,
@@ -98,7 +137,32 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 143674,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado solo con tarjeta de memoria y controles de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa de PS1, con cargas y requiere hardware o emulador."
+            }
+          ],
+          "codes": [
+            "SLPS-00442",
+            "SLPS-91047"
+          ]
         },
         {
           "id": 64249,
@@ -106,7 +170,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 143674,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el de PS1 (relanzamiento digital)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Emulación con guardado cómodo y portátil, pero con botones y pantalla menos cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña de PSP; emulación estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -148,7 +233,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 419631,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01796"
+          ]
         }
       ],
       "images": {
@@ -156,5 +244,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1603,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25776,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 6949,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 26647,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "59552",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Staffer Case: A Supernatural Mystery Adventure",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Staffer Case: A Supernatural Mystery Adventure",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Staffer Case is a new sort of mystery game, asking players to find clues, arrange them into documents, and point out the contradictions between them to solve a series of murders.\n\nThe game is set in a fictional version of London in the 1960s where 10% of all residents have some sort of supernatural ability. In this city, incidents involving staffers, the people who have these abilities, are constantly occurring.\n\nPlayers take the role of the Mana Affairs Division's newest detective, Notrick, in order to make sense of these incidents. Since the tricks buried within these staffer cases, at their core, revolve around the supernatural abilities of these criminals, conventional investigative methods won't be enough to solve them. Instead, players will have to rely on the documents that explain what their suspects' abilities entail in order to make sense of everything.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2023,
           "igdbId": 215713,
           "steamAppId": 2128480,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Aventura completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón cómodo para aventura gráfica."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 59553,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 215713,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Aventura completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y con mando, menos precisa que el ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, adaptada a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y rendimiento."
+            }
+          ],
+          "codes": [
+            "01000ED0214D0000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "88636",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Staffer Retro : A Supernatural Mystery Quest",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Staffer Retro : A Supernatural Mystery Quest",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Staffer Retro is a mystery adventure game where you uncover past incidents related to ‘Mana’, the source of supernatural powers. Gather information through dialogue and exploration, and piece together clues found in documents to guide the choices of Verita Retro, the protagonist.",
           "source": "igdb",
           "manual": false
         },
@@ -110,10 +179,36 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 355598,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01008D502626C000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocjym.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3045,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23601,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 36763,
+          "reason": "2026"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1303",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "ClayFighter",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "ClayFighter",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sticks and stones might make him groan, but clay really ticks him off! Bad Mister Frosty is the name, and action is the game. Fists and feet will fly (and other parts) as Frosty and his friends smack it out in head-to-head fighting action.\n\nClayFighter is a fighting game released for the Super NES in November 1993 and later ported to Sega Genesis in June 1994. The game is a parody of Street Fighter. In 2009, the Genesis version was re-released on the Wii Virtual Console.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 46687,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original."
+            }
+          ]
         },
         {
           "id": 1303,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 46687,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Suspensión y mando clásico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida 480p."
+            }
+          ]
         },
         {
           "id": 1651,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 42616,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Revisión del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Pequeños cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original."
+            }
+          ]
         }
       ],
       "images": {
@@ -91,6 +166,12 @@
         {
           "field": "original_name",
           "value": "ClayFighter 2: Judgment Clay",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Interplay's claymation fighting game returns with a brand new gameplay engine and a new cast of fighters.",
           "source": "igdb",
           "manual": false
         },
@@ -125,6 +206,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2018",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "ClayFighter 63 1/3",
           "source": "igdb",
@@ -133,6 +220,12 @@
         {
           "field": "original_name",
           "value": "ClayFighter 63 1/3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Get ready to crumble! Once again, the clay fighters prove that when you play a state-of-the-art fighter, you might lose lives, you might lose limbs, but there's no reason to lose your sense of humor! Fight in and out of 3D backgrounds. Get tossed out of a window and resume fighting outside. Choose form 12 eccentric fighters including brand new combatants and old favorites like \"Bad Mister Frosty\" and \"Bonker the Clown.\" Includes bonus \"secret characters\" who are so famous that a legal gag order prohibits us from revealing their identity. Move freely in over 12 highly detailed 3D environments.",
           "source": "igdb",
           "manual": false
         },
@@ -168,5 +261,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1431,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 658,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 779,
+          "reason": "1995"
+        },
+        {
+          "position": 3,
+          "gameId": 1060,
+          "reason": "1997"
+        }
+      ]
+    }
+  ]
 }

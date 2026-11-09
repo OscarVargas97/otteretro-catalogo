@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61365",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shadow Tower",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Shadow Tower",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shadow Tower is a first-person view action role-playing game developed by From Software and released in 1998. It shares many similarities with the King's Field series of games.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 9502,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Estados de guardado y mando moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más limpia en TV y cargas algo mejores."
+            }
+          ]
         },
         {
           "id": 61366,
@@ -56,7 +89,32 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 9502,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Solo memory card y controles de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa de PS1 con cargas originales."
+            }
+          ],
+          "codes": [
+            "SLPS-01420",
+            "SLUS-00863"
+          ]
         },
         {
           "id": 61367,
@@ -64,14 +122,51 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 9502,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido, aunque sin segundo stick."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña; ambientes oscuros difíciles de ver."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/9e33f592ddfb6e25341368b76acd4816.png",
         "hero": "https://cdn2.steamgriddb.com/hero/6e937704a7aeec9c186397c5d8c8796c.png",
         "logo": "https://cdn2.steamgriddb.com/logo/cfa3a0bc94975cb9c346a585ccb3ad9e.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1044,
+          "platform": "ps1",
+          "project": "reshadowtower",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/JFryy/reshadowtower",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 32883,
@@ -95,6 +190,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Shadow Tower Abyss is a dark fantasy role-playing video game, developed and published by From Software in Japan for the PlayStation 2. The game is a sequel to Shadow Tower, and features a number of genre and mechanical elements that can also be found in Demon's Souls and the King's Field series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -108,7 +209,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 9503,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25217"
+          ]
         }
       ],
       "images": {
@@ -118,5 +222,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3076,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24227,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 32883,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

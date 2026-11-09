@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "With the goal of becoming number one, enjoy both fashion and work in the model world.\n\nA youth story starring you. Have all sorts of encounters in the city. Perhaps even love will bloom…?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2019",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Model Debut 2: Nicola is a model simulation game in which a player who has debuted as a new model in small production and aims to become a top model while enjoying fashion, model work, and sometimes love.\n\nThe fashion item of this work is supervised by \"nicola\", the most popular teen magazine. You can enjoy a wide variety of fashions, as well as trends like hair makeup made up of exquisite colors and nuances.\n\nFurthermore, by connecting to the internet, you can share fashion with players all over the country and there is a function that improves your fashion sense.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2021",
           "source": "igdb",
@@ -109,6 +121,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "77618",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Model Debut 3 #Nicola",
           "source": "igdb",
@@ -117,6 +135,12 @@
         {
           "field": "original_name",
           "value": "Model Debut 3 #Nicola",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A fashion game where your unique, cute style comes to life! Become a new model, enjoy fashion, work, and sometimes romance, while aiming to become a top model!",
           "source": "igdb",
           "manual": false
         },
@@ -135,7 +159,28 @@
           "year": 2025,
           "igdbId": 320463,
           "steamAppId": 3738910,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base; sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón/teclado o mando, guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene la experiencia original intacta."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y mejor rendimiento en PC."
+            }
+          ]
         },
         {
           "id": 77619,
@@ -143,7 +188,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 320463,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base igual; sin extras conocidos frente a PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos con mando, jugable en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original de lanzamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento limitados por el hardware de Switch."
+            }
+          ]
         }
       ],
       "images": {
@@ -162,6 +228,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "90401",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Model Debut 4",
           "source": "igdb",
@@ -170,6 +242,12 @@
         {
           "field": "original_name",
           "value": "Model Debut 4",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Trendy items for full styling and production fun!\nStep into the world of modeling, try out different jobs, and chase your dreams — and maybe even love.",
           "source": "igdb",
           "manual": false
         },
@@ -206,8 +284,41 @@
           "igdbId": 378505,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cob1vj.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1258,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13346,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 21232,
+          "reason": "2021"
+        },
+        {
+          "position": 3,
+          "gameId": 31027,
+          "reason": "2023"
+        },
+        {
+          "position": 4,
+          "gameId": 37527,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86189",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Storm Lover",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Storm Lover",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A Japanese romance game (Otome Visual Novel) where the player controls a female protagonist in high-school.",
           "source": "igdb",
           "manual": false
         },
@@ -66,7 +78,10 @@
           "igdbId": 132072,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5jpn.jpg"
+      }
     },
     {
       "id": 36037,
@@ -90,6 +105,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A fandisc to Storm Lover.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -105,7 +126,10 @@
           "igdbId": 132070,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5jqx.jpg"
+      }
     },
     {
       "id": 36077,
@@ -117,6 +141,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87263",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Storm Lover 2nd",
           "source": "igdb",
@@ -125,6 +155,12 @@
         {
           "field": "original_name",
           "value": "Storm Lover 2nd",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A sequel to Storm Lover/Storm Lover Kai!, featuring a new heroine and a new set of guys, with the exception of Nanao Shiina from the previous games.",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +178,33 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 132071,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien, pero en PSP es hardware antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución PSP nativa, sin mejoras."
+            }
+          ],
+          "codes": [
+            "ULJS-00570",
+            "ULJS-00571",
+            "ULJS-00613"
+          ]
         },
         {
           "id": 87263,
@@ -150,10 +212,59 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 132073,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, sin cambios relevantes conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Pantalla OLED/LCD mejor y guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con pocos ajustes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor pantalla y carga algo más ágil."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co22dp.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1984,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35821,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 36037,
+          "reason": "2011"
+        },
+        {
+          "position": 3,
+          "gameId": 36077,
+          "reason": "2013"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

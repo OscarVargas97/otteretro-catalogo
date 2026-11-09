@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "104174",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "eFootball PES 2020",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "eFootball PES 2020",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "eFootball PES 2020 is a football simulation game developed and published by Konami. Released in September 2019, it is the 19th instalment in the Pro Evolution Soccer series and the first to include the \"eFootball\" branding, reflecting Konami's focus on esports.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 119422,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/544120e55df7022d4ce8fddbfc4649a9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e9714928c145cc045831ad80965b7605.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c2909d93540cf88cf0a3c57d0a319696.png"
+      }
     },
     {
       "id": 44102,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "104441",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "eFootball PES 2021 Season Update",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "eFootball PES 2021 Season Update",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "eFootball PES 2021 Season Update is a football simulation game developed and published by Konami in 2020. It serves as a standalone update to eFootball PES 2020, featuring updated player rosters, team kits, and competitions. The gameplay remains largely unchanged.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +152,33 @@
           "igdbId": 135881,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/75a2f27519c5dd2390aa7cd6b4946e57.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8d2d578fff5f9c60e57d0ff19614b47f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/8b460a3ceb495c725412bf3f6251e42d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3459,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 44015,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 44102,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

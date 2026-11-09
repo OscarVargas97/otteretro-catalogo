@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Rambo: First Blood Part II is a top-down action/shoot-'em-up loosely based on the 1985 film of the same name.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1986",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95169",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rambo: The Video Game",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Rambo: The Video Game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rambo: The Video Game puts the player in John Rambo's combat boots, and takes them on an action packed journey through the iconic combat sequences and story-arcs of First blood, Rambo: First Blood Part II & Rambo III.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +108,11 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 3771,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01963",
+            "BLUS-31387"
+          ]
         },
         {
           "id": 95169,
@@ -109,7 +131,12 @@
           "igdbId": 3771,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a4083405c635f593004871629e24e3d7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/70c445ee64b1ed0583367a12a79a9ef2.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/003af5a042e00ac9b489153a81d676ca.png"
+      }
     },
     {
       "id": 42676,
@@ -133,6 +160,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Rambo is a side scrolling platform game where the player controls Rambo with his mission to Vietnam. The game starts at the military base before getting sent to Vietnam. In Vietnam, Rambo has to fight animals in the jungles, swamps, and caves like wasps, snakes, fish, tigers, bats, spiders, birds, apes and flamingos. Before making his way to the POW camp he has to fight guards and mercenaries that can kick and shoot him, all wearing different color shirts depending on how powerful they are. The game also requires the player to navigate a complex map requiring the player to find North and South points on the ground to go up and down levels as well as East and West by moving Rambo to the edge of the screen. There are 6 different weapons that Rambo can pick up that are knife, throwing knife, bow and arrow, bow and exploring arrow, gun, and hand grenade. All the weapons but the knife has limited ammo which is collected from killed enemies. There is also health vile that restores health as well as mission specific items that Rambo must find to complete some missions. The game uses password save that can be retrieved when talking to any person.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1988",
           "source": "igdb",
@@ -148,8 +181,38 @@
           "igdbId": 48210,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/35c4b6cf9566ae5dbf29b5bd2b263ba7.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/09d1187c908982525d7590e89f672f9e.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/9df769dcd39a93c63a340c5713fc277e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1838,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20756,
+          "reason": "1986"
+        },
+        {
+          "position": 2,
+          "gameId": 42676,
+          "reason": "1988"
+        },
+        {
+          "position": 3,
+          "gameId": 39810,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81074",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Operative: No One Lives Forever",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Operative: No One Lives Forever",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "No One Lives Forever is to be a fast-paced, story-driven first-person shooter that delivers over-the-top action, outrageous villains, and wry humor in the tradition of the great 1960's Bond films. You play Cate Archer an undercover operative for MI-Zero. Your mission is to arrange for the defection of a prominent East German biophysicist that goes by the name of Otto Dentz. However things go wrong when a terrorist group known as the HARM abducts Dentz during a flight to England.\n\nAssume the role of Cate Archer, an operative working for UNITY, a secret organization fighting to free the world from the clutches of H.A.R.M.. From tense subterfuge to in-your-face combat, No One Lives Forever ups the ante with 1960's-influenced spy action, vivid international locates, and deadly arch villains.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 897,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña completa con todos los niveles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos, con guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "La visión original del estudio."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución; puede necesitar parches en Windows moderno."
+            }
+          ]
         },
         {
           "id": 81075,
@@ -56,7 +89,32 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 897,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Niveles recortados y reorganizados respecto a PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Apuntar con mando es más impreciso y los puntos de guardado limitan."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios notables."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución, cargas y rendimiento irregular."
+            }
+          ],
+          "codes": [
+            "SLES-50592",
+            "SLUS-20028"
+          ]
         }
       ],
       "images": {
@@ -102,8 +160,33 @@
           "igdbId": 820,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/31e4b5d12b9d13865fc410864a48fe6e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/36597855fca55b54f30f55d8820a2f8b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/bcee0a5d14d3d569e298b58e46191139.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3192,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32447,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 43708,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

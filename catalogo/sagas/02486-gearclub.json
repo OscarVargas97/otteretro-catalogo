@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Gear.Club is much more than a quick adrenaline rush; it is an authentic world of cars. Realistic driving and racing experience, with fully simulated engines, powertrains, suspensions and aerodynamics.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 55192,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010065E003FD8000"
+          ]
         }
       ],
       "images": {
@@ -67,6 +76,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "54263",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gear.Club Unlimited 2",
           "source": "igdb",
@@ -75,6 +90,12 @@
         {
           "field": "original_name",
           "value": "Gear.Club Unlimited 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The most successful racing game on the Nintendo Switch is back\n\nWith the pedal to the metal, race along more than 1800 miles of roads! On the mountainside, through a nature park, in the middle of the desert or along the coast, defend your position over the course of more than 250 races, including championships, missions and challenges.\n\nAs you progress through the races, admire the growing collection of cars in your personal garage. Gear Club Unlimited 2 has more than 50 licensed cars from the world’s most famous manufacturers, such as the Porsche 718 Boxster, 918 Spyder, 911 GT2RS, Dodge Viper, Lotus 3-Eleven or McLaren 720s.\nPersonalize them and make them unique! You can change their appearance with the paint and bodywork, or change their driving performance with engine tuning.\n\nYou would be nothing, however, without your Club! Create and manage it with your friends, recruit the best drivers and take on rival clubs from all over the world, reach the top of the podium and enjoy exclusive content reserved for the best players.\n\nNo more borders. Drive with freedom!",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +113,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 107196,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido de lanzamiento."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos, con fallos originales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fluidez limitadas."
+            }
+          ]
         },
         {
           "id": 54263,
@@ -100,7 +142,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 172590,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Edición posterior, probablemente con contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Con correcciones y mejoras."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con mejoras."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Más pulida."
+            }
+          ]
         }
       ],
       "images": {
@@ -117,6 +180,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113201",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gear.Club Unlimited 3",
           "source": "igdb",
@@ -125,6 +194,12 @@
         {
           "field": "original_name",
           "value": "Gear.Club Unlimited 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Gear.Club series is back! Customize and set up your favourite cars to race at top speed along the roads of the French Mediterranean coast and Japan. Don't just win – show off your style!",
           "source": "igdb",
           "manual": false
         },
@@ -150,7 +225,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 381154,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0400256024344000"
+          ]
         },
         {
           "id": 113201,
@@ -169,8 +247,38 @@
           "igdbId": 381154,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0cdf21647ac45cc8be333b4fe26f3d91.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/9472e7c1581949a6f3ec0f5f774e225c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/764bc344c28d926a64772b5db8d9d7cb.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1700,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10440,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 11916,
+          "reason": "2018"
+        },
+        {
+          "position": 3,
+          "gameId": 47677,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

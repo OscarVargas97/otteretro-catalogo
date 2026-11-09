@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101032",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Little Witch Academia: Chamber of Time",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Little Witch Academia: Chamber of Time",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Little Witch Academia: Chamber of Time is a heart-pounding 3D action RPG beat ‘em up featuring an original storyline carved from the popular anime series by Studio Trigger.\n\nLittle Witch Academia: Chamber of Time features main characters from the anime and original storylines for players to explore as they make their way through Luna Nova Magical Academy.",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,12 @@
           "steamAppId": 710470,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/865068698d725a182626aca2fdd23c3a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/771e733b6bd5754e577ea698d33849f9.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/aaaccd2766ec67aecbe26459bb828d81.png"
+      }
     },
     {
       "id": 45431,
@@ -83,6 +100,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Take to the skies on an exciting Little Witch Academia adventure! Step onto the Grand Charion with Akko and friends as they battle their way through monsters in the sky and ground. Watch as the Grand Charion transforms and puts you into the cockpit and fight your way to the high score. Download the Little Witch Academia Magic Knight Grand Charion mini-game now!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2018",
           "source": "igdb",
@@ -98,8 +121,31 @@
           "igdbId": 305482,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8cav.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3412,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42347,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 45431,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

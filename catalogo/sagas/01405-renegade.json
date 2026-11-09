@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "29425",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Arcade Archives: Renegade",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Arcade Archives: Renegade",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Arcade Archives: Renegade is a port of the action game Renegade. In Renegade, players control a vigilante (named Mr. K), who fights a variety of street gangs on his way to save his girlfriend.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 105703,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Arcade con opciones de dificultad y clasificaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buenos controles y ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 29425,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 105703,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo arcade con ajustes y clasificaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo en portátil, con ajustes de pantalla."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ],
+          "codes": [
+            "010081E001DD2000"
+          ]
         }
       ],
       "images": {
@@ -85,6 +142,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Target: Renegade is a scrolling beat'em up (or flip-screen on certain versions) computer game released on the Amstrad CPC, Commodore 64 and ZX Spectrum systems in the late 1980s by Ocean Software on their \"Imagine\" label, as well as a Nintendo Entertainment System version published by Taito. The game is a sequel to Renegade and was followed by Renegade 3. When acquiring the license to convert the original arcade game Renegade to home computers, Ocean acquired the option to produce and release their own home-computer-only sequels to the game, and Target Renegade was the first of these sequels.\n\nOn most formats, the game caters for one or two players and concerns itself with the adventures of a streetfighter (or a pair of identical streetfighters) known only as \"Renegade\", who seek(s) revenge against a local crime kingpin named \"Mr. Big\" for murdering his or their brother Matt. The player character varies, depending on the format, but is usually represented as topless apart from a leather vest and wearing jeans.\n\nRegardless of the format, the cover of the game and the title screen (as seen on the image to the right) portrays a topless street fighter performing a flying kick through a window. In keeping with video game box art and advertising of the era, the character shown in this illustration bears little relation to any character in the game itself. The actual picture is based on Martial Arts Legend Joe Lewis from the cover of his book The World's Greatest Fighter Teaches You How To Master Bruce Lee's Fighting System, but has been adjusted so as to fit in with the character of Renegade.\n\nThe game comprises five levels, though details of enemies and weapons vary from one version to another (the NES version in particular is more like Double Dragon than the home computer versions). The NES and C64 versions of the game do not have a two-player co-operative mode.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1988",
           "source": "igdb",
@@ -100,8 +163,33 @@
           "igdbId": 381643,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d7744dd8936a6f72a0c1306c75df1c9c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e88ee0686126767dc6a2abbe746c7b60.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b72e2fb16e78d4d8b8b80033f0d7a448.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2337,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43503,
+          "reason": "1988"
+        },
+        {
+          "position": 2,
+          "gameId": 12135,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

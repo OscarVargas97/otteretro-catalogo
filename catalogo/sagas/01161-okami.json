@@ -3,7 +3,7 @@
   "name": "Ōkami",
   "igdbKind": "collection",
   "igdbId": 305,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -35,6 +35,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ōkamiden is the DS sequel to Ōkami on PS2 and Wii. The story takes place a few months after the story of Okami. It revolves around the adventures of Chibiterasu, the young sun god and Amaterasu's son, who is called to save the land.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Ōkamiden es la secuela para DS de Ōkami, que apareció en PS2 y Wii. La historia transcurre unos meses después de la de Ōkami y gira en torno a las aventuras de Chibiterasu, el joven dios del sol e hijo de Amaterasu, que es llamado para salvar la tierra.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 16618,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BOOE",
+            "BOOP"
+          ]
         }
       ],
       "images": {
@@ -64,8 +80,14 @@
       "year": 2006,
       "igdbId": 1271,
       "popularity": 266,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "18434",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Ōkami",
@@ -76,6 +98,18 @@
           "field": "original_name",
           "value": "Ōkami",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Set sometime in classical Japanese history, Ōkami combines several Japanese mythology and folklore to tell the story of how the land was saved from darkness by the Shinto sun goddess named Amaterasu, who took the form of a white wolf with celestial markings covering its fur. It features a distinct sumi-e-inspired cel-shaded visual style and the Celestial Brush, a gesture-system used to perform miracles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Ambientado en algún momento de la historia clásica japonesa, Ōkami combina varias mitologías y leyendas de Japón para contar cómo la tierra fue salvada de la oscuridad por la diosa del sol sintoísta Amaterasu, quien tomó la forma de un lobo blanco con marcas celestiales que cubrían su pelaje. Presenta un estilo visual distintivo con cel-shading inspirado en el sumi-e y el Pincel Celestial, un sistema de gestos utilizado para realizar milagros.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -159,5 +193,67 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2283,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19370,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 3457,
+          "reason": "2010"
+        }
+      ]
+    },
+    {
+      "id": 3981,
+      "kind": "story",
+      "rationale": "Ōkamiden es la continuación directa de Ōkami, así que se juega después.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19370,
+          "recommendedVersionId": 18432,
+          "reason": "Historia original de Amaterasu. La versión HD de PC es la más cómoda de jugar."
+        },
+        {
+          "position": 2,
+          "gameId": 3457,
+          "recommendedVersionId": 6781,
+          "reason": "Secuela directa con Chibiterasu. Solo existe en Nintendo DS."
+        }
+      ]
+    },
+    {
+      "id": 3982,
+      "kind": "community",
+      "rationale": "Se empieza por Ōkami en su versión HD. Ōkamiden va después y es opcional.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19370,
+          "recommendedVersionId": 18432,
+          "reason": "La edición HD tiene mejor resolución y controles. La de PC es muy estable."
+        },
+        {
+          "position": 2,
+          "gameId": 3457,
+          "recommendedVersionId": 6781,
+          "reason": "Cierra los cabos sueltos de la historia. Solo se puede jugar en DS."
+        }
+      ]
+    }
+  ]
 }

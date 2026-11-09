@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "32436",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lost in Random",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Lost in Random",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome to the world of Random, a dark kingdom where every citizen’s future is determined by the roll of a dice. Will you be defeated by your fate or embrace chaos and learn to make it work in your favor? Embark on a journey with Even and her sidekick Dicey to play the odds and break the curse of Random.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 119285,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01005FE01291A000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "77344",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lost in Random: The Eternal Die",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Lost in Random: The Eternal Die",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lost in Random: The Eternal Die is an action-packed, rogue-lite adventure in the world of Random. Play as Queen Aleksandra and wield her living die-companion Fortune, as they go all in against the ancient evil that took everything from her.",
           "source": "igdb",
           "manual": false
         },
@@ -158,7 +185,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 314476,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100F0701F9B0000"
+          ]
         }
       ],
       "images": {
@@ -168,5 +198,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2750,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13029,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 30945,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

@@ -29,6 +29,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44419",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "4x4 EVO 2",
           "source": "igdb",
@@ -37,6 +43,12 @@
         {
           "field": "original_name",
           "value": "4x4 EVO 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Professional drivers get paid by winning races and in career mode so do you. Win fast money and deck out your truck from over 125 upgrades like performance shocks, race tires, brush guards, roll bars, snorkels, working winches and performance exhaust to increase vehicle power and speed.",
           "source": "igdb",
           "manual": false
         },
@@ -54,7 +66,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 5715,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena imagen para su época."
+            }
+          ]
         },
         {
           "id": 44418,
@@ -62,7 +95,31 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 5715,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conversión fiel con diferencias menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución fija y gráficos algo inferiores."
+            }
+          ],
+          "codes": [
+            "DL-DOL-GE4E-USA"
+          ]
         },
         {
           "id": 44419,
@@ -70,7 +127,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 5715,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado o mando; guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene la experiencia original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y rendimiento ajustable."
+            }
+          ]
         },
         {
           "id": 44420,
@@ -78,7 +156,31 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 5715,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conversión fiel con recortes visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos más limitados que en Xbox y PC."
+            }
+          ],
+          "codes": [
+            "SLES-51199"
+          ]
         }
       ],
       "images": {
@@ -93,9 +195,15 @@
       "originalName": "4x4 EVO",
       "year": 2000,
       "igdbId": 584,
-      "popularity": 11,
+      "popularity": 12,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "81070",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "4x4 EVO",
@@ -105,6 +213,12 @@
         {
           "field": "original_name",
           "value": "4x4 EVO",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "4x4 EVO is a racing game featuring real-life pickup trucks and SUV's. Actual trucks from manufacturers such as Chevrolet, Ford, Dodge, Nissan, Toyota and more are included.\n\nThe actual racing game is based very heavily on Terminal Reality's Monster Truck Madness series of games, except with SUV's instead of monster trucks.\n\nOne significant feature of 4x4 Evo is the online multi-player option. The Dreamcast, PC, and Macintosh versions can compete against each other in 4 player online races.",
           "source": "igdb",
           "manual": false
         },
@@ -130,7 +244,12 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 584,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50194",
+            "SLES-50194-GER",
+            "SLUS-20091"
+          ]
         }
       ],
       "images": {
@@ -140,5 +259,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2858,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32445,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 16797,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

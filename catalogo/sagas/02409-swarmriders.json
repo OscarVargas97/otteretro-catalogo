@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22239",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Swarmriders",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Swarmriders",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Swarmriders is a free \"endless runner\"+\"twin stick shooter\" arcade mashup. A \"machine gun swarm surfing mini-game\" made as a bonus content for the Ubermosh community.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2016,
           "igdbId": 32839,
           "steamAppId": 490230,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 22240,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 32839,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más limitado que PC."
+            }
+          ],
+          "codes": [
+            "0100E7001210C000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "23778",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Swarmrider Omega",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Swarmrider Omega",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Swarmrider Omega is an \"endless runner\"+\"twin stick shooter\" ARCADE mashup.\nBased on Swarmrider(2016), Omega is a darker and faster version, featuring the Saint from Ubermosh Vol.5.",
           "source": "igdb",
           "manual": false
         },
@@ -102,7 +171,28 @@
           "year": 2017,
           "igdbId": 67901,
           "steamAppId": 714240,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 23779,
@@ -110,7 +200,31 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 67901,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más limitado que PC."
+            }
+          ],
+          "codes": [
+            "01006D101541A000"
+          ]
         }
       ],
       "images": {
@@ -120,5 +234,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2635,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9935,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 10383,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

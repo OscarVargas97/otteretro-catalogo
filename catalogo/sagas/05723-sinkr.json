@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "116010",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sinkr",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Sinkr",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sinkr is a minimalist puzzle using various contraptions to sink pucks. Responsive ambient music. No holes left behind.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2017,
           "igdbId": 55451,
           "steamAppId": 676420,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles precisos con opciones de entrada variadas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y ajustes flexibles."
+            }
+          ]
         },
         {
           "id": 116011,
@@ -57,9 +90,33 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 55451,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido equivalente al de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Se juega bien con mando en consola."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, con menos opciones de ajuste."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co24fn.jpg"
+      }
     },
     {
       "id": 49308,
@@ -71,6 +128,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "116202",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sinkr 2",
           "source": "igdb",
@@ -79,6 +142,12 @@
         {
           "field": "original_name",
           "value": "Sinkr 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sinkr 2 is a minimalist puzzle game evolved from the award winning SiNKR. There is just you, hooks, pucks, and various contraptions you need to finish each level. Sink all the pucks to advance.",
           "source": "igdb",
           "manual": false
         },
@@ -107,8 +176,31 @@
           "igdbId": 111667,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4155.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3517,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 49202,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 49308,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

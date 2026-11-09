@@ -14,6 +14,112 @@
   ],
   "games": [
     {
+      "id": 5739,
+      "nameEs": "Spy vs Spy",
+      "originalName": "Spy vs Spy",
+      "year": 1984,
+      "igdbId": 9166,
+      "popularity": 33,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "11943",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Spy vs Spy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Spy vs Spy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The black spy and the white spy are out to outsmart each other before the time bell rings. Find the needed objects (money, passport, secret plans and airport door key) by searching rooms in the embassy, which include desks, file cabinets and other furniture. Foil your opponent by setting creative booby traps in the various rooms (a bomb in a dresser drawer, for instance). Traps can be disarmed with objects found in rooms (a water bucket from a firebox on the wall will disarm the bomb in the prior example). When all the items are together in the secret briefcase, head for the airport door.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1984",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 11533,
+          "platform": "gb",
+          "kind": "original",
+          "year": 1999,
+          "igdbId": 9166,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar, menos pulido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación distinta."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos monocromos."
+            }
+          ]
+        },
+        {
+          "id": 11943,
+          "platform": "nes",
+          "kind": "original",
+          "year": 1988,
+          "igdbId": 289160,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye modo para dos jugadores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más cómodo en pantalla grande."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original de esta plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Más legible que la portátil."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d567f67fcd326029bd2ab1401fb3b995.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/46c09d92eccfff3d1dfb7015ec5ffd23.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a61f75df207512cb1f36af173fb8f7c1.png"
+      }
+    },
+    {
       "id": 5886,
       "nameEs": "Spy vs. Spy: Operation - Booby Trap",
       "originalName": "Spy vs. Spy: Operation - Booby Trap",
@@ -31,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Spy vs. Spy: Operation - Booby Trap",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Players take on the role of a spy in white (or black), and go on a mission to go to four different locations and collect 4 items: a CD, passport, key and a sum of cash (and a brief-case to contain these things). But there's a snatch, another spy is also on the same mission. Players have to sweep him out of their way and collect the items before he does!",
           "source": "igdb",
           "manual": false
         },
@@ -66,6 +178,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81774",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Spy vs. Spy",
           "source": "igdb",
@@ -74,6 +192,12 @@
         {
           "field": "original_name",
           "value": "Spy vs. Spy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The black Spy and the white Spy are out to beat each other before the time bell rings. Find the needed objects by digging through drawers, closets and furniture in the house. Foil your opponent by setting creative booby traps in the various rooms (a bomb in a dresser drawer, for instance).\n\nFights ensue when both spies enter the same room. Find hidden weapons in the rooms to help with those fights, since one of you will die if you run into each other.",
           "source": "igdb",
           "manual": false
         },
@@ -99,7 +223,11 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 6156,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53078",
+            "SLES-53078/ANZ"
+          ]
         }
       ],
       "images": {
@@ -145,8 +273,41 @@
           "igdbId": 12772,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/acb6b29283090edeb4c958293649c808.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1191,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5739,
+          "reason": "1984"
+        },
+        {
+          "position": 2,
+          "gameId": 42625,
+          "reason": "1985"
+        },
+        {
+          "position": 3,
+          "gameId": 5886,
+          "reason": "1992"
+        },
+        {
+          "position": 4,
+          "gameId": 32692,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

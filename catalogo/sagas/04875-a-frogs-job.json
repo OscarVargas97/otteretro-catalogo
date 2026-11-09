@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "92573",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "A Frog's Job 2: Froggina",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "A Frog's Job 2: Froggina",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Your life has come to an end, when you find Frog God he seems impressed. Turns out most frog souls need a soul reaper to show them the way to the afterlife. Find out in this challenging puzzle platformer with a unique clock-stopping mechanic!",
           "source": "igdb",
           "manual": false
         },
@@ -89,9 +101,15 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 400419,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100CF202754A000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coc0k7.jpg"
+      }
     },
     {
       "id": 44850,
@@ -103,6 +121,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "106339",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "A Frog's Job",
           "source": "igdb",
@@ -111,6 +135,12 @@
         {
           "field": "original_name",
           "value": "A Frog's Job",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A soul-saving frog reaper with the power to stop time. How many souls can you save? Will the Frog God grant your wish? Find out in this challenging puzzle platformer with a unique clock-stopping mechanic",
           "source": "igdb",
           "manual": false
         },
@@ -163,8 +193,31 @@
           "igdbId": 211397,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co571d.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3300,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 44850,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 38630,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

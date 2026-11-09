@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "As opposed to the more realistic hockey gameplay seen in Electronic Arts' NHL series, the game featured a more unrealistic arcade-style of gameplay, featuring moves such as \"power saves\", which caused the goaltender to briefly transform into a brick wall, \"power shots\", which would set the net on fire or knock the goalie into the net, and \"power checks\", which would send an ambulance across the top of the screen. It featured high-scoring games and over-the-top fights. There was also a simulation mode for those looking for more realistic gameplay. The game allowed the creation of profiles and would keep track of important individual and team stats, including goals, assists, and wins, among others.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -48,14 +54,35 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 3630,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NWGE",
+            "NWGJ",
+            "NWGP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/f7a3918ab284128c602d5e58f4ee43d7.png",
         "hero": "https://cdn2.steamgriddb.com/hero/f962ca0f52cb4fb4658780f317085ddb.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/535464f977a45ab62af2578604d3f9f2.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1262,
+          "platform": "n64",
+          "project": "wg3d-recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/geno55/wg3d-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1075,
@@ -67,6 +94,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2039",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wayne Gretzky's 3D Hockey '98",
           "source": "igdb",
@@ -75,6 +108,12 @@
         {
           "field": "original_name",
           "value": "Wayne Gretzky's 3D Hockey '98",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Take on \"The Great One\" again in this hot sequel to the smash hit voted \"Best Sports Game\" of '96! With more great features, such as new hidden teams and improved, hard-hitting AI, Gretzky '98 packs a wallop! Includes all 26 teams, each with 17 available players on their actual NHL teams, and you can make player trades or line manipulations to create a powerhouse team of your own. Play 3-on-3, 4-on-4 or 5-on-5 games on either arcade or regulation size hockey rinks, plus exhibition games, full 82 game seasons or a best-of-seven playoff series with full statistic saving capability.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +131,11 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3631,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NW8E",
+            "NW8P"
+          ]
         },
         {
           "id": 2040,
@@ -100,7 +143,11 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3631,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-01160",
+            "SLUS-00147"
+          ]
         }
       ],
       "images": {
@@ -109,5 +156,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2129,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1012,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 1075,
+          "reason": "1997"
+        }
+      ]
+    }
+  ]
 }

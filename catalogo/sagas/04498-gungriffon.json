@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Gungriffon Blaze was a Playstation 2 launch title. Set in a devastated post World War III world, the player plays as a mech equipped UN soldier who must maintain peace.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -48,7 +54,16 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 21978,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50158",
+            "SLES-50159",
+            "SLES-50160",
+            "SLPM-74001",
+            "SLPS-20033",
+            "SLUS-20080A",
+            "SLUS-20080B"
+          ]
         }
       ],
       "images": {
@@ -77,6 +92,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "GunGriffon: Allied Strike takes place in a hostile futuristic world where there is little hope for survival among the human race.\n\nThe player takes on the role of a renegade soldier, enlisted in an anti-tank troop, whose prime mission is to take down armored tanks, the ultimate ground weapon used to destroy the earth and any living thing that gets in its way.\n\nThe player uses his entrusted machine, a \"High Mac\" (High-Mobility Armored Combat System), to fight the battery of armed soldiers and sinister machines that await them on the battlefield.\n\nThe game features full Xbox Live compatibility with a multi-player online mode and a variety of missions.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -92,8 +113,31 @@
           "igdbId": 47355,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/082b132a6b776c564bcb65a63f21914b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3218,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33153,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 48169,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

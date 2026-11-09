@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86633",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kingdom of Paradise",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Kingdom of Paradise",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kingdom of Paradise is a 3D martial arts role-playing game based on Eastern mythology. You can collect various fighting skills and items to tailor the fighting style of your character. There are more than 150 skills and items to collect, including some that can be downloaded via wireless Infrastructure Mode. In addition to the single-player story mode, you can also challenge other gamers via ad hoc wireless.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 42878,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido del original, sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, controles algo limitados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación de PSP con resolución baja."
+            }
+          ]
         },
         {
           "id": 86307,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 42878,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Buena jugabilidad, sin mejoras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución y cargas de PSP."
+            }
+          ],
+          "codes": [
+            "UCUS-98623"
+          ]
         },
         {
           "id": 86632,
@@ -64,7 +121,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 259656,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, con trofeos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando en consola, con guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 86633,
@@ -72,9 +150,35 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 259656,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, con trofeos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda, con guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y cargas mínimas."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0d6e584f7bf39043792ff2bcbf6ff0dc.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/132af5e482483ff69c642974b3ec23a7.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3e2b7254489da058817288025e2147e9.png"
+      }
     },
     {
       "id": 35727,
@@ -98,6 +202,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Tenchi no Mon 2: Busouden is the prequel to Kingdom of Paradise. The game featured an all new cast of charaters and new lands to explore, but unfortunately was never released outside of Japan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -111,10 +221,39 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 69046,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "UCAS-40156",
+            "UCJS-10047"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a72af384cba098b74688dd8c456573d4.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/90e0b50a6a8d434a2d23995549880eb6.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9da69292e584b8204f05c2be827c0347.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3279,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35458,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 35727,
+          "reason": "2006"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

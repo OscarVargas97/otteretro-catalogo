@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Play as Van Yamano, a young boy who comes upon a unique LBX – a complex, customizable, palm-sized robot. Use it – and team up with familiar characters from the hit TV series – to take down the evil corporation known as the New Dawn Raisers.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -48,7 +54,12 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 11257,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-ADNE",
+            "CTR-P-ADNP",
+            "CTR-P-ADNZ"
+          ]
         }
       ],
       "images": {
@@ -56,7 +67,75 @@
         "hero": "https://cdn2.steamgriddb.com/hero/be5abab81bae109e1a01ea0ac2f6dde7.png",
         "logo": "https://cdn2.steamgriddb.com/logo/2d9e9a27caab97a9899ba3076caa5f49.png"
       }
+    },
+    {
+      "id": 36209,
+      "nameEs": "Danball Senki",
+      "originalName": "Danball Senki",
+      "year": 2011,
+      "igdbId": 321466,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Danball Senki",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Danball Senki",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Originally released in 2011 for Playstation Portable, Denball senki became more popular and known in the west later in 2015 as \"LBX: Little Battlers eXperience\".\nThe original version of the game was announced and planned before the manga and anime adaptations, which came out slightly before the game release.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2011",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 87389,
+          "platform": "psp",
+          "kind": "original",
+          "year": 2011,
+          "igdbId": 321466,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9975.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2323,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36209,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 4193,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

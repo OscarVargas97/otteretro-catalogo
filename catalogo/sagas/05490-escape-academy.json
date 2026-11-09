@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "105819",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Escape Academy",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Escape Academy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome to the Escape Academy. Train to become the ultimate Escapist. Solve Puzzles. Hack Servers. Meet the Faculty. Brew the perfect cup of tea. Escape Rooms in single player or co-op with a friend - local or online!",
           "source": "igdb",
           "manual": false
         },
@@ -83,7 +95,12 @@
           "igdbId": 194464,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c2576c3015fc393072784bc83e499ec5.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/b683f69e9aabb8809d1d264bf17f8193.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/bd23b052ff0d243a1ef4bfd0996d6f64.png"
+      }
     },
     {
       "id": 47610,
@@ -91,9 +108,15 @@
       "originalName": "Escape Academy 2: Back 2 School",
       "year": 2026,
       "igdbId": 347671,
-      "popularity": 0,
+      "popularity": 1,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "113034",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Escape Academy 2: Back 2 School",
@@ -103,6 +126,12 @@
         {
           "field": "original_name",
           "value": "Escape Academy 2: Back 2 School",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Class is (back) in session with Escape Academy 2: Back 2 School! Play in solo or co-op and explore an all-new campus, escape life-threatening puzzle rooms, and unravel a conspiracy as old as the school itself — all before the bell rings.",
           "source": "igdb",
           "manual": false
         },
@@ -139,8 +168,31 @@
           "igdbId": 347671,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9xhl.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3466,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 44585,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 47610,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

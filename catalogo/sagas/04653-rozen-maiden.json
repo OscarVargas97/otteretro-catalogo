@@ -48,9 +48,15 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 84311,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-66357"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6fg9.jpg"
+      }
     },
     {
       "id": 34615,
@@ -74,6 +80,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "\"Rozen Maiden: Gebetgarten\" is the sequel to \"Rozen Maiden: Duellwalzer\" for the Playstation 2. The game features 3D aerial battles and visual novel segments following the story of the second season of the Rozen Maiden anime, \"Rozen Maiden: Träumend\".",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -87,9 +99,15 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 84310,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-66712"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co69tq.jpg"
+      }
     },
     {
       "id": 40768,
@@ -101,6 +119,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97434",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rozen Maiden: Wechseln Sie Welt ab",
           "source": "igdb",
@@ -109,6 +133,12 @@
         {
           "field": "original_name",
           "value": "Rozen Maiden: Wechseln Sie Welt ab",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rozen Maiden: Wechseln Sie Welt ab is an adventure game / Visual Novel for the Playstation 3 and Vita, which released on January 30, 2014. The scenario of the game is a addition to the story of the original and the new TV animation.",
           "source": "igdb",
           "manual": false
         },
@@ -126,7 +156,10 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 86091,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLJM-61120"
+          ]
         },
         {
           "id": 97435,
@@ -136,8 +169,36 @@
           "igdbId": 86091,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co61br.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1970,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34573,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 34615,
+          "reason": "2007"
+        },
+        {
+          "position": 3,
+          "gameId": 40768,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

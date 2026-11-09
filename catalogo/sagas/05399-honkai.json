@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102982",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Honkai: Star Rail",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Honkai: Star Rail",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Honkai: Star Rail is an all-new strategy-RPG title in the Honkai series that takes players on a cosmic adventure across the stars. Hop aboard the Astral Express and experience the galaxy's infinite wonders on this journey filled with adventure and thrill.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 178282,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/14219e4acfc4c50d323a47c2a6994299.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/33a4e204a72d69ec3786ff1cd02e7a66.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/804bfd285116c91c935176b2b199894d.png"
+      }
     },
     {
       "id": 43763,
@@ -98,8 +115,33 @@
           "steamAppId": 1671200,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a1fde6b743bdfa3c9798536192b9143d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/84e06f3c71f657723173b3ddfe08fd8c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/8a42fb391ac55add6aac8811ffaea5f5.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3441,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43763,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 43454,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

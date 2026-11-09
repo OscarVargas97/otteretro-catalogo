@@ -14,6 +14,54 @@
   ],
   "games": [
     {
+      "id": 5246,
+      "nameEs": "Osomatsu-san: Matsumatsuri!",
+      "originalName": "Osomatsu-san: Matsumatsuri!",
+      "year": 2016,
+      "igdbId": 83421,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Osomatsu-san: Matsumatsuri!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Osomatsu-san: Matsumatsuri!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Help one of the sextuplets rise to popularity as you win more minigames. The more you win, the more illustrations, voice clips, and backgrounds you can unlock. You can then use these to create your very own Osomatsu-san scenes!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2016",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 10494,
+          "platform": "3ds",
+          "kind": "original",
+          "year": 2016,
+          "igdbId": 83421,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/pofcuja485axe4vmfhhh.jpg"
+      }
+    },
+    {
       "id": 34509,
       "nameEs": "Hissatsu Pachinko Station V9: Osomatsu-kun",
       "originalName": "Hissatsu Pachinko Station V9: Osomatsu-kun",
@@ -35,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The first Osomatsu pachinko game for PlayStation 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -48,9 +102,15 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 83426,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-20411"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/uy2wgm6lsoankpd9eqpw.jpg"
+      }
     },
     {
       "id": 41318,
@@ -74,6 +134,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An Osomatsu-san game for Vita.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -89,8 +155,36 @@
           "igdbId": 83420,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3rku.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1969,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34509,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 5246,
+          "reason": "2016"
+        },
+        {
+          "position": 3,
+          "gameId": 41318,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

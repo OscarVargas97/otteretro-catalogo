@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dungeon Siege: Throne of Agony is a role-playing video game for PlayStation Portable developed by SuperVillain Studios and published by 2K Games in 2006.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -48,9 +54,18 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 9270,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00569",
+            "ULUS-10177"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/747e2f0d1cf45418c76b674a344f7bc0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/00866f9e635b46efd70d93bf8af772fa.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/467416e41a27859a78aa474ae0677218.png"
+      }
     },
     {
       "id": 39755,
@@ -62,6 +77,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95006",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeon Siege III",
           "source": "igdb",
@@ -70,6 +91,12 @@
         {
           "field": "original_name",
           "value": "Dungeon Siege III",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dungeon Siege III (DSIII or DS3) is an action role-playing game developed by Obsidian Entertainment and published by Square Enix for the PlayStation 3, Xbox 360 and Microsoft Windows.[5] Chris Taylor, the original creator of Dungeon Siege, served as an advisor during the development of the game. It is the third game in the series not to be developed by Gas Powered Games, (after Dungeon Siege: Legends of Aranna by Mad Doc Software and Dungeon Siege: Throne of Agony by SuperVillain Studios) and the first to be published by Square Enix after it acquired the complete ownership of the Dungeon Siege franchise. It was released on June 17, 2011. (wiki, 2014)",
           "source": "igdb",
           "manual": false
         },
@@ -87,7 +114,14 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 5988,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01161",
+            "BLES-01161/LE",
+            "BLJM-60370",
+            "BLKS-20284",
+            "BLUS-30510"
+          ]
         },
         {
           "id": 95006,
@@ -106,7 +140,12 @@
           "igdbId": 5988,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/125ffbed680fa712eaa4e8460b5449a6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/40f4da34bbe180214c23b9e55da4f772.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/681edca905f93d0d1ddd5f82b0385bae.png"
+      }
     },
     {
       "id": 43706,
@@ -146,8 +185,38 @@
           "steamAppId": 39190,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a6c9fc333a8c76695f71dd7d166a56b7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b2420b697849a300ece7982b58557094.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b92f8ab7a47e21fb033068842d6663b0.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1974,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43706,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 35098,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 39755,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

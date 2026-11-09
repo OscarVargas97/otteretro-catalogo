@@ -3,7 +3,7 @@
   "name": "Horizon",
   "igdbKind": "franchise",
   "igdbId": 2000,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76019",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "LEGO Horizon Adventures",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "LEGO Horizon Adventures",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "LEGO Horizon Adventures is an action-adventure game developed by Guerrilla Games and Studio Gobo, blending the Horizon series setting with LEGO-style visuals and humour.\nPlayers follow a retelling of Aloy’s story as she travels across a post-apocalyptic world inhabited by machine creatures. Gameplay includes exploration, combat, puzzle-solving, and cooperative play.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "LEGO Horizon Adventures es un juego de acción y aventura desarrollado por Guerrilla Games y Studio Gobo, que combina el escenario de la serie Horizon con gráficos y humor al estilo LEGO.\nLos jugadores siguen una nueva versión de la historia de Aloy, que recorre un mundo postapocalíptico habitado por criaturas mecánicas. La jugabilidad incluye exploración, combate, resolución de puzles y juego cooperativo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -65,7 +83,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 305003,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010073C01AF34000"
+          ]
         }
       ],
       "images": {
@@ -81,8 +102,14 @@
       "year": 2017,
       "igdbId": 11156,
       "popularity": 2491,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "99615",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Horizon Zero Dawn",
@@ -93,6 +120,18 @@
           "field": "original_name",
           "value": "Horizon Zero Dawn",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome to a vibrant world rich with the beauty of nature – but inhabited by awe-inspiring, highly advanced machines. As a young machine hunter named Aloy, you must unravel the mysteries of this world and find your own destiny.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Bienvenido a un vibrante mundo lleno de la belleza de la naturaleza, pero habitado por máquinas impresionantes y muy avanzadas. Como joven cazadora de máquinas llamada Aloy, debes desentrañar los misterios de este mundo y encontrar tu propio destino.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -144,7 +183,12 @@
           "igdbId": 317103,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f483046f00a16e0e6ff58e5eba3fa49c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/843d61aa7a918bcc66cc2f221f8f3940.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a527033e353ed221d59d378fea3edb2c.png"
+      }
     },
     {
       "id": 42998,
@@ -156,6 +200,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102250",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Horizon Forbidden West",
           "source": "igdb",
@@ -165,6 +215,18 @@
           "field": "original_name",
           "value": "Horizon Forbidden West",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Horizon Forbidden West continues Aloy’s story as she moves west to a far-future America to brave a majestic, but dangerous frontier where she’ll face awe-inspiring machines and mysterious new threats.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Horizon Forbidden West continúa la historia de Aloy, que se dirige al oeste, hacia una América de un futuro lejano, para afrontar una frontera majestuosa pero peligrosa, donde se enfrentará a máquinas impresionantes y a nuevas y misteriosas amenazas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -181,7 +243,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 112874,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Campaña completa, expansión según edición."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Buen mando, pero cargas largas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "30 fps y resolución baja en PS4."
+            }
+          ]
         },
         {
           "id": 102250,
@@ -189,7 +272,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 112874,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición completa con Burning Shores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando o teclado, con opciones amplias."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Cuadros altos, DLSS y ultra ancho."
+            }
+          ]
         },
         {
           "id": 102251,
@@ -197,10 +301,109 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 112874,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña y Burning Shores según edición."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando con háptica, cargas rápidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "4K, 60 fps y cargas rápidas."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/812b270294c90349bf31d833982dd445.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8afe7323856249c73fe99086157110e2.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/2f880b3c95763d8c7fafab0528a1db56.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1926,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41780,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 42998,
+          "reason": "2022"
+        },
+        {
+          "position": 3,
+          "gameId": 30447,
+          "reason": "2024"
+        }
+      ]
+    },
+    {
+      "id": 3629,
+      "kind": "story",
+      "rationale": "La historia es continua: Forbidden West sigue directamente a Zero Dawn. LEGO Horizon Adventures es una versión humorística y libre de la historia del primer juego, no una continuación.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41780,
+          "recommendedVersionId": 99615,
+          "reason": "Es el inicio de la historia. Se recomienda el remaster de PS5 por mejoras visuales y de rendimiento."
+        },
+        {
+          "position": 2,
+          "gameId": 42998,
+          "recommendedVersionId": 102251,
+          "reason": "Continúa directamente la historia de Aloy. La versión de PS5 es la más pulida."
+        }
+      ]
+    },
+    {
+      "id": 3630,
+      "kind": "community",
+      "rationale": "Se juegan en orden de lanzamiento, porque Forbidden West depende del primero. LEGO Horizon Adventures se deja para el final, o se omite, porque es un spin-off ligero de cooperativo.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41780,
+          "recommendedVersionId": 99615,
+          "reason": "Punto de partida obligado. El remaster mejora gráficos y rendimiento respecto al original."
+        },
+        {
+          "position": 2,
+          "gameId": 42998,
+          "recommendedVersionId": 102251,
+          "reason": "Secuela directa. La versión de PS5 (o la de PC si no tienes consola) es la recomendada frente a PS4."
+        },
+        {
+          "position": 3,
+          "gameId": 30447,
+          "recommendedVersionId": 76020,
+          "reason": "Opcional y ligero, pensado para jugar en cooperativo. Mejor después de conocer la historia principal por sus guiños."
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

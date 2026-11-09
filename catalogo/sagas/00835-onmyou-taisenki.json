@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Onmyou Taisenki: Zeroshiki is a Role-Playing game, developed by Kamui and published by Bandai, which was released in Japan in 2004.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 49735,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BITJ"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Onmyou Taisenki: Byakko Enbu is an Action game, developed by Matrix Software and published by Bandai, which was released in Japan in 2005.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -90,9 +105,16 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 78491,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-20416",
+            "SLPS-20417"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7zpw.jpg"
+      }
     },
     {
       "id": 34131,
@@ -116,6 +138,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Onmyou Taisenki: Hasha no In is an Action game, developed by Matrix Software and published by Bandai, which was released in Japan in 2005.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -129,10 +157,41 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 78492,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25501"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7zpy.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1481,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2260,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 34118,
+          "reason": "2005"
+        },
+        {
+          "position": 3,
+          "gameId": 34131,
+          "reason": "2005"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

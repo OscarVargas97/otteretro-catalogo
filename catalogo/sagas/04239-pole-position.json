@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "70118",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pole Position",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Pole Position",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The very first racing game with the rear perspective camera and track based on real life.",
           "source": "igdb",
           "manual": false
         },
@@ -75,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "73784",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pole Position II",
           "source": "igdb",
@@ -83,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Pole Position II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Just like the first game, but with improved graphics and 4 different tracks to choose.",
           "source": "igdb",
           "manual": false
         },
@@ -118,5 +142,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3155,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 27719,
+          "reason": "1982"
+        },
+        {
+          "position": 2,
+          "gameId": 29104,
+          "reason": "1983"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "105017",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "My First Date RPG",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "My First Date RPG",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the \"My First Date RPG\" series, play as characters who experience a big part of growing up: going out on your first date!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 169431,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Igual al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en consola."
+            }
+          ]
         },
         {
           "id": 105017,
@@ -57,7 +90,28 @@
           "year": 2020,
           "igdbId": 169431,
           "steamAppId": 1382450,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado, ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y rendimiento flexibles."
+            }
+          ]
         },
         {
           "id": 105018,
@@ -65,9 +119,33 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 169431,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Igual al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en consola."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5lnx.jpg"
+      }
     },
     {
       "id": 44705,
@@ -106,7 +184,10 @@
           "igdbId": 215100,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co55ko.jpg"
+      }
     },
     {
       "id": 44725,
@@ -145,7 +226,10 @@
           "igdbId": 210921,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co55kn.jpg"
+      }
     },
     {
       "id": 45434,
@@ -184,7 +268,10 @@
           "igdbId": 313488,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8oeb.jpg"
+      }
     },
     {
       "id": 45435,
@@ -223,7 +310,10 @@
           "igdbId": 313903,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8ovd.jpg"
+      }
     },
     {
       "id": 45436,
@@ -262,7 +352,10 @@
           "igdbId": 314024,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8p3b.jpg"
+      }
     },
     {
       "id": 45437,
@@ -301,8 +394,56 @@
           "igdbId": 314144,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8p8f.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 694,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 44281,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 44705,
+          "reason": "2022"
+        },
+        {
+          "position": 3,
+          "gameId": 44725,
+          "reason": "2022"
+        },
+        {
+          "position": 4,
+          "gameId": 45434,
+          "reason": "2023"
+        },
+        {
+          "position": 5,
+          "gameId": 45435,
+          "reason": "2023"
+        },
+        {
+          "position": 6,
+          "gameId": 45436,
+          "reason": "2023"
+        },
+        {
+          "position": 7,
+          "gameId": 45437,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

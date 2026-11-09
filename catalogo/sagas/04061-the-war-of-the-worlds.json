@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Jeff Wayne's The War of the Worlds is a third-person vehicular shooter for the PlayStation, released alongside the RTS for PC for the 100th anniversary of H.G. Wells' book War of the Worlds and 20th of Jeff Wayne's 1978 musical adaption.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -48,7 +54,13 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 65238,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00230",
+            "SLES-01984",
+            "SLES-01985",
+            "SLES-01986"
+          ]
         }
       ],
       "images": {
@@ -79,6 +91,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The War of the Worlds is a dark and breathtaking new vision of the classic H.G. Wells novel, retold as a 2D side-scrolling platformer, and narrated by the acclaimed actor, Patrick Stewart.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -94,8 +112,31 @@
           "igdbId": 20971,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8zb7.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3109,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25161,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 48580,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

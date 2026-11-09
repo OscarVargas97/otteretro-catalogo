@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "48847",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Scarface: The World Is Yours",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Scarface: The World Is Yours",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game begins in the film's final scene, with Tony Montana's (Andre Sogliuzzo) mansion being raided by Alejandro Sosa's assassins. But this is the point of divergence from the film. Instead of being killed by the Skull, Tony manages to sense him and shoots him down. He fights through his mansion, with many deaths on both sides. In the ensuing chaos, Tony sneaks to the front of the mansion, barely alive, and manages to escape in his car. Sosa is then informed that Tony's mansion has been seized and his massive drug empire has been reduced to nothing. Hiding in a safehouse located outside of Miami, Tony regrets the decisions he has made but swears revenge on Sosa.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,13 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 5139,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RSCD-NOE",
+            "RVL-RSCE-USA",
+            "RVL-RSCP-EUR",
+            "RVL-RSCU-AUS-B0"
+          ]
         },
         {
           "id": 48847,
@@ -72,7 +90,17 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 5139,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54182",
+            "SLES-54183",
+            "SLES-54184",
+            "SLES-54271",
+            "SLES-54534-ANZ",
+            "SLUS-21111",
+            "SLUS-21111GH",
+            "SLUS-21492"
+          ]
         }
       ],
       "images": {
@@ -103,6 +131,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Scarface: Money. Power. Respect. is a for the PlayStation Portable and Windows Mobile released in October 2006, based on the film starring Al Pacino.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -116,10 +150,42 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 5140,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00545",
+            "ULES-00545/-2209039",
+            "ULES-00546",
+            "ULES-00547",
+            "ULUS-10148"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f179cb673cf215342a1d8920840280f7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/03569809dea63f4ae081767d80a2ade8.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ef41115b8a262573b89017d7fc8f29da.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2948,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19596,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 35094,
+          "reason": "2006"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

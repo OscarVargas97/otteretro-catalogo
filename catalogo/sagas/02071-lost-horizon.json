@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "16701",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lost Horizon",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Lost Horizon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "1936: Soldiers of the Third Reich roam the world seeking occult weapons for their insane plans of conquest. When Fenton Paddock, a former British soldier and hapless smuggler, is asked to look for his friend Richard, who went missing in Tibet, he has no idea that this search will lead him across three continents to a secret that could turn the whole world upside down. Enough mystery? Not in the mood for another crime story? \"Lost Horizon\" brings the classic adventure back to its roots: the 1930s, exotic settings all over the world, and the dangerous quest for one of the greatest secrets of mankind makes adventurers' hearts beat faster. The Makers of the award-winning Secret Files series invite you to experience a technically outstanding, carefully designed game featuring an absolutely thrilling story at the side of Kim and Fenton.\nKey features:\n\nUnique handmade graphic style\nExotic settings you've never seen before\nMovie-like story by novelist Claudia Kern\nBoth realistic and funny dialogues\nExcellent technical appearance and minimal system requirements\nFast-paced presentation of the exciting story in movie style\nInnovative puzzle design, always fair and logical",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2010,
           "igdbId": 7311,
           "steamAppId": 40350,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón ideal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en alta resolución."
+            }
+          ]
         },
         {
           "id": 16702,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 7311,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando o táctil menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con controles adaptados."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Port con cargas y resolución menores."
+            }
+          ],
+          "codes": [
+            "010064200F7D8000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17665",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lost Horizon 2",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Lost Horizon 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the shadow of the Cold War, Fenton Paddock is facing the hardest fight of his life. While the tensions between the superpowers threaten to tear the world apart, the British soldier has to save his family that has been caught by powerful enemies.",
           "source": "igdb",
           "manual": false
         },
@@ -102,7 +171,28 @@
           "year": 2015,
           "igdbId": 7312,
           "steamAppId": 395560,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón ideal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en alta resolución."
+            }
+          ]
         },
         {
           "id": 17666,
@@ -110,7 +200,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 7312,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando o táctil menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con controles adaptados."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Port con resolución menor."
+            }
+          ],
+          "codes": [
+            "01005ED010642000"
+          ]
         }
       ],
       "images": {
@@ -120,5 +234,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2509,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8514,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 8749,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "32780",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Time Pilot",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Time Pilot",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Time Pilot is a multi-directional scrolling shooter and free-roaming aerial combat arcade game designed by Yoshiki Okamoto, released by Konami in 1982, and distributed in the United States by Centuri. Debuting in the golden age of video arcade games, it is a time travel themed game that allowed the player's plane to freely move across open air space that can scroll indefinitely in all directions. The Killer List of Videogames included Time Pilot in its list of top 100 arcade games of all time.\n\nThe player assumes the role of a pilot of a futuristic fighter jet, trying to rescue fellow pilots trapped in different time eras. The player must fight off hordes of enemy craft and defeat the mother ship (or \"boss\") present in every level. The background moves in the opposite direction to the player's plane, rather than the other way around; the player's plane always remains in the center.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 10273,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión arcade básica."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, sin extras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto."
+            }
+          ]
         },
         {
           "id": 31145,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 10273,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión arcade básica."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, sin extras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de su época."
+            }
+          ]
         },
         {
           "id": 32780,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 117928,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Reedición moderna con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejor control y opciones."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y estabilidad."
+            }
+          ]
         },
         {
           "id": 32781,
@@ -72,7 +147,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 117928,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Reedición moderna con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ideal en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento."
+            }
+          ]
         }
       ],
       "images": {
@@ -91,6 +187,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43283",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Time Pilot 84",
           "source": "igdb",
@@ -99,6 +201,12 @@
         {
           "field": "original_name",
           "value": "Time Pilot 84",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Time Pilot '84: Further Into Unknown World is an eight-way scrolling shoot 'em up, released in 1984 by Konami. It is the sequel to Time Pilot. The player pilots a craft over many time periods. Unlike the original which told the year of each level, the new time periods are designated by new enemies and different colors.\n\nThere are a large number of enemy types in the game. They each have varying movement patterns, difficulty, and point values. The first button is used to fire a standard shot, which can destroy green-colored enemies. The second button is used to fire missiles, which can destroy the silver-colored enemies. You need to lock on to a silver enemy to fire missiles at it. Destroying enough green enemies brings out a large silver \"boss\" enemy that must be dispatched before advancing to the next level.",
           "source": "igdb",
           "manual": false
         },
@@ -134,5 +242,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2738,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12617,
+          "reason": "1982"
+        },
+        {
+          "position": 2,
+          "gameId": 15965,
+          "reason": "1984"
+        }
+      ]
+    }
+  ]
 }

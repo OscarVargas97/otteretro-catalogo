@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "20950",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "White Day: A Labyrinth Named School",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "White Day: A Labyrinth Named School",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Steel your nerves for a Korean horror without equal! Step into the shoes of student Hee-Min Lee and brave the terrors of Yeondu High School in a terrifying survival horror game filled with puzzles, secrets and - of course - deadly ghosts.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "remake",
           "year": 2022,
           "igdbId": 26914,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Incluye los ajustes de versiones posteriores."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Remake con el mismo planteamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena fluidez y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 20949,
@@ -56,7 +89,28 @@
           "kind": "remake",
           "year": 2017,
           "igdbId": 26914,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake completo con los finales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cámara y controles mejorables, sin mejoras posteriores."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Remake con el mismo planteamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fluidez correctas, con algunos fallos."
+            }
+          ]
         },
         {
           "id": 20950,
@@ -65,7 +119,28 @@
           "year": 2017,
           "igdbId": 26914,
           "steamAppId": 466130,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake completo con los finales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Admite mando y teclado, con ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Remake con el mismo planteamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 20951,
@@ -73,7 +148,28 @@
           "kind": "remake",
           "year": 2022,
           "igdbId": 26914,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Incluye los ajustes de versiones posteriores."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Remake con el mismo planteamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena fluidez y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 20952,
@@ -81,7 +177,28 @@
           "kind": "remake",
           "year": 2022,
           "igdbId": 26914,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Incluye los ajustes de versiones posteriores."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Remake con el mismo planteamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta, con cargas más lentas."
+            }
+          ]
         },
         {
           "id": 20953,
@@ -89,7 +206,31 @@
           "kind": "remake",
           "year": 2022,
           "igdbId": 26914,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Remake con el mismo planteamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y tasa de cuadros más baja."
+            }
+          ],
+          "codes": [
+            "010076601839C000"
+          ]
         }
       ],
       "images": {
@@ -135,8 +276,31 @@
           "igdbId": 55020,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co27ge.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2610,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9570,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 42373,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

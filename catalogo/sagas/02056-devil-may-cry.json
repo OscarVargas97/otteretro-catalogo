@@ -3,7 +3,7 @@
   "name": "Devil May Cry",
   "igdbKind": "franchise",
   "igdbId": 834,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2005,
       "igdbId": 136,
       "popularity": 395,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "19942",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Devil May Cry 3: Dante's Awakening",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Devil May Cry 3: Dante's Awakening",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Devil May Cry 3: Dante's Awakening is a prequel to the first Devil May Cry. The game plays very differently from its predecessors, as it puts much more emphasis on style rather than simple demon slaying. As such, combat is much more intense and faster than before. An all-new Style system that allows you to select your fighting style has also been incorporated.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Devil May Cry 3: Dante's Awakening es una precuela del primer Devil May Cry. El juego se juega de forma muy distinta a sus predecesores, ya que pone mucho más énfasis en el estilo que en la simple caza de demonios. Por ello, los combates son mucho más intensos y rápidos que antes. También se ha incorporado un sistema de Estilo totalmente nuevo que permite elegir el estilo de combate.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -185,8 +203,14 @@
       "year": 2012,
       "igdbId": 222654,
       "popularity": 52,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "58825",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Devil May Cry",
@@ -197,6 +221,18 @@
           "field": "original_name",
           "value": "Devil May Cry",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An HD remaster of Devil May Cry, first made available in \"Devil May Cry HD Collection.\"\n\nIn the first installment of the Devil May Cry series, the player controls Dante as he faces off against the resurrected Demon Emperor, Mundus. The game introduces Dante's abilities, like Devil Trigger which transforms him into a demon, swordplay, gun-slinging, and stylish combos, all of which have become a staple of the series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Remasterización en HD de Devil May Cry, disponible originalmente en «Devil May Cry HD Collection».\n\nEn la primera entrega de la serie Devil May Cry, el jugador controla a Dante mientras se enfrenta al Emperador Demonio resucitado, Mundus. El juego presenta las habilidades de Dante, como el Devil Trigger, que lo transforma en demonio, el manejo de la espada, el uso de pistolas y los combos con estilo, todos ellos elementos característicos de la serie.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -253,7 +289,10 @@
           "kind": "remaster",
           "year": 2019,
           "igdbId": 222654,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100E8000D5B8000"
+          ]
         },
         {
           "id": 81095,
@@ -261,12 +300,40 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 134,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50358",
+            "SLES-50358-P",
+            "SLPM-65038",
+            "SLPM-66502",
+            "SLPM-67502",
+            "SLPM-74230",
+            "SLUS-20216",
+            "SLUS-20216GH",
+            "SLUS-20216P3"
+          ]
         }
       ],
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5tkk.jpg"
-      }
+      },
+      "ports": [
+        {
+          "id": 656,
+          "platform": "ps2",
+          "project": "dmc-recomp",
+          "kind": "recomp",
+          "toolchain": "PS2Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Gui-Tora/dmc-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 23329,
@@ -278,6 +345,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58831",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Devil May Cry 2",
           "source": "igdb",
@@ -287,6 +360,18 @@
           "field": "original_name",
           "value": "Devil May Cry 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An HD remaster of Devil May Cry 2, first made available in \"Devil May Cry HD Collection.\"\n\nDevil May Cry 2 takes place many years after the first game. This installment introduces the ability to run along walls, the Rain Storm ability, and others, giving Dante even more freedom to defeat enemies in style. You can also play as the new character, Lucia, who uses speed as a weapon against enemies, as opposed to Dante who relies on power. The bonus mode, Bloody Palace, also makes its first appearance here.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Remasterización en HD de Devil May Cry 2, disponible originalmente en «Devil May Cry HD Collection».\n\nDevil May Cry 2 transcurre muchos años después del primer juego. Esta entrega introduce la capacidad de correr por las paredes, la habilidad Rain Storm y otras, dando a Dante aún más libertad para derrotar enemigos con estilo. También puedes jugar con el nuevo personaje, Lucia, que usa la velocidad como arma contra los enemigos, a diferencia de Dante, que depende de la potencia. El modo bonus, Bloody Palace, también aparece por primera vez aquí.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -343,7 +428,10 @@
           "kind": "remaster",
           "year": 2019,
           "igdbId": 222655,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01007CF00D5BA000"
+          ]
         },
         {
           "id": 81144,
@@ -351,7 +439,39 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 135,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCCS-40002",
+            "SCCS-40002-0",
+            "SCCS-40003",
+            "SCCS-40003-1",
+            "SLES-82011",
+            "SLES-82011-0",
+            "SLES-82012",
+            "SLES-82012-1",
+            "SLKA-25012",
+            "SLKA-25012-0",
+            "SLKA-25013",
+            "SLKA-25013-1",
+            "SLPM-61037",
+            "SLPM-61043",
+            "SLPM-65232",
+            "SLPM-65232-0",
+            "SLPM-65233",
+            "SLPM-65233-1",
+            "SLUS-20484",
+            "SLUS-20484-0",
+            "SLUS-20484GH",
+            "SLUS-20484GH-0",
+            "SLUS-20484P3",
+            "SLUS-20484P3-0",
+            "SLUS-20627",
+            "SLUS-20627-1",
+            "SLUS-20627GH",
+            "SLUS-20627GH-1",
+            "SLUS-20627P3",
+            "SLUS-20627P3-1"
+          ]
         }
       ],
       "images": {
@@ -368,6 +488,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100058",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Devil May Cry 4",
           "source": "igdb",
@@ -377,6 +503,18 @@
           "field": "original_name",
           "value": "Devil May Cry 4",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Devil May Cry 4 is the second sequel to the original Devil May Cry game. It immerses the player in a gothic supernatural world, where a new protagonist clashes with a familiar hero. As the new leading man, Nero, players will unleash incredible attacks and non-stop combos using a unique new gameplay mechanic, his powerful \"Devil Bringer\" arm. With the advanced graphical capabilities of the PC, high definition visuals and intricate detail come to life as players explore new and exotic locales. Dynamic action and undeniable style combine with explosive fighting options and a gripping story to produce the incomparable experience that only a Devil May Cry game can deliver.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Devil May Cry 4 es la segunda secuela del juego original Devil May Cry. Sumerge al jugador en un mundo sobrenatural de corte gótico, donde un nuevo protagonista choca con un héroe conocido. Como nuevo protagonista, Nero desatará ataques increíbles y combos sin fin gracias a una mecánica de juego única: su poderoso brazo «Devil Bringer». Con las capacidades gráficas avanzadas de PC, los visuales en alta definición y el detalle minucioso cobran vida mientras los jugadores exploran lugares nuevos y exóticos. La acción dinámica y el estilo innegable se combinan con opciones de combate explosivas y una historia absorbente para ofrecer la experiencia incomparable que solo un juego de Devil May Cry puede brindar.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -393,7 +531,39 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 112,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Buen combate, sin extras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "720p/60 en PS3, cargas."
+            }
+          ],
+          "codes": [
+            "BLAS-50040",
+            "BLES-00186",
+            "BLES-00186/E",
+            "BLJM-55010",
+            "BLJM-55017",
+            "BLJM-60056",
+            "BLKS-20053",
+            "BLUS-30092",
+            "BLUS-30092GH"
+          ]
         },
         {
           "id": 94204,
@@ -402,7 +572,28 @@
           "year": 2008,
           "igdbId": 112,
           "steamAppId": 45700,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Alta resolución."
+            }
+          ]
         },
         {
           "id": 94205,
@@ -410,7 +601,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 112,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "720p/60."
+            }
+          ]
         },
         {
           "id": 100057,
@@ -418,7 +630,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 20022,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade Vergil, Trish, Lady y modos nuevos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando y personajes jugables extra."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene el original con añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p/60."
+            }
+          ]
         },
         {
           "id": 100058,
@@ -427,7 +660,28 @@
           "year": 2015,
           "igdbId": 20022,
           "steamAppId": 329050,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade Vergil, Trish, Lady y modos nuevos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, ajustes completos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene el original con añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "1080p+/60 fps."
+            }
+          ]
         },
         {
           "id": 100059,
@@ -435,9 +689,35 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 20022,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade Vergil, Trish, Lady y modos nuevos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene el original con añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p/60."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/de4f29f26066e58bcb22da33eadd69bb.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/7815a62bc723a1c2884807eefd6640c5.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a6b8deb7798e7532ade2a8934477d3ce.png"
+      }
     },
     {
       "id": 39666,
@@ -449,6 +729,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94813",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "DmC: Devil May Cry",
           "source": "igdb",
@@ -458,6 +744,18 @@
           "field": "original_name",
           "value": "DmC: Devil May Cry",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "DmC: Devil May Cry is the fifth game in the hack-and-slash third-person action series and the first not largely developed by Capcom. This title is a reimagining of the series, with the same protagonist Dante, but set in an alternate universe. The Dante in this game is very different from before, doing away with the trademark white hair and altering the main character as well as the game's tone with a much more Western influence. The gameplay is still largely identical as Dante engages many opponents with a fast fighting style, stringing together combos and hits in quick succession.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "DmC: Devil May Cry es la quinta entrega de la serie de acción en tercera persona de hack-and-slash y la primera que no fue desarrollada en gran parte por Capcom. Este título es una reimaginación de la serie, con el mismo protagonista, Dante, pero ambientada en un universo alternativo. El Dante de este juego es muy distinto al de antes: no tiene el característico pelo blanco y cambia tanto al protagonista como el tono del juego, con una influencia occidental mucho más marcada. La jugabilidad sigue siendo en gran medida la misma, ya que Dante enfrenta a muchos oponentes con un estilo de combate rápido, encadenando combos y golpes en sucesión veloz.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -474,7 +772,13 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1254,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01698",
+            "BLJM-60502",
+            "BLKS-20411",
+            "BLUS-30723"
+          ]
         },
         {
           "id": 94645,
@@ -509,7 +813,12 @@
           "igdbId": 20869,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8f9b3e314e064139921b5c1789d73f50.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/029a28219b3580d8496e73f1f16fc60c.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/8eeaabfc288f5918418dab1c7d300e4c.png"
+      }
     },
     {
       "id": 42481,
@@ -518,8 +827,14 @@
       "year": 2019,
       "igdbId": 76253,
       "popularity": 577,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "101356",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Devil May Cry 5",
@@ -530,6 +845,18 @@
           "field": "original_name",
           "value": "Devil May Cry 5",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Devil May Cry 5 is a brand-new entry in the legendary over-the-top action series Devil May Cry. The game features three playable characters, each with a radically different stylish combat play style as they take on the city overrun with demons. Developed with Capcom’s in-house proprietary RE engine, the series continues to achieve new heights in fidelity with graphics that utilize photorealistic character designs and stunning lighting and environmental effects.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Devil May Cry 5 es una entrega totalmente nueva de la legendaria serie de acción exagerada Devil May Cry. El juego cuenta con tres personajes jugables, cada uno con un estilo de combate radicalmente distinto, mientras se enfrentan a una ciudad invadida por demonios. Desarrollada con el motor propietario de Capcom, el RE Engine, la serie alcanza nuevas cotas de fidelidad, con gráficos que emplean diseños de personajes fotorrealistas e impresionantes efectos de iluminación y entorno.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -546,7 +873,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 76253,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "4K en Pro, 60 fps."
+            }
+          ]
         },
         {
           "id": 101355,
@@ -554,7 +902,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 76253,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento, sin verificar a fondo."
+            }
+          ]
         },
         {
           "id": 101356,
@@ -563,7 +932,28 @@
           "year": 2019,
           "igdbId": 76253,
           "steamAppId": 601150,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, opciones completas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fps ajustables."
+            }
+          ]
         },
         {
           "id": 101357,
@@ -571,9 +961,35 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 76253,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "4K en X, 60 fps."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/84bac0d19371a626d1ec02e402b1496c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4f513f68a7732df8db6b106ba6565073.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9ffbf4fed04bdeefe759ecd02af8ee82.png"
+      }
     },
     {
       "id": 49232,
@@ -597,6 +1013,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The smash-hit stylish action game DMC4 is back and better than ever, boasting new playable characters and game modes! Alongside this special edition game, this bundle not only includes all unlockable modes, but three extra characters and two additional costumes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡El exitoso juego de acción con estilo DMC4 regresa mejor que nunca, con nuevos personajes jugables y modos de juego! Junto con esta edición especial del juego, este paquete incluye no solo todos los modos desbloqueables, sino también tres personajes adicionales y dos trajes extra.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -612,8 +1040,128 @@
           "igdbId": 82385,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/ze8huqkmh8g3jchqk83l.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 663,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8484,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 39507,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 23328,
+          "reason": "2012"
+        },
+        {
+          "position": 4,
+          "gameId": 23329,
+          "reason": "2012"
+        },
+        {
+          "position": 5,
+          "gameId": 39666,
+          "reason": "2013"
+        },
+        {
+          "position": 6,
+          "gameId": 49232,
+          "reason": "2016"
+        },
+        {
+          "position": 7,
+          "gameId": 42481,
+          "reason": "2019"
+        }
+      ]
+    },
+    {
+      "id": 3917,
+      "kind": "story",
+      "rationale": "DMC3 es una precuela, así que va primero. DmC es un reinicio con otra continuidad, y el bundle de DMC4 repite un juego que ya está en la lista.",
+      "sources": "[{\"title\":\"Devil May Cry (Wikipedia)\",\"url\":\"https://en.wikipedia.org/wiki/Devil_May_Cry\"}]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8484,
+          "recommendedVersionId": 19940,
+          "reason": "Precuela y origen de Dante y Vergil. Se elige la HD Collection."
+        },
+        {
+          "position": 2,
+          "gameId": 23328,
+          "recommendedVersionId": 58822,
+          "reason": "Es el primer caso de Dante como cazador. Versión HD remaster."
+        },
+        {
+          "position": 3,
+          "gameId": 23329,
+          "recommendedVersionId": 58828,
+          "reason": "Continúa la historia del primero. Versión HD remaster."
+        },
+        {
+          "position": 4,
+          "gameId": 39507,
+          "recommendedVersionId": 100058,
+          "reason": "Introduce a Nero. La Special Edition añade personajes."
+        },
+        {
+          "position": 5,
+          "gameId": 42481,
+          "recommendedVersionId": 101356,
+          "reason": "Cierra la historia principal. Versión PC."
+        }
+      ]
+    },
+    {
+      "id": 3918,
+      "kind": "community",
+      "rationale": "La comunidad recomienda empezar por DMC3, o por DMC1 si se quiere seguir el orden de lanzamiento. DMC2 se omite por su mala calidad, y DmC es opcional por ser un reinicio.",
+      "sources": "[{\"title\":\"Devil May Cry (Wikipedia)\",\"url\":\"https://en.wikipedia.org/wiki/Devil_May_Cry\"}]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8484,
+          "recommendedVersionId": 19940,
+          "reason": "Es el mejor punto de entrada y tiene el mejor combate de la etapa clásica. Se recomienda la HD Collection."
+        },
+        {
+          "position": 2,
+          "gameId": 23328,
+          "recommendedVersionId": 58822,
+          "reason": "Es opcional pero aporta contexto. Versión HD remaster."
+        },
+        {
+          "position": 3,
+          "gameId": 39507,
+          "recommendedVersionId": 100058,
+          "reason": "Se juega mejor con Special Edition, que añade a Vergil, Lady y Trish."
+        },
+        {
+          "position": 4,
+          "gameId": 42481,
+          "recommendedVersionId": 101356,
+          "reason": "Es el juego más pulido y tiene un resumen de la historia. Versión PC."
+        }
+      ]
+    }
+  ]
 }

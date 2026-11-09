@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "41668",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Past Within",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Past Within",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Past Within is the new co-op experience from Rusty Lake! Play together with someone you deem trustworthy: one in The Past, the other in The Future. Observe and communicate what you see around you. Solve the puzzles and uncover Albert Vanderboom’s plan.",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 147340,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01007010157EC000"
+          ]
         }
       ],
       "images": {
@@ -104,7 +119,12 @@
           "steamAppId": 435120,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/248210163abcc765cc4b37cf971ef792.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/62306523b3c77c077b2938f0d6ab91f5.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/10a5ab2db37feedfdeaab192ead4ac0e.png"
+      }
     },
     {
       "id": 43764,
@@ -144,8 +164,38 @@
           "steamAppId": 532110,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ef29d115ef661659677e4dc28fb1a57b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2a3500f75bcde2b99b4999f34133a1d2.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/842424a1d0595b76ec4fa03c46e8d755.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1775,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43758,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 43764,
+          "reason": "2016"
+        },
+        {
+          "position": 3,
+          "gameId": 15949,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99314",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Toy Soldiers: War Chest",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Toy Soldiers: War Chest",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Toy Soldiers: War Chest is similar to the previous games where players prevent enemy units from reaching the toybox by building and upgrading turrets. In War Chest, turrets can be improved by upgrading armor, fire rate and damage separately. The enemy AI is improved as well. For example destroying a bridge will cause ground units to take a different path to the toybox. Certain units have the ability to heal nearby units and some will focus on destroying any placed turrets.\n\nBarrages and playable units from Toy Soldiers: Cold War returns with a few changes. Instead of earning killstreaks or destroying a specially marked enemy unit, the game uses a bar that fills up when killing enemy units. When the bar is filled to a certain amount, a special ability can used to call in barrages or spawn a hero unit such a zeppelin that performs a bombing run.\n\nThe game features 4 highly customizable armies (8 in Hall of Fame Edition). Players can choose which turrets to deploy, barrages and modify the hero's arsenal. As the game progresses, new customization options will become available.\n\nThe Hall of Fame Edition features four additional licensed armies based on fictional characters. This includes Duke and Cobra Commander from G.I. Joe, Ezio Auditore da Firenze from Assassin's Creed and He-Man from Masters of the Universe. The characters can be purchased separately or as a bundle on the standard version.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 15187,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c2935e951f0d8cb1a086dbc7cba400f4.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/8441c6ab9e88ee3764bd79b6d72269a1.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/47a3893cc405396a5c30d91320572d6d.png"
+      }
     },
     {
       "id": 48400,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "41657",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Toy Soldiers",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Toy Soldiers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "One of the top 10 best-selling Xbox LIVE Arcade games of all time, Toy Soldiers is a unique, action-packed strategy-based game in which you command antique WWI toy soldiers vying for control of the trench-filled battlefields of Europe.",
           "source": "igdb",
           "manual": false
         },
@@ -148,7 +177,11 @@
           "igdbId": 9450,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3309d2e67b72ee1805667f64e83e4d2b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/99633779c3dd93ef767128b84420266f.png"
+      }
     },
     {
       "id": 48418,
@@ -160,6 +193,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114860",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Toy Soldiers: Cold War",
           "source": "igdb",
@@ -168,6 +207,12 @@
         {
           "field": "original_name",
           "value": "Toy Soldiers: Cold War",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Cold War ignites when '80s era action toys come alive and wage war!\nToy Soldiers: Cold War delivers hours of intense combat combined with addictive action strategy gameplay. Superpowers collide in this playful homage to '80s action toys and films. Command the powerful Cold War arsenals of the USA or USSR armies!",
           "source": "igdb",
           "manual": false
         },
@@ -195,8 +240,36 @@
           "igdbId": 9485,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8w0t.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1774,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48400,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 48418,
+          "reason": "2011"
+        },
+        {
+          "position": 3,
+          "gameId": 41710,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "117047",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Beautiful Sakura: Volleyball Club",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Beautiful Sakura: Volleyball Club",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A visual novel focused on mental health and personal identity.",
           "source": "igdb",
           "manual": false
         },
@@ -66,7 +78,10 @@
           "igdbId": 284861,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9a5s.jpg"
+      }
     },
     {
       "id": 49942,
@@ -78,6 +93,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "117748",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Beautiful Sakura: Volleyball Club 2",
           "source": "igdb",
@@ -86,6 +107,12 @@
         {
           "field": "original_name",
           "value": "Beautiful Sakura: Volleyball Club 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "After walking away from volleyball, Kaito returns to the court with a burning desire to chase his dream once more. This time, he is serious about becoming a professional player.",
           "source": "igdb",
           "manual": false
         },
@@ -121,8 +148,31 @@
           "igdbId": 396046,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobtxj.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3520,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 49688,
+          "reason": "2024"
+        },
+        {
+          "position": 2,
+          "gameId": 49942,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

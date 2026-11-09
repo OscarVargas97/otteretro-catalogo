@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8006",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wario Land: Super Mario Land 3",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Wario Land: Super Mario Land 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Hey! Things are really cookin' on Kitchen Island! Wario's got a scheme to steal the pirates' treasure so he can have his very own castle! You help Wario get the treasure by smashing into the the magic pots! Each pot changes him into Dragon Wario, Bull Wario, or Jet Wario! With each change comes new powers!\n\nDozens of enemies try to stop Wario, but you have the power to beat them!\n\nBe the bad guy!\n\nExplore the many exciting levels of Kitchen Island!\n\nBattery-backed memory saves your progress for many hours of fun!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1072,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Añade puntos de restauración y mejor pantalla."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con pantalla más nítida."
+            }
+          ]
         },
         {
           "id": 8007,
@@ -56,14 +89,51 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 1072,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original sin cambios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles originales; guardado solo por batería en el juego."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla monocroma de GB, sin mejoras."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/7532e11ff40e244cedde99f723f5e882.png",
         "hero": "https://cdn2.steamgriddb.com/hero/0315243c468b238bf15c230c774c9791.png",
         "logo": "https://cdn2.steamgriddb.com/logo/b91a76b0b2fa7ce160212f53f3d2edba.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1257,
+          "platform": "gb",
+          "project": "Bigodao",
+          "kind": "recomp",
+          "toolchain": "gb-recompiled",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/GABRIELNNK/Bigodao",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "SameBoy"
+        }
+      ]
     }
   ],
   "routes": []

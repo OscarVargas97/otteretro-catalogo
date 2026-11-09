@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99004",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "H1Z1",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "H1Z1",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Offering a total sandbox experience, H1Z1 is a zombie survival MMO set in a post-apocalyptic world where thousands of players must strategically align with friends and against enemies in order to survive the worldwide infection.\n\nDaybreak Games announced in early 2016 that H1Z1 has been split into two games: H1Z1: King of the Kill & H1Z1: Just Survive.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,11 @@
           "igdbId": 6188,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/adf6b233b03c2f707db97875d54c8758.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/4768620a673136ae86da54a779b72766.png"
+      }
     },
     {
       "id": 41953,
@@ -70,6 +86,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100001",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Z1: Battle Royale",
           "source": "igdb",
@@ -78,6 +100,12 @@
         {
           "field": "original_name",
           "value": "Z1: Battle Royale",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Z1: Battle Royale is a fast-paced, competitive battle royale shooter. Parachute in and search for weapons, ammo, vehicles and supplies to stay alive. As toxic gas compresses the map, develop a winning strategy and prepare for the final showdown. Z1: Battle Royale is available for free on Windows PC and PlayStation 4.",
           "source": "igdb",
           "manual": false
         },
@@ -106,8 +134,33 @@
           "steamAppId": 433850,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1e354676d0564f1dd4544aed5d2623e1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5a701cc3fffb499de07d9e1b18343bcb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/508cb643c0ea0e2f6451bba7aa5cfb64.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3389,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41608,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 41953,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

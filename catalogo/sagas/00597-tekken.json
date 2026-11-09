@@ -3,7 +3,7 @@
   "name": "Tekken",
   "igdbKind": "franchise",
   "igdbId": 891,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -35,6 +35,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Tekken Advance is a fighting game released for the Game Boy Advance. It is non-canonical to the Tekken storyline, but follows the events of Tekken 3. It uses sprites based on Tekken 3's 3D models for its characters and was the first Tekken game to be released on a Nintendo platform.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken Advance es un juego de lucha lanzado para Game Boy Advance. No es canónico dentro de la historia de Tekken, pero sigue los acontecimientos de Tekken 3. Usa sprites basados en los modelos 3D de Tekken 3 para sus personajes, y fue el primer juego de Tekken lanzado en una plataforma de Nintendo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -48,7 +60,12 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 1240,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ATKE",
+            "ATKJ",
+            "ATKP"
+          ]
         }
       ],
       "images": {
@@ -67,6 +84,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87234",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tekken 6",
           "source": "igdb",
@@ -76,6 +99,18 @@
           "field": "original_name",
           "value": "Tekken 6",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tekken 6 is a fighting game developed and published by Bandai Namco Games. It is the seventh main installment in the Tekken franchise. It was released in Japanese arcades on November 26, 2007 as the first game running on the PlayStation 3-based System 357 arcade board. The game received an update, subtitled Bloodline Rebellion, a year later.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken 6 es un juego de lucha desarrollado y publicado por Bandai Namco Games. Es la séptima entrega principal de la franquicia Tekken. Se lanzó en salones recreativos japoneses el 26 de noviembre de 2007 como el primer juego que funcionaba en la placa arcade System 357, basada en PlayStation 3. El juego recibió una actualización, subtitulada Bloodline Rebellion, un año después.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -92,7 +127,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1237,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Es Tekken 3D Prime, con otro plantel y menos modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control sencillo en 3DS, con efecto 3D."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Es otro juego de la serie."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Fluida, pero con visuales recortados."
+            }
+          ]
         },
         {
           "id": 87234,
@@ -100,7 +156,37 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 1236,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con Scenario Campaign y todos los modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles de mando precisos y online."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p y 60 fps, con algunas cargas."
+            }
+          ],
+          "codes": [
+            "BLES-00635",
+            "BLES-00635/E",
+            "BLES-00635/P",
+            "BLJS-10067",
+            "BLJS-50017",
+            "BLUS-30359",
+            "BLUS-30359GH"
+          ]
         },
         {
           "id": 87235,
@@ -108,7 +194,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 1236,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que PS3."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control, aunque el D-pad de 360 es peor para luchar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Igual de fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Parecido a PS3, con instalación opcional."
+            }
+          ]
         },
         {
           "id": 87236,
@@ -116,7 +223,35 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 195868,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Es la versión de PSP, con menos modos y escenarios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control limitado por los botones de PSP."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación de bolsillo recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y gráficos recortados."
+            }
+          ],
+          "codes": [
+            "ULAS-42214",
+            "ULES-01376",
+            "ULJS-19054",
+            "ULKS-46235",
+            "ULUS-10466"
+          ]
         },
         {
           "id": 87267,
@@ -124,7 +259,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 272551,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo si es el port o emulación de PS3."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando moderno; el online puede variar."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución, si hay emulación o streaming."
+            }
+          ]
         },
         {
           "id": 87268,
@@ -132,14 +288,66 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 272551,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo, igual que PS3."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "DualSense y comodidades modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen mejorada, con estabilidad dependiente del método."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/5ac473a513f5ab85e56d4f4efeb85379.png",
         "hero": "https://cdn2.steamgriddb.com/hero/a89cf525e1d9f04d16ce31165e139a4b.png",
         "logo": "https://cdn2.steamgriddb.com/logo/e620e32a8fb45a92d9e0cd2d018bd932.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1166,
+          "platform": "x360",
+          "project": "tekken6-recomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mahmoud-mess/tekken6-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1167,
+          "platform": "x360",
+          "project": "Tekken6-native-online",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Ekspym/Tekken6-native-online",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
+      ]
     },
     {
       "id": 8197,
@@ -148,8 +356,14 @@
       "year": 2012,
       "igdbId": 1238,
       "popularity": 121,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "15913",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Tekken Tag Tournament 2",
@@ -160,6 +374,18 @@
           "field": "original_name",
           "value": "Tekken Tag Tournament 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The console release added new characters and stages.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La versión para consola añadió nuevos personajes y escenarios.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -176,7 +402,16 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1238,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50506",
+            "BLAS-50666",
+            "BLES-01702",
+            "BLES-01702/E",
+            "BLJS-10187",
+            "BLJS-50033",
+            "BLUS-31002"
+          ]
         },
         {
           "id": 15914,
@@ -199,7 +434,53 @@
         "cover": "https://cdn2.steamgriddb.com/grid/39c39eb6c34b4b3799fd38a0509dd76b.png",
         "hero": "https://cdn2.steamgriddb.com/hero/48aedb8880cab8c45637abc7493ecddd.png",
         "logo": "https://cdn2.steamgriddb.com/logo/2b243b78ebe97b9313128868aff49aeb.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1168,
+          "platform": "x360",
+          "project": "TTT2-Recomp",
+          "kind": "recomp",
+          "toolchain": "XenonRecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/thatcalikid760/TTT2-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1169,
+          "platform": "wiiu",
+          "project": "Tekken-Tag-2-Ultimate-Edition",
+          "kind": "recomp",
+          "toolchain": "cafe-recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Petexy/Tekken-Tag-2-Ultimate-Edition",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Cemu"
+        },
+        {
+          "id": 1170,
+          "platform": "x360",
+          "project": "tekken-tag-tournament-2-pc",
+          "kind": "recomp",
+          "toolchain": "XenonRecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/shihabal3amri/tekken-tag-tournament-2-pc",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
+      ]
     },
     {
       "id": 26169,
@@ -211,6 +492,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "65400",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tekken",
           "source": "igdb",
@@ -220,6 +507,18 @@
           "field": "original_name",
           "value": "Tekken",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tekken is a fighting game and the first entry in what would become the Tekken series and franchise. It was one of the earliest 3D-animated fighting games, incorporating many of the concepts from Sega's Virtua Fighter. Unlike traditional fighting games that require inputting commands as rapidly and accurately as possible, Tekken slows the action down by emphasizing rhythm, strategy, and deception over speed.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken es un juego de lucha y el primer título de lo que más tarde sería la serie y franquicia Tekken. Fue uno de los primeros juegos de lucha con animación 3D e incorporó muchos de los conceptos de Virtua Fighter, de Sega. A diferencia de los juegos de lucha tradicionales, que exigen introducir comandos con la mayor rapidez y precisión posibles, Tekken ralentiza la acción y pone el énfasis en el ritmo, la estrategia y el engaño por encima de la velocidad.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -236,7 +535,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 304400,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más limpia."
+            }
+          ]
         },
         {
           "id": 65401,
@@ -244,7 +564,34 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 304400,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ],
+          "codes": [
+            "SCES-00005",
+            "SLPS-00040",
+            "SLPS-91020",
+            "SLUS-00006"
+          ]
         },
         {
           "id": 65402,
@@ -252,7 +599,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 304400,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 114128,
@@ -260,7 +628,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 408158,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "No verificado, probable re-lanzamiento."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Por confirmar."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Probable escalado."
+            }
+          ]
         },
         {
           "id": 114129,
@@ -268,7 +657,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 408158,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "No verificado, probable re-lanzamiento."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Por confirmar."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Probable escalado."
+            }
+          ]
         },
         {
           "id": 114130,
@@ -276,7 +686,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 408158,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "No verificado, probable re-lanzamiento."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Por confirmar."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Probable escalado."
+            }
+          ]
         }
       ],
       "images": {
@@ -295,6 +726,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "65473",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tekken 2",
           "source": "igdb",
@@ -304,6 +741,18 @@
           "field": "original_name",
           "value": "Tekken 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tekken 2 is the second game in the Tekken series, it made various improvements over its predecessor in terms of graphics and features. All the characters from Tekken returned and eight new characters were added to the character roster along with new moves and combos.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken 2 es el segundo juego de la serie Tekken; mejoró varios aspectos de su predecesor en gráficos y características. Regresaron todos los personajes de Tekken y se añadieron ocho nuevos personajes a la lista, junto con nuevos movimientos y combos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -320,7 +769,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 305775,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación básica."
+            }
+          ]
         },
         {
           "id": 65414,
@@ -328,7 +798,35 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 305775,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ],
+          "codes": [
+            "SCES-00255",
+            "SCES-00255/T",
+            "SLPS-00300",
+            "SLPS-91055",
+            "SLUS-00213"
+          ]
         },
         {
           "id": 65415,
@@ -336,7 +834,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 305775,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 65472,
@@ -344,7 +863,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 215952,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más limpia."
+            }
+          ]
         },
         {
           "id": 65473,
@@ -352,7 +892,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 215952,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Imagen limpia, cargas rápidas."
+            }
+          ]
         }
       ],
       "images": {
@@ -368,8 +929,14 @@
       "year": 1997,
       "igdbId": 1244,
       "popularity": 561,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "65477",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Tekken 3",
@@ -380,6 +947,18 @@
           "field": "original_name",
           "value": "Tekken 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tekken 3 is the third installment in the Tekken series. It maintains the same core fighting system as its predecessors but brings many improvements, such as significantly more detailed graphics and animations, fifteen new characters added to the game's roster, more modern music and faster gameplay.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken 3 es la tercera entrega de la serie Tekken. Mantiene el mismo sistema de combate básico de sus predecesores, pero incorpora muchas mejoras, como gráficos y animaciones mucho más detallados, quince nuevos personajes en la lista, música más moderna y una jugabilidad más rápida.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -396,7 +975,36 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 306134,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos de PS1."
+            }
+          ],
+          "codes": [
+            "SCES-01237",
+            "SCPS-45213",
+            "SCPS-45215",
+            "SLPS-01300",
+            "SLPS-91202",
+            "SLUS-00402"
+          ]
         },
         {
           "id": 65476,
@@ -404,7 +1012,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 369999,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más limpia."
+            }
+          ]
         },
         {
           "id": 65477,
@@ -412,14 +1041,78 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 369999,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Imagen limpia, cargas rápidas."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a85032c0a15f3c7048a8077595f2ee66.png",
         "hero": "https://cdn2.steamgriddb.com/hero/6abdec2606bd68762a72dc1a4038d1ff.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/05a4459d3d5c309f5ab86521d1d2bb69.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 415,
+          "platform": "ps1",
+          "project": "openkumite",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/openkumite/openkumite",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 1163,
+          "platform": "ps1",
+          "project": "Tekken3Recompiled",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/FishB0nes98/Tekken3Recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 1164,
+          "platform": "ps1",
+          "project": "Tekken3Recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/fabioap-cpu/Tekken3Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 32535,
@@ -428,7 +1121,7 @@
       "year": 2004,
       "igdbId": 393526,
       "popularity": 0,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -440,6 +1133,18 @@
           "field": "original_name",
           "value": "Tekken 5",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "After the death of Heihachi Mishima, the fifth King of Iron Fist Tournament began. Tekken 5 lets you join this battle as one of many characters, including three fighters who are new to the Tekken series. This time, the environments feature destructible objects and dangerous obstacles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tras la muerte de Heihachi Mishima, comenzó el quinto torneo del Puño de Hierro. En Tekken 5 puedes unirte a esta batalla como uno de los muchos personajes, entre ellos tres luchadores nuevos en la serie. Esta vez, los escenarios presentan objetos destructibles y obstáculos peligrosos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -456,7 +1161,23 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 1246,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCAJ-20125",
+            "SCAJ-20126",
+            "SCES-53202",
+            "SCES-53202-ANZ/P",
+            "SCES-53202/ANZ",
+            "SCES-53202/P",
+            "SCES-53202/P/GER",
+            "SCES-53202/P/GER2",
+            "SCKA-20049",
+            "SCKA-20081",
+            "SLPS-25510",
+            "SLPS-73223",
+            "SLUS-21059",
+            "SLUS-21059GH"
+          ]
         }
       ],
       "images": {
@@ -487,6 +1208,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "As a covert operative of the CIA, Nina Williams enters an underground fighting tournament to crack Kometa, a shadowy underworld organization. Functioning as the \"sweeper\" of her cell, Nina finds herself tracking a stolen high-tech weapon through a variety of locales to reveal a conspiracy on a global scale. Nina must now face a multitude of deadly enemies, as well as her own past, in order to save the world.\n\n-Control Nina with an intuitive 360 degree combat system\n-Wield a variety of weapons including handguns, sniper rifles, swords and tonfas\n-Burst organs and shatter bones with Nina's Critical Strike\n-Deliver Nina's signature moves outside of the fighting ring",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Como agente encubierta de la CIA, Nina Williams entra en un torneo de lucha clandestino para desarticular a Kometa, una oscura organización criminal. Como «barredora» de su célula, Nina sigue la pista de un arma de alta tecnología robada a través de diversos escenarios, hasta desenmascarar una conspiración a escala mundial. Ahora Nina debe enfrentarse a una multitud de enemigos mortales, así como a su propio pasado, para salvar el mundo.\n\n- Controla a Nina con un sistema de combate intuitivo de 360 grados\n- Empuña diversas armas, como pistolas, rifles de francotirador, espadas y tonfas\n- Revienta órganos y destroza huesos con el Golpe Crítico de Nina\n- Realiza los movimientos característicos de Nina fuera del cuadrilátero",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -500,7 +1233,12 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 1241,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCAJ-20116",
+            "SLPM-60257",
+            "SLUS-20934"
+          ]
         }
       ],
       "images": {
@@ -516,8 +1254,14 @@
       "year": 1999,
       "igdbId": 1249,
       "popularity": 131,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "85455",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Tekken Tag Tournament",
@@ -528,6 +1272,18 @@
           "field": "original_name",
           "value": "Tekken Tag Tournament",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tekken Tag Tournament is an update of Tekken 3 and is the fourth installment in the popular Tekken fighting game series. It is not canonical to the Tekken storyline however.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken Tag Tournament es una actualización de Tekken 3 y la cuarta entrega de la popular serie de juegos de lucha Tekken. Sin embargo, no forma parte del canon de la historia de Tekken.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -544,7 +1300,18 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 289037,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-50001",
+            "SCES-50001-P",
+            "SCPS-56002",
+            "SLPS-20015",
+            "SLPS-71501",
+            "SLPS-73104",
+            "SLUS-20001",
+            "SLUS-20001GH",
+            "SLUS-20001P3"
+          ]
         },
         {
           "id": 85455,
@@ -554,7 +1321,12 @@
           "igdbId": 143748,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b9285ab4c80f0e0d5c090dda9fb3014c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/94f6d7e04a4d452035300f18b984988c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ed383ec94720d62a939bfb6bdd98f50c.png"
+      }
     },
     {
       "id": 35032,
@@ -578,6 +1350,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Tekken 4 marks the return of Namco's premier fighting franchise, Tekken. This version features enhanced graphics, gameplay mechanics, and fearsome fighters. Newcomers engage old favorites in interactive, multileveled arenas. The addition of walls, terrain effects, position changes, and enhanced sidestepping will force you to adjust your fighting strategy. Expanded game modes such as Training, Team Battle and the new Tekken Force provide the player with a deeper gameplay experience.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken 4 marca el regreso de la principal franquicia de lucha de Namco, Tekken. Esta versión incluye gráficos y mecánicas de juego mejorados, además de luchadores temibles. Los recién llegados se enfrentan a viejos conocidos en arenas interactivas de varios niveles. La incorporación de muros, efectos del terreno, cambios de posición y un esquive lateral mejorado obligará a ajustar la estrategia de combate. Los modos de juego ampliados, como Entrenamiento, Batalla por equipos y la nueva Tekken Force, ofrecen al jugador una experiencia más profunda.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -591,9 +1375,32 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 393182,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-50878",
+            "SCES-50878-ANZ-P",
+            "SCES-50878-P",
+            "SCES-50878/GER-P",
+            "SCES-50878/GER-T",
+            "SCES-50878/P",
+            "SCKA-20045",
+            "SCPS-55017",
+            "SCPS-56006",
+            "SLPS-25100",
+            "SLPS-73209",
+            "SLPS-73414",
+            "SLUS-20328",
+            "SLUS-20328GH",
+            "SLUS-20328P3",
+            "SLUS-28012"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1e85d0d9a89f4bd0de7b22c2cf5ff906.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/cd28198825c7b15514b85396f1b0f7bf.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c5c1bda1194f9423d744e0ef67df94ee.png"
+      }
     },
     {
       "id": 35450,
@@ -617,13 +1424,30 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Tekken: Dark Resurrection is an updated version of Tekken 5 developed by Namco and released in arcades in 2005. It adds new characters, balance adjustments, and expanded customization options. The game retains the series’ 3D fighting mechanics, where players compete in one-on-one battles using a variety of moves and combos. It was later released on the PlayStation Portable and PlayStation 3 with additional content and online features.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken: Dark Resurrection es una versión actualizada de Tekken 5, desarrollada por Namco y lanzada en salones recreativos en 2005. Añade nuevos personajes, ajustes de equilibrio y más opciones de personalización. El juego conserva la mecánica de lucha 3D de la serie, en la que los jugadores compiten en combates uno contra uno con una variedad de movimientos y combos. Más tarde se lanzó para PlayStation Portable y PlayStation 3 con contenido adicional y funciones en línea.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
           "manual": false
         }
       ],
-      "versions": []
+      "versions": [],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/73b913b5cbc6f99f5b53a8e91d282ed1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/455d7016a72187cc9afc309ed4a142a5.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9c8829fdb4d307688931e738a0d4caa6.png"
+      }
     },
     {
       "id": 35451,
@@ -635,6 +1459,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86290",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tekken: Dark Resurrection",
           "source": "igdb",
@@ -644,6 +1474,18 @@
           "field": "original_name",
           "value": "Tekken: Dark Resurrection",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tekken: Dark Resurrection on PSP is a portable version of the arcade update of Tekken 5, released in 2006. It includes the full roster, additional characters, and customization options from the arcade version. The game features multiple modes, including Arcade, Story, Practice, and Ghost Battle. It also supports local multiplayer and character data sharing via wireless connectivity.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken: Dark Resurrection en PSP es una versión portátil de la actualización de recreativa de Tekken 5, lanzada en 2006. Incluye la lista completa de personajes, personajes adicionales y opciones de personalización de la versión recreativa. El juego ofrece varios modos, como Arcade, Historia, Práctica y Batalla fantasma. También admite multijugador local y el intercambio de datos de personajes mediante conexión inalámbrica.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -660,7 +1502,40 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 24181,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo de PSP con todos los modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles en PSP, con la palanca pequeña y sin extras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja de 480x272 y cargas de UMD."
+            }
+          ],
+          "codes": [
+            "UCAS-40164",
+            "UCES-00356",
+            "UCES-00356/9620587",
+            "UCES-00356/ANZ",
+            "UCES-00356/P",
+            "UCKS-45027",
+            "UCKS-45069",
+            "ULJS-00048",
+            "ULUS-10139",
+            "ULUS-10139GH"
+          ]
         },
         {
           "id": 86289,
@@ -668,7 +1543,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 389439,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando de PS4 y posibles trofeos o estados guardados."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con mejoras de presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación reescalada, mucho más nítida."
+            }
+          ]
         },
         {
           "id": 86290,
@@ -676,9 +1572,35 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 389439,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mando DualSense y comodidades modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con mejoras de presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor imagen y cargas más rápidas."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2043e7432dfc8838fa7f9a2086cea077.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/7ffd85d93a3e4de5c490d304ccd9f864.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/63140d7268e35585c9508acac3025477.png"
+      }
     },
     {
       "id": 39709,
@@ -702,6 +1624,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The PlayStation 3 version of Tekken 5: Dark Resurrection. A few gameplay elements have been changed, including the addition of Jinpachi Mishima as a playable character after beating him in Arcade Mode. Stages from the original Tekken 5 can also be unlocked after completing the PS3 version five times.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La versión de PlayStation 3 de Tekken 5: Dark Resurrection. Se han modificado algunos elementos de jugabilidad, entre ellos la incorporación de Jinpachi Mishima como personaje jugable tras derrotarlo en el modo Arcade. Los escenarios de Tekken 5 original también se pueden desbloquear después de completar la versión de PS3 cinco veces.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -717,7 +1651,10 @@
           "igdbId": 1234,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co46rk.jpg"
+      }
     },
     {
       "id": 39710,
@@ -741,13 +1678,30 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Tekken 6: Bloodline Rebellion is an update to Tekken 6. It features new characters, stages, items and customization options. It also gives the game a balance update from characters and items. It was released to Japanese arcades on December 18, 2008, and the console version of Tekken 6 is based on this arcade version.\n\nThis new version features two new characters: Alisa Bosconovitch, an android with jet wings and spinning limbs who was built in the image of Dr. Bosconovitch's deceased daughter, and Lars Alexandersson, an unknown descendant of Heihachi Mishima and leader of a rebellious Tekken Force faction fighting Jin's tyranny. A number of new items and customization options are featured in this expansion. The game also features all-new CG character art, just as there was a change in art from Tekken 5 to Tekken 5: Dark Resurrection. Upgrade kits were also available for owners of original Tekken 6 machines.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken 6: Bloodline Rebellion es una actualización de Tekken 6. Incluye nuevos personajes, escenarios, objetos y opciones de personalización, además de un ajuste de equilibrio de personajes y objetos. Se lanzó en salones recreativos japoneses el 18 de diciembre de 2008, y la versión para consola de Tekken 6 se basa en esta versión recreativa.\n\nEsta nueva versión añade dos personajes: Alisa Bosconovitch, un androide con alas de propulsión y extremidades giratorias que fue construido a imagen de la hija fallecida del doctor Bosconovitch, y Lars Alexandersson, un descendiente desconocido de Heihachi Mishima y líder de una facción rebelde de la Tekken Force que combate la tiranía de Jin. La expansión incluye varios objetos nuevos y opciones de personalización. El juego también presenta arte de personajes en CG completamente nuevo, al igual que hubo un cambio de arte entre Tekken 5 y Tekken 5: Dark Resurrection. También había kits de actualización disponibles para los propietarios de las máquinas originales de Tekken 6.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
           "manual": false
         }
       ],
-      "versions": []
+      "versions": [],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b3e506c8b7c807b81f216e694b8d10f4.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/787ad52ba90a842d3424ca4601433e42.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a2a2efaf165ec1e10fbd5ec19be4bd93.png"
+      }
     },
     {
       "id": 39711,
@@ -771,13 +1725,28 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This upgrade features not only 2vs2 battles, but also 1vs1, and as an entirely new addition, 1vs2 battles",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Esta actualización incluye no solo combates 2 contra 2, sino también 1 contra 1 y, como novedad, combates 1 contra 2.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
           "manual": false
         }
       ],
-      "versions": []
+      "versions": [],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobq8i.jpg"
+      }
     },
     {
       "id": 40051,
@@ -801,6 +1770,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "One of the best-selling franchises of all time is now available for FREE! Jump on as one of your favorite characters and pummel your way to victory! For the first time in the franchise, level up your characters! Break through walls, break through the floor, and ultimately break your opponent.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Una de las franquicias más vendidas de todos los tiempos ya está disponible GRATIS! Únete como uno de tus personajes favoritos y machaca a tu rival hasta la victoria. Por primera vez en la franquicia, sube de nivel a tus personajes. ¡Rompe las paredes, atraviesa el suelo y, en definitiva, quiebra a tu oponente!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -816,7 +1797,12 @@
           "igdbId": 7660,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c17dba68c8efe618e84bbf0a788ac0df.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/421f51ad0b692460d1055a774c1b4e82.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2b8b61938f23cd510ef41c3837d579e0.png"
+      }
     },
     {
       "id": 40727,
@@ -855,7 +1841,12 @@
           "igdbId": 143749,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/04a816d36989f7ed276f4ddcbda8b17b.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/44de1ac866cd2e2e52a7278d8d90de5d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c11460753efc28b08a2288b1e6c62297.png"
+      }
     },
     {
       "id": 41655,
@@ -867,6 +1858,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99160",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tekken 7: Fated Retribution",
           "source": "igdb",
@@ -876,6 +1873,18 @@
           "field": "original_name",
           "value": "Tekken 7: Fated Retribution",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tekken 7: Fated Retribution is an update to Tekken 7 arcade version.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken 7: Fated Retribution es una actualización de la versión arcade de Tekken 7.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -911,7 +1920,12 @@
           "igdbId": 7498,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/698c42c967a68312997479c5bde6cb28.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/25daeb9b3072e9c53f66a2196a92a011.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/413333e31c0413282b0ce35f00e51d2c.png"
+      }
     },
     {
       "id": 43806,
@@ -919,9 +1933,15 @@
       "originalName": "Tekken 8",
       "year": 2024,
       "igdbId": 217590,
-      "popularity": 133,
-      "iconic": false,
+      "popularity": 134,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "103598",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Tekken 8",
@@ -932,6 +1952,18 @@
           "field": "original_name",
           "value": "Tekken 8",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tekken 8 is a 3D fighting game and the eighth main installment in the Tekken series, notable for being the first entry to debut on home consoles rather than in arcades. Built on Unreal Engine 5, the game introduces the \"Heat\" system, which rewards aggressive play by granting enhanced moves and chip damage while in an activated state, and replaces the prior \"Screw\" mechanic with \"Tornado\" hits. The game features crossplay across PlayStation 5, Windows, and Xbox Series X/S. Additional modes include Arcade Quest, an online lobby with customizable avatars and tournament play, and a cinematic story mode. It is the final Tekken game involving longtime series director Katsuhiro Harada before his departure from Bandai Namco.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tekken 8 es un juego de lucha en 3D y la octava entrega principal de la serie Tekken, destacada por ser la primera en debutar en consolas domésticas en lugar de en los salones recreativos. Desarrollado con Unreal Engine 5, el juego introduce el sistema «Heat», que premia el juego agresivo otorgando movimientos mejorados y daño por chip mientras el personaje está en estado activado, y reemplaza la mecánica anterior «Screw» por golpes «Tornado». El juego ofrece juego cruzado entre PlayStation 5, Windows y Xbox Series X/S. Entre los modos adicionales se incluyen Arcade Quest, un lobby en línea con avatares personalizables y juego de torneos, y un modo historia cinematográfico. Es el último juego de Tekken en el que participa el director de la serie desde hace mucho tiempo, Katsuhiro Harada, antes de su salida de Bandai Namco.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -967,8 +1999,202 @@
           "igdbId": 217590,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a9283100ad06971a29f5382f6ab25ea4.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/ee2388e8921f4635f4c1d83d3d75bc16.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c1b1ca04d0e345d20e9287be1b6d7e01.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 259,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26169,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 26173,
+          "reason": "1995"
+        },
+        {
+          "position": 3,
+          "gameId": 26233,
+          "reason": "1997"
+        },
+        {
+          "position": 4,
+          "gameId": 34689,
+          "reason": "1999"
+        },
+        {
+          "position": 5,
+          "gameId": 1533,
+          "reason": "2001"
+        },
+        {
+          "position": 6,
+          "gameId": 35032,
+          "reason": "2001"
+        },
+        {
+          "position": 7,
+          "gameId": 32535,
+          "reason": "2004"
+        },
+        {
+          "position": 8,
+          "gameId": 32540,
+          "reason": "2005"
+        },
+        {
+          "position": 9,
+          "gameId": 35450,
+          "reason": "2005"
+        },
+        {
+          "position": 10,
+          "gameId": 35451,
+          "reason": "2006"
+        },
+        {
+          "position": 11,
+          "gameId": 39709,
+          "reason": "2006"
+        },
+        {
+          "position": 12,
+          "gameId": 4098,
+          "reason": "2007"
+        },
+        {
+          "position": 13,
+          "gameId": 39710,
+          "reason": "2008"
+        },
+        {
+          "position": 14,
+          "gameId": 40727,
+          "reason": "2011"
+        },
+        {
+          "position": 15,
+          "gameId": 8197,
+          "reason": "2012"
+        },
+        {
+          "position": 16,
+          "gameId": 39711,
+          "reason": "2012"
+        },
+        {
+          "position": 17,
+          "gameId": 40051,
+          "reason": "2013"
+        },
+        {
+          "position": 18,
+          "gameId": 41655,
+          "reason": "2016"
+        },
+        {
+          "position": 19,
+          "gameId": 43806,
+          "reason": "2024"
+        }
+      ]
+    },
+    {
+      "id": 3731,
+      "kind": "story",
+      "rationale": "La saga Mishima sigue una historia continua desde el primer torneo hasta Tekken 8. Tag Tournament, Advance, Death by Degrees y los spin-offs quedan fuera por no ser canon principal.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26169,
+          "recommendedVersionId": 65401,
+          "reason": "Inicio del conflicto Heihachi-Kazuya; versión de PS1 como original."
+        },
+        {
+          "position": 2,
+          "gameId": 26173,
+          "recommendedVersionId": 65414,
+          "reason": "Continúa con Kazuya y el segundo torneo; original de PS1."
+        },
+        {
+          "position": 3,
+          "gameId": 26233,
+          "recommendedVersionId": 65434,
+          "reason": "Introduce a Jin y enlaza con la siguiente generación; original de PS1."
+        },
+        {
+          "position": 4,
+          "gameId": 35032,
+          "recommendedVersionId": 85532,
+          "reason": "Sigue el conflicto entre Heihachi, Kazuya y Jin; única versión disponible."
+        },
+        {
+          "position": 5,
+          "gameId": 32535,
+          "recommendedVersionId": 81425,
+          "reason": "Jin contra Jinpachi y Devil; es la base de Dark Resurrection."
+        },
+        {
+          "position": 6,
+          "gameId": 4098,
+          "recommendedVersionId": 87234,
+          "reason": "Jin y la guerra global con la G Corporation; versión de PS3."
+        },
+        {
+          "position": 7,
+          "gameId": 41655,
+          "recommendedVersionId": 99159,
+          "reason": "Cierra la rivalidad Heihachi-Kazuya; versión de PS4 por estabilidad."
+        },
+        {
+          "position": 8,
+          "gameId": 43806,
+          "recommendedVersionId": 103599,
+          "reason": "Continuación directa de la historia de Jin y Kazuya; versión de PS5."
+        }
+      ]
+    },
+    {
+      "id": 3732,
+      "kind": "community",
+      "rationale": "La comunidad suele recomendar empezar por un clásico accesible (Tekken 3) y saltar a los juegos modernos, porque Tekken 7 incluye resúmenes de la historia. Se omiten los primeros juegos y los spin-offs.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26233,
+          "recommendedVersionId": 65434,
+          "reason": "Clásico que muestra la esencia de la saga; original de PS1."
+        },
+        {
+          "position": 2,
+          "gameId": 41655,
+          "recommendedVersionId": 99159,
+          "reason": "Buen modo historia con resumen de la trama y jugabilidad moderna; versión de PS4."
+        },
+        {
+          "position": 3,
+          "gameId": 43806,
+          "recommendedVersionId": 103599,
+          "reason": "Entrega actual con más jugadores en línea; versión de PS5."
+        }
+      ]
+    }
+  ]
 }

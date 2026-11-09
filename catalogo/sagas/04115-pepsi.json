@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Pepsiman is an action video game developed and published by KID for the PlayStation. It was released in Japan in March 1999, and is based on American carbonated soft drink Pepsi's superhero mascot with the same name, and focuses the player on avoiding obstacles by running, dashing, and jumping, while Pepsiman automatically runs forward through each of the game's stages.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -48,14 +54,47 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 79500,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01762"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/140d937f9bdccb215ebae69d4d3f77c5.png",
         "hero": "https://cdn2.steamgriddb.com/hero/4500e4037738e13c0c18db508e18d483.png",
         "logo": "https://cdn2.steamgriddb.com/logo/d29086e1236e44097e5f4eb2238d9d3e.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 967,
+          "platform": "ps1",
+          "project": "PepsiMan",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Cybertwip/PepsiMan",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 1317,
+          "platform": "ps1",
+          "project": "Pepsiman Recompiled",
+          "kind": "recomp",
+          "toolchain": "PSXRecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://heldgames.com/guides/ps1-recompilation-explained",
+          "source": "heldgames.com",
+          "added": "2026-10-14",
+          "emulator": "DuckStation"
+        }
+      ]
     }
   ],
   "routes": []

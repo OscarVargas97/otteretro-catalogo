@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An otome game for DS by Namco Bandai.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 66964,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BKTJ"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A sequel to the first Kimi ni Todoke game for the Nintendo DS.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -90,7 +105,10 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 202897,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "TKTJ"
+          ]
         }
       ],
       "images": {
@@ -98,5 +116,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2870,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17121,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 18626,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

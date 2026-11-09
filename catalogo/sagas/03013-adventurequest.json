@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "40382",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "AdventureQuest 8-Bit: Dungeons & DoomKnights",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "AdventureQuest 8-Bit: Dungeons & DoomKnights",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The AdventureQuest franchise reimagined as a NES game. Funded on Kickstarter in 2019, this \"Zeldavania\" released on the Nintendo Entertainment System in 2021.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2024,
           "igdbId": 145362,
           "steamAppId": 2702960,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado o mando, fácil de usar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y escalable."
+            }
+          ]
         },
         {
           "id": 40383,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 145362,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Estilo NES retro, sin mejoras modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Depende del medio o emulación."
+            }
+          ]
         },
         {
           "id": 40384,
@@ -65,7 +119,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 145362,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ],
+          "codes": [
+            "010020A0181E6000"
+          ]
         }
       ],
       "images": {
@@ -82,6 +160,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86366",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Adventures to Go!",
           "source": "igdb",
@@ -90,6 +174,12 @@
         {
           "field": "original_name",
           "value": "Adventures to Go!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In this hilarious and innovative strategy role-playing game, players take control of Finn Courtland and his band of misfits in their quest for fame and riches. Along the way, they just might have to save the world from the evil Arbitus and his band of demons. It'll take brains as well as brawn to win the day, though; the grid-based combat challenges players to think strategically and make the best use of each character's unique skills and abilities. The strategy doesn't end there, though! Players can spend their hard-earned cash to set up the game's\nrandomized dungeons to their liking; choose the terrain, the size of the dungeon, and the monsters that you'll face. Play it safe, or take on bigger risks for even greater rewards! Your adventure is in your hands!",
           "source": "igdb",
           "manual": false
         },
@@ -117,8 +207,33 @@
           "igdbId": 46016,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7e61ea2776f127dcd3aa48a4f9eb4568.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c51f9e0913ad03d359dd2d313d6ea82d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2d140718297b693fcfaa8aee36d73f90.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2825,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35511,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 15377,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

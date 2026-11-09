@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63164",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Jet de GO! Let's Go By Airliner",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Jet de GO! Let's Go By Airliner",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Jet de GO! is a spin-off from the famous Densha de GO! series by Taito. Instead of trains, this title focus exclusively on flying planes. Players can take off and land with a Jetstream 31 turboprop, a mid-range Boeing 767 or a long haul Boeing 747. The game modes include Flight mode, Cruise mode and Lesson mode.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,12 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 61334,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-86323",
+            "SLPM-86324",
+            "SLPM-86812"
+          ]
         }
       ],
       "images": {
@@ -81,6 +98,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84464",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Jet de GO! 2: Let's Go by Airliner",
           "source": "igdb",
@@ -89,6 +112,12 @@
         {
           "field": "original_name",
           "value": "Jet de GO! 2: Let's Go by Airliner",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Jet de GO! 2 (translated 'Let's go by Airliner! 2') is an airliner simulation featuring passenger jets of Japan Air Lines (JAL). It is the direct sequel of the first Jet de GO! game that was released for PS2 and Windows.",
           "source": "igdb",
           "manual": false
         },
@@ -116,7 +145,10 @@
           "igdbId": 98002,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2z3v.jpg"
+      }
     },
     {
       "id": 35466,
@@ -140,6 +172,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Jet de GO! Pocket is the third installment of Taito's flight simulation series for Sony consoles and the first one to be released on PSP. The first title in the series, Jet de GO!, was released on PlayStation in 2000 and its sequel, simply titled \"Jet de GO! 2\", was released on PlayStation 2 in 2002.\n\nJust like its predecessors, the game allows the player to take the captain's chair in the cockpit of a commercial airliner making flights to and from major Japanese cities such as Tokyo, Osaka and Sapporo. The game features a variety of airplanes such as the Boeing B747, B777 and B767, different weather and daytime conditions and flight plans. The player can choose between three game modes: Flight, Trial and Replay.\n\nSince the game is endorsed by Japan Airlines, a real world airline, it is not actually possible to \"crash\" an airplane. Collisions with the ground are shown in a simplified fashion where the plane simply stops once it touches down, resulting in a \"Game Over\" screen.\n\nAlthough the game was only released in Japan, it features partially English menus.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -153,10 +191,42 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 59001,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "UCAS-40175",
+            "ULJM-05272"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2z3x.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1896,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25184,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 34346,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 35466,
+          "reason": "2005"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

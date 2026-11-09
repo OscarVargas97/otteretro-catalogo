@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61551",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Actua Golf 3",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Actua Golf 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You've got the perfect clubs, courses and caddy -- now you must hone your skills, judge the weather conditions and drive, chip and putt your way to victory. This classic, startlingly accurate, golf simulation will have you treading the fairways time and time again.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2015,
           "igdbId": 34501,
           "steamAppId": 399180,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido equivalente, sin cambios relevantes conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado en disco y control con ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Es otra edición de la época, con ligeras diferencias visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y cargas rápidas en PC moderno."
+            }
+          ]
         },
         {
           "id": 61552,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 34501,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo de consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Memory card y controles de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución, gráficos poligonales básicos y cargas lentas."
+            }
+          ],
+          "codes": [
+            "SLES-01042"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62020",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fox Sports Golf '99",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Fox Sports Golf '99",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fox Sports Golf 99 features six 3D courses for up to four players to compete on: Forest Downs, Orange Rock, Sunny Green Country Club, Kiawah Island (site of the 1997 World Cup of Golf), Oxfordshire in England (Benson & Hedges International Open), and Carnoustie Golf Links (home of the 1999 British Open). Players can also practice their pitching and putting techniques or work on their long game by having a whack at the driving range. A traditional triple click interface is used to execute each shot, and two commentators will call the action as you progress through the links: choose legendary announcer Peter Allis, Fox Sports Net's John Walls, or have both analyzing your game.",
           "source": "igdb",
           "manual": false
         },
@@ -109,7 +178,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 44941,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-00636"
+          ]
         }
       ],
       "images": {
@@ -117,5 +189,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3080,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24524,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 24327,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

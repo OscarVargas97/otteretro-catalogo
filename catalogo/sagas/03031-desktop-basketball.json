@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "41046",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Desktop Basketball",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Desktop Basketball",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Enjoy basketball with easy to learn controls! Enjoy all kinds of stages! From factories to amusement parks! Customize your team and dunk on your friends!",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2022,
           "igdbId": 147851,
           "steamAppId": 2134430,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Muy fluido."
+            }
+          ]
         },
         {
           "id": 41047,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147851,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Bueno para partidas rápidas en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ],
+          "codes": [
+            "010019601144E000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "70381",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Desktop Basketball 2",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Desktop Basketball 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Invigorating basketball everyone can enjoy together! Prepare for the next evolution in dunking!",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +177,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 262880,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01005C501C51E000"
+          ]
         }
       ],
       "images": {
@@ -116,5 +188,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2830,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 15600,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 28294,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

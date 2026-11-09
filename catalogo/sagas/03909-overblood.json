@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61173",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "OverBlood",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "OverBlood",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Overblood is a 3D action-adventure video game developed by Riverhillsoft and released in 1997 for the PlayStation console. The game takes place in the future, where the player takes on the role of a man named Raz Karcy who wakes up in a cryogenic pod with no memory of who he is or how he got there. As Raz, the player must explore the futuristic environments, solve puzzles, and fight enemies in order to uncover his past and the secrets of the facility he finds himself in. The game features a mix of third-person exploration and combat, and also includes survival elements such as managing hunger and oxygen levels. Despite its initial commercial failure, Overblood has gained a cult following over the years for its unique gameplay and intriguing story.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 19999,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Emulación con guardado rápido y mando moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Se ve más limpio en TV y carga algo más rápido."
+            }
+          ]
         },
         {
           "id": 61174,
@@ -56,7 +89,37 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 19999,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Solo guardado en memory card y controles de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa de PS1, tiempos de carga originales."
+            }
+          ],
+          "codes": [
+            "SLES-00768",
+            "SLES-00769",
+            "SLES-00770",
+            "SLPM-86641",
+            "SLPS-00392",
+            "SLPS-91032",
+            "SLUS-00464"
+          ]
         },
         {
           "id": 61175,
@@ -64,7 +127,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 19999,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y portátil, pero con menos botones."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña; imagen estirada y más borrosa."
+            }
+          ]
         }
       ],
       "images": {
@@ -95,6 +179,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "OverBlood 2 is an action-adventure video game developed by Riverhillsoft for the PlayStation. It is the sequel to the game Overblood, released on the same platform. The game was published in Japan by Riverhillsoft on July 23, 1998, while a European version saw release from Evolution games on April 13, 2001.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -108,7 +198,25 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 20000,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-01879",
+            "SLES-01879-0",
+            "SLES-01880",
+            "SLES-01880-0",
+            "SLES-02187",
+            "SLES-02187-0",
+            "SLES-11879",
+            "SLES-11879-1",
+            "SLES-11880",
+            "SLES-11880-1",
+            "SLES-12187",
+            "SLES-12187-1",
+            "SLPS-01261",
+            "SLPS-01261-0",
+            "SLPS-01262",
+            "SLPS-01262-1"
+          ]
         }
       ],
       "images": {
@@ -118,5 +226,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3072,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24118,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 24232,
+          "reason": "1998"
+        }
+      ]
+    }
+  ]
 }

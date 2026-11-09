@@ -3,7 +3,7 @@
   "name": "Counter-Strike",
   "igdbKind": "collection",
   "igdbId": 58,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -22,6 +22,12 @@
       "popularity": 774,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "27681",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Counter-Strike",
@@ -49,7 +55,28 @@
           "year": 2000,
           "igdbId": 241,
           "steamAppId": 10,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mapas y armas clásicos con comunidad enorme."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Disparo preciso, de la vieja escuela."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos antiguos pero ligero y estable."
+            }
+          ]
         },
         {
           "id": 27983,
@@ -58,14 +85,49 @@
           "year": 2004,
           "igdbId": 307,
           "steamAppId": 240,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mapas conocidos con motor nuevo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Física y disparo distintos al clásico."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia el feeling del juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos y física modernizados."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/68addc821b387ab5cc91c846b627a586.png",
         "hero": "https://cdn2.steamgriddb.com/hero/cbbfd74d4cb5aaf24c9e4a10d9f056d9.png",
         "logo": "https://cdn2.steamgriddb.com/logo/0d9b074d348389d106c694d60ae8d7e1.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 68,
+          "platform": "pc",
+          "project": "cs16-client",
+          "kind": "remake",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/FWGS/cs16-client",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     },
     {
       "id": 11554,
@@ -122,6 +184,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "27684",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Counter-Strike: Condition Zero",
           "source": "igdb",
@@ -131,6 +199,18 @@
           "field": "original_name",
           "value": "Counter-Strike: Condition Zero",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "With its extensive Tour of Duty campaign, a near-limitless number of skirmish modes, updates and new content for Counter-Strike's award-winning multiplayer game play, plus over 12 bonus single player missions, Counter-Strike: Condition Zero is a tremendous offering of single and multiplayer content.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Con su extensa campaña Tour of Duty, una cantidad casi ilimitada de modos de escaramuza, actualizaciones y contenido nuevo para el galardonado multijugador de Counter-Strike, además de más de 12 misiones adicionales para un jugador, Counter-Strike: Condition Zero es una oferta enorme de contenido para un jugador y para multijugador.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -225,8 +305,14 @@
       "year": 2012,
       "igdbId": 1372,
       "popularity": 1353,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "94607",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Counter-Strike: Global Offensive",
@@ -237,6 +323,18 @@
           "field": "original_name",
           "value": "Counter-Strike: Global Offensive",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Counter-Strike: Global Offensive is a team-based multiplayer first-person shooter developed by Valve and Hidden Path Entertainment. Two teams, Terrorists and Counter-Terrorists, compete in objective-based rounds across various game modes including bomb defusal, hostage rescue, and deathmatch. The game features an economy system where players purchase weapons and equipment at the start of each round based on performance in previous rounds. Competitive matchmaking, community servers, and a robust skin trading ecosystem support a large active player base.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Counter-Strike: Global Offensive es un shooter en primera persona por equipos desarrollado por Valve y Hidden Path Entertainment. Dos equipos, Terroristas y Antiterroristas, compiten en rondas por objetivos en varios modos de juego, como desactivación de bombas, rescate de rehenes y deathmatch. El juego incluye un sistema de economía en el que los jugadores compran armas y equipo al inicio de cada ronda según su rendimiento en las rondas anteriores. El emparejamiento competitivo, los servidores comunitarios y un robusto ecosistema de intercambio de skins sostienen una gran base de jugadores activos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -272,8 +370,48 @@
           "igdbId": 1372,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c6a8488de86eddf87c84edf4136a1126.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2b9d3bcbb8956ebb08d1a06c3eec4041.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/697782646a61d39ff18134e51fe7db85.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 985,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11553,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 11554,
+          "reason": "2004"
+        },
+        {
+          "position": 3,
+          "gameId": 11555,
+          "reason": "2004"
+        },
+        {
+          "position": 4,
+          "gameId": 39652,
+          "reason": "2012"
+        },
+        {
+          "position": 5,
+          "gameId": 11623,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

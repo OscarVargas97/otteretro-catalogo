@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98035",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Trillion: God of Destruction",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Trillion: God of Destruction",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Trillion: God of Destruction is a strategy RPG where you must train Overlords to fight Trillion a god of destruction that is eating the underworld. Trillion sleeps after eating part of the underworld giving you a chance to train. You will have 6 attempts at stopping Trillion before the underworld is gone.\n\nYou choose from one of three Overlords to train at the start. You have a set amount of time to train and prepare for the fight against trillion to defend the underworld. You can train stats, learn skills, go into a dungeon to gather items, strengthen weapons, and rest to get rid of fatigue. You can also interact with the Overlord to raise affection points, raise affection to a certain level and events related to the Overlord will occur.\n\nAffection points are also used in the battle against Trillion where they act as a buffer for your health and mana. As long as you still have affection points in the battle you will also have the option to retreat from the battle, giving up a section of the underworld for more time to train. If the Overlords health reaches 0 they will be able to activate a final death skill that could deal massive damage, seal one of Trillion's attacks, or stop Trillion's advance for a longer training period. The Overlords items, equipment, and seals will be passed on to the next Overlord you train along with a portion experience.",
           "source": "igdb",
           "manual": false
         },
@@ -57,9 +69,17 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 19445,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "PCSE-00813"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6e7e6689c365e8e26753705a97e6cdb2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1d095528ec191047c59a7fe2adab47ab.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/71ccfd73995caf5ae6801095799e5046.png"
+      }
     },
     {
       "id": 41070,
@@ -83,6 +103,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "\"Key Features:\n\n- Labyrinths of Possibility! Navigate challenging maps and puzzles in this first-person dungeon-crawler!\n- You’re a Woman, I’m a Machine! Pair your 3-person party with three different Guardians for a turn-based, dungeon-crawling battle system!\n- Advanced Robotics! Unique Guardian robots can be customized even further with different parts and crystals to enhance their abilities!\n- Elemental Enemies! Strategize attacks between your humans and Guardians and find the crack in your foe’s armor by exploiting their elemental weakness!\"",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -96,10 +122,38 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 23687,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "PCSE-00918"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/26995cf10c61b10a19875a59b00ed4c0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/eeab75fd3f68d9169cff08029796a195.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f3b60da014a40b7590b314aa817f2b95.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3373,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41059,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 41070,
+          "reason": "2015"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

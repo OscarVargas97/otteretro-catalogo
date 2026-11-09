@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "20047",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Frostpunk",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Frostpunk",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Frostpunk, the newest title from the creators of This War of Mine, is a society survival game where heat means life and every decision comes at a price. In an entirely frozen world, people develop steam-powered technology to oppose the overwhelming cold. You face the task of building the last city on Earth and securing the means necessary for your community to survive.\n\nOptimization and resource management often clash with empathy and thoughtful decision-making. While city and society management will consume most of the ruler’s time, at some point exploration of the outside world is necessary to understand its history and present state.",
           "source": "igdb",
           "manual": false
         },
@@ -117,6 +129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110618",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Frostpunk 2",
           "source": "igdb",
@@ -125,6 +143,12 @@
         {
           "field": "original_name",
           "value": "Frostpunk 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Frostpunk 2 is the sequel to the highly acclaimed, BAFTA-nominated society survival game. The age of steam has passed and now, oil leads the way as humanity’s newest salvation. However, with new threats on the horizon, the future of the city looks even grimmer than before.",
           "source": "igdb",
           "manual": false
         },
@@ -161,8 +185,33 @@
           "igdbId": 164290,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b502fe804c637a4186c238baa709d320.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/53015ad3b6bbbf80a4d107e6ef603b1e.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9aa35341db40cc1d288aa89ca2cca156.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2588,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9232,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 46714,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

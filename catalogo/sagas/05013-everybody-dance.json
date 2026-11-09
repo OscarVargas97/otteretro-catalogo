@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Everybody Dance delivers a high-energy dance experience set to a soundtrack of 40 chart-topping party hits including Usher’s “OMG,” “Party Rock Anthem” by LMFAO, and “Barbra Streisand” by Duck Sauce, that feature the original artist’s music videos.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -48,9 +54,15 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 19997,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCUS-98365"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co60k7.jpg"
+      }
     },
     {
       "id": 40651,
@@ -74,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A third installment in the Everybody Dance series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -87,9 +105,15 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 56044,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCUS-99277"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/eich8fr6xm5braqjyra5.jpg"
+      }
     },
     {
       "id": 40823,
@@ -113,6 +137,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Everybody Dance: Digital is a free-to-play version of Everybody Dance. This version of the game contains no songs, instead packs of songs have to be downloaded from the PlayStation Store. These song packs are compatible with the original Everybody Dance as well as this version.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -128,8 +158,36 @@
           "igdbId": 336101,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocqb4.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2004,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40223,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 40651,
+          "reason": "2013"
+        },
+        {
+          "position": 3,
+          "gameId": 40823,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

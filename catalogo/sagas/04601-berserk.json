@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The second video game based on the manga Berserk. It was released by Sega-Sammy in Japan for the PlayStation 2 on October 7, 2004. Sammy licensed the game to YBM-Sisa for a Korean version, which was released at the same time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -48,9 +54,18 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 78212,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-61091",
+            "SLPM-65618",
+            "SLPM-65686",
+            "SLPM-65688"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7qq1.jpg"
+      }
     },
     {
       "id": 40348,
@@ -62,6 +77,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96583",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Berserk and the Band of the Hawk",
           "source": "igdb",
@@ -70,6 +91,12 @@
         {
           "field": "original_name",
           "value": "Berserk and the Band of the Hawk",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Behold the fierce blend of \"Warriors\" and \"Berserk\"!\n\nThe action of cutting through hundreds of enemies, fundamental to the Warriors series, is fused together with the dark and gruesome atmosphere of the world of \"Berserk\", making various heretofore unseen acts possible, such as using a giant man-sized sword to cut enemies in half, as well as smash or send them flying with the \"Slash\" and \"Smash\" actions.",
           "source": "igdb",
           "manual": false
         },
@@ -114,8 +141,33 @@
           "igdbId": 19765,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f254496470d0bf5a3fe0c973dac83c6b.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/e52da5a31de788599378924f0e639557.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/7a1d9028a78f418cb8f01909a348d9b2.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3246,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34094,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 40348,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

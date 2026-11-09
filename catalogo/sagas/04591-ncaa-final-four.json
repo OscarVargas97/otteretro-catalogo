@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "NCAA Final Four 2003",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -48,9 +54,15 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 68261,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCUS-97204"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/iakfdwso5yae1hams64n.jpg"
+      }
     },
     {
       "id": 34052,
@@ -74,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "NCAA Final Four 2004",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -87,10 +105,36 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 68304,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCUS-97278"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/260973f43693e6fc346aa2bb091720ae.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3242,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34004,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 34052,
+          "reason": "2003"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

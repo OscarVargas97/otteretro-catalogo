@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86288",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Astonishia Story",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Astonishia Story",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Astonishia Story, players embody an honorable royal knight and embark upon an epic journey to recover a stolen sacred relic that symbolizes prosperity and fortune. Players must seek the help of wizards and many other mysterious allies to succeed.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,13 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 23001,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00363",
+            "ULJM-05176",
+            "ULKS-46021",
+            "ULUS-10083"
+          ]
         },
         {
           "id": 86285,
@@ -81,9 +99,15 @@
           "kind": "remaster",
           "year": 2027,
           "igdbId": 416317,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01001C2028ED2000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocnbr.jpg"
+      }
     },
     {
       "id": 35324,
@@ -107,6 +131,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "With beautiful, high-resolution 2-D artwork, novel battle mechanics, and a classic tale of fantasy, adventure, and heroism, Crimson Gem Saga delivers the pure, classic Japanese RPG play experience PSP owners have been clamoring for since the hardware's launch. Taking full advantage of the crisp, clear PSP screen and boasting a colorful, catchy musical score, Crimson Gem Saga is a blast from the past presented just as you'd expect a modern RPG to be.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -120,10 +150,38 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 19640,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULUS-10400"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9e3d40ca9edddec28acb631c5ac6f07d.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/65c6c4d8c520d4588e798ae7fc441934.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5f6abd385d99e9f508320ab4cca07f28.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3268,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35220,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 35324,
+          "reason": "2008"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

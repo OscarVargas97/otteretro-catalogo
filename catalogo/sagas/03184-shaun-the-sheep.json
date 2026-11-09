@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The second Shaun the Sheep game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 58410,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BSUP"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Adventure game based on the kids TV show.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -90,7 +105,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 68942,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CSUE",
+            "CSUP"
+          ]
         }
       ],
       "images": {
@@ -98,5 +117,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2872,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17522,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 17128,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

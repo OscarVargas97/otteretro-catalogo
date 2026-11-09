@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "21496",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Undernauts: Labyrinth of Yomi",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Undernauts: Labyrinth of Yomi",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Escape from “Yomi” – a dungeon filled with riches – and danger.\n\nYou have been recruited into the Undernauts – a team of brave subterranean adventurers who comb the depths of a massive, monster-infested labyrinth in search of priceless resources.\n\nMake use of your powerful skills and magic items to create exits and reach the surface alive.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 25672,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido en todas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo para el dungeon crawler."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto en PS4."
+            }
+          ]
         },
         {
           "id": 21496,
@@ -57,7 +90,28 @@
           "year": 2021,
           "igdbId": 25672,
           "steamAppId": 1570510,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido en todas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, ajustes flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Igual al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fps."
+            }
+          ]
         },
         {
           "id": 21497,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 25672,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido en todas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Igual al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas rápidas en PS5."
+            }
+          ]
         },
         {
           "id": 21498,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 25672,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido en todas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Igual al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto en Xbox One."
+            }
+          ]
         },
         {
           "id": 21499,
@@ -81,7 +177,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 25672,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido en todas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Igual al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución."
+            }
+          ],
+          "codes": [
+            "010036D014A7E000"
+          ]
         }
       ],
       "images": {
@@ -111,6 +231,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Five years have passed since the underground explorer was imprisoned. The darkness that lurks in the underworld bares its fangs once again.\n\nThe targets were the students of Yomi High School.\n\nThe only way to survive in the hell they are transported to along with their classroom is\nto revive the corpses of their friends and use them as fighting forces.\n\nIt's not a choice, it's something you have to do to survive.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2026",
           "source": "igdb",
@@ -126,8 +252,31 @@
           "igdbId": 394158,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobqb7.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2623,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9726,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 38624,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

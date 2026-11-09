@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "92782",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mr. Do!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mr. Do!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mr. Do! is an arcade game created by Universal in 1982. Similar in some ways to Namco's popular Dig Dug title, Mr. Do! was also popular and saw release on a variety of home video game consoles and systems. It is the first game in the Mr. Do series, and was released both as a standalone game and as a conversion kit (released by Taito Corp.) for existing arcade cabinets. It was one of the first arcade games to be released as a conversion kit, and went on to sell 30,000 units in the United States. It was also a popular choice on the 1983 video arcade-based game show Starcade.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1991,
           "igdbId": 365697,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base con modos de la época."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles fieles, sin guardado moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla pequeña de Game Boy."
+            }
+          ]
         },
         {
           "id": 92781,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 402001,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Relanzamiento con posibles extras de colección."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y rebobinado típicos de relanzamientos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Emulación con pocos cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Escalado moderno estable."
+            }
+          ]
         },
         {
           "id": 92782,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 402001,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Relanzamiento con posibles extras de colección."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado, rebobinado y juego portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Emulación con pocos cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Escalado moderno estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -83,6 +158,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114179",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mr. Do!'s Castle",
           "source": "igdb",
@@ -91,6 +172,12 @@
         {
           "field": "original_name",
           "value": "Mr. Do!'s Castle",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mr. Do!, that king of arcade clowns, is in a bit of a bind - again! This time, a pack of pesky unicorns is trampling the bricked hallways of his castle. Help Mr. Do! rid his dwelling of these crafty, quick-changing (and deadly) creatures with the skillful swing of a hammer. Sometimes a quick clobber to the head will do it. Or maybe a well chosen brick knocked out from above. If you can't stop these critters, then break a hole in the floor to slow 'em down. It's up to you to know when to fight - or when to flee! Tension mounts as you hurry Mr. Do! through the castle's maze, grabbing keys along the way. Only when Mr. Do! has collected all the keys can he unlock the castle door, and open up an extra chance to beat these nasty critters!",
           "source": "igdb",
           "manual": false
         },
@@ -142,8 +229,31 @@
           "igdbId": 420638,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co97q1.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2459,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7529,
+          "reason": "1982"
+        },
+        {
+          "position": 2,
+          "gameId": 39171,
+          "reason": "1983"
+        }
+      ]
+    }
+  ]
 }

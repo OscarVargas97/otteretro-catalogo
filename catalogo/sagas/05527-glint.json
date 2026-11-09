@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "109281",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Glint's Trial",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Glint's Trial",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Take control of Glint, a glowing explorer on a mission through 15 pixel-perfect platforming levels filled with deadly traps and quirky enemies. Inspired by classic retro games, Glint’s Trial delivers tight controls, charming pixel art, and speedrun-ready challenges. Whether you're hopping past spikes or dodging fishes every level is a handcrafted test of reflexes and memory. Can you survive the trial and prove you're a true retro platforming master? A game developed by CraePlay and ported by GGmuks",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 356156,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coa5d0.jpg"
+      }
     },
     {
       "id": 46405,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "109792",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Glint's Revenge",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Glint's Revenge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Glint’s Revenge is a retro platformer with a bold black-and-white aesthetic, where you play as Glint, an alien armed with a blaster on a quest through 10 deadly levels packed with traps, enemies, and clever puzzles. Shoot your way past relentless foes, flip levers to unlock hidden paths, and survive a gauntlet of challenges that demand quick reflexes and sharp thinking, all wrapped in a minimalist style that makes every move and every mistake stand out. A game developed by CraePlay and ported by GGmuks.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +132,31 @@
           "igdbId": 390319,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobkzk.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3472,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46172,
+          "reason": "2025"
+        },
+        {
+          "position": 2,
+          "gameId": 46405,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42135",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Overboard!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Overboard!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "July, 1935. A murder has been committed aboard the SS Hook, eight hours out from New York.\n\nOnly one problem: you did it.\n\nCan you get away with murder?",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 151067,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01000CA014CA0000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +91,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "79523",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Expelled!",
           "source": "igdb",
@@ -84,6 +105,12 @@
         {
           "field": "original_name",
           "value": "Expelled!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A School Prefect has been pushed out of a window, and everyone's blaming YOU. Can you find the culprit - or someone to take the fall - before you get EXPELLED? Mystery with a wicked twist, from the creators of Overboard! and A Highland Song.",
           "source": "igdb",
           "manual": false
         },
@@ -110,7 +137,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 331180,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100B4C0215EE000"
+          ]
         }
       ],
       "images": {
@@ -118,5 +148,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2838,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16122,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 31831,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

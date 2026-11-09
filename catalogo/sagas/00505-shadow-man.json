@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2833",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shadow Man",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Shadow Man",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "He is coming, stalking criminals in the spirit world and the real world. A possessed man is coming, a voodoo mask in his chest and lines of power in his back. Shadow Man is coming, trailing evil from Liveside to Deadside. To stop an apocalypse. To save your soul.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,14 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3598,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NSDB",
+            "NSDD",
+            "NSDE",
+            "NSDF",
+            "NSDP"
+          ]
         },
         {
           "id": 2346,
@@ -65,7 +84,12 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3598,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00947",
+            "SLES-02281",
+            "SLUS-00895"
+          ]
         },
         {
           "id": 2830,
@@ -129,6 +153,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Mike LeRoi -- the embittered protagonist of the original Shadow Man title, is tasked yet again with saving Liveside and the parallel world of Deadside. In this third-person action-adventure, a cult of demons known only as the Grigori (and who, incidentally, have been masquerading as humans for the past 2000 years), are intent on resurrecting their master, Asmodeus. Doing so will bring about a cataclysmic end to all of humanity. As both, Mike Leroi and his alter ego Shadow Man, players must explore six worlds; each with numerous sub-locations, in their quest to prevent these vile creatures from bringing their diabolical scheme to fruition.\n\nWhen engaged in combat Mike LeRoi can attack with a bevy of armaments, running the gamut from powerful projectile-based weapons to short-range melee ones with which to bludgeon an opponent to death with. Additionally, it's possible for players to equip a different weapon in each hand, or alternatively, to equip a single, heavier two-handed weapon. When wielded by Shadow Man himself, weapons take on additional properties. A lock-on cursor can be used to target specific enemies, allowing the player to dodge and attack with consummate ease. Interspersed throughout the title are puzzles that must be solved in order for Shadow Man to advance through the worlds.\n\nThroughout the quest Mike will experience constantly changing weather and time; day changes to night, and back again in real-time, with inclement weather prevailing in many parts of the game world. Returning to the fold are Mama Nettie and Jaunty, two of Shadow Man's cohorts from the original title, while Thomas Deacon, the wheelchair-bound guardian of an ancient book the Grigori are after, makes his debut appearance. Shadow Man: 2econd Coming features mature, violent themes that touch upon subjects such as religion and voodoo. The cut-scenes feature character dialogue that is equally adult oriented.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -142,7 +172,12 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 3599,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50446",
+            "SLES-50608",
+            "SLUS-20413"
+          ]
         }
       ],
       "images": {
@@ -152,5 +187,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2155,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1252,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 32470,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

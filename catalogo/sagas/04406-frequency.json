@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Amplitude is a music/rhythm game and is the sequel to 2001's Frequency. Like it's predecessor, players play songs by hitting notes on multiple tracks representing each instrument found in the song.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 2141,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-51706",
+            "SCUS-97258"
+          ]
         }
       ],
       "images": {
@@ -79,6 +89,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "With 4 unique game modes, top hits from major bands in a variety of genres and stunning 3D graphics, Frequency stays in tune with an immersive musical gaming experience.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -92,7 +108,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 9111,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-50791",
+            "SCUS-97125"
+          ]
         }
       ],
       "images": {
@@ -102,5 +122,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3194,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32808,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 32490,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

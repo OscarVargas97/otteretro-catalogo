@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99284",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Magicka 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Magicka 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The world’s most irreverent co-op action adventure returns! To rid the world of evil, again, up to four Wizards, and their guide Vlad, will traverse Midgård armed with the next iteration of the famous Magicka dynamic spellcasting system, as players reprise their roles as the most overpowered, unpredictably funny Wizards ever known to fantasy!",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,12 @@
           "steamAppId": 238370,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b7dc6ee41927c94f00c13f182e2752ab.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/cb82282534f79f13c66d289839bbf022.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e0cba95d2999ca566c986fb793e7ecc7.png"
+      }
     },
     {
       "id": 43392,
@@ -99,8 +116,33 @@
           "steamAppId": 42910,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c5b4758c668eb928b6e33452c1650108.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0e55ef5f7354c3851d022f15f418c8b1.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/8b36cb431b5aa0d245be4e62cdb8e6b3.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3391,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43392,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 41698,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

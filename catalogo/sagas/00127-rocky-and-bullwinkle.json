@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "292",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Adventures of Rocky and Bullwinkle and Friends",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Adventures of Rocky and Bullwinkle and Friends",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Adventures of Rocky and Bullwinkle and Friends was a game released for the Nintendo Entertainment System based after the famous Rocky and Bullwinkle show. It was a platform game that took the player through seven different levels, as well as a number of mini-games.",
           "source": "igdb",
           "manual": false
         },
@@ -103,6 +115,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Based on the popular cartoon series, Rocky and Bullwinkle is an Xbox LIVE Arcade exclusive game. Rocky and Bullwinkle is a party video game compilation developed by Zen Studios for the Xbox Live Arcade service, based on characters and scenes from The Adventures of Rocky and Bullwinkle and Friends. It was released in 2008, marking the first game based on the property since Rocky & Bullwinkle's Know-It-All Quiz Game in 1998.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -118,8 +136,31 @@
           "igdbId": 209045,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/64aded4484c61b3cf9e88bc34805070e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2078,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 189,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 48922,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

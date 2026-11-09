@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "70780",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ticket to Ride",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ticket to Ride",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The cross-country train-adventure game is on its way! It's a fresh take on the iconic board game in stunning 3D. Play with friends, family and players of all ages around the world. Drive your enterprise from coast to coast and strategise as lines collide and direct routes grow!",
           "source": "igdb",
           "manual": false
         },
@@ -81,7 +93,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 267278,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010081D01E246000"
+          ]
         }
       ],
       "images": {
@@ -99,6 +114,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99180",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ticket to Ride: Classic Edition",
           "source": "igdb",
@@ -107,6 +128,12 @@
         {
           "field": "original_name",
           "value": "Ticket to Ride: Classic Edition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Connect more than cities! Set off with your friends and family to re(discover) Ticket to Ride: Classic Edition, the classic boardgame. In this railway adventure, you’ll need to be the quickest to link up your cities and reach your destinations.",
           "source": "igdb",
           "manual": false
         },
@@ -124,7 +151,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 10745,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base equivalente con la edición clásica."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con mando adaptados y cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al juego de mesa."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución y cargas cortas."
+            }
+          ]
         },
         {
           "id": 99180,
@@ -133,7 +181,28 @@
           "year": 2012,
           "igdbId": 10745,
           "steamAppId": 108200,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego base y suele tener acceso a más contenido y mapas adicionales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón rápido y cómodo, partidas en línea activas y guardado fiable."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene el diseño del juego de mesa con pocos cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y carga rápida."
+            }
+          ]
         },
         {
           "id": 99181,
@@ -141,7 +210,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 10745,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base de 2008 con el contenido original, sin extras posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funciona bien con mando, pero es más lento y con menos comodidades."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y menús dados de la era 360."
+            }
+          ]
         },
         {
           "id": 99182,
@@ -149,10 +239,56 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 10745,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base equivalente con la edición clásica."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con mando adaptados y cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al juego de mesa."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución y cargas cortas."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c7f66351c012165813d0b478effab44d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/57e65b6fc1f2e47c402deeee25bba1aa.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/c0f28bec9c6bf4e93ad31061c47686c7.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3162,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41657,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 28448,
+          "reason": "2023"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Umi no Nushi Tsuri 2 is the portable follow-up to the SNES original.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63140",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Umi no Nushi Tsuri: Takara-jima ni Mukatte",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Umi no Nushi Tsuri: Takara-jima ni Mukatte",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Umi no Nushi Tsuri: Takara-jima ni Mukatte is the sole PlayStation family entry in the Umi no Nushi Tsuri series.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +108,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 61850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Emulación de PS1 con guardado rápido y memory card virtual; comodidad en pantalla grande."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Prácticamente idéntico al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con opciones de suavizado de imagen; sin mejoras reales de resolución."
+            }
+          ]
         },
         {
           "id": 63141,
@@ -98,7 +137,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 61850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego original completo, sin cambios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles originales; guardado solo en memory card y sin guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y carga nativas de PS1; fiel pero sin mejoras y en hardware envejecido."
+            }
+          ]
         },
         {
           "id": 63142,
@@ -106,7 +166,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 61850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado rápido y portabilidad, aunque la PSP carece de segundo stick (no necesario aquí)."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Prácticamente idéntico al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta, pero en pantalla pequeña con imagen escalada."
+            }
+          ]
         }
       ],
       "images": {
@@ -114,5 +195,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2406,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6244,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 25172,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

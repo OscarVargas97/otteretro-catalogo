@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Goonies is a 1986 platform game. The main theme for most of the game is a chiptune rendition of Cyndi Lauper's \"The Goonies 'R' Good Enough\".\n\nThe game was previously released only in Japan, but was later released as an Arcade Playchoice-10 title in North America.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1986",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 4615,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5cc27a585b2e896e2dd94dc1f6cd68ff.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c7e755b5ee2e95d3d47c0ad3663ad717.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/7344044c1efdb52cf7f286dd8e3abaab.png"
+      }
     },
     {
       "id": 42645,
@@ -74,6 +85,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Goonies II features two modes of play: platform and first-person. Most of the game is played as the former as the player works through a non-linear map. The player moves Mikey to new areas of the map by ladders or doors that may act as warp zones. Several different types of zones are found in the game, each with distinct enemies, graphics and music.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1987",
           "source": "igdb",
@@ -89,8 +106,33 @@
           "igdbId": 18916,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/57809e22dc9746eda475313c4f17738e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5caa3c2369c7a3fd72fa043691402f2f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3f8b41ca55adc5ad0b56522aed203f7f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3417,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42631,
+          "reason": "1986"
+        },
+        {
+          "position": 2,
+          "gameId": 42645,
+          "reason": "1987"
+        }
+      ]
+    }
+  ]
 }

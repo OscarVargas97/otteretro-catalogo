@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50330",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "My Body Coach 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "My Body Coach 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "EU release.",
           "source": "igdb",
           "manual": false
         },
@@ -85,6 +97,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Third game in the series",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -100,8 +118,31 @@
           "igdbId": 64273,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/jzyo1ntezqpumnp1wtxw.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2980,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20392,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 48850,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

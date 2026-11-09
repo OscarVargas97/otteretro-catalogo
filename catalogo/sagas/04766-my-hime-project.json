@@ -14,6 +14,54 @@
   ],
   "games": [
     {
+      "id": 34213,
+      "nameEs": "Mai-Otome: Otome Butou Shi",
+      "originalName": "Mai-Otome: Otome Butou Shi",
+      "year": 2006,
+      "igdbId": 72650,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Mai-Otome: Otome Butou Shi",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Mai-Otome: Otome Butou Shi",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A fighting game based on the My-Hime/My-Otome anime series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2006",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 84256,
+          "platform": "ps2",
+          "kind": "original",
+          "year": 2006,
+          "igdbId": 72650,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/qvy51upcjkwrh4e3e0e2.jpg"
+      }
+    },
+    {
       "id": 35704,
       "nameEs": "Mai-Hime Bakuretsu! Fuuka Gakuen Gekitoushi?!",
       "originalName": "Mai-Hime Bakuretsu! Fuuka Gakuen Gekitoushi?!",
@@ -35,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A 3D fighting game based on the My-Hime anime series. Its story mode retells the the first 16 episodes using stills and clips from the show.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -48,9 +102,16 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 72651,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJS-00040"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/be9523766f14005a358e636cd2fc81fc.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c20d80be8816d38362a75bd62f11ddf0.png"
+      }
     },
     {
       "id": 35711,
@@ -74,6 +135,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The second 3D fighting game based on the My-Hime anime series. It adds new content and features, as well as covering the final 10 episodes in the story mode.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -87,10 +154,42 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 72652,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJS-00062"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5a19e27ac2ff080e503cd350ffc19e2e.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ea8de97469924aa3b47879df2e402d56.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1987,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34213,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 35704,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 35711,
+          "reason": "2006"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

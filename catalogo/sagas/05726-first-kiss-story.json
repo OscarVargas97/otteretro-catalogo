@@ -39,7 +39,13 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 166382,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01708",
+            "SLPS-01708-0",
+            "SLPS-01709",
+            "SLPS-01709-1"
+          ]
         }
       ],
       "images": {
@@ -68,6 +74,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "First Kiss Story II is a romance visual novel.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -83,8 +95,31 @@
           "igdbId": 125206,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8is4.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3518,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25851,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 34380,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

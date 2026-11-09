@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1308",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dr. Franken",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dr. Franken",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Being the first version that was released, the Game Boy version of the game uses a password-based saving system to save the player's progress. The game consisted of seven floors where various items and parts of Bitsy (Franky's girlfriend) were hidden. Keys and special items were needed to access additional areas to find more body parts and equipment required to resurrect Bitsy.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "remake",
           "year": 1993,
           "igdbId": 48617,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más niveles y detalle."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor control y claridad."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reinterpretación del juego de GB."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos y sonido superiores."
+            }
+          ]
         },
         {
           "id": 11686,
@@ -56,14 +89,56 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 48949,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión de Game Boy compacta."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de 1992."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla monocroma pequeña."
+            }
+          ]
         },
         {
           "id": 12017,
           "platform": "nes",
           "kind": "original",
           "igdbId": 369600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión de NES, más simple."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control básico y limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cercana en espíritu, pero distinta."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Hardware de 8 bits."
+            }
+          ]
         }
       ],
       "images": {
@@ -93,6 +168,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dr. Franken II is a side-scrolling platformer what places you in control of a Frankenstein-like character named Franky. The goal is collect different objects within different levels to put something back together. In order for Franky to recharge his health, you need to find the parts to fix the electricity machine that does it. You will also be taken to exotic locales such as Egypt and the bottom of the ocean to find pieces of Bitsy's golden tablet.\n\nLike its predecessor, there are many trap doors, monsters, and other obstacles that need to be overcome. Keys are needed to unlock new areas of the game, which can be found in the far reaches of the level.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -115,5 +196,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2115,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5891,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 5928,
+          "reason": "1993"
+        }
+      ]
+    }
+  ]
 }

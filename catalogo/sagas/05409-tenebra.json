@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Tenebra is an atmospheric puzzle game with rogue-like aesthetics. Guide the hapless protagonist to the exit. Poor guy is afraid of darkness and refuses to walk in the dark areas.\n\nMove torches around, push lights on rails, find keys to doors, light up cold braziers, pass through archways that collapse behind you, find oil barrels to make your torches brighter, squeeze through cracks in broken walls, fix broken rails with a hammer, illuminate the sensors to open the exits... do whatever it takes to get out of there!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2021",
           "source": "igdb",
@@ -50,7 +56,11 @@
           "igdbId": 333921,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5cd55f81f133affa348d282bb2f58791.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/8c240e46c189cd3d8af19150426db125.png"
+      }
     },
     {
       "id": 43625,
@@ -74,6 +84,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Similar to its prequel, Tenebra 2 is an atmospheric puzzle game with rogue-like aesthetics.\nGuide the hapless protagonist to the exit. Poor guy is afraid of darkness and refuses to walk in the dark areas.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2022",
           "source": "igdb",
@@ -89,8 +105,31 @@
           "igdbId": 307564,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9m00.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3443,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43614,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 43625,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19552",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "20XX",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "20XX",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "20XX is a co-op-friendly action platformer roguelite. Explore procedurally generated levels, collect new weapons and abilities, purchase upgrades, and crush ferocious bosses! If you are a fan of roguelikes or Mega Man, 20XX is for you!",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 17828,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100749009844000"
+          ]
         }
       ],
       "images": {
@@ -83,6 +98,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "35720",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "30XX",
           "source": "igdb",
@@ -91,6 +112,12 @@
         {
           "field": "original_name",
           "value": "30XX",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Jump, shoot, and slash your way through 30XX, the roguelike action platformer you can play with a friend! Explore lush, ever-changing worlds that mix precise platforming with fevered combat. Destroy fearsome Guardians. Master unique Powers. Rediscover the thousand years we've lost.",
           "source": "igdb",
           "manual": false
         },
@@ -109,7 +136,28 @@
           "year": 2021,
           "igdbId": 129944,
           "steamAppId": 1029210,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo tras el acceso anticipado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control preciso con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y con buena resolución."
+            }
+          ]
         },
         {
           "id": 35721,
@@ -117,7 +165,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 129944,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control y juego portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable pero con menor resolución."
+            }
+          ],
+          "codes": [
+            "010059B017F9E000"
+          ]
         }
       ],
       "images": {
@@ -127,5 +199,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3005,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9204,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 14015,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

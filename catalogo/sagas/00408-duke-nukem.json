@@ -3,7 +3,7 @@
   "name": "Duke Nukem",
   "igdbKind": "franchise",
   "igdbId": 2763,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1996,
       "igdbId": 342,
       "popularity": 451,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "19354",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Duke Nukem 3D",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Duke Nukem 3D",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Duke Nukem 3D is a first-person shooter in which players move through levels from the protagonist's viewpoint, fighting aliens and mutated foes with a varied arsenal. Its environments are highly interactive and destructible, and levels are designed in a non-linear way, letting players use air ducts, back routes, and hidden areas to explore or avoid enemies. Set across recognizable real-world style locations, the game is known for its satirical humor and references to action films and pop culture.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Duke Nukem 3D es un shooter en primera persona en el que los jugadores recorren niveles desde la perspectiva del protagonista, luchando contra alienígenas y enemigos mutados con un arsenal variado. Sus entornos son muy interactivos y destructibles, y los niveles están diseñados de forma no lineal, lo que permite usar conductos de ventilación, rutas secundarias y áreas ocultas para explorar o evitar enemigos. Ambientado en lugares de estilo reconocible del mundo real, el juego es conocido por su humor satírico y sus referencias a películas de acción y a la cultura pop.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -145,6 +163,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "He's all that stands between us and a Time-Spanning Alien invasion. He's Duke Nukem. Gaming's Greatest Action Hero. And this is his finest hour! Zero Hour! Awesome new enemies! Hilarious gags and one-liners! Same blood and guts attitude! Over 30 gut-wrenching levels set in four action-packed time eras! Incredible Teamplay and Deathmatch modes for up to 4 players! Over 20 all-new weapons of high-octane annihilation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Es lo único que se interpone entre nosotros y una invasión alienígena que abarca el tiempo. Es Duke Nukem, el mayor héroe de acción de los videojuegos. ¡Y esta es su hora más gloriosa! ¡Zero Hour! ¡Enemigos nuevos y espectaculares! ¡Gags y frases ingeniosas divertidísimas! ¡La misma actitud sangrienta y visceral! ¡Más de 30 niveles sangrientos ambientados en cuatro épocas llenas de acción! ¡Increíbles modos de trabajo en equipo y deathmatch para hasta 4 jugadores! ¡Más de 20 armas nuevas de aniquilación de alto octanaje!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -158,14 +188,35 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 8503,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NDZE",
+            "NDZF",
+            "NDZP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/c2f8cdd9152894d36edf05bf7c2e5fd4.png",
         "hero": "https://cdn2.steamgriddb.com/hero/359a6b7d32b10e400dcb805c340dfc73.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/b901ad8e8c03a6f22f40b7de9a5041be.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 692,
+          "platform": "n64",
+          "project": "DNZHRecomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sonicdcer/DNZHRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1587,
@@ -189,6 +240,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Alien scientists have plotted to take over the earth; it's Duke Nukem's job to prevent them from executing their evil science project. Duke's using his full arsenal of weapons and is teleporting to various locations around the world in order to stop the alien menaces. Most importantly, he'll make them pay!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Científicos alienígenas han tramado apoderarse de la Tierra; es trabajo de Duke Nukem impedir que lleven a cabo su malvado proyecto científico. Duke usa todo su arsenal de armas y se teletransporta a diversos lugares del mundo para detener las amenazas alienígenas. Lo más importante: ¡les hará pagar!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -202,13 +265,130 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 6393,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AD9E",
+            "AD9P"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/158885de844ae92913127bddcebfe2e1.png",
         "hero": "https://cdn2.steamgriddb.com/hero/bc61e56a64cf6926a035d4408a1bd935.png",
         "logo": "https://cdn2.steamgriddb.com/logo/d0dcf063a9c7678ef849da47e7b5c359.png"
+      }
+    },
+    {
+      "id": 6187,
+      "nameEs": "Duke Nukem II",
+      "originalName": "Duke Nukem II",
+      "year": 1993,
+      "igdbId": 956,
+      "popularity": 37,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "12093",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Duke Nukem II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Duke Nukem II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Duke Nukem is back. Captured by an alien foe in the middle of promoting his best-selling book, “Why I’m So Great”, Duke must once more defeat the forces of evil to save himself from the knowledge-stealing Rigelatins, and ultimately prove his book’s namesake. In this sequel to the 1991 high-octane, bot-busting video game, Duke Nukem, the King of Action must blast, cannon, missile and flame his way to victory - a victory that would stop the secrets of both ass-kicking and bubblegum from falling into the wrong hands.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Duke Nukem vuelve. Capturado por un enemigo alienígena en plena promoción de su éxito de ventas «Por qué soy tan grandioso», Duke debe una vez más derrotar a las fuerzas del mal para salvarse de los Rigelatinos, que roban conocimientos, y, en última instancia, demostrar que el título de su libro está justificado. En esta secuela del trepidante videojuego de destrucción de robots de 1991, Duke Nukem, el Rey de la Acción debe disparar, bombardear, lanzar misiles y prender fuego para alcanzar la victoria: una victoria que impediría que los secretos del arte de dar palizas y del chicle caigan en manos equivocadas.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1993",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 12093,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2013,
+          "igdbId": 956,
+          "steamAppId": 240180,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y buen control."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Corre bien en PC actual."
+            }
+          ]
+        },
+        {
+          "id": 12475,
+          "platform": "gb",
+          "kind": "original",
+          "year": 1999,
+          "igdbId": 52163,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Juego distinto, recortado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Muy diferente."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Monocromo."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/7ef7ee1632c48ef6e07d1cf42e02a42a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/3cec07e9ba5f5bb252d13f5f431e4bbb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/84f74ce4511e0c9531af1182fb636f0f.png"
       }
     },
     {
@@ -233,6 +413,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Earth Defense Forces attempts to ensure the Earth's continued security by monitoring the future with the help of their own time machine, but both their agent and a special team sent there have been confirmed MIA. Knowing something is wrong, General Graves sends in the famous Duke Nukem.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Las Fuerzas de Defensa de la Tierra intentan garantizar la seguridad continua del planeta vigilando el futuro con ayuda de su propia máquina del tiempo, pero tanto su agente como un equipo especial enviado allí han sido confirmados como desaparecidos en acción (MIA). Sabiendo que algo anda mal, el General Graves envía al famoso Duke Nukem.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -246,13 +438,144 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 47967,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CDNE",
+            "CDNP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/20dfd4ab86bab744886e244a610f2efc.png",
         "hero": "https://cdn2.steamgriddb.com/hero/e939d0b700e0a09fe2b8c2c9e31ef0e3.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/751aba6c2e6c52a659661171026ceef3.png"
+      }
+    },
+    {
+      "id": 23883,
+      "nameEs": "Duke Nukem: Time to Kill",
+      "originalName": "Duke Nukem: Time to Kill",
+      "year": 1998,
+      "igdbId": 4130,
+      "popularity": 29,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Duke Nukem: Time to Kill",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Duke Nukem: Time to Kill",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Duke Nukem: Time to Kill is a third-person shooter developed by n-Space for the PlayStation. This is the first 3rd person Duke Nukem game, and has levels in it for 2 player deathmatch.\n\nTravel through time in an all-new Duke Nukem frag-fest that gives you more of what you crave!\n\nMore Duke attitude!\nMore hardcore action!\nMore exploration!\nMore shooter mayhem!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Duke Nukem: Time to Kill es un shooter en tercera persona desarrollado por n-Space para PlayStation. Es el primer juego de Duke Nukem en tercera persona e incluye niveles para deathmatch de 2 jugadores.\n\nViaja en el tiempo en una nueva masacre de Duke Nukem que te da más de lo que anhelas.\n\n¡Más actitud de Duke!\n¡Más acción hardcore!\n¡Más exploración!\n¡Más caos a tiros!",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1998",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 60428,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 1998,
+          "igdbId": 4130,
+          "criteria": [],
+          "codes": [
+            "SLES-01515",
+            "SLES-01515/E",
+            "SLES-01619",
+            "SLES-03517",
+            "SLES-03518",
+            "SLUS-00583",
+            "SLUS-00583GH",
+            "SLUS-80583"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f7dcef5e0ce632bd23e63109b3ebfdaa.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/677a5147e751ae36d431ec35b8ee58aa.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/8b4a964c4c9dda615ee18ef86187d4d4.png"
+      }
+    },
+    {
+      "id": 23976,
+      "nameEs": "Duke Nukem: Land of the Babes",
+      "originalName": "Duke Nukem: Land of the Babes",
+      "year": 2000,
+      "igdbId": 8504,
+      "popularity": 12,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Duke Nukem: Land of the Babes",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Duke Nukem: Land of the Babes",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the distant future, vicious aliens rule the Earth. Only bodacious babes survive, enslaved by the hostile alien overlords. The women and the world need a hero. And there's only one man big enough for the job! Duke Nukem is back, and he's ready to settle the score!\n\n-21 action filled mission to hunt and destroy alien life\n-New weapons arsenal including: sniper riffle, flame thrower, grenade launcher and many more.\n-High tech gadgets including jetpack and infrared goggles\n-Numerous 3D cut-scenes to die for\n-In Your Face music by Static-Xtches.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En un futuro lejano, feroces alienígenas gobiernan la Tierra. Solo sobreviven las chicas despampanantes, esclavizadas por los hostiles señores alienígenas. Las mujeres y el mundo necesitan un héroe. ¡Y solo hay un hombre lo bastante grande para el trabajo! Duke Nukem ha vuelto y está listo para saldar cuentas.\n\n- 21 misiones llenas de acción para cazar y destruir la vida alienígena.\n- Nuevo arsenal de armas, con rifle de francotirador, lanzallamas, lanzagranadas y muchas más.\n- Gadgets de alta tecnología, como mochila propulsora y gafas de infrarrojos.\n- Numerosas escenas cinemáticas en 3D de morirse.\n- Música In Your Face de Static-Xtches.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2000",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 60632,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 2000,
+          "igdbId": 8504,
+          "criteria": [],
+          "codes": [
+            "SLES-03405",
+            "SLES-03440",
+            "SLUS-01002"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/21554b11c0c2fa70aa2529024a599f40.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9e30387be1bdc568dfca37927852dc94.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/bb70b0afa16c416f649bce6b3cd298b4.png"
       }
     },
     {
@@ -265,6 +588,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94473",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Duke Nukem Forever",
           "source": "igdb",
@@ -274,6 +603,18 @@
           "field": "original_name",
           "value": "Duke Nukem Forever",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Cocked, loaded and ready for action, Duke delivers epic ass-kicking, massive weapons, giant explosions and pure unadulterated fun!\n\nPut on your shades and step into the boots of Duke Nukem. The alien hordes are invading and only Duke can save the world. Pig cops, alien shrink rays and enormous alien bosses can’t stop this epic hero from accomplishing his goal: to save the world, save the babes and to be a bad-ass while doing it.\n\nThe King arrives with an arsenal of over-the-top weapons, non-stop action, and unprecedented levels of interactivity. With hours and hours of action, and a range of bodacious multiplayer modes, rest assured knowing the fun goes on and on.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Cargado, con el seguro quitado y listo para la acción, Duke ofrece épicas palizas, armas descomunales, explosiones gigantescas y pura diversión sin adulterar.\n\nPónte tus gafas de sol y métete en la piel de Duke Nukem. Las hordas alienígenas invaden y solo Duke puede salvar el mundo. Policías cerdo, pistolas reductoras alienígenas y enormes jefes alienígenas no pueden detener a este héroe épico en su misión: salvar el mundo, salvar a las chicas y ser un tipo duro mientras lo hace.\n\nEl Rey llega con un arsenal de armas desmesuradas, acción sin pausa y niveles de interactividad sin precedentes. Con horas y horas de acción y una variedad de modos multijugador de gran calidad, puedes estar seguro de que la diversión sigue y sigue.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -290,7 +631,14 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 490,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLAS-50341",
+            "BLES-01147",
+            "BLES-01297",
+            "BLJS-10121",
+            "BLUS-30615"
+          ]
         },
         {
           "id": 94473,
@@ -309,8 +657,229 @@
           "igdbId": 490,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9fe352d7912a5310f2510bc441405b94.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f752582986d70327ae2e8dd9aea7f976.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/05128e44e27c36bdba71221bfccf735d.png"
+      }
+    },
+    {
+      "id": 48325,
+      "nameEs": "Duke Nukem: Manhattan Project",
+      "originalName": "Duke Nukem: Manhattan Project",
+      "year": 2002,
+      "igdbId": 8505,
+      "popularity": 63,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Duke Nukem: Manhattan Project",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Duke Nukem: Manhattan Project",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Duke Nukem takes his Mighty Boot to the Big Apple. Using GLOPP (Gluon Liquid Omega-Phased Plasma), the maniacal mech Morphix has transformed the creatures of New York City into an army of bloodthirsty mutants. In Duke Nukem: Manhattan Project, Duke must deploy WIN (Weapons, Insults and Name-Calling) to rid the city of goo-based bad guys, and return peace and tranquility to The City That Never Sleeps.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Duke Nukem lleva su Mighty Boot a la Gran Manzana. Usando GLOPP (Gluon Liquid Omega-Phased Plasma), el maniaco mecha Morphix ha transformado a las criaturas de la ciudad de Nueva York en un ejército de mutantes sedientos de sangre. En Duke Nukem: Manhattan Project, Duke debe desplegar WIN (Weapons, Insults and Name-Calling) para librar la ciudad de los malvados a base de viscosidad y devolver la paz y la tranquilidad a The City That Never Sleeps.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2002",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 114714,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2002,
+          "igdbId": 8505,
+          "steamAppId": 240200,
+          "criteria": []
+        },
+        {
+          "id": 114715,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2010,
+          "igdbId": 8505,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b9f32627ddd94850ea1a25c2917947d0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/94b087da83ceb5fe6f1a13150f8c0471.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/1c54985e4f95b7819ca0357c0cb9a09f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 476,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6187,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 1005,
+          "reason": "1996"
+        },
+        {
+          "position": 3,
+          "gameId": 23883,
+          "reason": "1998"
+        },
+        {
+          "position": 4,
+          "gameId": 1243,
+          "reason": "1999"
+        },
+        {
+          "position": 5,
+          "gameId": 23976,
+          "reason": "2000"
+        },
+        {
+          "position": 6,
+          "gameId": 1587,
+          "reason": "2002"
+        },
+        {
+          "position": 7,
+          "gameId": 48325,
+          "reason": "2002"
+        },
+        {
+          "position": 8,
+          "gameId": 17296,
+          "reason": "2011"
+        },
+        {
+          "position": 9,
+          "gameId": 39606,
+          "reason": "2011"
+        }
+      ]
+    },
+    {
+      "id": 3895,
+      "kind": "story",
+      "rationale": "Los juegos de Duke Nukem son en su mayoría independientes, con una continuidad floja. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6187,
+          "recommendedVersionId": 12093,
+          "reason": "Plataformas 2D original, en PC."
+        },
+        {
+          "position": 2,
+          "gameId": 1005,
+          "recommendedVersionId": 19352,
+          "reason": "Duke Nukem 3D; la edición remasterizada para PC es la más cómoda."
+        },
+        {
+          "position": 3,
+          "gameId": 23883,
+          "recommendedVersionId": 60428,
+          "reason": "Aventura en 3D de PS1."
+        },
+        {
+          "position": 4,
+          "gameId": 1243,
+          "recommendedVersionId": 2330,
+          "reason": "Zero Hour, en N64."
+        },
+        {
+          "position": 5,
+          "gameId": 23976,
+          "recommendedVersionId": 60632,
+          "reason": "Land of the Babes, en PS1."
+        },
+        {
+          "position": 6,
+          "gameId": 1587,
+          "recommendedVersionId": 3186,
+          "reason": "Versión de GBA."
+        },
+        {
+          "position": 7,
+          "gameId": 48325,
+          "recommendedVersionId": 114714,
+          "reason": "Manhattan Project, plataformas 2.5D."
+        },
+        {
+          "position": 8,
+          "gameId": 17296,
+          "recommendedVersionId": 45322,
+          "reason": "Spin-off de DS."
+        },
+        {
+          "position": 9,
+          "gameId": 39606,
+          "recommendedVersionId": 94473,
+          "reason": "Duke Nukem Forever, en PC."
+        }
+      ]
+    },
+    {
+      "id": 3896,
+      "kind": "community",
+      "rationale": "Ruta sugerida por conocimiento general, sin fuente verificada. Se juega lo mejor valorado: Duke Nukem 3D y Manhattan Project. Se omiten los spin-offs portátiles, Land of the Babes y Forever.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1005,
+          "recommendedVersionId": 19352,
+          "reason": "El clásico; la versión remasterizada de PC es la más pulida."
+        },
+        {
+          "position": 2,
+          "gameId": 48325,
+          "recommendedVersionId": 114714,
+          "reason": "Manhattan Project es un buen juego 2.5D; la versión de PC es la más accesible."
+        },
+        {
+          "position": 3,
+          "gameId": 23883,
+          "recommendedVersionId": 60428,
+          "reason": "Time to Kill es un tercera persona decente, en PS1."
+        },
+        {
+          "position": 4,
+          "gameId": 1243,
+          "recommendedVersionId": 2330,
+          "reason": "Zero Hour es opcional y se juega mejor en N64."
+        }
+      ]
+    }
+  ]
 }

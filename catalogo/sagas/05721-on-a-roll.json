@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115843",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "On a Roll 3D",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "On a Roll 3D",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "On A Roll 3D is a fast, colourful 3D platform game. Roll your way through 24 huge levels across six different themes and be prepared to take on spikes, mines, dynamite, conveyor belts, springs, switches, doors, bumpers, lasers, saws, fire, ice, water, electricity, trapdoors and much much more.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2015,
           "igdbId": 35990,
           "steamAppId": 341090,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original de 2015."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles flexibles con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fps ajustables en PC."
+            }
+          ]
         },
         {
           "id": 115844,
@@ -57,9 +90,33 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 35990,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para mando, cómodo en consola."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con cambios menores de plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento fijo de consola, sin opciones gráficas."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d8fe904972d8f83f8c9de25f7226711a.png"
+      }
     }
   ],
   "routes": []

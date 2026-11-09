@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "885",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Disney's Toy Story",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Disney's Toy Story",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A Toy Story game that released for Genesis / Mega Drive.",
           "source": "igdb",
           "manual": false
         },
@@ -77,9 +89,15 @@
       "originalName": "Toy Story 2: Buzz Lightyear to the Rescue!",
       "year": 1999,
       "igdbId": 3619,
-      "popularity": 139,
+      "popularity": 140,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "2411",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Toy Story 2 de Disney•Pixar: ¡Buzz Lightyear al rescate!",
@@ -89,6 +107,12 @@
         {
           "field": "original_name",
           "value": "Toy Story 2: Buzz Lightyear to the Rescue!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Woody has been stolen from the bedroom, ready to be sold to the highest bidder by an evil toy collector. It's up to good friend Buzz Lightyear to fight his way through from the bedroom to the outside world in order to save Woody from the toy market and bring him home. All of the character from the 3D animated movie appear through-out the side scroller to help Buzz get to where he is needed. Along with the use of his cannon, Buzz can jump to hard to reach places, also useful in collecting the hidden coins that open bonus levels.",
           "source": "igdb",
           "manual": false
         },
@@ -106,7 +130,32 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3619,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión más completa en niveles y modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control 3D con el stick analógico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja y cuadros irregulares."
+            }
+          ],
+          "codes": [
+            "NTHE",
+            "NTHP"
+          ]
         },
         {
           "id": 2412,
@@ -114,7 +163,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3619,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar al de consolas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles algo toscos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución mayor, puede dar problemas en Windows moderno."
+            }
+          ]
         },
         {
           "id": 2413,
@@ -122,7 +192,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3619,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido sólido con escenas en vídeo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y tiempos de carga de PS1."
+            }
+          ]
         },
         {
           "id": 2704,
@@ -130,7 +221,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 165581,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Juego distinto en 2D y reducido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sencillo."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy distinto."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla muy limitada."
+            }
+          ]
         },
         {
           "id": 2840,
@@ -138,7 +250,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 305791,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Reedición de la versión de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y logros modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana a PS1."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 2841,
@@ -146,14 +279,51 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 305791,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Reedición de la versión de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y logros modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana a PS1."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/b6faaff41560efbdefb1687a06a4c57b.png",
         "hero": "https://cdn2.steamgriddb.com/hero/39dd987a9d27f1045aa0ad3ed5995dd2.png",
         "logo": "https://cdn2.steamgriddb.com/logo/a45ffadd57dfb09705c1ab367aab1c7f.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1231,
+          "platform": "n64",
+          "project": "SpaceRanger",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/Capridog/SpaceRanger",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 7030,
@@ -165,6 +335,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61787",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Buzz Lightyear of Star Command",
           "source": "igdb",
@@ -173,6 +349,12 @@
         {
           "field": "original_name",
           "value": "Buzz Lightyear of Star Command",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Buzz Lightyear of Star Command is a Windows PC game created by Traveller's Tales with Disney Interactive and PIXAR in 2000. The game consists of multiple planets, each with a villain on it. In each level, the players race the villain to their getaway destination. Then, they engage in a one-on-one battle with the villain, which usually requires destroying an energy shield surrounding the villain.",
           "source": "igdb",
           "manual": false
         },
@@ -190,7 +372,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 19675,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles datados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Puede requerir ajustes en Windows actual."
+            }
+          ]
         },
         {
           "id": 13146,
@@ -198,7 +401,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 19675,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles datados, guardado en tarjeta."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de PS1."
+            }
+          ]
         },
         {
           "id": 13396,
@@ -206,7 +430,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 265047,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión reducida en 2D."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sencilla."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy distinta."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla muy limitada."
+            }
+          ]
         },
         {
           "id": 61787,
@@ -214,7 +459,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 282150,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y logros modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana a PS1."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 61788,
@@ -222,7 +488,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 282150,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y logros modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana a PS1."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -241,6 +528,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14034",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Toy Story Racer",
           "source": "igdb",
@@ -249,6 +542,12 @@
         {
           "field": "original_name",
           "value": "Toy Story Racer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The race is on! For the first time ever, join Woody, Buzz Lightyear and the gang in a crazy, turbo-blasting remote-controlled racing competition through the action-packed world of Disney's Toy Story!",
           "source": "igdb",
           "manual": false
         },
@@ -293,6 +592,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49386",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Toy Story 3: The Video Game",
           "source": "igdb",
@@ -301,6 +606,12 @@
         {
           "field": "original_name",
           "value": "Toy Story 3: The Video Game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Help Buzz, Woody and the rest of the toys ensure no toy gets left behind in the official videogame based on the hit animated movie franchise.",
           "source": "igdb",
           "manual": false
         },
@@ -414,7 +725,7 @@
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/ea8ba783d1f874bce5c7e075563e9070.png",
         "hero": "https://cdn2.steamgriddb.com/hero/f0de08375fe30a7f805b9f305a40cc5a.png",
-        "logo": "https://cdn2.steamgriddb.com/logo/803ef56843860e4a48fc4cdb3065e8ce.png"
+        "logo": "https://cdn2.steamgriddb.com/logo/66137f04c1b19dceccb8aa0ddaca1bef.png"
       }
     },
     {
@@ -423,9 +734,15 @@
       "originalName": "Toy Story Mania!",
       "year": 2009,
       "igdbId": 5241,
-      "popularity": 21,
+      "popularity": 20,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "49119",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Toy Story Mania!",
@@ -435,6 +752,12 @@
         {
           "field": "original_name",
           "value": "Toy Story Mania!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Inspired by the Disney/Pixar feature film, Toy Story and the 4D Toy Story Mania attraction at Disneyland Resort and Walt Disney World Resort, Toy Story Mania! is now available for PC.",
           "source": "igdb",
           "manual": false
         },
@@ -452,7 +775,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 5241,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con PS Move."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen HD."
+            }
+          ]
         },
         {
           "id": 49119,
@@ -460,7 +804,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 5241,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todas las galerías de tiro."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntero del mando de Wii, ideal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja."
+            }
+          ]
         },
         {
           "id": 49120,
@@ -469,7 +834,28 @@
           "year": 2010,
           "igdbId": 5241,
           "steamAppId": 317580,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "El ratón resulta menos natural."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia la forma de apuntar."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución."
+            }
+          ]
         },
         {
           "id": 49121,
@@ -477,7 +863,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 5241,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Requiere Kinect o mando, menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia la forma de jugar."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen HD."
+            }
+          ]
         }
       ],
       "images": {
@@ -496,6 +903,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85464",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Toy Story 3",
           "source": "igdb",
@@ -504,6 +917,12 @@
         {
           "field": "original_name",
           "value": "Toy Story 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the Toy Story 3 help Buzz, Woody and the rest of the Toys ensure no toy gets left behind. Dive into to all new heroic adventures in Story Mode or let your imagination run wild in the exiting new open world of Toy Box Mode! Come and play to infinity and beyond.\n\nPS2/PSP exclusive version of the video game.",
           "source": "igdb",
           "manual": false
         },
@@ -521,7 +940,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 287629,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión portátil reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana a la de PS2."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución."
+            }
+          ]
         },
         {
           "id": 85334,
@@ -529,7 +969,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 287629,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Historia completa, sin la ciudad abierta de las HD."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cámara datada."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de PS2."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS2."
+            }
+          ]
         },
         {
           "id": 85463,
@@ -537,7 +998,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 408990,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Historia completa de la versión PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y logros modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana a PS2."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 85464,
@@ -545,10 +1027,79 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 408990,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Historia completa de la versión PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y logros modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana a PS2."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable y carga rápida."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7sax.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 613,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 441,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 1287,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 7030,
+          "reason": "2000"
+        },
+        {
+          "position": 4,
+          "gameId": 7567,
+          "reason": "2001"
+        },
+        {
+          "position": 5,
+          "gameId": 19735,
+          "reason": "2009"
+        },
+        {
+          "position": 6,
+          "gameId": 18586,
+          "reason": "2010"
+        },
+        {
+          "position": 7,
+          "gameId": 35004,
+          "reason": "2010"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

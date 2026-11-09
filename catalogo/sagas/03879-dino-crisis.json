@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60916",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dino Crisis",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dino Crisis",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dino Crisis is a survival horror video game developed and published by Capcom in 1999. Set in a remote research facility, it follows special agent Regina as she investigates a scientific experiment gone wrong. The game combines exploration, puzzle-solving, and combat against hostile dinosaurs. It uses a real-time 3D environment rather than pre-rendered backgrounds, distinguishing it from earlier Capcom horror titles. Dino Crisis is often noted for its emphasis on tension, limited resources, and fast, unpredictable enemies.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,18 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3027,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02207",
+            "SLES-02208",
+            "SLES-02209",
+            "SLES-02210",
+            "SLES-02211",
+            "SLPM-86903",
+            "SLPS-02180",
+            "SLUS-00922",
+            "SLUS-00922GH"
+          ]
         },
         {
           "id": 60499,
@@ -124,6 +147,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60917",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dino Crisis 2",
           "source": "igdb",
@@ -132,6 +161,12 @@
         {
           "field": "original_name",
           "value": "Dino Crisis 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dino Crisis 2 is a third-person action-adventure game and sequel to Dino Crisis. In a change from the survival horror theme of the first game, Dino Crisis 2 is more shoot 'em up oriented. The character always runs, removing the need for the run button from the first game; players can carry a second gun, and more weapons were added. Besides gameplay changes, the game also introduces new species of dinosaurs and lizards.",
           "source": "igdb",
           "manual": false
         },
@@ -165,7 +200,17 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 4132,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03221",
+            "SLES-03222",
+            "SLES-03223",
+            "SLES-03224",
+            "SLES-03225",
+            "SLPM-86627",
+            "SLPM-87234",
+            "SLUS-01279"
+          ]
         },
         {
           "id": 60631,
@@ -229,6 +274,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dino Crisis 3 is a survival horror video game released exclusively for the Xbox. It is the fourth and final game in the Dino Crisis series. Like the previous iterations of the series, gameplay revolves around fighting dinosaurs. Unlike the first three installments of the Dino Crisis series, the enemies in the game are not real-world dinosaurs, but new species created through advanced genetic engineering technology. The action takes place in outer space, on a starship, the Ozymandias.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -244,8 +295,38 @@
           "igdbId": 5813,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/61411f2c65743715021e5171ed289251.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/614a24f6c582e220ada177041bab94fa.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/08b41ec0a7a71415ee6b932e222d8af3.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1871,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23914,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 23975,
+          "reason": "2000"
+        },
+        {
+          "position": 3,
+          "gameId": 48030,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

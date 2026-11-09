@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "64404",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fantastic Fortune",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Fantastic Fortune",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fantastic Fortune is a romance simulation game.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 163157,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de ratón o teclado, poco práctico hoy."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Compatibilidad dudosa con Windows actual."
+            }
+          ]
         },
         {
           "id": 64404,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 163157,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Conversión a consola con contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando y guardado en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port cercano al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien en consola o emulador."
+            }
+          ],
+          "codes": [
+            "SLPS-03214"
+          ]
         }
       ],
       "images": {
@@ -73,6 +130,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85377",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fantastic Fortune 2",
           "source": "igdb",
@@ -81,6 +144,12 @@
         {
           "field": "original_name",
           "value": "Fantastic Fortune 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fantastic Fortune 2 is a romance simulation game. In this otome game the protagonist is one of the three female characters: Aoi (16-year old priestess summoned from another world), Marine (15), or Aqua (13-year old with a memory loss). The story takes place in a fantasy setting and it unfolds during a seven month training period where you try to become a \"Daughter of Star\".",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +167,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 163158,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Conversión a PC con contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control de PC menos cómodo para este tipo de juego."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port posterior con diferencias posibles."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Compatibilidad incierta en sistemas modernos."
+            }
+          ]
         },
         {
           "id": 84526,
@@ -106,7 +196,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 163158,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición base de PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando y guardado estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien en PS2 o emulador."
+            }
+          ]
         },
         {
           "id": 85377,
@@ -114,10 +225,54 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 220580,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Edición posterior, probablemente con extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control y guardado de PS2."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original con posibles añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento similar al de la edición base."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5fmi.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3125,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25887,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 34399,
+          "reason": "2003"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

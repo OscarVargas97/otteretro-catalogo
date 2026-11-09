@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60560",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Urban Chaos",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "Urban Chaos",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Urban Chaos throws you into the heart of a modern urban jungle at the turn of the millenium.\nTo succeed you'll need a lethal combination of stealth, physical agility and martial art skills as you interact with the city around you.\nComplete freedom to explore every areas is granted and this freedom extends to gameplay - the future is in your hands as you are drawn into an underlying plot featuring a mysterious cult who are intent on evil at this unpredictable and potentially menacing millenium period.Key Features:2 playable main characters: D'arci Stern, an agile, street-savvy female cop or Roger McIntyre, a mysterious ex-soldier.\nMultiple modes of combat. Engage in hand-to-hand fighting, heavy weaponry face-offs, vehicle chases and intense shoot-outs.\nCommand a variety of vehicles. Take control of police cars, vans and other vehicles.",
           "source": "igdb",
           "manual": false
         },
@@ -48,14 +60,35 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 8469,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02071",
+            "SLES-02354",
+            "SLES-02355",
+            "SLES-023552",
+            "SLUS-01091"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/95345799f982ff5ba10930c9e397f79a.png",
         "hero": "https://cdn2.steamgriddb.com/hero/ec8da1b5980e5c90358cfe8ffee27108.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/b7de448e4a861c88ba84212f47449a86.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 473,
+          "platform": "pc",
+          "project": "OpenChaos",
+          "kind": "port",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/UltimaBeaR/OpenChaos",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     },
     {
       "id": 33039,
@@ -67,6 +100,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82438",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Urban Chaos: Unidad Antidisturbios",
           "source": "igdb",
@@ -75,6 +114,12 @@
         {
           "field": "original_name",
           "value": "Urban Chaos: Riot Response",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Urban Chaos: Riot Response, you play as Nick Mason, a member of a new anti-terrorist team named T-Zero. Terrorists and gang members have destroyed your city, and your goal is to bring order back to the city while destroying any terrorists and gang members you encounter. Since your enemies are armed to the teeth (usually with meat cleavers, molotov cocktails, and sawed-off shotguns), you're equipped with a riot shield that can be used by holding the left trigger. It can absorb an infinite amount of projectiles, but you cannot shoot while you are using it. You can get the assistance of firefighters to put out fires, and medics to replenish your health.\n\nYour weapons can be upgraded by earning medals during your missions. You can earn these medals by scoring headshots, arresting enemies with your taser (as opposed to killing them), collecting gang masks, etc. You can even unlock extra missions and weapons by arresting gang leaders at the end of each level, so that the police can interrogate him and find out the gang's next move.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +145,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 6223,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES---53991",
+            "SLUS-21390"
+          ]
         }
       ],
       "images": {
@@ -110,5 +159,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3505,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23944,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 33039,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

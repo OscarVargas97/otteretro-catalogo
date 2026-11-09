@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100359",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Outcast: Second Contact",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Outcast: Second Contact",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Outcast: Second Contact is a complete remake of the action-adventure game developed in 1999 by Appeal for the PC.\n\nTake off on an exploration of Adelpha, an alien world as beautiful as it is dangerous, where your heroic journey places the fate of two worlds in your hands.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "remake",
           "year": 2017,
           "igdbId": 23175,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando aceptable."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo remake fiel al original de 1999."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y estabilidad limitadas en consola."
+            }
+          ]
         },
         {
           "id": 100359,
@@ -57,7 +90,28 @@
           "year": 2017,
           "igdbId": 23175,
           "steamAppId": 618970,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejor puntería y control con ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo remake fiel al original de 1999."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y ajustes gráficos."
+            }
+          ]
         },
         {
           "id": 100360,
@@ -65,9 +119,35 @@
           "kind": "remake",
           "year": 2017,
           "igdbId": 23175,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando aceptable."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo remake fiel al original de 1999."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y estabilidad limitadas en consola."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/bc6ed32af5e74a9eae9accaab95902fd.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1f029c1e1abaaf0605807b7f91552d36.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6e3197aae95c2ff8fcab35cb730f6a86.png"
+      }
     },
     {
       "id": 46706,
@@ -79,6 +159,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110595",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Outcast: A New Beginning",
           "source": "igdb",
@@ -87,6 +173,12 @@
         {
           "field": "original_name",
           "value": "Outcast: A New Beginning",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Explore the breathtaking alien world of Adelpha, support the local Talans in their struggles and fight your way through fast-paced battles against invading robot forces in this 3rd-person, open world, action adventure sequel to the 1999 cult classic.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +215,33 @@
           "igdbId": 171215,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3ba08717c9c39b12a948b1e37cce9fcc.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/114fb90c6c16633f3c2cbc1a6ccd4eda.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/04751cf45955b53e642848490f14d01d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3406,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42086,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 46706,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61472",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Aliens versus Predator",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Aliens versus Predator",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Aliens versus Predator offers three separate campaigns, each playable as a separate species: Alien, Predator, or human Colonial Marine. Each player character has different objectives, abilities, and weapons. The single-player campaign presents the player with a conventional series of levels to progress through that are designed around the abilities of each character.\n\nAs the Colonial Marine the player uses a number of weapons to combat Aliens and Predators. The marine wears armor for protection and uses an image intensifier and flares to improve visibility in dark areas.\n\nWhen playing as the Predator the player uses a variety of weapons from the Predator films such as wrist blades, a throwing disc, and shoulder-mounted energy weapons. The Predator is the most durable of the three player characters and can survive falls from greater heights than the human. The player can use a cloaking device to become invisible and several different modes of vision to detect enemies, including an infrared vision mode and a mode sensitive to electrical systems.\n\nAs an Alien the player can explore most of the game's environments freely, even climbing across walls and ceilings. The Alien has no weapons, however, using its claws, tail, and jaws to attack enemies. The screen is distorted into a fish eye lens effect to reflect the Alien's field of view. The player can also use a form of echolocation in dark areas and can detect pheromones to discern human or Predator enemies. The Alien can drop from any height without injury and is the fastest of the three player characters.\n\nSeveral bonus levels allow each player character access to portions of the missions of the other characters. To allow the marine and Predator characters to traverse through the areas of the Alien missions, the player is supplied with a jet pack for the marine and a grappling hook for the Predator.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 9979,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Tres campañas completas y multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos, guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión de referencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución, aunque necesita parches en sistemas modernos."
+            }
+          ]
         },
         {
           "id": 61473,
@@ -56,13 +89,48 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 9979,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido más limitado que la versión de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles torpes con el mando de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Es otra versión distinta, no el juego clásico de PC."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos y fluidez muy limitados."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a72a9d570e49d6bd5896596330d7f6ee.png",
         "logo": "https://cdn2.steamgriddb.com/logo/11c3b824df9fb63cb60c685ee373aaa7.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 9,
+          "platform": "pc",
+          "project": "NakedAVP",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/atsb/NakedAVP",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     }
   ],
   "routes": []

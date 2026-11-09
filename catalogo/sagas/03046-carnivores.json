@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85864",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Carnivores: Ice Age",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Carnivores: Ice Age",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Carnivores: Ice Age is a first-person shooter video game developed by Action Forms, and later ported to iOS and Android devices by Tatem Games. It is the third game in the Carnivores series. Unlike the previous games, in which the player must hunt dinosaurs, Carnivores: Ice Age allows the player to stalk large Cenozoic mammals such as mammoths and saber-toothed cats.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 20566,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión de consola con contenido más reducido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Apuntar con mando resulta torpe."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución mayor que en PSP, pero con puntos flojos."
+            }
+          ]
         },
         {
           "id": 85864,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 20566,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todos los niveles y dinosaurios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado van bien, aunque es anticuado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original de 2001."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos antiguos, pero estable y con resolución ajustable."
+            }
+          ]
         },
         {
           "id": 85865,
@@ -64,9 +118,35 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 20566,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido recortado para portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Pocos controles en la portátil, apuntar es incómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y gráficos simplificados."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/670c8337f2c6c9e1fbcd4455c35cafe9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/44de56319fcd82a53ce95dad2894784f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1acddcc1d30b84017ad1a908a46d26f6.png"
+      }
     },
     {
       "id": 35393,
@@ -78,6 +158,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86134",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Carnivores: Dinosaur Hunter",
           "source": "igdb",
@@ -86,6 +172,12 @@
         {
           "field": "original_name",
           "value": "Carnivores: Dinosaur Hunter",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Carnivores: Dinosaur Hunter lets players explore huge non-linear locations as they attempt to track down a variety of dinosaurs that are armed with some ferociously advanced AI. As a result, these are no \"pea-brained\" dinosaurs -- these are dangerous creatures that are able to see, hear and sense the hunter. If you're not careful, it's very easy for the hunter to become the hunted.\n\nWith a series of different dinosaurs across varied, distinct environments (including pine forests, muddy marshes and rolling hills,) how you approach your target is important. Wind direction, scent and the use of a special dinosaur call are all key elements in tracking your prey.",
           "source": "igdb",
           "manual": false
         },
@@ -187,8 +279,31 @@
           "igdbId": 20569,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ef7d2aea754c7249ddb98448d089057a.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2834,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35202,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 35393,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

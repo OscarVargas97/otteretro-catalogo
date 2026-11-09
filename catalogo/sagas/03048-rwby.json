@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43276",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "RWBY: Grimm Eclipse",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "RWBY: Grimm Eclipse",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "RWBY: Grimm Eclipse is a 4 player Co-op, hack-n-slash game based upon Rooster Teeth’s international hit series RWBY.\n\nGet ready for intense combat action as you battle Grimm across familiar locations of Remnant including new areas never before seen in the show. Play as Ruby, Weiss, Blake, and Yang in this character-driven adventure that explores new storylines, new Grimm types, and a new villain!\n\nThe gameplay takes inspiration from games such as Dynasty Warriors and Left 4 Dead offering over-the-top combat along with engaging missions and storytelling.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 14720,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye las actualizaciones de contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles cómodos con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original con ajustes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable en consola."
+            }
+          ]
         },
         {
           "id": 41790,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 14720,
           "steamAppId": 418340,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido de lanzamiento, con menos añadidos que las posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena resolución y fluidez, con algunos errores iniciales."
+            }
+          ]
         },
         {
           "id": 41791,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 14720,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye las actualizaciones de contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles cómodos con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original con ajustes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable en consola."
+            }
+          ]
         },
         {
           "id": 43276,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 148103,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión más completa, con todas las actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda con mando y jugable en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original con mejoras posteriores."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y fluidez que PC o PS4."
+            }
+          ]
         }
       ],
       "images": {
@@ -92,6 +188,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "52487",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "RWBY: Arrowfell",
           "source": "igdb",
@@ -100,6 +202,12 @@
         {
           "field": "original_name",
           "value": "RWBY: Arrowfell",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Occurring during the events of RWBY Volume 7, players will take control of Team RWBY and switch between them on the fly in solo or multiplayer action (local or online) as they use their trademark weapons and semblances to stop a mysterious new threat in this side-scrolling, 2D adventure.\n\nAs players explore Atlas, Mantle, and numerous surrounding environments, they will face off against the Creatures of Grimm and other enemies straight from the show, as well as never-before-seen threats. The team also crosses paths with familiar faces including General Ironwood and the Ace Operatives, plus a fearless new group of Huntresses known as Team BRIR.",
           "source": "igdb",
           "manual": false
         },
@@ -158,7 +266,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 154856,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100AF00185F2000"
+          ]
         }
       ],
       "images": {
@@ -168,5 +279,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2835,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 15977,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 21314,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

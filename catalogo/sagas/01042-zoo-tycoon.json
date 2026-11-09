@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Easy to learn, hard to master! Encounter the ultimate zoo experience in Zoo Tycoon DS! Get up close and personal while collecting and caring for the world's most popular animals in a custom zoo you create! Manage your environment properly and achieve the ultimate goal of a zoo full of happy animals and customers.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -48,7 +54,13 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 18598,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AZTE",
+            "AZTP",
+            "AZTX",
+            "AZTY"
+          ]
         }
       ],
       "images": {
@@ -78,6 +90,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In Zoo Tycoon 2 DS, the player edits and builds the zoo in a main mode resembling the original Zoo Tycoon. Zookeeper mode is more like Zoo Tycoon 2 graphics-wise and has five mini-games: petting, cleaning animal waste, feeding, washing, and healing animals.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -91,7 +109,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 20773,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YZTE",
+            "YZTP"
+          ]
         }
       ],
       "images": {
@@ -108,6 +130,12 @@
       "popularity": 103,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "115201",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Zoo Tycoon",
@@ -177,8 +205,38 @@
           "igdbId": 74712,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fcc46dc5d0ec516e084a6b802cf654d0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/20c7a5e0c5ceafdd8f1085d8f30af84a.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/8eda503db8f01a5fe0006e1c27655211.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1505,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43703,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 3083,
+          "reason": "2005"
+        },
+        {
+          "position": 3,
+          "gameId": 3697,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

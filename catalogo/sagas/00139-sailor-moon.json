@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "316",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sailor Moon",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Sailor Moon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sailor Moon (or Bishoujo Senshi Sailor Moon) is a beat 'em up video game developed by Angel in 1993, and ported to the Super Nintendo Entertainment System. It was localized in Europe exclusively in French in 1994. The Mega Drive version was developed and published by Ma-Ba, although certain elements were recycled from the Super NES version.",
           "source": "igdb",
           "manual": false
         },
@@ -81,6 +93,12 @@
         {
           "field": "original_name",
           "value": "Welcome Nakayoshi Park",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Welcome Nakayoshi Park\" is a video game released for Nintendo Game Boy by Bandai in 1994.",
           "source": "igdb",
           "manual": false
         },
@@ -150,6 +168,59 @@
       }
     },
     {
+      "id": 17781,
+      "nameEs": "Sailor Moon: La Luna Splende",
+      "originalName": "Sailor Moon: La Luna Splende",
+      "year": 2011,
+      "igdbId": 76765,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Sailor Moon: La Luna Splende",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Sailor Moon: La Luna Splende",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sailor Moon La Luna Splende (The Shining Moon) is an Italian Sailor Moon puzzle-adventure Nintendo DS game. It is the only Sailor Moon game on the Nintendo DS and the only one to be exclusively released in a non-Japanese country.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2011",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 45917,
+          "platform": "ds",
+          "kind": "original",
+          "year": 2011,
+          "igdbId": 76765,
+          "criteria": [],
+          "codes": [
+            "BXLI"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/72b30925053b905ddaa72771ea8f4145.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0a405b9092796a3bdaf3f77fdef71180.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ce0ef02ee258052133aac2b7e2703f9d.png"
+      }
+    },
+    {
       "id": 24927,
       "nameEs": "Bishoujo Senshi Sailor Moon SuperS: Shin Shuyaku Soudatsusen",
       "originalName": "Bishoujo Senshi Sailor Moon SuperS: Shin Shuyaku Soudatsusen",
@@ -171,6 +242,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bishoujo Senshi Sailor Moon SuperS: Various Emotion is a 1996 Fighting video game developed and published by Angel for the PlayStation and Sega Saturn. It is based upon Naoko Takeuchi's Sailor Moon shōjo manga and anime series. Loosely following the fourth season of the anime series, which adapted the fourth arc of the manga,[1] the players control either one of the five original Inner Senshi or one of the four Outer Senshi as they enter a tournament to fight against each other and become the winning victor. The game was created by most of the same team who worked on previously released fighting titles in the Sailor Moon franchise for the Super Famicom at Angel.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -184,7 +261,11 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 45457,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00260",
+            "SLPS-00262"
+          ]
         }
       ],
       "images": {
@@ -201,6 +282,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85346",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sailor Moon RevengeX",
           "source": "igdb",
@@ -209,6 +296,12 @@
         {
           "field": "original_name",
           "value": "Sailor Moon RevengeX",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Queen Metalia is planning to control planet Earth, and Sailor Moon must prevent it to save all forms of life, accompany Serena in this amazing battle.\n\nDetailed and musicalized in the Sailor Moon cartoon, a video game that every true anime and PS2 fans can't help but enjoy.",
           "source": "igdb",
           "manual": false
         },
@@ -236,8 +329,51 @@
           "igdbId": 279589,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7t4y.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 704,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 206,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 6594,
+          "reason": "1994"
+        },
+        {
+          "position": 3,
+          "gameId": 7221,
+          "reason": "1994"
+        },
+        {
+          "position": 4,
+          "gameId": 24927,
+          "reason": "1996"
+        },
+        {
+          "position": 5,
+          "gameId": 17781,
+          "reason": "2011"
+        },
+        {
+          "position": 6,
+          "gameId": 35013,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

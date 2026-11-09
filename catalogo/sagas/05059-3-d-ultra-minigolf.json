@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97082",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "3D Ultra Minigolf Adventures 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "3D Ultra Minigolf Adventures 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Featuring 54 holes in three themes. Play through the Haunted Manor, Manic Museum, Winter Wonderland or create own course. Use a variety of power-ups to sabotage opponents in 4 player matches. Customize your character with accessories including a diving helmet, elf ears, Roman sandals and more.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 52039,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/151d6b3fb5302d3441bead90acf43640.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/67c81a455e9bb78d6ab846698b5bba50.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/cff589d1bdaaa84f92a4a9c0c0e126ed.png"
+      }
     },
     {
       "id": 48347,
@@ -70,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114742",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "3D Ultra Minigolf Adventures",
           "source": "igdb",
@@ -78,6 +101,12 @@
         {
           "field": "original_name",
           "value": "3D Ultra Minigolf Adventures",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Whether you're a seasoned player or just a beginner, get ready to tee off for a quick and fun match with four animated stylish characters. Putt your way through 36 fun-filled holes of minigolf on 3D designed courses with elevated greens, bunkers, bridges and water hazards, among other crazy obstacles.",
           "source": "igdb",
           "manual": false
         },
@@ -113,8 +142,84 @@
           "igdbId": 9899,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co50jy.jpg"
+      }
+    },
+    {
+      "id": 48656,
+      "nameEs": "3D Ultra Mini Golf",
+      "originalName": "3D Ultra Mini Golf",
+      "year": 2006,
+      "igdbId": 77788,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "3D Ultra Mini Golf",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "3D Ultra Mini Golf",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A polygonal game of minigolf that sets it's holes in exotic locations like the moon.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2006",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 115215,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2006,
+          "igdbId": 77788,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/jvrkitjwxkmmkc7qp0tj.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2008,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48347,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 48656,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 40557,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

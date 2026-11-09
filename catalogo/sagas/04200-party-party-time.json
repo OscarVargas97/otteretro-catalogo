@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66177",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Party Party Time",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Party Party Time",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's time to get this party started!\nEndless fun in a bash everyone can join!",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 231043,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010007001A09C000"
+          ]
         }
       ],
       "images": {
@@ -75,6 +90,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "73123",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Party Party Time 2",
           "source": "igdb",
@@ -83,6 +104,12 @@
         {
           "field": "original_name",
           "value": "Party Party Time 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's Party Party Time again! Everyone join in and Let's Party! Streamlined, enhanced, and intuitive controls make every play session unlimited and easy fun.\n\nCompete with friends and family and let the fun times roll. Design your own characters and invite them to the party to play along.",
           "source": "igdb",
           "manual": false
         },
@@ -109,7 +136,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 286882,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100FFE01DBFE000"
+          ]
         }
       ],
       "images": {
@@ -127,6 +157,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "77943",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Party Party Time 3",
           "source": "igdb",
@@ -135,6 +171,12 @@
         {
           "field": "original_name",
           "value": "Party Party Time 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's time for a new and improved party time!\nCompete or cooperate—there's no limit on the fun when everyone's together!",
           "source": "igdb",
           "manual": false
         },
@@ -153,7 +195,28 @@
           "year": 2024,
           "igdbId": 324133,
           "steamAppId": 3315600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que las demás versiones, según lo que parece."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buena con mandos, menos cómoda para jugar en grupo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy similar al lanzamiento principal."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y estabilidad esperadas en PC."
+            }
+          ]
         },
         {
           "id": 77943,
@@ -161,7 +224,31 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 324133,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que las demás versiones, según lo que parece."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ideal para jugar en grupo con Joy-Con."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión de referencia en consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto, de resolución moderada."
+            }
+          ],
+          "codes": [
+            "01002610207BC000"
+          ]
         },
         {
           "id": 118387,
@@ -169,7 +256,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 420710,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que las demás versiones, según lo que parece."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Igual de buena en grupo, con carga más rápida."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Portado a hardware nuevo, sin cambios conocidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Probablemente mejor que en Switch, sin confirmar."
+            }
+          ]
         }
       ],
       "images": {
@@ -178,5 +286,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1909,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26899,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 29334,
+          "reason": "2024"
+        },
+        {
+          "position": 3,
+          "gameId": 31173,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

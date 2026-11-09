@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "32911",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "A Street Cat's Tale",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "A Street Cat's Tale",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A Tale of a street cat left alone. It's up to you to help this poor, lost kitten survive until it's old enough to take care of itself.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 122056,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con buena resolución."
+            }
+          ]
         },
         {
           "id": 32911,
@@ -57,7 +90,28 @@
           "year": 2019,
           "igdbId": 122056,
           "steamAppId": 1140570,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control preciso con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Buena resolución y rendimiento."
+            }
+          ]
         },
         {
           "id": 32912,
@@ -65,7 +119,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 122056,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución."
+            }
+          ],
+          "codes": [
+            "0100759010EC8000"
+          ]
         }
       ],
       "images": {
@@ -82,6 +160,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "68882",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "A Street Cat's Tale 2: Out side is Dangerous",
           "source": "igdb",
@@ -90,6 +174,12 @@
         {
           "field": "original_name",
           "value": "A Street Cat's Tale 2: Out side is Dangerous",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A Street Cat's Tale 2 follows Cinnamon, who wanders out the window in pursuit of a butterfly. It is a Sokoban-based, narrative-led puzzle adventure game about the struggles of stray cats.",
           "source": "igdb",
           "manual": false
         },
@@ -124,5 +214,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2756,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13139,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 27816,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

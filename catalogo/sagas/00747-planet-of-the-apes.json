@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3850",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Planet of the Apes",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Planet of the Apes",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fight for humanity as Ulysses, a deep-space astronaut shipwrecked on Earth nearly 2,000 years into the future. To his horror, a deadly breed of intelligent apes has evolved from mankind and now dominate the Earth. Hunted to near-extinction, the rag-tag human survivors huddle in fear of the Ape Empire.\n\nAgainst impossible odds, Ulysses must infiltrate the Simian society and halt the genocidal plan of Ape General Ursus to exterminate mankind forever. Familiar faces like Cornelius and Dr. Zaius - even new terrors like mandrill assassins and renegade baboons - await in this pulse-pounding tribute to the sc-fi cinema classic The future of the human race lies with one. It lies with you.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 23692,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03844",
+            "SLUS-01468"
+          ]
         },
         {
           "id": 4358,
@@ -64,7 +80,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 49358,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AYNE",
+            "AYNP"
+          ]
         },
         {
           "id": 13879,
@@ -91,6 +111,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100964",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Planet of the Apes: Last Frontier",
           "source": "igdb",
@@ -99,6 +125,12 @@
         {
           "field": "original_name",
           "value": "Planet of the Apes: Last Frontier",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The game allows you to follow and interact with a new group of characters. The tale is a new one set in the North American Rocky Mountains during the timeline between ‘Dawn of Planet of the Apes’ and ‘War for Planet of the Apes.’ Explore your own morals and ethics as you drive the fortunes of an ape troop and band of human survivors. Your decisions will have real consequences as these two worlds collide amidst a stunning backdrop.\n\nAre You Ready to Choose?",
           "source": "igdb",
           "manual": false
         },
@@ -135,8 +167,32 @@
           "igdbId": 54709,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e1b212892e6ea14e16bb2731c47bc0a8.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ac9edbbe0533cef12e50fd6fb6cfde52.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2195,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1938,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 42317,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

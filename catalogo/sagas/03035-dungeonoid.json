@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "41338",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeonoid",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dungeonoid",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Your mission is to cross the dungeons of the Infernal Castle with the aim of recovering the 3 sacred gems and defeating the Demon Master and his henchmen. Are you ready?",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2022,
           "igdbId": 147652,
           "steamAppId": 2153000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base que las demás."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Admite teclado, ratón y mando, con guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene la propuesta original sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez, fácil de ajustar."
+            }
+          ]
         },
         {
           "id": 41339,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 147652,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que las otras versiones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buenos controles con mando y carga rápida."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al diseño original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Cargas rápidas y buena fluidez."
+            }
+          ]
         },
         {
           "id": 41340,
@@ -65,7 +119,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147652,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente al resto de versiones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Juega bien con mando, aunque sin opciones extra."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original de 2020."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto pero limitado por la consola."
+            }
+          ],
+          "codes": [
+            "01002130136C0000"
+          ]
         }
       ],
       "images": {
@@ -82,6 +160,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "73072",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeonoid 2: Awakening",
           "source": "igdb",
@@ -90,6 +174,12 @@
         {
           "field": "original_name",
           "value": "Dungeonoid 2: Awakening",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Classic dungeon crawling gets a block-busting twist in Dungeonoid 2 Awakening, a top-down adventure presented in retro pixel art style!",
           "source": "igdb",
           "manual": false
         },
@@ -148,7 +238,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 282152,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010072101C594000"
+          ]
         }
       ],
       "images": {
@@ -156,5 +249,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2832,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 15783,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 29309,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

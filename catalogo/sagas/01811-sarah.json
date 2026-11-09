@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "12756",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wishing Sarah",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Wishing Sarah",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Wishing Sarah is the tiny direct sequel to Dreaming Sarah.\n\nAfter being in a coma, Sarah finally wakes up to find something odd about the world the lives in. She can't seem to understand what's going on very well, and you must help her traverse this new world - filled with intriguing new characters and events.\n\nThis small game will bridge the gap between Dreaming Sarah and the next game that's yet to come, Awakening Sarah.",
           "source": "igdb",
           "manual": false
         },
@@ -76,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17476",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dreaming Sarah",
           "source": "igdb",
@@ -84,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Dreaming Sarah",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dreaming Sarah is an adventure game where you explore the dream world of a young girl named Sarah, who is in a deep coma. Collect items and abilities as you solve puzzles, interact with people and objects to try to wake up.",
           "source": "igdb",
           "manual": false
         },
@@ -101,7 +125,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 8702,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego en consola, sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para mando, guardado automático."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en PS4."
+            }
+          ]
         },
         {
           "id": 17476,
@@ -110,7 +155,28 @@
           "year": 2015,
           "igdbId": 8702,
           "steamAppId": 296870,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo, base de todas las versiones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles de teclado y mando, ajustes disponibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Corre fluido con resolución configurable."
+            }
+          ]
         },
         {
           "id": 17477,
@@ -118,7 +184,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 8702,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego en consola, sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para mando, guardado automático."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas rápidas y estable en PS5."
+            }
+          ]
         },
         {
           "id": 17478,
@@ -126,7 +213,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 8702,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego en consola, sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para mando, guardado automático."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto en Xbox One, resolución fija."
+            }
+          ]
         },
         {
           "id": 17479,
@@ -134,15 +242,73 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 8702,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego en consola, sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para mando, se juega bien en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución algo menor en modo portátil."
+            }
+          ],
+          "codes": [
+            "010048F012C24000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/31c3d02395e8a3514844f2e5b0e3079c.png",
         "hero": "https://cdn2.steamgriddb.com/hero/23a6de9d1b696e1e7ddd06bb056745a2.png",
         "logo": "https://cdn2.steamgriddb.com/logo/ab2ce2a4bbb59dab4f43dada87ef0e23.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1319,
+          "platform": "ps5",
+          "project": "AnyPS5",
+          "kind": "native-layer",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/boykopovar/AnyPS5",
+          "source": "heldgames.com",
+          "added": "2026-10-14"
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2431,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8702,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 6760,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17802",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Collar x Malice",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Collar x Malice",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Collar x Malice is a visual novel, and follows Ichika Hoshino, who is patrolling Shinjuku, Tokyo. She is attacked, and a collar with poison is placed around her neck; following this, she becomes involved with the \"X-Day Incident\", which is being investigated by five former police officers.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,31 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 12634,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buena en Vita, plataforma descontinuada."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de Vita."
+            }
+          ],
+          "codes": [
+            "PCSE-01011"
+          ]
         },
         {
           "id": 17802,
@@ -56,7 +92,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 12634,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómoda y accesible hoy."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución."
+            }
+          ],
+          "codes": [
+            "010083E00F40E000"
+          ]
         }
       ],
       "images": {
@@ -75,6 +135,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24160",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Collar x Malice: Unlimited",
           "source": "igdb",
@@ -83,6 +149,12 @@
         {
           "field": "original_name",
           "value": "Collar x Malice: Unlimited",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The danger has only begun!\n\nReturn to the thrilling, deadly world of Collar X Malice with exclusive Interlude, After Story, and Adonis play modes. Revisit the characters and events of the original game, as you build new relationships while picking up the pieces in the aftermath of the first X-Day Incident.\n\nThen buckle up for an entirely new investigatory experience as you search for traitors hidden deep within the shadowy Adonis organization. Embark on a desperate race against time before the next cataclysmic X-Day arrives!",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +172,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 69344,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buena en Vita, plataforma descontinuada."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de Vita."
+            }
+          ]
         },
         {
           "id": 24160,
@@ -108,7 +201,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 69344,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómoda y accesible hoy."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución."
+            }
+          ],
+          "codes": [
+            "0100E3B00F412000"
+          ]
         }
       ],
       "images": {
@@ -116,5 +233,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2548,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8783,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 10506,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

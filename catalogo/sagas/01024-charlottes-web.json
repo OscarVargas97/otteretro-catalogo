@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5787",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Charlotte's Web: Wilbur and Friends",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Charlotte's Web: Wilbur and Friends",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Charlotte's Web: Wilbur and Friends is a game based on the children's movie Charlotte's Web. In comparison to the handheld version this is not a platformer, but a minigame collection aimed at children. The player can freely switch between four backgrounds (a barn, a countryside, the Country Fair and a junkyard) and choose the mini games by clicking on the assigned portion of the screen. Sometimes the player unlocks new minigames or still photos from the movie when beating a part of a mini game.",
           "source": "igdb",
           "manual": false
         },
@@ -93,6 +105,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "While based on the movie of the same name, this version of the game is entirely different to the Game Boy Advance, DS, and PC versions. In the PS2 version, players primarily play as Wilbur, exploring an open farm from a third person perspective. These sections often involve running around the farm collecting items for other characters while avoiding dogs and farmers that will send the player back to the start of the level. In addition to this, Charlotte the Spider and Templeton the Rat are also playable in the form of more linear minigames in between Wilbur's levels.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -106,7 +124,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 6346,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54657",
+            "SLES-54719",
+            "SLES-54809/ANZ"
+          ]
         }
       ],
       "images": {
@@ -115,5 +138,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2253,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3004,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 33089,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

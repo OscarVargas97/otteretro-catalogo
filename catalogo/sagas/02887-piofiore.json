@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "35974",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Piofiore: Fated Memories",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Piofiore: Fated Memories",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Liliana Adornato was born and raised in the church in the center of the Italian town of Burlone. Three criminal organizations control parts of the city, and Lily discovers that she is in the center of their turf wars. Her encounters with the leaders of the Falzone, Visconti, and Lao-Shu families lead to danger and distraction. Once Lily is drawn into the shadowy world of the mafia, she realizes there is no going back. Experience gorgeous music and artwork depicting the sun drenched (and sin-filled) world of early 1900’s Italy. Navigate organizations filled with intrigue and betrayal as three mafia families fight for honor and control. Unlock additional story options, new perspectives, and deeper, deadlier secrets as you complete the game multiple times.\n\nOriginally released as Piofiore no Banshou for the PlayStation Vita. The game was then re-released for the Nintendo Switch as Piofiore no Banshou -Ricordo- with updated scenarios and new CGs.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 135377,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Novela visual completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cómoda, pero en hardware antiguo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla y resolución limitadas."
+            }
+          ]
         },
         {
           "id": 35974,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 135377,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que Vita."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil o en TV, hardware más vigente."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y cargas ágiles."
+            }
+          ],
+          "codes": [
+            "01009240117A2000"
+          ]
         }
       ],
       "images": {
@@ -85,6 +142,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Experience the continuation of each character’s story from Piofiore: Fated Memories in five all-new episodes, a thrilling tale of mystery and murder, and an alternative what-if scenario that sheds new light on a familiar face.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2020",
           "source": "igdb",
@@ -98,7 +161,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 136944,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100EEA0174EC000"
+          ]
         }
       ],
       "images": {
@@ -127,6 +193,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Japan-only original release of Piofiore for the Playstation Vita.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2018",
           "source": "igdb",
@@ -142,8 +214,36 @@
           "igdbId": 69342,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co27nu.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1758,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 14092,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 41351,
+          "reason": "2018"
+        },
+        {
+          "position": 3,
+          "gameId": 14347,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

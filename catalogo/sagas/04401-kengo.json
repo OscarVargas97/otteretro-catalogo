@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The mind is a powerful weapon. So is the sword. When combined, they create the ultimate force. To be a Samurai master, you must silence one and make fierce the other. The rhythm of battle awaits you. Now, go young apprentice, and earn your glory.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 1420,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50114",
+            "SLUS-20021"
+          ]
         }
       ],
       "images": {
@@ -65,6 +75,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81124",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kengo 2: Sword of the Samurai",
           "source": "igdb",
@@ -73,6 +89,12 @@
         {
           "field": "original_name",
           "value": "Kengo 2: Sword of the Samurai",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The second game in the Kengo series was released for the PlayStation 2 in Japan on June 27, 2002. It was released in Europe on February 14, 2003 under the title Sword of the Samurai. It features a character creation feature and over 100 detailed swords to choose from. Published by Ubisoft.\n\nUbisoft announced a US release to be called Kengo: Legacy of the Blade at one point but the deal ended up falling through, thus it was never released.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +112,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 1421,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que en PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles, con trofeos y guardado más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación con imagen escalada y mayor estabilidad."
+            }
+          ]
         },
         {
           "id": 81125,
@@ -98,7 +141,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 1421,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de la época y guardado en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución nativa baja y cargas más lentas."
+            }
+          ]
         }
       ],
       "images": {
@@ -123,6 +187,12 @@
         {
           "field": "original_name",
           "value": "Kengo 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Japan-exclusive third installment in Genki's samurai-based fighting game series.",
           "source": "igdb",
           "manual": false
         },
@@ -169,6 +239,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In feudal Japan, it was kill or be killed for the samurai. Kengo: Legend of the 9 lets you battle as one of nine famous samurai warriors while mastering expert techniques to gain an advantage over your foes. Become a Kengo Master as you fight your way through lush, high-definition Japanese environments.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -184,8 +260,41 @@
           "igdbId": 1423,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9bfv.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1350,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32449,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 32474,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 32526,
+          "reason": "2004"
+        },
+        {
+          "position": 4,
+          "gameId": 48216,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

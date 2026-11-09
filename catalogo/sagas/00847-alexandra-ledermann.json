@@ -65,6 +65,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "65300",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Alexandra Ledermann 2: Equitation Competition",
           "source": "igdb",
@@ -73,6 +79,12 @@
         {
           "field": "original_name",
           "value": "Alexandra Ledermann 2: Equitation Competition",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A horse raising and stable riding sim, with design input from France's well-known professional champion rider, Alexandra Ledermann.",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +110,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 278849,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03290"
+          ]
         }
       ],
       "images": {
@@ -106,5 +121,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2216,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26459,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 2315,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

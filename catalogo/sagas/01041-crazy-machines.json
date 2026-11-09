@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6031",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crazy Machines",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Crazy Machines",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Turn the crank, rotate the gears, push the levers, Use the catapult, explode it, or fly it...From grilling sausages with a pulley, gears, rubberbands and a candle to firing a cannon with a basketball, these wacky brain-teasers will light up your imagination with creative and addictive fun.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,32 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 4777,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido reducido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Puntero menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución moderada."
+            }
+          ],
+          "codes": [
+            "RVL-SCZE-USA-B0",
+            "RVL-SCZP-EUR-B0"
+          ]
         },
         {
           "id": 6031,
@@ -57,7 +94,28 @@
           "year": 2005,
           "igdbId": 4777,
           "steamAppId": 18420,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más escenarios y editor."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución."
+            }
+          ]
         },
         {
           "id": 6032,
@@ -65,7 +123,33 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 4777,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Menos niveles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control táctil aceptable."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla pequeña."
+            }
+          ],
+          "codes": [
+            "CRZE",
+            "CRZP",
+            "CRZX"
+          ]
         }
       ],
       "images": {
@@ -96,6 +180,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Crazy Machines 2 for the DS is the sequel to the well-known puzzle and experiment solving game. The professor is back and leaves his lab to travel around the world this time, to build up new experiments to solve for the player. During his travels he reaches places like beautiful beaches, the Great Wall of China and the pyramids of Giza, to name a few.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -109,7 +199,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 197893,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BMZP"
+          ]
         }
       ],
       "images": {
@@ -128,6 +221,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96211",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Crazy Machines Elements",
           "source": "igdb",
@@ -136,6 +235,12 @@
         {
           "field": "original_name",
           "value": "Crazy Machines Elements",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "GET YOUR BRAIN BUZZING with each new challenge in the latest installment of the multi award-winning wacky contraption series - CRAZY MACHINES ELEMENTS. Play with Fire, harness the power of water and control the wind to set off the most insanely creative chain reactions!",
           "source": "igdb",
           "manual": false
         },
@@ -172,8 +277,38 @@
           "igdbId": 15285,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b971cc0c369b74fa335120701efa2369.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d09260384253eef3eb4e94f9beb869b4.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b6bcdc5176f139f9c4c0036b123ee12d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1504,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3082,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 18535,
+          "reason": "2009"
+        },
+        {
+          "position": 3,
+          "gameId": 40214,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

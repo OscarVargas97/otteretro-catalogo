@@ -3,7 +3,7 @@
   "name": "Doom",
   "igdbKind": "franchise",
   "igdbId": 798,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -19,9 +19,15 @@
       "originalName": "Doom",
       "year": 1993,
       "igdbId": 673,
-      "popularity": 1006,
-      "iconic": false,
+      "popularity": 1007,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "114537",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Doom",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Doom",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the future, humans have left Earth and settled throughout the galaxy. On Mars, the Union Aerospace Corporation has established a radioactive waste facility and allowed the military to conduct teleportation experiments on the nearby moons of Deimos and Phobos. Hours ago, the base on Mars began receiving incoherent distress messages from Phobos, while Deimos has disappeared completely. With all attempts to establish contact failing, you and your team have been dispatched to investigate. Upon arrival, you secure the perimeter as the rest of your team enters the facility. As you stand guard, your radio crackles with the sound of gunfire, cracking bones and blood-curdling screams and eventually falls silent. Alone, with no way off the planet or means to defend yourself other than your trusty pistol, there’s only one way out - into the complex of death and the horrors that await you within. If you plan to get out of here alive you must fend off the hordes of demonic imps, haunting spectres and your undead, former comrades waiting to tear you limb from limb. So, grab the nearest shotgun and blast your way out of this fragging madness!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En el futuro, la humanidad ha abandonado la Tierra y se ha asentado por toda la galaxia. En Marte, Union Aerospace Corporation ha establecido una instalación de residuos radiactivos y ha permitido al ejército realizar experimentos de teletransportación en las lunas cercanas, Deimos y Fobos. Hace horas, la base en Marte comenzó a recibir mensajes de socorro incoherentes desde Fobos, mientras que Deimos ha desaparecido por completo. Tras fallar todos los intentos de establecer contacto, tú y tu equipo han sido enviados a investigar. Al llegar, aseguras el perímetro mientras el resto del equipo entra en la instalación. Mientras montas guardia, tu radio crepita con el sonido de disparos, huesos quebrándose y gritos espeluznantes, hasta que finalmente se apaga. Solo, sin forma de salir del planeta ni medios para defenderte salvo tu fiel pistola, solo hay una salida: adentrarte en el complejo de la muerte y en los horrores que te esperan en su interior. Si quieres salir con vida, debes repeler a las hordas de diablillos demoníacos, espectros acechantes y tus antiguos compañeros no muertos, que esperan para desgarrarte miembro a miembro. Así que agarra la escopeta más cercana y ¡abre camino para salir de esta maldita locura!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -56,7 +74,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 259941,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ADME"
+          ]
         },
         {
           "id": 24900,
@@ -138,7 +159,13 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 170995,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00132",
+            "SLES-00157",
+            "SLPS-00308",
+            "SLUS-00077"
+          ]
         },
         {
           "id": 76489,
@@ -221,6 +248,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2827",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Doom 64",
           "source": "igdb",
@@ -230,6 +263,18 @@
           "field": "original_name",
           "value": "Doom 64",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You killed the Demons once, they were all dead. Or so you thought... A single Demon Entity escaped detection. Systematically it altered decaying, dead carnage back into grotesque living tissue. The Demons have returned - stronger and more vicious than ever before. You mission is clear, there are no options: kill or be killed!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Ya derrotaste a los Demonios una vez; estaban todos muertos. O eso creías... Una sola Entidad Demoníaca escapó a la detección. Sistemáticamente, convirtió la carnicería muerta y en descomposición de nuevo en tejido vivo y grotesco. Los Demonios han regresado, más fuertes y más feroces que nunca. Tu misión está clara, no hay opciones: ¡mata o muere!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -246,7 +291,12 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3471,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NDME",
+            "NDMJ",
+            "NDMP"
+          ]
         },
         {
           "id": 2824,
@@ -279,14 +329,32 @@
           "kind": "remaster",
           "year": 2020,
           "igdbId": 224522,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01005D700E742000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/32b87d267730795171ae25b605e7cee3.png",
         "hero": "https://cdn2.steamgriddb.com/hero/7da8cfbdd6bebb76e383c1ecf334e522.png",
         "logo": "https://cdn2.steamgriddb.com/logo/7d46fde6325be39f06a245530a9c6424.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 110,
+          "platform": "n64",
+          "project": "Doom64EX-Plus",
+          "kind": "port",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/atsb/Doom64EX-Plus",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 2416,
@@ -298,6 +366,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76500",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Doom II: Hell on Earth",
           "source": "igdb",
@@ -307,6 +381,18 @@
           "field": "original_name",
           "value": "Doom II: Hell on Earth",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Doom II: Hell on Earth is a first-person shooter developed by id Software and released in 1994 as a sequel to the original Doom. The game continues the story, with players battling through Earth after it has been invaded by demonic forces.\n\nGameplay remains similar to its predecessor, featuring fast-paced combat, maze-like levels, and an array of weapons, including the introduction of the powerful Super Shotgun. Doom II also adds new enemy types, such as the Arch-vile and the Mancubus, increasing the game's challenge.\n\nInitially released for MS-DOS, Doom II has since been ported to numerous platforms, becoming a cornerstone of the FPS genre.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Doom II: Hell on Earth es un juego de disparos en primera persona desarrollado por id Software y lanzado en 1994 como secuela del Doom original. El juego continúa la historia: los jugadores luchan por recorrer la Tierra tras su invasión por fuerzas demoníacas.\n\nLa jugabilidad es similar a la de su predecesor, con combates trepidantes, niveles laberínticos y una variedad de armas, entre ellas la poderosa Super Shotgun, que se introduce aquí. Doom II también añade nuevos tipos de enemigos, como el Arch-vile y el Mancubus, que aumentan el desafío del juego.\n\nLanzado inicialmente para MS-DOS, Doom II se ha portado a numerosas plataformas y se ha convertido en un pilar fundamental del género de los FPS.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -443,9 +529,15 @@
       "originalName": "Doom Eternal",
       "year": 2020,
       "igdbId": 103298,
-      "popularity": 784,
+      "popularity": 785,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "27220",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Doom Eternal",
@@ -456,6 +548,18 @@
           "field": "original_name",
           "value": "Doom Eternal",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Doom Eternal is a first-person shooter developed by id Software and the sequel to Doom (2016). Players control the Doom Slayer as he fights to end a demonic invasion of Earth. Combat is built around aggressive resource management, where health, armor, and ammo are gained by executing, igniting, or chainsawing enemies. The game introduces platforming segments, destructible enemy weak points, an expanded weapon arsenal, and a multiplayer mode called Battlemode, where one player-controlled Slayer fights two player-controlled demons.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Doom Eternal es un juego de disparos en primera persona desarrollado por id Software y secuela de Doom (2016). Los jugadores controlan al Doom Slayer mientras lucha por poner fin a una invasión demoníaca de la Tierra. El combate se basa en una gestión agresiva de recursos: la salud, la armadura y la munición se obtienen ejecutando, incendiando o cortando con la motosierra a los enemigos. El juego introduce secciones de plataformas, puntos débiles destructibles en los enemigos, un arsenal de armas ampliado y un modo multijugador llamado Battlemode, en el que un jugador controla a un Slayer que se enfrenta a dos demonios controlados por otros jugadores.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -513,7 +617,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 103298,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100B1A00D8CE000"
+          ]
         }
       ],
       "images": {
@@ -532,6 +639,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58871",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Master Levels For Doom II",
           "source": "igdb",
@@ -541,6 +654,18 @@
           "field": "original_name",
           "value": "Master Levels For Doom II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The version of Master Levels For Doom II found as a part of the Unity remaster of Doom II.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La versión de Master Levels For Doom II incluida en el remaster de Doom II para Unity.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -646,6 +771,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58875",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Final Doom",
           "source": "igdb",
@@ -655,6 +786,18 @@
           "field": "original_name",
           "value": "Final Doom",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The version of Final Doom found in the DLC section of the Doom Unity remasters.\n\nFar from earth, the UAC recommenced their experiments on on of the moons of Jupiter. A spaceship, mistaken for a supply vexxel on radar, hovered above the base. Hideous demons poured out, blanketing the base with death. All your comrades were quickly slaughtered or zombified. This time, it's not about survival. It's about revenge.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La versión de Final Doom incluida en la sección de DLC de los remasters de Doom para Unity.\n\nLejos de la Tierra, la UAC reanudó sus experimentos en una de las lunas de Júpiter. Una nave, confundida en el radar con una nave de suministros, se cernía sobre la base. Demonios horrendos salieron en tropel, sumiendo la base en la muerte. Todos tus compañeros fueron rápidamente masacrados o convertidos en zombis. Esta vez no se trata de sobrevivir. Se trata de venganza.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -712,6 +855,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76530",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "No Rest for the Living",
           "source": "igdb",
@@ -721,6 +870,18 @@
           "field": "original_name",
           "value": "No Rest for the Living",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A remastered version of the No Rest for the Living made in the KEX Engine, community-published mod support, original midi soundtrack or the modern IDKFA version by Andrew Hulshult, improved performance with multithreaded rendering, BOOM source compatibility, accessibility options and translated into eight new languages.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Una versión remasterizada de No Rest for the Living, creada con el motor KEX; soporte para mods publicados por la comunidad; banda sonora MIDI original o la versión moderna IDKFA de Andrew Hulshult; rendimiento mejorado con renderizado multihilo; compatibilidad con código fuente BOOM; opciones de accesibilidad y traducción a ocho idiomas nuevos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -794,6 +955,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97557",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Doom 3",
           "source": "igdb",
@@ -803,6 +970,18 @@
           "field": "original_name",
           "value": "Doom 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The 2004-era Doom 3 with enhanced graphics, a checkpoint save system, 3D Capability for 3D Televisions and Achievements/Trophies (Xbox 360, Steam, and PS3).\n\nUnlike the original game which featured the Flashlight as a 'weapon' itself, the BFG Edition instead was 'armor-mounted' meaning players can attack and illuminate dark areas simultaneously.\n\nIt was released inside Doom 3: BFG Edition.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El Doom 3 de 2004 con gráficos mejorados, un sistema de guardado por puntos de control, capacidad 3D para televisores 3D y Logros/Trofeos (Xbox 360, Steam y PS3).\n\nA diferencia del juego original, que incluía la linterna como un «arma» en sí, en la edición BFG esta va montada en la armadura, lo que significa que los jugadores pueden atacar e iluminar zonas oscuras simultáneamente.\n\nSe lanzó dentro de Doom 3: BFG Edition.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -854,6 +1033,25 @@
           "steamAppId": 9050,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4c6f6719bec50eb89ca7b85756c3d27c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4299f209da83da82b711f1d631cc607b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f80bf05527157a8c2a7bb63b22f49aaa.png"
+      },
+      "ports": [
+        {
+          "id": 109,
+          "platform": "pc",
+          "project": "dhewm3",
+          "kind": "port",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/dhewm/dhewm3",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
       ]
     },
     {
@@ -862,9 +1060,15 @@
       "originalName": "Doom: The Dark Ages",
       "year": 2025,
       "igdbId": 302704,
-      "popularity": 164,
+      "popularity": 165,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "103050",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Doom: The Dark Ages",
@@ -875,6 +1079,18 @@
           "field": "original_name",
           "value": "Doom: The Dark Ages",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A single-player first-person shooter and prequel to Doom (2016). Set in the dark medieval world of Argent D'Nur, players control the Doom Slayer in a grounded, weighty combat style that emphasizes strategic engagements over the acrobatic mobility of previous entries. The game introduces a Shield Saw for blocking and parrying, new melee weapons, and drivable vehicles including a cybernetic dragon and a massive mech. The narrative focuses on the Slayer's origin story with expanded cutscenes and character development.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un shooter en primera persona para un jugador y precuela de Doom (2016). Ambientado en el oscuro mundo medieval de Argent D'Nur, los jugadores controlan al Doom Slayer con un estilo de combate sólido y pesado que privilegia los enfrentamientos estratégicos sobre la movilidad acrobática de entregas anteriores. El juego introduce una Shield Saw para bloquear y parar golpes, nuevas armas cuerpo a cuerpo y vehículos conducibles, entre ellos un dragón cibernético y un mecha enorme. La narrativa se centra en el origen del Slayer, con escenas cinemáticas ampliadas y desarrollo de personajes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -910,8 +1126,169 @@
           "igdbId": 302704,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8ea0329e385f393ba78cf71a82c031d9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/521ecba6f9748e7fed6b743a73ccfabd.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2eb62041c84abe80cf8ec5834d1c646e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 474,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 665,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 2416,
+          "reason": "1994"
+        },
+        {
+          "position": 3,
+          "gameId": 1032,
+          "reason": "1997"
+        },
+        {
+          "position": 4,
+          "gameId": 40821,
+          "reason": "2012"
+        },
+        {
+          "position": 5,
+          "gameId": 23343,
+          "reason": "2019"
+        },
+        {
+          "position": 6,
+          "gameId": 23344,
+          "reason": "2019"
+        },
+        {
+          "position": 7,
+          "gameId": 11479,
+          "reason": "2020"
+        },
+        {
+          "position": 8,
+          "gameId": 30605,
+          "reason": "2024"
+        },
+        {
+          "position": 9,
+          "gameId": 43474,
+          "reason": "2025"
+        }
+      ]
+    },
+    {
+      "id": 3575,
+      "kind": "story",
+      "rationale": "Los clásicos forman una línea; Doom 3 reinicia la historia y Dark Ages es precuela del Doom de 2016, que no está en el catálogo. Eternal va al final.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 665,
+          "reason": "Origen de la saga; da igual la versión."
+        },
+        {
+          "position": 2,
+          "gameId": 2416,
+          "reason": "Continúa directamente el primero."
+        },
+        {
+          "position": 3,
+          "gameId": 23344,
+          "reason": "Expansión de Doom II con 32 niveles nuevos."
+        },
+        {
+          "position": 4,
+          "gameId": 23343,
+          "reason": "Niveles extra para Doom II; complemento opcional."
+        },
+        {
+          "position": 5,
+          "gameId": 30605,
+          "reason": "Episodio extra de Doom II; complemento opcional."
+        },
+        {
+          "position": 6,
+          "gameId": 1032,
+          "recommendedVersionId": 2825,
+          "reason": "Secuela clásica de Doom II; el remaster de PC mejora el original."
+        },
+        {
+          "position": 7,
+          "gameId": 40821,
+          "recommendedVersionId": 97556,
+          "reason": "Reinicio de la historia; la edición BFG es la más completa."
+        },
+        {
+          "position": 8,
+          "gameId": 43474,
+          "recommendedVersionId": 103050,
+          "reason": "Precuela de la era moderna; versión de PC."
+        },
+        {
+          "position": 9,
+          "gameId": 11479,
+          "recommendedVersionId": 27220,
+          "reason": "Continuación del Doom de 2016; versión de PC."
+        }
+      ]
+    },
+    {
+      "id": 3576,
+      "kind": "community",
+      "rationale": "Dos clásicos primero, sin Final Doom ni los packs extra, y después Doom 64 y los modernos. Doom 3 es opcional por ser más lento y de terror. Sin fuentes consultadas: no pude acceder a la web.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 665,
+          "reason": "Base de todo; las versiones actuales son equivalentes."
+        },
+        {
+          "position": 2,
+          "gameId": 2416,
+          "reason": "El mejor diseño de niveles clásico; da igual la versión."
+        },
+        {
+          "position": 3,
+          "gameId": 1032,
+          "recommendedVersionId": 2825,
+          "reason": "Se recomienda su remaster, que mejora el original de N64."
+        },
+        {
+          "position": 4,
+          "gameId": 11479,
+          "recommendedVersionId": 27220,
+          "reason": "El shooter moderno más recomendado; versión de PC."
+        },
+        {
+          "position": 5,
+          "gameId": 43474,
+          "recommendedVersionId": 103050,
+          "reason": "Cierra la ruta moderna con un estilo más pesado."
+        },
+        {
+          "position": 6,
+          "gameId": 40821,
+          "recommendedVersionId": 97556,
+          "reason": "Opcional: terror y ritmo distintos; edición BFG."
+        }
+      ]
+    }
+  ]
 }

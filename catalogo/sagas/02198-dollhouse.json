@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "18061",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dollhouse",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dollhouse",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Delve deep into your mind to unravel the truth. However, beware that your own conscience is hunting you down, with a twist that allows you to see through its eyes at a deadly cost.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 11668,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control correcto con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento aceptable."
+            }
+          ]
         },
         {
           "id": 18061,
@@ -57,7 +90,28 @@
           "year": 2019,
           "igdbId": 11668,
           "steamAppId": 280850,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y mando para puzles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 18062,
@@ -65,7 +119,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 11668,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con recortes visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y rendimiento."
+            }
+          ],
+          "codes": [
+            "010065D014E0A000"
+          ]
         }
       ],
       "images": {
@@ -82,6 +160,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111918",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dollhouse: Behind the Broken Mirror",
           "source": "igdb",
@@ -90,6 +174,12 @@
         {
           "field": "original_name",
           "value": "Dollhouse: Behind the Broken Mirror",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Enter the broken mind of Eliza de Moor, a once-celebrated singer, now trapped in the labyrinth of her own forgotten memories. The only hope for recovering her memories lies with Doctor Stern and his experimental medicine. As Eliza, you'll navigate the reality and the world behind the broken mirror, guided by the effects of the drug.\n\nWill you be able to piece together the mystery of your past, or will you get lost in this dark and twisted reality?",
           "source": "igdb",
           "manual": false
         },
@@ -126,8 +216,31 @@
           "igdbId": 293788,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7zbe.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2554,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8844,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 47183,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

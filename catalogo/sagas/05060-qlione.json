@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Qlione Evolve is a game that takes place in a physics-based, liquid world. It's \"survival of the fittest\" game where players have to avoid bombs and traps to survive for as long as possible.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 52680,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobbgb.jpg"
+      }
     },
     {
       "id": 40567,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Qlione 2 is the follow-up to Qlione.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 65629,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocmrl.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3358,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40566,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 40567,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

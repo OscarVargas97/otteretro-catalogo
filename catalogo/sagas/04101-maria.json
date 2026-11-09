@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63669",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Maria: Kimitachi ga Umareta Wake",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Maria: Kimitachi ga Umareta Wake",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An adventure game for the PlayStation and Saturn about a psychiatrist attempting to treat a woman with Dissociative Identity Disorder.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 73496,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port con contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Depende de compatibilidad con Windows moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercano al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Posibles errores en sistemas actuales."
+            }
+          ]
         },
         {
           "id": 63669,
@@ -56,7 +89,42 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 73496,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado en tarjeta, controles de época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de PS1."
+            }
+          ],
+          "codes": [
+            "SLPS-01136",
+            "SLPS-01136-0",
+            "SLPS-01137",
+            "SLPS-01137-1",
+            "SLPS-01138",
+            "SLPS-01138-2",
+            "SLPS-91100",
+            "SLPS-91100-0",
+            "SLPS-91101",
+            "SLPS-91101-1",
+            "SLPS-91102",
+            "SLPS-91102-2"
+          ]
         }
       ],
       "images": {
@@ -73,6 +141,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63913",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Maria 2: Jutai Kokuchi no Nazo",
           "source": "igdb",
@@ -81,6 +155,12 @@
         {
           "field": "original_name",
           "value": "Maria 2: Jutai Kokuchi no Nazo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The sequel to Maria: Kimitachi ga Umareta Wake about rookie television reporter Maria Kunitomo, who becomes involved in the murder of a biologist after receiving a disk intended for her editor.\n\nThe game combines text-driven dialogue with first-person 3D exploration, computer-based investigation, branching decisions, and multiple endings. Players directly control Maria during exploration sequences and interact with environments to uncover evidence.",
           "source": "igdb",
           "manual": false
         },
@@ -106,7 +186,15 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 74346,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-02240",
+            "SLPS-02240-0",
+            "SLPS-02241",
+            "SLPS-02241-1",
+            "SLPS-02242",
+            "SLPS-02242-2"
+          ]
         }
       ],
       "images": {
@@ -114,5 +202,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3118,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25447,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 25600,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

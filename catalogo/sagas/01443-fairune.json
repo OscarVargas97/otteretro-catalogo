@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9340",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fairune",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Fairune",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"An action-puzzler RPG with a retro feel!\nThe scourge is back with a vengeance! Seal him off for good!\nCollect the three Spirit Icons to lead the way to victory!\"",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 59123,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control, pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor."
+            }
+          ]
         },
         {
           "id": 9340,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 59123,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Buen control y pantalla más grande."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más nítida."
+            }
+          ]
         }
       ],
       "images": {
@@ -85,6 +139,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "\"Fairune 2 is a fantasy puzzle-solving adventure RPG, which has you explore the map by solving puzzles, tricks and beating monsters.\n\nYou are called upon by the mysterious book that can tell you where to find the lost fairy. In this adventure, you encounter the wonderful girl that may lead you to the truth of the world.\n\nWith much greater content than the prequel, the powered-up 8-bit graphics and sounds will bring forth the new reminiscent gameplay.\"",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -106,5 +166,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2345,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4564,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 4729,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

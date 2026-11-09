@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7731",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hotel Transylvania",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Hotel Transylvania",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Hotel Transylvania is a platformer based on the family comedy CGI film of the same name.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,13 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 47705,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AH8E",
+            "CTR-P-AH8F",
+            "CTR-P-AH8P",
+            "CTR-P-AH8X"
+          ]
         },
         {
           "id": 7731,
@@ -56,7 +74,13 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 47705,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "THVE",
+            "THVP",
+            "THVX",
+            "THVY"
+          ]
         }
       ],
       "images": {
@@ -74,6 +98,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "25529",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hotel Transylvania 3: Monsters Overboard",
           "source": "igdb",
@@ -82,6 +112,12 @@
         {
           "field": "original_name",
           "value": "Hotel Transylvania 3: Monsters Overboard",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dracula, Mavis and their monster friends are marooned on the mysterious Lost Islands – and only you, in command of lovable little creatures, the Impa, can save them! Explore the islands, discover new Impa abilities, and rescue Frankenstein, Murray and Wayne from fearsome enemies. But hurry – the Drac-Pack’s lives are at stake!",
           "source": "igdb",
           "manual": false
         },
@@ -124,7 +160,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 86151,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100017007980000"
+          ]
         }
       ],
       "images": {
@@ -143,6 +182,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "53681",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hotel Transilvania: Aventuras e Historias de Terror",
           "source": "igdb",
@@ -151,6 +196,12 @@
         {
           "field": "original_name",
           "value": "Hotel Transylvania: Scary-Tale Adventures",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Hotel Transylvania: Scary-Tale Adventures is a 3D platform adventure that will take players on a fairy tale journey, putting them in control of their favorite characters as the game re-imagines classic stories, such as “Little Red Riding Hood” and “The Emperor’s New Clothes.”",
           "source": "igdb",
           "manual": false
         },
@@ -201,7 +252,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 185966,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100C9001384E000"
+          ]
         }
       ],
       "images": {
@@ -209,5 +263,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1540,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3973,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 10939,
+          "reason": "2018"
+        },
+        {
+          "position": 3,
+          "gameId": 21716,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

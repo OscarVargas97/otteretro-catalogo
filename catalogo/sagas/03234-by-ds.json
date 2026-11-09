@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A digital coloring book that lets you recreate masterpieces by renowned artists such as Hokusai, Cezanne and Van Gogh, in their own artistic style.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 79868,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AONP"
+          ]
         }
       ],
       "images": {
@@ -90,7 +99,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 69090,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AQ7E",
+            "AQ7P"
+          ]
         }
       ],
       "images": {
@@ -98,5 +111,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2889,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17475,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 17481,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

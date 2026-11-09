@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2659",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Let's Attack Crazy Cross",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Let's Attack Crazy Cross",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Let's Attack Crazy Cross is a puzzle video game which was developed and published by Konami. It was released for Arcade and PlayStation on March 1996 and it is part of the Taisen Puzzle-Dama series.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 283389,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Jugable pero algo tosco."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos simples y cargas."
+            }
+          ]
         },
         {
           "id": 2659,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 136858,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles más cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port con ligeros cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Más fluido sin cargas largas."
+            }
+          ]
         }
       ],
       "images": {
@@ -85,6 +139,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Wagamama Fairy: Mirumo de Pon! Taisen Mahoudama is a Taisen Puzzle-Dama game featuring characters from the slice of life manga and anime series Wagamama Fairy: Mirumo de Pon!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -98,7 +158,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 283397,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BMPJ"
+          ]
         }
       ],
       "images": {
@@ -106,5 +169,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2127,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1003,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 2932,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

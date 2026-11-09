@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Billy Hatcher Hyper Shoot is a Game Boy Advance multiboot game that which is unlocked by connecting to the Nintendo GameCube via the Nintendo GameCube - Game Boy Advance Link Cable. It was stored in RAM, and deleted after the session.\n\nIt was later ported to i-mode cell phones and distributed via Sonic Cafe, only in Japan.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -67,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43742",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Billy Hatcher and the Giant Egg",
           "source": "igdb",
@@ -75,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Billy Hatcher and the Giant Egg",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Darkness has fallen upon a once-magical land. An evil King who seeks to rule with an everlasting night has captured the creatures that inhabit this realm. Now, a young boy must use the powers of a legendary suit to control special eggs in order to restore light to the land.\n\nGamers will collect magical eggs, use them to solve puzzles and nurture them with items found while exploring the world. Gamers will be able to hatch the eggs and discover magical creatures with a variety of skills, introducing a strategic planning element to the combat and puzzles.\n\nPlayers will explore massive, colourful environments, each with their own missions and secrets, and then defeat the evil boss of each stage. It's up to Billy Hatcher to return light to the land.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +110,32 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 3810,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con todos sus modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control bueno con mando de GameCube."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución limitada a 480p."
+            }
+          ],
+          "codes": [
+            "DL-DOL-GEZE-USA",
+            "DL-DOL-GEZP-EUR"
+          ]
         },
         {
           "id": 43742,
@@ -100,7 +143,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 3810,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido con pequeñas mejoras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con mando, aunque con ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel con pocos cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución, aunque con algunos errores de PC."
+            }
+          ]
         }
       ],
       "images": {
@@ -110,5 +174,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2250,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2946,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 16625,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

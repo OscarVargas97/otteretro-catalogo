@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "From Mark Cerny, one of the greatest minds in video games today, Knack is a fun-filled adventure of colossal proportions that invites players to wield fantastic powers and discover a unique and vibrant world.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -49,6 +55,27 @@
           "year": 2013,
           "igdbId": 2957,
           "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f752f661ad4cf67fa53a203e7cf67ed6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e76ad700d7fa440fff021c166effab3b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1e79596878b2320cac26dd792a6c51c9.png"
+      },
+      "ports": [
+        {
+          "id": 217,
+          "platform": "ps4",
+          "project": "knack_pc",
+          "kind": "native-layer",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "shadPS4",
+          "emulatorLevel": 1
         }
       ]
     },
@@ -74,6 +101,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Meet Knack, a little guy with surprising moves and the ability to transform from big to small and back again in this family-friendly adventure from the developers at PlayStation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -89,8 +122,48 @@
           "igdbId": 26194,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b96eb888b68dba9368dc81a02b77175a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9c21455c626adc99e60f9f4edcfe9a69.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5a2afca61e35f45a7dd44ca46e0225f4.png"
+      },
+      "ports": [
+        {
+          "id": 216,
+          "platform": "ps4",
+          "project": "Knack-II-pc-port",
+          "kind": "native-layer",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Hyant4/Knack-II-pc-port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "shadPS4"
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3386,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41571,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 42080,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19356",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gonner",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "Gonner",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Gonner is a tough as hell procedurally-generated 2D platformer with roguelike elements, following the largely misunderstood and altruistic Ikk on a journey to cheer up his only friend in this world—a giant landbound whale named Sally—by searching for just the right trinket in the deep and dark places nearby.\n\nWith Death as his mentor, supplying both a multitude of abilities and arsenal for Ikk to use, Ikk traverses an ever-changing land full of unwieldy creatures who don’t appreciate his trespassing or his friend Sally. Several different environments, arduous bosses, hidden secrets, multiple endings, and more await Ikk on his journey to make one person happy even if it kills him—which it certainly will.\"",
           "source": "igdb",
           "manual": false
         },
@@ -39,7 +51,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 19002,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento."
+            }
+          ]
         },
         {
           "id": 19356,
@@ -48,7 +81,28 @@
           "year": 2016,
           "igdbId": 19002,
           "steamAppId": 437570,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles precisos con mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y nítida."
+            }
+          ]
         },
         {
           "id": 19357,
@@ -56,7 +110,31 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 19002,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Excelente en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento."
+            }
+          ],
+          "codes": [
+            "01007C2002B3C000"
+          ]
         },
         {
           "id": 116247,
@@ -64,7 +142,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 111319,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento."
+            }
+          ]
         }
       ],
       "images": {
@@ -83,6 +182,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "36721",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gonner2",
           "source": "igdb",
@@ -91,6 +196,12 @@
         {
           "field": "original_name",
           "value": "Gonner2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In this sequel to Gonner, journey through deep dark chaotic places with unimaginable sparks of color as you go on a mission to help Death rid a mysterious presence from her lair. Battle crazy bosses and lose your head (a lot) in this messy, cute, fast-paced procedurally-generated platformer.",
           "source": "igdb",
           "manual": false
         },
@@ -133,7 +244,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 134862,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100EA70127F2000"
+          ]
         }
       ],
       "images": {
@@ -143,5 +257,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2996,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9155,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 14331,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

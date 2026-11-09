@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "23098",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Maneater",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Maneater",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You were cut from your mother's body and left to die in the unforgiving waters of the Gulf Coast. Your only tools are your wits, your jaws, and an uncanny ability to evolve as you feed. Anything and everything is on the menu... provided you kill it before it kills you.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 46800,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010093D00CB22000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114072",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Maneater 2",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Maneater 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The splash-hit ShaRkPG returns in Maneater 2! Eat, explore, and evolve as you try to escape an invite-only preview event for Neptune’s Kingdom — an ultra-luxury seaside theme park destined for disaster, where YOU are that disaster.",
           "source": "igdb",
           "manual": false
         },
@@ -144,8 +171,31 @@
           "igdbId": 416101,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coctj8.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2647,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10190,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 47989,
+          "reason": "2027"
+        }
+      ]
+    }
+  ]
 }

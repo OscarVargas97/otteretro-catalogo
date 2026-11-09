@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19675",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Forgotton Anne",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Forgotton Anne",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Forgotton Anne is a 2d cinematic adventure game combining puzzle platforming with adventure game elements. You play as Anne, the enforcer keeping order in the Forgotton Realm, as she sets out to squash a rebellion that might prevent her master, Bonku, and herself from returning to the human world.\n\nThe World of Forgotton Anne: Imagine a place where everything that is lost and forgotten goes; old toys, letters, single socks. The Forgotten Realm is a magical world inhabited by Forgotlings, creatures composed of mislaid objects longing to be remembered again.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 24426,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010059E00B93C000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "70042",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Forgotlings",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Forgotlings",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Award-winning cinematic narrative adventure set in a hand-drawn world of living forgotten objects. Lead Fig and the crew of the Volare through a story of identity, unity, and survival—where diplomacy, difficult choices, and moments of action shape the fate of five divided tribes.",
           "source": "igdb",
           "manual": false
         },
@@ -151,5 +178,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2589,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9234,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 28166,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6628",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mini Ninjas",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mini Ninjas",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mini Ninjas is a game that combines furious action with stealth and exploration for an experience that appeals to a wide audience across age groups and preferences. It’s an action-adventure with a strong focus on allowing the player freedom to explore the world and has the depth to allow for very varied gameplay and approaches to getting through the game.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2192,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00512",
+            "BLUS-30284"
+          ]
         },
         {
           "id": 6627,
@@ -56,7 +72,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2192,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RNJE-USA-B0",
+            "RVL-RNJP-EUR-B0"
+          ]
         },
         {
           "id": 6628,
@@ -81,7 +101,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2192,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YNJE",
+            "YNJP"
+          ]
         }
       ],
       "images": {
@@ -112,6 +136,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Calling all ninjas! Get ready to swipe, kick and battle your way through 21 levels of intense ninja action as you help Hiro rescue his master and fellow ninjas from the clutches of the evil Samurai Warlord. Be prepared to face a multitude of enemies that will push your skills to the limit and test your ingenuity. So pack your ninja stars, sword and more and get ready for adventure...a Mini Ninjas Adventure.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -127,8 +157,31 @@
           "igdbId": 20234,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2qp7.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2277,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3381,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 48602,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

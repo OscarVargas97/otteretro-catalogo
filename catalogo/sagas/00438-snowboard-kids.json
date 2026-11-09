@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2046",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Snowboard Kids",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Snowboard Kids",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The kids are arguing about their snowboarding skills. The debate escalates to the point where they decide to hold a snowboarding tournament to determine who is the best. One character, Shinobin, has no involvement whatsoever until he is unlocked by the player.\n\nIn addition to the usual gameplay of a snowboarding game, Snowboard Kids adds \"Shots\" (special weapons used to attack players) and items which can help the player, hinder other players, or both.\n\nThe game has nine main courses. Although some of the courses are snowy mountains, many are courses that would be unorthodox for snowboarding in the real world. Such courses include an amusement park, a desert, a vast valley, a dark highway, and a Japanese village during the cherry blossom festival.\n\nThere were several game mechanics that were unique to Snowboard Kids from other snowboard games and racing games at the time. One was the addition of the second item slot, allowing each player to carry a shooting item and support item (such as a rock, or invisibility) at the same time. Also, players needed to pay 100 gold in order to grab an item during the race, which could be obtained either through performing tricks or collecting coins scattered across the course. All courses also required players to race down the hill for multiple laps. Once a player had reached the bottom of the hill, he or she would need to pass through the lift gate to be transported back to the top of the hill, and could not be attacked by other players in this transition.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,32 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3342,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo, con multijugador a cuatro."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control preciso y muy divertido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Fluida y estable para su época."
+            }
+          ],
+          "codes": [
+            "NSKE",
+            "NSKP"
+          ]
         },
         {
           "id": 64142,
@@ -56,14 +93,92 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 72103,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Menos contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, menos refinado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Funciona, pero con menos pulido."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/5f817cc5ee20318a283837651cf1a808.png",
         "hero": "https://cdn2.steamgriddb.com/hero/a8c3343ad993f996d9fa7df03a2f31a8.png",
         "logo": "https://cdn2.steamgriddb.com/logo/4db292b2447fd19b079af94d3537b0ce.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1065,
+          "platform": "n64",
+          "project": "snowboardkids-recompiled",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/boricuapab/snowboardkids-recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1066,
+          "platform": "n64",
+          "project": "snowboardkids-recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/cdlewis/snowboardkids-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1067,
+          "platform": "n64",
+          "project": "SnowboardKids-Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/HikariLucy/SnowboardKids-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1438,
+          "platform": "n64",
+          "project": "snowboardkids-decomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/cdlewis/snowboardkids-decomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1200,
@@ -87,6 +202,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The game is set in Snow Town, which is the main hometown of the protagonists. The plot follows the daily lives and adventures of the kids, and the rather ridiculous attempts of Damien to sabotage them.\n\nThe gameplay of this game is almost identical to its predecessor's, but with a few differences.\n\nThere are now three distinct playing modes: the Story mode, which follows the game plot and uses the classical system of cash prizes by winning the races; the battle mode, which includes multiplayer mode; and the Training mode.\n\nThere were new additions and changes to the Items and Shots. All of them were redesigned and the Shots were renamed as Weapons. Additions include the Rocket, the Wings and the Whirlwind (see more below). Other changes to the Items and Weapons include the reduction in the freeze time when a character is hit by the Freezing Shot, and the effect of losing coins when hit by a Slapstick.\n\nThe special tricks (which were different for each character and required the player to perform a combo to do them) were replaced by the ability of doing multiple tricks while in the air. It also added the ability to repel Weapon attacks by performing a Trick or Board Grab in the imminence of the hit. The player can also look behind by pressing the R button.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -100,14 +221,47 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3343,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NK2E",
+            "NK2P"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/b1a491999695f9df23123c2290041da8.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/4ee0331f55ba0c795f89feffdfdf1e77.png",
         "logo": "https://cdn2.steamgriddb.com/logo/3bbf7cb52c81e8125532adff3b21a6b4.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1064,
+          "platform": "n64",
+          "project": "snowboardkids2-recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/cdlewis/snowboardkids2-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1437,
+          "platform": "n64",
+          "project": "snowboardkids2-decomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/cdlewis/snowboardkids2-decomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 3551,
@@ -131,6 +285,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SBK: Snowboard Kids, released in Japan as Snowboard Kids Party (スノボキッズパーティー sunobo kizzu pātī?), is a snowboarding video game for the Nintendo DS released on November 22, 2005 in North America and two days later in Japan. It was also released in Europe on April 28, 2006. It is the fourth in the Snowboard Kids series following three previous games released on the Nintendo 64 and the PlayStation. Up to four people can play wirelessly with one game card. Though the name is the same as the other games, the characters are teenagers in this installment.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -144,7 +304,11 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 47725,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ASBE",
+            "ASBP"
+          ]
         }
       ],
       "images": {
@@ -154,5 +318,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1439,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1079,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 1200,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 3551,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

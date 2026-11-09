@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114630",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Battlestations: Midway",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Battlestations: Midway",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Battlestations: Midway is an immense action game that drops players into massive air, sea, and undersea battles from Pearl Harbor to the Battle of Midway.",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,12 @@
           "igdbId": 4223,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/dffe2f9dbb551efe6e610f4a77c508e9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6ddefcb8a5912083892616ef3c95a8b6.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/662a2e96162905620397b19c9d249781.png"
+      }
     },
     {
       "id": 48297,
@@ -71,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114663",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Battlestations: Pacific",
           "source": "igdb",
@@ -79,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Battlestations: Pacific",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Experience one war through two epic sagas where you will be a part of history or change it. Feel the power of the historically authentic and decisive battles of the Pacific War.",
           "source": "igdb",
           "manual": false
         },
@@ -107,8 +136,33 @@
           "igdbId": 4222,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/92b2b4996fbc9d29e1436a916e1be6dc.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/56c3b2c6ea3a83aaeeff35eeb45d700d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3a246af2678dfad0d536e0a62cf49179.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3499,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48274,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 48297,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

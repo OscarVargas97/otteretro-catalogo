@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "20091",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deemo",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Deemo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rayark brings you Deemo, a hybrid of music rhythm game and the story of urban fantasy, with hand-drawn art, story-telling gallery and real instrumental feedback of piano key sound.\n\nDeemo is a mystic character lives in solitude, a castle, all by itself. A little girl falls from the sky, not knowing who she is, where she comes from. To help the little girl back to her world, Deemo comes to realize a tree keeps growing tall on top of the piano whenever it plays. What would Deemo do when it gets comfortable with the companionship it never had before? What if the little girl couldn't deal with the truth when she seemingly lost memories regained?!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 27028,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Canciones base de la época."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil nativa en Vita."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor."
+            }
+          ]
         },
         {
           "id": 20091,
@@ -56,11 +89,36 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 27028,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más canciones y contenido adicional."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Táctil en portátil y mando en dock."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y mejor imagen."
+            }
+          ],
+          "codes": [
+            "01002CC0062B8000",
+            "0100DD100AE8C000"
+          ]
         }
       ],
       "images": {
-        "cover": "https://cdn2.steamgriddb.com/grid/189acb8a91030adef42cbde096ddfb75.png",
+        "cover": "https://cdn2.steamgriddb.com/grid/f06e4d20a48889c709ce0c0fba0d345c.png",
         "hero": "https://cdn2.steamgriddb.com/hero/54e62407e083c71d1935816520e48420.png",
         "logo": "https://cdn2.steamgriddb.com/logo/a330fd4e87085025813d74b5f3f2c45b.png"
       }
@@ -87,6 +145,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Experience Deemo: The Last Recital, a music rhythm game and story of urban fantasy.\n\nDeemo is a mystic being that lives in solitude in a castle all by itself. His life changes when a little girl who lost her memories, unknowingly falls from the sky, not knowing who she is and where she came from. Deemo comes to realize that whenever he plays the piano, a tree in front of him grows taller and taller. Confident that the tree can grow tall enough to help the little girl reach the sky from where she came from, the two come together to play the piano together. Can Deemo help the little girl regain her memories and help her get back home?\n\nEnjoy all remade high quality animations as well as new modes: “After Story”, “Duet” and “Duel” exclusively for PS Vita!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -102,8 +166,31 @@
           "igdbId": 26996,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co53hc.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2597,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9317,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 41057,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

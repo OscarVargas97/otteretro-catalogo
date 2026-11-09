@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Point Blank DS turns your stylus into a light gun in this port of classic arcade game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 20532,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AGLE",
+            "AGLP"
+          ]
         }
       ],
       "images": {
@@ -78,6 +88,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Point Blank is a first-person arcade shooter developed by Namco. Players use two attached light guns to hit targets onscreen; missions require speed, quick judgment or pinpoint accuracy. The game consists of non-violent, all-ages, shooting contests like shooting targets, shooting cardboard targets, etc.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1994",
           "source": "igdb",
@@ -91,14 +107,34 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 13899,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-00886",
+            "SLUS-00481"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/334813fe4fe4021b1f884619abef595a.png",
         "hero": "https://cdn2.steamgriddb.com/hero/8192fbf958995ecb5cb758f4712fc83c.png",
         "logo": "https://cdn2.steamgriddb.com/logo/3f69d4306ddac765a595bb09428db3e8.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 977,
+          "platform": "ps1",
+          "project": "point-blank-recompiled",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/TekRantGaming/point-blank-recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 24154,
@@ -122,6 +158,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Point Blank 2 is the sequel to the now classic arcade game Point Blank, which was converted to the PlayStation in 1998. Using the Namco built GunCon (an arcade-like light gun), it offers 70 new shooting galleries, different party modes and a new single-player game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -135,7 +177,11 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 40988,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-02180",
+            "SLUS-00796"
+          ]
         }
       ],
       "images": {
@@ -164,6 +210,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ghoul Panic is a comedy action-adventure game developed by Raizing and published by Namco, set in a haunted mansion. The original arcade cabinet was released in July 1999, and ported to the Playstation in April 2000 with additional exclusive game modes including Survival, Adventure and Remix.. Using a light gun, take on the might of vampires, monsters, mummies, skeletons and spooks to open the locked doors and uncover hidden bonuses.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -177,7 +229,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 14392,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-02543"
+          ]
         }
       ],
       "images": {
@@ -208,6 +263,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The escapades of Namco's Dr. Dan and Dr. Don continue in Point Blank 3, the third edition of the irreverent, mini-game based light-gun series. A selection of 80 events are offered, many of which thrust the hapless duo into situations that require timely intervention by the player on their behalf, testing your reflexes and shooting accuracy at the same time. The myriad of events present the player with basic tasks that range in both scope and difficulty. A plethora of mini-game formats are provided that include shooting color-coded targets to protecting the two numbskulls from threatening objects, to those that require the player to perform rudimentary mathematics calculations before shooting the correct answer. Cameo appearances by Tekken characters, classic Namco franchises and other such in-jokes abound in the many scenarios players will find themselves embroiled.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -221,7 +282,11 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 44979,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-03383",
+            "SLUS-01354"
+          ]
         }
       ],
       "images": {
@@ -231,5 +296,40 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 917,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24036,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 24154,
+          "reason": "1996"
+        },
+        {
+          "position": 3,
+          "gameId": 24292,
+          "reason": "1999"
+        },
+        {
+          "position": 4,
+          "gameId": 24767,
+          "reason": "2000"
+        },
+        {
+          "position": 5,
+          "gameId": 3568,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

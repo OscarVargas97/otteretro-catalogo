@@ -3,7 +3,7 @@
   "name": "SoulCalibur",
   "igdbKind": "franchise",
   "igdbId": 2005,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2002,
       "igdbId": 1565,
       "popularity": 194,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "96369",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "SoulCalibur II",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "SoulCalibur II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SoulCalibur II is the third installment in the Soul series and continues the tradition of his predecessors with improved graphics, new characters and new levels. A majority of the action takes place in Weapon Master mode where you have to choose a character and travel a set map to fight the many other warriors through different levels and challenges. Console ports were released, including guest characters from other franchises.\n\nThe Arcade version has a unique mode called \"Conquest Mode\". This mode, which uses a name and password system to save data, allows the player to select one army among four. The player then fights against enemies in a series of eight 1-round battles, win or lose (the first seven are based on the player's rank, and the eighth is chosen by the player – this can only be interrupted by a Versus challenger.) After each round, the player earns EXP and can be promoted, and the game also rates the player in four categories: Soul, Power, Wisdom and Skill. The game also keeps track of which moves the player knows and uses most often. After the eight battles, territory control is updated and the player has the option to fight a bonus round against their character played by the AI.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SoulCalibur II es la tercera entrega de la serie Soul y continúa la tradición de sus predecesores con gráficos mejorados, nuevos personajes y nuevos niveles. La mayor parte de la acción transcurre en el modo Weapon Master, en el que el jugador elige un personaje y recorre un mapa establecido para enfrentarse a numerosos guerreros en distintos niveles y desafíos. Se lanzaron versiones para consola, con personajes invitados de otras franquicias.\n\nLa versión arcade tiene un modo único llamado «Conquest Mode». Este modo, que utiliza un sistema de nombres y contraseñas para guardar datos, permite al jugador elegir un ejército entre cuatro. Después, el jugador se enfrenta a los enemigos en una serie de ocho combates de una sola ronda, gane o pierda (los primeros siete se basan en el rango del jugador, y el octavo lo elige el propio jugador; solo puede interrumpirse con un retador del modo Versus). Tras cada ronda, el jugador gana EXP y puede ascender, y el juego también lo evalúa en cuatro categorías: Soul, Power, Wisdom y Skill. El juego registra además qué movimientos conoce el jugador y cuáles usa con más frecuencia. Tras los ocho combates, se actualiza el control de territorios y el jugador puede optar por una ronda extra contra su personaje controlado por la IA.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,12 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 227987,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GRSE-USA",
+            "DL-DOL-GRSJ-JPN",
+            "DL-DOL-GRSP-EUR"
+          ]
         },
         {
           "id": 85357,
@@ -56,6 +79,31 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 227986,
+          "criteria": [],
+          "codes": [
+            "SCKA-20016",
+            "SLES-51799",
+            "SLES-51799/GER",
+            "SLPS-25230",
+            "SLUS-20643",
+            "SLUS-20643GH",
+            "SLUS-20643P3"
+          ]
+        },
+        {
+          "id": 96368,
+          "platform": "ps3",
+          "kind": "remaster",
+          "year": 2013,
+          "igdbId": 20970,
+          "criteria": []
+        },
+        {
+          "id": 96369,
+          "platform": "x360",
+          "kind": "remaster",
+          "year": 2013,
+          "igdbId": 20970,
           "criteria": []
         },
         {
@@ -71,6 +119,85 @@
         "cover": "https://cdn2.steamgriddb.com/grid/73751fa59c3cfa96c7d3330adb106066.png",
         "hero": "https://cdn2.steamgriddb.com/hero/573572e4e9a8486a02fbc7eeeaffba7b.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/a3f61f3a8034cbfb5ecf0d785e750fb3.png"
+      },
+      "ports": [
+        {
+          "id": 1084,
+          "platform": "gc",
+          "project": "RingOut",
+          "kind": "recomp",
+          "toolchain": "RingOut",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/jackpoison-prog/RingOut",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
+    },
+    {
+      "id": 19640,
+      "nameEs": "Soulcalibur Legends",
+      "originalName": "Soulcalibur Legends",
+      "year": 2007,
+      "igdbId": 5170,
+      "popularity": 13,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Soulcalibur Legends",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Soulcalibur Legends",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An action game for the Nintendo Wii set between the events of Soul Edge and Soul Calibur, depicting Siegfried Schtauffen's fall from grace and descent into darkness at the hands of the demon blade Soul Edge.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un juego de acción para Nintendo Wii ambientado entre los acontecimientos de Soul Edge y Soul Calibur, que narra la caída en desgracia de Siegfried Schtauffen y su descenso a la oscuridad a manos de la espada demoníaca Soul Edge.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2007",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 48925,
+          "platform": "wii",
+          "kind": "original",
+          "year": 2007,
+          "igdbId": 5170,
+          "criteria": [],
+          "codes": [
+            "RVL-RSLE-USA",
+            "RVL-RSLJ-JPN",
+            "RVL-RSLK-KOR",
+            "RVL-RSLP-EUR"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cb606622b86a18158fc6da2293449278.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/15826f19ea4eff3ab9b34f411276995c.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/47317e1d1813ffa6e7046356137787b2.png"
       }
     },
     {
@@ -95,6 +222,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Soul Edge is a 3D arcade fighting game and the first in the Soul series, it is one of the first 3D fighting game in history that place a particular emphasis on the story of the fighters. Each character have their own weapon, allowing for a wide range of play styles. The slower, longer ranged characters try to deliver their heavy blows from a distance whereas the quicker, faster characters try to get in as close as possible and deliver quick-hitting attacks.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Soul Edge es un juego de lucha arcade en 3D y el primero de la serie Soul. Es uno de los primeros juegos de lucha en 3D de la historia que pone un énfasis especial en la historia de sus luchadores. Cada personaje tiene su propia arma, lo que permite una gran variedad de estilos de juego. Los personajes más lentos y de mayor alcance intentan asestar sus golpes contundentes desde la distancia, mientras que los más rápidos y ágiles intentan acercarse lo máximo posible y propinar ataques veloces.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -108,7 +247,13 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 305428,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00545",
+            "SLPS-00555",
+            "SLPS-91168",
+            "SLPS-91454"
+          ]
         }
       ],
       "images": {
@@ -127,6 +272,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81543",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SoulCalibur III",
           "source": "igdb",
@@ -136,6 +287,18 @@
           "field": "original_name",
           "value": "SoulCalibur III",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Soulcalibur III is a fighting game produced by Namco as a sequel to Soulcalibur II and the fourth installment in the Soul series. The game includes three new modes and a larger character roster with 24 characters playable in Tales of Souls mode and an additional 18 playable in all other modes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Soulcalibur III es un juego de lucha producido por Namco como secuela de Soulcalibur II y la cuarta entrega de la serie Soul. Incluye tres modos nuevos y una plantilla de personajes más amplia: 24 personajes jugables en el modo Tales of Souls y otros 18 disponibles en todos los demás modos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -152,7 +315,41 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 1566,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo, con Chronicle of the Sword y creación de personajes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Jugable, pero sin mejoras modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución SD y cargas largas."
+            }
+          ],
+          "codes": [
+            "SCAJ-20159",
+            "SCES-53312",
+            "SCES-53312/ANZ",
+            "SCES-53312/P",
+            "SCES-53312/P/ANZ",
+            "SCES-53312/P/GER",
+            "SCKA-20059",
+            "SLPM-61133",
+            "SLPS-25577",
+            "SLUS-21216",
+            "SLUS-21216GH"
+          ]
         },
         {
           "id": 81543,
@@ -160,7 +357,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 370000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Debería conservar el contenido, aunque está sin verificar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando moderno, y posiblemente guardado y menús mejorados."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con retoques menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución y carga mejores que en PS2."
+            }
+          ]
         },
         {
           "id": 81544,
@@ -168,7 +386,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 370000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Debería conservar el contenido, aunque está sin verificar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando moderno, y posiblemente guardado y menús mejorados."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con retoques menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Debería ser la más fluida, con cargas casi instantáneas."
+            }
+          ]
         }
       ],
       "images": {
@@ -187,6 +426,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85835",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SoulCalibur: Broken Destiny",
           "source": "igdb",
@@ -196,6 +441,18 @@
           "field": "original_name",
           "value": "SoulCalibur: Broken Destiny",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Soulcalibur: Broken Destiny is a 2009 fighting game.\n\nSoul Calibur: Broken Destiny features a large roster of playable characters, including returning fighters and new additions. Combat incorporates mechanics such as Critical Finishes, Soul Crushes, and Equipment Destruction. The game introduces a new single-player mode designed to test player reactions and support skill development. It also includes local wireless multiplayer via the PSP’s ad hoc networking, allowing two players to compete directly. Character customization returns with an expanded set of options for creating and modifying fighters.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Soulcalibur: Broken Destiny es un juego de lucha de 2009.\n\nSoulcalibur: Broken Destiny cuenta con una amplia plantilla de personajes jugables, con luchadores que regresan y nuevas incorporaciones. El combate incorpora mecánicas como los Critical Finishes, los Soul Crushes y la destrucción de equipo. El juego presenta un nuevo modo para un solo jugador, diseñado para poner a prueba los reflejos del jugador y favorecer el desarrollo de sus habilidades. También incluye multijugador local inalámbrico mediante la red ad hoc de PSP, que permite que dos jugadores compitan directamente. La personalización de personajes regresa con un conjunto ampliado de opciones para crear y modificar luchadores.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -212,7 +469,35 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 1568,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo: Gauntlet, Trials y creación de personajes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Pantalla pequeña, un solo stick y multijugador solo local por ad-hoc."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución de PSP, con cargas notables."
+            }
+          ],
+          "codes": [
+            "UCAS-40275",
+            "UCKS-45126",
+            "ULES-01298",
+            "ULJS-00202",
+            "ULUS-10457"
+          ]
         },
         {
           "id": 85834,
@@ -220,7 +505,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 272550,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Debería conservar el contenido, aunque está sin verificar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando completo y pantalla grande."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con mejoras de presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución mucho mayor y mejores cargas."
+            }
+          ]
         },
         {
           "id": 85835,
@@ -228,9 +534,35 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 272550,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Debería conservar el contenido, aunque está sin verificar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando completo y pantalla grande."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con mejoras de presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Debería ofrecer la mejor resolución, fps y cargas rápidas."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/dfd95dc6eeb1e36a6d79fd7fcf144a48.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f6ac50db92ee769cf0c39183f5fbf706.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2d86c49db27011beb778b65b84d15017.png"
+      }
     },
     {
       "id": 39517,
@@ -242,6 +574,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94227",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SoulCalibur IV",
           "source": "igdb",
@@ -251,6 +589,18 @@
           "field": "original_name",
           "value": "SoulCalibur IV",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Swords will be honed and weapons optimized as the world renowned weapon-based fighting series Soulcalibur unveils a fourth installment. Delivering new gameplay modes, characters and enhanced features with unprecedented 3D modeling and animation, Soulcalibur IV strives to be the definitive fighting game experience. The unrelenting pursuit of two legendary swords continues as Soulcalibur IV re-introduces classic warriors from the series as well as debuting new characters bringing new conflict and intrigue. Soulcalibur IV propels the fighting genre into the next-gen era with visually realistic environments, interactive stages, enhanced AI, and a new battle system.\"\n\nExclusive to the Xbox 360 version is Yoda from Star Wars, who’s inclusion was meant to represent the colours of the Xbox Logo.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "«Las espadas se afilarán y las armas se optimizarán mientras la mundialmente reconocida serie de lucha con armas Soulcalibur presenta su cuarta entrega. Ofrece nuevos modos de juego, personajes y funciones mejoradas, con un modelado y una animación 3D sin precedentes; SoulCalibur IV aspira a ser la experiencia definitiva de juego de lucha. La incansable búsqueda de dos espadas legendarias continúa, ya que SoulCalibur IV recupera a guerreros clásicos de la serie y presenta a nuevos personajes que traen consigo nuevos conflictos e intrigas. SoulCalibur IV lleva el género de lucha a la era de la nueva generación, con entornos visualmente realistas, escenarios interactivos, una IA mejorada y un nuevo sistema de combate.»\n\nExclusivo de la versión para Xbox 360 es Yoda, de Star Wars, cuya inclusión pretendía representar los colores del logotipo de Xbox.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -285,6 +635,28 @@
           "igdbId": 328917,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/82c8099e11712e82d3371586ca525709.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/d86d6231deb8f5c4f4f183ae1c69363e.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/52f0afbaba42e4345bd027cb91ffc52d.png"
+      },
+      "ports": [
+        {
+          "id": 1085,
+          "platform": "x360",
+          "project": "rexglue-SoulCaliburIV",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/FluffyQuack/rexglue-SoulCaliburIV",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 0
+        }
       ]
     },
     {
@@ -297,6 +669,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94541",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SoulCalibur V",
           "source": "igdb",
@@ -306,6 +684,18 @@
           "field": "original_name",
           "value": "SoulCalibur V",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SOULCALIBUR V, the latest entry in the premier weapons-based head-to-head fighting series continues the epic struggle of warriors in search for the legendary Soul Swords. SCV takes place 17 years after the events of SOULCALIBUR IV and continues the epic story of warriors in search of the legendary Soul Swords in 17th century Europe. The heroic battles transpire in a beautiful and fluid world with eye-popping graphics and visual appeal. SOULCALIBUR V tunes the battle, movement, and visual systems so players can pull off cool dynamic attacks with ease and battle with complete freedom. A new dawn rises in the eternal struggle between the mighty Soul Swords!.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SOULCALIBUR V, la última entrega de la principal serie de juegos de lucha cara a cara basada en armas, continúa la épica lucha de guerreros en busca de las legendarias Soul Swords. SCV transcurre 17 años después de los acontecimientos de SOULCALIBUR IV y continúa la épica historia de guerreros en busca de las legendarias Soul Swords en la Europa del siglo XVII. Las heroicas batallas tienen lugar en un mundo hermoso y fluido, con gráficos impactantes y un atractivo visual. SOULCALIBUR V ajusta los sistemas de combate, movimiento y visuales para que los jugadores puedan ejecutar con facilidad ataques dinámicos y espectaculares, y luchar con total libertad. Un nuevo amanecer surge en la eterna lucha entre las poderosas Soul Swords.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -322,7 +712,12 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1013,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01250",
+            "BLJS-10115",
+            "BLUS-30736"
+          ]
         },
         {
           "id": 94542,
@@ -332,54 +727,68 @@
           "igdbId": 1013,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/587304c8d27e74d1ae57aee4ee3f77dc.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/835ba8cee92cbc8639c9c2288bc4c940.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b0dde169fb34d690cf472de3da61a0ea.png"
+      }
     },
     {
-      "id": 40286,
-      "nameEs": "SoulCalibur II HD Online",
-      "originalName": "SoulCalibur II HD Online",
-      "year": 2013,
-      "igdbId": 20970,
-      "popularity": 12,
+      "id": 40469,
+      "nameEs": "Soulcalibur: Lost Swords",
+      "originalName": "Soulcalibur: Lost Swords",
+      "year": 2014,
+      "igdbId": 22030,
+      "popularity": 1,
       "iconic": false,
       "fields": [
         {
           "field": "name_es",
-          "value": "SoulCalibur II HD Online",
+          "value": "Soulcalibur: Lost Swords",
           "source": "igdb",
           "manual": false
         },
         {
           "field": "original_name",
-          "value": "SoulCalibur II HD Online",
+          "value": "Soulcalibur: Lost Swords",
           "source": "igdb",
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Soulcalibur: Lost Swords was a free-to-play fighting game distributed through PlayStation Network. The game is based on Soulcalibur V and uses the same weapon-based fighting system from previous games; however, several of the gameplay mechanics are altered, simplified or otherwise removed. Similar to other free-to-play titles like Tekken Revolution, microtransactions are offered, some of which remove the playtime limit of the game. The game is also periodically updated with new content, including new events, items, and characters.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Soulcalibur: Lost Swords fue un juego de lucha gratuito distribuido a través de PlayStation Network. El juego se basa en Soulcalibur V y utiliza el mismo sistema de combate con armas de los juegos anteriores; sin embargo, varias de sus mecánicas de juego han sido alteradas, simplificadas o eliminadas. Al igual que otros títulos gratuitos como Tekken Revolution, ofrece microtransacciones, algunas de las cuales eliminan el límite de tiempo de juego. El juego también se actualiza periódicamente con nuevo contenido, como nuevos eventos, objetos y personajes.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
-          "value": "2013",
+          "value": "2014",
           "source": "igdb",
           "manual": false
         }
       ],
       "versions": [
         {
-          "id": 96368,
+          "id": 96853,
           "platform": "ps3",
-          "kind": "remaster",
-          "year": 2013,
-          "igdbId": 20970,
-          "criteria": []
-        },
-        {
-          "id": 96369,
-          "platform": "x360",
-          "kind": "remaster",
-          "year": 2013,
-          "igdbId": 20970,
+          "kind": "original",
+          "year": 2014,
+          "igdbId": 22030,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/eb98e32ae9ae054ba585892eb1addadd.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/80d066c42f2ae18584651636980dfb40.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/39c978005414f262eb083b790a128909.png"
+      }
     },
     {
       "id": 42475,
@@ -391,6 +800,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101342",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SoulCalibur VI",
           "source": "igdb",
@@ -400,6 +815,18 @@
           "field": "original_name",
           "value": "SoulCalibur VI",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SoulCalibur VI represents the latest entry in the premier weapons-based, head-to-head fighting series and continues the epic struggle of warriors searching for the legendary Soul Swords. Taking place in the 16th century, revisit the events of the original SoulCalibur to uncover hidden truths.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SoulCalibur VI representa la última entrega de la principal serie de juegos de lucha cara a cara basada en armas, y continúa la épica lucha de guerreros que buscan las legendarias Soul Swords. Ambientado en el siglo XVI, revive los acontecimientos del SoulCalibur original para descubrir verdades ocultas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -435,7 +862,12 @@
           "igdbId": 76885,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1c809dd57bf37a363547e9e40ff55b75.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d04380774375cd34133c27a38af1454f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a7df54d31edd5b09273abf4306765f93.png"
+      }
     },
     {
       "id": 48211,
@@ -444,7 +876,7 @@
       "year": 1998,
       "igdbId": 1564,
       "popularity": 133,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -456,6 +888,18 @@
           "field": "original_name",
           "value": "SoulCalibur",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SoulCalibur is a weapon-based 3D fighting game developed by Project Soul and produced by Namco. It is the second game in the Soul series, preceded by Soul Edge (1996). Originally released in arcades in 1998, it ran on the Namco System 12 hardware. In 1999 it was ported to the Dreamcast with improved graphics and new features. The North American version was released in September 1999 as a launch title for the Dreamcast and was part of the successful launch of the new console. It became available as a downloadable title on Xbox 360's Xbox Live Marketplace in 2008.\nThe title brought many innovations to the fighting game genre that include a heavy emphasis on weapons and a unique eight-way movement system. Soulcalibur is widely regarded as one of the best Dreamcast titles and is one of the most critically acclaimed fighting games of all time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SoulCalibur es un juego de lucha 3D basado en armas, desarrollado por Project Soul y producido por Namco. Es la segunda entrega de la serie Soul, precedida por Soul Edge (1996). Se lanzó originalmente en arcade en 1998, sobre el hardware Namco System 12. En 1999 se adaptó a Dreamcast con gráficos mejorados y nuevas funciones. La versión norteamericana salió a la venta en septiembre de 1999 como título de lanzamiento de Dreamcast y formó parte del exitoso arranque de la nueva consola. En 2008 pasó a estar disponible como título descargable en Xbox Live Marketplace de Xbox 360.\nEl título aportó muchas innovaciones al género de lucha, entre ellas un fuerte énfasis en las armas y un singular sistema de movimiento de ocho direcciones. SoulCalibur es considerado ampliamente uno de los mejores títulos de Dreamcast y uno de los juegos de lucha más aclamados por la crítica de todos los tiempos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -474,8 +918,163 @@
           "igdbId": 1564,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/28095729a217f6ec638df5f04a11e9f4.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/814a9c18f5abff398787c9cfcbf3d80c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/19f6a8886908b80b8b6e9f212dbeea09.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 457,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26188,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 48211,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 16810,
+          "reason": "2002"
+        },
+        {
+          "position": 4,
+          "gameId": 32557,
+          "reason": "2005"
+        },
+        {
+          "position": 5,
+          "gameId": 19640,
+          "reason": "2007"
+        },
+        {
+          "position": 6,
+          "gameId": 39517,
+          "reason": "2008"
+        },
+        {
+          "position": 7,
+          "gameId": 35131,
+          "reason": "2009"
+        },
+        {
+          "position": 8,
+          "gameId": 39631,
+          "reason": "2012"
+        },
+        {
+          "position": 9,
+          "gameId": 40469,
+          "reason": "2014"
+        },
+        {
+          "position": 10,
+          "gameId": 42475,
+          "reason": "2018"
+        }
+      ]
+    },
+    {
+      "id": 3889,
+      "kind": "story",
+      "rationale": "La historia de la espada Soul Edge avanza de forma continua entre juegos. SoulCalibur VI la recuenta desde el principio, pero sigo el orden de publicación porque conserva el hilo. Dejo fuera Legends y Lost Swords por ser spin-offs menores. Sin fuentes web verificadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26188,
+          "recommendedVersionId": 65420,
+          "reason": "Es el origen de la historia de Soul Edge."
+        },
+        {
+          "position": 2,
+          "gameId": 48211,
+          "recommendedVersionId": 114539,
+          "reason": "Continúa la historia con la forja de la espada Soul Calibur."
+        },
+        {
+          "position": 3,
+          "gameId": 16810,
+          "recommendedVersionId": 96368,
+          "reason": "Sigue la persecución de Soul Edge. Elijo el remaster HD por su mejor resolución."
+        },
+        {
+          "position": 4,
+          "gameId": 32557,
+          "recommendedVersionId": 81315,
+          "reason": "Continúa la historia tras la segunda entrega. Elijo el original de PS2."
+        },
+        {
+          "position": 5,
+          "gameId": 39517,
+          "recommendedVersionId": 94227,
+          "reason": "Es el choque final por las espadas."
+        },
+        {
+          "position": 6,
+          "gameId": 35131,
+          "recommendedVersionId": 85637,
+          "reason": "Es un juego de la era de IV con historia paralela. Elijo el original de PSP."
+        },
+        {
+          "position": 7,
+          "gameId": 39631,
+          "recommendedVersionId": 94541,
+          "reason": "Retoma la historia casi dos décadas después, con una nueva generación."
+        },
+        {
+          "position": 8,
+          "gameId": 42475,
+          "recommendedVersionId": 101342,
+          "reason": "Reinicia y recuenta los hechos clave desde el inicio. Elijo PC por su mejor soporte actual."
+        }
+      ]
+    },
+    {
+      "id": 3890,
+      "kind": "community",
+      "rationale": "La comunidad suele recomendar empezar por el moderno SoulCalibur VI, que además recuenta la historia, y luego los clásicos más queridos: II y el primer SoulCalibur. Se salta Legends, Lost Swords y la mayoría de spin-offs. No pude verificar fuentes web.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42475,
+          "recommendedVersionId": 101342,
+          "reason": "Es el más actual, tiene la mejor jugabilidad y comunidad, y resume la historia."
+        },
+        {
+          "position": 2,
+          "gameId": 16810,
+          "recommendedVersionId": 96368,
+          "reason": "Se considera uno de los mejores de la saga. El remaster HD es fácil de jugar hoy."
+        },
+        {
+          "position": 3,
+          "gameId": 48211,
+          "recommendedVersionId": 114539,
+          "reason": "Es el clásico que define la saga. Es la única versión disponible en la lista."
+        },
+        {
+          "position": 4,
+          "gameId": 39517,
+          "recommendedVersionId": 94227,
+          "reason": "Es un juego muy completo de la era HD, con muchos personajes y modos."
+        }
+      ]
+    }
+  ]
 }

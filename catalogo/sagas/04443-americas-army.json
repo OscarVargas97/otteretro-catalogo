@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81850",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "America's Army: Rise of a Soldier",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "America's Army: Rise of a Soldier",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "America's Army: Rise of a Soldier is the Xbox version of the tactical first-person shooter developed in conjunction with the US Army. You can create a soldier and advance him or her through an army career from recruit to leader of a Special Forces team. America's Army: Rise of a Soldier also includes online multiplayer, so you can battle up to 16 players over the Internet.",
           "source": "igdb",
           "manual": false
         },
@@ -75,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99042",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "America's Army: Proving Grounds",
           "source": "igdb",
@@ -83,6 +101,12 @@
         {
           "field": "original_name",
           "value": "America's Army: Proving Grounds",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "America’s Army: Proving Grounds is the official game of the U.S. Army and part of the highly acclaimed America’s Army game series. This free military game focuses on small unit tactical maneuvers and puts you to the test in new America’s Army maps as well as AA fan favorites Hospital and Bridge.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +124,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 7843,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, con menor comunidad activa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funciona con mando, pero es menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto aunque limitado."
+            }
+          ]
         },
         {
           "id": 99042,
@@ -109,9 +154,35 @@
           "year": 2015,
           "igdbId": 7843,
           "steamAppId": 203290,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión con todas las actualizaciones del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado ideales para un shooter táctico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y cuadros configurables."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f9f3b6f06f64e267bf77fb31f3bdc792.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6e69ebbfad976d4637bb4b39de261bf7.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/d6e4228a1ac71c06c3aa8c0fb9686bd6.png"
+      }
     },
     {
       "id": 48282,
@@ -135,6 +206,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "America's Army: True Soldiers is a first-person shooter video game developed by Red Storm Entertainment and published by Ubisoft. It was released on November 15, 2007. It is a spin-off of the United States Army's computer game America's Army. Unlike the original America's Army, this game is not freeware.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -150,8 +227,36 @@
           "igdbId": 5482,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d85d4e0e623976e6428fda8c1f667235.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1939,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32722,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 48282,
+          "reason": "2007"
+        },
+        {
+          "position": 3,
+          "gameId": 41622,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

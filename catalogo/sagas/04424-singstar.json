@@ -3,7 +3,7 @@
   "name": "SingStar",
   "igdbKind": "collection",
   "igdbId": 592,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81411",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: ABBA",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "SingStar: ABBA",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar ABBA is a karaoke game featuring songs from the Swedish group ABBA. The group was active during the seventies, particularly in the disco/pop music.\n\nThe game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar ABBA es un juego de karaoke con canciones del grupo sueco ABBA. El grupo estuvo activo en los años setenta, especialmente en la música disco y pop.\n\nEl juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 3306,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00381",
+            "BCES-00423",
+            "BCUS-98192"
+          ]
         },
         {
           "id": 81411,
@@ -56,7 +79,16 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 3306,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55435",
+            "SCES-55435/ANZ",
+            "SCES-55436",
+            "SCES-55437",
+            "SCES-55438",
+            "SCES-55439",
+            "SCUS-97642"
+          ]
         }
       ],
       "images": {
@@ -70,8 +102,14 @@
       "year": 2004,
       "igdbId": 15091,
       "popularity": 10,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "97450",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "SingStar",
@@ -82,6 +120,18 @@
           "field": "original_name",
           "value": "SingStar",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar is a singing game where player(s) grab a microphone and sing. There are over 30 songs to choose from and a variety of game modes. The game rates singing and gives points accordingly on three difficulty levels. There isn't any word recognition, but the game rates the pitch of the voice.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar es un juego de canto en el que uno o varios jugadores toman un micrófono y cantan. Hay más de 30 canciones para elegir y varios modos de juego. El juego evalúa el canto y otorga puntos según tres niveles de dificultad. No hay reconocimiento de palabras, pero el juego evalúa la afinación de la voz.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -98,7 +148,37 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 15091,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Lista de canciones original y limitada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Requiere micrófonos USB de PS2."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución SD."
+            }
+          ],
+          "codes": [
+            "SCES-52268",
+            "SCES-52268/ANZ",
+            "SCES-52268/UK",
+            "SCES-52299",
+            "SCES-52564",
+            "SCES-52565/GER",
+            "SCES-52566"
+          ]
         },
         {
           "id": 96046,
@@ -106,7 +186,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 15180,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición de PS3 con tienda de canciones, hoy limitada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Menús mejorados; usa micrófonos USB."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la fórmula."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos HD."
+            }
+          ]
         },
         {
           "id": 97449,
@@ -114,7 +215,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 85700,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Edición de 2014 con canciones más recientes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Admite micrófonos del móvil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Más cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD estable."
+            }
+          ]
         },
         {
           "id": 97450,
@@ -122,7 +244,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 85700,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Edición de 2014 con canciones más recientes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Micrófonos del móvil y menús modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Más cambios respecto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor calidad visual."
+            }
+          ]
         }
       ],
       "images": {
@@ -151,6 +294,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Get the party started with SingStar Party; Sony London's second iteration of its popular karaoke-inspired vocals game developed exclusively for the PlayStation 2. Though gameplay is nearly identical to the previous installment (players are judged on their ability to sing with the correct tone, rhythm, and pitch), a host of new features populate this sequel as well. Boasting more than 30 new tracks and the ability to import 30 more from the original SingStar, the game also supports an all-new competitive Duet Mode, EyeToy compatibility, and a Shuffle Token feature for a more personalized selection of theme songs. Available only in the European territories.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Que empiece la fiesta con SingStar Party, la segunda entrega del popular juego de canto inspirado en el karaoke de Sony London, desarrollado exclusivamente para PlayStation 2. Aunque la jugabilidad es casi idéntica a la de la entrega anterior (se evalúa la capacidad de cantar con el tono, el ritmo y la afinación correctos), esta secuela incluye numerosas novedades. Con más de 30 canciones nuevas y la posibilidad de importar otras 30 del SingStar original, el juego también incorpora un nuevo modo Dueto competitivo, compatibilidad con EyeToy y una función de fichas aleatorias (Shuffle Token) para una selección más personalizada de canciones temáticas. Disponible solo en territorios europeos.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -164,7 +319,15 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 15090,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-52826",
+            "SCES-52826/ANZ",
+            "SCES-52826/BBFC",
+            "SCES-52827",
+            "SCES-52829/GER",
+            "SCES-52830"
+          ]
         }
       ],
       "images": {
@@ -193,6 +356,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This third installment of the SingStar series brings yet another bundle of songs to sing along. New to this game is the compatibility with EyeToy and a few rapping parts in the songs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Esta tercera entrega de la serie SingStar trae otro paquete de canciones para cantar. Como novedad, es compatible con EyeToy y añade algunas partes de rap en las canciones.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -206,7 +381,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 15093,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-53180/G"
+          ]
         }
       ],
       "images": {
@@ -235,6 +413,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Be a Pop Superstar with SingStar Pop\nFeaturing a chart-topping line-up of today’s best artists, songs and videos, SingStar Pop is the second release in the PlayStation2’s newest interactive singing franchise.\n\nWith custom microphones in hand, singers perform along to 30 songs and videos from “Top 40” artists such as Rihanna, All American Rejects, Cyndi Lauper, Gorillaz, Snow Patrol, U2 and more, turning your living room into the pop concert of the year\n\n- 30 chart-topping songs and videos from today’s top artists.\n- Available as a Standalone SKU or bundled with two custom, high-quality microphones and the SingStar USB converter.\n- Multiple gameplay modes, including Solo, Freestyle, Pass the Mic, Battle and Duet, create a highly interactive social experience.\n- SingStar technology recognizes pitch, tone and rhythm to accurately score performances.\n- Record your favorite performances onto Memory Card for future playback. Customize and enhance playback with numerous audio effects.\n- Includes EyeToy USB camera compatibility: players can see themselves singing in place of the artist’s video.\n- Expandable Song Library: Disc Swap feature keeps the party rocking as different SingStar discs can be quickly changed.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Sé una superestrella del pop con SingStar Pop\nCon una alineación de éxitos de los mejores artistas, canciones y videoclips de hoy, SingStar Pop es la segunda entrega de la nueva franquicia de canto interactivo de PlayStation 2.\n\nCon micrófonos personalizados en la mano, los cantantes interpretan 30 canciones y videoclips de artistas del «Top 40» como Rihanna, All American Rejects, Cyndi Lauper, Gorillaz, Snow Patrol, U2 y más, y convierten tu sala de estar en el concierto pop del año.\n\n- 30 canciones y videoclips de éxito de los artistas más destacados del momento.\n- Disponible como producto independiente o en paquete con dos micrófonos personalizados de alta calidad y el convertidor USB de SingStar.\n- Varios modos de juego, como Solo, Freestyle, Pass the Mic, Batalla y Dueto, crean una experiencia social muy interactiva.\n- La tecnología SingStar reconoce el tono, el timbre y el ritmo para puntuar con precisión las actuaciones.\n- Graba tus actuaciones favoritas en la tarjeta de memoria para reproducirlas más tarde. Personaliza y mejora la reproducción con numerosos efectos de audio.\n- Incluye compatibilidad con la cámara USB EyeToy: los jugadores pueden verse cantando en lugar del videoclip del artista.\n- Biblioteca de canciones ampliable: la función de cambio de disco permite cambiar rápidamente entre discos de SingStar y mantener la fiesta en marcha.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -248,7 +438,15 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 15092,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-53178",
+            "SCES-53179",
+            "SCES-53182",
+            "SCES-53183/ANZ",
+            "SCUS-97580",
+            "SCUS-97591"
+          ]
         }
       ],
       "images": {
@@ -277,6 +475,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The main focus of the game is singing those songs as good as one can. The game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El objetivo principal del juego es cantar esas canciones lo mejor posible. El juego otorga puntos según la pureza del canto, es decir, qué tan bien logras mantenerte afinado. No importa si cambias de octava en mitad de la canción ni qué letra cantas (no tiene reconocimiento de palabras), así que tu canto se evalúa según lo bien que aciertas la nota correcta en el momento preciso.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -290,7 +500,23 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 15094,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-53602",
+            "SCES-53602/ANZ",
+            "SCES-53602/GER",
+            "SCES-536022",
+            "SCES-53603",
+            "SCES-53604/GER",
+            "SCES-53604/GER3",
+            "SCES-53605",
+            "SCES-53606",
+            "SCES-53607",
+            "SCES-53609",
+            "SCES-536092",
+            "SCES-53610",
+            "SCUS-97622"
+          ]
         }
       ],
       "images": {
@@ -319,6 +545,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Rocks! is a karaoke game, featuring hit rock songs. The game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Rocks! es un juego de karaoke con éxitos del rock. El juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -332,7 +570,17 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 15095,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-53889",
+            "SCES-53890/ANZ",
+            "SCES-53891/GER",
+            "SCES-53894",
+            "SCES-53895",
+            "SCES-53897",
+            "SCES-53898",
+            "SCUS-97571"
+          ]
         }
       ],
       "images": {
@@ -361,6 +609,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Anthems is another helping from the popular karaoke game series SingStar. This time it's the turn of the Divas with tracks guaranteed to get the sequins and tiaras out. There are 20 tracks included with music videos plus the ability to disc-swap with previous SingStar games for extra songs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Anthems es otra entrega del popular juego de karaoke SingStar. Esta vez le toca el turno a las Divas, con temas que garantizan sacar las lentejuelas y las tiaras. Incluye 20 canciones con videoclips, además de la posibilidad de intercambiar discos con juegos SingStar anteriores para obtener canciones extra.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -374,7 +634,12 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 15096,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54131",
+            "SCES-54131/ANZ",
+            "SCES-54131/GER"
+          ]
         }
       ],
       "images": {
@@ -403,6 +668,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Singstar Legends offers yet another patch of songs to sing in this 7th game of the series. The objective of the game is to sing songs and sing them well. The game gives points according to player's performance. There is three difficulty levels to choose from, the easiest one being very forgiving.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Legends ofrece otra tanda de canciones para cantar en esta séptima entrega de la serie. El objetivo del juego es cantar canciones y hacerlo bien. El juego otorga puntos según el desempeño del jugador. Hay tres niveles de dificultad para elegir; el más fácil es muy indulgente.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -416,7 +693,17 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 15099,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54191",
+            "SCES-54197",
+            "SCES-54198/GER",
+            "SCES-54257",
+            "SCES-54329",
+            "SCES-54330/ANZ",
+            "SCES-54353",
+            "SCUS-97640"
+          ]
         }
       ],
       "images": {
@@ -445,6 +732,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Pop Hits is a karaoke game, featuring hit pop songs. The game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Pop Hits es un juego de karaoke con éxitos del pop. El juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -458,7 +757,17 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 15164,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54570",
+            "SCES-54571",
+            "SCES-54571/GER",
+            "SCES-54572",
+            "SCES-54573",
+            "SCES-54574",
+            "SCES-54575",
+            "SCES-54773/ANZ"
+          ]
         }
       ],
       "images": {
@@ -487,6 +796,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar '90 is a karaoke game featuring hit songs from the nineties.\n\nThe game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar '90 es un juego de karaoke con éxitos de los años noventa.\n\nEl juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -500,7 +821,14 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 15165,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54599",
+            "SCES-54599/ANZ",
+            "SCES-54599/GER",
+            "SCES-54909",
+            "SCUS-97626"
+          ]
         }
       ],
       "images": {
@@ -529,6 +857,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar: Amped is a karaoke game, featuring rock music. The German and US versions have a number of different included songs.\n\nThe main focus of the game is singing those songs as good as one can. The game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Amped es un juego de karaoke con música rock. Las versiones alemana y estadounidense incluyen varias canciones diferentes.\n\nEl objetivo principal del juego es cantar esas canciones lo mejor posible. El juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -542,7 +882,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 15166,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55159/USK",
+            "SCES-55176/ANZ",
+            "SCUS-97612"
+          ]
         }
       ],
       "images": {
@@ -571,6 +916,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Rock Ballads is a karaoke game, featuring hit rock ballad songs.\n\nThe game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Rock Ballads es un juego de karaoke con éxitos de baladas de rock.\n\nEl juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -584,7 +941,13 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 15168,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54597",
+            "SCES-54597/ANZ",
+            "SCES-54597/GER",
+            "SCES-54910"
+          ]
         }
       ],
       "images": {
@@ -613,6 +976,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The eleventh installment in the SingStar series is entirely devoted to the R&B musical genre. There are 2 editions of the game, one with 2 USB microphones included (adaptor required) and another with only the game. The game is compatible with EyeToy so players can see themselves in the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La undécima entrega de la serie SingStar está dedicada por completo al género R&B. Hay dos ediciones del juego: una con dos micrófonos USB incluidos (se requiere adaptador) y otra solo con el juego. Es compatible con EyeToy, así que los jugadores pueden verse a sí mismos dentro del juego.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -626,7 +1001,15 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 15170,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54760",
+            "SCES-54760/ANZ",
+            "SCES-54761",
+            "SCES-54762",
+            "SCES-54762/USK",
+            "SCES-54765"
+          ]
         }
       ],
       "images": {
@@ -643,6 +1026,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82582",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Cantautori Italiani",
           "source": "igdb",
@@ -652,6 +1041,18 @@
           "field": "original_name",
           "value": "SingStar: Cantautori Italiani",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The most beautiful voices of the most famous Italian artists in the new and even richer episode of the SingStar franchise. A version with the greatest Italian hits to satisfy the tastes of all fans of the brand. With the signatures of veterans like Antonello Venditti, Claudio Baglioni, Eros Ramazzotti, Gianna Nannini and Biagio Antonacci.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Las voces más hermosas de los artistas italianos más famosos, en el nuevo y aún más rico episodio de la franquicia SingStar. Una versión con los mayores éxitos italianos para satisfacer los gustos de todos los fans de la marca. Con las firmas de veteranos como Antonello Venditti, Claudio Baglioni, Eros Ramazzotti, Gianna Nannini y Biagio Antonacci.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -668,7 +1069,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 15440,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-01023"
+          ]
         },
         {
           "id": 82582,
@@ -676,7 +1080,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 15440,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55640"
+          ]
         }
       ],
       "images": {
@@ -705,6 +1112,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Summer Party is a karaoke game, featuring hit songs reminding summer and its hot nights.\n\nThe game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Summer Party es un juego de karaoke con éxitos que evocan el verano y sus noches calurosas.\n\nEl juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -718,7 +1137,15 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 15171,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55056",
+            "SCES-55057/GER",
+            "SCES-55058",
+            "SCES-55060",
+            "SCES-55127",
+            "SCES-55128"
+          ]
         }
       ],
       "images": {
@@ -747,6 +1174,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar: Suomi Rock is a karaoke game exclusively released in Finland. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timing; the sung words or octave does not play into the resul",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Suomi Rock es un juego de karaoke lanzado exclusivamente en Finlandia. No hay cambios en la fórmula de juego: el/los jugador(es) cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se acierta la nota correcta en el momento correcto; la letra cantada o la octava no influyen en el resul",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -760,7 +1199,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 15098,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55177"
+          ]
         }
       ],
       "images": {
@@ -789,6 +1231,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Pop Vol.2 for the PlayStation2 represents a wide variety of songs and videos from some of the hottest pop artists on the planet. Featuring hits from artists such as Fall Out Boy, Fergie, Rihanna, and more, Pop Vol.2 really brings the experience of being a pop star straight to your TV. So sing, compete, and keep the party going!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Pop Vol. 2 para PlayStation 2 reúne una gran variedad de canciones y videos de algunos de los artistas pop más populares del planeta. Con éxitos de artistas como Fall Out Boy, Fergie, Rihanna y más, Pop Vol. 2 lleva la experiencia de ser una estrella del pop directamente a tu televisor. ¡Así que canta, compite y mantén viva la fiesta!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -802,7 +1256,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 15174,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCUS-97649"
+          ]
         }
       ],
       "images": {
@@ -831,6 +1288,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Hottest Hits is a karaoke game, released in Australia, featuring hits songs from recent music charts.\n\nThe game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Hottest Hits es un juego de karaoke lanzado en Australia, con éxitos recientes de las listas musicales.\n\nEl juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -844,7 +1313,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 15175,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55160",
+            "SCES-55160/ANZ",
+            "SCES-55362"
+          ]
         }
       ],
       "images": {
@@ -870,6 +1344,18 @@
           "field": "original_name",
           "value": "SingStar: BoyBands vs GirlBands",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar Boybands vs Girlbands is a karaoke game, featuring hit songs by boybands and girlbands. The theme of the game was chosen by the public after a poll on the official website, the UK myspace and Facebook.\n\nThe game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Boybands vs Girlbands es un juego de karaoke con éxitos de grupos masculinos y femeninos. La temática del juego fue elegida por el público tras una encuesta en el sitio web oficial, en el MySpace del Reino Unido y en Facebook.\n\nEl juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -915,6 +1401,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Country is a karaoke game, honouring the country music. The game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Country es un juego de karaoke que rinde homenaje a la música country.\n\nEl juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -928,7 +1426,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 15177,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCUS-97650",
+            "SCUS-97651"
+          ]
         }
       ],
       "images": {
@@ -945,6 +1447,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82631",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Singstar: Wakacyjna Impreza",
           "source": "igdb",
@@ -954,6 +1462,18 @@
           "field": "original_name",
           "value": "Singstar: Wakacyjna Impreza",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Exclusive release for the Polish market.\n\nTRACKLIST:\nBoys - \"Szalona\"\nBrathanki - \"Czerwone korale\"\nEdyta Górniak - \"Jestem kobiet?\"\nFormacja Nie?ywych Schabuff - \"Lato\"\nJust 5 - \"Kolorowe sny\"\nK.A.S.A - \"Maczo\"\nK.A.S.A - \"To w?a?nie lato\"\nKasia Cerekwicka - \"S.O.S\"\nKasia Kowalska - \"Co? optymistycznego\"\nKombi - \"Pokolenie\"\nKombi - \"Sen si? spe?ni\"\nKrzysztof Krawczyk - \"Bo jeste? Ty\"\n?zy - \"Agnieszka\"\n?zy - \"Narcyz si? nazywam\"\nMyslovitz - \"D?ugo?? d?wi?ku samotno?ci\"\nNorbi - \"Kobiety s? gor?ce\"\nNorbi feat. Krzysztof Krawczyk - \"Pi?kny dzie?\"\nReni Jusis - \"Zakr?cona\"\nVarius Manx - \"Or?a Cie?\"\nAmy Winehouse - \"Tears Dry On Their Own\"\nBlondie - \"The Tide Is High\"\nBlur - \"Girls & Boys\"\nDavid Bowie - \"Let's Dance\"\nDiana Ross - \"I'm Coming Out\"\nElton John - \"I'm Still Standing\"\nLou Bega - \"Mambo No. 5\"\nPeter Andre - \"Mysterious Girl\"\nRihanna - \"Umbrella\"\nSugababes - \"Red Dress\"\nWham! - \"Club Tropicana\"",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Lanzamiento exclusivo para el mercado polaco.\n\nLista de canciones:\nBoys - «Szalona»\nBrathanki - «Czerwone korale»\nEdyta Górniak - «Jestem kobiet?»\nFormacja Nie?ywych Schabuff - «Lato»\nJust 5 - «Kolorowe sny»\nK.A.S.A - «Maczo»\nK.A.S.A - «To w?a?nie lato»\nKasia Cerekwicka - «S.O.S»\nKasia Kowalska - «Co? optymistycznego»\nKombi - «Pokolenie»\nKombi - «Sen si? spe?ni»\nKrzysztof Krawczyk - «Bo jeste? Ty»\n?zy - «Agnieszka»\n?zy - «Narcyz si? nazywam»\nMyslovitz - «D?ugo?? d?wi?ku samotno?ci»\nNorbi - «Kobiety s? gor?ce»\nNorbi feat. Krzysztof Krawczyk - «Pi?kny dzie?»\nReni Jusis - «Zakr?cona»\nVarius Manx - «Or?a Cie?»\nAmy Winehouse - «Tears Dry On Their Own»\nBlondie - «The Tide Is High»\nBlur - «Girls & Boys»\nDavid Bowie - «Let's Dance»\nDiana Ross - «I'm Coming Out»\nElton John - «I'm Still Standing»\nLou Bega - «Mambo No. 5»\nPeter Andre - «Mysterious Girl»\nRihanna - «Umbrella»\nSugababes - «Red Dress»\nWham! - «Club Tropicana»",
+          "source": "claude",
           "manual": false
         },
         {
@@ -978,7 +1498,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 15441,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55061"
+          ]
         }
       ],
       "images": {
@@ -995,6 +1518,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82637",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Queen",
           "source": "igdb",
@@ -1004,6 +1533,18 @@
           "field": "original_name",
           "value": "SingStar: Queen",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar Queen is a karaoke game featuring songs from the mythic group Queen, best known for their founder and lead singer, Freddie Mercury.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Queen es un juego de karaoke con canciones del mítico grupo Queen, conocido sobre todo por su fundador y vocalista principal, Freddie Mercury.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1020,7 +1561,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 7456,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00494",
+            "BCUS-98206"
+          ]
         },
         {
           "id": 82637,
@@ -1028,7 +1573,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 7456,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55453",
+            "SCES-55453/ANZ",
+            "SCES-55454",
+            "SCES-55455",
+            "SCES-55485",
+            "SCUS-97643"
+          ]
         }
       ],
       "images": {
@@ -1045,6 +1598,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82651",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Motown",
           "source": "igdb",
@@ -1054,6 +1613,18 @@
           "field": "original_name",
           "value": "SingStar: Motown",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Motown is a karaoke game which includes, with few exceptions, classic Motown songs from the 1960s and 1970s. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Motown es un juego de karaoke que incluye, con pocas excepciones, clásicos de Motown de las décadas de 1960 y 1970. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1070,7 +1641,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 15191,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00596"
+          ]
         },
         {
           "id": 82651,
@@ -1078,7 +1652,14 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 15191,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55549",
+            "SCES-55550",
+            "SCES-55551",
+            "SCES-55552",
+            "SCES-55553"
+          ]
         }
       ],
       "images": {
@@ -1095,6 +1676,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82653",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Take That",
           "source": "igdb",
@@ -1104,6 +1691,18 @@
           "field": "original_name",
           "value": "SingStar: Take That",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Take That is a karaoke game which exclusively features songs by the British pop band Take That. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timing; the sung words or octave does not play into the result. The PS3 version allows access to the SingStore, an online shop for downloading additional songs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Take That es un juego de karaoke que incluye exclusivamente canciones de la banda británica de pop Take That. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado. La versión para PS3 permite acceder a la SingStore, una tienda en línea para descargar canciones adicionales.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1120,7 +1719,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 15193,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00607"
+          ]
         },
         {
           "id": 82653,
@@ -1128,7 +1730,12 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 15193,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55554",
+            "SCES-55554/ANZ",
+            "SCES-55557"
+          ]
         }
       ],
       "images": {
@@ -1145,6 +1752,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82655",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Latino",
           "source": "igdb",
@@ -1154,6 +1767,18 @@
           "field": "original_name",
           "value": "SingStar: Latino",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar Latino brings us a compilation of Latin songs, with hits from artists such as Alejandro Sanz, Juanes, Carlos Baute, David Bisbal, Paulina Rubio, La Quinta Estación, and Julieta Venegas.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Latino ofrece una recopilación de canciones latinas, con éxitos de artistas como Alejandro Sanz, Juanes, Carlos Baute, David Bisbal, Paulina Rubio, La Quinta Estación y Julieta Venegas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1170,7 +1795,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 15194,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCUS-94344"
+          ]
         },
         {
           "id": 82655,
@@ -1178,7 +1806,13 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 15194,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54768",
+            "SCES-54769",
+            "SCUS-94346",
+            "SCUS-97660"
+          ]
         }
       ],
       "images": {
@@ -1195,6 +1829,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82660",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Wiggles",
           "source": "igdb",
@@ -1204,6 +1844,18 @@
           "field": "original_name",
           "value": "SingStar: Wiggles",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar Wiggles focuses specifically on the music of the Australian children's entertainers The Wiggles. The Wiggles themselves have had success as a children's band, but have also spawned a successful television show and even a movie. The current Wiggles are: Sam (Yellow), Anthony (Blue), Murray (Red) and Jeff (Purple).\n\nThe Wiggles game was initially released on the Playstation 2 in Australia and New Zealand, but a Playstation 3 release followed.\n\nThe songs included in this release span The Wiggles' almost twenty year career. 20 Songs are included in the PS2 version, and 25 Songs in the PS3 version:\n\nCan You (Point Your Fingers And Do The Twist?)\nDorothy (Would You Like To Dance?) (PlayStation 3 Only)\nDr Knickerbocker\nFruit Salad\nGet Ready to Wiggle\nGetting Strong!\nGo Santa Go (PlayStation 3 Only)\nHere Come The Chicken (PlayStation 3 Only)\nHot Poppin' Popcorn\nHot Potato\nI'm Dorothy The Dinosaur\nLights, Camera, Action, Wiggles!\nMove Your Arms Like Henry\nOoh It's Captain Feathersword (PlayStation 3 Only)\nPlay Your Guitar With Murray\nQuack Quack\nRock-a-Bye Your Bear\nThe Monkey Dance\nThe Shimmie Shake!\nTo Have A Tea Party\nToot Toot, Chugga Chugga, Big Red Car\nTwinkle, Twinkle Little Star\nWaggs The Dog Is Chasing His Tail\nWake Up Jeff!\nWiggle Bay (PlayStation 3 Only)",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Wiggles se centra exclusivamente en la música de los animadores infantiles australianos The Wiggles. The Wiggles han tenido éxito como banda infantil, pero también han dado lugar a un exitoso programa de televisión e incluso a una película. Los Wiggles actuales son: Sam (amarillo), Anthony (azul), Murray (rojo) y Jeff (morado).\n\nEl juego The Wiggles salió inicialmente para PlayStation 2 en Australia y Nueva Zelanda, y después se lanzó una versión para PlayStation 3.\n\nLas canciones incluidas abarcan casi veinte años de carrera de The Wiggles. La versión de PS2 incluye 20 canciones, y la de PS3, 25 canciones:\n\nCan You (Point Your Fingers And Do The Twist?)\nDorothy (Would You Like To Dance?) (solo PlayStation 3)\nDr Knickerbocker\nFruit Salad\nGet Ready to Wiggle\nGetting Strong!\nGo Santa Go (solo PlayStation 3)\nHere Come The Chicken (solo PlayStation 3)\nHot Poppin' Popcorn\nHot Potato\nI'm Dorothy The Dinosaur\nLights, Camera, Action, Wiggles!\nMove Your Arms Like Henry\nOoh It's Captain Feathersword (solo PlayStation 3)\nPlay Your Guitar With Murray\nQuack Quack\nRock-a-Bye Your Bear\nThe Monkey Dance\nThe Shimmie Shake!\nTo Have A Tea Party\nToot Toot, Chugga Chugga, Big Red Car\nTwinkle, Twinkle Little Star\nWaggs The Dog Is Chasing His Tail\nWake Up Jeff!\nWiggle Bay (solo PlayStation 3)",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1245,6 +1897,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82662",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Chart Hits",
           "source": "igdb",
@@ -1254,6 +1912,18 @@
           "field": "original_name",
           "value": "SingStar: Chart Hits",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar is a karaoke game exclusively released in Australia and New Zealand. It includes pop songs by international and Australian artists. There are no gameplay changes: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar es un juego de karaoke lanzado exclusivamente en Australia y Nueva Zelanda. Incluye canciones pop de artistas internacionales y australianos. No hay cambios en la jugabilidad: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1270,7 +1940,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 15192,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00846"
+          ]
         },
         {
           "id": 82662,
@@ -1278,7 +1951,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 15192,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55611"
+          ]
         }
       ],
       "images": {
@@ -1307,6 +1983,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Singstar concept has met great success in Scandinavia, but earlier releases had only English songs. Consumers wanted to sing songs they knew, in their own language, and Singstar svenska hits was born. The game follows the same layout as previous games in the series, but with new artists.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El concepto de SingStar ha tenido mucho éxito en Escandinavia, pero las primeras ediciones solo tenían canciones en inglés. Los consumidores querían cantar canciones que conocían en su propio idioma, y así nació Singstar Svenska Hits. El juego sigue la misma estructura que los anteriores de la serie, pero con nuevos artistas.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -1320,7 +2008,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 43484,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-53185"
+          ]
         }
       ],
       "images": {
@@ -1349,6 +2040,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Bollywood is a karaoke game, with a tracklist containing Bollywood hits. Bollywood is the popular name for the Mumbai-based Hindi-language film industry.\n\nThe game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Bollywood es un juego de karaoke con una lista de canciones de éxitos de Bollywood. Bollywood es el nombre popular de la industria cinematográfica en hindi con sede en Mumbai.\n\nEl juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -1362,7 +2065,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 20769,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54823"
+          ]
         }
       ],
       "images": {
@@ -1391,6 +2097,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar: Svenska Hits Schlager is a karaoke game featuring 30 songs by Swedish artists. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Svenska Hits Schlager es un juego de karaoke con 30 canciones de artistas suecos. No hay cambios en la fórmula de juego: el/los jugador(es) cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se acierta la nota correcta en el momento correcto; la letra cantada o la octava no influyen en el resultado.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -1404,7 +2122,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 43483,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54598"
+          ]
         }
       ],
       "images": {
@@ -1433,6 +2154,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Singalong with Disney is a karaoke game featuring the most famous hits from Disney movies, from Tarzan to Sleeping Beauty without forgetting Aladdin or Peter Pan.\n\nThe game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Singalong with Disney es un juego de karaoke con los éxitos más famosos de las películas de Disney, desde Tarzán hasta La bella durmiente, sin olvidar Aladdin ni Peter Pan.\n\nEl juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -1446,7 +2179,13 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 43488,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55255",
+            "SCES-55255/ANZ",
+            "SCES-55256",
+            "SCES-55360/GER"
+          ]
         }
       ],
       "images": {
@@ -1475,6 +2214,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar is a karaoke game which exclusively features songs by the Swedish rock band Kent. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timeing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar es un juego de karaoke que incluye exclusivamente canciones de la banda sueca de rock Kent. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -1488,7 +2239,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 43486,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55618"
+          ]
         }
       ],
       "images": {
@@ -1505,6 +2259,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83748",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Studio 100",
           "source": "igdb",
@@ -1514,6 +2274,18 @@
           "field": "original_name",
           "value": "SingStar: Studio 100",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Studio 100 is a karaoke game exclusively released in the Netherlands. It includes songs from Studio 100's children's TV shows. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Studio 100 es un juego de karaoke lanzado exclusivamente en los Países Bajos. Incluye canciones de los programas infantiles de televisión de Studio 100. No hay cambios en la fórmula de juego: el/los jugador(es) cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se acierta la nota correcta en el momento correcto; la letra cantada o la octava no influyen en el resultado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1530,7 +2302,31 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 45301,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Repertorio equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Menús más cómodos en PS3."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel a la edición de PS2."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen HD."
+            }
+          ],
+          "codes": [
+            "BCES-00520"
+          ]
         },
         {
           "id": 83749,
@@ -1538,9 +2334,36 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 45301,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Repertorio original de Studio 100."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Usa micrófonos USB de PS2."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución SD."
+            }
+          ],
+          "codes": [
+            "SCES-55514"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1x4f.jpg"
+      }
     },
     {
       "id": 33904,
@@ -1552,6 +2375,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83816",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Mallorca Party",
           "source": "igdb",
@@ -1561,6 +2390,18 @@
           "field": "original_name",
           "value": "SingStar: Mallorca Party",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Mallorca Party is a karaoke game exclusively released in Germany. I features 30 German songs which are meant to be consumed along with a lot of alcohol. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timeing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Mallorca Party es un juego de karaoke lanzado exclusivamente en Alemania. Incluye 30 canciones alemanas pensadas para acompañarse con mucho alcohol. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1577,7 +2418,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 44700,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00519"
+          ]
         },
         {
           "id": 83816,
@@ -1585,9 +2429,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 44700,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55489"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpd.jpg"
+      }
     },
     {
       "id": 33905,
@@ -1599,6 +2449,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83818",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Mecano",
           "source": "igdb",
@@ -1608,6 +2464,18 @@
           "field": "original_name",
           "value": "SingStar: Mecano",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Mecano is a karaoke game which exclusively features songs by the Spanish group Mecano. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timeing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Mecano es un juego de karaoke que incluye exclusivamente canciones del grupo español Mecano. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1624,7 +2492,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 44701,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00583"
+          ]
         },
         {
           "id": 83818,
@@ -1632,9 +2503,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 44701,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55540"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpe.jpg"
+      }
     },
     {
       "id": 33907,
@@ -1646,6 +2523,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83821",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Vasco",
           "source": "igdb",
@@ -1655,6 +2538,18 @@
           "field": "original_name",
           "value": "SingStar: Vasco",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Vasco is a karaoke game which exclusively features songs by Vasco Rossi. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timing; the sung words or octave does not play into the result. The PS3 version allows access to the SingStore, an online shop for downloading additional songs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Vasco es un juego de karaoke que incluye exclusivamente canciones de Vasco Rossi. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado. La versión para PS3 permite acceder a la SingStore, una tienda en línea para descargar canciones adicionales.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1671,7 +2566,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 45302,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00722"
+          ]
         },
         {
           "id": 83821,
@@ -1679,9 +2577,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 45302,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55594"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpx.jpg"
+      }
     },
     {
       "id": 33914,
@@ -1693,6 +2597,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83837",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Apres-Ski Party 2",
           "source": "igdb",
@@ -1702,6 +2612,18 @@
           "field": "original_name",
           "value": "SingStar: Apres-Ski Party 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Like its predecessor, SingStar: Apres Ski Party 2 is a collection of party songs. While most of them are in German language and/or were only successful in German speaking territory, there are also a few international hits included. There are no gameplay changes: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timeing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Al igual que su predecesor, SingStar: Apres Ski Party 2 es una colección de canciones de fiesta. Aunque la mayoría están en alemán o tuvieron éxito solo en territorios de habla alemana, también incluye algunos éxitos internacionales. No hay cambios en la jugabilidad: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1718,7 +2640,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 44704,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-01024"
+          ]
         },
         {
           "id": 83837,
@@ -1726,9 +2651,15 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 44704,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55641"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8how.jpg"
+      }
     },
     {
       "id": 34550,
@@ -1752,6 +2683,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Norwegian SingStar edition contains both material from the international edition and hits by Norwegian artists. Gameplay undergoes no major changes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La edición noruega de SingStar contiene material de la edición internacional y éxitos de artistas noruegos. La jugabilidad no sufre cambios importantes.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -1765,9 +2708,15 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 93335,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-53184"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpi.jpg"
+      }
     },
     {
       "id": 34589,
@@ -1804,9 +2753,15 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 144150,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54128/GER"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2u6q.jpg"
+      }
     },
     {
       "id": 34601,
@@ -1830,6 +2785,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar La Edad de Oro del Pop Español is a karaoke game on the PlayStation 2 system published by Sony Computer Entertainment Europe and developed by SCEE and London Studio. This is the 7th installment in the SingStar saga and an exclusive version for Spain.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar La Edad de Oro del Pop Español es un juego de karaoke para PlayStation 2 publicado por Sony Computer Entertainment Europe y desarrollado por SCEE y London Studio. Es la séptima entrega de la saga SingStar y una versión exclusiva para España.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -1843,9 +2810,15 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 135680,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54129"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3db6332651149029867359e2a9c4bdfa.jpg"
+      }
     },
     {
       "id": 34609,
@@ -1869,6 +2842,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Norwegian SingStar edition contains both material from the international edition and hits by Norwegian artists. Gameplay undergoes no major changes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La edición noruega de SingStar contiene material de la edición internacional y éxitos de artistas noruegos. La jugabilidad no sufre cambios importantes.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -1882,9 +2867,15 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 84316,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54078"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hph.jpg"
+      }
     },
     {
       "id": 34636,
@@ -1921,9 +2912,15 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 144151,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54741/GER"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2u6s.jpg"
+      }
     },
     {
       "id": 34643,
@@ -1947,6 +2944,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Singstar Après Ski Party is a game out of the SingStar series released in Germany.\n\nTracklist:\n1. Banaroo Dubi Dam Dam\n2. Bellamy Brothers Let Your Love Flow\n3. De Randfichten Lebt Denn Der Alte Holzmichel Noch\n4. DJ Bobo Chihuahua\n5. DJ Ötzi & Nik P. Ein Stern\n6. EAV Ding Dong\n7. Fritz & Die Downhill Gang Genie Auf Die Ski\n8. Guildo Horn Guildo Hat Euch Lieb\n9. Hermes House Band Country Roads\n10. Höhner Viva Colognia\n11. Höhner Wenn Nicht Jetzt, Wann Dann\n12. Jumpy & Mango Jerry In Der Winterzeit\n13. K2 Der Berg Ruft\n14. Krümel Zieh Dich Aus, Wir Müssen Reden\n15. Lollies Wenn Du Denkst Du Denkst\n16. Mickie Krause Laudato Si\n17. Mickie Krause Finger Im Po\n18. Nena Irgendwie, Irgendwo, Irgendwann\n19. Olaf Henning Cowboy Und Indianer\n20. Oliver Pocher Schwarz & Weiss\n21. Peter Wackel Ladioo\n22. Peter Wackel Ü 30\n23. P8 Alex Eine Frau Die Mich Nach Hause Trägt\n24. Rabauke Was Kann Ich Denn Dafür\n25. Rednex Cotton Eye Joe\n26. Die Rheinländer Wir Alle Wollen Immer Nur Das Eine\n27. Right Said Fred You're My Mate\n28. Rühmanns (Sch)erben Ein Freund, Ein Guter Freund\n29. Wolfgang Petry Wahnsinn\n30. Yoomii A Kiss Is All I Miss",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Singstar Après-Ski Party es un juego de la serie SingStar lanzado en Alemania.\n\nLista de canciones:\n1. Banaroo Dubi Dam Dam\n2. Bellamy Brothers Let Your Love Flow\n3. De Randfichten Lebt Denn Der Alte Holzmichel Noch\n4. DJ Bobo Chihuahua\n5. DJ Ötzi & Nik P. Ein Stern\n6. EAV Ding Dong\n7. Fritz & Die Downhill Gang Genie Auf Die Ski\n8. Guildo Horn Guildo Hat Euch Lieb\n9. Hermes House Band Country Roads\n10. Höhner Viva Colognia\n11. Höhner Wenn Nicht Jetzt, Wann Dann\n12. Jumpy & Mango Jerry In Der Winterzeit\n13. K2 Der Berg Ruft\n14. Krümel Zieh Dich Aus, Wir Müssen Reden\n15. Lollies Wenn Du Denkst Du Denkst\n16. Mickie Krause Laudato Si\n17. Mickie Krause Finger Im Po\n18. Nena Irgendwie, Irgendwo, Irgendwann\n19. Olaf Henning Cowboy Und Indianer\n20. Oliver Pocher Schwarz & Weiss\n21. Peter Wackel Ladioo\n22. Peter Wackel Ü 30\n23. P8 Alex Eine Frau Die Mich Nach Hause Trägt\n24. Rabauke Was Kann Ich Denn Dafür\n25. Rednex Cotton Eye Joe\n26. Die Rheinländer Wir Alle Wollen Immer Nur Das Eine\n27. Right Said Fred You're My Mate\n28. Rühmanns (Sch)erben Ein Freund, Ein Guter Freund\n29. Wolfgang Petry Wahnsinn\n30. Yoomii A Kiss Is All I Miss",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -1960,9 +2969,15 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 136394,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54601/GER"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2eca.jpg"
+      }
     },
     {
       "id": 34647,
@@ -1986,6 +3001,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In time for the band's 25th anniversary, legendary German punk rockers Die Toten Hosen get their own edition of Sony's popular karaoke series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Con motivo del 25.º aniversario de la banda, los legendarios punks alemanes Die Toten Hosen tienen su propia edición de la popular serie de karaoke de Sony.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -1999,9 +3026,15 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 84215,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54600/GER"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hp4.jpg"
+      }
     },
     {
       "id": 34655,
@@ -2025,6 +3058,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Operación Triunfo is a karaoke game on the PlayStation 2 system published by Sony Computer Entertainment Europe and developed by SCEE and London Studio. This is the 14th installment in the SingStar saga for PS2, and the 2nd exclusive title for Spain.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Operación Triunfo es un juego de karaoke para PlayStation 2 publicado por Sony Computer Entertainment Europe y desarrollado por SCEE y London Studio. Es la decimocuarta entrega de la saga SingStar para PS2 y el segundo título exclusivo para España.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -2038,9 +3083,15 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 135679,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55173"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2ci3.jpg"
+      }
     },
     {
       "id": 34668,
@@ -2052,6 +3103,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84850",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Singstar: SuomiHitit",
           "source": "igdb",
@@ -2061,6 +3118,18 @@
           "field": "original_name",
           "value": "Singstar: SuomiHitit",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: SuomiHitit is a karaoke game exclusively released in Finland. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: SuomiHitit es un juego de karaoke lanzado exclusivamente en Finlandia. No hay cambios en la fórmula de juego: el/los jugador(es) cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se acierta la nota correcta en el momento correcto; la letra cantada o la octava no influyen en el resultado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2077,7 +3146,31 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 91884,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo repertorio finlandés, con posibilidad de contenido extra en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cámara y micrófonos USB funcionan bien; menús más ágiles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Salida en HD y carga más rápida."
+            }
+          ],
+          "codes": [
+            "BCES-00847"
+          ]
         },
         {
           "id": 84851,
@@ -2085,9 +3178,36 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 91884,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Repertorio equivalente, sin extras en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con micrófonos de PS2."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Misma propuesta en otra plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución estándar y cargas más lentas."
+            }
+          ],
+          "codes": [
+            "SCES-55612"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpq.jpg"
+      }
     },
     {
       "id": 34677,
@@ -2099,6 +3219,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84863",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Made in Germany",
           "source": "igdb",
@@ -2108,6 +3234,18 @@
           "field": "original_name",
           "value": "SingStar: Made in Germany",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Made in Germany is a karaoke game exclusively released in Germany. It exclusively features songs by German (respectively German produced) artists. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timeing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Made in Germany es un juego de karaoke lanzado exclusivamente en Alemania. Incluye únicamente canciones de artistas alemanes (o producidas en Alemania). No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2124,7 +3262,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 103023,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00614"
+          ]
         },
         {
           "id": 84863,
@@ -2132,9 +3273,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 103023,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55564"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpc.jpg"
+      }
     },
     {
       "id": 34678,
@@ -2146,6 +3293,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84865",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Chartbreaker",
           "source": "igdb",
@@ -2155,6 +3308,18 @@
           "field": "original_name",
           "value": "SingStar: Chartbreaker",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar Chartbreaker is a game of the SingStar Series released in Germany.\n\nTracklist\n1. Adamski Killer\n2. Ann Lee 2 Times\n3. Baltimora Tarzan Boy\n4. Black Wonderful Life\n5. Charles and Eddie Would I Lie To You\n6. China Crisis Wishful Thinking\n7. Cinema Bizarre Lovesongs (They Kill Me)\n8. Daryl Braithwaite One Summer\n9. David Dundas Jeans On\n10. Eighth Wonder I'm Not Scared\n11. Emilia Big, Big World\n12. Harpo Moviestar\n13. Joshua Kadison Jessie\n14. Lisa Stansfield All Around The World\n15. Marc Almond feat. Gene Pitney Something's Gotten Hold Of My Heart\n16. Marshall Hain Dancing In The City\n17. Max Werner Rain In May\n18. Maxi Priest Close To You\n19. OMC How Bizarre\n20. Orange Blue She's Got That Light\n21. P. M. Sampson We Love To Love\n22. Ashford & Simpson Solid\n23. Samantha Fox Touch Me (I Want Your Body)\n24. Sniff'n The Tears Driver's Seat\n25. Talk Talk Such A Shame\n26. Tasmin Archer Sleeping Satellite\n27. Thomas Godoj Love Is You\n28. Thompson Twins Doctor! Doctor!\n29. Watershed Indigo Girl\n30. Whigfield Saturday Night",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Chartbreaker es un juego de la serie SingStar lanzado en Alemania.\n\nLista de canciones\n1. Adamski Killer\n2. Ann Lee 2 Times\n3. Baltimora Tarzan Boy\n4. Black Wonderful Life\n5. Charles and Eddie Would I Lie To You\n6. China Crisis Wishful Thinking\n7. Cinema Bizarre Lovesongs (They Kill Me)\n8. Daryl Braithwaite One Summer\n9. David Dundas Jeans On\n10. Eighth Wonder I'm Not Scared\n11. Emilia Big, Big World\n12. Harpo Moviestar\n13. Joshua Kadison Jessie\n14. Lisa Stansfield All Around The World\n15. Marc Almond feat. Gene Pitney Something's Gotten Hold Of My Heart\n16. Marshall Hain Dancing In The City\n17. Max Werner Rain In May\n18. Maxi Priest Close To You\n19. OMC How Bizarre\n20. Orange Blue She's Got That Light\n21. P. M. Sampson We Love To Love\n22. Ashford & Simpson Solid\n23. Samantha Fox Touch Me (I Want Your Body)\n24. Sniff'n The Tears Driver's Seat\n25. Talk Talk Such A Shame\n26. Tasmin Archer Sleeping Satellite\n27. Thomas Godoj Love Is You\n28. Thompson Twins Doctor! Doctor!\n29. Watershed Indigo Girl\n30. Whigfield Saturday Night",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2171,7 +3336,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 136395,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00640"
+          ]
         },
         {
           "id": 84865,
@@ -2179,9 +3347,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 136395,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55570"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co756n.jpg"
+      }
     },
     {
       "id": 34681,
@@ -2193,6 +3367,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84870",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Singstar: Portugal Hits",
           "source": "igdb",
@@ -2202,6 +3382,18 @@
           "field": "original_name",
           "value": "Singstar: Portugal Hits",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Portugal Hits is a karaoke game, featuring hit portuguese songs. The game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Portugal Hits es un juego de karaoke con éxitos de canciones portuguesas. El juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en medio de la canción ni qué palabras se cantan (no tiene reconocimiento de palabras), así que el canto se evalúa según qué tan bien se logra dar la nota correcta en el momento correcto.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2218,7 +3410,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 91953,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00871"
+          ]
         },
         {
           "id": 84870,
@@ -2226,9 +3421,15 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 91953,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55619"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpm.jpg"
+      }
     },
     {
       "id": 34682,
@@ -2240,6 +3441,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84872",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Fussballhits",
           "source": "igdb",
@@ -2249,6 +3456,18 @@
           "field": "original_name",
           "value": "SingStar: Fussballhits",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Fussballhits is a karaoke game, featuring popular soccer songs. The game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It does not matter if you change octaves in the middle of the song or what words are you singing in as it does not have word recognition, so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Fussballhits es un juego de karaoke con canciones populares de fútbol. El juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en medio de la canción ni qué palabras se cantan, ya que no tiene reconocimiento de palabras, así que el canto se evalúa según qué tan bien se logra dar la nota correcta en el momento correcto.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2265,7 +3484,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 98692,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00869"
+          ]
         },
         {
           "id": 84872,
@@ -2273,9 +3495,15 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 98692,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55617"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hp6.jpg"
+      }
     },
     {
       "id": 34948,
@@ -2312,9 +3540,15 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 273845,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-54764"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7aav.jpg"
+      }
     },
     {
       "id": 34973,
@@ -2351,9 +3585,15 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 273844,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55158"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7aau.jpg"
+      }
     },
     {
       "id": 34978,
@@ -2377,6 +3617,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Russian Hit is a special edition of popular series of karaoke games for the Russian region. This edition includes famous artist like: Zhuki, Dima Bilan, Maksim and the others.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Russian Hit es una edición especial de la popular serie de juegos de karaoke para la región rusa. Incluye artistas famosos como Zhuki, Dima Bilan, Maksim y otros.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -2392,7 +3644,10 @@
           "igdbId": 324235,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co943t.jpg"
+      }
     },
     {
       "id": 34979,
@@ -2416,6 +3671,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Clásicos is a karaoke game on the PlayStation 2 system published by Sony Computer Entertainment Europe and developed by SCEE and London Studio. This is the 17th installment in the SingStar saga and an exclusive version for Spain.Show less",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Clásicos es un juego de karaoke para PlayStation 2 publicado por Sony Computer Entertainment Europe y desarrollado por SCEE y London Studio. Es la decimoséptima entrega de la saga SingStar y una versión exclusiva para España.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -2429,9 +3696,15 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 341410,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55182"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9pvc.jpg"
+      }
     },
     {
       "id": 34986,
@@ -2443,6 +3716,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85310",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Polskie Hity",
           "source": "igdb",
@@ -2452,6 +3731,18 @@
           "field": "original_name",
           "value": "SingStar: Polskie Hity",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Polskie Hity is a karaoke game exclusively released in Poland and featuring 25 Polish songs. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timeing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Polskie Hity es un juego de karaoke lanzado exclusivamente en Polonia, con 25 canciones polacas. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2468,7 +3759,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 268752,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00531"
+          ]
         },
         {
           "id": 85310,
@@ -2476,9 +3770,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 268752,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55513"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co755c.jpg"
+      }
     },
     {
       "id": 34990,
@@ -2490,6 +3790,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85315",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Polskie Hity 2",
           "source": "igdb",
@@ -2499,6 +3805,18 @@
           "field": "original_name",
           "value": "SingStar: Polskie Hity 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Polskie Hity 2 is a karaoke game exclusively released on the Polish market. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timeing; the sung words or octave does not play into the result. The PS3 version allows access to the SingStore, an online shop for downloading additional songs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Polskie Hity 2 es un juego de karaoke lanzado exclusivamente en el mercado polaco. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado. La versión para PS3 permite acceder a la SingStore, una tienda en línea para descargar canciones adicionales.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2515,7 +3833,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 268753,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00856"
+          ]
         },
         {
           "id": 85315,
@@ -2523,9 +3844,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 268753,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55616"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co755d.jpg"
+      }
     },
     {
       "id": 34996,
@@ -2549,6 +3876,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar: Miliki is a karaoke game which exclusively features songs by the Spanish clown and musician Miliki. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Miliki es un juego de karaoke que incluye exclusivamente canciones del payaso y músico español Miliki. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -2562,9 +3901,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 219494,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55566"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5etu.jpg"
+      }
     },
     {
       "id": 34997,
@@ -2576,6 +3921,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85324",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar Patito Feo",
           "source": "igdb",
@@ -2585,6 +3936,18 @@
           "field": "original_name",
           "value": "SingStar Patito Feo",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A version of SingStar that exclusively features music from the Argentinian Telenovela Petito Feo.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Una versión de SingStar que incluye exclusivamente música de la telenovela argentina Patito Feo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2601,7 +3964,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 268749,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00873"
+          ]
         },
         {
           "id": 85324,
@@ -2609,9 +3975,15 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 268749,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55621"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocksg.jpg"
+      }
     },
     {
       "id": 35010,
@@ -2622,6 +3994,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "85341",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "SingStar: SuomiSuosikit",
@@ -2648,7 +4026,10 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 357940,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-01255"
+          ]
         },
         {
           "id": 85341,
@@ -2656,9 +4037,15 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 357940,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-55650"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coa70e.jpg"
+      }
     },
     {
       "id": 40136,
@@ -2682,6 +4069,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Vol.2 is the sequel to the first SingStar on PS3.\n\nIt's a karaoke game, giving points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time. There's a new mode called Harmony Duet, in which two players sing different lines of the same song, at the same time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Vol. 2 es la secuela del primer SingStar para PS3.\n\nEs un juego de karaoke que otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en mitad de la canción ni qué letra se canta (no tiene reconocimiento de palabras): el canto se valora según qué tan bien se acierta la nota correcta en el momento correcto. Incluye un nuevo modo llamado Harmony Duet, en el que dos jugadores cantan líneas diferentes de la misma canción al mismo tiempo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -2695,9 +4094,19 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 15184,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00185",
+            "BCES-00233/GER",
+            "BCES-00234",
+            "BCES-00235",
+            "BCUS-98186"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpy.jpg"
+      }
     },
     {
       "id": 40142,
@@ -2709,6 +4118,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96064",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Vol. 3",
           "source": "igdb",
@@ -2718,6 +4133,18 @@
           "field": "original_name",
           "value": "SingStar: Vol. 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar Vol.3 is the third game of the series to be released on the PS3. It's a karaoke game that gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Vol.3 es la tercera entrega de la serie lanzada para PS3. Es un juego de karaoke que otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en medio de la canción ni qué palabras se cantan (no tiene reconocimiento de palabras), así que el canto se evalúa según qué tan bien se logra dar la nota correcta en el momento correcto.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2744,7 +4171,10 @@
           "igdbId": 52829,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpz.jpg"
+      }
     },
     {
       "id": 40152,
@@ -2756,6 +4186,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96079",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Pop Edition",
           "source": "igdb",
@@ -2765,6 +4201,18 @@
           "field": "original_name",
           "value": "SingStar: Pop Edition",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar Pop Edition is a karaoke game featuring pop songs from the last thirty years and is the first to use the Voice Control, allowing players to jump to their favorite song by saying the name of the artist or the title of the song in the microphone.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Pop Edition es un juego de karaoke con canciones pop de los últimos treinta años. Es el primero en usar el Control por voz, que permite saltar a la canción favorita diciendo al micrófono el nombre del artista o el título de la canción.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2781,7 +4229,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 15190,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Edición de 2009, con contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismo control con micrófono y cámara."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento equivalente."
+            }
+          ]
         },
         {
           "id": 96596,
@@ -2789,9 +4258,33 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 268743,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Lanzamiento de 2007 con el repertorio base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona igual que la otra edición."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la edición original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sin mejoras técnicas notables."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpk.jpg"
+      }
     },
     {
       "id": 40180,
@@ -2815,6 +4308,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Guitar is a spin-off of the karaoke-only SingStar series. It was the first game in the series involving a gameplay element other than karaoke, allowing the use of a third party guitar controller such as those used in the Guitar Hero or Rock Band series.\n\nTracklist:\n\n3 Doors Down - Kryptonite\nBloc Party - Helicopter\nBlur - Song 2\nBuzzcocks - Ever Fallen In Love With Someone\nColbie Caillat - Bubbly\nDavid Bowie - The Man Who Sold The World\nElbow - Grounds For Divorce\nFlorence and the Machine - Kiss With a Fist\nFranz Ferdinand - No You Girls\nJamiroquai - Too Young to Die\nKaiser Chiefs - I predict a riot\nKasabian - Fire\nKT Tunstall - Suddenly I See\nLadyhawk - My Delirium\nMuse - Supermassive Black Hole\nParamore - CrushCrushCrush\nPixies - Debaser\nPulp - Disco 2000\nQueen & David Bowie - Under Pressure\nStereophonics - Just Looking\nThe Stone Roses - Waterfall\nThe Clash - Rock The Casbah\nThe Cult - She Sells Sanctuary\nThe Cure - The Lovecats\nThe Raconteurs - Steady As She Goes\nThe Veronicas - Untouched\nThe White Stripes - Fell In Love With A Girl\nTina Turner - Steamy Windows\nU2 - Beautiful Day\nVampire Weekend - A Punk",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Guitar es un spin-off de la serie de karaoke SingStar. Fue el primer juego de la serie con un elemento de jugabilidad distinto del karaoke, que permite usar un controlador de guitarra de terceros, como los que se usan en las series Guitar Hero o Rock Band.\n\nLista de canciones:\n\n3 Doors Down - Kryptonite\nBloc Party - Helicopter\nBlur - Song 2\nBuzzcocks - Ever Fallen In Love With Someone\nColbie Caillat - Bubbly\nDavid Bowie - The Man Who Sold The World\nElbow - Grounds For Divorce\nFlorence and the Machine - Kiss With a Fist\nFranz Ferdinand - No You Girls\nJamiroquai - Too Young to Die\nKaiser Chiefs - I predict a riot\nKasabian - Fire\nKT Tunstall - Suddenly I See\nLadyhawk - My Delirium\nMuse - Supermassive Black Hole\nParamore - CrushCrushCrush\nPixies - Debaser\nPulp - Disco 2000\nQueen & David Bowie - Under Pressure\nStereophonics - Just Looking\nThe Stone Roses - Waterfall\nThe Clash - Rock The Casbah\nThe Cult - She Sells Sanctuary\nThe Cure - The Lovecats\nThe Raconteurs - Steady As She Goes\nThe Veronicas - Untouched\nThe White Stripes - Fell In Love With A Girl\nTina Turner - Steamy Windows\nU2 - Beautiful Day\nVampire Weekend - A Punk",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -2828,9 +4333,18 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 15201,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00835",
+            "BCES-00979",
+            "BCES-00980",
+            "BCES-00981/ANZ"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cob9vg.jpg"
+      }
     },
     {
       "id": 40183,
@@ -2854,6 +4368,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar Dance is a spin-off of the karaoke-only SingStar series. The game involves an element other than simply karaoke, and utilizes the PlayStation Move controller for dancing.\n\nTracklist:\n\n*N Sync – Bye Bye Bye\nBlack Eyed Peas – Shut Up\nBlondie – Heart Of Glass\nChris Brown – With You\nCyndi Lauper – Girls Just Wanna Have Fun\nDiana Ross and The Supremes – Baby Love\nGloria Gaynor – I Will Survive\nGossip – Standing In The Way Of Control\nGwen Stefani – What You Waiting For?\nJamiroquai – Cosmic Girl\nKC & The Sunshine Band – That’s The Way (I Like It)\nKid Cudi vs Crookers – Day ‘N’ Nite\nKool And The Gang – Celebration\nLa Roux – Bulletproof\nLady Gaga – Poker Face\nMC Hammer – U Can’t Touch This\nNew Kids On The Block – Hangin Tough\nOutkast – Hey Ya!\nPaula Abdul – Straight Up\nPitbull – I Know You Want Me (Calle Ocho)\nReel 2 Real feat. The Mad Stuntman – I Like To Move It\nRicky Martin – Living La Vida Loca\nRun DMC vs Jason Nevins – It’s Like That\nSalt N Pepa – Push It\nShaggy – Boombastic\nSir Mix A Lot – Baby Got Back\nSoulja Boy – Crank That\nThe Backstreet Boys – Everybody (Backstreet’s Back)\nThe Jackson 5 – I Want You Back\nThe Pussycat Dolls – Don’t Cha",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar Dance es un spin-off de la serie de karaoke SingStar. El juego incluye un elemento distinto del karaoke simple y usa el controlador PlayStation Move para bailar.\n\nLista de canciones:\n\n*N Sync – Bye Bye Bye\nBlack Eyed Peas – Shut Up\nBlondie – Heart Of Glass\nChris Brown – With You\nCyndi Lauper – Girls Just Wanna Have Fun\nDiana Ross and The Supremes – Baby Love\nGloria Gaynor – I Will Survive\nGossip – Standing In The Way Of Control\nGwen Stefani – What You Waiting For?\nJamiroquai – Cosmic Girl\nKC & The Sunshine Band – That's The Way (I Like It)\nKid Cudi vs Crookers – Day 'N' Nite\nKool And The Gang – Celebration\nLa Roux – Bulletproof\nLady Gaga – Poker Face\nMC Hammer – U Can't Touch This\nNew Kids On The Block – Hangin Tough\nOutkast – Hey Ya!\nPaula Abdul – Straight Up\nPitbull – I Know You Want Me (Calle Ocho)\nReel 2 Real feat. The Mad Stuntman – I Like To Move It\nRicky Martin – Living La Vida Loca\nRun DMC vs Jason Nevins – It's Like That\nSalt N Pepa – Push It\nShaggy – Boombastic\nSir Mix A Lot – Baby Got Back\nSoulja Boy – Crank That\nThe Backstreet Boys – Everybody (Backstreet's Back)\nThe Jackson 5 – I Want You Back\nThe Pussycat Dolls – Don't Cha",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -2867,9 +4393,18 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 15260,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCAS-20153",
+            "BCES-00894",
+            "BCES-01049",
+            "BCUS-98266"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hp2.jpg"
+      }
     },
     {
       "id": 40192,
@@ -2893,6 +4428,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Localized release exclusive to South Africa. The game gives points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Versión localizada exclusiva de Sudáfrica. El juego otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en medio de la canción ni qué palabras se cantan (no tiene reconocimiento de palabras), así que el canto se evalúa según qué tan bien se logra dar la nota correcta en el momento correcto.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -2906,9 +4453,15 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 15439,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-01083"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hot.jpg"
+      }
     },
     {
       "id": 40226,
@@ -2932,6 +4485,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar: Back to the 80s is a karaoke games with pop songs from the 80s. There are no gameplay changes: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timeing; the sung words or octave does not play into the result. The game allows access to the SingStore, an online shop for downloading additional songs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Back to the 80s es un juego de karaoke con canciones pop de los años 80. No hay cambios en la jugabilidad: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado. El juego permite acceder a la SingStore, una tienda en línea para descargar canciones adicionales.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -2945,9 +4510,15 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 15195,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-01257"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hox.jpg"
+      }
     },
     {
       "id": 40310,
@@ -2959,6 +4530,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96428",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Ultimate Party",
           "source": "igdb",
@@ -2968,6 +4545,18 @@
           "field": "original_name",
           "value": "SingStar: Ultimate Party",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Ultimate Party is the ultimate introduction to kick off a SingStar party on your PlayStation. It hosts a collection of 30 epic tracks, which represents great value for anyone new to SingStar.\n\nNo mics? No problem. Turn your smartphone into a pocket-sized mic and sing your favourite songs with no extra equipment. Have a laugh with friends at your own SingStar bash or impromptu sing-a-long, and then show off your best bits (and, of course, your hilarious epic fails) on Facebook and Twitter. You can even send challenges to your mates online.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Ultimate Party es la introducción definitiva para empezar una fiesta de SingStar en tu PlayStation. Reúne una colección de 30 canciones épicas, lo que supone una gran relación calidad-precio para quien se inicia en SingStar.\n\n¿Sin micrófonos? No hay problema. Convierte tu smartphone en un micrófono de bolsillo y canta tus canciones favoritas sin necesidad de equipo adicional. Diviértete con tus amigos en tu propia fiesta de SingStar o en un karaoke improvisado, y luego muestra tus mejores momentos (y, por supuesto, tus fallos más graciosos y épicos) en Facebook y Twitter. Incluso puedes enviar desafíos a tus amigos en línea.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -2984,7 +4573,13 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 15100,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-02025",
+            "BCES-02025/RSC",
+            "BCES-02042",
+            "BCES-02046"
+          ]
         },
         {
           "id": 96429,
@@ -2994,7 +4589,10 @@
           "igdbId": 15100,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5uba.jpg"
+      }
     },
     {
       "id": 40374,
@@ -3018,6 +4616,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar: Hits 2 is a karaoke game exclusively released in France. The features songs are almost exclusively from French artists. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timeing; the sung words or octave does not play into the result. The game allows access to the SingStore, an online shop for downloading additional songs.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Hits 2 es un juego de karaoke lanzado exclusivamente en Francia. Las canciones incluidas son casi todas de artistas franceses. No hay cambios en la fórmula de juego: uno o varios jugadores cantan en un micrófono y el juego otorga puntos según la interpretación. La única base de evaluación es si se da la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado. El juego permite acceder a la SingStore, una tienda en línea para descargar canciones adicionales.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -3031,9 +4641,15 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 43044,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00346"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hp8.jpg"
+      }
     },
     {
       "id": 40380,
@@ -3057,6 +4673,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar: Hits is the French release of SingStar Vol.2 and is containing 27 French songs for 3 in English. The tracklist is a mix between classic songs and new hits.\n\nIt's a karaoke game, giving points which are distributed by the purity of singing, as in how well does one manage to stay on tune. It doesn't matter if you change octaves in the middle of the song or what words are you singing in (it doesn't have a word recognition), so your singing is rated by how well you manage to hit the correct note at the correct time. There's a new mode called Harmony Duet, in which two players sing different lines of the same song, at the same time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Hits es la versión francesa de SingStar Vol.2 y contiene 27 canciones en francés y 3 en inglés. La lista de canciones combina clásicos y éxitos recientes.\n\nEs un juego de karaoke que otorga puntos según la pureza del canto, es decir, qué tan bien se logra mantenerse afinado. No importa si se cambia de octava en medio de la canción ni qué palabras se cantan (no tiene reconocimiento de palabras), así que el canto se evalúa según qué tan bien se logra dar la nota correcta en el momento correcto. Incluye un nuevo modo llamado Harmony Duet, en el que dos jugadores cantan líneas distintas de la misma canción al mismo tiempo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -3070,9 +4698,15 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 43043,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00264"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8jcn.jpg"
+      }
     },
     {
       "id": 40401,
@@ -3096,6 +4730,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Singstar concept has met great success in Scandinavia, but earlier releases had only English songs. Consumers wanted to sing songs they knew, in their own language, and Singstar svenska hits was born. The game follows the same layout as previous games in the series, but with new artists.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El concepto de SingStar ha tenido gran éxito en Escandinavia, pero las ediciones anteriores solo tenían canciones en inglés. Los consumidores querían cantar canciones que conocían, en su propio idioma, y así nació Singstar svenska hits. El juego sigue el mismo formato que los anteriores de la serie, pero con nuevos artistas.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -3111,7 +4757,10 @@
           "igdbId": 43023,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hpu.jpg"
+      }
     },
     {
       "id": 40559,
@@ -3150,7 +4799,10 @@
           "igdbId": 65564,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5gbs.jpg"
+      }
     },
     {
       "id": 40734,
@@ -3174,6 +4826,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Danish SingStar edition contains both material from the international edition and hits by Danish artists. Gameplay undergoes no major changes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La edición danesa de SingStar contiene material de la edición internacional y éxitos de artistas daneses. La jugabilidad no sufre cambios importantes.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -3187,9 +4851,15 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 92223,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-01103"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hp3.jpg"
+      }
     },
     {
       "id": 40794,
@@ -3201,6 +4871,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97484",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar: Frozen - El Reino del Hielo",
           "source": "igdb",
@@ -3210,6 +4886,18 @@
           "field": "original_name",
           "value": "SingStar: Frozen",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "SingStar: Frozen is a karaoke game based on the animated movie Frozen. Except for the song Let It Go from Demi Lovato, which is the available in all language version, the other nine songs are translated and taken directly from the movie (including dialogue). There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. It is only rated if the correct not is hit at the correct time; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Frozen es un juego de karaoke basado en la película animada Frozen. Excepto la canción «Let It Go», de Demi Lovato, que está disponible en todas las versiones de idioma, las otras nueve canciones están traducidas y tomadas directamente de la película (incluidos los diálogos). La mecánica de juego no cambia: uno o varios jugadores cantan en un micrófono y el juego da puntos según la actuación. Solo se puntúa si se acierta la nota correcta en el momento correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -3226,7 +4914,10 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 86080,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-02113"
+          ]
         },
         {
           "id": 97485,
@@ -3236,7 +4927,10 @@
           "igdbId": 86080,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8hp5.jpg"
+      }
     },
     {
       "id": 40812,
@@ -3260,6 +4954,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar: Morangos com Açúcar is a karaoke game, featuring portuguese songs from the hit teen drama Morangos com Açúcar.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Morangos com Açúcar es un juego de karaoke con canciones en portugués de Morangos com Açúcar, el exitoso drama juvenil de televisión.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -3273,9 +4979,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 397942,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-00518"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobwo8.jpg"
+      }
     },
     {
       "id": 40815,
@@ -3299,6 +5011,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "SingStar: Grandes Exitos is a karaoke exclusively released in Spain. It includes songs by Spanish artists without a limitation in genre or time period. There are no changes to the gameplay formula: player(s) sing into a microphone and the game gives points based on the performance. The only basis of assessment is if the correct note is hit with the correct timing; the sung words or octave does not play into the result.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "SingStar: Grandes Éxitos es un juego de karaoke lanzado exclusivamente en España. Incluye canciones de artistas españoles, sin limitación de género ni de época. La mecánica de juego no cambia: uno o varios jugadores cantan en un micrófono y el juego da puntos según la actuación. El único criterio de evaluación es si se acierta la nota correcta con el tiempo correcto; las palabras cantadas o la octava no influyen en el resultado.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -3312,9 +5036,15 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 268750,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-01258"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co755a.jpg"
+      }
     },
     {
       "id": 40829,
@@ -3351,9 +5081,15 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 221070,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-01915"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ubn.jpg"
+      }
     },
     {
       "id": 40835,
@@ -3365,6 +5101,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97574",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "SingStar MegaHits",
           "source": "igdb",
@@ -3374,6 +5116,18 @@
           "field": "original_name",
           "value": "SingStar MegaHits",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A Spain-exclusive version of SingStar Ultimate Party, which contains Spanish music not found in the original game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Versión exclusiva para España de SingStar: Ultimate Party, que incluye música española que no aparece en el juego original.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -3390,7 +5144,10 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 268748,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCES-02043"
+          ]
         },
         {
           "id": 97575,
@@ -3400,7 +5157,10 @@
           "igdbId": 268748,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co99lj.jpg"
+      }
     },
     {
       "id": 42337,
@@ -3424,6 +5184,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Jump into a host of fun-packed party modes for up to eight players that turn any night into a celebration. Whether you're performing a duet with a partner or recording your performance with the PlayStation Camera to upload to the online community, SingStar Celebration is the perfect way to unleash your inner pop star.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Súmate a una gran variedad de modos de fiesta para hasta ocho jugadores que convierten cualquier noche en una celebración. Ya sea que cantes un dueto con tu pareja o grabes tu actuación con la PlayStation Camera para subirla a la comunidad en línea, SingStar Celebration es la forma perfecta de liberar tu lado de estrella del pop.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -3439,8 +5211,511 @@
           "igdbId": 52828,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co27w2.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 181,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32917,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 32947,
+          "reason": "2004"
+        },
+        {
+          "position": 3,
+          "gameId": 32966,
+          "reason": "2005"
+        },
+        {
+          "position": 4,
+          "gameId": 32968,
+          "reason": "2005"
+        },
+        {
+          "position": 5,
+          "gameId": 33003,
+          "reason": "2005"
+        },
+        {
+          "position": 6,
+          "gameId": 33433,
+          "reason": "2005"
+        },
+        {
+          "position": 7,
+          "gameId": 34550,
+          "reason": "2005"
+        },
+        {
+          "position": 8,
+          "gameId": 33032,
+          "reason": "2006"
+        },
+        {
+          "position": 9,
+          "gameId": 33047,
+          "reason": "2006"
+        },
+        {
+          "position": 10,
+          "gameId": 33060,
+          "reason": "2006"
+        },
+        {
+          "position": 11,
+          "gameId": 34589,
+          "reason": "2006"
+        },
+        {
+          "position": 12,
+          "gameId": 34601,
+          "reason": "2006"
+        },
+        {
+          "position": 13,
+          "gameId": 34609,
+          "reason": "2006"
+        },
+        {
+          "position": 14,
+          "gameId": 33092,
+          "reason": "2007"
+        },
+        {
+          "position": 15,
+          "gameId": 33097,
+          "reason": "2007"
+        },
+        {
+          "position": 16,
+          "gameId": 33101,
+          "reason": "2007"
+        },
+        {
+          "position": 17,
+          "gameId": 33102,
+          "reason": "2007"
+        },
+        {
+          "position": 18,
+          "gameId": 33106,
+          "reason": "2007"
+        },
+        {
+          "position": 19,
+          "gameId": 33110,
+          "reason": "2007"
+        },
+        {
+          "position": 20,
+          "gameId": 33520,
+          "reason": "2007"
+        },
+        {
+          "position": 21,
+          "gameId": 33532,
+          "reason": "2007"
+        },
+        {
+          "position": 22,
+          "gameId": 33854,
+          "reason": "2007"
+        },
+        {
+          "position": 23,
+          "gameId": 34636,
+          "reason": "2007"
+        },
+        {
+          "position": 24,
+          "gameId": 34643,
+          "reason": "2007"
+        },
+        {
+          "position": 25,
+          "gameId": 34647,
+          "reason": "2007"
+        },
+        {
+          "position": 26,
+          "gameId": 34948,
+          "reason": "2007"
+        },
+        {
+          "position": 27,
+          "gameId": 32600,
+          "reason": "2008"
+        },
+        {
+          "position": 28,
+          "gameId": 33115,
+          "reason": "2008"
+        },
+        {
+          "position": 29,
+          "gameId": 33119,
+          "reason": "2008"
+        },
+        {
+          "position": 30,
+          "gameId": 33120,
+          "reason": "2008"
+        },
+        {
+          "position": 31,
+          "gameId": 33121,
+          "reason": "2008"
+        },
+        {
+          "position": 32,
+          "gameId": 33123,
+          "reason": "2008"
+        },
+        {
+          "position": 33,
+          "gameId": 33125,
+          "reason": "2008"
+        },
+        {
+          "position": 34,
+          "gameId": 33130,
+          "reason": "2008"
+        },
+        {
+          "position": 35,
+          "gameId": 33547,
+          "reason": "2008"
+        },
+        {
+          "position": 36,
+          "gameId": 34655,
+          "reason": "2008"
+        },
+        {
+          "position": 37,
+          "gameId": 34668,
+          "reason": "2008"
+        },
+        {
+          "position": 38,
+          "gameId": 34973,
+          "reason": "2008"
+        },
+        {
+          "position": 39,
+          "gameId": 34978,
+          "reason": "2008"
+        },
+        {
+          "position": 40,
+          "gameId": 34979,
+          "reason": "2008"
+        },
+        {
+          "position": 41,
+          "gameId": 40136,
+          "reason": "2008"
+        },
+        {
+          "position": 42,
+          "gameId": 40142,
+          "reason": "2008"
+        },
+        {
+          "position": 43,
+          "gameId": 40374,
+          "reason": "2008"
+        },
+        {
+          "position": 44,
+          "gameId": 40380,
+          "reason": "2008"
+        },
+        {
+          "position": 45,
+          "gameId": 33133,
+          "reason": "2009"
+        },
+        {
+          "position": 46,
+          "gameId": 33137,
+          "reason": "2009"
+        },
+        {
+          "position": 47,
+          "gameId": 33138,
+          "reason": "2009"
+        },
+        {
+          "position": 48,
+          "gameId": 33139,
+          "reason": "2009"
+        },
+        {
+          "position": 49,
+          "gameId": 33904,
+          "reason": "2009"
+        },
+        {
+          "position": 50,
+          "gameId": 33905,
+          "reason": "2009"
+        },
+        {
+          "position": 51,
+          "gameId": 33907,
+          "reason": "2009"
+        },
+        {
+          "position": 52,
+          "gameId": 34677,
+          "reason": "2009"
+        },
+        {
+          "position": 53,
+          "gameId": 34678,
+          "reason": "2009"
+        },
+        {
+          "position": 54,
+          "gameId": 34986,
+          "reason": "2009"
+        },
+        {
+          "position": 55,
+          "gameId": 34990,
+          "reason": "2009"
+        },
+        {
+          "position": 56,
+          "gameId": 34996,
+          "reason": "2009"
+        },
+        {
+          "position": 57,
+          "gameId": 34997,
+          "reason": "2009"
+        },
+        {
+          "position": 58,
+          "gameId": 40152,
+          "reason": "2009"
+        },
+        {
+          "position": 59,
+          "gameId": 40401,
+          "reason": "2009"
+        },
+        {
+          "position": 60,
+          "gameId": 40812,
+          "reason": "2009"
+        },
+        {
+          "position": 61,
+          "gameId": 33141,
+          "reason": "2010"
+        },
+        {
+          "position": 62,
+          "gameId": 33142,
+          "reason": "2010"
+        },
+        {
+          "position": 63,
+          "gameId": 33554,
+          "reason": "2010"
+        },
+        {
+          "position": 64,
+          "gameId": 33914,
+          "reason": "2010"
+        },
+        {
+          "position": 65,
+          "gameId": 34681,
+          "reason": "2010"
+        },
+        {
+          "position": 66,
+          "gameId": 34682,
+          "reason": "2010"
+        },
+        {
+          "position": 67,
+          "gameId": 40180,
+          "reason": "2010"
+        },
+        {
+          "position": 68,
+          "gameId": 40183,
+          "reason": "2010"
+        },
+        {
+          "position": 69,
+          "gameId": 40559,
+          "reason": "2010"
+        },
+        {
+          "position": 70,
+          "gameId": 35010,
+          "reason": "2011"
+        },
+        {
+          "position": 71,
+          "gameId": 40192,
+          "reason": "2011"
+        },
+        {
+          "position": 72,
+          "gameId": 40226,
+          "reason": "2011"
+        },
+        {
+          "position": 73,
+          "gameId": 40734,
+          "reason": "2011"
+        },
+        {
+          "position": 74,
+          "gameId": 40815,
+          "reason": "2011"
+        },
+        {
+          "position": 75,
+          "gameId": 40829,
+          "reason": "2013"
+        },
+        {
+          "position": 76,
+          "gameId": 40310,
+          "reason": "2014"
+        },
+        {
+          "position": 77,
+          "gameId": 40835,
+          "reason": "2014"
+        },
+        {
+          "position": 78,
+          "gameId": 40794,
+          "reason": "2015"
+        },
+        {
+          "position": 79,
+          "gameId": 42337,
+          "reason": "2017"
+        }
+      ]
+    },
+    {
+      "id": 3661,
+      "kind": "story",
+      "rationale": "SingStar es una colección de karaoke sin historia continua. Se repite el orden de lanzamiento, limitado a las entregas principales internacionales.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32917,
+          "reason": "El primer SingStar, base de la saga. Elige la versión según tu consola."
+        },
+        {
+          "position": 2,
+          "gameId": 32968,
+          "recommendedVersionId": 82325,
+          "reason": "Edición de pop temprana en PS2."
+        },
+        {
+          "position": 3,
+          "gameId": 33003,
+          "recommendedVersionId": 82377,
+          "reason": "Edición temática de los 80 en PS2."
+        },
+        {
+          "position": 4,
+          "gameId": 33032,
+          "recommendedVersionId": 82427,
+          "reason": "Edición de rock en PS2."
+        },
+        {
+          "position": 5,
+          "gameId": 33060,
+          "recommendedVersionId": 82480,
+          "reason": "Edición de clásicos en PS2."
+        },
+        {
+          "position": 6,
+          "gameId": 32600,
+          "recommendedVersionId": 81410,
+          "reason": "Edición de ABBA, mejor en PS3."
+        },
+        {
+          "position": 7,
+          "gameId": 33133,
+          "recommendedVersionId": 82636,
+          "reason": "Edición de Queen, mejor en PS3."
+        },
+        {
+          "position": 8,
+          "gameId": 40310,
+          "recommendedVersionId": 96429,
+          "reason": "Edición reciente para PS4."
+        }
+      ]
+    },
+    {
+      "id": 3662,
+      "kind": "community",
+      "rationale": "Se recomienda jugar en la consola más reciente que tengas y elegir por el repertorio. Se omiten las ediciones regionales y los spin-offs infantiles. Sin fuentes web verificadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40310,
+          "recommendedVersionId": 96429,
+          "reason": "Ultimate Party en PS4: canciones modernas."
+        },
+        {
+          "position": 2,
+          "gameId": 32917,
+          "recommendedVersionId": 97450,
+          "reason": "Versión PS4 del SingStar base, fácil de empezar."
+        },
+        {
+          "position": 3,
+          "gameId": 33133,
+          "recommendedVersionId": 82636,
+          "reason": "Queen es una de las ediciones temáticas más queridas, en PS3."
+        },
+        {
+          "position": 4,
+          "gameId": 32600,
+          "recommendedVersionId": 81410,
+          "reason": "ABBA, muy popular para fiestas, en PS3."
+        },
+        {
+          "position": 5,
+          "gameId": 33003,
+          "recommendedVersionId": 82377,
+          "reason": "Los 80 es un clásico de la era PS2."
+        }
+      ]
+    }
+  ]
 }

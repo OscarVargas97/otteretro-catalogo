@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1927",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bottom of the 9th",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Bottom of the 9th",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Play Exhibition and Season modes as your favorite team from the Major League Baseball. 300 real life players, complete with a full list of stats, are included for this combination of simulation and arcade style baseball.\n\nAlong with the usual assortment of playing options, you can also play some scenario simulations, where each scenario is based on a real life occurence in the MLB. For example, hit a home run with the last ball of the match, or stop a team from scoring in the final inning to complete each scenario. Traning and support for 2 player multi-player are also available.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,31 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 3369,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, con pequeños recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto con mando de N64."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Conversión con diferencias."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Imagen más borrosa y menos pulida."
+            }
+          ],
+          "codes": [
+            "NBOE"
+          ]
         },
         {
           "id": 1927,
@@ -56,7 +92,31 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 3369,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo de la versión original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control sólido y guardado en tarjeta."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos nítidos y fluidez correcta."
+            }
+          ],
+          "codes": [
+            "SLUS-00049"
+          ]
         }
       ],
       "images": {
@@ -87,6 +147,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Bottom of the 9th '97 brings all of the action of professional baseball to the PlayStation. With an MLBPA license, over 700 major league players are included with their career stats, and motion capture technology recreates all of their nuances. Put those players on the field in any of 15 stadiums in the Exhibition or Training modes for a quick baseball fix. Or, discover the pressure of being down by three runs and coming to the plate with bases loaded and two outs in the Scenario mode. For a more complete experience, tackle the Season, Playoff, or Championship modes. With the innovative cursor system for batting and pitching, the challenges of hitting a 100 mph fastball are faithfully recreated. All of the action of Bottom of the 9th '97 brings professional baseball to your living room, without the need to pay an arm and a leg for beer.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -100,7 +166,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 43857,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-00296"
+          ]
         }
       ],
       "images": {
@@ -129,6 +198,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "BOTTOM OF THE 9TH ‘99 brings all of the action and excitement of professional baseball to the PlayStation. With an MLBPA license, over 700 major league players are included with updated stats, and motion capture technology recreates the nuances of every single player. Get a quick baseball fix by putting your team on the field of 30 stadiums in the Exhibition or Training modes; or discover the pressure being on the mound, up by one run with one out and a man on third, in the Scenario mode. For the most realistic experience, tackle the ups and downs of a season, the playoffs, or a championship series. With the innovative cursor system for batting and pitching, the challenges of hitting a 100 mph fastball are faithfully recreated. The action of BOTTOM OF THE 9TH '99 brings professional baseball to you without having to pay for admission.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -142,7 +217,10 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 43856,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-00678"
+          ]
         }
       ],
       "images": {
@@ -150,5 +228,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1437,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1004,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 24544,
+          "reason": "1997"
+        },
+        {
+          "position": 3,
+          "gameId": 24592,
+          "reason": "1998"
+        }
+      ]
+    }
+  ]
 }

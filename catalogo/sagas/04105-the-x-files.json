@@ -14,6 +14,68 @@
   ],
   "games": [
     {
+      "id": 25064,
+      "nameEs": "The X-Files: Unrestricted Access",
+      "originalName": "The X-Files: Unrestricted Access",
+      "year": 1998,
+      "igdbId": 64238,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "62954",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "The X-Files: Unrestricted Access",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "The X-Files: Unrestricted Access",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "As an extension of one of the most long-running television series of all time, The X-Files, play through the eyes of Special Agent Craig Willmore, a new FBI field investigator brought in to locate missing agents Fox Mulder and Dana Scully whose last location was the Everett, Washington, area. In this \"movie quality\" video production, characters are played by the actors and actresses from the show, including Gillian Anderson (Scully) and David Duchovny (Mulder).",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1998",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 62954,
+          "platform": "pc",
+          "kind": "original",
+          "year": 1998,
+          "igdbId": 64238,
+          "criteria": []
+        },
+        {
+          "id": 62955,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 1999,
+          "igdbId": 64238,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a3ce0b1c8dca3dd0a89b05539e9d1b6f.png"
+      }
+    },
+    {
       "id": 25492,
       "nameEs": "The X-Files Game",
       "originalName": "The X-Files Game",
@@ -23,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63736",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The X-Files Game",
           "source": "igdb",
@@ -31,6 +99,12 @@
         {
           "field": "original_name",
           "value": "The X-Files Game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The X-Files Game is an interactive movie point-and-click adventure video game developed by HyperBole Studios and first published by Fox Interactive. The game was released for Microsoft Windows, Mac OS and PlayStation in 1998, and is based on the television series The X-Files.",
           "source": "igdb",
           "manual": false
         },
@@ -63,7 +137,21 @@
         "cover": "https://cdn2.steamgriddb.com/grid/5e40e34bfa40d89e76297dda1984baa9.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/c7e6d11da501f2d4894990cfa64b574b.png",
         "logo": "https://cdn2.steamgriddb.com/logo/e3d82d4357291c9faa3d9d908d0f29fe.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 443,
+          "platform": "pc",
+          "project": "shiloh",
+          "kind": "port",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/Asterber/shiloh",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     },
     {
       "id": 33717,
@@ -87,6 +175,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The game follows FBI Special Agents Fox Mulder (voiced by David Duchovny) and Dana Scully (voiced by Gillian Anderson) as they travel to a small town in the Rocky Mountains to dig into the source of some strange and unexplained murders. Sightings of ghostly apparitions, zombies and hints of alien presence lead them on a chase for an \"inhuman\" killer.\n\nDuring the course of the story, Mulder and Scully follow leads to a remote location in Russia and then discover, and search, a mysterious half-buried alien space ship. Players can play as Mulder or Scully as they attempt to prevent alien colonization of Earth.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -100,7 +194,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 43672,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52341",
+            "SLUS-20179"
+          ]
         }
       ],
       "images": {
@@ -110,5 +208,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1900,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25064,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 25492,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 33717,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

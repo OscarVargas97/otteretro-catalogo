@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "68056",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "YinYang Street",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "YinYang Street",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Set in a small town on the border in the 1980s, \"Street\" is led by Li Minglai, an active soldier engaged in a homeland defense war. A trip back home in the usual but, Once warm and happy home is now only a mystery, everything points to a mysterious and weird legend - \"Yin and Yang street\".",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2023,
           "igdbId": 240130,
           "steamAppId": 2334040,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado, ratón o mando; guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de lanzamiento de 2023."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fps más altos y estables."
+            }
+          ]
         },
         {
           "id": 68057,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 240130,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, sin extras conocidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil, con controles adaptados."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento más modestos en Switch."
+            }
+          ]
         }
       ],
       "images": {
@@ -74,6 +128,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87792",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "YinYang Street: Separate Ways",
           "source": "igdb",
@@ -82,6 +142,12 @@
         {
           "field": "original_name",
           "value": "YinYang Street: Separate Ways",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "YinYang Street: Separate Ways is a Chinese micro horror game set in 1980s China, combining the story of understanding puzzles and text adventures. In the game, the scroll scene that can be moved by four axes is applied to bring different game experience to the player.",
           "source": "igdb",
           "manual": false
         },
@@ -124,10 +190,36 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 345818,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010095C024BE4000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobvb8.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3148,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 27567,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 36425,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96108",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Greed Corp",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Greed Corp",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Greed Corp is an award winning, innovative turn-based strategy game, situated in a rich, fictional world inspired by the industrial revolutions and their destructive effects on the environment. Find the delicate balance between harvesting the land for resources and preserving it to stay alive. Will you defend your territory or sacrifice it to keep it out of enemy hands? Manage the finite available resources to build your army and use the collapsing terrain to your advantage.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 16170,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/86800fe41915de0ec2b86fe688662acd.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/81b073de9370ea873f548e31b8adc081.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/0cb929eae7a499e50248a3a78f7acfc7.png"
+      }
     },
     {
       "id": 40207,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96195",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gatling Gears",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Gatling Gears",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "When the Empire begins its reign of destruction in a thirst for natural resources, it’s up to Max Brawley, a retired Gatling Gear pilot, to stop them. Together with his niece and his trusty Gatling Gear unit he must fight his way to the heart of the Empire and eliminate the destruction at its source.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +152,33 @@
           "igdbId": 15134,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/eeae083571e24fc149ad1583d704ee1d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/194585b5215aea447389c5fefca09c61.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c42c101f89ec57e54230d611f74d5ae1.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3341,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40166,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 40207,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60136",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Descent",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Descent",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome to Descent - 30 levels of the most mind-bending, stomach-churning action game ever. Featuring true 3-Dimensional worlds with light source shading, texture mapping, 3-D morphing, directional sound effects and sizzling music, this is technology taken to the limit.You begin deep below the surface of Lunar Base I where an unknown alien race has taken over the chasm of the Post-Terran Mining Corporation. Lunge straight down mine shafts, twist around never-ending tunnels and fight your way past robotic menaces in an environment that's truly 360° 3-D... move up, move down, shoot everything everywhere. Hang onto your senses (and your lunch) as you drop straight down mine shafts on a ride that'll leave you spinning.And what's the good of losing your mind if you can't share the experience with your friends? Descent invites you and your buddies to dive into the action together with head-to-head combat and cooperative two-player modem and eight-player network support.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2014,
           "igdbId": 1872,
           "steamAppId": 273570,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye el juego completo con los niveles originales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado dan un control preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original de PC."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución alta y fluido, aunque puede requerir ajustes de compatibilidad."
+            }
+          ]
         },
         {
           "id": 60137,
@@ -57,7 +90,33 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 1872,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contiene el juego base, con algunos niveles ajustados al puerto."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Con gamepad, el control de 6 ejes resulta torpe."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Es el juego de 1996 adaptado a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y cuadros inestables."
+            }
+          ],
+          "codes": [
+            "SLES-00055",
+            "SLPS-00212",
+            "SLUS-00037"
+          ]
         }
       ],
       "images": {
@@ -76,6 +135,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61136",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Descent II",
           "source": "igdb",
@@ -84,6 +149,12 @@
         {
           "field": "original_name",
           "value": "Descent II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You're going down... again. If you thought Descent went to the edge of 360° 3D power-blasting sensory insanity, then prepare yourself. You're about to plunge over the edge, and into the depths of Descent II.\n\nSuddenly warped into the outer reaches of the Zeta Aquilae System, your new mission sends you into the black depths of treacherous alien mines. You blast through enemy robots with powerful new tools, leaving their flaming hulks in your exhaust. Your ultimate goal: to exterminate the alien robot stronghold from the enemy Alien Base and claim total control -- it's 30 new levels of outrageous destruction.\n\nBut this time, you're not alone.\n\nJoining you on your deadly new assignment is your loyal Guide-bot. This faithful companion rushes with you through the twists and turns of the menacing darkness, often scouting ahead to hunt down the orbs, powerups and tools you desperately need to complete your job. But beware -- raging enemies are still determined to destroy you, including the menacing Thief-bot who's set on stealing your weapons of destruction and precious powerups. Get ready -- Descent II is about to take you on a whole new synapse-smashing ride.",
           "source": "igdb",
           "manual": false
         },
@@ -110,7 +181,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 20130,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00558"
+          ]
         }
       ],
       "images": {
@@ -120,5 +194,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3052,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23753,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 24096,
+          "reason": "1996"
+        }
+      ]
+    }
+  ]
 }

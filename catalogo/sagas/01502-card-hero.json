@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10007",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Trade & Battle: Card Hero",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Trade & Battle: Card Hero",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The first game in the Card Hero franchise by Yoshio Sakamoto and Intelligent Systems.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 67836,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin guardado rápido; requiere cable link para intercambiar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, sin mejoras."
+            }
+          ]
         },
         {
           "id": 10007,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 67836,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración y comodidad en 3DS."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port directo sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Pantalla más nítida y sin fallos añadidos."
+            }
+          ]
         }
       ],
       "images": {
@@ -98,7 +152,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 73037,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YCHJ"
+          ]
         }
       ],
       "images": {
@@ -127,6 +184,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Card Hero Speed Battle Custom is the third installment in the Card Hero series. Gameplay is based on a modified version of the previous installment, Kousoku Card Battle: Card Hero, where players will collect cards and use them in battle against other players. The player can choose to fight against computer controlled characters or human players. A mode in the game allows the player to fight using a different deck every day. The decks have special themes depending on when you play, such as special summer themes during summer. The game supports Nintendo Wi-Fi Connection and local multiplayer.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -148,5 +211,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1566,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4861,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 17466,
+          "reason": "2007"
+        },
+        {
+          "position": 3,
+          "gameId": 17632,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

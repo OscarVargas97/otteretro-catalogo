@@ -14,6 +14,68 @@
   ],
   "games": [
     {
+      "id": 34415,
+      "nameEs": "Real Madrid Club Football",
+      "originalName": "Real Madrid Club Football",
+      "year": 2003,
+      "igdbId": 141135,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "84545",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Real Madrid Club Football",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Real Madrid Club Football",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Club Football is a soccer series designed to re-create the individual team experience. A total of 17 games released in the Club Football series are tailored to the specific European teams on which they are based, including character facial mapping from each of the 22 position players on the roster.\nEach game features bespoke content - including media archive clips of great goals and famous victories - and allows fans to add themselves to the 2003/04 starting line-up of their favourite side.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2003",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 84544,
+          "platform": "xbox",
+          "kind": "original",
+          "year": 2003,
+          "igdbId": 141135,
+          "criteria": []
+        },
+        {
+          "id": 84545,
+          "platform": "ps2",
+          "kind": "original",
+          "year": 2003,
+          "igdbId": 141135,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2ksi.jpg"
+      }
+    },
+    {
       "id": 34488,
       "nameEs": "AC Milan Club Football 2005",
       "originalName": "AC Milan Club Football 2005",
@@ -23,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84634",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "AC Milan Club Football 2005",
           "source": "igdb",
@@ -31,6 +99,12 @@
         {
           "field": "original_name",
           "value": "AC Milan Club Football 2005",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The follow-up edition to Codemasters' multi-title soccer franchise (each dedicated to a single team in the UK and continental European football league and featuring unique presentation and other team-specific aspects), the 2005 series is powered by an accelerated game engine and new animation system to deliver faster and more responsive gameplay for precise control on the pitch. With twice the amount of official team content in each game, great skill moves and new game modes including Career, Practice and classic Scenarios (plus new clubs added to the line-up), the new Club Football 2005 range will bring players even closer to the heart of the action and the heart of their team.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +132,10 @@
           "igdbId": 94442,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coa6ft.jpg"
+      }
     },
     {
       "id": 34787,
@@ -70,6 +147,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85055",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "AC Milan Club Football",
           "source": "igdb",
@@ -78,6 +161,12 @@
         {
           "field": "original_name",
           "value": "AC Milan Club Football",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Club Football is a soccer series designed to re-create the individual team experience. A total of 17 games released in the Club Football series are tailored to the specific European teams on which they are based, including character facial mapping from each of the 22 position players on the roster.\n\nEach game features bespoke content - including media archive clips of great goals and famous victories - and allows fans to add themselves to the 2003/04 starting line-up of their favourite side.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +194,36 @@
           "igdbId": 267875,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coa6fr.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1968,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34415,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 34787,
+          "reason": "2003"
+        },
+        {
+          "position": 3,
+          "gameId": 34488,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

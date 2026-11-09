@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43493",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Eisei Meijin VI",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 3904,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GE6J-JPN"
+          ]
         },
         {
           "id": 43494,
@@ -85,6 +94,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Eisei Meijin is a digital conversion of the traditional Japanese board game Shogi for one or two players, and the first game in Konami's long-running Shogi series to come to console. In addition to standard play against the computer or a second player, it includes the ability to record and play back matches, and even includes playable records of several historical Shogi matches from the Edo era. Also included are a board edit mode and a tool that automatically solves Tsume Shogi problems.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -98,7 +113,10 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 268639,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00090"
+          ]
         }
       ],
       "images": {
@@ -127,6 +145,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Eisei Meijin II is a digital conversion of the traditional Japanese board game Shogi for one or two players, and the second game in the series to appear on consoles. It is very similar to the previous release, offering all of the same features: play against the computer or a second player, recording and playback of matches, playable records of historical matches, and a Tsume Shogi solver tool. New in this updated version of the game are: • An improved move prediction tool with faster performance • A new extra-easy \"Level 0\" difficulty option • Additional historical matches available for replay",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -140,7 +164,10 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 268640,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-86014"
+          ]
         }
       ],
       "images": {
@@ -169,6 +196,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Eisei Meijin III - Game Creator Yoshimura Nobuhiro no Zunou is a traditional video game released in 1999 by Konami for the Playstation & Dreamcast consoles. The game was only released in Japan. The game is based on the traditional board game shogi.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -182,7 +215,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 283253,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-86199"
+          ]
         }
       ],
       "images": {
@@ -190,5 +226,35 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1330,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26176,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 26221,
+          "reason": "1996"
+        },
+        {
+          "position": 3,
+          "gameId": 26360,
+          "reason": "1999"
+        },
+        {
+          "position": 4,
+          "gameId": 16519,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

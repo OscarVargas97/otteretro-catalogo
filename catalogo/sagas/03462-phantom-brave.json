@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "40240",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantom Brave",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Phantom Brave",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Phantom Brave is a strategy RPG which takes place in the world of Ivoire. Ivoire consists of vast seas and numerous islands; it used to be a peaceful place, but an ancient (and powerful) force is now threatening life in the various lands. The character you control in the game is Marona, a 13 year old orphaned girl. Marona has the ability to communicate with phantoms, an ability that brings a lot of resentment from other people but will help her to head out into the world and solve the problems that are occurring. A phantom known as Ash acts as Marona's guardian; as the game progresses, other phantoms will join your party, each of which have different capabilities.\n\nThe game features a turn based combat system. During battles, Marona is able to attack enemies by herself, and she can also summon phantoms in her party to help out. To summon phantoms, you will need to confine them to an object on the screen (such as a rock or tree). Once confined to an object, you will then be able to control the phantom in battle, though phantoms only remain controllable for a limited number of turns. The object you confine a phantom to will affect it's abilities; for example, a rock may make a phantom stronger but move slower. By defeating enemies in battle you earn experience points allowing to level up and become more powerful.",
           "source": "igdb",
           "manual": false
         },
@@ -88,7 +100,13 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 5097,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52951",
+            "SLPS-20344",
+            "SLPS-20345",
+            "SLUS-20955"
+          ]
         },
         {
           "id": 86238,
@@ -125,6 +143,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The protagonist of Phantom Brave is a 13 year old girl named Marona. Having lost her parents at a young age, Marona lives on Phantom Isle in the land of Ivoire with a phantom named Ash. While he was still alive, Ash worked alongside Jasmine and Haze (Marona's parents) as a Chroma, a sort of bounty hunter. On an assignment at the Isle of Evil, a fragment of a malevolent being known as Sulphur attacked the group, mortally wounding them. Using the last of his life energy, Haze attempted to revive Ash after the battle. However, there was only enough life left in him to bring Ash back as a phantom. Haze and Jasmine's dying wish was for Ash to watch over their then-infant daughter Marona.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -138,7 +162,10 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 24330,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R46E-USA-B0"
+          ]
         }
       ],
       "images": {
@@ -157,6 +184,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76095",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantom Brave: The Lost Hero",
           "source": "igdb",
@@ -165,6 +198,12 @@
         {
           "field": "original_name",
           "value": "Phantom Brave: The Lost Hero",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join Marona and her Phantom friends on a mission to defeat the sinister Shipwreck Fleet! Recruit Phantoms, bind them to objects, combine them with Gadgets, and even merge them with Marona herself in this Play-It-Your-Way RPG.",
           "source": "igdb",
           "manual": false
         },
@@ -207,7 +246,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 306146,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01000AE01E316000"
+          ]
         }
       ],
       "images": {
@@ -216,5 +258,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1821,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19573,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 19995,
+          "reason": "2009"
+        },
+        {
+          "position": 3,
+          "gameId": 30469,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

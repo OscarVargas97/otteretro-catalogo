@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2164",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Space Station Silicon Valley",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Space Station Silicon Valley",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A space station that was built more than 1000 years before by Earth, shortly after its launch, vanished. The station has since then mysteriously reappeared and it's bound on a collision course with Earth. Unless Dan and Evo can stop it, all will surely perish. The idea behind the game is fairly simplistic: players take on the role of Evo, a robotic microchip that possesses the unique ability to take over the bodies of dead (robotic) animals. Evo makes his way through a variety of levels and worlds filled with different objectives and, of course, different animals.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3602,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo en 3D con todos los niveles y animales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con el stick analógico, aunque la cámara está algo anticuada."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien para N64, con algo de borrosidad y cuadros bajos."
+            }
+          ]
         },
         {
           "id": 2165,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3602,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar al original; no verificado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles adaptados al mando de PS1."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Conversión con diferencias posibles."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Con cargas de disco y gráficos algo recortados; no verificado."
+            }
+          ]
         },
         {
           "id": 2713,
@@ -64,14 +118,51 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 134275,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión de Game Boy muy reducida, con menos contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Diseño 2D simplificado y controles limitados."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Es una reinterpretación muy distinta."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Estable, pero con gráficos mínimos."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a540033cae33272f44875ca0a0921ed4.png",
         "hero": "https://cdn2.steamgriddb.com/hero/c59caa3f79c08451d88f41392a4e5ae7.png",
         "logo": "https://cdn2.steamgriddb.com/logo/606b9adc15717739ca7acd3987f0e8ab.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1090,
+          "platform": "n64",
+          "project": "SSSV_Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Cellenseres/SSSV_Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     }
   ],
   "routes": []

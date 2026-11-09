@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "55885",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Moorhuhn Jump and Run: 'Trampas y Trucos 2'",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Moorhuhn Jump and Run: Traps and Treasures 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Moorhuhn 'Traps and Treasures 2' for Nintendo Switch brings 21 challenging levels + 6 bonus levels full of dangerous traps, devious enemies and hidden treasures!",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "remaster",
           "year": 2022,
           "igdbId": 196642,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01002AB017786000"
+          ]
         }
       ],
       "images": {
@@ -90,6 +105,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "77771",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Moorhuhn Jump and Run: Traps and Treasures 3",
           "source": "igdb",
@@ -98,6 +119,12 @@
         {
           "field": "original_name",
           "value": "Moorhuhn Jump and Run: Traps and Treasures 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Moorhuhn Jump and Run ‘Traps and Treasures 3’, 31 levels full of traps and enemies await you!",
           "source": "igdb",
           "manual": false
         },
@@ -140,7 +167,10 @@
           "kind": "remaster",
           "year": 2024,
           "igdbId": 320462,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01000220183C0000"
+          ]
         }
       ],
       "images": {
@@ -148,5 +178,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3020,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 22437,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 31098,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

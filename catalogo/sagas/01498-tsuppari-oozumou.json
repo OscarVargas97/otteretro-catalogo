@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9965",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tsuppari Oozumou",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tsuppari Oozumou",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tsuppari Oozumou is a sumo wrestling game. The goal is to wrestle the opponent out of the ring. The opponents get harder as the game progresses. Different moves can be performed depending on button and directional combinations.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 79226,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido original en portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil, con menú de reanudación."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original, con pocos cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta, pero pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 9964,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 79226,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego de Consola Virtual con contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Se juega bien con mando clásico, pero sin funciones adicionales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original emulado sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución original y emulación sólida."
+            }
+          ]
         },
         {
           "id": 9965,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 79226,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Admite varios mandos y tiene menú de reanudación."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor salida a HD y emulación estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -93,6 +168,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Forget about being healthy! Here's a game that celebrates eating, getting fat, and fighting! Hold the Wii Remote horizontally, and tilt it left, right, up or down to perform all kinds of lifts and throws just like in real sumo. Use all the moves you learn in tournaments around the world to reach the peak of sumo and become a yokozuna!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -114,5 +195,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2358,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4843,
+          "reason": "1987"
+        },
+        {
+          "position": 2,
+          "gameId": 20208,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

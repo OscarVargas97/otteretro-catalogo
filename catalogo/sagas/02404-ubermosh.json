@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22067",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ubermosh: Black",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ubermosh: Black",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ubermosh: Black is the hardcore version of the arcade game Ubermosh.\nCut bullets with your sword, shoot with heavy guns and splatter enemies with a rage fueled psionic wave.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2016,
           "igdbId": 33464,
           "steamAppId": 444940,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntería precisa con ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y con resolución alta."
+            }
+          ]
         },
         {
           "id": 22068,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 33464,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buena en mando, menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con cambios de control."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor."
+            }
+          ],
+          "codes": [
+            "0100A5101210E000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "28310",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ubermosh: Santicide",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Ubermosh: Santicide",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Santicide is the latest volume of the arcade series Ubermosh. A must buy for arcade and top-down enthusiasts.",
           "source": "igdb",
           "manual": false
         },
@@ -102,7 +171,28 @@
           "year": 2018,
           "igdbId": 105620,
           "steamAppId": 898450,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntería precisa con ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y nítido."
+            }
+          ]
         },
         {
           "id": 28311,
@@ -110,7 +200,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 105620,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buena en mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con cambios de control."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor."
+            }
+          ],
+          "codes": [
+            "010040D01222C000"
+          ]
         }
       ],
       "images": {
@@ -129,6 +243,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "34701",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ubermosh: Omega",
           "source": "igdb",
@@ -137,6 +257,12 @@
         {
           "field": "original_name",
           "value": "Ubermosh: Omega",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ubermosh: Omega, the apex of Walter Machado's Cult Classic series Ubermosh.",
           "source": "igdb",
           "manual": false
         },
@@ -171,7 +297,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 125084,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100DBA0109C2000"
+          ]
         }
       ],
       "images": {
@@ -181,5 +310,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1682,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9879,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 11798,
+          "reason": "2018"
+        },
+        {
+          "position": 3,
+          "gameId": 13700,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "107428",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shmoup",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Shmoup",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Endless shoot'em up in space! With controller support",
           "source": "igdb",
           "manual": false
         },
@@ -66,7 +78,10 @@
           "igdbId": 283533,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7nrs.jpg"
+      }
     },
     {
       "id": 45615,
@@ -77,6 +92,12 @@
       "popularity": 4,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "108108",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Shmoupity Shmoup",
@@ -113,8 +134,31 @@
           "igdbId": 316493,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8tfo.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3470,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 45307,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 45615,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

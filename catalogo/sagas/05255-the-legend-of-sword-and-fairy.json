@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100876",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Sword and Fairy 6",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Legend of Sword and Fairy 6",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Sword and Fairy 6 is a role-playing game. It is the eighth installment in The Legend of Sword and Fairy video game series and its story is set years after the events of The Legend of Sword and Fairy 5. The game incorporates elements of wuxia, shenmo and fantasy.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 57034,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando menos pulido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port de consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento irregular en consola."
+            }
+          ]
         },
         {
           "id": 100876,
@@ -57,7 +90,28 @@
           "year": 2015,
           "igdbId": 57034,
           "steamAppId": 681810,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución alta, con algunos errores de lanzamiento."
+            }
+          ]
         },
         {
           "id": 100877,
@@ -65,10 +119,143 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 57034,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando menos pulido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port de consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento irregular en consola."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/428412187c14a062fb1f627001a38790.png"
+      }
+    },
+    {
+      "id": 44053,
+      "nameEs": "The Legend of Sword and Fairy 7",
+      "originalName": "The Legend of Sword and Fairy 7",
+      "year": 2021,
+      "igdbId": 122105,
+      "popularity": 8,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "104292",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "The Legend of Sword and Fairy 7",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "The Legend of Sword and Fairy 7",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Sword and Fairy 7 is an action role-playing game developed by Softstar Technology (Beijing). The story revolves around a conflict encompassing the three races of humans, gods, and demons. The combat system has undergone major changes compared to previous games in the series. Instead of a traditional turn-based system, it uses third-person real-time combat.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2021",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 104290,
+          "platform": "xseries",
+          "kind": "original",
+          "year": 2022,
+          "igdbId": 122105,
           "criteria": []
+        },
+        {
+          "id": 104291,
+          "platform": "ps4",
+          "kind": "original",
+          "year": 2022,
+          "igdbId": 122105,
+          "criteria": []
+        },
+        {
+          "id": 104292,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2021,
+          "igdbId": 122105,
+          "steamAppId": 1543030,
+          "criteria": []
+        },
+        {
+          "id": 104293,
+          "platform": "ps5",
+          "kind": "original",
+          "year": 2022,
+          "igdbId": 122105,
+          "criteria": []
+        },
+        {
+          "id": 104294,
+          "platform": "xone",
+          "kind": "original",
+          "year": 2022,
+          "igdbId": 122105,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8760d9ee9eca0591cb55437c0f81b114.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/dee904a0128ad303a80048841f17ffd2.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/1dcbf9a665e02c7684332bb5aa0f0e84.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3410,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42270,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 44053,
+          "reason": "2021"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

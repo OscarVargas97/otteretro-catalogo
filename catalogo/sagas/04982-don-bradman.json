@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94023",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Don Bradman Cricket Jr",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Don Bradman Cricket Jr",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Out of the highly successful Don Bradman simulation series comes Don Bradman Cricket JR, the hard-hitting arcade cricket game. Step onto the pitch and feel the thrill of every shot, smash boundaries, outplay opponents and make every run count.\n\nComplete the Bradman Challenge Round and you'll unlock Sir Donald Bradman himself as the captain of the Australian side, along with the Bradman vs Water Tank Mini Game. Easy to pick up…impossible to put down.",
           "source": "igdb",
           "manual": false
         },
@@ -91,7 +103,10 @@
           "igdbId": 424133,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cod5wn.jpg"
+      }
     },
     {
       "id": 40085,
@@ -103,6 +118,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95846",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Don Bradman Cricket 14",
           "source": "igdb",
@@ -111,6 +132,12 @@
         {
           "field": "original_name",
           "value": "Don Bradman Cricket 14",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The first thing to think about when you start playing Don Bradman Cricket 14 is to forget what you know about Cricket games and start afresh…it's cricket like you've never seen it before!",
           "source": "igdb",
           "manual": false
         },
@@ -128,7 +155,10 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 6967,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01859/ANZ"
+          ]
         },
         {
           "id": 95845,
@@ -163,7 +193,12 @@
           "igdbId": 6967,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3009b8588b43d9cd629cf46692820142.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8e3a0c64471d95b0099a960973289946.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/63ae3e64663572042ecdd0ef493c16e1.png"
+      }
     },
     {
       "id": 42040,
@@ -175,6 +210,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100237",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Don Bradman Cricket 17",
           "source": "igdb",
@@ -183,6 +224,12 @@
         {
           "field": "original_name",
           "value": "Don Bradman Cricket 17",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Don Bradman Cricket 17 brings a new revolutionary control system delivering the best batting, bowling and fielding experience by providing you an even greater level of variety and precision of play.\n\nYou Are Invincible!",
           "source": "igdb",
           "manual": false
         },
@@ -219,8 +266,38 @@
           "igdbId": 26748,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/22f37ffafc23cde3e73c00610c4b07f9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/39e04d135613cbc3b2f7d416c2dffdfd.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2b040bf76e436c1916a75a7b376acd9e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2002,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40085,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 42040,
+          "reason": "2016"
+        },
+        {
+          "position": 3,
+          "gameId": 39447,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

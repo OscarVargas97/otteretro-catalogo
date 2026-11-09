@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81682",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "NBA Ballers",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "NBA Ballers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "NBA Ballers is the exclusive one-on-one basketball videogame highlighting the \"bling-bling\" lifestyle of NBA Superstars; chromed-out cars, ice, ladies, tatts and jets all hinge on the killer cross-over. NBA Ballers also features NBA Legends dropping dimes and dunking in your grill to determine who is the greatest baller of all time. 60+ NBA Players: Including Kobe Bryant, Vince Carter, Allen Iverson, Kevin Garnett, Shaquille O’Neal, Yao Ming, Steve Francis, Chris Webber, Gary Payton, Latrell Sprewell, and more! 24 NBA Legends: Including Rick Barry, Larry Bird, Wilt Chamberlain, Clyde Drexler, Julius Irving, Magic Johnson, Bill Russell, Jerry West, James Worthy, and more!",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 5948,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52628",
+            "SLUS-20541"
+          ]
         }
       ],
       "images": {
@@ -75,6 +91,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81893",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "NBA Ballers: Phenom",
           "source": "igdb",
@@ -83,6 +105,12 @@
         {
           "field": "original_name",
           "value": "NBA Ballers: Phenom",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Phenom is the second game in Midway's NBA Ballers series.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +136,10 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 5949,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-21186"
+          ]
         }
       ],
       "images": {
@@ -139,6 +170,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "NBA Ballers: Rebound for the PSP",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -152,9 +189,15 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 72721,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULUS-10078"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0e3bd75f14a6c469e591bce3f2c6fb37.png"
+      }
     },
     {
       "id": 39868,
@@ -166,6 +209,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95342",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "NBA Ballers: Chosen One",
           "source": "igdb",
@@ -174,6 +223,12 @@
         {
           "field": "original_name",
           "value": "NBA Ballers: Chosen One",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "NBA Ballers: Chosen One is a video game for the PlayStation 3 and Xbox 360. It is the sequel to NBA Ballers: Phenom.\n\nNBA Ballers: Chosen One allows players to live the life of an NBA superstar. The game features competitive combo and super-move systems.\n\nGameplay[edit]\nWhen playing, your performance determines the evolution of your career as a basketball player and as a superstar. The game features new moves to the series, such as \"Shut 'Em Down\" super moves and Act-A-Fool combos. The game can be played single-player, multi-player and online play, with options to play 1-v-1, 2-v-2 or 1-v-1-v-1 matches. As well as online play, downloadable content is available and features over 500 new items including players. Hip-hop legend Chuck D calls the play-by-play action while hip-hop producer Just Blaze created over 30 custom tracks for the game.",
           "source": "igdb",
           "manual": false
         },
@@ -191,7 +246,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 7106,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30135"
+          ]
         },
         {
           "id": 95343,
@@ -201,8 +259,42 @@
           "igdbId": 7106,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/887004273026ab803359a5955552b5ca.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/fdec7e510df843a762ec1114e9f20d5b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1353,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32655,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 32740,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 35712,
+          "reason": "2006"
+        },
+        {
+          "position": 4,
+          "gameId": 39868,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

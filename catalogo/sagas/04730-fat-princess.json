@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86065",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fat Princess",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Fat Princess",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rescue your beloved princess through teamwork in this comic medieval battle royale. There's a catch, though—the other team has been feeding her magical cake, making her harder to escort back to your castle. Choose from five distinct character classes and switch at any time to best help your team. Charge head first into battle, heal teammates as they break through enemy lines, and upgrade your team and the castle defenses as you work with your team to save your princess.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 21752,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9317d9227c0bff46239c8d01cf64b870.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/71103463cca58f868394462cc92e854d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/fcccb4e7caa070417729cdb35bb71918.png"
+      }
     },
     {
       "id": 41033,
@@ -82,6 +99,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fat Princess: Piece of Cake takes the comic medieval battle royale to the next level with a brand-new free-to-play strategic match-3 game. Charge into battle with 4 different character classes! Make matches to smash through the blue army! Collect gems to upgrade your troops! Feed cake to the princess to unleash her devastating slam attack! Trigger massive combos and save the kingdom!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -97,7 +120,10 @@
           "igdbId": 52212,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ubb.jpg"
+      }
     },
     {
       "id": 41735,
@@ -121,6 +147,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fan-favorite Fat Princess will make her delicious debut on the PlayStation 4 system with the release of Fat Princess Adventures in 2015. Cooked up by the minds that brought you the original game, this new co-op adventure from Fun Bits Interactive serves up a generous helping of the cheeky light-hearted humor that made the PlayStation 3 game a hit. Up to four friends can team up for a not-so-epic adventure to slay monsters, steal loot, rescue the princesses, gobble cake, and defeat the evil Bitter Queen. Your band of comrades will stab, smash, grab and grub your way through the land of Great Bitten with all the mischief that you would expect from a Fat Princess RPG.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -136,8 +168,37 @@
           "igdbId": 11199,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/50c7feeb577fc0c02f3f137e92efa4ff.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/44f022c078de3be267d98e97490e068b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1982,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35351,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 41033,
+          "reason": "2014"
+        },
+        {
+          "position": 3,
+          "gameId": 41735,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2839",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Glover",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Glover",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Glover is a platforming video game featuring a magical, four-fingered glove named Glover in his quest to restore the Crystal Kingdom by retrieving crystals that were lost.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3348,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NGVE",
+            "NGVP"
+          ]
         },
         {
           "id": 2179,
@@ -64,7 +80,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 193728,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02213",
+            "SLUS-00890"
+          ]
         },
         {
           "id": 2834,
@@ -113,14 +133,45 @@
           "kind": "remaster",
           "year": 2025,
           "igdbId": 193729,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01001CE0194A2000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/62c2131970055ded2b03fb78dc5abf26.png",
         "hero": "https://cdn2.steamgriddb.com/hero/0d78f6439e652fdbf801d103430d2e12.png",
         "logo": "https://cdn2.steamgriddb.com/logo/0132aa31975919090c559d6d4175bc56.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 741,
+          "platform": "n64",
+          "project": "Glover-R",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/ThatGuyMcd/Glover-R",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1367,
+          "platform": "n64",
+          "project": "glover-decomp-1",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/djsaunde/glover-decomp-1",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        }
+      ]
     }
   ],
   "routes": []

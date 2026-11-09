@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "93",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Paperboy 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Paperboy 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You're a paper boy (or papergirl). Get on your bicycle. Avoid obstacles on the road, such as dogs, cars, and basically everything you can imagine. Hell, some people shoot cannon balls at you! And you'd better be very sure to only throw papers at the right houses!",
           "source": "igdb",
           "manual": false
         },
@@ -83,6 +95,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "12991",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Paperboy",
           "source": "igdb",
@@ -91,6 +109,12 @@
         {
           "field": "original_name",
           "value": "Paperboy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A 3D version of the arcade classic for the Nintendo 64",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +132,32 @@
           "kind": "remake",
           "year": 1999,
           "igdbId": 19370,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Remake 3D con niveles nuevos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control 3D torpe y cámara pobre."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Muy distinto al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos y fluidez flojos."
+            }
+          ],
+          "codes": [
+            "NYPE",
+            "NYPP"
+          ]
         },
         {
           "id": 12991,
@@ -116,7 +165,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 11762,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Arcade completo con logros."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control fiel con continuaciones."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fluidez correctas."
+            }
+          ]
         },
         {
           "id": 13296,
@@ -124,7 +194,28 @@
           "kind": "original",
           "year": 1990,
           "igdbId": 256085,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión muy reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Pantalla pequeña y control tosco."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Lejos del arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Monocromo y visibilidad pobre."
+            }
+          ]
         },
         {
           "id": 13371,
@@ -132,7 +223,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 256086,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión portátil reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Lejos del arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 103325,
@@ -140,7 +252,28 @@
           "kind": "original",
           "year": 1988,
           "igdbId": 256083,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port NES con recortes y niveles simplificados."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Jugable, sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación aceptable del arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Parpadeo y gráficos limitados."
+            }
+          ]
         }
       ],
       "images": {
@@ -150,5 +283,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2062,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 57,
+          "reason": "1991"
+        },
+        {
+          "position": 2,
+          "gameId": 1282,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

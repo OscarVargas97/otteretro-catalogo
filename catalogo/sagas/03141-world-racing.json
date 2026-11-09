@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44566",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "World Racing",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "World Racing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mercedes-Benz World Racing (also referred to as World Racing) - is a computer game in the genre of driving simulators, developed by the German company Synetic GmbH. The game was released in September 2003.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 9787,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GWDP-EUR"
+          ]
         },
         {
           "id": 44566,
@@ -72,7 +87,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 9787,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51387",
+            "SLES-51881"
+          ]
         }
       ],
       "images": {
@@ -89,6 +108,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82738",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "World Racing 2",
           "source": "igdb",
@@ -97,6 +122,12 @@
         {
           "field": "original_name",
           "value": "World Racing 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Compared to its predecessor, where players could only drive different Mercedes Benz cars, this sequel allows them to control over 90 different cars from 17 different manufacturers, such as Alfa Romeo, Morgan, and others.\n\nThe core of the game is the career-mode with 120 races which take players all around the globe, from Italy to Florida, where players can earn their 'Speedbucks' to buy new cars and tuning options.\n\nThe game also features oncoming traffic and a detailed damage model including realistic driving physics. Players can also customize their cars with vinyls, alloy rims and many other extras.",
           "source": "igdb",
           "manual": false
         },
@@ -139,7 +170,10 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 20559,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53646"
+          ]
         },
         {
           "id": 82738,
@@ -157,5 +191,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2860,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16862,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 32994,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

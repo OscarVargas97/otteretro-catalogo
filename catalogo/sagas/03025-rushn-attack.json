@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "41737",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rush'n Attack",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rush'n Attack",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A run & gun shooter by Konami, also known by the title Green Beret, in which the player takes the role of a soldier infiltrating a military base.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 90990,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Recopilatorio digital básico."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto, pocas ayudas."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación simple."
+            }
+          ]
         },
         {
           "id": 41736,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147631,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye extras de colección."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con ayudas opcionales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 41737,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147631,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye extras de colección."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido, rebobinado y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con ayudas opcionales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 103309,
@@ -72,7 +147,28 @@
           "kind": "original",
           "year": 1987,
           "igdbId": 287587,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego arcade original, sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sin guardado y muy exigente."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original de NES."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Ligeras ralentizaciones y parpadeo."
+            }
+          ]
         }
       ],
       "images": {
@@ -91,6 +187,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96762",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rush'N Attack Ex-Patriot",
           "source": "igdb",
@@ -99,6 +201,12 @@
         {
           "field": "original_name",
           "value": "Rush'N Attack Ex-Patriot",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Rush'N Attack name returns in the form of an all-new downloadable game.",
           "source": "igdb",
           "manual": false
         },
@@ -126,8 +234,31 @@
           "igdbId": 41584,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co80lg.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2827,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 15479,
+          "reason": "1985"
+        },
+        {
+          "position": 2,
+          "gameId": 40421,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

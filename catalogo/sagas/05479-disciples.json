@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "105130",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Disciples: Liberation",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Disciples: Liberation",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Disciples: Liberation is a mature, dark fantasy strategy RPG with turn-based combat. Liberate the land of Nevendaar and uncover the endless stories hidden within this richly detailed world where every decision has a consequence, and every wrong move could be deadly.",
           "source": "igdb",
           "manual": false
         },
@@ -83,7 +95,12 @@
           "igdbId": 152125,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f5046dcc937826f24ee682e4dc41c931.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/90f6a7f5cdd8f8f753cdcfaf51b207ef.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/dd3e603fa01e796f96a0e6916082d00b.png"
+      }
     },
     {
       "id": 47564,
@@ -95,6 +112,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112889",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Disciples: Domination",
           "source": "igdb",
@@ -103,6 +126,12 @@
         {
           "field": "original_name",
           "value": "Disciples: Domination",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rule through the chaos! Fifteen years after Avyanna freed Nevendaar from the tyrannical grip of the gods, Disciples: Domination returns you to a realm hanging in the balance. In this dark fantasy strategy RPG with turn-based combat, take your place on Queen Avyanna’s throne – and attempt to hold together a crumbling kingdom.\n\nThe fire of doubt burns scorching within her, sparked by the crushing weight of the throne in Yllian and stoked by twisted dreams of becoming one of the very monsters she once defied – and destroyed. Paralyzed by fear and haunted by her own power, Avyanna’s rule begins to crack. Allies disappear and abandon her. An unknown force spreads strife and madness through her realm.\n\nThe choice is yours – shape the future, for salvation or ruin. As you chase the truths behind the ceaseless conflicts, dark magic and lurking conspiracies infecting your rotting empire, you’ll face betrayal, strife, and shadowy schemes. Uncover the long-lost Mountain Clans, witness the rise of an ancient cult and confront a corrupted seer whose visions have awoken bitter grudges, while old enemies are on the rise.\n\nIt will take all your courage to save Nevendaar. Are you brave enough to face – and embrace – its darkest truths?",
           "source": "igdb",
           "manual": false
         },
@@ -139,8 +168,31 @@
           "igdbId": 360140,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c8aec721f6f0e25d81c34b7a998a03a5.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3462,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 44326,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 47564,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

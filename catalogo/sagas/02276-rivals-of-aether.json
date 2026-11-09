@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19462",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rivals of Aether",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rivals of Aether",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rivals of Aether is an indie fighting game set in a world where warring civilizations summon the power of Fire, Water, Air, and Earth. Play with up to four players locally or up to two players online.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2017,
           "igdbId": 21646,
           "steamAppId": 383980,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todos los personajes y modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, con buen juego en línea."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Muy fluido a 60 fps."
+            }
+          ]
         },
         {
           "id": 19461,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 21646,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, con menos actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando, comunidad en línea menor."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable a 60 fps."
+            }
+          ]
         },
         {
           "id": 19462,
@@ -65,7 +119,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 21646,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo, con personajes añadidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ideal para partidas locales y portátiles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, con resolución algo menor."
+            }
+          ],
+          "codes": [
+            "0100D2700DE7C000"
+          ]
         }
       ],
       "images": {
@@ -73,7 +151,95 @@
         "hero": "https://cdn2.steamgriddb.com/hero/b2dc449578a4744a1684d3b0ea933702.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/9379c23ac12dc94053207373040bc791.png"
       }
+    },
+    {
+      "id": 22678,
+      "nameEs": "Dungeons of Aether",
+      "originalName": "Dungeons of Aether",
+      "year": 2023,
+      "igdbId": 195068,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "56639",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Dungeons of Aether",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Dungeons of Aether",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dungeons of Aether is a turn-based dungeon crawler designed by Nick ‘ampersandbear’ Blackwood from the Aether Studios team. Rivals of Aether is known for its intense competition and twitch skills, while Dungeons of Aether allows you to take things at your own pace - but it’s still just as challenging! Every choice you make can lead you deeper into the dungeons or to an early demise.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2023",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 56639,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2023,
+          "igdbId": 195068,
+          "steamAppId": 1668290,
+          "criteria": []
+        },
+        {
+          "id": 56640,
+          "platform": "switch",
+          "kind": "original",
+          "year": 2023,
+          "igdbId": 195068,
+          "criteria": [],
+          "codes": [
+            "01004B5019FA0000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/add90ba28f77311cafc23a86c79e007d.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/20b9d8915c147404eeb54e4d3e61e7a7.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/b4b3fc9cd6c9c840aad20c35b15205ba.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2581,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9181,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 22678,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

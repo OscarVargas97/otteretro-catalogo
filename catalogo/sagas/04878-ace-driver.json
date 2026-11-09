@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114117",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ace Driver",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ace Driver",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ace Driver made extensive use of the CPU Assist technique whereby a trailing player would be given a significant speed boost to allow them to catch the leading player. However, the speed boost continued for a short while after the losing player had overtaken the leader - leading to a tactic known as boosting where a player would deliberately allow themselves to lose the lead, then during the last half of the last game lap would easily take back the lead with no hope of the opposing player catching them.\n\nBoosting also meant that straight skill races were difficult to have as CPU assist would be continually changing the losing players speed and position.",
           "source": "igdb",
           "manual": false
         },
@@ -82,7 +94,12 @@
           "igdbId": 403299,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/924e992db65ac46ec40895d0bd09dea2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ca2b6174776dbadff824744a36c1a1e7.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/d46f20e0a9d269abaa58f81c7044cb30.png"
+      }
     },
     {
       "id": 47876,
@@ -94,6 +111,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114205",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ace Driver: Victory Lap",
           "source": "igdb",
@@ -102,6 +125,12 @@
         {
           "field": "original_name",
           "value": "Ace Driver: Victory Lap",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ace Driver Victory Lap is a sequel of is a 3D racing arcade game released by Namco in 1995, featuring more tracks and Formula One cars (which all, again, carry advertisements for older Namco games) than its predecessor, as well as a new championship mode, all in a modern futuristic setting.",
           "source": "igdb",
           "manual": false
         },
@@ -137,8 +166,33 @@
           "igdbId": 425074,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d59b23cb414b75d3bba6a5f51f5447af.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/702912fa867941149960b078e3bdeab1.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/407975a1af07b966db67b05cb2071f05.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3302,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 38711,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 47876,
+          "reason": "1995"
+        }
+      ]
+    }
+  ]
 }

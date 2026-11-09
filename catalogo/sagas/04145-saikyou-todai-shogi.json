@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "64414",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Saikyou Todai Shogi",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Saikyou Todai Shogi",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Saikyou Todai Shogi (aka Saikyou Toudai Shougi) is a shogi game with different game modes vs another human player or computer opponents.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 203548,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más cómodo en PS3, guardado sencillo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable en pantalla grande."
+            }
+          ]
         },
         {
           "id": 64415,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 203548,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego de shogi original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto pero sin comodidades modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, cargas de PS1."
+            }
+          ]
         },
         {
           "id": 64416,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 203548,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, ideal para partidas cortas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable, pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -93,6 +168,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Saikyou Todai Shogi 2 is a shogi game that features different difficulty levels, different game modes (vs, training, tournament, etc.), etc. The game features also an auto mode in which the player can watch and learn how to play watching the different computer movements.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -114,5 +195,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3126,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25893,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 25977,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

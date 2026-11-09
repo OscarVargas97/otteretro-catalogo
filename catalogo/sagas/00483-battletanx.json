@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2227",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "BattleTanx",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "BattleTanx",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the year 2001, a virus has killed 99.99% of the females on Earth. Various countries fight over each other's quarantine zones, and end up engaging in nuclear war, destroying much of civilization. The few remaining females are held by gangs who have taken over small pieces of the world. The main character, Griffin Spade, had his fiancee Madison taken away from Queens, New York by the U.S. Government. Griffin ends up separated from his fiancee, and New York City is destroyed. He claims a tank for his own and sets out to cross America and find her, battling gangs as he reaches his goal. After surviving the ruins of New York City, Griffin heads westward gaining recruits in the countryside, Chicago, Las Vegas, and San Francisco.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,31 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 47686,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña completa, varios modos y multijugador de hasta 4 jugadores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Combate 3D con control analógico y buena variedad de armas y vehículos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos 3D con cuadros por segundo irregulares, pero es lo más sólido de las dos."
+            }
+          ],
+          "codes": [
+            "NBXE"
+          ]
         },
         {
           "id": 2733,
@@ -56,14 +92,64 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3421,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "1",
+              "text": "Contenido muy recortado, sin el multijugador de la versión de N64."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Vista cenital con controles simples y menos profundidad."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Es un juego distinto que solo toma prestada la idea."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Limitado por el hardware de Game Boy, con pantalla pequeña y gráficos básicos."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a2a17ee2619345c635b2987b3035741a.png",
         "hero": "https://cdn2.steamgriddb.com/hero/1a860448b5d2824f0a7163839fe04f6e.png",
         "logo": "https://cdn2.steamgriddb.com/logo/330bb1faa22252b4be21c91c92a697e9.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 553,
+          "platform": "n64",
+          "project": "btrecomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/wootbeer/btrecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1328,
+          "platform": "n64",
+          "project": "BattleTanx",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/TheGh0stShip/BattleTanx",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1267,
@@ -75,6 +161,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2379",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "BattleTanx: Global Assault",
           "source": "igdb",
@@ -83,6 +175,12 @@
         {
           "field": "original_name",
           "value": "BattleTanx: Global Assault",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Global Assault is the sequel to the original BattleTanx. It features many new weapons, new vehicles, and new powers that were not available in the original. Global Assault now also features a destructible environment, allowing you to seize control of the environment and create ultimate destruction. Global Assault allows two players to play together in co-operative mode, or four players to go head-to-head as one of the dozens of tank gangs in all new maps and many more game modes.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +198,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 47685,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NBQE",
+            "NBQP"
+          ]
         },
         {
           "id": 2380,
@@ -108,15 +210,96 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 47685,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02773",
+            "SLES-02774",
+            "SLUS-01044"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/dd9b3c422d830f2d03f296f81239a156.png",
         "hero": "https://cdn2.steamgriddb.com/hero/ff365cf2694d71ef4672f36c57ea8530.png",
         "logo": "https://cdn2.steamgriddb.com/logo/14b9130e6dbe8185cb68fa211921a335.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 551,
+          "platform": "n64",
+          "project": "BattleTanx-Global-Assault-PC-Port",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/TheGh0stShip/BattleTanx-Global-Assault-PC-Port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 552,
+          "platform": "n64",
+          "project": "btgarecomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/wootbeer/btgarecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1326,
+          "platform": "ps1",
+          "project": "BattleTanx-Global-Assault-PS1",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/TheGh0stShip/BattleTanx-Global-Assault-PS1",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 1327,
+          "platform": "n64",
+          "project": "BattleTanx-Global-Assault",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/TheGh0stShip/BattleTanx-Global-Assault",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2151,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1188,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 1267,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

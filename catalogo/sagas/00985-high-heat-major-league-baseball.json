@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5516",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "High Heat Major League Baseball 2002",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "High Heat Major League Baseball 2002",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "High Heat Major League Baseball was a series of baseball computer games, released on PlayStation, Xbox, PlayStation 2 and PC. There were six annual versions of the game released, started with High Heat Baseball 1999, and ending with High Heat Major League Baseball 2004.\n\nThe game, featuring the official licensed team and player names from all 30 MLB teams, was created by games company 3DO which subsequently filed for bankruptcy in 2003 soon after the release of the final version of the series, High Heat Major League Baseball 2004. In August 2003, Microsoft purchased the rights to the High Heat franchise from 3DO, however, Microsoft has yet to develop a new title in the series.\n\nHigh Heat was traditionally known for possessing more simulation-style qualities than competitors World Series Baseball, All Star Baseball, or Triple Play Baseball, but frequently lagged behind in graphical quality. At the core of High Heat′s gameplay was its batter-pitcher interface, which was often hailed as the most realistic of its era.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 49399,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-01244"
+          ]
         },
         {
           "id": 5518,
@@ -64,7 +79,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 49399,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-20133"
+          ]
         },
         {
           "id": 5855,
@@ -72,7 +90,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 248754,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ASSE"
+          ]
         }
       ],
       "images": {
@@ -90,6 +111,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60598",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sammy Sosa High Heat Baseball 2001",
           "source": "igdb",
@@ -98,6 +125,12 @@
         {
           "field": "original_name",
           "value": "Sammy Sosa High Heat Baseball 2001",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "3DO's critically acclaimed High Heat Baseball franchise has a new star. The Roberto Clemente Man of the Year award winner for 1999, Sammy Sosa, lends his name to the newest installment of the popular baseball series. This edition boasts an advanced 3-D game engine and several new features. Sosa is among the 750 Major League Baseball players (from the 1999 and 2000 rosters) appearing in this game, which lets you create your own baseball league. This customization feature allows you to define the number of teams, length of schedule, playoff length, and other factors. In the career/season mode, you can make multiplayer trades based on numerous variables.",
           "source": "igdb",
           "manual": false
         },
@@ -123,7 +156,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 855,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-01063"
+          ]
         }
       ],
       "images": {
@@ -142,6 +178,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82880",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "High Heat Major League Baseball 2004",
           "source": "igdb",
@@ -150,6 +192,12 @@
         {
           "field": "original_name",
           "value": "High Heat Major League Baseball 2004",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "High Heat has always been generous with features in its PC incarnation, and the console version has finally caught up to it. Boasting eleven different modes of play, HH 2004 takes several steps beyond the product offered last year and genuinely tries rather hard to push feature diversity. All the classics are here: Home Run Derby, Exhibition, All-Star Games, Batting Practice, Player Editing devices, and other such goodies await the gamers who patiently explore its every area. Perfect for two-player matches, Two-on-Two Showdown returns from last year's PS2 version and presents itself as a console-exclusive option (you're not going to find it in the GBA or PC versions at all).",
           "source": "igdb",
           "manual": false
         },
@@ -183,7 +231,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 24089,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-20602",
+            "SLUS-28029"
+          ]
         }
       ],
       "images": {
@@ -192,5 +244,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1501,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23962,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 2856,
+          "reason": "2001"
+        },
+        {
+          "position": 3,
+          "gameId": 33244,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

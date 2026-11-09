@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "\"Hello, Yoshi!\" allows the player to interact with Yoshi. Pull his facial features, feed him powerups, and even play Peekaboo. The game was released as part of the My Mario brand of toys and games aimed at young children.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2025",
           "source": "igdb",
@@ -48,9 +54,15 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 378319,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100D060251AA000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobwif.jpg"
+      }
     },
     {
       "id": 39431,
@@ -74,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Luigi is ready to play! Touch Luigi's face to play together with your children in Hello, Luigi! Hello, Luigi! is part of the My Mario series – a collection of products designed for young children and their parents to enjoy together.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2026",
           "source": "igdb",
@@ -89,7 +107,10 @@
           "igdbId": 421954,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cod2ir.jpg"
+      }
     },
     {
       "id": 39432,
@@ -113,6 +134,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Peach is ready to play! Touch Peach's face to play together with your children in Hello, Peach! for Nintendo Switch. You can also play on Nintendo Switch 2!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2026",
           "source": "igdb",
@@ -128,8 +155,36 @@
           "igdbId": 424071,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cod5t8.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1994,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 37516,
+          "reason": "2025"
+        },
+        {
+          "position": 2,
+          "gameId": 39431,
+          "reason": "2026"
+        },
+        {
+          "position": 3,
+          "gameId": 39432,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

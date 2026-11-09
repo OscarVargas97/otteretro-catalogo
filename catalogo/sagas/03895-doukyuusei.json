@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61046",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Doukyuusei 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Doukyuusei 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The sequel to the dating sim that rocked the world (maybe) in 1992! Doukyuusei 2 is a 1995 classic erotic love adventure, a genre that is also referred to as \"dating simulations\". It has a new location and new protagonist. The aim of the game is the same as the original.",
           "source": "igdb",
           "manual": false
         },
@@ -56,11 +68,16 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 38260,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCPS-45104",
+            "SLPS-00690",
+            "SLPS-00691"
+          ]
         }
       ],
       "images": {
-        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4o10.jpg"
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocj76.jpg"
       }
     },
     {
@@ -85,6 +102,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A 4-player riichi mahjong game based on the Doukyuusei series. The main story mode is presented in a visual novel format similar to the main games, where the player can choose locations to visit which will trigger different events, leading to mahjong matches against different girls, and depending on the player's performance ultimately lead to numerous different endings.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -98,7 +121,11 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 419252,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-86469",
+            "SLPS-00673"
+          ]
         }
       ],
       "images": {
@@ -115,6 +142,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "75131",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dokyusei: Bangin' Summer",
           "source": "igdb",
@@ -123,6 +156,12 @@
         {
           "field": "original_name",
           "value": "Dokyusei: Bangin' Summer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dōkyūsei is a seminal classic of the dating sim genre that first blew Japan's mind in 1992. This updated remake adds HD art, optional modern features, and for the first time ever, a global release.",
           "source": "igdb",
           "manual": false
         },
@@ -141,7 +180,28 @@
           "year": 2021,
           "igdbId": 193074,
           "steamAppId": 1689910,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Remake completo con contenido original de la serie."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Interfaz renovada y comodidad moderna en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la historia con actualizaciones visuales."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Gráficos remozados y resolución alta."
+            }
+          ]
         },
         {
           "id": 76335,
@@ -149,7 +209,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 304282,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido principal en consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo con mando, guardado ordinario."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación fiel a la versión base."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable en PS4."
+            }
+          ]
         },
         {
           "id": 76336,
@@ -157,7 +238,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 304282,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido principal en portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buena portabilidad y guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación fiel a la versión base."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución que en PC y PS4."
+            }
+          ]
         }
       ],
       "images": {
@@ -167,5 +269,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1873,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24039,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 26575,
+          "reason": "1997"
+        },
+        {
+          "position": 3,
+          "gameId": 30078,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

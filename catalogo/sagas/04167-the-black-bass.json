@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "65254",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Blue Marlin",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Blue Marlin",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Blue Marlin is a Sports game, developed by Hot-B and published by Starfish, which was released in Japan in 2000.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 313046,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado en memoria virtual y fácil de jugar en TV."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con escalado a pantalla grande."
+            }
+          ]
         },
         {
           "id": 65255,
@@ -56,7 +89,32 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 313046,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Requiere memory card y hardware PS1."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa de PS1, con cargas largas."
+            }
+          ],
+          "codes": [
+            "SLPM-86718",
+            "SLPS-02752"
+          ]
         },
         {
           "id": 65256,
@@ -64,7 +122,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 313046,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y con guardado sencillo, pero sin segundo stick."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña de PSP con emulación correcta."
+            }
+          ]
         }
       ],
       "images": {
@@ -93,6 +172,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Black Bass is a fishing game designed for the Nintendo Entertainment System by HOT B games and released in 1988. Although not presented as a sequel, this game is the second in the Black Bass series-the first game being a Japan-exclusive.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1988",
           "source": "igdb",
@@ -108,8 +193,32 @@
           "igdbId": 17458,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/83ac5e321b903431dd8ee77f2b78c740.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/67cc80811b0354c3effd6bb70bbaa5f9.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3133,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42690,
+          "reason": "1988"
+        },
+        {
+          "position": 2,
+          "gameId": 26428,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

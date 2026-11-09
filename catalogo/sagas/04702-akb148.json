@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85760",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "AKB1/149: Renai Sousenkyo",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "AKB1/149: Renai Sousenkyo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "AKB1/149: Renai Sousenkyo is the third entry of the AKB1/48 dating sim series, now featuring all promoted members from AKB48, SKE48, NMB48, and HKT48.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 8632,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLJS-10240"
+          ]
         },
         {
           "id": 85761,
@@ -64,9 +79,18 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 8632,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJS-00530",
+            "ULJS-00531",
+            "ULJS-00532",
+            "ULJS-00533"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4aus.jpg"
+      }
     },
     {
       "id": 35835,
@@ -90,6 +114,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "AKB1/48: Idol to Koishitara is a dating sim based on the AKB48 idol group.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -103,9 +133,16 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 66373,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJS-00348",
+            "ULJS-00480"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2f8756e518a1d6ffb737d29dcded2096.jpg"
+      }
     },
     {
       "id": 35864,
@@ -129,6 +166,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "AKB1/48 Idol to Guam to Koishitara... is the second entry in the AKB1/48 dating sim series where you are invited to Guam to spend time and date one of the 48 group members.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -144,8 +187,36 @@
           "igdbId": 64710,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4auk.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1978,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35835,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 35864,
+          "reason": "2011"
+        },
+        {
+          "position": 3,
+          "gameId": 35185,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

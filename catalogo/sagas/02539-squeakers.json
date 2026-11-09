@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "25270",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Squeakers",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Squeakers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Water is flooding the world. Build your own way to climd higher and higher. Maybe there is a chance of survival after all. Give yourself a try! Help those boars reach the highest level.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2018,
           "igdbId": 87781,
           "steamAppId": 798650,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego de puzles cooperativo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, con buena respuesta."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fluidez altas, cargas rápidas."
+            }
+          ]
         },
         {
           "id": 25271,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 87781,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo en portátil y con Joy-Con."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución algo menor, pero estable."
+            }
+          ],
+          "codes": [
+            "0100085012A0E000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42130",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Squeakers II",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Squeakers II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Water is flooding the world. Build your own way to climb higher and higher. Maybe there is a chance of survival after all. Give yourself a try! Help those boars reach the highest level.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +177,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 148370,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100BD80153BC000"
+          ]
         }
       ],
       "images": {
@@ -116,5 +188,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2670,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10855,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 16119,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

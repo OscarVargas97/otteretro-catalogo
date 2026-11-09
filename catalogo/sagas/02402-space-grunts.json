@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22041",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Space Grunts",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Space Grunts",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The year 2476, Earth's space-federation has been building moon-bases across the galaxy. One of those moon-bases has been sending a distress signal. Space Grunts are a group of intergalactic \"problem\" solvers, sent to investigate..",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2016,
           "igdbId": 35224,
           "steamAppId": 371430,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando, sin límites."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y cuadros más altos."
+            }
+          ]
         },
         {
           "id": 22042,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 35224,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Bueno en mando y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más limitado que PC."
+            }
+          ],
+          "codes": [
+            "0100AE701287E000"
+          ]
         }
       ],
       "images": {
@@ -65,7 +122,122 @@
         "hero": "https://cdn2.steamgriddb.com/hero/00a61491348a0488ff4591ce7115759a.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/a4f7f80e097b37c08fe17d5cb85e7abf.png"
       }
+    },
+    {
+      "id": 50271,
+      "nameEs": "Space Grunts: Chrono Shard",
+      "originalName": "Space Grunts: Chrono Shard",
+      "year": 2026,
+      "igdbId": 345099,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "118449",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Space Grunts: Chrono Shard",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Space Grunts: Chrono Shard",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You have an X amount of turns before all hell breaks loose. Gain experience and new items to find ways to prolong the inevitable while you complete missions on board of space ships, moon bases and other mysterious areas in space. One step at a time in this fast paced but turn based roguelike.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2026",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 118447,
+          "platform": "ps4",
+          "kind": "original",
+          "year": 2026,
+          "igdbId": 345099,
+          "criteria": []
+        },
+        {
+          "id": 118448,
+          "platform": "switch2",
+          "kind": "original",
+          "year": 2026,
+          "igdbId": 345099,
+          "criteria": []
+        },
+        {
+          "id": 118449,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2026,
+          "igdbId": 345099,
+          "steamAppId": 3403540,
+          "criteria": []
+        },
+        {
+          "id": 118450,
+          "platform": "ps5",
+          "kind": "original",
+          "year": 2026,
+          "igdbId": 345099,
+          "criteria": []
+        },
+        {
+          "id": 118451,
+          "platform": "xone",
+          "kind": "original",
+          "year": 2026,
+          "igdbId": 345099,
+          "criteria": []
+        },
+        {
+          "id": 118452,
+          "platform": "switch",
+          "kind": "original",
+          "year": 2026,
+          "igdbId": 345099,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/367b88e62aa3f83ad773008b7a1bee70.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2631,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9872,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 50271,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

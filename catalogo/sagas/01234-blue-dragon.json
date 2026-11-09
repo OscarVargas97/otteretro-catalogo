@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A direct sequel to Blue Dragon that takes place a year after the first games events.\n\nThe game uses a real-time strategy style with characters being moved around a map using the stylus on the bottom screen and fighting enemies when they are close enough to attack.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -48,7 +54,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 19939,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YYBE",
+            "YYBJ",
+            "YYBP"
+          ]
         }
       ],
       "images": {
@@ -79,6 +90,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Awakened Shadow is designed to take full advantage of the Nintendo DS capabilities allowing players to engage in impressive boss battles with up to two friends and earn and trade items via the Nintendo Wi-Fi Connection in multiplayer mode. Players will be able to attack enemies faster than ever before with upgraded weapons and powerful Shadows, which can be switched for tactical advantages. Players will roam a 3D open world environment across several unique “cube” worlds as they take on formidable Otherworld bosses, complete multiple challenges, and recruit over a dozen characters in their own custom adventure.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -92,7 +109,15 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 20465,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YBUD",
+            "YBUE",
+            "YBUF",
+            "YBUI",
+            "YBUP",
+            "YBUS"
+          ]
         }
       ],
       "images": {
@@ -123,6 +148,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "\"Hironobu Sakaguchi, the Father of the Final Fantasy series, and Artoon present the world of Blue Dragon on Xbox 360. Featuring the character design of Akira Toriyama, the Father of \"Dragon Ball Z\", and music by Nobuo Uematsu, the composer for Final Fantasy, Blue Dragon is an epic role-playing game (RPG) centered on five youngsters who possess miraculous strength and magical power to control shadow creatures that mirror the actions of their masters.\"\n\nBlue Dragon follows the story of five friends (Shu, Jiro, Kluke, Zola, and Marumaro) as they travel across the world to confront Nene, the evil ruler of the Grand Kingdom. The setting inspired separate anime and manga adaptations, although these follow the story to different degrees and feature a different cast of characters. The game follows a traditional role-playing design, based around exploration and turn-based combat.\n\nThe gameplay of Blue Dragon uses turn-based gameplay elements seen in older Japanese role-playing video games. The game world contains two major types of areas: towns, in which the player can rest and purchase items, and dungeon-like areas, with numerous foes to be defeated.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -138,8 +169,55 @@
           "igdbId": 6923,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/28e3bed162f123fc16f3084bbe61d98c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d111938e811c0ed7c4ee3e749b07b454.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5e0b4eb9235315aac8130073271a4a23.png"
+      },
+      "ports": [
+        {
+          "id": 569,
+          "platform": "x360",
+          "project": "reblue",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/zolaware/reblue",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1532,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48272,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 3749,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 3869,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

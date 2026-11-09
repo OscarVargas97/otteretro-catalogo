@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "40248",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kitaria Fables",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Kitaria Fables",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Action Adventure fused with RPG and Farming elements. Armed with sword, bow and spellbook, fight against a rising darkness threatening the world. Plunder dungeons in search of relics and resources, tend to your farm to make provisions and potions, and take on quests solo, or with a friend!",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 144542,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100F30013BFC000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113650",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kitaria Fables 2",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Kitaria Fables 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Team up with new heroes Alice and Dusty as they embark on an epic adventure across the mysterious Arkadera Peninsula. Develop unique combat skills, gather precious materials, forge powerful items, and tend to your growing farm, either alone or with a friend!",
           "source": "igdb",
           "manual": false
         },
@@ -168,8 +195,31 @@
           "igdbId": 398521,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobxp9.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2824,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 15346,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 47849,
+          "reason": "2027"
+        }
+      ]
+    }
+  ]
 }

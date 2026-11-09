@@ -14,6 +14,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14339",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeon Hearts",
           "source": "igdb",
@@ -22,6 +28,12 @@
         {
           "field": "original_name",
           "value": "Dungeon Hearts",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dungeon Hearts fuses the strategy and pattern matching of puzzle games with the kinetic pace of action games. Align magical runes as they flow along the Fatestream to attack, defend, and conjure magic in frenetic battles against a bestiary of fantastic creatures out to use those same runes against you. Chain together multiple attacks and unleash powerful combos or call upon each hero's special attacks to devastate your enemies to survive the twists and turns of Dungeon Heart's evolving gameplay. Strike down all that stand in your way and level up your brave warriors as each foe grows more powerful than the last, culminating in the final battle with The Dark One himself!",
           "source": "igdb",
           "manual": false
         },
@@ -40,7 +52,28 @@
           "year": 2013,
           "igdbId": 9827,
           "steamAppId": 229520,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control preciso con ratón, teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fluidez altas y ajustables."
+            }
+          ]
         },
         {
           "id": 14340,
@@ -48,7 +81,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 9827,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen uso del mando y la pantalla táctil, algo menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con adaptaciones menores a la consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución fija y menos opciones técnicas."
+            }
+          ]
         }
       ],
       "images": {
@@ -79,6 +133,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Puzzle your way to defeating the Dark One in this Nintendo exclusive!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -102,5 +162,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2960,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7735,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 8399,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

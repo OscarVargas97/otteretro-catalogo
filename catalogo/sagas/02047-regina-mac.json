@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "16362",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Regina & Mac",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Regina & Mac",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Regina & Mac is a 3D platformer that stands in the tradition of the classics from the late 90s and offers a fair challenge even for genre aficionados.\nJoin the macaw Regina and the tyrannosaurus Mac on their adventure as they try to escape a lifeless research lab. The only way out? To find the golden Floppy discs on which the memory of the lab's computer system U64 is stored so that it can help the duo to find an exit.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 130519,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100B56011B90000"
+          ]
         }
       ],
       "images": {
@@ -82,6 +97,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "16373",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Regina & Mac World",
           "source": "igdb",
@@ -90,6 +111,12 @@
         {
           "field": "original_name",
           "value": "Regina & Mac World",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Regina and Mac are back in an all new, 2D adventure. On a quest to help their new friend Macbat (from Macbat 64) to find the purpose in his life, the dinosaur and the parrot jump, run, slide and dash through 100 level filled with secrets.",
           "source": "igdb",
           "manual": false
         },
@@ -115,7 +142,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 147186,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100ED70147A2000"
+          ]
         }
       ],
       "images": {
@@ -123,5 +153,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2500,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8444,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 8449,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

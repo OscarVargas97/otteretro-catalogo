@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "105572",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantom Blade: Executioners",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Phantom Blade: Executioners",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Phantom Blade: Executioners is a fast-paced action game set in the Phantom World.\nIt features a rich storyline of Kung-Fu adventures, where you dive into a conspiracy that threatens to topple the world, cut down Fung-Fu masters who have succumbed to insanity, and find out the mastermind following a series of seemingly independent incidents.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 173080,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b4040fc4ab268071e0566d9061ad8760.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d6804b4136e70e8332b569f55e8a80c5.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9c8e5f111312b248b5f48516f8664940.png"
+      }
     },
     {
       "id": 46945,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111292",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Phantom Blade Zero",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Phantom Blade Zero",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Framed for the death of his master and left with a ruined heart, Soul has sixty-six days to live. Alone and hunted by his former comrades, he moves through a world of shifting loyalties and silent blades — determined to unravel the conspiracy that has condemned him.\n\nRain mixes with blood, mercy entangles with vengeance. Soul's journey is one of love, hate, and the fragile search for what it means to have a heart.",
           "source": "igdb",
           "manual": false
         },
@@ -115,8 +144,33 @@
           "igdbId": 250618,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/85757a759ed013edf1a68050f6c174c1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1662c4407080ecdabad7266dec909053.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/1289b78d3e2a098cd60058a97ac49eb6.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3464,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 44472,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 46945,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

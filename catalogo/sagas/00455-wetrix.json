@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2116",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Wetrix",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Wetrix",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A rainstorm so fierce, it will keep you from leaving your home for the next six months. Using randomly shaped 3D blocks as they fall from the sky, you must create a series of lakes and dams before the heavy rains appear. Because if the water drains, you lose! Sound simple? Well, mix in a few natural disasters and bomb attacks, and suddenly you need to muster all your strategy and skill to combat nature's fury!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,33 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3637,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo con multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión principal."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Calidad estándar de N64."
+            }
+          ],
+          "codes": [
+            "NWTE",
+            "NWTJ",
+            "NWTP"
+          ]
         },
         {
           "id": 2116,
@@ -56,7 +94,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3637,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con teclado y guardado fácil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución."
+            }
+          ]
         },
         {
           "id": 2756,
@@ -64,7 +123,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 50068,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Menos precisa."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación simplificada."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Gráficos limitados."
+            }
+          ]
         }
       ],
       "images": {
@@ -95,6 +175,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Aqua Aqua (アクアアクア?), known in Europe as Aqua Aqua: Wetrix 2, is a puzzle video game for the PlayStation 2 and is the sequel to game Wetrix. It offers fewer features than Wetrix, but it features improved graphics and a new story mode. The aim of the story mode is to travel through four eras and survive attacks from monsters from each one. To survive the attacks simply get enough points to power up the shield. There is also an unlockable world if the player gets enough points. The game also offers a two player vs mode and a single player puzzle mode.\n\nThe title was a launch game for the PlayStation 2 release in Europe.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -108,7 +194,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 43549,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-20162"
+          ]
         }
       ],
       "images": {
@@ -116,5 +205,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2143,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1119,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 33154,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "name": "Civilization",
   "igdbKind": "collection",
   "igdbId": 89,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1763",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sid Meier's Civilization",
           "source": "igdb",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Sid Meier's Civilization",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sid Meier's Civilization is a turn-based strategy computer game created by Sid Meier for MicroProse in 1991.The game's objective is \"...to build an empire that would stand the test of time\". The game begins in 4000 BC, and the players attempt to expand and develop their empires through the ages until modern and near-future times. It is also known simply as Civilization.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Sid Meier's Civilization es un videojuego de estrategia por turnos creado por Sid Meier para MicroProse en 1991. El objetivo del juego es «...construir un imperio que resista la prueba del tiempo». La partida comienza en el 4000 a. C., y los jugadores intentan expandir y desarrollar sus imperios a lo largo de las eras hasta los tiempos modernos y el futuro cercano. También se conoce simplemente como Civilization.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 902,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con escenarios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado, interfaz antigua."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Funciona en DOSBox."
+            }
+          ]
         },
         {
           "id": 1848,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 355843,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión de consola simplificada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Menús torpes con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambios de interfaz."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Lento y limitado."
+            }
+          ]
         },
         {
           "id": 65902,
@@ -64,7 +124,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 355844,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Recortes en modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control con mando lento."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con diferencias."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas largas."
+            }
+          ]
         },
         {
           "id": 103068,
@@ -72,14 +153,49 @@
           "kind": "remake",
           "year": 1995,
           "igdbId": 21930,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido para Windows."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Interfaz Windows más cómoda."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Pequeños cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en sistemas modernos."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3e48f8ff18c4fdf69b19df5d25baf948.png",
         "hero": "https://cdn2.steamgriddb.com/hero/39fcb4479f54af1c5d0f62912fa5bd25.png",
         "logo": "https://cdn2.steamgriddb.com/logo/d1dc3835945431feade7f56194520559.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 353,
+          "platform": "pc",
+          "project": "Civ64",
+          "kind": "native-layer",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/Buyukcaglar/Civ64",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     },
     {
       "id": 9159,
@@ -87,9 +203,15 @@
       "originalName": "Sid Meier's Civilization VI",
       "year": 2016,
       "igdbId": 19130,
-      "popularity": 652,
+      "popularity": 653,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "19371",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Sid Meier's Civilization VI",
@@ -100,6 +222,18 @@
           "field": "original_name",
           "value": "Sid Meier's Civilization VI",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Civilization VI is a 4X turn-based strategy game in which players guide a civilization from its founding as a small settlement through multiple eras of development. Players explore a procedurally generated map, found cities, research technologies, develop culture, engage in diplomacy, and compete against AI or human opponents to achieve victory through military dominance, scientific advancement, cultural influence, religious conversion, or diplomatic consensus. A key design change from its predecessor is the \"unstacking\" of cities, requiring players to place districts on surrounding tiles rather than stacking all improvements in the city center, making terrain and geography central to strategic planning. The game received two major expansions, Rise and Fall and Gathering Storm, which introduced mechanics like city loyalty, golden/dark ages, climate change, and natural disasters. It was succeeded by Civilization VII in 2025.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Civilization VI es un juego de estrategia 4X por turnos en el que los jugadores guían a una civilización desde su fundación como un pequeño asentamiento a través de múltiples eras de desarrollo. Los jugadores exploran un mapa generado proceduralmente, fundan ciudades, investigan tecnologías, desarrollan la cultura, negocian diplomáticamente y compiten contra oponentes controlados por la IA o por otros jugadores humanos para lograr la victoria mediante dominio militar, avance científico, influencia cultural, conversión religiosa o consenso diplomático. Un cambio de diseño clave respecto a su predecesor es el «desapilado» de las ciudades: en lugar de agrupar todas las mejoras en el centro de la ciudad, los jugadores deben colocar distritos en las casillas circundantes, lo que hace que el terreno y la geografía sean fundamentales para la planificación estratégica. El juego recibió dos grandes expansiones, Rise and Fall y Gathering Storm, que introdujeron mecánicas como la lealtad de las ciudades, las edades doradas u oscuras, el cambio climático y los desastres naturales. Fue sucedido por Civilization VII en 2025.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -116,7 +250,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 19130,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Expansiones, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Turnos más lentos."
+            }
+          ]
         },
         {
           "id": 19371,
@@ -125,7 +280,28 @@
           "year": 2016,
           "igdbId": 19130,
           "steamAppId": 289070,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Todas las expansiones y mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado ideales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y partidas ágiles."
+            }
+          ]
         },
         {
           "id": 19372,
@@ -133,7 +309,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 19130,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Expansiones, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Turnos más lentos."
+            }
+          ]
         },
         {
           "id": 19373,
@@ -141,7 +338,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 19130,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye expansiones, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, interfaz apretada."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Turnos lentos y carga larga."
+            }
+          ],
+          "codes": [
+            "010044500C182000"
+          ]
         }
       ],
       "images": {
@@ -156,9 +377,15 @@
       "originalName": "Sid Meier's Civilization Revolution",
       "year": 2008,
       "igdbId": 2152,
-      "popularity": 55,
+      "popularity": 54,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "47262",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Sid Meier's Civilization Revolution",
@@ -169,6 +396,18 @@
           "field": "original_name",
           "value": "Sid Meier's Civilization Revolution",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Experience the journey of a civilization's birth to it's rise of power. Learn new technologies, conquer your foes, meet great people, and build Wonders of the World. Play as 16 different civilizations and explore the randomly generated lands to meet new empires and create new relations with them.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Vive el recorrido de una civilización desde su nacimiento hasta su ascenso al poder. Aprende nuevas tecnologías, conquista a tus enemigos, conoce a grandes personajes y construye las Maravillas del Mundo. Juega con 16 civilizaciones diferentes y explora tierras generadas aleatoriamente para conocer nuevos imperios y establecer relaciones con ellos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -185,7 +424,34 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2152,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando adaptado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD estable."
+            }
+          ],
+          "codes": [
+            "BLES-00238",
+            "BLJM-60123",
+            "BLJM-60170",
+            "BLUS-30130"
+          ]
         },
         {
           "id": 47262,
@@ -193,7 +459,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 2152,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando adaptado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD estable."
+            }
+          ]
         },
         {
           "id": 47636,
@@ -201,14 +488,61 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 264865,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión simplificada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Táctil, pero reducida."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Rediseño propio."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos y mapas menores."
+            }
+          ],
+          "codes": [
+            "YS6E",
+            "YS6J",
+            "YS6P"
+          ]
         },
         {
           "id": 94884,
           "platform": "wii",
           "kind": "original",
           "igdbId": 264864,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión de Wii poco clara."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Incierta."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Recorte técnico probable."
+            }
+          ]
         }
       ],
       "images": {
@@ -225,6 +559,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60742",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sid Meier's Civilization II",
           "source": "igdb",
@@ -234,6 +574,18 @@
           "field": "original_name",
           "value": "Sid Meier's Civilization II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A turn-based strategy video game set around several different historic civilizations.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un videojuego de estrategia por turnos ambientado en varias civilizaciones históricas distintas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -250,7 +602,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 634,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Interfaz clásica."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Puede requerir parches."
+            }
+          ]
         },
         {
           "id": 60194,
@@ -258,7 +631,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 634,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Recortes menores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control con mando incómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port limitado."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas largas."
+            }
+          ]
         },
         {
           "id": 60742,
@@ -266,7 +660,28 @@
           "kind": "remake",
           "year": 1999,
           "igdbId": 76727,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mundos extra y multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejoras de interfaz."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conserva las reglas originales."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Más estable hoy."
+            }
+          ]
         }
       ],
       "images": {
@@ -285,6 +700,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76111",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sid Meier's Civilization VII",
           "source": "igdb",
@@ -294,6 +715,18 @@
           "field": "original_name",
           "value": "Sid Meier's Civilization VII",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rule as one of many legendary leaders from throughout history. Establish your civilization, construct cities and architectural wonders to expand your territory, conquer or cooperate with rival civilizations in pursuit of prosperity, and explore the far reaches of the unknown world. Will you build an empire that stands the test of time?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Gobierna como uno de los muchos líderes legendarios de la historia. Funda tu civilización, construye ciudades y maravillas arquitectónicas para expandir tu territorio, conquista o coopera con civilizaciones rivales en busca de prosperidad y explora los confines del mundo desconocido. ¿Construirás un imperio que resista la prueba del tiempo?",
+          "source": "claude",
           "manual": false
         },
         {
@@ -359,7 +792,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 305006,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100C3601518C000"
+          ]
         }
       ],
       "images": {
@@ -390,6 +826,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel to one of the most successful strategy games on mobile is here! Sid Meier's Civilization Revolution 2 challenges players to build a glorious empire that will stand the test of time. This is the first game in the Civilization catalog to be developed and available exclusively for mobile devices. Civilization Revolution 2 offers mobile strategy fans a brand new 3D presentation and more tactical depth than ever before! Find out if you have what it takes to rule the world!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Llega la secuela de uno de los juegos de estrategia más exitosos en dispositivos móviles! Sid Meier's Civilization Revolution 2 reta a los jugadores a construir un glorioso imperio que resista la prueba del tiempo. Es el primer juego del catálogo de Civilization desarrollado y disponible exclusivamente para dispositivos móviles. Civilization Revolution 2 ofrece a los aficionados a la estrategia móvil una presentación 3D totalmente nueva y más profundidad táctica que nunca. ¡Descubre si tienes lo necesario para gobernar el mundo!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2014",
           "source": "igdb",
@@ -405,7 +853,12 @@
           "igdbId": 139435,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8ca72d25a7b5ff3fbc67a8761f7c1103.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/dc503fe2445d876e7d73e180c0dc8c35.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/0d1a79a7a3bd6d1eba84915694e1bfe5.png"
+      }
     },
     {
       "id": 42958,
@@ -445,7 +898,12 @@
           "steamAppId": 3900,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/be925cdb6f03c1b58212df4c2831aedd.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e82df66a0f4b501f8945049b922633df.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/8e7448cf2a83ce427ec7087739e915b7.png"
+      }
     },
     {
       "id": 42970,
@@ -454,7 +912,7 @@
       "year": 2010,
       "igdbId": 866,
       "popularity": 1173,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -485,7 +943,12 @@
           "steamAppId": 8930,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4c8cb9b614bd99032d01aa6d93f174a0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/3a8fcf2a8e88e290cf69a9b95726187a.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/d3e15fa7b836a9643387c99c47c6c03b.png"
+      }
     },
     {
       "id": 43352,
@@ -524,7 +987,12 @@
           "igdbId": 310,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cc2fec1b8942edd43f5bb06b4319c03e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6a8782653d5924b6e4102093849b1c2a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2f05dbc80522005e993030b67c39d24b.png"
+      }
     },
     {
       "id": 43751,
@@ -564,8 +1032,163 @@
           "steamAppId": 65980,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b73c4ef52925a033c6b8f3bb273afb2e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/0ff0a4ce9abf031dc12194a19ced4ef1.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/6dfde8aa3dd913dd25bd717faee1bf79.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 439,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 914,
+          "reason": "1991"
+        },
+        {
+          "position": 2,
+          "gameId": 23781,
+          "reason": "1996"
+        },
+        {
+          "position": 3,
+          "gameId": 43352,
+          "reason": "2001"
+        },
+        {
+          "position": 4,
+          "gameId": 42958,
+          "reason": "2005"
+        },
+        {
+          "position": 5,
+          "gameId": 18796,
+          "reason": "2008"
+        },
+        {
+          "position": 6,
+          "gameId": 42970,
+          "reason": "2010"
+        },
+        {
+          "position": 7,
+          "gameId": 41408,
+          "reason": "2014"
+        },
+        {
+          "position": 8,
+          "gameId": 43751,
+          "reason": "2014"
+        },
+        {
+          "position": 9,
+          "gameId": 9159,
+          "reason": "2016"
+        },
+        {
+          "position": 10,
+          "gameId": 30472,
+          "reason": "2025"
+        }
+      ]
+    },
+    {
+      "id": 3567,
+      "kind": "story",
+      "rationale": "Civilization no tiene una historia continua: cada juego es una partida independiente sobre la historia de la humanidad. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 914,
+          "reason": "El origen de la saga; la versión da igual."
+        },
+        {
+          "position": 2,
+          "gameId": 23781,
+          "reason": "Segunda entrega, mismo esquema de partida."
+        },
+        {
+          "position": 3,
+          "gameId": 43352,
+          "reason": "Añade cultura y recursos."
+        },
+        {
+          "position": 4,
+          "gameId": 42958,
+          "reason": "Entrega clásica con religión y 3D."
+        },
+        {
+          "position": 5,
+          "gameId": 18796,
+          "reason": "Versión simplificada pensada para consolas."
+        },
+        {
+          "position": 6,
+          "gameId": 42970,
+          "reason": "Introduce las casillas hexagonales."
+        },
+        {
+          "position": 7,
+          "gameId": 41408,
+          "reason": "Secuela portátil de Revolution."
+        },
+        {
+          "position": 8,
+          "gameId": 43751,
+          "reason": "Spin-off de ciencia ficción, ambientado en otro planeta."
+        },
+        {
+          "position": 9,
+          "gameId": 9159,
+          "reason": "Distritos y ciudades que se expanden por el mapa."
+        },
+        {
+          "position": 10,
+          "gameId": 30472,
+          "reason": "Última entrega, con tres épocas."
+        }
+      ]
+    },
+    {
+      "id": 3568,
+      "kind": "community",
+      "rationale": "Se suele empezar por una entrega moderna y pulida (VI), y luego probar V y IV, muy queridas. Se omiten los clásicos antiguos, las versiones Revolution y Beyond Earth por ser menores o de nicho. No pude consultar la web en esta sesión, así que la ruta se basa en mi conocimiento general y no incluye fuentes verificadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9159,
+          "recommendedVersionId": 19371,
+          "reason": "Buen punto de entrada, con tutorial y muchos DLC; la versión de PC tiene más mods y mejor control."
+        },
+        {
+          "position": 2,
+          "gameId": 42970,
+          "reason": "Muy valorado por su equilibrio; su única versión es la de PC."
+        },
+        {
+          "position": 3,
+          "gameId": 42958,
+          "reason": "Considerado un clásico por muchos jugadores; solo hay versión de PC."
+        },
+        {
+          "position": 4,
+          "gameId": 30472,
+          "recommendedVersionId": 76111,
+          "reason": "La entrega más reciente; en PC se beneficia de parches y mods."
+        }
+      ]
+    }
+  ]
 }

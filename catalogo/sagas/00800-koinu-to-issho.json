@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Koinu to Issho! Aijou Monogatari is an Adventure game, developed and published by Culture Brain, which was released in Japan in 2003.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 49637,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BDIJ"
+          ]
         }
       ]
     },
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Koinu to Issho! 2 is a Strategy game, published by Culture Brain, which was released in Japan in 2004.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -87,10 +102,33 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 49684,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BI2J"
+          ]
         }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2204,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2147,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 2207,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

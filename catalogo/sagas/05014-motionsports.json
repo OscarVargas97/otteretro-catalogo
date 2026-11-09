@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96235",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "MotionSports: Adrenaline",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "MotionSports: Adrenaline",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The sequel to the Kinect launch game MotionSports, MotionSports: Adrenaline is an extreme sports game by Ubisoft, supporting Kinect and Move.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 20215,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01461",
+            "BLUS-30812"
+          ]
         },
         {
           "id": 96236,
@@ -58,7 +74,10 @@
           "igdbId": 20215,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co22sr.jpg"
+      }
     },
     {
       "id": 48234,
@@ -82,6 +101,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "MotionSports is a sports video game released for the Xbox 360 on November 4, 2010 by Ubisoft. It was one of the first games released for use with the Kinect motion sensing device, originally developed by iPad developer Lesane Curtis. Reception of the game was mainly mixed.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -97,8 +122,31 @@
           "igdbId": 2658,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co22sq.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3350,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48234,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 40227,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

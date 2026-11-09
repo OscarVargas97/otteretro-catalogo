@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel to the original Ninku Game Boy game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13019",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ninku",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Ninku",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ninku is a fighting game with adventure elements, for the Game Boy. It is based on the manga of the same name.",
           "source": "igdb",
           "manual": false
         },
@@ -106,5 +124,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2403,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6217,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 6922,
+          "reason": "1995"
+        }
+      ]
+    }
+  ]
 }

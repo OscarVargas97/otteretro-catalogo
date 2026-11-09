@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "107400",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ninja Painter",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ninja Painter",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Trade in your nunchucks for a roller and a bucket of paint… Help the Ninja to master a new and unusual profession for him – the profession of a house painter. Paint the walls in the countryside, in a town and in a megalopolis through 30 levels and try to get all the achievements!",
           "source": "igdb",
           "manual": false
         },
@@ -83,7 +95,12 @@
           "igdbId": 267144,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5y62.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/1af6e107b7c7730abb01794167b2098c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e178ae99e1aba5df0c173e8ef5515094.png"
+      }
     },
     {
       "id": 45383,
@@ -95,6 +112,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "107571",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Perfect Ninja Painter 2",
           "source": "igdb",
@@ -103,6 +126,12 @@
         {
           "field": "original_name",
           "value": "Perfect Ninja Painter 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This ninja master is back in action and this time he's bringing a friend along.",
           "source": "igdb",
           "manual": false
         },
@@ -154,7 +183,12 @@
           "igdbId": 290739,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/709e156998341aa0490031fcd66fb49e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/7a185cf1dc694f59ed4f6e0ea1b5f56f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d9d838d1a986b5105e4d4f8b6ee1b5d9.png"
+      }
     },
     {
       "id": 45802,
@@ -166,6 +200,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "108498",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Perfect Ninja Painter 3",
           "source": "igdb",
@@ -174,6 +214,12 @@
         {
           "field": "original_name",
           "value": "Perfect Ninja Painter 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "New part of the puzzle platformer about ninja painters with new character, new features and new puzzles.",
           "source": "igdb",
           "manual": false
         },
@@ -225,8 +271,36 @@
           "igdbId": 329513,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coccdc.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2037,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 45196,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 45383,
+          "reason": "2024"
+        },
+        {
+          "position": 3,
+          "gameId": 45802,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

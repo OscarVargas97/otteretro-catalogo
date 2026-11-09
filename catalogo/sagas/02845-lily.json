@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "34880",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "LilyDeux: Black Lily Warning",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "LilyDeux: Black Lily Warning",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lily is girls with the ability. They fight again. This game is a simulation RPG that you can play with no stress. It is a system that has a deep strategic approach.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2019,
           "igdbId": 129698,
           "steamAppId": 1244770,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles precisos con teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y estabilidad."
+            }
+          ]
         },
         {
           "id": 34881,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 129698,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente; el porte puede variar en censura o extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Jugable con mando y en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y rendimiento."
+            }
+          ],
+          "codes": [
+            "0100E35017F30000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58899",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lily: Shiroki Yuri no Otome-tachi S",
           "source": "igdb",
@@ -82,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Lily: Shiroki Yuri no Otome-tachi S",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lily: Shiroki Yuri no Otome-tachi S is a strategy role-playing game for Nintendo Switch and Windows. It is a remake of Lily: Shiroki Yuri no Otome-tachi.",
           "source": "igdb",
           "manual": false
         },
@@ -99,7 +168,28 @@
           "kind": "remake",
           "year": 2021,
           "igdbId": 222504,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Remake completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado y lectura de texto cómodos con ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Remake íntegro sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 58900,
@@ -107,7 +197,28 @@
           "kind": "remake",
           "year": 2021,
           "igdbId": 222504,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Práctico en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo remake."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución más baja."
+            }
+          ]
         }
       ],
       "images": {
@@ -115,5 +226,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2772,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 13771,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 23357,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "65339",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kirikou",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Kirikou",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kirikou is a 2001 platform video game based upon the 1998 French film Kirikou and the Sorceress.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 220785,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03676",
+            "SLES-03677"
+          ]
         }
       ],
       "images": {
@@ -95,6 +111,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Adapted from the famous movie by Michel Ocelot and Benedict Galup, Kirikou and the Wild Beasts puts you in the shoes of a hero who must face the dangers hanging over his people. Jump from platform to platform to protect the village from the wild animals of the savannah. But beware, Karaba the witch is never far away…",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -108,10 +130,36 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 131862,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54725"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co20ti.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2418,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6502,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 34614,
+          "reason": "2007"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

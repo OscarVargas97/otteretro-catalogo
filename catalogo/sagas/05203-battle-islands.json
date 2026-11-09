@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99644",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Battle Islands",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Battle Islands",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"It’s 1942, and deep in the South Pacific your platoon of crack troops lands on a tropical island, but can you defeat enemy forces and hold your ground to fight another day?\n\nYou’ll need to act quickly in this action-packed, WW2-themed battle strategy game – Control air, sea, and land forces, build your garrison, battle against friends and create powerful allegiances.\"",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 17502,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ed6d90b5e599e664f31705422e730136.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/743f67238fc607d92e0397d5a4660cc2.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/66c09e532723ddc385975dfd869f2e94.png"
+      }
     },
     {
       "id": 42179,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "100637",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Battle Islands: Commanders",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Battle Islands: Commanders",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Take part in major WWII battles in Battle Islands: Commanders, from the sandy dunes of North Africa to the bitter cold of the Eastern Front! Master the art of war against real opponents from around the world and reap the spoils of war.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +152,33 @@
           "igdbId": 33479,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f1b9f9e8c4ea8e24b0a8eb8a730c74a6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/412493da6bf5143e74daf5d94098d74e.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a188366540b081052eb44432bc73c6a3.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3395,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41817,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 42179,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

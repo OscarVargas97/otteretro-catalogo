@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110387",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "King Arthur: Knight's Tale",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "King Arthur: Knight's Tale",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "King Arthur: Knights Tale mixes an XCOM-style turn-based battle system with traditional RPG mechanics, including character development, choices that impact the direction of your campaign, and upgrading your home base of Camelot.\n\nThe story follows Sir Mordred, who travels with a band of knights across Avalon in search of King Arthur. This is already an interesting twist on the classic legend, as Sir Mordred is King Arthur's nemesis, traditionally shown as the king's traitorous nephew.\n\nIn this version of the tale, Mordred has actually mortally wounded Arthur, and is now stalking him through the isle of Avalon to finish the job on command of The Lady of the Lake.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 139883,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido principal, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Interfaz táctica menos cómoda con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original, adaptada a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto pero menos ajustable."
+            }
+          ]
         },
         {
           "id": 110387,
@@ -57,7 +90,28 @@
           "year": 2021,
           "igdbId": 139883,
           "steamAppId": 1157390,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con DLC y mods disponibles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Interfaz táctica precisa con ratón y guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen rendimiento y opciones gráficas; algunos errores de lanzamiento corregidos."
+            }
+          ]
         },
         {
           "id": 110388,
@@ -65,9 +119,35 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 139883,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido principal, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Interfaz táctica menos cómoda con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original, adaptada a consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Cargas rápidas, pero fps y resolución inferiores a PC."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/119bba58393c9a836d431650efbf4240.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/af5b26160c51d2185fef4e524b0c1a31.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a26c5297d871d2929da78be77b3a6262.png"
+      }
     },
     {
       "id": 47068,
@@ -79,6 +159,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111613",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "King Arthur: Legion IX",
           "source": "igdb",
@@ -87,6 +173,12 @@
         {
           "field": "original_name",
           "value": "King Arthur: Legion IX",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dive into a unique blend of turn-based tactics and character-centric RPGs. Lead the skilled Roman tribune Gaius Julius Mento as he navigates through the dark fantasy realm of Avalon.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +215,33 @@
           "igdbId": 285440,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2d09dc548802dc9667bfe477a6bea7ef.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/30a151c5d2255469634525f036e2a815.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/de030285e4e8afd4328bb63eb07241c1.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3480,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46634,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 47068,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

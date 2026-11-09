@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62431",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hellboy: Dogs of the Night",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Hellboy: Dogs of the Night",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The first game starring the gruff half-demon Hellboy. Later ported to PlayStation under Hellboy: Asylum Seeker.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 51441,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Aventura completa original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de época, guardado manual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución que PS1."
+            }
+          ]
         },
         {
           "id": 62633,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 45005,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego adaptado a consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de mando clásicos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos y resolución reducidos."
+            }
+          ]
         }
       ],
       "images": {
@@ -75,6 +129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66865",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hellboy: Web of Wyrd",
           "source": "igdb",
@@ -83,6 +143,12 @@
         {
           "field": "original_name",
           "value": "Hellboy: Web of Wyrd",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Hellboy Web of Wyrd is a roguelite action adventure with an original story created in partnership with Dark Horse Comics and creator Mike Mignola. When an agent goes missing, Hellboy investigates. Prepare for monstrous toe-to-toe brawling",
           "source": "igdb",
           "manual": false
         },
@@ -141,7 +207,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 228522,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010066A019BAA000"
+          ]
         }
       ],
       "images": {
@@ -160,6 +229,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85619",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hellboy: The Science of Evil",
           "source": "igdb",
@@ -168,6 +243,12 @@
         {
           "field": "original_name",
           "value": "Hellboy: The Science of Evil",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Experience the epic adventures of the acclaimed comic book hero, fusing action, atmosphere, and humor in Hellboy: The Science of Evil. In his latest quest, Hellboy uncovers an insane Nazi plot for world domination, and must rush to defeat the crazed Hermann Von Klempt before he can exert his evil will upon earth. Unleash Hellboys superhuman abilities as you smash your way through hordes of enemies using the environment for added destructive power and strategy. Just another day for Hellboy ...",
           "source": "igdb",
           "manual": false
         },
@@ -185,7 +266,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 7007,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00090",
+            "BLUS-30048"
+          ]
         },
         {
           "id": 85620,
@@ -193,7 +278,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 7007,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00827",
+            "ULUS-10301"
+          ]
         },
         {
           "id": 85621,
@@ -203,8 +292,38 @@
           "igdbId": 7007,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6ee0c99321af0825b68d0249d64aa6c7.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/eb32aac2194b1bd6fbf7d1e39f45f3b5.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/cded50dfbb83f48e8a025f7f9d68391d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1886,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24782,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 35120,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 27160,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

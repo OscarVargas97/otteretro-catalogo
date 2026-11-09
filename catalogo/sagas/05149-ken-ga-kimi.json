@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98586",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ken ga Kimi",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ken ga Kimi",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ken ga Kimi is Rejet's first Japanese-inspired tale. A trial was released on November 1, 2013 and soon later the official game was released on December 19, 2013. The story takes place in the early stages of Edo period.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 61265,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Novela visual base, sin los extras de la versión de Vita."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Saltar texto, guardado libre y lectura cómoda en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y carga inmediata."
+            }
+          ]
         },
         {
           "id": 98808,
@@ -56,9 +89,33 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 129996,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Port con contenido adicional típico de Vita."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda en portátil, pero con menos flexibilidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original con añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor, con cargas ligeras."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5p4c.jpg"
+      }
     },
     {
       "id": 41474,
@@ -70,6 +127,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98679",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ken ga Kimi: Momoyo Tsuzuri",
           "source": "igdb",
@@ -78,6 +141,12 @@
         {
           "field": "original_name",
           "value": "Ken ga Kimi: Momoyo Tsuzuri",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ken ga Kimi is Japanese legend ADV and is highly recommended since released at Japan. Ken ga Kimi: Momoyo Tsuzuri is the FD of the original game and it has 100 stories included.",
           "source": "igdb",
           "manual": false
         },
@@ -96,7 +165,28 @@
           "year": 2020,
           "igdbId": 129997,
           "steamAppId": 1387350,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que la versión de Vita."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado libre y salto de texto en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original de Vita."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y carga rápida."
+            }
+          ]
         },
         {
           "id": 98680,
@@ -104,10 +194,54 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 129997,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del fan disc."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda en portátil, con guardado estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución limitada de Vita."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co44gi.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3376,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41396,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 41474,
+          "reason": "2016"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

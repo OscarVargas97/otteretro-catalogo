@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A third-person adventure game themed around the anime Dr. Slump.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 138108,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YDSJ"
+          ]
         }
       ],
       "images": {
@@ -78,6 +87,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Dr. Slump is an action-adventure game based on the 1997 anime adaptation of Akira Toriyama's manga series of the same name.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -91,7 +106,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 44828,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01934"
+          ]
         }
       ],
       "images": {
@@ -101,5 +119,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2917,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24634,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 18451,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

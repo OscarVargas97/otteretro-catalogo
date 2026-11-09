@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "27810",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Code Vein",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Code Vein",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Code Vein is set in the not too distant future where a disaster has brought the world to ruin and vampire-like beings battle for dominance.",
           "source": "igdb",
           "manual": false
         },
@@ -84,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112876",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Code Vein II",
           "source": "igdb",
@@ -92,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Code Vein II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Code Vein II is an action role-playing game set in a post-apocalyptic world where Revenants are being transformed into hostile \"Horrors.\" A Revenant Hunter must partner with a time-manipulating companion named Lou.\nGameplay features third-person action combat and deep RPG progression, emphasizing specialized Blood-based mechanics and character customization. An evolved Partner System enhances tactical cooperation with AI companions during exploration and high-difficulty boss encounters. Success depends on mastering diverse weaponry and temporal abilities to survive a world defined by memory and ruin.",
           "source": "igdb",
           "manual": false
         },
@@ -128,8 +152,33 @@
           "igdbId": 347636,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/04dbb99a252712b653e15af5e64049fb.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4acfed046b7a1c0c311d6bbf9fd33b82.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/71e11fa9c2ea505a75bc330c73145f81.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2693,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 11604,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 47560,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

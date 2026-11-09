@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2042",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Chameleon Twist",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Chameleon Twist",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Chameleon Twist is a 3D-Jump & Run, developed by Japan System Supply and released by Sunsoft in 1997.\n\nAfter following a rabbit into a magical hole in the ground, the blue chameleon named Davy realises that he has taken on a humanoid form. In an attempt to find a way back home, Davy is traveling throughout six lands with his friends, Jack, Fred, and Linda; together they discover Jungle Land, Ant Land, Bomb Land, Desert Castle, Kids Land, and Ghost Castle to find the certain magic portal.",
           "source": "igdb",
           "manual": false
         },
@@ -63,7 +75,23 @@
         "cover": "https://cdn2.steamgriddb.com/grid/78ec3e9ba98d856873f1bdb01194eef9.png",
         "hero": "https://cdn2.steamgriddb.com/hero/e4d9158658821b779fefcceffe2fbacf.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/7bec7e63a493e2d61891b1e4051ef75a.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 604,
+          "platform": "n64",
+          "project": "ChameleonTwist1-JP-Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Rainchus/ChameleonTwist1-JP-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1187,
@@ -75,6 +103,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2226",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Chameleon Twist 2",
           "source": "igdb",
@@ -83,6 +117,12 @@
         {
           "field": "original_name",
           "value": "Chameleon Twist 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Chameleon Twist 2 is the direct sequel to Chameleon Twist. The original Japanese version kept the original design for the main characters, whereas the international release changed them to more realistic-looking chameleons.",
           "source": "igdb",
           "manual": false
         },
@@ -115,8 +155,44 @@
         "cover": "https://cdn2.steamgriddb.com/grid/7068c0c1d3a6b015d50727df8de61d26.png",
         "hero": "https://cdn2.steamgriddb.com/hero/c7871e35dd26687a4d944ec175d9b216.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/4c1fc9aaa624c235037b9fae1ec34d1f.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 603,
+          "platform": "n64",
+          "project": "ChameleonTwist2-JP-Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Rainchus/ChameleonTwist2-JP-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2136,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1077,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 1187,
+          "reason": "1998"
+        }
+      ]
+    }
+  ]
 }

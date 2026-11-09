@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "21375",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "PC Building Simulator",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "PC Building Simulator",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "PC Building Simulator lets players get to grips and experiment with building their very own gaming PC, without the associated risks and costs. With tutorials to help master the basics and an array of accurate and lifelike components that function exactly as they would in real life.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,7 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 27792,
-          "steamAppId": 1611980,
+          "steamAppId": 621060,
           "criteria": []
         },
         {
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 27792,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010072800CBE8000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110744",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "PC Building Simulator 2",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "PC Building Simulator 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Grow your empire as you learn to repair, build and customize PCs at the next level. Experience deeper simulation, an upgraded career mode, and powerful new customisation features. Use realistic parts from 40+ hardware brands to bring your ultimate PC to life.",
           "source": "igdb",
           "manual": false
         },
@@ -117,7 +144,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 194247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando, más torpe para el manejo fino."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con adaptaciones de control."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable en consola."
+            }
+          ]
         },
         {
           "id": 110744,
@@ -125,7 +173,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 194247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Tiene todo el contenido y las actualizaciones acumuladas desde 2022."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado son ideales para armar y cablear piezas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fps flexibles según el equipo."
+            }
+          ]
         },
         {
           "id": 110745,
@@ -133,10 +202,56 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 194247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando, más torpe para el manejo fino."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con adaptaciones de control."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Carga rápida y buen rendimiento en PS5."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/63d96ed357093aac6eae0a2c3a212525.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/09d5b6331e6c3b4eb414a5d04200235c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/8a1c7509f6b872ceeb6f1fb2799dbb86.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2619,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9693,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 46757,
+          "reason": "2022"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

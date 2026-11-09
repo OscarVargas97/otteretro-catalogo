@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2599",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Powerpuff Girls: Chemical X-Traction",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Powerpuff Girls: Chemical X-Traction",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join the Powerpuff Girls to stop the villains from eating their Chemical X pie in an action packed adventure.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 19421,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NPQE"
+          ]
         },
         {
           "id": 2600,
@@ -56,7 +71,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 19421,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03629",
+            "SLUS-01423"
+          ]
         }
       ],
       "images": {
@@ -83,6 +102,12 @@
         {
           "field": "original_name",
           "value": "The Powerpuff Girls: Battle HIM",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "One of three POWERPUFF GIRLS games released together on the Game Boy Color, THE POWER PUFF GIRLS: Battle Him cats you in the role of the lovable Bubbles. Bubbles' nurturing personality shines in the video game, as you help her collect power-ups and battle the infamous, evil \"Him.\" She might be an elementary school student, but she'll prove just how dedicated she is to crime fighting, as you help Bubbles shoot her way through level after level of original action. Many of the items that you collect throughout the adventure can be traded for others via friends playing the other POWERPUFF GIRLS games on their systems. Although it's a one-player game, the trading aspect gives the experience a significantly interactive element. Of course, the brilliant sense of humor from the cartoon series is present throughout the adventure, as are all of the other characters you've come to love. Handheld video games just don't get much more creative (or fun) than this.",
           "source": "igdb",
           "manual": false
         },
@@ -130,6 +155,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Game de Demashita! Powerpuff Girls Z was developed by Infinity and published by Bandai for the Nintendo DS (now known as Bandai Namco) on June 14, 2007. It has board-game style gameplay similar to Mario Party and features Blossom, Bubbles and Buttercup competing with Mojo Jojo to get to the center of the board, competing in minigames along the way. The game received a Cero A rating in Japan which is the equivalent of an E rating in the United States.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -143,7 +174,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 133826,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YPPJ"
+          ]
         }
       ],
       "images": {
@@ -151,5 +185,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1451,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1393,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 6078,
+          "reason": "2001"
+        },
+        {
+          "position": 3,
+          "gameId": 18344,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

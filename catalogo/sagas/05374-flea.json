@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102657",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Flea!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Flea!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Flea is a challenging platformer with an intriguing back story. Play as Henry the Hyperactive Flea who just can’t stop jumping! Navigate the beast and collect blood to get the the heart of the problems.",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,10 @@
           "igdbId": 150517,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9a0ceb8ae769ce2b6f0d75e28a48779a.png"
+      }
     },
     {
       "id": 43659,
@@ -71,6 +86,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103275",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Flea!2",
           "source": "igdb",
@@ -79,6 +100,12 @@
         {
           "field": "original_name",
           "value": "Flea!2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "FLEA!2 is a challenging platformer with an intriguing back story. Play once again as Henry the Hyperactive Flea who just can’t stop jumping! Navigate the beasts, collect blood and rescue all the fleas.",
           "source": "igdb",
           "manual": false
         },
@@ -107,8 +134,31 @@
           "igdbId": 333731,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9hpe.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3433,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43293,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 43659,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

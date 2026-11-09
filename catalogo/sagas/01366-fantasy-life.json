@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8380",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fantasy Life",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Fantasy Life",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Embark on the adventure of your dream life as you craft, cast, fish, mine, battle and explore like never before. With the innovative Life system, your choices don’t just upgrade characters—they help shape your journey. Explore a huge fantasy landscape beside surly dark paladins, slick pirate captains, regal princesses, and others who share your taste for the unknown.",
           "source": "igdb",
           "manual": false
         },
@@ -83,6 +95,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "67079",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "FANTASY LIFE i: La pequeña ladrona del tiempo",
           "source": "igdb",
@@ -91,6 +109,12 @@
         {
           "field": "original_name",
           "value": "Fantasy Life i: The Girl Who Steals Time",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fantasy Life i: The Girl Who Steals Time is an RPG life-sim game and the long-awaited sequel to the 3DS classic Fantasy Life. This game will expand on what the original did, blending simulation with traditional action RPG combat mechanics.",
           "source": "igdb",
           "manual": false
         },
@@ -149,7 +173,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 236664,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100755017EE0000"
+          ]
         }
       ],
       "images": {
@@ -159,5 +186,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2327,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4233,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 27212,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

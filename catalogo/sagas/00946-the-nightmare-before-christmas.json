@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Much to the dismay of Jack Skellington and the citizens of Halloween Town, unusual bugs have started to infest their township. At the root of this ever-increasing bug invasion is Oogie Boogie, a former holiday king who is determined to take over Halloween. With help from his friends Sally, the mayor, and Dr. Finklestein, Jack and his trusted pal Zero embark on a quest to rid the town of bugs and stop Oogie Boogie from carrying out his evil plot. As Jack, you must battle Oogie's creepy henchmen using an arsenal of different weapons and navigate through booby traps, mazes, and puzzles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 73651,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BNCE",
+            "BNCJ"
+          ]
         }
       ],
       "images": {
@@ -67,6 +77,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82277",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Nightmare Before Christmas: Oogie's Revenge",
           "source": "igdb",
@@ -75,6 +91,12 @@
         {
           "field": "original_name",
           "value": "The Nightmare Before Christmas: Oogie's Revenge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Action game based on Henry Selick's stop-motion movie masterpiece. Players slip into the role of Jack Skellington, King of Halloween, and relive the adventures set in Tim Burton's dark world. Following the events of the Tim Burton's The Nightmare Before Christmas movie, players take control of Jack Skellington who sets out on a search of new ways to spook kids during Halloween. He returns home to find that Oogie Boogie has returned and Halloween Town is in peril once again.\n\nThe game combines elements of action, platforming, and rhythm-based gameplay, as Jack must also perform musical battles to defeat certain bosses and progress through the story. Each battle is set to a unique musical number, bringing the dark charm of the film's soundtrack to life in a new and interactive way.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +127,58 @@
       ],
       "images": {
         "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2rn4.jpg"
-      }
+      },
+      "ports": [
+        {
+          "id": 1200,
+          "platform": "xbox",
+          "project": "ProjectOogie",
+          "kind": "recomp",
+          "toolchain": "xboxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Pallypots/ProjectOogie",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "xemu"
+        },
+        {
+          "id": 1201,
+          "platform": "xbox",
+          "project": "OogiesRevengeRecompiled",
+          "kind": "recomp",
+          "toolchain": "xboxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/josiahg2502-glitch/OogiesRevengeRecompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "xemu"
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2232,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32935,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 2673,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

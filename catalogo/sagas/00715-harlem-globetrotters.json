@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3598",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Harlem Globetrotters World Tour",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Harlem Globetrotters World Tour",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "For more than 80 years, the \"Clown Princes\" of the hardwood, have thrilled and delighted worldwide audiences; more than 123,000,000 spectators in 118 countries have witnessed basketball, Harlem Globetrotters style. Now, the Globetrotters, the world's greatest showmen, take their high-flying athleticism, and audacious antics off the road, and right into your home! DSI Games brings the excitement of Harlem Globetrotters basketball to your favorite video game system. The \"can't miss\" 'Trotter's experience is now a \"don't miss\" video game!",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 6430,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BHNE",
+            "BHNP"
+          ]
         },
         {
           "id": 3598,
@@ -64,7 +80,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 6430,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AHXE",
+            "AHXP"
+          ]
         }
       ],
       "images": {
@@ -93,6 +113,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Harlem Globetrotters is a multiplatform sports video game for the Nintendo Entertainment System and MS-DOS. The game allows players to control the Harlem Globetrotters basketball team.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1990",
           "source": "igdb",
@@ -108,8 +134,32 @@
           "igdbId": 92724,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d68b79c1a81025d1987a576b8630ea9f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ff23e9100e9bb0ce262c1d7b0a5d570d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2189,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43095,
+          "reason": "1990"
+        },
+        {
+          "position": 2,
+          "gameId": 1865,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

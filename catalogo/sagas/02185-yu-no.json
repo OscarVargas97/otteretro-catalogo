@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17877",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Yu-No: A Girl Who Chants Love at the Bound of this World",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Yu-No: A Girl Who Chants Love at the Bound of this World",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Yu-No: A Girl Who Chants Love at the Bound of this World is a Japanese-style adventure game, also known as a visual novel, originally released in 1996 for the NEC PC-98, and later ported to the Sega Saturn and Windows. In 2017 a remake was produced for the Playstation 4 and Playstation Vita, with completely redrawn HD graphics and rearranged music, while maintaining the same story and game structure. The 2019 Nintendo Switch port included these new features as well.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "remaster",
           "year": 2019,
           "igdbId": 11816,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010037D00DBDC000"
+          ]
         }
       ],
       "images": {
@@ -104,6 +119,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A side-scrolling action game developed by Platine Dispotif and MAGES for the nintendo Switch, 8-bit Yu-no's Great adventure is a spinoff of Yu-No A girl that chants love at the bounds of this world released alongside it's 2019 remake for the Nintendo Switch. Playing as Yu-No, the game adapts the Adapts the ADaMS system from the visual novel allowing for the player to rewind the game to follow different routes in order to attain key items to reach the final stage and boss.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2019",
           "source": "igdb",
@@ -117,7 +138,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 209737,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010000000E5EE000"
+          ]
         }
       ],
       "images": {
@@ -125,5 +149,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2551,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8802,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 22835,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

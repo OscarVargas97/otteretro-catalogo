@@ -3,7 +3,7 @@
   "name": "Crusader Kings",
   "igdbKind": "collection",
   "igdbId": 540,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,7 +20,7 @@
       "year": 2012,
       "igdbId": 2918,
       "popularity": 258,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -51,7 +51,12 @@
           "steamAppId": 203770,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/754be4171072e60e8ea9012cc3922b34.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d921c3c762b1522c475ac8fc0811bb0f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d240cb4a3e3d2ed5250ac2e1480422f0.png"
+      }
     },
     {
       "id": 43435,
@@ -60,7 +65,7 @@
       "year": 2020,
       "igdbId": 124954,
       "popularity": 204,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -72,6 +77,18 @@
           "field": "original_name",
           "value": "Crusader Kings III",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Crusader Kings III is the newest generation in the medieval role-playing grand strategy game series Crusader Kings. Expand and improve your realm, whether a mighty kingdom or modest county. Use marriage, diplomacy and war to increase your power and prestige in a meticulously detailed map that stretches from Spain to India, Scandinavia to Central Africa.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Crusader Kings III es la generación más reciente de la serie de juegos de estrategia de gran escala y rol medieval Crusader Kings. Expande y mejora tu reino, ya sea un poderoso reino o un modesto condado. Usa el matrimonio, la diplomacia y la guerra para aumentar tu poder y prestigio en un mapa minuciosamente detallado que se extiende desde España hasta la India, y desde Escandinavia hasta África Central.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -107,8 +124,75 @@
           "igdbId": 124954,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/44f7c4c0aa53f6dcd25571253c153746.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/419518fcf025e16dafe3e74e1ba0cf5a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5713d94b932fda2d38d15466f4d5d7a1.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3438,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43395,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 43435,
+          "reason": "2020"
+        }
+      ]
+    },
+    {
+      "id": 4005,
+      "kind": "story",
+      "rationale": "La saga no tiene una historia continua: cada juego es un sandbox de dinastías medievales sin trama compartida. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43395,
+          "recommendedVersionId": 102828,
+          "reason": "Primer juego en el orden de lanzamiento. Solo tiene versión de PC."
+        },
+        {
+          "position": 2,
+          "gameId": 43435,
+          "recommendedVersionId": 102901,
+          "reason": "Segundo juego en el orden de lanzamiento. La versión de PC es la más completa y cuenta con más mods."
+        }
+      ]
+    },
+    {
+      "id": 4006,
+      "kind": "community",
+      "rationale": "La comunidad suele recomendar empezar directamente por Crusader Kings III, que es más moderno y tiene mejor interfaz y tutoriales. Crusader Kings II queda como opción posterior. Las fuentes no se pudieron consultar.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43435,
+          "recommendedVersionId": 102901,
+          "reason": "Es el punto de entrada más accesible. Se recomienda PC por los mods y la comodidad del ratón y el teclado; las versiones de consola también existen."
+        },
+        {
+          "position": 2,
+          "gameId": 43395,
+          "recommendedVersionId": 102828,
+          "reason": "Opcional, para quien quiera probar el predecesor. Solo tiene versión de PC."
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Over 78 wrestlers ready to rumble! The no.1 wrestling promotion in the world, WCW, takes on the world and combines talents from around the world to settle their scores, and take on the nWo led by Hollywood Hogan.\n\nHundreds of moves, 4 player action, this is wrestling!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -48,14 +54,33 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3626,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NVPJ"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/8bbf85d7126441ecff35e09dd0e29c0a.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/6cdb225ad1e6bf01938afc91ac384296.png",
         "logo": "https://cdn2.steamgriddb.com/logo/528cf8c4a0b86390170c3317d07d7cba.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1252,
+          "platform": "n64",
+          "project": "VPW64Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/jessetbh/VPW64Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1314,
@@ -79,6 +104,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel to Virtual Pro Wrestling 64, and released only in Japan. The title translates to Royal Road Succession; the name of the career mode in the game. The fifth wrestling game developed by AKI Corporation. Contained many improvements from previous titles that would be featured in AKI's final Nintendo 64 wrestling game WWF No Mercy. Some features, such as creating masks in edit mode and the MMA style grappling system, would not be carried over to WWF No Mercy.\n\nVirtual Pro Wrestling 2 carries the All Japan Pro Wrestling license, and features 21 wrestlers from their promotion. The rest of the characters included in the game are based on other real promotions and wrestlers, but due to copyright have fake names and appearances. This is common among other Japanese wrestling games. You can identify who the other wrestler's are by their unique moves and taunts, and the edit mode contains each piece of ring attire you would need to recreate their actual likeness.\n\nIn total, there are 98 wrestlers in the game, 23 of which have to be unlocked. There is also 16 original character slots you can use to edit and create your own wrestlers, bringing the potential total of wrestlers in the game to 114. This game has the largest roster of all of AKI's wrestling games. In comparison, WWF No Mercy would have 64 wrestlers available.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -92,7 +123,10 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3625,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NA2J"
+          ]
         }
       ],
       "images": {
@@ -100,5 +134,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2137,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1084,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 1314,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

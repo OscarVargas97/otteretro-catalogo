@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kinnikuman Muscle Grand Prix is a series of fighting video game developed by AKI Corporation, based on the popular Kinnikuman manga and anime series from Weekly Shonen Jump.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 77043,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coauee.jpg"
+      }
     },
     {
       "id": 34940,
@@ -92,5 +101,25 @@
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3248,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34171,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 34940,
+          "reason": "2007"
+        }
+      ]
+    }
+  ]
 }

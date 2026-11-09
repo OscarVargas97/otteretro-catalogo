@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17365",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Door Kickers",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Door Kickers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Door Kickers is an innovative Real-Time Tactics game that puts you in charge of a SWAT team. With your help we can make this The Ultimate Swat Team Command Simulator. Analyze the situation, plan team routes, choose equipment and breach points and coordinate multiple troopers to reach the hostage room before the bad guys get to press that trigger. It may sound daunting, and like real world CQB combat, it sure is. But most levels can be completed in minutes and on the fly improvisation works. Achieving the perfect planning, getting the mission done with no false steps, that’s a skill harder to master.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2014,
           "igdbId": 3099,
           "steamAppId": 248610,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con soporte del Workshop."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Ligero y estable."
+            }
+          ]
         },
         {
           "id": 17366,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 3099,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo, sin mods del Workshop."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Táctil o mando menos precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Adaptación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Interfaz pequeña en pantalla."
+            }
+          ],
+          "codes": [
+            "0100B0601205E000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24200",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Door Kickers: Action Squad",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Door Kickers: Action Squad",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rescue hostages, disarm bombs and save the day in this old school, side scroller action with retro graphics and retro sensibilities. Coop MP Included.",
           "source": "igdb",
           "manual": false
         },
@@ -126,7 +195,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 55678,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01005ED00CD70000"
+          ]
         }
       ],
       "images": {
@@ -136,5 +208,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2532,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8678,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 10517,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

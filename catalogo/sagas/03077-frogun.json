@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42847",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Frogun",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Frogun",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join Renata as she adventures across a world of mystical ruins with the titular FROGUN! Frogun is an old-school platformer with the soul of the PS1/N64 era, in which your frog-shaped grappling hook is a your best friend!",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 152051,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010035B018486000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "68344",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Frogun Encore",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Frogun Encore",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Frogun Encore is a dashing standalone expansion/sequel to indie hit Frogun! Join now older Renata and Jake in a trek around the whole world to prevent the return of Beelzebub. Encore builds on Frogun's retro PS1/N64 formula. Plus, enjoy the whole adventure in true couch co-op.",
           "source": "igdb",
           "manual": false
         },
@@ -174,7 +201,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 242322,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100DD801E52C000"
+          ]
         }
       ],
       "images": {
@@ -184,5 +214,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2845,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16337,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 27637,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

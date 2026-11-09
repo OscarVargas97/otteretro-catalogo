@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In this game, the player controls one of several different playable characters onboard a passenger liner in the early 20th century when it hits a storm and capsizes. The player character must navigate the shifting ship's destroyed corridors and rescue and lead to safety as many passengers as possible, all while the ship gradually fills with water.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -67,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63869",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Septentrion: Out of the Blue",
           "source": "igdb",
@@ -75,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Septentrion: Out of the Blue",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Septentrion: Out of the Blue is a sequel to SOS released exclusively in Japan. Unlike the original game, the sequel takes place in a modern setting and doesn't have a time limit to finish the game, removing the sense of urgency.",
           "source": "igdb",
           "manual": false
         },
@@ -92,7 +110,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 79661,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, relanzamiento digital."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado flexible y trofeos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen por emulación."
+            }
+          ]
         },
         {
           "id": 63870,
@@ -100,7 +139,32 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 79661,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control clásico de PS1."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja y cargas."
+            }
+          ],
+          "codes": [
+            "SLPM-86612",
+            "SLPS-01940"
+          ]
         },
         {
           "id": 63871,
@@ -108,7 +172,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 79661,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido, relanzamiento digital."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable en pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -116,5 +201,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2077,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 188,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 25574,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

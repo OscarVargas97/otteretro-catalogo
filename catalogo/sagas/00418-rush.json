@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1955",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "San Francisco Rush: Extreme Racing",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "San Francisco Rush: Extreme Racing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "San Francisco Rush: Extreme Racing is the first game in the Rush series.\nTne N64 version contains six regular tracks and two hidden tracks. The regular tracks can be run in either reverse or mirrored modes and feature added collectible hidden keys throughout the track that can be used to unlock hidden vehicles. It also contains a Practice Mode and a Death Race mode where the game ends if the player crashes. The N64 port of Rush also includes a Circuit Mode and a save system for Fast Times, circuit progress, and hidden keys that the player can find on secret spots to unlock new cars.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 3595,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NSFE",
+            "NSFP"
+          ]
         },
         {
           "id": 1956,
@@ -56,7 +72,11 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3595,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-01208",
+            "SLUS-00505"
+          ]
         },
         {
           "id": 2877,
@@ -95,6 +115,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Rush 2: Extreme Racing USA is a sequel to San Francisco Rush and the second game in the Rush series.\nThe game is notable for the high level of detail in the recreations of the various cities and states used, and for its fast arcade-style physics. The game also features a two-player mode and rumble pack support. Hidden shortcuts and jumps add to the replay value of the game.\nCities used are New York (Uptown and Downtown), Hawaii, Las Vegas, San Francisco (Alcatraz), Los Angeles, and Seattle. Other tracks playable at the start of the game are Stunt, Crash, and Halfpipe. A bonus track can be won where your car is miniaturized and you drive through the offices of Midway Games. Another bonus is the full pipe level, as the last achievement to unlock.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -108,14 +134,33 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3593,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NR2E",
+            "NR2P"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/b813f17a5b1769372eb7755d6e7ff9ea.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/f3b3f832928f8dd9dfb647c58b9f66cf.png",
         "logo": "https://cdn2.steamgriddb.com/logo/b3bf78811f4ad73487e119abc6eeeee3.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1032,
+          "platform": "n64",
+          "project": "rush2recompiled",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/bryantmh/rush2recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1191,
@@ -127,6 +172,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2233",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "San Francisco Rush 2049",
           "source": "igdb",
@@ -135,6 +186,12 @@
         {
           "field": "original_name",
           "value": "San Francisco Rush 2049",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "San Francisco Rush 2049 is the third game in the Rush series, sequel to San Francisco Rush and Rush 2: Extreme Racing USA.\nThe game features a futuristic representation of San Francisco and an arcade-style physics engine. It also features a multiplayer mode for up to four players and Rumble Pak support on the Nintendo 64 port. A major difference in game play compared to predecessors in the series is the ability to extend wings from the cars in midair and glide. As with previous titles in the franchise, Rush 2049 features a stunt mode in which the player scores points for complex mid-air maneuvers and successful landings. There is also a multiplayer deathmatch battle mode. There are six race tracks, four stunt arenas, eight battle arenas, and one unlockable obstacle course named The Gauntlet. The single player race mode places emphasis on outlandish and death-defying shortcuts in each track. The game has a soundtrack mostly comprising techno music.",
           "source": "igdb",
           "manual": false
         },
@@ -152,7 +209,11 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3596,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NRUE",
+            "NRUP"
+          ]
         },
         {
           "id": 2749,
@@ -167,7 +228,23 @@
         "cover": "https://cdn2.steamgriddb.com/grid/149fc7df611affd0659740836d467a08.png",
         "hero": "https://cdn2.steamgriddb.com/hero/d96a432b17fe18b5ab02f16a3b850e75.png",
         "logo": "https://cdn2.steamgriddb.com/logo/79cc3da18f810f1d346720cf319a596e.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1035,
+          "platform": "n64",
+          "project": "rush-2049-recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/n64hub/rush-2049-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 32717,
@@ -179,6 +256,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81833",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "L.A. Rush",
           "source": "igdb",
@@ -187,6 +270,12 @@
         {
           "field": "original_name",
           "value": "L.A. Rush",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "L.A. Rush is the 4th installment in the Rush series of video games. It was released in North America for the PlayStation 2 and Xbox consoles on October 10, 2005 and on October 21 in Europe. The PC version was released on November 4 in Europe. PlayStation Portable version was released on October 30, 2006 named Rush. Many details were revealed at E3 in May 2005. The game is free-roaming with races similar to those in Need for Speed: Underground 2. The GPS map can have a point assigned to a certain location and then the point shows up on the radar during gameplay. The game features voice talent from Orlando Jones, Bill Bellamy, and Twista. In addition to the console versions and PC version it was to be available on Gizmondo.",
           "source": "igdb",
           "manual": false
         },
@@ -220,7 +309,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 5899,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00554"
+          ]
         },
         {
           "id": 81835,
@@ -228,7 +320,12 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 5899,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53419",
+            "SLES-53419-ANZ",
+            "SLUS-21112"
+          ]
         }
       ],
       "images": {
@@ -238,5 +335,35 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1096,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1021,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 1153,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 1191,
+          "reason": "1999"
+        },
+        {
+          "position": 4,
+          "gameId": 32717,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

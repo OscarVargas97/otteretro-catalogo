@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "18022",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "La-Mulana 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "La-Mulana 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In La-Mulana 2, you will take on the role of Lumisa Kosugi on a mission to find the entrance to the ruins of Eg-Lana, which is rumored to be the source of recent monster appearances. The ruins themselves are compromised of a variety of areas as well as huge boss creatures known as Guardians. Who knows what lies in wait at the end of Eg-Lana?",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 7937,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010038000F644000"
+          ]
         }
       ],
       "images": {
@@ -125,5 +140,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2553,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8834,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 29137,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

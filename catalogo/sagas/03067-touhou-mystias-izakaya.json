@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42512",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Touhou Mystia's Izakaya",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Touhou Mystia's Izakaya",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is a brand new izakaya simulation gameplay.\nThe young night sparrow and her BBQ has become a welcome sight in Gensokyo with her hard work and flourishing business-that is, until one day, that fateful enemy showed up whom broke her dream. Start from scratch, loaded with debt, it's all or nothing on today's cooking.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2021,
           "igdbId": 153963,
           "steamAppId": 1584090,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todas las actualizaciones y contenido adicional publicado en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado agilizan la cocina, los menús y la gestión; guardado fiable."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original tal como la concibió el autor."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y cuadros por segundo altos y ajustables, cargas rápidas."
+            }
+          ]
         },
         {
           "id": 42513,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 153963,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contiene el juego base, pero suele recibir las actualizaciones con retraso respecto a PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con mando y pantalla táctil, aunque los menús son menos ágiles que con ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la experiencia original con pequeñas adaptaciones al port."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento más bajos por el hardware de Switch, con cargas algo más largas."
+            }
+          ],
+          "codes": [
+            "01000BA01D500000"
+          ]
         }
       ],
       "images": {

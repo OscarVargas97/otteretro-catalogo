@@ -19,9 +19,15 @@
       "originalName": "F-Zero",
       "year": 1990,
       "igdbId": 3490,
-      "popularity": 192,
+      "popularity": 193,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "40",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "F-Zero",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "F-Zero",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "F-Zero is set in the year 2560, when humanity's multiple encounters with alien life forms had resulted in the expansion of Earth's social framework. This led to commercial, technological and cultural interchanges between planets. The multi-billionaires who earned their wealth through intergalactic trade were mainly satisfied with their lifestyles, although most coveted more entertainment in their lives. This resulted in a new entertainment based on the Formula One races to be founded with vehicles that could hover one foot above the track. These Grand Prix races were soon named \"F-Zero\" after a rise in popularity of the races. The game introduced the first set of F-Zero racers: Captain Falcon, Dr. Stewart, Pico, and Samurai Goroh.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1991,
           "igdbId": 3490,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, 240p."
+            }
+          ]
         },
         {
           "id": 39,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 3490,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta."
+            }
+          ]
         },
         {
           "id": 40,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 3490,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD, buen escalado."
+            }
+          ]
         },
         {
           "id": 41,
@@ -72,14 +147,65 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 3490,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/7f15033d73520667f4539ac0eaf8dc2c.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/1074cf6dee6fd3a453ea3fa9d190a430.png",
         "logo": "https://cdn2.steamgriddb.com/logo/82fc94b4228c5d23f3c679d67f15cf2c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 707,
+          "platform": "snes",
+          "project": "FZeroRecomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/craigshaw/FZeroRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 708,
+          "platform": "snes",
+          "project": "FZeroSNESRecomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/RetroPortingToolKit/FZeroSNESRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 994,
@@ -99,6 +225,12 @@
         {
           "field": "original_name",
           "value": "Zero Racers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Enter the future of racing 10 years before the turn of the 30th century.\n\nZero Racers was shown at E3 1996, but went unreleased until 2026 as part of the Nintendo Classics collection.\n\nForced to live underground, humanity has lost its former glory and access to certain emotions. This is where the RACE is held.\n\nCompete for the highest rank in your machine of choice on courses of interconnected square ducts. You must maintain a rank within each lap's specified range and finish in the top three to advance to the next course. Fly through Rapid Marks on each course to obtain RAPID and use that to give yourself a temporary speed boost!",
           "source": "igdb",
           "manual": false
         },
@@ -133,6 +265,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2123",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "F-Zero X",
           "source": "igdb",
@@ -141,6 +279,12 @@
         {
           "field": "original_name",
           "value": "F-Zero X",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's you against 29 other machines competing for the title of F-Zero X Champion. You're racing at speeds of over 1,000 km/h high above the atmosphere. Your competition comes from every corner of the galaxy and won't shed a tear at the thought of smashing you off the track. With four-player simultaneous gameplay and the Rumble Pak accessory, you have the fastest racing game on the N64 system!",
           "source": "igdb",
           "manual": false
         },
@@ -158,7 +302,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 3489,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando clásico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta."
+            }
+          ]
         },
         {
           "id": 2122,
@@ -166,7 +331,33 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3489,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles N64, sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "60 fps en hardware original."
+            }
+          ],
+          "codes": [
+            "CFZE",
+            "CFZJ",
+            "NFZP"
+          ]
         },
         {
           "id": 2123,
@@ -174,14 +365,76 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 3489,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/652e2fd3b2fa943f2b4ff310e419d7f2.png",
         "hero": "https://cdn2.steamgriddb.com/hero/8ce5d989374d216a867cdc8871484b43.png",
         "logo": "https://cdn2.steamgriddb.com/logo/5a99158e0c52f9e7d290906c9d08268d.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 151,
+          "platform": "n64",
+          "project": "G-Diffuser",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Zorkats/G-Diffuser",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1352,
+          "platform": "n64",
+          "project": "fzerox-expansion-kit",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/inspectredc/fzerox-expansion-kit",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1353,
+          "platform": "n64",
+          "project": "fzerox",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/inspectredc/fzerox",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1462,
@@ -193,6 +446,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3014",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "F-Zero: Maximum Velocity",
           "source": "igdb",
@@ -201,6 +460,12 @@
         {
           "field": "original_name",
           "value": "F-Zero: Maximum Velocity",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "All galactic speed limits are about to be broken! F-Zero Maximum Velocity has arrived, and the future of racing has never looked so sweet. Brand-new vehicles and Game Boy Advance original tracks await, so whether you're a Super NES veteran or a race rookies, you'll need some practice laps. And even if you do master the Grand Prix circuit, you'll still have to beat your friends to the finish line. That's right, race fans--with the Game Boy Advance Game Link cable you can take on up to three rival racers, so put the pedal to the metal and get busy boosting, bumping and jumping your way to intergalactic glory!",
           "source": "igdb",
           "manual": false
         },
@@ -218,7 +483,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 3491,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 3014,
@@ -226,7 +512,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 3491,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD."
+            }
+          ]
         },
         {
           "id": 3015,
@@ -234,7 +541,31 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 3491,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin guardado extra."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla de GBA."
+            }
+          ],
+          "codes": [
+            "AFZE"
+          ]
         }
       ],
       "images": {
@@ -253,6 +584,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3701",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "F-Zero: Falcon Densetsu",
           "source": "igdb",
@@ -261,6 +598,12 @@
         {
           "field": "original_name",
           "value": "F-Zero: Falcon Densetsu",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "F-Zero: Falcon Densetsu was compatible with the e-Reader, with some of its content depending of the cards to be unlocked. Later versions of the game had some of the content added as unlockables in other ways, but some of the data, like the stages and staff ghosts, weren't included.",
           "source": "igdb",
           "manual": false
         },
@@ -278,7 +621,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 329620,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión japonesa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Puntos de restauración, texto japonés."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD."
+            }
+          ]
         },
         {
           "id": 3368,
@@ -286,7 +650,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 329620,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión japonesa de la historia."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Texto en japonés."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla de GBA."
+            }
+          ]
         },
         {
           "id": 3701,
@@ -294,7 +679,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 3493,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "GP Legend en inglés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración y texto entendible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Localización con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD."
+            }
+          ]
         },
         {
           "id": 3702,
@@ -302,7 +708,28 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 3493,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Edición occidental GP Legend."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Texto localizado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Localización con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla de GBA."
+            }
+          ]
         }
       ],
       "images": {
@@ -319,6 +746,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3457",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "F-Zero Climax",
           "source": "igdb",
@@ -327,6 +760,12 @@
         {
           "field": "original_name",
           "value": "F-Zero Climax",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "F-Zero Climax is the sixth installment in the F-Zero series and the third to be released for the Game Boy Advance. This is the first F-Zero game to have a built-in track editor without the need for an expansion or add-on. Custom tracks can be saved to one of thirty slots for future use and they can be exchanged with other players via link cable. If memory becomes full or link cable connection cannot be done, the game can generate a password for the track; when it is input on any F-Zero Climax cartridge, the password will generate the track instantly.",
           "source": "igdb",
           "manual": false
         },
@@ -344,7 +783,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 6400,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD."
+            }
+          ]
         },
         {
           "id": 3458,
@@ -352,7 +812,31 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 6400,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin guardado extra."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla de GBA."
+            }
+          ],
+          "codes": [
+            "BFTJ"
+          ]
         }
       ],
       "images": {
@@ -383,6 +867,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "F-Zero GX is the fourth installment in the F-Zero series and the successor to F-Zero X. The game continues the series' difficult, high-speed racing style, retaining the basic gameplay and control system from the Nintendo 64 title. A heavy emphasis is placed on track memorization and reflexes, which aids in completing the title. GX introduces a \"Story Mode\" element, where the player walks in the footsteps of Captain Falcon through nine chapters, completing various missions.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -396,7 +886,13 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 3492,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GFZE-KOR",
+            "DL-DOL-GFZE-USA",
+            "DL-DOL-GFZJ-JPN",
+            "DL-DOL-GFZP-EUR"
+          ]
         }
       ],
       "images": {
@@ -427,6 +923,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A battle royale game featuring tracks from the original F-Zero for Super Nintendo Entertainment System.\n\nLine up with 98 other F-Zero machines and race to the finish in this thrilling take on the original Super NES game. Keep an eye on your power meter as you boost and bash, because speed is just as important as survival. Defend yourself with a Spin Attack and collect Super Sparks to breeze past the competition on the elevated Skyway.\n\nOutpace and outlive your opponents in rotating modes\n\nThe core F-Zero 99 mode is just one way to race at breakneck speeds. Mini Prix and Grand Prix modes appear on a set schedule and challenge you to compete and qualify in a series of races. Team Battle and the extra-tough Pro Tracks mode rotate throughout the day. Prepare yourself in Practice Mode and race against your ghost.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2023",
           "source": "igdb",
@@ -440,7 +942,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 266686,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100CCF019C8C000"
+          ]
         }
       ],
       "images": {
@@ -450,5 +955,55 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 525,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25,
+          "reason": "1990"
+        },
+        {
+          "position": 2,
+          "gameId": 1124,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 1462,
+          "reason": "2001"
+        },
+        {
+          "position": 4,
+          "gameId": 1711,
+          "reason": "2003"
+        },
+        {
+          "position": 5,
+          "gameId": 16609,
+          "reason": "2003"
+        },
+        {
+          "position": 6,
+          "gameId": 1773,
+          "reason": "2004"
+        },
+        {
+          "position": 7,
+          "gameId": 28360,
+          "reason": "2023"
+        },
+        {
+          "position": 8,
+          "gameId": 994,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

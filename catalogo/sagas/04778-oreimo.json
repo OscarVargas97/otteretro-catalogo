@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86822",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ore no Imouto ga Konna ni Kawaii wake ga Nai Portable",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ore no Imouto ga Konna ni Kawaii wake ga Nai Portable",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable is a romantic comedy visual novel developed by guyzware and published by Banpresto.\n\nUnlike the original story of the light novels, Oreimo Portable expands on the story, with complete story routes for Kyousuke and each of the main female casts written by the original creator of the light novels, Tsukasa Fushimi.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,12 @@
           "igdbId": 65174,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fc92f99c7f41b763968eb1c2ede8f41d.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a92cec1b603cab32bb7b1c98a0dcdc4b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/fc1a02cda5fa6f270ff844009fd5d39c.png"
+      }
     },
     {
       "id": 36023,
@@ -82,6 +99,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ore no Imouto Maker EX: Imouto to Koi Shiyo? Portable is a short visual novel that comes bundled with Ore no Imouto ga Konnani Kawaii Wake ga Nai Portable.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -97,8 +120,32 @@
           "igdbId": 197947,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4ee9c7f928bd9be3fc9bac25fa2e33e7.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/64881bd77f9a3ab0878b4913aba8684a.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3284,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35839,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 36023,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Galerians is a survival horror game in which the player navigates a 3D character model over pre-rendered backgrounds, using character-related controls similar to those implemented in Alone in the Dark. Items must be collected to unlock new areas and advance the story. Unlike in most other games of the type, the protagonist is unable to use weapons. Rion fully relies on his psychic powers to combat enemies. These powers must be replenished by regularly taking drugs. In addition, Rion has a special meter that throws him into uncontrollable rage when full.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -48,14 +54,62 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 54552,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02328",
+            "SLES-02328-0",
+            "SLES-02329",
+            "SLES-02329-0",
+            "SLES-02330",
+            "SLES-02330-0",
+            "SLES-12328",
+            "SLES-12328-1",
+            "SLES-12329",
+            "SLES-12329-1",
+            "SLES-12330",
+            "SLES-12330-1",
+            "SLES-22328",
+            "SLES-22328-2",
+            "SLES-22329",
+            "SLES-22329-2",
+            "SLES-22330",
+            "SLES-22330-2",
+            "SLPS-02192",
+            "SLPS-02192-0",
+            "SLPS-02193",
+            "SLPS-02193-1",
+            "SLPS-02194",
+            "SLPS-02194-2",
+            "SLUS-00986",
+            "SLUS-00986-0",
+            "SLUS-01098",
+            "SLUS-01098-1",
+            "SLUS-01099",
+            "SLUS-01099-2"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/966ba328b62a88bcbb7b81810924b0cf.png",
         "hero": "https://cdn2.steamgriddb.com/hero/e89cc78c23df05d8eaeef6a5d0316d08.png",
         "logo": "https://cdn2.steamgriddb.com/logo/60934168a4560680ede1fe1b1d03ab3e.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 733,
+          "platform": "ps1",
+          "project": "Galerians-Recompiled",
+          "kind": "recomp",
+          "toolchain": "PSXRecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/goodshepherd23/Galerians-Recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 32828,
@@ -79,6 +133,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Survival horror and science fiction come together in the sequel to Galerians. In Galerians: Ash, you reprise the role of Rion as he fights the Last Galerians and their evil leader Ash, who wants to destroy all organic life on Earth. Joined once again by Lilia, you must battle your enemies with all-new psychic attacks and neural enhancers across new and expansive environments. In this game, a strong psyche, puzzle-solving skills, and quick reflexes are most valuable to success.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -92,7 +152,12 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 19629,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-51343",
+            "SLPS-25119",
+            "SLUS-20560"
+          ]
         }
       ],
       "images": {
@@ -102,5 +167,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3108,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25141,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 32828,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

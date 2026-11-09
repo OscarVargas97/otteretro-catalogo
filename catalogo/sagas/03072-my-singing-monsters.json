@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42631",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "My Singing Monsters Playground",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "My Singing Monsters Playground",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's the Singing Monsters like you've never seen them before. Journey to the Monster World to take part in a tournament of Monster-Game madness! Watch your favorite Monsters come to life as you swing, fling, and spring your way to victory in a variety of 4-player competitions. Grab your friends and hit the Playground to see who has what it takes to win the ultimate Monster bash! Local Multiplayer Madness Compete against friends and family in games galore set across the Monster World Starring the Singing Monsters Take control of some of your favorite characters from the world of My Singing Monsters Variety of Game Types Team up to take on your competition in 2v2 games or battle it out for solo supremacy in free-for-all matches. Ways to Play Play the way you want with friends or solo in three different game modes: Party Tournament, Single Player Gauntlet, or Freeplay!",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 150135,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100A23015182000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97644",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "My Singing Monsters",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "My Singing Monsters",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome to My Singing Monsters! Collect, breed, and listen to your monsters sing. You have never seen a game like this before!\n\nPopulate an island and watch what happens. Create unique havens by landscaping and arranging your creatures. Name them, feed them, make them happy; each monster is loaded with personality. You’ll experience game play and music as never before with this innovative technology!",
           "source": "igdb",
           "manual": false
         },
@@ -134,7 +161,28 @@
           "year": 2021,
           "igdbId": 16305,
           "steamAppId": 1419170,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Recibe actualizaciones constantes con monstruos, islas y eventos nuevos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón cómodo y guardado en la nube vinculable."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mantiene el diseño original del juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y con buena resolución."
+            }
+          ]
         },
         {
           "id": 97645,
@@ -142,10 +190,56 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 16305,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión de Vita sin actualizaciones recientes de monstruos ni eventos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Táctil funcional, pero con menos soporte y comodidades."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original de la plataforma portátil."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Corre bien, pero en hardware antiguo y sin soporte."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4f8f1ccd101033055efe9307395cdbf2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c0164cc4de0882d5929907ac34b2359c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1c59892796272087ec31a1d0a0ba5606.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2842,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40861,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 16283,
+          "reason": "2021"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

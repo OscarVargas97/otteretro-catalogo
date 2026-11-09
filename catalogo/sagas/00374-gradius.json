@@ -3,7 +3,7 @@
   "name": "Gradius",
   "igdbKind": "franchise",
   "igdbId": 775,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1989,
       "igdbId": 1481,
       "popularity": 25,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "41745",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Gradius III",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Gradius III",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In the darkest reaches of infinite space, pure evil lies in wait ... The Dark Forces led by the god of destruction, Bacterian, prepare to launch a massive onslaught against the planet Gradius. Possessing unstoppable power, the Dark Forces threaten to plunge the Universe into total war and complete annihilation.\n\nTheir invasion force smashes the Gradius defenses, and the surrounding planets soon fall like dominoes. Now Bacterian's evil grasp reaches for the heart of the resistance...planet Gradius itself...\n\nTo counter the oncoming threat the United Gradius World Forces gather all their fighter craft. Half of them form a defensive net - the other half a strike team. But they are badly outnumbered and The Dark Forces easily tear through their thin frontline. No fighters survive the slaughter....\n\nIn a last gasp move, the United Gradius World Forces send out two fighters, previously considered too dangerous for combat missions: The InterDimensional VIC VIPER fighters.\n\nThe Fighters take off for the heart of darkness to join the fray that will decide the fate of the Universe...",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En los rincones más oscuros del espacio infinito, el mal puro aguarda... Las Fuerzas Oscuras, lideradas por el dios de la destrucción, Bacterian, se preparan para lanzar una ofensiva masiva contra el planeta Gradius. Poseyendo un poder imparable, las Fuerzas Oscuras amenazan con sumir al Universo en una guerra total y en la aniquilación completa.\n\nSu fuerza de invasión destroza las defensas de Gradius, y los planetas vecinos caen pronto como fichas de dominó. Ahora la malvada garra de Bacterian alcanza el corazón de la resistencia... el propio planeta Gradius...\n\nPara contrarrestar la amenaza que se acerca, las Fuerzas Mundiales Unidas de Gradius reúnen a todos sus cazas. La mitad forma una red defensiva; la otra mitad, un equipo de ataque. Pero están muy superados en número y las Fuerzas Oscuras atraviesan con facilidad su delgada primera línea. Ningún caza sobrevive a la matanza....\n\nEn un último movimiento desesperado, las Fuerzas Mundiales Unidas de Gradius envían dos cazas que antes se consideraban demasiado peligrosos para misiones de combate: los cazas VIC VIPER interdimensionales.\n\nLos cazas despegan rumbo al corazón de la oscuridad para unirse a la batalla que decidirá el destino del Universo...",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1991,
           "igdbId": 335430,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de SNES con niveles rediseñados y menos contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Ralentización notable, sin guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port de SNES."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Ralentización y parpadeo de SNES."
+            }
+          ]
         },
         {
           "id": 1810,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 335430,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de SNES en Consola Virtual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión de partida."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port de SNES."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable, ralentización original."
+            }
+          ]
         },
         {
           "id": 41744,
@@ -64,7 +124,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147110,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Arcade completo con modos extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Emulación exacta y estable."
+            }
+          ]
         },
         {
           "id": 41745,
@@ -72,7 +153,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 147110,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Arcade completo con modos extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Emulación exacta y estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -82,14 +184,79 @@
       }
     },
     {
+      "id": 2457,
+      "nameEs": "Gradius Galaxies",
+      "originalName": "Gradius Galaxies",
+      "year": 2001,
+      "igdbId": 77990,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Gradius Galaxies",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Gradius Galaxies",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gradius Galaxies is a horizontally-scrolling shooter handheld video game released for the Game Boy Advance. This is the only Gradius title available for the system.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Gradius Galaxies es un videojuego portátil de disparos con desplazamiento horizontal lanzado para Game Boy Advance. Es el único título de Gradius disponible para esta consola.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2001",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 4507,
+          "platform": "gba",
+          "kind": "original",
+          "year": 2001,
+          "igdbId": 77990,
+          "criteria": [],
+          "codes": [
+            "AGAE"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8b473d715c0060dacf925613cfc3ed3f.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/8cf639fc4bb4f35a2bb4105e85ff9957.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/a51cc66bf971e1aaae696dfeb130f38b.png"
+      }
+    },
+    {
       "id": 5311,
       "nameEs": "Gradius",
       "originalName": "Gradius",
       "year": 1985,
       "igdbId": 1476,
       "popularity": 49,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "27500",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Gradius",
@@ -100,6 +267,18 @@
           "field": "original_name",
           "value": "Gradius",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "One of the defining characteristics of the Gradius series is the use of a \"power meter.\" The power meter is powered by a power-up item, whose purpose, when collected, is to move a highlight to the next power-up on the power meter. When a power-up that the player wants becomes highlighted, he or she may activate it, also causing the highlight to reset.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Una de las características que definen a la serie Gradius es el uso de un \"medidor de potencia\". El medidor de potencia se activa con un objeto de mejora que, al recogerse, mueve un resaltado a la siguiente mejora del medidor. Cuando la mejora que quiere quien juega queda resaltada, puede activarla, lo que también reinicia el resaltado.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -116,7 +295,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 213191,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de NES en Consola Virtual de 3DS."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Puntos de restauración y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port de NES."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña, emulación estable."
+            }
+          ]
         },
         {
           "id": 11296,
@@ -124,7 +324,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 213191,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido del port doméstico en Consola Virtual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Permite guardar estado de suspensión."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Emula el port de NES."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable en 480p."
+            }
+          ]
         },
         {
           "id": 11297,
@@ -132,7 +353,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 213191,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de NES en Consola Virtual de Wii U."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Restauración de partida y mando flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port de NES."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Salida 720p con filtros."
+            }
+          ]
         },
         {
           "id": 11298,
@@ -140,7 +382,28 @@
           "kind": "original",
           "year": 1986,
           "igdbId": 213191,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de NES con niveles y enemigos recortados respecto al arcade."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sin guardado y con parpadeo que dificulta esquivar."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel a la versión de NES, no al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Limitaciones de NES: parpadeo y ralentización."
+            }
+          ]
         },
         {
           "id": 16390,
@@ -148,7 +411,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 262390,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Otra edición de Consola Virtual en Wii U."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Restauración de partida y mando flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 27499,
@@ -156,7 +440,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 99560,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Arcade completo con modos Caravan y puntuación en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido, autodisparo y ajustes de dificultad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Emulación exacta en alta resolución."
+            }
+          ]
         },
         {
           "id": 27500,
@@ -164,7 +469,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 99560,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Arcade completo con modos Caravan y puntuación en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido, autodisparo y juego portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Emulación exacta y estable."
+            }
+          ]
         },
         {
           "id": 51138,
@@ -172,7 +498,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 213188,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición de Consola Virtual de 2007, mismo contenido base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión de partida, controles correctos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable en Wii."
+            }
+          ]
         }
       ],
       "images": {
@@ -188,8 +535,14 @@
       "year": 1986,
       "igdbId": 1477,
       "popularity": 29,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "16405",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Salamander",
@@ -200,6 +553,18 @@
           "field": "original_name",
           "value": "Salamander",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Salamander is a scrolling shooter arcade game released by Konami as a spin-off to Gradius. It introduced a simplified power-up system, two-player cooperative gameplay and both horizontally and vertically scrolling stages. Some of these would later become the norm for future Gradius games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Salamander es un juego arcade de disparos con desplazamiento lanzado por Konami como spin-off de Gradius. Introdujo un sistema de mejoras simplificado, jugabilidad cooperativa para dos jugadores y niveles con desplazamiento tanto horizontal como vertical. Algunos de estos elementos se convertirían después en la norma para los futuros juegos de Gradius.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -216,7 +581,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 261902,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola Virtual de 3DS."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Puntos de restauración, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña, estable."
+            }
+          ]
         },
         {
           "id": 11310,
@@ -224,7 +610,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 261902,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición Wii de Consola Virtual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión de partida."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 11311,
@@ -232,7 +639,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 261902,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola Virtual de Wii U."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Restauración y mando flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable a 720p."
+            }
+          ]
         },
         {
           "id": 11316,
@@ -240,7 +668,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 174945,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola Virtual de 3DS."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Puntos de restauración, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña, estable."
+            }
+          ]
         },
         {
           "id": 11317,
@@ -248,7 +697,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 174945,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición Wii de Consola Virtual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión de partida."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 11318,
@@ -256,7 +726,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 174945,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola Virtual de Wii U."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Restauración y mando flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable a 720p."
+            }
+          ]
         },
         {
           "id": 11319,
@@ -264,7 +755,28 @@
           "kind": "original",
           "year": 1988,
           "igdbId": 174945,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port doméstico de NES con cambios respecto al arcade."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sin guardado, difícil y con parpadeo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port, no al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Limitaciones de NES."
+            }
+          ]
         },
         {
           "id": 16395,
@@ -272,7 +784,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 192397,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición Wii, probablemente de arcade."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión de partida."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Cercana al arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 16396,
@@ -280,7 +813,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 192397,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Otra edición de PC emulada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Teclado o mando, guardado limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel a la fuente emulada."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución alta."
+            }
+          ]
         },
         {
           "id": 16397,
@@ -288,7 +842,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 192397,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola Virtual de Wii U."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Restauración y mando flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 16405,
@@ -296,7 +871,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 261903,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Arcade completo con extras de la colección."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado de estado y ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD limpio en PS3."
+            }
+          ]
         },
         {
           "id": 16406,
@@ -304,7 +900,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 261903,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición Wii de Consola Virtual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión de partida."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 16407,
@@ -312,7 +929,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 261903,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición de PC emulada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Teclado o mando, guardado limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel a la fuente emulada."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución alta, depende del emulador."
+            }
+          ]
         },
         {
           "id": 16408,
@@ -320,13 +958,104 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 261903,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Consola Virtual de Wii U."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Restauración y mando flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al port emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a1ef8beb1db392b5bc6c0a4f029dbcd1.png",
         "hero": "https://cdn2.steamgriddb.com/hero/0067035172fc786488ff7c6317ed88c9.png",
         "logo": "https://cdn2.steamgriddb.com/logo/62218501e87e746c479724e636de8498.png"
+      }
+    },
+    {
+      "id": 5762,
+      "nameEs": "Nemesis",
+      "originalName": "Nemesis",
+      "year": 1990,
+      "igdbId": 18630,
+      "popularity": 14,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "11977",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Nemesis",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Nemesis",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nemesis is an Action game, developed by Konami and published by Ultra, which was released in Japan in 1990.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Nemesis es un juego de acción desarrollado por Konami y distribuido por Ultra, que se lanzó en Japón en 1990.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1990",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 11558,
+          "platform": "gb",
+          "kind": "original",
+          "year": 1990,
+          "igdbId": 18630,
+          "criteria": []
+        },
+        {
+          "id": 11977,
+          "platform": "gb",
+          "kind": "remaster",
+          "year": 1997,
+          "igdbId": 280476,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fd343cbd2300d7a8a6e13f8cfb7b81cc.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/4fa302cf3a9e3e6f50d367daf82d792f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/db96891a91c6958299e8946de7dd4507.png"
       }
     },
     {
@@ -339,6 +1068,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "11982",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Gradius: The Interstellar Assault",
           "source": "igdb",
@@ -348,6 +1083,18 @@
           "field": "original_name",
           "value": "Gradius: The Interstellar Assault",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gradius: The Interstellar Assault retains the traditional horizontal scrolling gameplay from the Gradius series. Once again the player takes control of the Vic Viper and flies through five different stages destroying Bacterion's army.\n\nThe game retains the traditional power-up bar from the original Gradius. The player can speed-up multiple times, use missiles, shoot double firepower or lasers, use several options at a time and use the classic shield (although it is referred to as a forcefield). However, before each game is started or continued, the player is given a \"Weapon Select\" screen. Here the player can choose between one of three settings for the missiles, double firepower, and lasers.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Gradius: The Interstellar Assault conserva la jugabilidad tradicional de desplazamiento horizontal de la serie Gradius. Una vez más, el jugador toma el control del Vic Viper y vuela por cinco fases diferentes destruyendo el ejército de Bacterion.\n\nEl juego mantiene la barra de mejoras tradicional del Gradius original. El jugador puede aumentar la velocidad varias veces, usar misiles, disparar potencia doble o láseres, usar varias opciones a la vez y emplear el clásico escudo (aunque aquí se llama campo de fuerza). Sin embargo, antes de iniciar o continuar cada partida, se muestra una pantalla de \"Selección de armas\". Allí el jugador puede elegir entre tres configuraciones para los misiles, la potencia doble y los láseres.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -391,6 +1138,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "27524",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vulcan Venture",
           "source": "igdb",
@@ -400,6 +1153,18 @@
           "field": "original_name",
           "value": "Vulcan Venture",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Vulcan Venture (also known as Gradius II: Gofer no Yabo) is a side-scrolling shoot ’em up developed by Konami and released in arcades in 1988. Players control the Vic Viper spacecraft as it battles the Bacterion Empire, now led by Gofer. The game builds on the original Gradius by retaining the power-up bar system while introducing selectable weapon configurations and expanded abilities such as different missiles, double, and laser options. It also incorporates elements from Salamander (Life Force) and introduces a stage focused entirely on consecutive boss encounters.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Vulcan Venture (también conocido como Gradius II: Gofer no Yabo) es un shoot 'em up de desplazamiento lateral desarrollado por Konami y lanzado en arcades en 1988. Los jugadores controlan la nave Vic Viper mientras combate contra el Imperio Bacterion, ahora liderado por Gofer. El juego se basa en el Gradius original al conservar el sistema de barra de mejoras, a la vez que introduce configuraciones de armas seleccionables y habilidades ampliadas, como distintos misiles, opciones dobles y láseres. También incorpora elementos de Salamander (Life Force) e introduce una fase dedicada por completo a enfrentamientos consecutivos contra jefes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -416,7 +1181,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 39999,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Arcade emulado en PS3."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Opciones básicas de guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen HD limpia."
+            }
+          ]
         },
         {
           "id": 26198,
@@ -424,7 +1210,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 39999,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Arcade emulado en PSP."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil, pantalla recortada."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de PSP."
+            }
+          ]
         },
         {
           "id": 27523,
@@ -432,7 +1239,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 99541,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Arcade con modo Caravan y ranking en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y ajustes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Emulación exacta en HD."
+            }
+          ]
         },
         {
           "id": 27524,
@@ -440,7 +1268,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 99541,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Arcade con modo Caravan y ranking en línea."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y juego portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Emulación exacta y estable."
+            }
+          ]
         },
         {
           "id": 51129,
@@ -448,7 +1297,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 213190,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición arcade de Consola Virtual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión de partida."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Cercana al arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable en 480p."
+            }
+          ]
         },
         {
           "id": 51139,
@@ -456,7 +1326,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 213189,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición de Consola Virtual, quizá port doméstico."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión de partida."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel a la fuente emulada."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -487,6 +1378,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Director General of Space Science Agency Dr. Venom was exiled to Planet Sard for a failed coup d'état. In the year 6665, he escapes and invades Planet Nemesis and the seven planets it controls with the help of Bacterion. The Nemesis High Council sends James Burton, ex-pilot of the Vic Viper, to pilot Metalion and attack Dr. Venom and the Bacterion invaders.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El Director General de la Agencia de Ciencia Espacial, el Dr. Venom, fue exiliado al Planeta Sard tras un golpe de Estado fallido. En el año 6665 escapa e invade el Planeta Nemesis y los siete planetas que controla, con la ayuda de Bacterion. El Consejo Supremo de Nemesis envía a James Burton,expiloto del Vic Viper, para pilotar el Metalion y atacar al Dr. Venom y a los invasores bacterianos.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1987",
           "source": "igdb",
@@ -508,6 +1411,62 @@
       }
     },
     {
+      "id": 19328,
+      "nameEs": "Nemesis 3: The Eve of Destruction",
+      "originalName": "Nemesis 3: The Eve of Destruction",
+      "year": 1988,
+      "igdbId": 1479,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Nemesis 3: The Eve of Destruction",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Nemesis 3: The Eve of Destruction",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Bacterians' Commandant Gopher plans to assassinate little Lars XVIII and change the course of history......\nBlock Gopher's ambition!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "El comandante de los bacterianos, Gopher, planea asesinar al pequeño Lars XVIII y cambiar el curso de la historia......\n¡Detén la ambición de Gopher!",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1988",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 48184,
+          "platform": "wii",
+          "kind": "original",
+          "year": 2010,
+          "igdbId": 1479,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9b9761c9674b7f0a8d2e6a071e259ef0.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8854e85268e5bfb9fa2b5d70798a987a.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f1f8d9e8023b645373b6363e6a6ec18c.png"
+      }
+    },
+    {
       "id": 19438,
       "nameEs": "Gradius ReBirth",
       "originalName": "Gradius ReBirth",
@@ -526,6 +1485,18 @@
           "field": "original_name",
           "value": "Gradius ReBirth",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Blast your way through levels filled with alien spaceships and otherworldly creatures in this retro side-scrolling shooter. Pick your weapons carefully and upgrade them to create a devastating arsenal of space-aged weapons that will aid you in your challenging mission. Players can post their high scores to worldwide leader boards via Nintendo Wi-Fi Connection and see where they rank against all the other Gradius ReBirth players. Test your skills with Gradius ReBirth and see if you have what it takes to beat this action-packed arcade shooter.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Abre camino a tiros a través de niveles llenos de naves alienígenas y criaturas de otro mundo en este shooter retro de desplazamiento lateral. Elige tus armas con cuidado y mejóralas para crear un arsenal devastador de armas de la era espacial que te ayudará en tu exigente misión. Los jugadores pueden publicar sus puntuaciones máximas en tablas de clasificación mundiales a través de Nintendo Wi-Fi Connection y ver cómo se comparan con todos los demás jugadores de Gradius ReBirth. Pon a prueba tus habilidades con Gradius ReBirth y comprueba si tienes lo necesario para vencer a este shooter arcade lleno de acción.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -573,6 +1544,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Like the original Salamander, and as opposed to the Life Force releases, Salamander 2 abandons the selection-bar based power-up system, in favor for a simplified system that focuses on powering weapons up based on specific icons. For example, the player cannot increase his ship speed until a speed icon is picked up; additional speed icons further increase the ship velocity.\n\nSeveral weapons, when additionally upgraded, turn into a 'super' weapon for approximately ten seconds. If the player has the ripple laser, and then gets another icon for it, the player will receive the high-powered Buster ripple for a short period of time. Options have been slightly changed with the arrival of 'option seeds', which are small options that orbit the ship firing only the basic initial shot. Two option seeds can combine into one full option. Moreover, options can also be sacrificed to utilize a short-term homing beam weapon.\n\nSeveral enemy bosses typical to Gradius games return, including the Brain Golem (the first level boss) and the Tetran (the second level boss). There are a total of six levels. Since the game is similar to its prequel, Salamander 2 does not use the Revival Start feature from Gradius (which pushes the player back to a pre-determined checkpoint if a life is lost), many people consider this title to be easier than other titles in the Gradius series due to this. Once the game has been completed, it starts its second-loop at a much higher difficulty. The music is also changed to remixed versions of Salamander's music in some stages. The first player's ship is called Vic Viper while the second player's ship is Super Cobra.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Al igual que el Salamander original, y a diferencia de las versiones de Life Force, Salamander 2 abandona el sistema de mejoras basado en una barra de selección y adopta un sistema simplificado que se centra en potenciar las armas mediante iconos específicos. Por ejemplo, el jugador no puede aumentar la velocidad de su nave hasta recoger un icono de velocidad; los iconos de velocidad adicionales aumentan aún más la velocidad de la nave.\n\nVarias armas, al mejorarse aún más, se transforman en un arma \"super\" durante unos diez segundos. Si el jugador tiene el láser ondulante y recoge otro icono de este, recibirá durante un breve periodo el potente Buster ripple. Las opciones se modificaron ligeramente con la llegada de las \"semillas de opción\", pequeñas opciones que orbitan la nave y solo disparan el disparo básico inicial. Dos semillas de opción pueden combinarse en una opción completa. Además, las opciones pueden sacrificarse para usar un arma de rayo teledirigido de corta duración.\n\nVuelven varios jefes típicos de los juegos de Gradius, entre ellos el Brain Golem (jefe del primer nivel) y el Tetran (jefe del segundo nivel). En total hay seis niveles. Como el juego es similar a su precuela, Salamander 2 no usa la función Revival Start de Gradius (que devuelve al jugador a un punto de control predeterminado al perder una vida); por ello, muchas personas consideran que este título es más fácil que otros de la serie Gradius. Una vez completado, el juego inicia un segundo ciclo con una dificultad mucho mayor. La música también se cambia por versiones remezcladas de la música de Salamander en algunas fases. La nave del primer jugador se llama Vic Viper, mientras que la del segundo jugador es la Super Cobra.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -596,6 +1579,67 @@
       }
     },
     {
+      "id": 23840,
+      "nameEs": "Gradius Gaiden",
+      "originalName": "Gradius Gaiden",
+      "year": 1997,
+      "igdbId": 1484,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Gradius Gaiden",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Gradius Gaiden",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gradius Gaiden is a horizontal scrolling shooter set between Gradius III and Gradius IV that includes ships and weapons new to the series. It is the first Gradius-named title to incorporate 3D graphics",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Gradius Gaiden es un shooter de desplazamiento horizontal ambientado entre Gradius III y Gradius IV, que incluye naves y armas nuevas para la serie. Es el primer título con el nombre Gradius que incorpora gráficos en 3D.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1997",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 60324,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 1997,
+          "igdbId": 1484,
+          "criteria": [],
+          "codes": [
+            "SLPM-86042",
+            "SLPM-86103",
+            "SLPM-87323"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a5d3ee82b6fe03282b46d2b546beec15.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/0bb0846327772451045bd30dd347821b.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/2ebe3bb8363c914bcd4b3e1f8395f9ff.png"
+      }
+    },
+    {
       "id": 32520,
       "nameEs": "Gradius V",
       "originalName": "Gradius V",
@@ -604,6 +1648,12 @@
       "popularity": 14,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "81227",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Gradius V",
@@ -614,6 +1664,18 @@
           "field": "original_name",
           "value": "Gradius V",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gradius V is the fifth entry in Konami’s Gradius series, originally released for PlayStation 2. It introduces new mechanics while retaining core side-scrolling shooter gameplay. One notable addition is the ability to control the firing direction of \"Options\" (the yellow support pods) using the analog stick. While adjusting direction, the player’s ship remains stationary, adding tactical risk and challenge.\n\nThe rest follows standard Gradius mechanics: avoid collisions and enemy fire while collecting power-up capsules to upgrade weapons.\n\nGradius V was later released on PlayStation 3 as a PS2 Classic but has since been delisted and is no longer available for purchase.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Gradius V es la quinta entrega de la serie Gradius de Konami, lanzada originalmente para PlayStation 2. Introduce nuevas mecánicas y conserva la jugabilidad básica de shooter de desplazamiento lateral. Una adición destacada es la posibilidad de controlar la dirección de disparo de las \"Opciones\" (las cápsulas de apoyo amarillas) con el stick analógico. Mientras se ajusta la dirección, la nave del jugador permanece inmóvil, lo que añade riesgo táctico y dificultad.\n\nEl resto sigue las mecánicas estándar de Gradius: evitar colisiones y disparos enemigos mientras se recogen cápsulas de mejora para potenciar las armas.\n\nGradius V se publicó después en PlayStation 3 como clásico de PS2, pero ya fue retirado de la tienda y no está disponible para la compra.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -630,7 +1692,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1488,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, edición clásica de PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles iguales, acceso digital."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen reescalada y más nítida."
+            }
+          ]
         },
         {
           "id": 81228,
@@ -638,7 +1721,35 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1488,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles precisos; guardado en tarjeta."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480i/p nativo de PS2."
+            }
+          ],
+          "codes": [
+            "SLES-52095",
+            "SLPM-60247",
+            "SLPM-62462",
+            "SLPM-62621",
+            "SLUS-20712"
+          ]
         }
       ],
       "images": {
@@ -648,5 +1759,80 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 346,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5311,
+          "reason": "1985"
+        },
+        {
+          "position": 2,
+          "gameId": 5318,
+          "reason": "1986"
+        },
+        {
+          "position": 3,
+          "gameId": 19324,
+          "reason": "1987"
+        },
+        {
+          "position": 4,
+          "gameId": 11109,
+          "reason": "1988"
+        },
+        {
+          "position": 5,
+          "gameId": 19328,
+          "reason": "1988"
+        },
+        {
+          "position": 6,
+          "gameId": 900,
+          "reason": "1989"
+        },
+        {
+          "position": 7,
+          "gameId": 5762,
+          "reason": "1990"
+        },
+        {
+          "position": 8,
+          "gameId": 5836,
+          "reason": "1991"
+        },
+        {
+          "position": 9,
+          "gameId": 23784,
+          "reason": "1996"
+        },
+        {
+          "position": 10,
+          "gameId": 23840,
+          "reason": "1997"
+        },
+        {
+          "position": 11,
+          "gameId": 2457,
+          "reason": "2001"
+        },
+        {
+          "position": 12,
+          "gameId": 32520,
+          "reason": "2004"
+        },
+        {
+          "position": 13,
+          "gameId": 19438,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

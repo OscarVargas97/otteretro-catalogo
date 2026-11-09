@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99108",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Torment: Tides of Numenera",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Torment: Tides of Numenera",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Torment: Tides of Numenera is a game set in the world of Monte Cook's new tabletop RPG setting, Numenera. Torment continues the thematic legacy of Planescape: Torment, the critically acclaimed role-playing game from 1999 that's considered by many to be a hallmark for storytelling in computer RPGs. With Torment, we're creating a rich role-playing experience that explores similar deep, personal themes.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 2004,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0babfe8976f43f76e89b11e85ff528e7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/6f350848b6612b5249daaa73cec0189b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/02bf1a8bb2a792e32a8b9d57c293b349.png"
+      }
     },
     {
       "id": 42937,
@@ -78,6 +95,12 @@
       "popularity": 428,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "20720",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Planescape: Torment",
@@ -147,8 +170,33 @@
           "igdbId": 53462,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0035ae72e4bf57671fc69b8cf98d9e09.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9aa92dce525591ed890cf7869cd62900.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f49177d35c5ee6c915013284e89a729b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2607,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42937,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 41643,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

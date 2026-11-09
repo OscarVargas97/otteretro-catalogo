@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87012",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sonic Robo Blast 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Sonic Robo Blast 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sonic Robo Blast 2, abbreviated as SRB2, is a fan game for Windows and DOS platforms. It is a 3D platformer developed by a group called Sonic Team Junior, using a modified version of the Doom Legacy source port of Doom, to allow for such things as optional analog control and true room-over-room (something not possible in the standard Doom engine), as well as the standard gameplay elements Sonic games are known for. It has been in the works since 1998 and is currently nearing completion, though several parts of the game are still missing.\n\nSonic Robo Blast 2 is closely inspired by the original 2D Sonic games for the Genesis and attempts to recreate a game with this style in 3D, though it also borrows elements from the current Sonic games, such as Sonic's signature Air Spin Attack. Entirely original to SRB2 is its Multiplayer mode, a variation of classic first-person shooter games with Sonic elements. Due to being built with a modified Doom Legacy engine, the game is also very easily customizable. Custom levels, characters and even source code modifications can be created with the help of external editors.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 95508,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo, mods, multijugador y editor de niveles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado y ratón, opciones amplias y guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución, buen rendimiento y soporte activo."
+            }
+          ]
         },
         {
           "id": 87013,
@@ -56,9 +89,35 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 95508,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Port no oficial, con contenido reducido y sin mods."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles limitados en la PSP, menos cómodos para un juego 3D."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Se aleja por las limitaciones del hardware."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Baja resolución y rendimiento irregular."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f655d686ece627fa58304aa1b6bf8b39.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f9beb1e831faf6aaec2a5cecaf1af293.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/85353d3b2f39b9c9b5ee3576578c04b7.png"
+      }
     }
   ],
   "routes": []

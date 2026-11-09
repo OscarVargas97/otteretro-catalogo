@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60883",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tomba!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tomba!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tomba! is a side-scrolling platformer in which players control Tomba, a wild boy on the search for his grandfather's bangle that was stolen by some evil pigs. Although Tomba is normally restricted to a two-dimensional plane, there are certain points where he can jump or climb onto a new plane. Tomba's main method of attack is to jump on top of enemies to grab them, allowing him to hop around on them before throwing them away. This can also be used to open other objects such as eggs or treasure chests. Tomba is also able to use various projectile weapons such as maces and boomerangs and can swing on branches and poles.\n\nThe game is based around a mission system, where the main character's (Tomba's) skills are employed to complete various tasks. Completion of a mission gives a certain amount of adventure points (AP) which are required for AP boxes which contain food (which gives you AP and restores 1 space of vitality) or items, and you may for example need 50,000 AP to open one. AP is also used to gain access to special places or information later in the game. Not all missions are necessary to progress in the game, however, they are required to achieve full completion. There are 130 events (missions) in the game, many of them rely on other events to be completed.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 4097,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCUS-94236"
+          ]
         },
         {
           "id": 60378,
@@ -104,7 +119,36 @@
         "cover": "https://cdn2.steamgriddb.com/grid/10c7cf8f8840631eccc68fb93f8125c3.png",
         "hero": "https://cdn2.steamgriddb.com/hero/50b74e757007dad880d6b954ec5af1ac.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/5b53c675ecb13720e7339b045eccf32c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1221,
+          "platform": "ps1",
+          "project": "TombaRecomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/TombaRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        },
+        {
+          "id": 1471,
+          "platform": "ps1",
+          "project": "psx_tomba",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/hansbonini/psx_tomba",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 23932,
@@ -116,6 +160,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60983",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tombi! 2: Contra los cerdiablos",
           "source": "igdb",
@@ -124,6 +174,12 @@
         {
           "field": "original_name",
           "value": "Tomba! 2: The Evil Swine Return",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tomba! 2: The Evil Swine Return is a side-scrolling platformer in which the titular character, Tomba, moves on predetermined linear paths until he reaches an intersection point where a flashing arrow appears over his head. At that point, Tomba can move in any direction the arrow points. Some areas of the game can be explored in a top-down view, allowing Tomba to move around freely. The main goal of the game is to complete all 137 objectives (133 make the regular ones, while the other four are obtained from a Tomba 1 save file), which range from retrieving a fishing hook for a fisherman to helping Santa Claus find his \"sack\". Completing a task earns the player \"Adventure Points\", which can be used to unlock specific boxes scattered around the game's world. As the game progresses, Tomba can obtain suits that give him special abilities. For example, the flying squirrel suit allows Tomba to glide long distances, while the pig suit allows Tomba to communicate with friendly pigs. Scattered throughout the levels are magical feathers that can instantly transport Tomba to any area that has previously been visited.",
           "source": "igdb",
           "manual": false
         },
@@ -149,7 +205,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 4100,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-02687",
+            "SCUS-94454"
+          ]
         },
         {
           "id": 60535,
@@ -197,8 +257,44 @@
         "cover": "https://cdn2.steamgriddb.com/grid/b23e39fbc9251657364e4c20e65b7e87.png",
         "hero": "https://cdn2.steamgriddb.com/hero/2419193f708c33b6daca1e34490b9148.png",
         "logo": "https://cdn2.steamgriddb.com/logo/90388c2eb2fb04b5f6aed006b56440a3.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1220,
+          "platform": "ps1",
+          "project": "Tomba2Recomp",
+          "kind": "recomp",
+          "toolchain": "psxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/Tomba2Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3060,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23860,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 23932,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

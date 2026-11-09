@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66339",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tristia: Restore",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tristia: Restore",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Happening in parallel to Tristia:legacy, the story of Tristia:restore follows the genius inventor girl Nanoca Flanka, granddaughter of the legendary inventor and crafter Prospero Flanka, as she is working to revitalize the floundering marine city of Tristia alongside her trusty companions! But this game focuses more on the day to day of running the shop: She has some major crafting projects to complete, but all the while, new orders for smaller objects are coming in for her to complete!",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 232642,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010007C0243CE000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +89,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "66332",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Aoi Umi no Tristia: Hatsumei Koubou Funtou ki",
@@ -135,7 +156,10 @@
           "igdbId": 68255,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocb50.jpg"
+      }
     },
     {
       "id": 34390,
@@ -147,6 +171,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84515",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Aoi Sora no Neosphere",
           "source": "igdb",
@@ -155,6 +185,12 @@
         {
           "field": "original_name",
           "value": "Aoi Sora no Neosphere",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A sequel to Aoi Umi no Tristia from Kogado Studio (Kuma-san Team).\n\nSet in the Neosphere kingdom that fly in the air by ancient E technology. Neosphere kept going to ruin after world union war. And then, Nanoca was called to rebuild the kingdom.",
           "source": "igdb",
           "manual": false
         },
@@ -172,7 +208,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 146570,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido original de la versión de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Novela visual simple; sin mejoras de comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de la época; compatibilidad con Windows actual dudosa."
+            }
+          ]
         },
         {
           "id": 84515,
@@ -180,7 +237,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 146570,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Probablemente incluye extras de portar a consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil, con guardado en cualquier momento."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con posibles cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña y resolución baja."
+            }
+          ]
         },
         {
           "id": 84516,
@@ -188,10 +266,59 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 146570,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Probablemente con extras típicos de portar a consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda con mando y guardado en consola."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con posibles añadidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona sin problemas en consola."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocbdy.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1910,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33986,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 34390,
+          "reason": "2003"
+        },
+        {
+          "position": 3,
+          "gameId": 26984,
+          "reason": "2023"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96387",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Infinite Stratos 2: Ignition Hearts",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Infinite Stratos 2: Ignition Hearts",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Infinite Stratos 2: Ignition Hearts is a Japanese visual novel and the first game based on the Infinite Stratos light novel franchise. The player assumes the role of 15-year-old Ichika Orimura, who finds himself the first male capable of controlling the powerful IS combat exo-skeletons and is sent to the previously all girls IS pilots academy. The game will focus on the events of a summer festival. The heroines in the game have different ignition point and stress points. The building of the former allows progress. Building up the latter leads to a \"Passion Event,\" followed by punishment.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 11832,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6132.jpg"
+      }
     },
     {
       "id": 40325,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96488",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Infinite Stratos 2: Love and Purge",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Infinite Stratos 2: Love and Purge",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Infinite Stratos 2: Love and Purge is a Japanese visual novel based on the Infinite Stratos light novel franchise. The game’s story is set several days after the \"World Purge\" chapter. It is an adventure game where the player’s relationship with the heroines change depending on your choices. During adventure parts, players will become Ichika Orimura and enjoy the academy life together with the heroines. By choosing the options that appear mid-conversation, Ichika’s \"Braveheart Points\", which signify his manhood, will fluctuate. Depending on its final value, the game’s ending will change. In communication mode, it’s possible to give the game’s heroines a massage in order to deepen your bonds. If successful, your Braveheart Points will go up. But if it fails, they will fall. Massage techniques include applying pressure to parts of the body with your finger, tapping the body part, lightly rubbing it, or simply asking where she would like to be massaged.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +132,31 @@
           "igdbId": 11833,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6mvh.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3354,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40294,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 40325,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

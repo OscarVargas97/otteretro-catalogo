@@ -3,7 +3,7 @@
   "name": "Crysis",
   "igdbKind": "franchise",
   "igdbId": 727,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2007,
       "igdbId": 296,
       "popularity": 803,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "36475",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Crysis",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Crysis",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "From the makers of Far Cry, Crysis offers FPS fans the best-looking, most highly-evolving gameplay, requiring the player to use adaptive tactics and total customization of weapons and armor to survive in dynamic, hostile environments including Zero-G.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "De los creadores de Far Cry, Crysis ofrece a los aficionados a los FPS la jugabilidad más avanzada y de mejor aspecto, que exige al jugador usar tácticas adaptativas y una personalización total de armas y armaduras para sobrevivir en entornos dinámicos y hostiles, incluidos los de gravedad cero.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -116,7 +134,12 @@
           "igdbId": 296,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c22ebae3205aa7aaac13ef755677263e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/872338a783596365d7fc8d44214be720.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/69ebf66b3de72cc233fe47eb0cb8d48f.png"
+      }
     },
     {
       "id": 43386,
@@ -156,8 +179,75 @@
           "steamAppId": 17330,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a1e3d3d65a1a6105edb9e1c785b97ab5.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/704e6de71a61300ee265886d7485e256.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/4e0928de075538c593fbdabb0c5ef2c3.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2790,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39501,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 43386,
+          "reason": "2008"
+        }
+      ]
+    },
+    {
+      "id": 3997,
+      "kind": "story",
+      "rationale": "Warhead ocurre en paralelo a Crysis, desde el punto de vista de Psycho. Conviene jugar primero el original.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39501,
+          "recommendedVersionId": 36474,
+          "reason": "Es la historia principal. Se recomienda el remaster de PC por sus gráficos y compatibilidad actuales."
+        },
+        {
+          "position": 2,
+          "gameId": 43386,
+          "recommendedVersionId": 102817,
+          "reason": "Es la historia paralela con Psycho. Solo existe esta versión en la lista."
+        }
+      ]
+    },
+    {
+      "id": 3998,
+      "kind": "community",
+      "rationale": "Se juega en orden de lanzamiento. Warhead es corto y funciona como expansión independiente.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39501,
+          "recommendedVersionId": 36474,
+          "reason": "Se recomienda el remaster porque corre mejor en equipos modernos. Algunos jugadores prefieren el original de PC por su aspecto."
+        },
+        {
+          "position": 2,
+          "gameId": 43386,
+          "recommendedVersionId": 102817,
+          "reason": "Es una campaña breve y más dinámica, y va bien después del original."
+        }
+      ]
+    }
+  ]
 }

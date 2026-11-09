@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kamigami no Asobi: Ludere Deorum, abbreviated as KamiAso, is a Japanese otome game published by Broccoli (company). It was released in Japan on October 24, 2013 for the PlayStation Portable.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 125461,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5lsl.jpg"
+      }
     },
     {
       "id": 36098,
@@ -62,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "87219",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kamigami no Asobi InFinite",
           "source": "igdb",
@@ -70,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Kamigami no Asobi InFinite",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kamigami no Asobi InFinite, abbreviated as KamiAso IF, is a Japanese otome game published by Broccoli (company). It was released in Japan on April 21, 2016 for the PlayStation Portable and PlayStation Vita.\n\nInFinite shares the same premise as the first game, with new routes and new endings for the characters.",
           "source": "igdb",
           "manual": false
         },
@@ -95,10 +116,37 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 136474,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "PBGP-0110",
+            "ULJM-06401"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5lsn.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3288,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 36083,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 36098,
+          "reason": "2016"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -20,6 +20,77 @@
   ],
   "games": [
     {
+      "id": 24779,
+      "nameEs": "UEFA Euro 2000",
+      "originalName": "UEFA Euro 2000",
+      "year": 2000,
+      "igdbId": 44831,
+      "popularity": 5,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "62425",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "UEFA Euro 2000",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "UEFA Euro 2000",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is a specially released FIFA football game that coincided with the Euro 2000 European Cup. You can take charge of a team and playall the qualifying phases for the cup or play for the cup itself.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2000",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 62425,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2000,
+          "igdbId": 44831,
+          "criteria": []
+        },
+        {
+          "id": 62426,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 2000,
+          "igdbId": 44831,
+          "criteria": [],
+          "codes": [
+            "SLES-02704",
+            "SLES-02705",
+            "SLES-02706",
+            "SLES-02707",
+            "SLES-02708"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/97fb752ede0ef202d4b21097dc07e8d2.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ebaecc92914b0c48ee244d59fcc39102.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/03d1b3bde212b9a0b6fe1341c16d15d5.png"
+      }
+    },
+    {
       "id": 32517,
       "nameEs": "UEFA Euro 2004: Portugal",
       "originalName": "UEFA Euro 2004: Portugal",
@@ -29,6 +100,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81220",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "UEFA Euro 2004: Portugal",
           "source": "igdb",
@@ -37,6 +114,12 @@
         {
           "field": "original_name",
           "value": "UEFA Euro 2004: Portugal",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Soccer game, developed to coincide with the finals of the UEFA EURO 2004 tournament in Portugal (June 2004). In UEFA EURO 2004, gamers can play as any of the 51 European nations as you immerse yourself in the deepest championship mode ever released. Players can arrange and play friendly matches against other nations or play through the tournament going from qualifying, to playoffs and into the finals. In addition to tracking injuries and suspensions, a new dynamic morale system will track players' morale, which will fluctuate based on individual and team performances and affect player abilities on the field.",
           "source": "igdb",
           "manual": false
         },
@@ -70,7 +153,16 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 925,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52394",
+            "SLES-52395",
+            "SLES-52396",
+            "SLES-52397",
+            "SLES-52398",
+            "SLKA-25169",
+            "SLUS-20936"
+          ]
         }
       ],
       "images": {
@@ -84,9 +176,15 @@
       "originalName": "UEFA Euro 2008",
       "year": 2008,
       "igdbId": 7226,
-      "popularity": 26,
+      "popularity": 25,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "82593",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "UEFA Euro 2008",
@@ -96,6 +194,12 @@
         {
           "field": "original_name",
           "value": "UEFA Euro 2008",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "UEFA EURO 2008 will feature stunning visual representations of the world's most famous football players, playing in a more accessible, faster paced and responsive version of the market-leading EA SPORTS football engine, and all of the teams and official stadiums that will be part of UEFA EURO 2008. The videogame will enable gamers to play as their favorite country from qualification right through to a virtual reproduction of the championship tournament. Take on the challenge of leading one of over 50 European national teams to glory as UEFA EURO 2008 recreates all the drama and excitement of the official tournament.\n« less",
           "source": "igdb",
           "manual": false
         },
@@ -155,5 +259,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1936,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24779,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 32517,
+          "reason": "2004"
+        },
+        {
+          "position": 3,
+          "gameId": 33114,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9274",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kaku-San-Sei Million Arthur",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Kaku-San-Sei Million Arthur",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The games servers were taken down at different times across all platforms. The iOS/Android global versions shut down date is listed for offline date.\n\n\"Choose your Arthur and embark on the quest to collect rare cards and grow stronger in battle. Explore the lands and defeat bosses to obtain cards and tickets which may yield rarer cards. Strengthen your deck by leveling up your cards, or even combining cards to trigger an evolution. Combining two similar cards also activates a Limit Break which increases the card's max level, making it more powerful.\n\nBuild up your deck and battle bosses and fellow Arthurs to be the King of them all!\"",
           "source": "igdb",
           "manual": false
         },
@@ -73,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98821",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kai-ri-Sei Million Arthur",
           "source": "igdb",
@@ -81,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Kai-ri-Sei Million Arthur",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "No.1 Fantasy, Legend of Million Kings, Kai-Ri-Sei Million Arthur\nExperience the real-time 4-player co-op play and feel the impression offered by Square Enix!",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +132,74 @@
           "igdbId": 137066,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coaghf.jpg"
+      }
+    },
+    {
+      "id": 42066,
+      "nameEs": "Kai-ri-Sei Million Arthur VR",
+      "originalName": "Kai-ri-Sei Million Arthur VR",
+      "year": 2017,
+      "igdbId": 26642,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "100304",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Kai-ri-Sei Million Arthur VR",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Kai-ri-Sei Million Arthur VR",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A tale of one million Arthurs vying to be the one true king. The vivid world of \"Million Arthur\" comes alive with amazing VR graphics--jump into the fray with flashy card battles against mighty foes!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2017",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 100303,
+          "platform": "ps4",
+          "kind": "original",
+          "year": 2017,
+          "igdbId": 26642,
+          "criteria": []
+        },
+        {
+          "id": 100304,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2017,
+          "igdbId": 26642,
+          "steamAppId": 660570,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ae8f3f02c131b1ca35dbcdceab753699.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6b45cf467a9c88001159a826e92c7437.png"
+      }
     },
     {
       "id": 42344,
@@ -120,6 +211,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101025",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Million Arthur: Arcana Blood",
           "source": "igdb",
@@ -128,6 +225,12 @@
         {
           "field": "original_name",
           "value": "Million Arthur: Arcana Blood",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A 2D fighting game for arcades by the developers of the Arcana Heart series based on the mobile card game Kaku-San-Sei Million Arthur.",
           "source": "igdb",
           "manual": false
         },
@@ -156,8 +259,43 @@
           "steamAppId": 989550,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1f0963d11f75dc421229062b3785f7ad.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/f16805d9fc37f021a682d86ab3013bb7.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/49abc8446790de821277fd78a4e41bb9.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1175,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4523,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 41431,
+          "reason": "2015"
+        },
+        {
+          "position": 3,
+          "gameId": 42066,
+          "reason": "2017"
+        },
+        {
+          "position": 4,
+          "gameId": 42344,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60214",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vandal Hearts",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Vandal Hearts",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You assume the role of Ash Lambert, a hero torn between saving his country and restoring honor to the disgraced Lambert dynasty. As he struggles with his inner demons and personal problems, he will meet various companions throughout his journey. They will help your character fight to overthrow the oppressive regime and ward off an ancient being that threatens the world.\n\nVandal-Hearts is a 3D turn-based strategy game. Unlike many games of the genre, the various battlefields have sloped surfaces that will either work to your advantage or against you. It will be up to you to accommodate your strategy and amount an appropriate offensive assault against your foes as well as set up defensive measures.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 5561,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido en general."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Port antiguo con ratón y problemas en sistemas modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con cambios menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mayor resolución posible, pero con errores de compatibilidad."
+            }
+          ]
         },
         {
           "id": 60214,
@@ -56,14 +89,55 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 5561,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo tal como se publicó."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles de mando adecuados y guardado en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución baja de la época, pero estable en consola o emulador."
+            }
+          ],
+          "codes": [
+            "SCPS-45183",
+            "SLES-00204",
+            "SLUS-00447"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3afe7eae0504b08cd09bd4474ef4dcf1.png",
         "hero": "https://cdn2.steamgriddb.com/hero/22b02abb0e8a57e85588f4f1ca24a41c.png",
         "logo": "https://cdn2.steamgriddb.com/logo/5598ef2dabff06a864e7889c315db29c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 477,
+          "platform": "ps1",
+          "project": "VandalHearts-PcPort",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/HalmyLyseas/VandalHearts-PcPort",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 23917,
@@ -87,6 +161,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Vandal Hearts II is a tactical role-playing game for the PlayStation and the sequel to Vandal Hearts.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -100,7 +180,13 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 6543,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02469",
+            "SLES-02496",
+            "SLES-02497",
+            "SLUS-00940"
+          ]
         }
       ],
       "images": {
@@ -119,6 +205,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97063",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Vandal Hearts: Flames of Judgment",
           "source": "igdb",
@@ -127,6 +219,12 @@
         {
           "field": "original_name",
           "value": "Vandal Hearts: Flames of Judgment",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A new entry in the Vandal Hearts series, Flames of Judgement follows the story of young orphan Tobias Martin as he bands together with his schoolmates to help defend his homeland against a rival kingdom. The story acts as a prequel to the original Vandal Hearts.\n\nThe series' trademark isometric combat returns, now presented in 3-D with 3-D character models. Players attempt to position themselves tactically to gain an advantage over stronger (or more numerous) foes. Combat takes place in turns, with each side moving one character per turn. Each party member can carry two weapons and switch between them without using up a \"turn,\" allowing them to shift quickly from a sword to a long-range bow, for example. Characters gain levels through successful battles, and increase skills with a particular weapon or spell by using that weapon or spell in combat.\n\nMany engagements expand beyond simple combat by introducing some sort of puzzle element, ranging from pushing boulders to protecting characters from attackers. Missions may also radically update their goals as progress is made. In addition to the standard game, there are also multiple endings and multiple \"secret maps\" unlocked across the regular levels.",
           "source": "igdb",
           "manual": false
         },
@@ -154,8 +252,36 @@
           "igdbId": 53025,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocmt3.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1865,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23792,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 23917,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 40543,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

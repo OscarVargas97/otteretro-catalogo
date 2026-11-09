@@ -48,7 +48,10 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 70634,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YU6E"
+          ]
         }
       ],
       "images": {
@@ -65,6 +68,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50304",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "National Geographic Challenge!",
           "source": "igdb",
@@ -73,6 +82,12 @@
         {
           "field": "original_name",
           "value": "National Geographic Challenge!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "National Geographic Challenge! allows players to explore the planet through its geography and history, and to start a journey through the ages and all the continents of the world to witness the amazing extent of human endeavour.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +105,11 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 52603,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01037",
+            "BLUS-30851"
+          ]
         },
         {
           "id": 50303,
@@ -98,7 +117,11 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 52603,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SNQE-USA-B0",
+            "RVL-SNQP-EUR-B0"
+          ]
         },
         {
           "id": 50304,
@@ -143,6 +166,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A ground-breaking interactive experience developed as part of Microsoft \\\"playful learning\\\" initiative, Kinect Nat Geo TV uses Kinect to combine motion-control with augmented reality. It mixes high-quality National Geographic television shows with fun-packed Xbox 360 Kinect motion-controlled game play.With Kinect Nat Geo TV, you\\'re not only gaming and you\\'re not only watching TV -- living rooms are turned into animal habitats and players into a variety of animals! And all along, players are inspired to learn and care about the planet. Kinect Nat Geo goes beyond what a TV show can do: it is a totally immersive experience for parents and kids.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -158,8 +187,36 @@
           "igdbId": 22343,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co22pr.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1835,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17513,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 20370,
+          "reason": "2011"
+        },
+        {
+          "position": 3,
+          "gameId": 48608,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83340",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mercury Meltdown",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mercury Meltdown",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Once again taking control of the liquid Mercury 'blob', players must avoid various obstacles and hazards to reach the end goal. The Mercury blob itself has now been given an overhaul and has 4 varying 'states' - Normal, Solid, Fast and Slow. These states allow for larger more complex levels, which in turn mean a greater challenge and more enjoyment to be had for the player. The number of levels has more than doubled - now 160+, and with the newly added feature of Downloadable Content more levels will be made available at a later date. Wireless 2 Player modes have also been an important addition, with 5 sub games each providing a challenge against the computer or a friend.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 23125,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00466",
+            "ULUS-10133"
+          ]
         },
         {
           "id": 49330,
@@ -103,6 +119,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "From the mind of developer Archer Maclean comes Mercury, a puzzle game that lets you guide the metallic substance through a series of challenging puzzles. Without spilling too much, you must control your colored mercury blobs around 3D mazes simply by tilting the level. Negotiate obstacles and hazards, solve puzzles, and compete against time and percentage limits while avoiding traps and predators. In addition to the single-player mode, Archer Maclean's Mercury also features multiplayer battle and ghost modes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -116,9 +138,18 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 22293,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00011",
+            "ULUS-10017"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8e3bfb1616104c8ee1456b758b463adc.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2ddfcd263a0d07cf5d9612d6efc390f9.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/acc4e57034aaf900ea08b8a709eca94e.png"
+      }
     },
     {
       "id": 40220,
@@ -130,6 +161,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96222",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mercury Hg",
           "source": "igdb",
@@ -138,6 +175,12 @@
         {
           "field": "original_name",
           "value": "Mercury Hg",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mercury Hg is a puzzle platformer video game developed by British studio Eiconic Games and published by UTV Ignition Games. It is the third entry in the Mercury series. The goal is to navigate a blob of mercury to a goalpost by tilting the stage without losing all of the mercury. The mercury can be split apart into multiple blobs, change colors using Paintshops, and be remerged into a new color. In addition, the game utilizes an online leaderboard, ghost sharing, and the ability to insert music into the levels.",
           "source": "igdb",
           "manual": false
         },
@@ -165,8 +208,38 @@
           "igdbId": 20142,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/face3142cb4d32a545f42d97848cf2ce.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e5fea2100557ed4a239fa49305613d6b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9a159616e77ecc3db8449214fddbc43e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1823,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35214,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 19598,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 40220,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

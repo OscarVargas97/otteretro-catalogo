@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3187",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Stuart Little 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Stuart Little 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "As the loveable can-do star, Stuart, players run, dodge, drive, skateboard, jump and fly in an action packed platform adventure game. The title follows the storyline from the film and challenges players to solve the disappearances of Stuart?s new best friend, Margalo, and Mrs. Little's wedding ring. Activities include competing in racing levels, taking on challenging foes, piloting a plane and riding helium balloons through 10 varied levels. The game also allows players to go head to head as either Stuart or Margalo via the Game Boy Advance Game Link Cable in challenging racing action.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,12 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 49218,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ASLE",
+            "ASLF",
+            "ASLP"
+          ]
         },
         {
           "id": 64093,
@@ -56,7 +73,22 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 121606,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-03819",
+            "SCES-03819-P",
+            "SCES-03820",
+            "SCES-03821/GER-P",
+            "SCES-03848",
+            "SCES-03849",
+            "SCES-03850-P",
+            "SCES-03851",
+            "SCES-03852-P",
+            "SCES-03853",
+            "SCES-03854",
+            "SCES-03855",
+            "SCUS-94669"
+          ]
         }
       ],
       "images": {
@@ -87,6 +119,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Following the destruction of George's photography project in a freak flying accident, Stuart Little must save the day by scampering around New York City snapping everything in sight! Donning an exciting wardrobe, including golfing attire, a Native American costume, and a fireman's uniform, Stuart will gain extra abilities required to complete his daring challenges. Along the way, players can explore the Big Apple in a range of miniature vehicles including a stunt bike, a helicopter, a speedboat, and a military tank.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -100,7 +138,13 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 43455,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-53422",
+            "SCES-53422/ANZ",
+            "SCKA-20067",
+            "SLUS-21341"
+          ]
         }
       ],
       "images": {
@@ -110,5 +154,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2173,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1588,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 33425,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

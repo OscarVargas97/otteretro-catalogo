@@ -26,6 +26,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The ultimate darts game is now on Nintendo 3DS.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -56,6 +62,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "16119",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Darts Up",
           "source": "igdb",
@@ -64,6 +76,12 @@
         {
           "field": "original_name",
           "value": "Darts Up",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Darts Up is a fun game of darts in which you will have complete control over aiming thanks to the motion sensor. You can play with your friends and family, up to a maximum of 4 Players.",
           "source": "igdb",
           "manual": false
         },
@@ -81,7 +99,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 85556,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido básico de partidas de dardos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Funcional en PS4."
+            }
+          ]
         },
         {
           "id": 16119,
@@ -90,7 +129,28 @@
           "year": 2024,
           "igdbId": 85556,
           "steamAppId": 2812980,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido igual o ligeramente ampliado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y mando funcionan bien."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 16120,
@@ -98,7 +158,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 85556,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido básico."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas rápidas y buena imagen."
+            }
+          ]
         },
         {
           "id": 16121,
@@ -106,7 +187,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 85556,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido básico; puede usar la pantalla del GamePad."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con GamePad interesante."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Plataforma discontinuada."
+            }
+          ]
         },
         {
           "id": 16122,
@@ -114,7 +216,31 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 85556,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido básico."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto."
+            }
+          ],
+          "codes": [
+            "0100BA500B660000"
+          ]
         }
       ],
       "images": {
@@ -122,5 +248,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2848,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5015,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 8260,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

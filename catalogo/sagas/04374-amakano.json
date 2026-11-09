@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A censored console port of Amakano 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2025",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "89911",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Amakano",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Amakano",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It’s only the end of November and the hot springs town Yomase-machi was already a winter wonderland, having been dyed white from the falling snow. Yuuki moved to this snowy town to help his grandparents shovel snow at their home, the former boarding house Yamanouchi-sou. He met many warm-hearted people, including the shrine maiden Sayuki who worries about her inability to properly greet strangers, his mysterious but playful housemate and senpai Mizuki, and the local cafe’s cheerful and energetic kouhai mascot Koharu. Even though he was still feeling lost, he tried to get used to living in this snowy land. During that time, his grandfather suggested that he find love while he is still young and lead a new life in earnest. Now’s the time for him to take the first step and fall in love.",
           "source": "igdb",
           "manual": false
         },
@@ -90,7 +108,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 128190,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del lanzamiento original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado cómodos para novela visual, con guardado y saltar texto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución y ventana configurables; sin problemas técnicos conocidos."
+            }
+          ]
         },
         {
           "id": 90919,
@@ -98,10 +137,56 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 374832,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente según lo que sé; no confirmé extras ni recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil con controles y táctil, pero menos ágil que ratón."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel del original, con posibles pequeños ajustes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien en Switch; limitado a la resolución de la consola."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e6f4631b2a586a71b4e0c3b0a0f1faed.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/d1f2b9b49b2883e1c6098072d4ae95c0.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/0d52122a3e9203248089db60d0b87e61.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3185,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 37273,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 31473,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

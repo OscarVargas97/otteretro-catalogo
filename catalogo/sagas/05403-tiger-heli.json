@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103306",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tiger Heli",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tiger Heli",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tiger Heli was one of the first games developed by Toaplan and published by Taito Corporation in 1985. It is a predecessor to Twin Cobra. The player controls a helicopter named Tiger Heli taking out various enemies along the way.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2024,
           "igdbId": 287597,
           "steamAppId": 2022970,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Suele incluir más opciones y extras; no verificado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor control y comodidad con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene el espíritu arcade original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen nítida y sin ralentizaciones."
+            }
+          ]
         },
         {
           "id": 103307,
@@ -57,9 +90,34 @@
           "kind": "original",
           "year": 1987,
           "igdbId": 287597,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Conversión de NES con contenido más reducido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin guardado y con dificultad dura de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original en esta lista."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Parpadeo y ralentizaciones típicas de NES."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b701000ac84acd759a88c5452117f2fc.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/e36f521bbba465574d67bb94634fa0e0.png"
+      }
     },
     {
       "id": 43680,
@@ -71,6 +129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103314",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Twin Cobra",
           "source": "igdb",
@@ -79,6 +143,12 @@
         {
           "field": "original_name",
           "value": "Twin Cobra",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A helicopter themed shoot 'em up action game from a birds eye view. Developed by Toaplan, it is the successor to their first STG Tiger-Heli, and features similar gameplay.",
           "source": "igdb",
           "manual": false
         },
@@ -97,7 +167,28 @@
           "year": 2023,
           "igdbId": 8189,
           "steamAppId": 2022910,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Suele añadir opciones y extras; no verificado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor control y comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conserva el espíritu arcade."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen más limpia y estable."
+            }
+          ]
         },
         {
           "id": 103335,
@@ -105,10 +196,55 @@
           "kind": "original",
           "year": 1990,
           "igdbId": 384136,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Conversión de NES con contenido limitado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin guardado y dificultad exigente."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original en esta lista."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Parpadeo y ralentizaciones de NES."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3ae813c006de42403c878bb4083df1d9.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/96764f6293df9991ef28ebf6be9a1597.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3442,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43482,
+          "reason": "1985"
+        },
+        {
+          "position": 2,
+          "gameId": 43680,
+          "reason": "1987"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

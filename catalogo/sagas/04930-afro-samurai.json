@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94941",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Afro Samurai",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Afro Samurai",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Afro Samurai is a 3D brawler with platforming elements loosely based on the manga and anime series of the same name. Using light hits, power hits, kicks, and blocks the player fights various enemies. Most levels culminate in a boss fight, and in-engine cutscenes advance the story.\n\nThe game features a cel-shaded animation style. Though it is a hack and slash game, the \"fighting is a bit more strategic\" and the player will be able to block and use combos. The enemies will respond by rolling, ducking and hopping over the player's blade and occasionally using body orifices to catch the weapons, the combat system was worked on by Monty Oum.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 5478,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00516",
+            "BLUS-30264"
+          ]
         },
         {
           "id": 94942,
@@ -58,7 +74,12 @@
           "igdbId": 5478,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2a0389e6da479e5a5f580d36d7231f26.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/afcda885c9f6ea323f2ec989d5cf4d92.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/79013912a5b9e446f0251bc109b9ebdb.png"
+      }
     },
     {
       "id": 41859,
@@ -70,6 +91,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99748",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Afro Samurai 2: Revenge of Kuma",
           "source": "igdb",
@@ -78,6 +105,12 @@
         {
           "field": "original_name",
           "value": "Afro Samurai 2: Revenge of Kuma",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The sequel to 2009's Afro Samurai was considered so unfinished and poorly done that it was pulled from digital distributors less than two months after its release, and all purchases were refunded.",
           "source": "igdb",
           "manual": false
         },
@@ -105,8 +138,31 @@
           "igdbId": 20030,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6szo.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3315,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39732,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 41859,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

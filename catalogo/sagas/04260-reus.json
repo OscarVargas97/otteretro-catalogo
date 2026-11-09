@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "69778",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Reus 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Reus 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Shape humanity with the power of the gods in Reus 2. Choose your giants, combine natural elements, and manipulate fate to guide the path of civilization. The choices are yours, and so are the consequences.",
           "source": "igdb",
           "manual": false
         },
@@ -65,7 +77,10 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 250829,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01009D6022DC2000"
+          ]
         }
       ],
       "images": {
@@ -84,6 +99,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98883",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Reus",
           "source": "igdb",
@@ -92,6 +113,12 @@
         {
           "field": "original_name",
           "value": "Reus",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Reus, you control powerful giants that help you shape the planet to your will. You can create mountains and oceans, forests and more. Enrich your planet with plants, minerals and animal life. There is only one thing on the planet that you do not control: mankind, with all their virtues and and all their vices. You can shape their world, but not their will. Provide for them and they may thrive. Give them too much and their greed may get the upper hand.",
           "source": "igdb",
           "manual": false
         },
@@ -109,7 +136,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 5523,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port con controles adaptados."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto en PS4."
+            }
+          ]
         },
         {
           "id": 98883,
@@ -118,7 +166,28 @@
           "year": 2013,
           "igdbId": 5523,
           "steamAppId": 222730,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón ideal para la gestión de gigantes."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y ajustable."
+            }
+          ]
         },
         {
           "id": 98884,
@@ -126,10 +195,56 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 5523,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port con controles adaptados."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento correcto en Xbox One."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/58dd63697488338c9616733db9d4817f.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d950e8c6b584dfac7d569aacf43519a7.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/2f159dfb71adadd9ed3956f59a97c248.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3159,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41564,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 28105,
+          "reason": "2024"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

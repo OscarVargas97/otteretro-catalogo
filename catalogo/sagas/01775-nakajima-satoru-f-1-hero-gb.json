@@ -65,6 +65,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "13011",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Nakajima Satoru: F-1 Hero GB '92 - The Graded Driver",
           "source": "igdb",
@@ -106,5 +112,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2425,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6569,
+          "reason": "1991"
+        },
+        {
+          "position": 2,
+          "gameId": 6909,
+          "reason": "1992"
+        }
+      ]
+    }
+  ]
 }

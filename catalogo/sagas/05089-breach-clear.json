@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97682",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Breach & Clear",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Breach & Clear",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Breach & Clear brings deep tactical strategy simulation to PC, Mac and Linux! Build your Special Operations team, plan and execute advanced missions, and own every angle.\n\nChoose your real-world squad -- US Army Rangers, Germany's KSK, Canada’s JTF2, UK SAS, and more -- and take on a variety of foes with different skill-sets and abilities. Learn to approach, engage, and dominate your opponents through superior tactics and training.",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,12 @@
           "igdbId": 8422,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4dd472bdb30a606e5306342fa82246f8.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1b0114c51cc532ed34e1954b5b9e4b58.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/087b5a89313a3e21fee1b7f0e9395e89.png"
+      }
     },
     {
       "id": 41705,
@@ -71,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99300",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Breach & Clear: Deadline",
           "source": "igdb",
@@ -79,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Breach & Clear: Deadline",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A deadly new breed of human monster is on the rise, and it’s up to you to stop the infestation before it spreads. Breach & Clear: DEADline is the all-new follow up to Breach & Clear, the critically acclaimed and commercially successful hybrid tactical strategy game. The game gives you real-time control over a squad of four elite Special Forces tasked with tracking down information on the source of the infestation.",
           "source": "igdb",
           "manual": false
         },
@@ -114,8 +143,31 @@
           "igdbId": 11368,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/m7hmnkm28lspx8vhr5w4.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3365,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40878,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 41705,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

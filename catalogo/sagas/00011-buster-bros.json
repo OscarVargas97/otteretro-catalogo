@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "15",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Buster Bros.",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Buster Bros.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pang, originally released in Japan as Pomping World and in North America as Buster Bros., is a 1989 arcade action game developed by Mitchell Corporation. Its core gameplay is similar to the 1983 Japanese MSX game Cannon Ball, also released that year for the ZX Spectrum as Bubble Buster.\n\nPlayers embark on a round-the-world quest to destroy bouncing balloons that are threatening landmarks and cities across the globe. The game features 50 stages set in 17 locations, including Mt. Fuji, Mt. Keirin, the Temple of the Emerald Buddha, Angkor Wat, Ayers Rock, the Taj Mahal, Leningrad, Paris, London, Barcelona, Athens, Egypt, Kenya, New York, Maya ruins, Antarctica, and Easter Island. Later versions added additional locations. Each stage includes a background depicting local landmarks, along with a unique arrangement of blocks, some destructible, some permanent, and some hidden with bonus items.\n\nStages begin with balloons of various sizes; the largest balloons split into smaller ones three times before disappearing after the fourth hit. Players start with a single harpoon, though special weapons can drop when balloons are popped. At certain points, food items worth bonus points may also appear. Contact with any balloon results in the loss of a life. In two-player mode, if both players touch a balloon at the same time, only Player 1 loses a life. Similarly, when both reach a bonus or weapon simultaneously, only Player 1 collects it.\n\nPlayers begin with three to five lives depending on dip switch settings, with extra lives awarded upon reaching specific score thresholds. A stage is cleared when all balloons are destroyed, and the game concludes after all stages are completed, ending with the heroes driving their jeep into the sunset on an Easter Island beach.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1989,
           "igdbId": 6823,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más fases y modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control ágil con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión de referencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos y sonido superiores."
+            }
+          ]
         },
         {
           "id": 807,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 242347,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Menos contenido por limitaciones de la consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Pantalla pequeña y menos espacio para esquivar."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación recortada del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Monocromo y baja resolución."
+            }
+          ]
         }
       ],
       "images": {
@@ -87,6 +141,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Super Pang is an adventure for one or two players that takes the player around the world, aiming to rid the planet of a terrible foe: seemingly innocuous-looking bubbles. The main portion of the game is Tour mode, where the player visits a series of different levels representing different countries of the world. Each player's character is armed with a gun, which shoots a vertical cable. If this hits a bubble, it will cause it to split in two. Upgrades allow two cables to be shot at once, or the ability to stick a cable to the ceiling where it will cling for a few seconds, bursting any bubble that hits it.\n\nPlayers must clear each screen of bubbles before progressing to the next one. The largest bubbles will have 4 degrees of splitting before clearing. Many level layouts have ladders, barriers and breakable bricks in part of the screen, affecting movement of both the player and the bubbles. Faster bubbles in the shape of diamonds also bounce around the screen going any which way rather than bouncing in predictable arcs like the other bubbles.\n\nSeveral power-up tokens are also available, offering features such as splitting all bubbles down to their minimal size, freezing the bubbles for a few seconds, and various different weapons. Monsters also enter the screen periodically, which hit the bubbles and take them down a size, and can often be directed by the cable weapon.\n\nIn addition to the main Tour mode, the game also features Panic mode, in which a succession of bubbles are thrown at at the players. As the player progresses, the amount of bubbles required to reach the next level also increases, similar to scoring on Tetris.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1990",
           "source": "igdb",
@@ -110,5 +170,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2058,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12,
+          "reason": "1989"
+        },
+        {
+          "position": 2,
+          "gameId": 23,
+          "reason": "1990"
+        }
+      ]
+    }
+  ]
 }

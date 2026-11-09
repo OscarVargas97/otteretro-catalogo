@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "29749",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Madorica Real Estate",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Madorica Real Estate",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The study material for 'Madorica Real Estate' would be the floorplan for the corresponding house of the game stage.",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 110589,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010099700BF10000"
+          ]
         }
       ],
       "images": {
@@ -74,6 +89,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66003",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Madorica Real Estate 2",
           "source": "igdb",
@@ -82,6 +103,12 @@
         {
           "field": "original_name",
           "value": "Madorica Real Estate 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The sequel to Madorica Real Estate released in 2018.",
           "source": "igdb",
           "manual": false
         },
@@ -116,5 +143,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2721,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12209,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 26826,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Zork is one of the earliest interactive fiction computer games, with roots drawn from the original genre game, Colossal Cave Adventure. The first version of Zork was written in 1977–1979 using the MDL programming language on a DEC PDP-10 computer.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1977",
           "source": "igdb",
@@ -65,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60093",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Return to Zork",
           "source": "igdb",
@@ -73,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Return to Zork",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Return to Zork: A mesmerizing interactive adventure of danger, intrigue and cunning.",
           "source": "igdb",
           "manual": false
         },
@@ -91,7 +109,28 @@
           "year": 2011,
           "igdbId": 279,
           "steamAppId": 585240,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con vídeos de mejor calidad."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel a la versión original de PC."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Cargas rápidas y mejor imagen, con posibles problemas de compatibilidad."
+            }
+          ]
         },
         {
           "id": 60094,
@@ -99,7 +138,34 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 279,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo, pero con vídeos comprimidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control con mando poco adecuado y guardado limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port de la época con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas largas y vídeo de baja calidad."
+            }
+          ],
+          "codes": [
+            "SLPS-00192",
+            "SLPS-00192-0",
+            "SLPS-00193",
+            "SLPS-00193-1"
+          ]
         }
       ],
       "images": {
@@ -109,5 +175,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3049,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23727,
+          "reason": "1977"
+        },
+        {
+          "position": 2,
+          "gameId": 23731,
+          "reason": "1993"
+        }
+      ]
+    }
+  ]
 }

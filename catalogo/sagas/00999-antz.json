@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5604",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hormigaz Extreme Racing",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Antz Extreme Racing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "0.5 MPH is extremely fast-when your vehicle is only big enough to carry an ant! Jockey for first place with your favorite character from the hit motion picture Antz, using vehicles that aren't your typical garden variety.\n\nSurf using a leaf, race on a fuse with wheels, even hop on a wasp for the antenna-raising thrill ride of your life! You may feel tiny, but practice will make you a giant among racers!",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 5727,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50964",
+            "SLUS-20392"
+          ]
         },
         {
           "id": 5895,
@@ -72,7 +88,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 248605,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ANUE",
+            "ANZP"
+          ]
         }
       ],
       "images": {
@@ -102,6 +122,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Antz is a side-scrolling platformer based on the movie of the same name. You take the role of Z, and you set out to win the heart of Princess Bala. Each of the 19 levels is based on situations in the movie. Your character has a variety of actions: crouching down, going through tunnels, hiding from enemies, jumping over obstacles, hanging from trees, climbing ropes and more. You also encounter boss characters.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -125,5 +151,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2247,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6646,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 2908,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

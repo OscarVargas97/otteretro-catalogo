@@ -67,6 +67,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114467",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Martin Mystère: Operation Dorian Gray",
           "source": "igdb",
@@ -102,8 +108,31 @@
           "igdbId": 9102,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coavbf.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2916,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48182,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 18434,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

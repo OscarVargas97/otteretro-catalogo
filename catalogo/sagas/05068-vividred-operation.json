@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A 3D action game based on the Vividred Operation anime, where group of teenage girls fight alien invaders in high-tech battle suits.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 63500,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobcem.jpg"
+      }
     },
     {
       "id": 40825,
@@ -74,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In this all-ages puzzle game inspired by the anime, players must squirt mayonnaise onto Akane's curry rice dish at the correct speed.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -89,8 +104,31 @@
           "igdbId": 282313,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocomb.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3360,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40637,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 40825,
+          "reason": "2013"
+        }
+      ]
+    }
+  ]
 }

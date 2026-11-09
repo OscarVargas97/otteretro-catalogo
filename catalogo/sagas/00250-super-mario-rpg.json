@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1063",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Super Mario RPG: Legend of the Seven Stars",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Super Mario RPG: Legend of the Seven Stars",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A JRPG entry in the Super Mario franchise in which Mario meets many unlikely allies in order to jump and fight his way through the Mushroom Kingdom and collect stars to repair the Star Road, the pathway that grants people's wishes, which was destroyed by Smithy, the otherworldly entity that hijacked Bowser's castle and threw the Kingdom into disarray.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 5418,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base completo, sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funciona bien, pero sin ayudas modernas ni guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja de SNES."
+            }
+          ]
         },
         {
           "id": 702,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 5418,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Mismo contenido que SNES."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mismo juego, con guardado cómodo en consola virtual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Emulación estable, pero con resolución baja."
+            }
+          ]
         },
         {
           "id": 703,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 5418,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Mismo contenido que SNES."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mismo juego, con guardado rápido y mejor mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación limpia en HD, sin mejoras reales."
+            }
+          ]
         },
         {
           "id": 1063,
@@ -72,14 +147,51 @@
           "kind": "remake",
           "year": 2023,
           "igdbId": 254327,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade nuevos jefes, mejoras de combate y música renovada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Combate más ágil, mejor guía y control moderno."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel a la historia, con algunos cambios en el combate."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Gráficos HD y rendimiento fluido."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/394ef49f1d019ccaf6caf070c403cb32.png",
         "hero": "https://cdn2.steamgriddb.com/hero/b2e0c792ad68362d6dd72f0dc9a7be61.png",
         "logo": "https://cdn2.steamgriddb.com/logo/5a78f1d526e0a3c8b4f759968b660b8c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1143,
+          "platform": "snes",
+          "project": "SuperMarioRPGRecomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/SuperMarioRPGRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     }
   ],
   "routes": []

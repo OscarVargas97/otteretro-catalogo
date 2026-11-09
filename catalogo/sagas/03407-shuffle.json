@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "47776",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Really? Really!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Really? Really!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Really? Really! is the third eroge visual novel in the Shuffle! series created by Navel for Microsoft Windows. It is a continuation of Kaede's path from the first Shuffle! visual novel, and has a linear plot.\n\nIn Really? Really!, Kaede has lost her memories and throughout the game the player must fix them. Using keywords acquired from viewing various events in Kaede's memories, the player must fix mistakes in Kaede's past memories.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 80080,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles cómodos con ratón y teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y carga rápida."
+            }
+          ]
         },
         {
           "id": 48127,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 330554,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Adaptación a DS, probable contenido reducido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pantalla táctil útil, guardado portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja de DS."
+            }
+          ]
         }
       ],
       "images": {
@@ -75,6 +129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82950",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Shuffle!",
           "source": "igdb",
@@ -83,6 +143,12 @@
         {
           "field": "original_name",
           "value": "Shuffle!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The world of the gods, demons, and humans have converged, and magic has become the norm. This is the story of the very busy romantic adventure of a boy called “The man who can become either God, Demon, or Human.”",
           "source": "igdb",
           "manual": false
         },
@@ -119,5 +185,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2929,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33299,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 19090,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

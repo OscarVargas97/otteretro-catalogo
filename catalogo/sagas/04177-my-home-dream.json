@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "65485",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "My Home Dream",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "My Home Dream",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "My Home Dream is the first simulation game in which the player can create a home of his own, setting up room layouts, walls, garden, etc on a grid using a simple input system. You can choose from a lot of different furnitures, floor tiles, roofs, doors, windows, electronics, etc.\n\nThere are different kind of styles, house and furnitures so anyone can be an inside decorator of bathrooms, kitchens, bedrooms, etc.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 384769,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado virtual y comodidad en TV."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable y escalada."
+            }
+          ]
         },
         {
           "id": 65486,
@@ -56,7 +89,33 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 384769,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Depende de memory card y consola física."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa de PS1 y cargas lentas."
+            }
+          ],
+          "codes": [
+            "SLPS-00931",
+            "SLPS-91085",
+            "SLPS-91520"
+          ]
         },
         {
           "id": 65487,
@@ -64,7 +123,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 384769,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con guardado digital."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Emulación fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña, emulación correcta."
+            }
+          ]
         }
       ],
       "images": {
@@ -93,6 +173,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A home design and building simulation game released for the Sony PlayStation in 1999. The player can design and construct a house and garden from the ground up using the game's grid system along with selecting and arranging its room layout and furniture. Like the original My Home Dream, the game also features a 3D engine that lets you walk through your finished home to view all of your interior design choices in first person.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -114,5 +200,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3135,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26544,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 26674,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

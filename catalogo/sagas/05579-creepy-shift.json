@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112116",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Creepy Shift: Roadside Diner",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Creepy Shift: Roadside Diner",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A broke young man takes on the night shift at a roadside diner. In the glow of the blood moon, routine tasks turn into a fight for survival. First-person horror based on a dark creepypasta with a set of rescue rules.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,10 @@
           "igdbId": 319869,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/17b390c2ae1d6c4e7298893727a73e14.png"
+      }
     },
     {
       "id": 47416,
@@ -79,6 +94,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112550",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Creepy Shift: House For Sale",
           "source": "igdb",
@@ -87,6 +108,12 @@
         {
           "field": "original_name",
           "value": "Creepy Shift: House For Sale",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Handyman needed—ASAP! The investor’s coming in the morning, and the house still isn’t ready! Take on an extra shift where horror meets simulation. Tackle the chaos, uncover dark secrets, and finish everything before dawn.",
           "source": "igdb",
           "manual": false
         },
@@ -123,7 +150,10 @@
           "igdbId": 334639,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a88838519f90d77cdd7bba9cad50cfd5.png"
+      }
     },
     {
       "id": 47568,
@@ -135,6 +165,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112903",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Creepy Shift: Uncle Joe’s Motel",
           "source": "igdb",
@@ -143,6 +179,12 @@
         {
           "field": "original_name",
           "value": "Creepy Shift: Uncle Joe’s Motel",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Unknown actress takes a job at Uncle’s Motel to make ends meet. She’s running from trouble — but peace is the last thing she’ll find here. A surreal blend of simulation, horror, and psychological depth, wrapped in a noir atmosphere.",
           "source": "igdb",
           "manual": false
         },
@@ -179,8 +221,37 @@
           "igdbId": 357060,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8866154570f960f55374f7b0d693b355.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8710668ad41473b3dea6ca364084ae2f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2045,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 47258,
+          "reason": "2024"
+        },
+        {
+          "position": 2,
+          "gameId": 47416,
+          "reason": "2025"
+        },
+        {
+          "position": 3,
+          "gameId": 47568,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

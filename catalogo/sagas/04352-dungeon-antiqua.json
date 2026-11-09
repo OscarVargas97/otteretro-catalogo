@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "77011",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeon Antiqua",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dungeon Antiqua",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dungeon Antiqua is a simple RPG inspired by the Wizardry and Final Fantasy games of the 1980s and 1990s, in which players traverse dungeons by repeatedly exploring and developing their characters.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 318329,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen soporte de mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en Xbox Series."
+            }
+          ]
         },
         {
           "id": 77011,
@@ -57,7 +90,28 @@
           "year": 2024,
           "igdbId": 318329,
           "steamAppId": 3198540,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del juego original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado y mando con guardado flexible."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fps escalables."
+            }
+          ]
         },
         {
           "id": 77012,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 318329,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen soporte de mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y rápido en PS5."
+            }
+          ]
         },
         {
           "id": 77013,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 318329,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento más modestos."
+            }
+          ],
+          "codes": [
+            "0100948027FB0000"
+          ]
         }
       ],
       "images": {
@@ -90,6 +189,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "91179",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeon Antiqua 2",
           "source": "igdb",
@@ -98,6 +203,12 @@
         {
           "field": "original_name",
           "value": "Dungeon Antiqua 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Relive the golden age of dungeon RPGs with Dungeon Antiqua 2! A retro 2D dungeon crawler bursting with SNES nostalgia. Hack, slash, and survive relentless side-view encounters! With 10 jobs and endless skill combos, forge the ultimate party and conquer the depths—if you dare!",
           "source": "igdb",
           "manual": false
         },
@@ -140,10 +251,36 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 384193,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100EB2027FB2000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocvz5.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3180,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 30846,
+          "reason": "2024"
+        },
+        {
+          "position": 2,
+          "gameId": 37865,
+          "reason": "2026"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

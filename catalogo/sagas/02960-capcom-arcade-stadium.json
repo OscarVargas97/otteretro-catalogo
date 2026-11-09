@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "38426",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Capcom Arcade Stadium",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Capcom Arcade Stadium",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rediscover the era of 1up's and quarter eaters with Capcom Arcade Stadium, a collection of Capcom's most beloved arcade games spanning three decades! With 32 action-packed classics featuring some of the best games in Capcom history, such as Street Fighter II: The World Warrior and Strider, this compilation of retro games allows you to travel back in time to scratch that nostalgic itch or share your fond childhood memories with friends or family members!",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 141546,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01001E0013208000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "57460",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Capcom Arcade 2nd Stadium",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Capcom Arcade 2nd Stadium",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Capcom is taking you back to the stadium with another collection of your favorite classic hits! Come see what's changed, and what's completely new, in Capcom Arcade 2nd Stadium!",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +169,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 204386,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100DC60167B4000"
+          ]
         }
       ],
       "images": {
@@ -152,5 +182,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2802,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 14795,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 22926,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

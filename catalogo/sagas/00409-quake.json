@@ -3,7 +3,7 @@
   "name": "Quake",
   "igdbKind": "collection",
   "igdbId": 37,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1996,
       "igdbId": 333,
       "popularity": 402,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "51806",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Quake",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Quake",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Quake is a first-person shooter video game, developed by id Software and published by GT Interactive in 1996 and featured music composed by Trent Reznor and Nine Inch Nails. It is the first game in the popular Quake series. In the game, players must find their way through various maze-like, medieval environments while battling a variety of monsters using a wide array of weapons.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Quake es un videojuego de disparos en primera persona desarrollado por id Software y publicado por GT Interactive en 1996, cuya música fue compuesta por Trent Reznor y Nine Inch Nails. Es el primer juego de la popular serie Quake. En el juego, los jugadores deben encontrar su camino por diversos entornos medievales laberínticos mientras combaten a una variedad de monstruos con un amplio arsenal de armas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -49,7 +67,28 @@
           "year": 1996,
           "igdbId": 333,
           "steamAppId": 2310,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base con modo multijugador clásico."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Requiere configuración manual y puertos para jugarse cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Versión antigua, difícil de ejecutar hoy."
+            }
+          ]
         },
         {
           "id": 2658,
@@ -57,7 +96,32 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 209418,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Mapas rediseñados y multijugador a pantalla dividida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando, con autoapuntado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Niveles y música cambiados."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Iluminación a color, tasa de cuadros irregular."
+            }
+          ],
+          "codes": [
+            "NQKE",
+            "NQKP"
+          ]
         },
         {
           "id": 51804,
@@ -65,7 +129,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 165247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye expansiones y episodio nuevo, multijugador con cruce."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles modernos, guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel con mejoras opcionales."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "4K y 120 fps."
+            }
+          ]
         },
         {
           "id": 51805,
@@ -73,7 +158,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 165247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye expansiones y episodio nuevo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p/60 fps, estable."
+            }
+          ]
         },
         {
           "id": 51806,
@@ -81,7 +187,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 165247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye expansiones, episodio nuevo y multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado, mods compatibles."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel con mejoras opcionales."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y 120 fps."
+            }
+          ]
         },
         {
           "id": 51807,
@@ -89,7 +216,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 165247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye expansiones y episodio nuevo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Buen mando con gatillos adaptativos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "4K y 120 fps."
+            }
+          ]
         },
         {
           "id": 51808,
@@ -97,7 +245,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 165247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye expansiones y episodio nuevo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "1080p/60 fps."
+            }
+          ]
         },
         {
           "id": 51809,
@@ -105,7 +274,31 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 165247,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye expansiones y episodio nuevo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando y juego portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y fps menores."
+            }
+          ],
+          "codes": [
+            "0100BA5012E54000"
+          ]
         },
         {
           "id": 102303,
@@ -113,7 +306,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 300456,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base, sin expansiones integradas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Más fácil de ejecutar, controles básicos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Funcional pero con resolución limitada."
+            }
+          ]
         },
         {
           "id": 102353,
@@ -121,7 +335,31 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 239551,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "1",
+              "text": "Port muy recortado, pocos niveles."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "1",
+              "text": "Control limitado en consola portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy alejado del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Gráficos muy reducidos."
+            }
+          ],
+          "codes": [
+            "ABTE"
+          ]
         }
       ],
       "images": {
@@ -137,8 +375,14 @@
       "year": 1997,
       "igdbId": 286,
       "popularity": 333,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "60831",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Quake II",
@@ -149,6 +393,18 @@
           "field": "original_name",
           "value": "Quake II",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Quake II is a first-person shooter video game developed by id Software and published by Activision. It is not a direct sequel to Quake, id decided to revert to an existing trademark when they were unable to agree on a new name that did not violate another company's trademark.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Quake II es un videojuego de disparos en primera persona desarrollado por id Software y publicado por Activision. No es una secuela directa de Quake: id decidió recurrir a una marca comercial existente cuando no logró ponerse de acuerdo en un nuevo nombre que no infringiera la marca registrada de otra empresa.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -173,7 +429,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 286,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-01534",
+            "SLUS-00757"
+          ]
         },
         {
           "id": 2045,
@@ -189,7 +449,11 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 262016,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NQ2E",
+            "NQ2P"
+          ]
         },
         {
           "id": 60768,
@@ -247,14 +511,55 @@
           "kind": "remaster",
           "year": 2023,
           "igdbId": 261085,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010048F0195E8000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/d4cda0892f8ce4a3d5a70314e460b587.png",
         "hero": "https://cdn2.steamgriddb.com/hero/0b0ee8b71cee482463da696285a4def0.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/3e3735fec1d68ca2f496527b75081f86.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 305,
+          "platform": "pc",
+          "project": "vkQuake2",
+          "kind": "port",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/kondrak/vkQuake2",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        },
+        {
+          "id": 306,
+          "platform": "pc",
+          "project": "yquake2remaster",
+          "kind": "port",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/yquake2/yquake2remaster",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        },
+        {
+          "id": 307,
+          "platform": "pc",
+          "project": "yquake2",
+          "kind": "port",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/yquake2/yquake2",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     },
     {
       "id": 32439,
@@ -263,8 +568,14 @@
       "year": 1999,
       "igdbId": 355,
       "popularity": 425,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "81059",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Quake III Arena",
@@ -275,6 +586,18 @@
           "field": "original_name",
           "value": "Quake III Arena",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Quake III Arena is a first-person shooter built around competitive multiplayer combat. Unlike earlier entries in the Quake series, it has no story-driven campaign, and its single-player mode instead pits the player against computer-controlled bots across a series of increasingly difficult arenas. Matches take place in maps that mix gothic and technological architecture, with weapons and power-ups spawning at fixed points that players fight to control. Movement techniques such as strafe-jumping and rocket-jumping are central to high-level play. Game modes include free-for-all deathmatch, team deathmatch, one-on-one tournament duels, and capture the flag, and the game supports network and internet play along with extensive customization and modding.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Quake III Arena es un shooter en primera persona centrado en el combate multijugador competitivo. A diferencia de las entregas anteriores de la serie Quake, no tiene una campaña con argumento, y su modo para un jugador enfrenta al jugador contra bots controlados por IA en una serie de arenas cada vez más difíciles. Las partidas se desarrollan en mapas que combinan arquitectura gótica y tecnológica, con armas y potenciadores que aparecen en puntos fijos y por los que los jugadores luchan para controlarlos. Técnicas de movimiento como el strafe-jumping y el rocket-jumping son esenciales en el juego de alto nivel. Los modos de juego incluyen deathmatch todos contra todos, deathmatch por equipos, duelos de torneo uno contra uno y captura la bandera; el juego admite partidas en red y por internet, además de amplias opciones de personalización y modificación.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -292,7 +615,28 @@
           "year": 1999,
           "igdbId": 355,
           "steamAppId": 2200,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Bots, mapas y mods de la comunidad."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado, el ideal para este juego."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y cuadros altos."
+            }
+          ]
         },
         {
           "id": 81060,
@@ -300,7 +644,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 355,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión de consola con contenido limitado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mando adecuado, partidas en línea limitadas hoy."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Ajustada para consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD estable."
+            }
+          ]
         },
         {
           "id": 81061,
@@ -308,7 +673,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 355,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de PS2 con menos mapas y modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control con mando, menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Experiencia reducida."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y fps irregulares."
+            }
+          ]
         },
         {
           "id": 81414,
@@ -316,14 +702,61 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 43673,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición de PS2 con contenido limitado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control con mando, menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Experiencia reducida."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/1580cb083169e06b7e5af0481196b674.png",
         "hero": "https://cdn2.steamgriddb.com/hero/8cca6e1f00335c0d496ed52b24f23f9e.png",
         "logo": "https://cdn2.steamgriddb.com/logo/504b7f668328dab60570f03ecfe47918.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 308,
+          "platform": "pc",
+          "project": "Quake3e",
+          "kind": "port",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/ec-/Quake3e",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        },
+        {
+          "id": 309,
+          "platform": "pc",
+          "project": "vkQuake3",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/suijingfeng/vkQuake3",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     },
     {
       "id": 39496,
@@ -335,6 +768,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "94177",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Enemy Territory: Quake Wars",
           "source": "igdb",
@@ -344,6 +783,18 @@
           "field": "original_name",
           "value": "Enemy Territory: Quake Wars",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Enemy Territory: Quake Wars is a first-person shooter video game developed by Splash Damage and published by Activision for Microsoft Windows, Linux, Mac OS X, PlayStation 3 and Xbox 360. The prequel to Quake II, Quake Wars is set in the same science fiction universe as Quake II and Quake 4, with a minimal back-story serving as a prequel to Quake II. It is the second multiplayer-focused game in the Quake series after Quake III Arena.\n\nQuake Wars features similar gameplay to Wolfenstein: Enemy Territory, but with the addition of controllable vehicles and aircraft as well as multiple AI deployables, asymmetric teams, much larger maps and the option of computer-controlled bot opponents. Unlike the previous Enemy Territory games, Quake Wars is a commercial release rather than a free download.\n\nEnemy Territory: Quake Wars received mostly positive reviews upon release, although it received some criticism on consoles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Enemy Territory: Quake Wars es un videojuego de disparos en primera persona desarrollado por Splash Damage y publicado por Activision para Microsoft Windows, Linux, Mac OS X, PlayStation 3 y Xbox 360. Precuela de Quake II, Quake Wars se desarrolla en el mismo universo de ciencia ficción que Quake II y Quake 4, con una trama de fondo mínima que sirve de precuela a Quake II. Es el segundo juego de la serie Quake centrado en el multijugador, después de Quake III Arena.\n\nQuake Wars ofrece una jugabilidad similar a Wolfenstein: Enemy Territory, pero añade vehículos y aeronaves controlables, así como múltiples elementos desplegables controlados por IA, equipos asimétricos, mapas mucho más grandes y la opción de enfrentarse a oponentes bots controlados por el ordenador. A diferencia de los anteriores juegos de Enemy Territory, Quake Wars es un lanzamiento comercial y no una descarga gratuita.\n\nEnemy Territory: Quake Wars recibió en su mayoría críticas positivas al salir, aunque tuvo algunas críticas en las consolas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -360,7 +811,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 680,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00184",
+            "BLJS-10022",
+            "BLUS-30132"
+          ]
         },
         {
           "id": 94177,
@@ -378,7 +834,12 @@
           "igdbId": 680,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b10ab21a92f94573ca4091e5af5927ee.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/817c99c4861918e518dca75d712983eb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/3b922393a3cb462762ff5dd2bec1b20f.png"
+      }
     },
     {
       "id": 43370,
@@ -390,6 +851,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102791",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Quake 4",
           "source": "igdb",
@@ -399,6 +866,18 @@
           "field": "original_name",
           "value": "Quake 4",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Quake 4 is a action shooter game which serves as the another chapter in the Quake series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Quake 4 es un juego de acción y disparos que supone otro capítulo de la serie Quake.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -425,6 +904,40 @@
           "year": 2005,
           "igdbId": 356,
           "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c5c5a670493f472344cb062852be6505.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c4a01996c8421b63a908de177fe5b472.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/3df416f5b8103355883cfd1517442cda.png"
+      },
+      "ports": [
+        {
+          "id": 302,
+          "platform": "pc",
+          "project": "openQ4",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/themuffinator/openQ4",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        },
+        {
+          "id": 1000,
+          "platform": "x360",
+          "project": "Xbox-360-Quake4-decomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/cyberheater/Xbox-360-Quake4-decomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
         }
       ]
     },
@@ -466,7 +979,12 @@
           "steamAppId": 611500,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/13e1695f8e71bb88d3d8ae56e52ed6b4.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e8a079d6a3dbabc7bcfa0047f63e475c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/366971226c73b87ab69e87918b9338a5.png"
+      }
     },
     {
       "id": 48550,
@@ -478,6 +996,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115045",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Quake Arena Arcade",
           "source": "igdb",
@@ -487,6 +1011,18 @@
           "field": "original_name",
           "value": "Quake Arena Arcade",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Quake Arena Arcade introduces the definitive, competitive first-person shooter to a new generation of gladiators. Frag up to fifteen of your friends in six game types over Xbox LIVE, including 'Deathmatch', 'Capture the Flag', and 'Harvester' modes. Experience QUAKE like never before with over thirty classic maps, twelve Xbox-exclusive arenas, HD and Widescreen support, and a brand new Single Player campaign.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Quake Arena Arcade presenta el definitivo shooter competitivo en primera persona a una nueva generación de gladiadores. Elimina a hasta quince de tus amigos en seis tipos de partida a través de Xbox LIVE, incluidos los modos «Deathmatch», «Captura la bandera» y «Harvester». Vive QUAKE como nunca antes, con más de treinta mapas clásicos, doce arenas exclusivas de Xbox, compatibilidad con HD y pantalla panorámica, y una campaña para un jugador totalmente nueva.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -503,7 +1039,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 20441,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido arcade."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando adecuado, comunidad en línea escasa."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD estable."
+            }
+          ]
         },
         {
           "id": 115046,
@@ -511,10 +1068,157 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 20441,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido arcade."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando adecuado, comunidad escasa."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Prácticamente idéntica."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, sin mejoras claras."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3jex.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 618,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1006,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 1078,
+          "reason": "1997"
+        },
+        {
+          "position": 3,
+          "gameId": 32439,
+          "reason": "1999"
+        },
+        {
+          "position": 4,
+          "gameId": 43370,
+          "reason": "2005"
+        },
+        {
+          "position": 5,
+          "gameId": 39496,
+          "reason": "2007"
+        },
+        {
+          "position": 6,
+          "gameId": 48550,
+          "reason": "2011"
+        },
+        {
+          "position": 7,
+          "gameId": 43794,
+          "reason": "2022"
+        }
+      ]
+    },
+    {
+      "id": 3913,
+      "kind": "story",
+      "rationale": "Quake no tiene una historia continua única: solo Quake II, Quake 4 y Enemy Territory: Quake Wars comparten la guerra contra los Strogg. Se repite el orden de lanzamiento. Sin fuentes consultadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1006,
+          "recommendedVersionId": 51806,
+          "reason": "Primer juego; la edición mejorada para PC es la más fácil de jugar hoy."
+        },
+        {
+          "position": 2,
+          "gameId": 1078,
+          "recommendedVersionId": 60768,
+          "reason": "Inicia la guerra contra los Strogg; el remaster es la versión actual."
+        },
+        {
+          "position": 3,
+          "gameId": 32439,
+          "recommendedVersionId": 81059,
+          "reason": "Juego multijugador sin historia real; versión original de PC."
+        },
+        {
+          "position": 4,
+          "gameId": 43370,
+          "recommendedVersionId": 102791,
+          "reason": "Continuación directa de Quake II. Versión de PC."
+        },
+        {
+          "position": 5,
+          "gameId": 39496,
+          "recommendedVersionId": 94177,
+          "reason": "Multijugador ambientado en la guerra contra los Strogg. Versión de PC."
+        },
+        {
+          "position": 6,
+          "gameId": 43794,
+          "recommendedVersionId": 103557,
+          "reason": "Juego multijugador gratuito con personajes de toda la saga."
+        }
+      ]
+    },
+    {
+      "id": 3914,
+      "kind": "community",
+      "rationale": "Se recomienda jugar Quake y Quake II en sus ediciones modernas, luego Quake 4 y Quake III Arena como opcional. Se omiten los juegos multijugador menores. Sin fuentes consultadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1006,
+          "recommendedVersionId": 51806,
+          "reason": "Clásico del género; la edición mejorada de 2021 incluye los episodios extra."
+        },
+        {
+          "position": 2,
+          "gameId": 1078,
+          "recommendedVersionId": 60768,
+          "reason": "El remaster de PC mejora la imagen y añade campañas adicionales."
+        },
+        {
+          "position": 3,
+          "gameId": 43370,
+          "recommendedVersionId": 102791,
+          "reason": "Continúa Quake II con una campaña más cinematográfica."
+        },
+        {
+          "position": 4,
+          "gameId": 32439,
+          "recommendedVersionId": 81059,
+          "reason": "Referente del multijugador de arena; opcional si te interesa el online."
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

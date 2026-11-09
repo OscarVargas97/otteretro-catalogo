@@ -3,7 +3,7 @@
   "name": "Earthbound",
   "igdbKind": "franchise",
   "igdbId": 123,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1994,
       "igdbId": 2899,
       "popularity": 577,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "486",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "EarthBound",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "EarthBound",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A turn-based JRPG and sequel to the then-Japan-only Earthbound Beginnings (1989) in which Ness, a young boy living in a land based on the USA, leaves home to go on an adventure through strange locations, get to know quirky characters, and defeat an unknowable alien threat called Giygas while facing up to the realities of growing up and becoming familiar with the real world.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un JRPG por turnos y secuela de Earthbound Beginnings (1989), que entonces solo había salido en Japón. Ness, un niño que vive en una tierra inspirada en Estados Unidos, abandona su hogar para emprender una aventura por lugares extraños, conocer a personajes excéntricos y derrotar a una amenaza alienígena indescifrable llamada Giygas, mientras afronta las realidades de crecer y de familiarizarse con el mundo real.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 2899,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Un guardado, sin ayudas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original; algo de lentitud."
+            }
+          ]
         },
         {
           "id": 486,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 2899,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración, TV."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD y más estable."
+            }
+          ]
         },
         {
           "id": 487,
@@ -64,7 +124,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 2899,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Suspensión, portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 488,
@@ -72,14 +153,63 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 2899,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Parte de Mother 1+2, solo en japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Texto y combates más ágiles."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercano, con cambios menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/7e9a8e67197bad8ec246bde2c4cebfb9.png",
         "hero": "https://cdn2.steamgriddb.com/hero/b9e255d57bdc3d30828bfd835b86749c.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/6ffcc0d3641930e3d8980ec43343ccc5.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 144,
+          "platform": "snes",
+          "project": "earthbound-companion",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/rages4calm/earthbound-companion",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 145,
+          "platform": "snes",
+          "project": "EarthboundNativePublic",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/seanstaggsQU/EarthboundNativePublic",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 1854,
@@ -88,8 +218,14 @@
       "year": 2006,
       "igdbId": 3683,
       "popularity": 178,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "3580",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Mother 3",
@@ -100,6 +236,18 @@
           "field": "original_name",
           "value": "Mother 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A turn-based JRPG and sequel to EarthBound (1994) in which a tragedy surrounding a family in the primitive yet joyful village of Tazmily incites the coming-of-age story of Lucas, the family's younger son, who goes on perilous adventures along with his friends in order to find his missing brother and stop a group of masked men from bringing about the end of the world.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un JRPG por turnos y secuela de EarthBound (1994), en el que una tragedia que afecta a una familia en la primitiva pero alegre aldea de Tazmily da pie a la historia de maduración de Lucas, el hijo menor de la familia. Lucas emprende peligrosas aventuras junto a sus amigos para encontrar a su hermano desaparecido y detener a un grupo de hombres enmascarados que pretende provocar el fin del mundo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -116,7 +264,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 3683,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo (solo japonés oficial)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida a TV."
+            }
+          ]
         },
         {
           "id": 3580,
@@ -124,14 +293,54 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 3683,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo (solo japonés oficial)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ],
+          "codes": [
+            "A3UJ"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3573da7c02b254a2b7901dca40a5cc02.png",
         "hero": "https://cdn2.steamgriddb.com/hero/d67c657294b9abc8222519ab83bddda1.png",
         "logo": "https://cdn2.steamgriddb.com/logo/33daec0dbf4ef64ec090615b090388ac.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 924,
+          "platform": "gba",
+          "project": "Mother3Recomp",
+          "kind": "recomp",
+          "toolchain": "gbarecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/josiahg2502-glitch/Mother3Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "mGBA"
+        }
+      ]
     },
     {
       "id": 2825,
@@ -143,6 +352,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5481",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mother",
           "source": "igdb",
@@ -152,6 +367,18 @@
           "field": "original_name",
           "value": "Mother",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "When included in the Mother 1+2 bundle, Mother (Earthbound Beginnings in the West) received an exclusive equippable item, the Easy Ring, available from the start, which makes the game more balanced (therefore easier than the original version).",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Al incluirse en el paquete Mother 1+2, Mother (Earthbound Beginnings en Occidente) recibió un objeto equipable exclusivo, el Easy Ring, disponible desde el inicio, que hace el juego más equilibrado (y, por tanto, más fácil que la versión original).",
+          "source": "claude",
           "manual": false
         },
         {
@@ -168,7 +395,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 238660,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Parte de Mother 1+2, solo japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Combate más ágil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Con ajustes menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 5479,
@@ -176,7 +424,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 11191,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición Wii U, posiblemente japonesa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Tienda cerrada."
+            }
+          ]
         },
         {
           "id": 5480,
@@ -184,7 +453,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 11191,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin ayudas modernas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta."
+            }
+          ]
         },
         {
           "id": 5481,
@@ -192,7 +482,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 11191,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido y rebobinado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y accesible."
+            }
+          ]
         },
         {
           "id": 14079,
@@ -200,7 +511,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 238665,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo en Wii U."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Plataforma discontinuada."
+            }
+          ]
         }
       ],
       "images": {
@@ -208,5 +540,84 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1419,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 317,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 2825,
+          "reason": "2003"
+        },
+        {
+          "position": 3,
+          "gameId": 1854,
+          "reason": "2006"
+        }
+      ]
+    },
+    {
+      "id": 3967,
+      "kind": "story",
+      "rationale": "Los tres juegos de Mother no forman una historia continua: cada uno cuenta una aventura independiente. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2825,
+          "recommendedVersionId": 5481,
+          "reason": "Primera entrega; versión oficial en Switch."
+        },
+        {
+          "position": 2,
+          "gameId": 317,
+          "recommendedVersionId": 485,
+          "reason": "Segunda aventura, independiente; versión original de SNES."
+        },
+        {
+          "position": 3,
+          "gameId": 1854,
+          "recommendedVersionId": 3580,
+          "reason": "Tercera aventura, independiente; la versión de GBA es la original."
+        }
+      ]
+    },
+    {
+      "id": 3968,
+      "kind": "community",
+      "rationale": "La comunidad recomienda empezar por EarthBound y seguir con Mother 3; Mother (NES) es opcional por ser más simple. No pude consultar la web, así que esta ruta no tiene fuentes verificadas y conviene revisarla.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 317,
+          "recommendedVersionId": 485,
+          "reason": "Mejor punto de entrada y el más conocido; versión original de SNES."
+        },
+        {
+          "position": 2,
+          "gameId": 1854,
+          "recommendedVersionId": 3580,
+          "reason": "Joya de la saga y muy recomendada; la versión de GBA es la original."
+        },
+        {
+          "position": 3,
+          "gameId": 2825,
+          "recommendedVersionId": 5481,
+          "reason": "Opcional, para completistas; versión oficial en Switch."
+        }
+      ]
+    }
+  ]
 }

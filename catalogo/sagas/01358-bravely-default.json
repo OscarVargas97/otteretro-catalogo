@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9041",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bravely Default: Flying Fairy",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Bravely Default: Flying Fairy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A fantasy role-playing game following a group of four companions journeying to a series of elemental crystals in hopes of returning balance to the world. Originally conceived as a sequel to Final Fantasy: The 4 Heroes of Light, the game kept some elements from the Final Fantasy series.",
           "source": "igdb",
           "manual": false
         },
@@ -110,6 +122,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Prepare yourself for a daring new adventure and unleash masterful battle strategies in the successor to Square Enix’s Bravely Default game. Time has passed since the events of the previous game, bringing about plenty of new dangers to encounter. Agnés Oblige has been kidnapped, and as a knight in her service, it’s up to our hero, Yew, to save her.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -123,7 +141,13 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 11256,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BSED",
+            "CTR-P-BSEE",
+            "CTR-P-BSEJ",
+            "CTR-P-BSEK"
+          ]
         }
       ],
       "images": {
@@ -150,6 +174,12 @@
         {
           "field": "original_name",
           "value": "Bravely Second: The Ballad of the Three Cavaliers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bravely Second: The Ballad of the Three Cavaliers is a pre-launch prelude to the Bravely Second: End Layer and released as a demo in the eShop. In contrast to the full game, the demo features a unique storyline and simplified versions of some gameplay elements. The prelude focuses on the Three Cavaliers – Yew Geneolgia, Janne Angard, and Nikolai Nikolanikov.",
           "source": "igdb",
           "manual": false
         },
@@ -186,6 +216,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "35446",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bravely Default II",
           "source": "igdb",
@@ -194,6 +230,12 @@
         {
           "field": "original_name",
           "value": "Bravely Default II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A new world, a new story, and all-new Heroes of Light await in an original RPG experience arriving on the Nintendo Switch system in 2020! This successor to the original Bravely Default game comes from the team that brought you the Bravely series and Octopath Traveler, and features music from Revo (Sound Horizon/Linked Horizon), acclaimed composer of the Bravely Default soundtrack.",
           "source": "igdb",
           "manual": false
         },
@@ -220,7 +262,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 127344,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01006DC010326000"
+          ]
         }
       ],
       "images": {
@@ -230,5 +275,35 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1165,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4208,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 5510,
+          "reason": "2014"
+        },
+        {
+          "position": 3,
+          "gameId": 4346,
+          "reason": "2015"
+        },
+        {
+          "position": 4,
+          "gameId": 13943,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

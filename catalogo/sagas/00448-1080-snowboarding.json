@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2083",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "1080° Snowboarding",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "1080° Snowboarding",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "1080° Snowboarding is an intense snowboarding game in which the player gets to choose between many different boards, tricks, courses and much more.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 3328,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y mando clásico cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación estable a 480p."
+            }
+          ]
         },
         {
           "id": 2082,
@@ -56,7 +89,32 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 3328,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control fiel, con guardado en cartucho."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y cuadros inestables."
+            }
+          ],
+          "codes": [
+            "NTEA",
+            "NTEP"
+          ]
         },
         {
           "id": 2083,
@@ -64,14 +122,63 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 3328,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Estados de guardado y varios mandos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida en 720p, más nítida."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/0620eda93d00f0dca03b1473d7e5d0f5.png",
         "hero": "https://cdn2.steamgriddb.com/hero/fd65b9bbefe78ccd4759396e5813e2a5.png",
         "logo": "https://cdn2.steamgriddb.com/logo/c11cb55c3d8dcc03a7ab7ab722703e0a.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 505,
+          "platform": "n64",
+          "project": "1080-Snowboarding-decomp",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/thebradshaw/1080-Snowboarding-decomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1322,
+          "platform": "n64",
+          "project": "1080-decomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/djsaunde/1080-decomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 16658,
@@ -95,6 +202,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "1080° Avalanche is a sequel to 1080° Snowboarding for the Nintendo 64. The game has an emphasis on racing, rather than doing tricks, in contrast to other popular snowboarding games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -108,7 +221,12 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 3774,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GTEE-USA-01",
+            "DL-DOL-GTEP-EUR",
+            "DL-DOL-GTEW-KOR"
+          ]
         }
       ],
       "images": {
@@ -118,5 +236,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2140,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1098,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 16658,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

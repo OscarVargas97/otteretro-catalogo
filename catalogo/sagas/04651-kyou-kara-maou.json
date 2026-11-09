@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kyo Kara Maoh! Hajimari no Tabi is an Action game, developed by Namco and published by Bandai Namco Games, which was released in Japan in 2006.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -48,9 +54,16 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 200991,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25662",
+            "SLPS-25663"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4qvf.jpg"
+      }
     },
     {
       "id": 34633,
@@ -74,6 +87,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kyou Kara Maou! Shin Makoku no Kyuujitsu is an Adventure game, developed and published by Bandai Namco Games, which was released in Japan in 2007.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -87,10 +106,37 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 201192,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25801",
+            "SLPS-25802"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4r1g.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3255,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34584,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 34633,
+          "reason": "2007"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

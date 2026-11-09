@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "64272",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Boys Be",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Boys Be",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Boys Be is a PlayStation game based off the manga of the same name.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 166447,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00779"
+          ]
         }
       ],
       "images": {
@@ -85,6 +100,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Boys Be 2nd Season is a sequel to the first Boys Be game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -98,7 +119,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 166448,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-01705"
+          ]
         }
       ],
       "images": {
@@ -127,6 +151,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Typing Renai Hakusho: Boys Be... is based on the Boys Be... manga. It consists of a series of typing exercises featuring the game's characters. Letters appear on the screen, and you must type the keys accurately and at a good pace.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -140,10 +170,42 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 406985,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-20174",
+            "SLPS-20175"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/ar63xl.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1905,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25795,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 25962,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 35034,
+          "reason": "2002"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

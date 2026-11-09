@@ -3,7 +3,7 @@
   "name": "Banjo-Kazooie",
   "igdbKind": "collection",
   "igdbId": 440,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1998,
       "igdbId": 2148,
       "popularity": 371,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "2805",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Banjo-Kazooie",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Banjo-Kazooie",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Trouble brews when Gruntilda the witch captures the unbearably beautiful cub, Tooty. But before the grisly hag can steal the bear's good looks, big brother Banjo and his fine-feathered friend, Kazooie, join forces to stop her. Combining their 24 moves and special powers, Banjo and Kazooie will fend off armies of beasts. Bear and bird must hunt down the 100 puzzle pieces and 900 musical notes that will ultimately lead them to Gruntilda. However. miles of swamp, desert, and snow and one bear of an adventure stand in their way.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Se avecinan problemas cuando la bruja Gruntilda captura al increíblemente hermoso cachorro Tooty. Pero antes de que la horrenda anciana pueda robarle la belleza al oso, su hermano mayor Banjo y su emplumado amigo Kazooie se unen para detenerla. Combinando sus 24 movimientos y poderes especiales, Banjo y Kazooie repelerán a ejércitos de bestias. El oso y el pájaro deben encontrar las 100 piezas de rompecabezas y las 900 notas musicales que finalmente los llevarán a Gruntilda. Sin embargo, kilómetros de pantanos, desiertos y nieve, y una aventura de todo un oso se interponen en su camino.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,32 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 2148,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego completo sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cámara y control de N64."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y bajadas de fps."
+            }
+          ],
+          "codes": [
+            "NBKE",
+            "NBKP"
+          ]
         },
         {
           "id": 2805,
@@ -56,21 +99,92 @@
           "kind": "remaster",
           "year": 2008,
           "igdbId": 201644,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con logros y Stop 'n' Swop."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor control y guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy fiel con arte pulido."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "HD y fluidez mejorada."
+            }
+          ]
         },
         {
           "id": 2886,
           "platform": "x360",
           "kind": "remake",
           "igdbId": 194643,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Parece ser la misma edición de 360 (registro duplicado)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor control y logros."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambios menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD y fluida."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a154a70f923c579313aa9c47ed7c34e2.png",
         "hero": "https://cdn2.steamgriddb.com/hero/17326d10d511828f6b34fa6d751739e2.png",
         "logo": "https://cdn2.steamgriddb.com/logo/ce5193a069bea027a60e06c57a106eb6.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 20,
+          "platform": "n64",
+          "project": "Lighthouse",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/HarbourMasters/Lighthouse",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 544,
+          "platform": "n64",
+          "project": "BanjoRecomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/BanjoRecomp/BanjoRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1371,
@@ -79,8 +193,14 @@
       "year": 2000,
       "igdbId": 3418,
       "popularity": 178,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "2806",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Banjo-Tooie",
@@ -91,6 +211,18 @@
           "field": "original_name",
           "value": "Banjo-Tooie",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Grunty returns—and that's bad news for Banjo and Kazooie! In this all-new adventure, combine everything you learned in the award-winning prequel, Banjo-Kazooie, with dozens of brand-new moves and abilities. Explore eight original worlds-like a monstrous factory and a dilapidated amusement park. Solve incredible puzzles that link those worlds together—sometimes you'll have to complete tasks in several worlds to solve a single puzzle!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Grunty regresa, y eso son malas noticias para Banjo y Kazooie! En esta aventura totalmente nueva, combina todo lo que aprendiste en la premiada precuela, Banjo-Kazooie, con decenas de movimientos y habilidades nuevas. Explora ocho mundos originales, como una monstruosa fábrica y un parque de atracciones en ruinas. Resuelve increíbles rompecabezas que conectan esos mundos entre sí: ¡a veces tendrás que completar tareas en varios mundos para resolver un solo rompecabezas!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -107,7 +239,12 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 3418,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "NB7E",
+            "NB7P",
+            "NB7U"
+          ]
         },
         {
           "id": 2806,
@@ -122,11 +259,56 @@
         "cover": "https://cdn2.steamgriddb.com/grid/92072878dd6bcea843fb557598077392.png",
         "hero": "https://cdn2.steamgriddb.com/hero/5c34dc67a4178be566ff98512d6721d5.png",
         "logo": "https://cdn2.steamgriddb.com/logo/000c076c390a4c357313fca29e390ece.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 546,
+          "platform": "n64",
+          "project": "BanjoTooieRecompiled",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Vidanox/BanjoTooieRecompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 547,
+          "platform": "x360",
+          "project": "banjo_tooie_xbla_recomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/iron-jay/banjo_tooie_xbla_recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 548,
+          "platform": "n64",
+          "project": "banjo-tooie-scurvy-dog-port",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/some-scurvy-dog/banjo-tooie-scurvy-dog-port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1694,
-      "nameEs": "Banjo-Kazooie: Grunty's Revenge",
+      "nameEs": "Banjo-Kazooie: La Venganza de Grunty",
       "originalName": "Banjo-Kazooie: Grunty's Revenge",
       "year": 2003,
       "igdbId": 6318,
@@ -135,7 +317,7 @@
       "fields": [
         {
           "field": "name_es",
-          "value": "Banjo-Kazooie: Grunty's Revenge",
+          "value": "Banjo-Kazooie: La Venganza de Grunty",
           "source": "igdb",
           "manual": false
         },
@@ -143,6 +325,18 @@
           "field": "original_name",
           "value": "Banjo-Kazooie: Grunty's Revenge",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gruntilda is back, and only Banjo and Kazooie can stop her master plan! Travel through time encountering puzzles, battles, and meeting friends old and new in this all-new Banjo-Kazooie adventure!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Gruntilda ha vuelto, y solo Banjo y Kazooie pueden detener su plan maestro! Viaja a través del tiempo enfrentando rompecabezas y batallas, y conoce amigos viejos y nuevos en esta aventura totalmente nueva de Banjo-Kazooie.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -159,7 +353,12 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 6318,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BKZE",
+            "BKZS",
+            "BKZX"
+          ]
         }
       ],
       "images": {
@@ -190,6 +389,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Banjo Pilot is a kart-style racing game which was originally slated to become \"Diddy Kong Pilot.\" It features at least eight characters from the Banjo-Kazooie series, each with its own aircraft and storyline, including Banjo, Mumbo Jumbo, Humba Wumba, Guntilda, Klungo, Jolly Roger and Kazooie. The game includes link cable support for up to four players.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Banjo-Pilot es un juego de carreras estilo kart que originalmente iba a llamarse \"Diddy Kong Pilot\". Incluye al menos ocho personajes de la serie Banjo-Kazooie, cada uno con su propia aeronave e historia, entre ellos Banjo, Mumbo Jumbo, Humba Wumba, Guntilda, Klungo, Jolly Roger y Kazooie. El juego admite cable link para hasta cuatro jugadores.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -203,7 +414,11 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 6316,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BAJE",
+            "BAJP"
+          ]
         }
       ],
       "images": {
@@ -234,6 +449,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Banjo and Kazooie are facing their greatest adventure yet, battling long-time nemesis Gruntilda for rightful ownership of Spiral Mountain. Use your wits and imagination to invent wild and wonderful contraptions so Banjo and Kazooie can crush this wicked witch. Rule the road, sky, and water in the land of Banjo-Kazooie: Nuts & Bolts!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Banjo y Kazooie enfrentan su mayor aventura hasta la fecha: combatir a su viejo enemigo Gruntilda por la posesión legítima de Spiral Mountain. Usa tu ingenio e imaginación para inventar artilugios salvajes y maravillosos que permitan a Banjo y Kazooie aplastar a esta malvada bruja. ¡Domina la carretera, el cielo y el agua en el mundo de Banjo-Kazooie: Nuts & Bolts!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -249,8 +476,125 @@
           "igdbId": 3008,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/17faa600670ae46a32ff83f76e83806a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/af37a90a983595fef5aeac638e129534.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/c1fb11cad73eaf23ee236ed67e04a36e.png"
+      },
+      "ports": [
+        {
+          "id": 545,
+          "platform": "x360",
+          "project": "reNut",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/masterspike52/reNut",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 857,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1122,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 1371,
+          "reason": "2000"
+        },
+        {
+          "position": 3,
+          "gameId": 1694,
+          "reason": "2003"
+        },
+        {
+          "position": 4,
+          "gameId": 1800,
+          "reason": "2005"
+        },
+        {
+          "position": 5,
+          "gameId": 48226,
+          "reason": "2008"
+        }
+      ]
+    },
+    {
+      "id": 3939,
+      "kind": "story",
+      "rationale": "Grunty's Revenge se sitúa entre Banjo-Kazooie y Tooie. Nuts & Bolts es la última entrega. Banjo-Pilot queda fuera por no tener trama.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1122,
+          "recommendedVersionId": 2805,
+          "reason": "Inicio de la historia. El remaster de Xbox 360 es una vía sencilla de jugarlo."
+        },
+        {
+          "position": 2,
+          "gameId": 1694,
+          "recommendedVersionId": 3343,
+          "reason": "Precuela directa de Tooie. Solo existe en GBA."
+        },
+        {
+          "position": 3,
+          "gameId": 1371,
+          "recommendedVersionId": 2806,
+          "reason": "Secuela de Banjo-Kazooie. El remaster de Xbox 360 es una vía sencilla de jugarlo."
+        },
+        {
+          "position": 4,
+          "gameId": 48226,
+          "recommendedVersionId": 114556,
+          "reason": "Última entrega de la saga, con un enfoque distinto."
+        }
+      ]
+    },
+    {
+      "id": 3940,
+      "kind": "community",
+      "rationale": "La comunidad recomienda jugar los dos juegos de N64 y probar Nuts & Bolts si interesan los vehículos. Se omiten Grunty's Revenge y Banjo-Pilot por ser menores.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1122,
+          "recommendedVersionId": 2805,
+          "reason": "Empieza aquí. Es la base de la saga y el remaster de Xbox 360 es una vía sencilla de jugarlo."
+        },
+        {
+          "position": 2,
+          "gameId": 1371,
+          "recommendedVersionId": 2806,
+          "reason": "Secuela más grande y compleja. Conviene jugarla después del primero."
+        },
+        {
+          "position": 3,
+          "gameId": 48226,
+          "recommendedVersionId": 114556,
+          "reason": "Opcional. Es muy distinto, centrado en construir vehículos."
+        }
+      ]
+    }
+  ]
 }

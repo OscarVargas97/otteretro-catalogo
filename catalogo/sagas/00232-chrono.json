@@ -3,7 +3,7 @@
   "name": "Chrono",
   "igdbKind": "franchise",
   "igdbId": 1844,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1995,
       "igdbId": 1802,
       "popularity": 1394,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "7798",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Chrono Trigger",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Chrono Trigger",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In this turn-based Japanese RPG, young Crono must travel through time through a misfunctioning teleporter to rescue his misfortunate companion and take part in an intricate web of past and present perils. The adventure that ensues soon unveils an evil force set to destroy the world, triggering Crono's race against time to change the course of history and bring about a brighter future.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En este JRPG por turnos, el joven Crono debe viajar en el tiempo a través de un teletransportador defectuoso para rescatar a su desafortunado compañero y participar en una intrincada red de peligros del pasado y del presente. La aventura que sigue revela pronto una fuerza maligna destinada a destruir el mundo, lo que desencadena la carrera contrarreloj de Crono para cambiar el curso de la historia y construir un futuro mejor.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 1802,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin ayudas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Sin cargas, fluido."
+            }
+          ]
         },
         {
           "id": 613,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1802,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Sin ayudas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al SNES."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Fluido en TV."
+            }
+          ]
         },
         {
           "id": 7779,
@@ -64,7 +124,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 263446,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Extras del port de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cargas largas."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como PS1."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Emulación de PS1."
+            }
+          ]
         },
         {
           "id": 7780,
@@ -72,7 +153,33 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 263446,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Añade escenas animadas y extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cargas al menú y combates."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Más extras, traducción antigua."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas frecuentes."
+            }
+          ],
+          "codes": [
+            "SLPM-87374",
+            "SLPS-02430",
+            "SLPS-91446"
+          ]
         },
         {
           "id": 7781,
@@ -80,7 +187,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 263446,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Extras del port de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cargas largas."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Como PS1."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Emulación de PS1."
+            }
+          ]
         },
         {
           "id": 7798,
@@ -88,14 +216,68 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 20398,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Zona perdida, Dimensional Vortex y arena."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado rápido, menús táctiles."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Contenido añadido, traducción nueva."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, pantalla pequeña."
+            }
+          ],
+          "codes": [
+            "YQUE",
+            "YQUJ",
+            "YQUP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/abc617f05e41620356626cf7761d5143.png",
         "hero": "https://cdn2.steamgriddb.com/hero/da3c55e3be0a795729261bfd8776a627.png",
         "logo": "https://cdn2.steamgriddb.com/logo/0396df57e78b6d04b6854dd682e27b3c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 59,
+          "platform": "snes",
+          "project": "BelthasarProject",
+          "kind": "remake",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/TemplarServant/BelthasarProject",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 606,
+          "platform": "ds",
+          "project": "egg-of-time",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/power-pudu/egg-of-time",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "melonDS"
+        }
+      ]
     },
     {
       "id": 23941,
@@ -107,6 +289,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60797",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Chrono Cross",
           "source": "igdb",
@@ -116,6 +304,18 @@
           "field": "original_name",
           "value": "Chrono Cross",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "CHRONO CROSS, the sequel to the SNES favorite CHRONO TRIGGER, is one of the most ambitious role-playing games ever made. There are over 40 playable characters, each with their back-story, special moves, abilities, and weapons. The story spans two discs and follows the story of Serge, a young man who is able to cross dimensions. Suddenly he is pulled between worlds, trying to figure out his own past at the same time. The graphics are bright and beautiful, utilizing the PlayStation's capabilities to the fullest. The polygonal character models are huge and detailed, and the pre-rendered backgrounds are immaculately detailed. The music is composed and arranged by Yasunori Mitsuda, and features very realistic-sounding synthesizers. The battle system revolves around Elements, which are used to grant magical powers, as well as to summon huge monsters. For anyone that wanted to see the story of CHRONO TRIGGER continue, this is your chance.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "CHRONO CROSS, la secuela del favorito de SNES CHRONO TRIGGER, es uno de los juegos de rol más ambiciosos jamás creados. Tiene más de 40 personajes jugables, cada uno con su propia historia de fondo, movimientos especiales, habilidades y armas. La historia abarca dos discos y sigue a Serge, un joven capaz de cruzar dimensiones. De pronto se ve arrastrado entre mundos, mientras intenta descubrir al mismo tiempo su propio pasado. Los gráficos son luminosos y bellos, y aprovechan al máximo las capacidades de PlayStation. Los modelos poligonales de los personajes son grandes y detallados, y los fondos prerrenderizados tienen un detalle impecable. La música está compuesta y arreglada por Yasunori Mitsuda, y presenta sintetizadores de sonido muy realista. El sistema de combate gira en torno a los Elementos, que se usan para otorgar poderes mágicos y para invocar monstruos enormes. Para quien quisiera ver cómo continúa la historia de CHRONO TRIGGER, esta es su oportunidad.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -140,7 +340,41 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 1804,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCPS-45447",
+            "SCPS-45447-0",
+            "SCPS-45448",
+            "SCPS-45448-1",
+            "SLPM-87395",
+            "SLPM-87395-0",
+            "SLPM-87396",
+            "SLPM-87396-1",
+            "SLPS-02364",
+            "SLPS-02364-0",
+            "SLPS-02365",
+            "SLPS-02365-1",
+            "SLPS-02777",
+            "SLPS-02777-0",
+            "SLPS-02778",
+            "SLPS-02778-1",
+            "SLPS-91464",
+            "SLPS-91464-0",
+            "SLPS-91465",
+            "SLPS-91465-1",
+            "SLUS-01041",
+            "SLUS-01041-0",
+            "SLUS-01041GH",
+            "SLUS-01041GH-0",
+            "SLUS-01041GH-F",
+            "SLUS-01041GH-F-0",
+            "SLUS-01080",
+            "SLUS-01080-1",
+            "SLUS-01080GH",
+            "SLUS-01080GH-1",
+            "SLUS-01080GH-F",
+            "SLUS-01080GH-F-1"
+          ]
         },
         {
           "id": 60551,
@@ -187,7 +421,22 @@
         "cover": "https://cdn2.steamgriddb.com/grid/62ff479880ad9a16a568691f85f90ba4.png",
         "hero": "https://cdn2.steamgriddb.com/hero/f1b77376e6da9ea8126410f9331886e8.png",
         "logo": "https://cdn2.steamgriddb.com/logo/c61aed648da48aa3893fb3eaadd88a7f.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1334,
+          "platform": "ps1",
+          "project": "chrono-cross-decomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/jdperos/chrono-cross-decomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 31975,
@@ -199,6 +448,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "79969",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Radical Dreamers: Le Trésor Interdit",
           "source": "igdb",
@@ -208,6 +463,18 @@
           "field": "original_name",
           "value": "Radical Dreamers: Le Trésor Interdit",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"RADICAL DREAMERS - Le Trésor Interdit -\" was released in 1996 as a standalone game, and has not been easily accesible for play in recent years. Players can experience the story that went on to become the basis for CHRONO CROSS in an audio novel format. Here, an alternate story of the RADICAL DREAMERS, a group of three thieves - Serge, Kid and Magil - unfolds in a parallel world.\n\n*You can switch between the new and old versions of the 3D models and illustrations.\n*The 3D models, illustrations, font and background filter cannot be toggled separately. They will all be switched together.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "RADICAL DREAMERS - Le Trésor Interdit - se lanzó en 1996 como juego independiente y en los últimos años no ha sido fácil de jugar. Los jugadores pueden vivir la historia que después sirvió de base para CHRONO CROSS, en formato de novela de audio. Aquí, una historia alternativa de los RADICAL DREAMERS, un grupo de tres ladrones —Serge, Kid y Magil— se desarrolla en un mundo paralelo.\n\n*Puedes alternar entre las versiones nueva y antigua de los modelos 3D y las ilustraciones.\n*Los modelos 3D, las ilustraciones, la tipografía y el filtro de fondo no se pueden alternar por separado. Todos cambian juntos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -256,5 +523,84 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1422,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 402,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 23941,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 31975,
+          "reason": "2022"
+        }
+      ]
+    },
+    {
+      "id": 3615,
+      "kind": "story",
+      "rationale": "Chrono Trigger es el inicio. Radical Dreamers es una historia paralela posterior a Trigger y Chrono Cross es la secuela directa, que retoma ambos.",
+      "sources": "[{\"title\":\"Chrono Trigger - Wikipedia\",\"url\":\"https://en.wikipedia.org/wiki/Chrono_Trigger\"},{\"title\":\"Radical Dreamers - Wikipedia\",\"url\":\"https://en.wikipedia.org/wiki/Radical_Dreamers\"},{\"title\":\"Chrono Cross - Wikipedia\",\"url\":\"https://en.wikipedia.org/wiki/Chrono_Cross\"}]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 402,
+          "recommendedVersionId": 7798,
+          "reason": "Es el origen de la historia. La versión de DS trae traducción más pulida y extras."
+        },
+        {
+          "position": 2,
+          "gameId": 31975,
+          "recommendedVersionId": 79967,
+          "reason": "Relato paralelo que transcurre tras Trigger y que Cross reutiliza. Versión oficial en PC con traducción al inglés."
+        },
+        {
+          "position": 3,
+          "gameId": 23941,
+          "recommendedVersionId": 60795,
+          "reason": "Secuela directa. El remaster en PC corrige el rendimiento y mejora la imagen respecto al original."
+        }
+      ]
+    },
+    {
+      "id": 3616,
+      "kind": "community",
+      "rationale": "Se juega Trigger y luego Cross, que se disfruta mejor por separado. Radical Dreamers es opcional y se deja para el final, como curiosidad para quien quiera más.",
+      "sources": "[{\"title\":\"Chrono Trigger - Wikipedia\",\"url\":\"https://en.wikipedia.org/wiki/Chrono_Trigger\"},{\"title\":\"Chrono Cross - Wikipedia\",\"url\":\"https://en.wikipedia.org/wiki/Chrono_Cross\"},{\"title\":\"Radical Dreamers - Wikipedia\",\"url\":\"https://en.wikipedia.org/wiki/Radical_Dreamers\"}]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 402,
+          "recommendedVersionId": 7798,
+          "reason": "Se suele recomendar la versión de DS por su traducción y sus extras. La de PS1 también es válida si prefieres lo más fiel al original."
+        },
+        {
+          "position": 2,
+          "gameId": 23941,
+          "recommendedVersionId": 60795,
+          "reason": "Es mejor jugarlo como juego propio, sin esperar un Trigger 2. El remaster arregla el rendimiento del original."
+        },
+        {
+          "position": 3,
+          "gameId": 31975,
+          "recommendedVersionId": 79967,
+          "reason": "Opcional. Es una novela visual breve y conviene jugarla tras Cross para entender sus referencias."
+        }
+      ]
+    }
+  ]
 }

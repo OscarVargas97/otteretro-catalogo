@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85585",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Full Auto 2: Battlelines",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Full Auto 2: Battlelines",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Full Auto 2: Battlelines revs up its engines as the next generation of high-speed combat racing. The game is the sequel to the award-winning Full Auto, and this new standard of vehicular mayhem is exclusively available for the PlayStation 3 as a launch title. In Full Auto 2: Battlelines, the once-pleasant districts of Meridian City are turning into battle zones, rife with automotive destruction. Use explosive weapons, high-speed vehicles and skillful technologically-groundbreaking demolition of the environment to defeat your opponents and claim the city as your own.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 7309,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00015",
+            "BLUS-30009"
+          ]
         },
         {
           "id": 85586,
@@ -66,7 +82,12 @@
           "igdbId": 197931,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d8c849b5646d091df9b5597eb5904c88.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5cf5ef41f8dba344c2b574c6a8e5c989.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/48e52fa3bcb770a613a1606a3d4c990d.png"
+      }
     },
     {
       "id": 48331,
@@ -90,6 +111,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Full Auto gives 'gun it' a whole new meaning. It's a driving auto combat game in the vein of burnout and twisted metal. You'll drive through various courses set all over the world in all sorts of different environments and blow stuff up. You'll go from level to level completing various objectives and trying to get not only a great destruction score but first place to the finish line. If you’re unlucky enough to get blown up by someone, you can always ‘un-wreck’ and turn back the clock to get a second chance and turn the tables. When you’re done wrecking the AI, you can take the road war onto Xbox live where you can race and blowup up to 8 opponents.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -105,8 +132,33 @@
           "igdbId": 6998,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f64867e0e5de8dc6a9ff3c4ff12cbcd4.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/506291472dfc8663ac5a00ce16a1ab2c.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/3dd46a3cad4dc241d9725baec0c67c36.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3259,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35104,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 48331,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

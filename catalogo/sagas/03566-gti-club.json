@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50082",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "GTI Club Supermini Festa!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "GTI Club Supermini Festa!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "GTI Club Supermini Festa! is based on the latest arcade iteration of the long-running series, and charges the player with racing a series of compact cars around a series of citiscapes across France, the UK, Italy, the US, and Japan. Everything about the game is geared towards searing speed and intuitive handling, with players tussling with CPU-controlled cars or their friends through busy streets as they attempt to be the first past the winning line.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 50961,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SGIE-USA-B0",
+            "RVL-SGIP-EUR-B0"
+          ]
         },
         {
           "id": 50082,
@@ -87,6 +103,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "GTI Club+: Rally Côte d'Azur is the PlayStation 3 remake of the original GTI Club released in 1996.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2008",
           "source": "igdb",
@@ -102,8 +124,33 @@
           "igdbId": 97105,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3edb77c388de7465b771963a1427d4e1.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/09481f33d50f19d8883ea3253d31edfa.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c3517db938a70f36f4e73cb9b0eb8f76.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2978,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 20177,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 40702,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

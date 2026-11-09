@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114359",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Otogi: Myth of Demons",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Otogi: Myth of Demons",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "On a dark and gloomy bridge, suspended between the world of the living and the dead, lurks Raikoh, a skilled warrior from a cursed clan. Once tasked with ending the lives of others, Raikoh himself sits between life and death after the Great Seal was broken, spreading destruction and darkness across the land. A mysterious princess spares Raikoh's life so that he may rid the world of the grotesque demons and cleanse his soul of his past misdeeds. Raikoh must travel through desolate lands to fight hordes of fearsome, immortal creatures with 12 varieties of magic, more than 30 brutal weapons, and over 10 special demon-slaying items. Trees, walls, and even entire buildings are destroyed as Raikoh unleashes his skillful fury in order to purge both the world's demons and his own.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 5975,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cámara y controles de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja y caídas de fps."
+            }
+          ]
         },
         {
           "id": 114359,
@@ -56,9 +89,35 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 5975,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles, con mejor comodidad de consola moderna."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución mayor y carga más rápida."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/4517981171b2c2fba415f090e8575d61.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a4e42bba44a8f1050a8a57e5ead9a43c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e4b79783cddf15c2a0903352eb73ad7c.png"
+      }
     },
     {
       "id": 48147,
@@ -82,6 +141,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Take the role of the undead warrior Raikoh Minamoto and his companions as they are tasked with vanquishing the invading hordes of demons and protecting Japan's capital city from being consumed by the darkness.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -97,8 +162,33 @@
           "igdbId": 5976,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/2c9664b7fe95280e7424a20c317c71bf.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9fe8e214a73a23f94de3e8e76106008f.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ba1d4b5bbcb4556b5afab63e3f2b3e6d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3495,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48106,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 48147,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

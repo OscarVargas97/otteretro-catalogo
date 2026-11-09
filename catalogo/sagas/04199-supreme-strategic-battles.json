@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "66138",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Daisenryaku SSB",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Daisenryaku SSB",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Daisenryaku SSB\" is a simulation game in which you command and fight troops such as tanks and fighters on a battlefield separated by hexes. Since the birth of the \"Daisenryaku\" series, AI has been tough, and it has been evaluated as a simple game but deep game.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 225502,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con mando correctos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de 2022."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento correcto en PS4."
+            }
+          ]
         },
         {
           "id": 66137,
@@ -57,7 +90,28 @@
           "year": 2022,
           "igdbId": 225502,
           "steamAppId": 1982510,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado ayudan en un juego de estrategia."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de 2022."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Buena resolución y cargas rápidas."
+            }
+          ]
         },
         {
           "id": 66138,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 225502,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base, posiblemente con mejoras de la edición de 2025."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con mando correctos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Edición posterior con posibles ajustes."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Cargas rápidas y mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 66139,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 225502,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base del juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original de 2022."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución y cargas más lentas."
+            }
+          ]
         }
       ],
       "images": {
@@ -90,6 +186,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "89662",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Daisenryaku SSB2",
           "source": "igdb",
@@ -98,6 +200,12 @@
         {
           "field": "original_name",
           "value": "Daisenryaku SSB2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Wield over 300 modern weapons, from jets to tanks, and outmaneuver rival forces with your strategy. From small islands to massive total-war maps, turn-based battles let both newcomers and veterans play at their own pace.",
           "source": "igdb",
           "manual": false
         },
@@ -142,8 +250,31 @@
           "igdbId": 368908,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coaoxm.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3140,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26881,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 37208,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

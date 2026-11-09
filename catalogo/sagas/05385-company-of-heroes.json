@@ -3,7 +3,7 @@
   "name": "Company of Heroes",
   "igdbKind": "collection",
   "igdbId": 296,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2006,
       "igdbId": 654,
       "popularity": 254,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "103106",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Company of Heroes",
@@ -59,7 +65,10 @@
           "steamAppId": 4691270,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2ht7.jpg"
+      }
     },
     {
       "id": 43746,
@@ -68,7 +77,7 @@
       "year": 2013,
       "igdbId": 1369,
       "popularity": 141,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -99,7 +108,12 @@
           "steamAppId": 55300,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/295037fb353e71e893e3b19d25596002.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ebbdfea212e3a756a1fded7b35578525.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/06f4e0cc96b6a4d29a40580775288ebf.png"
+      }
     },
     {
       "id": 46694,
@@ -111,6 +125,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110558",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Company of Heroes 3",
           "source": "igdb",
@@ -120,6 +140,18 @@
           "field": "original_name",
           "value": "Company of Heroes 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The legendary strategy franchise is back! Company of Heroes 3 is the ultimate package of action, tactics and strategy. Take charge in the heat of real-time battle, then command as a General guiding the overall campaign where every decision matters. ​\n\nOverwhelm your opponents with new and familiar factions, units, and international Battlegroups. Command ground, air and naval forces and build supply lines to crush enemy advances on the new Dynamic Campaign Map - no two playthroughs are ever alike! Play at your own pace across campaign and skirmish modes before diving into blistering multiplayer action. Discover the untold stories of a stunning Mediterranean theatre, featuring next generation destructible environments, all powered by Relic's proprietary Essence Engine.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡La legendaria franquicia de estrategia regresa! Company of Heroes 3 es el paquete definitivo de acción, táctica y estrategia. Toma el mando en el fragor de la batalla en tiempo real y luego dirige la campaña general como general, donde cada decisión importa.\n\nAbruma a tus oponentes con facciones, unidades y Battlegroups internacionales, tanto nuevos como conocidos. Controla fuerzas terrestres, aéreas y navales, y construye líneas de suministro para aplastar los avances enemigos en el nuevo Mapa de Campaña Dinámico: ¡no hay dos partidas iguales! Juega a tu ritmo en los modos campaña y escaramuza antes de lanzarte a la acción multijugador. Descubre las historias no contadas de un escenario mediterráneo impresionante, con entornos destructibles de nueva generación, todo impulsado por el motor Essence de Relic.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -171,8 +203,92 @@
           "igdbId": 228537,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/6f8e64b103c9f4583918a0ce31a115ac.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/c5521b5d45b82c6018145fce650d4983.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/93978cb97ec047e348cad39ee701fe8c.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2031,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43378,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 43746,
+          "reason": "2013"
+        },
+        {
+          "position": 3,
+          "gameId": 46694,
+          "reason": "2023"
+        }
+      ]
+    },
+    {
+      "id": 3979,
+      "kind": "story",
+      "rationale": "La saga no tiene una historia continua: cada juego cuenta campañas distintas de la Segunda Guerra Mundial. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43378,
+          "recommendedVersionId": 103106,
+          "reason": "Primera entrega, Normandía. Versión remaster, la más actual."
+        },
+        {
+          "position": 2,
+          "gameId": 43746,
+          "recommendedVersionId": 103450,
+          "reason": "Frente oriental. Única versión disponible."
+        },
+        {
+          "position": 3,
+          "gameId": 46694,
+          "recommendedVersionId": 110558,
+          "reason": "Italia y norte de África. Versión de PC, la principal."
+        }
+      ]
+    },
+    {
+      "id": 3980,
+      "kind": "community",
+      "rationale": "Los juegos son independientes. Suele recomendarse empezar por el primero, que es el más querido, y seguir con el tercero, más moderno. El segundo es opcional.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43378,
+          "recommendedVersionId": 103106,
+          "reason": "Se considera el mejor y el más redondo. El remaster mejora la compatibilidad actual."
+        },
+        {
+          "position": 2,
+          "gameId": 46694,
+          "recommendedVersionId": 110558,
+          "reason": "Es el más actual y tiene mejores sistemas. Versión de PC, que es la ideal para este género."
+        },
+        {
+          "position": 3,
+          "gameId": 43746,
+          "recommendedVersionId": 103450,
+          "reason": "Es opcional: tiene buena campaña, pero una jugabilidad algo distinta."
+        }
+      ]
+    }
+  ]
 }

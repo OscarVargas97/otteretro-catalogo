@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43046",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Planet of Lana",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Planet of Lana",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A young girl and her loyal friend embark on a rescue mission through a colorful world full of cold machines and unfamiliar creatures. Planet of Lana is a cinematic puzzle adventure framed by an epic sci-fi saga that stretches across centuries and galaxies.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 152071,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01003AD01D316000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "88565",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Planet of Lana II: Children of the Leaf",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Planet of Lana II: Children of the Leaf",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Embark on an unforgettable cinematic puzzle journey with Lana and her loyal companion Mui. Whether you're a returning hero or a new adventurer, step into a world where a new, ancient mystery emerges from Novo's hidden depths. But as they scour these depths, a new threat will put their unbreakable bond to the ultimate test, guiding Lana to confront her destiny amidst encroaching shadows.",
           "source": "igdb",
           "manual": false
         },
@@ -184,8 +211,33 @@
           "igdbId": 348200,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/235277e3caeadc3ab51225bb017fcda7.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/7cd9b22054065156dd30dadf4e7278b2.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/26a2a89d80702bc8e40b9242077812b0.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2847,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16389,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 36740,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

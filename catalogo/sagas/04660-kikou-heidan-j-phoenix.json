@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84959",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kikou Heidan J-Phoenix",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Kikou Heidan J-Phoenix",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Kikou Heidan J-Phoenix is an action game on Playstation 2 published by Takara, in 2001. The game features combining robot parts acquired in battle and fighting with fellow characters. The regular map looks like SML, which takes over enemy positions by moving a 2D branched route.\nKikou Heidan J-Phoenix Joshou-hen, which was released before this game, is like a trial version, and you can also use the data of Joshou-hen to play it. You can't play this game without playing Joshou-hen.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 214913,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-65033",
+            "SLPM-65117"
+          ]
         },
         {
           "id": 114501,
@@ -58,7 +74,10 @@
           "igdbId": 58879,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8ef7b3ab695f6c1dfa16f11b1e9680f0.png"
+      }
     },
     {
       "id": 34732,
@@ -82,6 +101,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kikou Heidan J-Phoenix: Burst Tactics is an action game on Playstation 2 published by Takara, in 2002.\nThis game is a side story of Kikou Heidan J-Phoenix, featuring new PF and characters. In addition, a cooperative attack with fellows called Combination Burst has been introduced. If you import the data of Joshou-hen and Kikou Heidan J-Phoenix, you can get the story after the main ending and hidden PF.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -95,9 +120,15 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 214914,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-65123"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5w59.jpg"
+      }
     },
     {
       "id": 34752,
@@ -121,6 +152,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kikou Heidan J-Phoenix: Cobalt Shoutai-hen is a simulation game on Playstation 2 published by Takara, in 2002. In the previous series, they were action games, but this game incorporates a time and turn-based system. There is no conversion system in this game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -134,7 +171,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 214917,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-65199"
+          ]
         }
       ]
     },
@@ -160,6 +200,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kikou Heidan J-Phoenix 2 is an action game on Playstation 2 published by Takara, in 2004. The customization system has changed significantly in this game. Item acquisition is now developed using PF instead of using funds or beating scenarios.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -173,10 +219,43 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 214918,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-65343"
+          ]
         }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1361,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34707,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 34732,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 34752,
+          "reason": "2002"
+        },
+        {
+          "position": 4,
+          "gameId": 34811,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

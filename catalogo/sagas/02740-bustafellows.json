@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "30851",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bustafellows",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Bustafellows",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A new visual novel from the legendary eXtend! Mixing romance with murders and dangerous ikemen, BUSTAFELLOWS is a steamy noir mystery that will make you shiver but ask for more!",
           "source": "igdb",
           "manual": false
         },
@@ -57,7 +69,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 114536,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100A9101418C000"
+          ]
         }
       ],
       "images": {
@@ -84,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Bustafellows: Season 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bustafellows Season 2 is an otome visual novel developed and published by eXtend.\n\nEveryone wants answers. Who is to blame? What went wrong? And what must the punishment be? To preserve the state of the world, everything is either black or white. Those who focus on the in-between will only continue to suffer.",
           "source": "igdb",
           "manual": false
         },
@@ -119,5 +140,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2735,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12579,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 27113,
+          "reason": "2023"
+        }
+      ]
+    }
+  ]
 }

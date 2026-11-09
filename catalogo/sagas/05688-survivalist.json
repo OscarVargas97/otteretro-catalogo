@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115175",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Survivalist",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Survivalist",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's one year after the collapse of civilization and self-centered hedge fund manager Joe Wheeler emerges from his specially constructed bunker in search of food. This is a huge open-world RPG where you have the freedom to play how you want - but your choices have consequences. Your aim is to find other survivors, gain their respect, and build a community. You'll scavenge for supplies, trade, plant crops, go on quests, face moral dilemmas, go to war, and uncover dark, terrible secrets!",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,11 @@
           "igdbId": 35994,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8be5222db14de9ec4f8ac83166e25f8d.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/82cf0712367108660c5339a4897a728e.png"
+      }
     },
     {
       "id": 50048,
@@ -71,6 +87,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "118036",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Survivalist: Invisible Strain",
           "source": "igdb",
@@ -79,6 +101,12 @@
         {
           "field": "original_name",
           "value": "Survivalist: Invisible Strain",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's ten years after the infection started, and rumors are swirling of a strange new terror. Long-established settlements are collapsing, one by one, amid reports of horrific violence. Survivors are running to the hills to escape, taking refuge in the more remote areas of the Pacific Northwest.",
           "source": "igdb",
           "manual": false
         },
@@ -96,7 +124,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 117233,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido equivalente al de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Adaptación a mando, menos cómoda en menús de crafteo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con cambios de interfaz."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable en consola moderna."
+            }
+          ]
         },
         {
           "id": 118036,
@@ -105,10 +154,56 @@
           "year": 2020,
           "igdbId": 117233,
           "steamAppId": 1054510,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todas sus actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado y ratón cómodos para un survival complejo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buena configuración gráfica y rendimiento ajustable."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/980f94f1229a0d0947efd7a567dd445e.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/9e01c2d7a6c78b5fc9d3479ddb06d409.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/9a15edfbee45bb3e6f2785dd200012e5.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3509,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48641,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 50048,
+          "reason": "2025"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

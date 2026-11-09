@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98555",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rewrite Harvest festa!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rewrite Harvest festa!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A fandisc for Rewrite consisting of six heroine scenarios and an RPG minigame entitled Rewrite Quest.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2012,
           "igdbId": 144733,
           "steamAppId": 1856600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo del fandisc; la Vita podría incluir extras que no verifiqué."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado libre, saltar texto y ajustes en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y carga rápida."
+            }
+          ]
         },
         {
           "id": 98556,
@@ -57,9 +90,34 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 144733,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port con contenido similar; posibles añadidos sin confirmar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Portátil y táctil, pero con menos opciones que en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con ajustes para la consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de Vita y cargas más lentas."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/bf61de676e0da2e011125d528133625f.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/106e94954beec5d07ed12654e9d52c4c.jpg"
+      }
     }
   ],
   "routes": []

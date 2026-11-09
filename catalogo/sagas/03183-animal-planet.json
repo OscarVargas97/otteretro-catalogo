@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "45095",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Animal Planet: Vet Life",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Animal Planet: Vet Life",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Journey across the globe and become a world-renowned veterinary doctor. Take on the role of either Jack or Abani, young vets working under the guidance of Dr. Rogers. Volunteer at local vet clinics across the world and treat a variety of different animals in different settings.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 50635,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-R82E-USA-B0",
+            "RVL-R82P-EUR-B0"
+          ]
         },
         {
           "id": 45095,
@@ -56,7 +72,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 50635,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BV2E",
+            "BV2P"
+          ]
         }
       ],
       "images": {
@@ -85,6 +105,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A game based around the Emergency Vets television programme on Animal Planet, in which the player must take on the role of a veterinarian treating various animals.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -98,7 +124,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 69124,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "C4VP",
+            "CAJE"
+          ]
         }
       ],
       "images": {
@@ -106,5 +136,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2871,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17126,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 17584,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

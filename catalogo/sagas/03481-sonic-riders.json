@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "48952",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sonic Riders: Zero Gravity",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Sonic Riders: Zero Gravity",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sonic Riders: Zero Gravity is a hoverboard racing video game developed by Sonic Team and published by Sega for the PlayStation 2 and Wii. It is the fifth racing game in the Sonic the Hedgehog series, and the second entry the Sonic Riders trilogy. A port for the Xbox 360 was cancelled during development, while a sequel, Sonic Free Riders, was released exclusively for that system in 2010.\n\nGameplay in Zero Gravity is largely similar to its predecessor, with characters racing on different types of hovercraft called \"Extreme Gear\". In addition to the mechanics from the previous game, Zero Gravity adds a new gameplay system based around gravity that replaces the predecessor's \"fuel\" system. During the race, performing tricks and other actions will increase a character's Gravity Points, or GP. If players have accrued enough GP by the time they enter certain areas of the track, they will enter a Zero-Gravity Zone, where they can perform one of two maneuvers. A Gravity Dive will create a small black hole that points gravity forward down the track, giving the player a powerful free-fall boost that is further augmented by striking objects in the vicinity that the hole displaces, such as cars or signs. Alternatively, Gravity Control will alter the gravity of the course, allowing players to reach otherwise-inaccessible areas and shortcuts. Players can also use Gravity Drift to more easily maneuver around sharp corners.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 5168,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RS9E-USA",
+            "RVL-RS9P-EUR"
+          ]
         },
         {
           "id": 48952,
@@ -56,14 +72,35 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 5168,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54915",
+            "SLES-54915/ANZ",
+            "SLUS-21642"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/8d347b0713d12b6ed38cd0ad18495d4d.png",
         "hero": "https://cdn2.steamgriddb.com/hero/7ee0012f0b3500e3b914920486605533.png",
         "logo": "https://cdn2.steamgriddb.com/logo/f937c8fddbe66ab03c563f16d5cfa50c.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1439,
+          "platform": "ps2",
+          "project": "SR2",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/KidWizardOfTheWeb/SR2",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 48538,
@@ -87,6 +124,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Jump into the race! Become your favorite Sonic character and use your whole body to twist, turn and jump in this hi-octane game exclusive to Kinect. Crouch and jump to pull huge airs! Ride boards, bikes, jet skis, and even a mine cart! Take out competitors with crazy weapons!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -102,8 +145,49 @@
           "igdbId": 20118,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ccc66d981626c1be8f4f49ee64c4a8a8.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/df1fdab9688c6da1635d03ef4b680474.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/508a37f0ac8738a76c680af8b4c512b4.png"
+      },
+      "ports": [
+        {
+          "id": 1075,
+          "platform": "x360",
+          "project": "Free-Riders-Recompiled",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/YuutaTsubasa/Free-Riders-Recompiled",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 0
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2952,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19651,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 48538,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

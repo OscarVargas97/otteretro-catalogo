@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The third game in the Hardball baseball series. This revision features 256 colour VGA graphics, and announcer Al Michaels provides running commentary while you play.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1992",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Action-oriented baseball sim. Hardball 5 is mainly an update to Hardball 4, with the additions coming in the form of adjustable difficulty settings, sharper graphics, more comments by Al Michaels and improved league play which comes with a full set of 1994 major leaguers plus a bonus \"legends\" league. Includes multiplayer support for up to 2 players.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -90,7 +102,11 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 4467,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00571",
+            "SLUS-00108"
+          ]
         }
       ],
       "images": {
@@ -119,6 +135,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hardball 99 is a baseball simulation. Hardball 99 follows up on Hardball 5. It is the first in the series to feature 3D enhanced graphics. It also has full Major League Baseball licensing, which allows the use of all real player names and teams.\n\nGameplay modes include: Dynasty Dlay in which players get older over time which will effect their capabilities, Interleague Play, Consecutive Season Play with the amateur draft, and a custom league and schedule generator. An All-Time team that stars famous players from the past is included as well.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1998",
           "source": "igdb",
@@ -132,7 +154,10 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 44983,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-00651"
+          ]
         }
       ],
       "images": {
@@ -140,5 +165,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1409,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 148,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 23776,
+          "reason": "1995"
+        },
+        {
+          "position": 3,
+          "gameId": 24612,
+          "reason": "1998"
+        }
+      ]
+    }
+  ]
 }

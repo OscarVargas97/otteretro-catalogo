@@ -50,7 +50,12 @@
           "igdbId": 3154,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5f8e33133f4873736c7f496ce18b4c34.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/326e2d4f99fbeffe0da3241ba061c3bb.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/7c54073424e22cf30cb7f2af59c4da75.png"
+      }
     },
     {
       "id": 43373,
@@ -62,6 +67,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102796",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "El Señor de los Anillos: La Batalla por la Tierra Media II",
           "source": "igdb",
@@ -70,6 +81,12 @@
         {
           "field": "original_name",
           "value": "The Lord of the Rings: The Battle for Middle-earth II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Wage war in the North and assume command of the most storied civilizations in all of Middle-earth history - the Elven and Dwarven armies - or fight on the side of Evil with heroes and creatures that have never been seen in The Lord of the Rings films. Defend or overtake never before seen lands such as Dol Guldur, The Misty Mountains, and Mirkwood as you unleash powerful new weapons and abilities, such as summoning dragons.",
           "source": "igdb",
           "manual": false
         },
@@ -97,8 +114,33 @@
           "igdbId": 3155,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0eca5fa085089d49d7af0e6e862746f1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/81ab41f724391ef12094724fc6d8234f.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/752eaf975d0a06d11f32a62f37e2101a.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3437,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43367,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 43373,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

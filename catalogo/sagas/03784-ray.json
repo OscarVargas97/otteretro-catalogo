@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62663",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "RayStorm",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "RayStorm",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "RayStorm is a scrolling shooter set hundreds of years in the future, and was one of the launch titles for the Sony PlayStation. RayStorm consists of eight stages where players must pilot their \"R-Gray\" spaceships shooting down anything that moves. Like all of the games in the Ray Series, enemies can be shot down with a primary weapon or by holding down a missile button to lock on to multiple enemies.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,14 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 45089,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-00742",
+            "SCPS-45005",
+            "SLPS-00678",
+            "SLPS-91050",
+            "SLUS-00482"
+          ]
         },
         {
           "id": 61918,
@@ -112,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "58318",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "RayCrisis: Series Termination",
           "source": "igdb",
@@ -120,6 +145,12 @@
         {
           "field": "original_name",
           "value": "RayCrisis: Series Termination",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "RayCrisis, known as RayCrisis: Series Termination in North America, is the third game released in the \"Ray\" series of Taito shooting games. Chronologically, it is considered a prequel to the first game, RayForce. First released for arcades in 1998, it supported co-op mode for two players, which the PlayStation ports released in 2000 lack; these ports are the only games in the \"Ray\" series to lack co-op.",
           "source": "igdb",
           "manual": false
         },
@@ -177,7 +208,11 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 45036,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-01217",
+            "SLUS-01217A"
+          ]
         },
         {
           "id": 62156,
@@ -193,5 +228,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3036,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24461,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 24609,
+          "reason": "1998"
+        }
+      ]
+    }
+  ]
 }

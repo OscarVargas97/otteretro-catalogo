@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99760",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Emily Wants to Play",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Emily Wants to Play",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Emily Wants to Play is a unique horror game released on December 10th, 2015.\nEmily Wants to Play is a game based around you, a pizza delivery boy, making your way through an abandoned house, trying to survive until the large clock in the den hits the next hour. Every hour, another one of Emily's 'toys' becomes hostile, and will attempt to attack you.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 16302,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/50c8932f79e0369ac94e06e9c6bd86e5.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a878dbebc902328b41dbf02aa87abb58.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/789ba2ae4d335e8a2ad283a3f7effced.png"
+      }
     },
     {
       "id": 42443,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101268",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Emily Wants to Play Too",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Emily Wants to Play Too",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "It's about 7pm on Friday, and you are headed to your next delivery destination. You work for a sandwich restaurant, and tonight your job is to deliver sandwiches from 4pm to 11pm. Your next stop is an interesting location. It is some sort of crime research facility where evidence from crime scenes...",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +152,33 @@
           "igdbId": 75074,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/36708522178ea0f999603e32a5297b38.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/2649b36f54ee6080dd7e2c057585bce6.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5a68e6cc0195b878aa5ff70df000cd5c.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3396,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41864,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 42443,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

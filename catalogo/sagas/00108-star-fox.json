@@ -3,7 +3,7 @@
   "name": "Star Fox",
   "igdbKind": "franchise",
   "igdbId": 771,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1993,
       "igdbId": 8581,
       "popularity": 171,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "254",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Star Fox",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Star Fox",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Star Fox, released as Starwing in Europe, is a 1993 rail shooter video game developed and published by Nintendo, with assistance from Argonaut Software, for the Super Nintendo Entertainment System. The first game in the Star Fox series, Star Fox follows Fox McCloud and the rest of the Star Fox team defending their homeworld of Corneria against the attacking forces of Andross.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Star Fox, lanzado como Starwing en Europa, es un shooter sobre raíles de 1993 desarrollado y publicado por Nintendo, con la colaboración de Argonaut Software, para la Super Nintendo Entertainment System. Primer juego de la serie Star Fox, sigue a Fox McCloud y al resto del equipo Star Fox mientras defienden su planeta natal, Corneria, de las fuerzas atacantes de Andross.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -63,7 +81,49 @@
         "cover": "https://cdn2.steamgriddb.com/grid/081b26a8bdc5222518e51ecdbcc2021c.png",
         "hero": "https://cdn2.steamgriddb.com/hero/69580446ed4cda7f15b67e2816f7203a.png",
         "logo": "https://cdn2.steamgriddb.com/logo/06358599b7afb2506e063c1ea0a09fbd.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 382,
+          "platform": "snes",
+          "project": "starfox-enhanced",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/kandowontu2/starfox-enhanced",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 1104,
+          "platform": "snes",
+          "project": "StarFoxSNESRecomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/StarFoxSNESRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 1442,
+          "platform": "snes",
+          "project": "ultrastarfox",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Sunlitspace542/ultrastarfox",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 482,
@@ -84,6 +144,18 @@
           "field": "original_name",
           "value": "Star Fox 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "After the success of Star Fox, Nintendo decided to make a sequel on the same system. However, with the release of the Nintendo 64 looming close, Nintendo decided to cancel the game despite it being nearly complete. Many features of this game were later reused in Star Fox 64, most notably Star Wolf, and the game itself was later leaked as source code and compiled into a working ROM.\nThe game was later released for the SNES Classic console as an unlockable game, marking its first official release. Since then, the game was also released for the Nintendo Switch Online service.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Tras el éxito de Star Fox, Nintendo decidió hacer una secuela para el mismo sistema. Sin embargo, con el lanzamiento de Nintendo 64 cada vez más cercano, Nintendo decidió cancelar el juego, a pesar de estar casi terminado. Muchas de sus características se reutilizaron más tarde en Star Fox 64, en especial Star Wolf, y el juego fue filtrado posteriormente como código fuente y compilado en una ROM funcional.\nMás adelante se lanzó para la consola SNES Classic como juego desbloqueable, lo que marcó su primer lanzamiento oficial. Desde entonces, también se ha publicado para el servicio Nintendo Switch Online.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -116,8 +188,14 @@
       "year": 1997,
       "igdbId": 2591,
       "popularity": 283,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "2810",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Star Fox 64",
@@ -128,6 +206,18 @@
           "field": "original_name",
           "value": "Star Fox 64",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The update to the 16-bit Super NES title continues the original's on-rails 3D shooting action on the Nintendo 64. Starring Fox McCloud, Peppy Hare, Falco Lombardi, and Slippy Toad, this new 64-bit version contains 15 plus levels, easy, medium, and difficult paths, forward-scrolling levels as well as full 3D realms, and a three-part multiplayer mode using a four-player split screen. In addition to plenty of Arwing action, the game introduces a new hover tank and even features a submarine level. The 8-megabyte cartridge also boasts voice samples from 23 different characters instead of the original's animal noises. Star Fox 64 was the first game to feature Rumble Pak support. A Rumble Pak bundle and standalone version of the game were sold. Released in Europe under the name Lylat Wars.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "La actualización del título de 16 bits de Super NES mantiene la acción de disparos 3D sobre raíles del original, ahora en Nintendo 64. Protagonizada por Fox McCloud, Peppy Hare, Falco Lombardi y Slippy Toad, esta nueva versión de 64 bits incluye más de 15 niveles, caminos fácil, medio y difícil, niveles de desplazamiento hacia adelante así como entornos 3D completos, y un modo multijugador en tres partes con pantalla dividida para cuatro jugadores. Además de la abundante acción con Arwing, el juego introduce un nuevo tanque flotante e incluso incluye un nivel submarino. El cartucho de 8 megabytes también presenta muestras de voz de 23 personajes diferentes en lugar de los sonidos de animales del original. Star Fox 64 fue el primer juego compatible con el Rumble Pak. Se vendieron un paquete con Rumble Pak y una versión independiente del juego. Lanzado en Europa con el nombre de Lylat Wars.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -144,7 +234,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 2591,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Mismo contenido que en N64."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado más sencillo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más limpio, pero igual de antiguo."
+            }
+          ]
         },
         {
           "id": 1971,
@@ -152,7 +263,32 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 2591,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego original con Rumble Pak."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles clásicos y sin guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y fps bajos."
+            }
+          ],
+          "codes": [
+            "NFXE",
+            "NFXJ"
+          ]
         },
         {
           "id": 1972,
@@ -160,7 +296,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 2591,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Mismo contenido que en N64."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado más sencillo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más limpio, pero igual de antiguo."
+            }
+          ]
         },
         {
           "id": 2810,
@@ -168,7 +325,28 @@
           "kind": "remake",
           "year": 2011,
           "igdbId": 6890,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Añade multijugador local y modos extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Giroscopio opcional y 3D."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cambia voces y algunos detalles."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos mejorados y 60 fps."
+            }
+          ]
         },
         {
           "id": 2867,
@@ -176,14 +354,77 @@
           "kind": "remake",
           "year": 2026,
           "igdbId": 400709,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Remake reciente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambios no verificados."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución y fluidez actuales."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/9122b7acc2588eff1d20211ce8fb8798.png",
         "hero": "https://cdn2.steamgriddb.com/hero/44adaadb095f40b587f4b409ac55799b.png",
         "logo": "https://cdn2.steamgriddb.com/logo/ad3019b856147c17e82a5bead782d2a8.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 380,
+          "platform": "n64",
+          "project": "sf64-dc",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/jnmartin84/sf64-dc",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 389,
+          "platform": "n64",
+          "project": "Starship",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/HarbourMasters/Starship",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1103,
+          "platform": "n64",
+          "project": "Starfox64Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/sonicdcer/Starfox64Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 3577,
@@ -195,6 +436,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7166",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Star Fox Command",
           "source": "igdb",
@@ -204,6 +451,18 @@
           "field": "original_name",
           "value": "Star Fox Command",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Star Fox Command lets you hop into your fight through a unique branching storyline of missions, all rendered in gorgeous 3-D. This game brings a whole new strategic element to the series, with a commander's view of the mission. Using the touch screen, players can draw the routes they and their teammates will take. Battle the enemies they encounter as they take over bases and strategically advance across the map. Players can also blow their friends out of the sky, as they dogfight 8 players over a local wireless connection -- or take on 4 players from around the world on Nintendo Wi-Fi Connection.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Star Fox Command te permite entrar en la batalla a través de una historia original de misiones ramificadas, todas representadas en espectacular 3D. Este juego aporta un elemento estratégico totalmente nuevo a la serie, con una vista de comandante de la misión. Usando la pantalla táctil, los jugadores pueden trazar las rutas que seguirán ellos y sus compañeros de equipo. Combate a los enemigos que encuentren mientras toman bases y avanzan estratégicamente por el mapa. Los jugadores también pueden derribarse entre sí en combates aéreos de hasta 8 jugadores mediante conexión inalámbrica local, o enfrentarse a 4 jugadores de todo el mundo a través de Nintendo Wi-Fi Connection.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -220,7 +479,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 20556,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Sin multijugador local."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control táctil en el mando, menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, con pequeñas diferencias."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Reescalado y guardado rápido."
+            }
+          ]
         },
         {
           "id": 7166,
@@ -228,7 +508,37 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 20556,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con multijugador."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control táctil nativo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de DS."
+            }
+          ],
+          "codes": [
+            "ASFE",
+            "ASFJ",
+            "ASFP",
+            "NTRJ",
+            "WUP-N-DAME",
+            "WUP-N-DAMJ",
+            "WUP-N-DAMP"
+          ]
         }
       ],
       "images": {
@@ -256,6 +566,18 @@
           "field": "original_name",
           "value": "Star Fox Zero",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fox, Falco, Peppy and Slippy save the Lylat system in this new deep space dogfighting adventure. Using the Wii U GamePad controller and the TV together creates a unique interface that allows players to experience the game with two different viewpoints within the Arwing – aim and shoot enemies in one direction while flying in another. This frees up the TV for a more cinematic flight experience. Then, pilot the Arwing with its new Walker transformation, along with the new Gyrowing and the Landmaster Tank, to traverse interplanetary terrain.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Fox, Falco, Peppy y Slippy salvan el sistema Lylat en esta nueva aventura de combates espaciales en el espacio profundo. Al usar juntos el mando GamePad de Wii U y el televisor se crea una interfaz única que permite vivir el juego desde dos puntos de vista distintos dentro del Arwing: apuntar y disparar a los enemigos en una dirección mientras vuelas en otra. Así, el televisor queda libre para una experiencia de vuelo más cinematográfica. Luego, pilota el Arwing con su nueva transformación Walker, junto con el nuevo Gyrowing y el tanque Landmaster, para recorrer terrenos interplanetarios.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -303,6 +625,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Star Fox Guard is a tower defense video game co-developed by Nintendo and PlatinumGames for the Wii U. The game was bundled as a separate disc for the first print edition of Star Fox Zero during its release in April 2016, and as a digital download code on the Wii U eShop afterwards.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Star Fox Guard es un videojuego de defensa de torres codesarrollado por Nintendo y PlatinumGames para Wii U. El juego se incluyó como disco independiente en la primera edición física de Star Fox Zero durante su lanzamiento en abril de 2016, y después se ofreció como código de descarga en la eShop de Wii U.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2016",
           "source": "igdb",
@@ -347,6 +681,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Star Fox Adventures takes place in a vast 3-D world full of strange scenery, brain-teasing puzzles and intense action. Learn the secrets of a mystical staff to fend off enemies and cast a variety of spells. Plus the intuitive, enemy-locking target system allows you to battle foes without skipping a beat. And you'll need to build clever strategies to defeat the huge boss enemies.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Star Fox Adventures transcurre en un vasto mundo 3D lleno de escenarios extraños, puzles desafiantes y acción intensa. Descubre los secretos de un bastón místico para defenderte de los enemigos y lanzar una gran variedad de hechizos. Además, el intuitivo sistema de selección de objetivos te permite combatir sin perder el ritmo. Y necesitarás estrategias inteligentes para derrotar a los enormes jefes.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -360,14 +706,50 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 2686,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GSAE-USA",
+            "DL-DOL-GSAJ-JPN",
+            "DL-DOL-GSAP-EUR",
+            "DL-DOL-GSAP-EUR-01"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/e9176bfe821b41775162a9beb913909c.png",
         "hero": "https://cdn2.steamgriddb.com/hero/c7175168a5229945c2d6426e9812d300.png",
         "logo": "https://cdn2.steamgriddb.com/logo/9d94c8981a48d12adfeecfe1ae6e0ec1.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 381,
+          "platform": "gc",
+          "project": "foxhollow",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/JackPriceBurns/foxhollow",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1441,
+          "platform": "gc",
+          "project": "SFA-Decomp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/zcanann/SFA-Decomp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 16720,
@@ -391,6 +773,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Step into the guise of furry flyboy Fox McCloud as he returns to take on his deadliest enemy; wingmen Slippy Toad, Peppy Hare and Falco Lombardi are covering your back, as you take on hordes of intergalactic hostiles on land and in air.\n\nHop into Arwings for aerial skirmishes and Landmaster Tanks for ground-based confrontations, or simply run around on foot dispensing laser justice; the searing single player adventure is a total blast, while the glorious four-way split-screen mode is sure to keep you and your friends coming back for more. With sniper rifles and rocket launchers, this is one Fox you don't want to mess with!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Mete en la piel del intrépido piloto Fox McCloud mientras regresa para enfrentarse a su enemigo más peligroso. Sus compañeros de vuelo Slippy Toad, Peppy Hare y Falco Lombardi te cubren las espaldas mientras te enfrentas a hordas de hostiles intergalácticos en tierra y en el aire.\n\nSube a los Arwing para combates aéreos y a los tanques Landmaster para enfrentamientos terrestres, o simplemente recorre a pie repartiendo justicia láser. La intensa aventura para un jugador es una auténtica explosión, y el espléndido modo de pantalla dividida para cuatro jugadores hará que tú y tus amigos volváis una y otra vez. ¡Con rifles de francotirador y lanzacohetes, este Fox no es alguien con quien quieras meterte!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -404,7 +798,12 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 3243,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GF7E-USA",
+            "DL-DOL-GF7J-JPN",
+            "DL-DOL-GF7P-EUR"
+          ]
         }
       ],
       "images": {
@@ -414,5 +813,135 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 527,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 165,
+          "reason": "1993"
+        },
+        {
+          "position": 2,
+          "gameId": 1034,
+          "reason": "1997"
+        },
+        {
+          "position": 3,
+          "gameId": 16515,
+          "reason": "2002"
+        },
+        {
+          "position": 4,
+          "gameId": 16720,
+          "reason": "2005"
+        },
+        {
+          "position": 5,
+          "gameId": 3577,
+          "reason": "2006"
+        },
+        {
+          "position": 6,
+          "gameId": 7844,
+          "reason": "2016"
+        },
+        {
+          "position": 7,
+          "gameId": 8111,
+          "reason": "2016"
+        },
+        {
+          "position": 8,
+          "gameId": 482,
+          "reason": "2017"
+        }
+      ]
+    },
+    {
+      "id": 3903,
+      "kind": "story",
+      "rationale": "La saga tiene una historia suelta con reinicios: Star Fox 64 y Zero reinterpretan el primero. Star Fox Guard queda fuera por no tener trama.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 165,
+          "reason": "Inicio de la historia: la guerra contra Andross."
+        },
+        {
+          "position": 2,
+          "gameId": 482,
+          "reason": "Continuación directa del primero, aunque salió mucho después."
+        },
+        {
+          "position": 3,
+          "gameId": 1034,
+          "reason": "Reinterpreta la historia del primero."
+        },
+        {
+          "position": 4,
+          "gameId": 16515,
+          "reason": "Aventura posterior, con Fox ya veterano."
+        },
+        {
+          "position": 5,
+          "gameId": 16720,
+          "reason": "Lucha contra los Aparoides, después de Adventures."
+        },
+        {
+          "position": 6,
+          "gameId": 3577,
+          "reason": "Continúa Assault, con varios finales."
+        },
+        {
+          "position": 7,
+          "gameId": 7844,
+          "reason": "Reinicio que vuelve a contar la historia de Star Fox 64."
+        }
+      ]
+    },
+    {
+      "id": 3904,
+      "kind": "community",
+      "rationale": "La comunidad recomienda empezar por Star Fox 64 y seguir con Star Fox 2 y Assault. Zero es opcional por sus controles, y Command, Guard y Adventures suelen verse como complementos. Sin fuentes verificadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1034,
+          "recommendedVersionId": 2867,
+          "reason": "Es el mejor punto de partida. Elijo el remake de Switch 2 por acceso actual; el original de N64 también vale."
+        },
+        {
+          "position": 2,
+          "gameId": 482,
+          "recommendedVersionId": 745,
+          "reason": "Se puede jugar completo desde 2017 y es corto."
+        },
+        {
+          "position": 3,
+          "gameId": 16720,
+          "reason": "Acción más clásica y rejugable."
+        },
+        {
+          "position": 4,
+          "gameId": 16515,
+          "reason": "Es un juego de aventura distinto, para quien lo quiera."
+        },
+        {
+          "position": 5,
+          "gameId": 7844,
+          "reason": "Opcional: divide opiniones por el control con dos pantallas."
+        }
+      ]
+    }
+  ]
 }

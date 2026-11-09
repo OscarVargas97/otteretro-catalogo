@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fu-un Shinsengumi is a 2004 PlayStation 2 action-adventure game developed and published by Genki that launched the Fūun Shinsengumi series. Set in late Edo-period Japan, players take on the role of a Shinsengumi samurai, engaging in hack-and-slash combat, on-foot exploration, and occasional strategic elements. The game was praised for its dynamic battles and faithful historical setting.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 72428,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3jdg.jpg"
+      }
     },
     {
       "id": 34112,
@@ -62,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84132",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fu-un Bakumatsu-den",
           "source": "igdb",
@@ -70,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Fu-un Bakumatsu-den",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fu-un Bakumatsu-den is a 2005 PlayStation 2 action game from Genki Co. and the follow-up to Fu-un Shinsengumi. Set during Japan’s Bakumatsu era, it lets players join the Shinsengumi in stylized beat ’em up combat.",
           "source": "igdb",
           "manual": false
         },
@@ -87,7 +108,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 71947,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego; no confirmé extras ni recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y fácil de guardar en cualquier momento, con menos botones."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel en lo general."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución menor, aunque con cargas cortas en memoria portátil."
+            }
+          ]
         },
         {
           "id": 84132,
@@ -95,10 +137,54 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 71947,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo de la versión original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con mando completo; guardado de la época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor calidad de imagen en pantalla grande, con cargas típicas de PS2."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1pps.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3244,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34062,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 34112,
+          "reason": "2005"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

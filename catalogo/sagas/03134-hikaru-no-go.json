@@ -14,6 +14,109 @@
   ],
   "games": [
     {
+      "id": 1942,
+      "nameEs": "Hikaru no Go",
+      "originalName": "Hikaru no Go",
+      "year": 2001,
+      "igdbId": 49630,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Hikaru no Go",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Hikaru no Go",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The first game based on the eponymous anime series, which centers on the strategic board game Go.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2001",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 3855,
+          "platform": "gba",
+          "kind": "original",
+          "year": 2001,
+          "igdbId": 49630,
+          "criteria": [],
+          "codes": [
+            "AHKJ"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e264392f30c9162d215a581a031bd075.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1d602698833ebd84879fb70064482b87.png"
+      }
+    },
+    {
+      "id": 2018,
+      "nameEs": "Hikaru no Go 2",
+      "originalName": "Hikaru no Go 2",
+      "year": 2002,
+      "igdbId": 49629,
+      "popularity": 0,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Hikaru no Go 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Hikaru no Go 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Hikaru no Go 2 is a Miscellaneous game, developed by KCEJ and published by Konami, which was released in Japan in 2002.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2002",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 3938,
+          "platform": "gba",
+          "kind": "original",
+          "year": 2002,
+          "igdbId": 49629,
+          "criteria": [],
+          "codes": [
+            "AKEJ"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b795ad0dcaedca3413ae4b18cdc2960e.png"
+      }
+    },
+    {
       "id": 16831,
       "nameEs": "Hikaru no Go 3",
       "originalName": "Hikaru no Go 3",
@@ -35,6 +138,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A GameCube game based on the Hikaru no Go series of anime and manga. It simulates games of Go, the Asian board game, between characters from the series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -48,7 +157,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 62379,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GHTJ-JPN"
+          ]
         }
       ],
       "images": {
@@ -77,6 +189,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hikaru no Go: Heian Gensou Ibunroku is a Japan-exclusive party game based on the Hikaru no Go magna series. It was developed by Konami Computer Entertainment Tokyo for PlayStation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -90,7 +208,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 62377,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-87059"
+          ]
         }
       ],
       "images": {
@@ -119,6 +240,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hikaru no Go: Insei Choujou Kessen is a Japan-exclusive board game based off the Hikaru no Go magna series. The game was developed by Tenky and published by Konami for PlayStation in 2002.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -132,7 +259,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 62378,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPM-87199"
+          ]
         }
       ],
       "images": {
@@ -140,5 +270,40 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1002,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1942,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 2018,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 25279,
+          "reason": "2002"
+        },
+        {
+          "position": 4,
+          "gameId": 25295,
+          "reason": "2002"
+        },
+        {
+          "position": 5,
+          "gameId": 16831,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

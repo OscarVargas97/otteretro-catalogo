@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "DUST 514 brings intense infantry combat, large-scale warfare, and deep character advancement to a free-to-play massively multiplayer shooter, exclusively on the PlayStation3.\n\nThis is the next generation of first-person shooters, where a single victory could prove the crushing blow to a galactic empire of thousands of EVE Online gamers.\n\nFight, dominate, and hone your skills as an elite mercenary with an unparalleled array of armor, weapons, and vehicles in massive online battles of up to 48 players. Customize every aspect of your gameplay, from your characters’ weapons, equipment, and skills to the vehicles they drive.\n\nWage war in the notorious, persistent universe of EVE Online, where every battle and every action can affect the balance of power among thousands of players. Win battles, acquire territories, amass wealth, and build empires to establish yourself as a major influence in the ongoing conflicts of EVE Online.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 1320,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b81fad325e2fb381578f64c7fb338c15.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4970f807eaa4d5e07645109c9d1065b1.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9104e5906c48e17d5c6cc88c6ae85152.png"
+      }
     },
     {
       "id": 41749,
@@ -62,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99424",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "EVE: Valkyrie",
           "source": "igdb",
@@ -70,6 +87,12 @@
         {
           "field": "original_name",
           "value": "EVE: Valkyrie",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In EVE: Valkyrie, you are in command of a heavily armed fighter in the most realistic dogfighting game available on any platform. Immersive VR technology puts you right in the cockpit for visceral team-based action.\n\nEVE: Valkyrie is an a multiplayer dogfighting shooter that has been built from the ground up to harness the very latest advances in virtual reality technology. It is an accessible and immersive experience that fulfills the fantasy and thrill of being a real spaceship pilot in the midst of combat.\n\nSet deep in the lawless regions of the EVE Universe, the Valkyrie are a breakaway mercenary faction formed from the infamous Guristas pirate organization. Led by the enigmatic Ran, they are guns for hire, seeking profit or vengeance and preying on other pirate factions who get in their way.\n\nImmortalized via the use of stolen clone technology and genetically enhanced for combat, Valkyrie pilots fly without fear and without mercy. Developed by CCP Games’ Newcastle studio, EVE: Valkyrie is the boldest realization of virtual reality space combat, combining immediate visceral action and tactical depth. It will launch day and date with the Oculus Rift on PC and Sony’s “Project Morpheus” on PlayStation 4.",
           "source": "igdb",
           "manual": false
         },
@@ -107,7 +130,11 @@
           "steamAppId": 538870,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/bce40dfdb7bf9d012d7d4098797a69aa.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/dae04c6b48a5c0a9f6dcdf84fba70830.png"
+      }
     },
     {
       "id": 43709,
@@ -147,8 +174,38 @@
           "steamAppId": 8500,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/620bde855d806c199c826760aa4dc009.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a645a4db801127af43e9bf4513b34e37.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/527490f08486bf8af2b8d0bf6e73911b.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1999,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43709,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 39681,
+          "reason": "2013"
+        },
+        {
+          "position": 3,
+          "gameId": 41749,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5553",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Creatures",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Creatures",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Creatures for the PlayStation was developed by Elo Interactive Media GmbH and published by Swing! Entertainment Media AG in 7 December 2001",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 313973,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03690",
+            "SLUS-01438"
+          ]
         },
         {
           "id": 5555,
@@ -64,7 +80,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 313973,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ACTX",
+            "ACTY"
+          ]
         }
       ],
       "images": {
@@ -81,6 +101,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63113",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Creatures 3",
           "source": "igdb",
@@ -89,6 +115,12 @@
         {
           "field": "original_name",
           "value": "Creatures 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Creatures 3 is the third Creatures game, a strategy game developed by Fishing Cactus and published by Bigben Interactive for the PC, Mac, iPhone, and iPad platforms.",
           "source": "igdb",
           "manual": false
         },
@@ -106,7 +138,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 11372,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Simulación completa con genética y mundo amplios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y teclado ideales para este juego."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona con ajustes en sistemas actuales."
+            }
+          ]
         },
         {
           "id": 63385,
@@ -114,7 +167,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 46085,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión de consola con menos contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "El mando es incómodo para la simulación."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Adaptación con cambios importantes."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más fácil de ejecutar, pero con limitaciones."
+            }
+          ]
         }
       ],
       "images": {
@@ -122,5 +196,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2244,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25156,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 2880,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

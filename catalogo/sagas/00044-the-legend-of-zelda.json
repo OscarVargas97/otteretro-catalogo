@@ -3,7 +3,7 @@
   "name": "The Legend of Zelda",
   "igdbKind": "franchise",
   "igdbId": 596,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -19,9 +19,15 @@
       "originalName": "The Legend of Zelda: A Link to the Past",
       "year": 1991,
       "igdbId": 1026,
-      "popularity": 1734,
-      "iconic": false,
+      "popularity": 1736,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "97",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Legend of Zelda: A Link to the Past",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: A Link to the Past",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Venture back to Hyrule and an age of magic and heroes. The predecessors of Link and Zelda face monsters on the march when a menacing magician takes over the kingdom. Only you can prevent his evil plot from shattering the land of Hyrule.\n\nIn your quest, you'll venture into twisting mazes, dungeons, palaces and shadowy forests. Test your mettle with mighty swords and magical weapons. Or heft a boulder and hurl it at your enemies. If the going gets tough, dive into a river - you can swim to escape! Learn powerful spells, locate magical artifacts and solve the mysteries of the evil magician and the hidden realm of Hyrule.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Regresa a Hyrule y a una era de magia y héroes. Los antecesores de Link y Zelda se enfrentan a monstruos que avanzan cuando un malvado mago se apodera del reino. Solo tú puedes evitar que su plan perverso destroce la tierra de Hyrule.\n\nEn tu búsqueda, te adentrarás en laberintos sinuosos, mazmorras, palacios y bosques sombríos. Pon a prueba tu valor con poderosas espadas y armas mágicas. O levanta una roca y arrójala contra tus enemigos. Si las cosas se complican, ¡sumérgete en un río: puedes nadar para escapar! Aprende hechizos poderosos, localiza artefactos mágicos y resuelve los misterios del malvado mago y del reino oculto de Hyrule.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 1026,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado por batería, sin ayudas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Hardware original, muy estable."
+            }
+          ]
         },
         {
           "id": 96,
@@ -56,7 +95,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 1026,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado normal."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 97,
@@ -64,7 +124,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1026,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración y GamePad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Imagen nítida y estable."
+            }
+          ]
         },
         {
           "id": 98,
@@ -72,7 +153,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 1026,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Restauración y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 5301,
@@ -80,14 +182,77 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 229416,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Incluye Four Swords como extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Pantalla chica y botones reducidos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambia diálogos y sonido."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla oscura y sonido más débil."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/7edaadde50012f0860952123564eb1ba.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/2797fe1cc41844ef473a623bab9d32b0.png",
         "logo": "https://cdn2.steamgriddb.com/logo/d94c59b53ea6a9eec0a47ae789867098.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 429,
+          "platform": "snes",
+          "project": "Z3R",
+          "kind": "remake",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/xander-haj/Z3R",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 430,
+          "platform": "snes",
+          "project": "zelda3",
+          "kind": "remake",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/snesrev/zelda3",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        },
+        {
+          "id": 1183,
+          "platform": "snes",
+          "project": "ZeldaAlttPSNESRecomp",
+          "kind": "recomp",
+          "toolchain": "snesrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/ZeldaAlttPSNESRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 1161,
@@ -95,9 +260,15 @@
       "originalName": "The Legend of Zelda: Ocarina of Time",
       "year": 1998,
       "igdbId": 1029,
-      "popularity": 2181,
-      "iconic": false,
+      "popularity": 2183,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "2809",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Legend of Zelda: Ocarina of Time",
@@ -108,6 +279,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Ocarina of Time",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Ocarina of Time is the fifth main installment of The Legend of Zelda series and the first to be released for the Nintendo 64. It was one of the most highly anticipated games of its age, and is listed among the greatest video games ever created by numerous websites and magazines. The gameplay of Ocarina of Time was revolutionary for its time, it has arguably made more of an impact on later games in the series than any of its predecessors even though they had the same cores of exploration, dungeons, puzzles and item usage. Among the gameplay mechanics, one of the most noteworthy is the time-traveling system. The game begins with the player controlling the child Link, but later on an adult Link becomes a playable character as well and each of them has certain unique abilities. Ocarina of Time also introduces the use of music to solve puzzles: as new songs are learned, they can be used to solve puzzles, gain access to new areas and warp to different locations. Dungeon exploration is somewhat more puzzle-oriented than in earlier games but they are not too complex.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Ocarina of Time es la quinta entrega principal de la serie The Legend of Zelda y la primera lanzada para Nintendo 64. Fue uno de los juegos más esperados de su época y numerosas webs y revistas lo incluyen entre los mejores videojuegos jamás creados. Su jugabilidad fue revolucionaria para su tiempo y, posiblemente, ha influido más en los juegos posteriores de la serie que cualquiera de sus predecesores, aunque compartía los mismos pilares de exploración, mazmorras, acertijos y uso de objetos. Entre sus mecánicas, una de las más destacadas es el sistema de viajes en el tiempo. El juego comienza con el jugador controlando al Link niño, pero más adelante el Link adulto también pasa a ser un personaje jugable, y cada uno tiene habilidades únicas. Ocarina of Time también introduce el uso de la música para resolver acertijos: a medida que se aprenden nuevas canciones, pueden usarse para resolver enigmas, acceder a nuevas zonas y teletransportarse a distintos lugares. La exploración de las mazmorras está algo más orientada a los acertijos que en juegos anteriores, aunque no son demasiado complejas.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -124,7 +307,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1029,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando clásico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más nítido, 20 fps."
+            }
+          ]
         },
         {
           "id": 2189,
@@ -132,7 +336,32 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 1029,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Menús lentos y cámara básica."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y 20 fps."
+            }
+          ],
+          "codes": [
+            "CZLE",
+            "NZLP"
+          ]
         },
         {
           "id": 2190,
@@ -140,7 +369,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1029,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Restauración y GamePad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Nítido, 20 fps."
+            }
+          ]
         },
         {
           "id": 2809,
@@ -148,7 +398,28 @@
           "kind": "remake",
           "year": 2011,
           "igdbId": 1039,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Master Quest, jefes y ayudas añadidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Pantalla táctil, giroscopio y menús ágiles."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con retoques."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos nuevos, 30 fps."
+            }
+          ]
         },
         {
           "id": 2868,
@@ -156,14 +427,66 @@
           "kind": "remake",
           "year": 2026,
           "igdbId": 405460,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Datos no verificados, remake reciente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Probablemente controles modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Remake, no verificado."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Probablemente mejor resolución."
+            }
+          ],
+          "codes": [
+            "0400486024DEC000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/ed89e6477ff6a465891a5f17f77948ae.png",
         "hero": "https://cdn2.steamgriddb.com/hero/1595af6435015c77a7149e92a551338e.png",
         "logo": "https://cdn2.steamgriddb.com/logo/e440113dde9d989caff2c0f405ad1334.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 262,
+          "platform": "n64",
+          "project": "oot-PSP",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/z2442/oot-PSP",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 350,
+          "platform": "n64",
+          "project": "Shipwright",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/HarbourMasters/Shipwright",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1323,
@@ -175,6 +498,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2811",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Majora's Mask",
           "source": "igdb",
@@ -184,6 +513,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Majora's Mask",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Majora's Mask is a direct sequel to Ocarina of Time, it utilizes the same engine and visual style as its predecessor. The game retains the traditional elements of Zelda games as well as those introduced in Ocarina of Time, such as active blocking with a shield, various throwing items, and the usage of melodies played on the ocarina to solve puzzles. Compared to the previous Zelda games, this installment is more oriented towards interaction with NPCs and has a larger variety of items, optional quests, and mini-games. It also includes a time system that spans three days, and this cycle must be reset periodically to progress through the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Majora's Mask es una secuela directa de Ocarina of Time y utiliza el mismo motor y estilo visual que su predecesor. El juego conserva los elementos tradicionales de los juegos de Zelda, así como los introducidos en Ocarina of Time, como bloquear con el escudo, lanzar distintos objetos y usar melodías tocadas con la ocarina para resolver acertijos. En comparación con los juegos anteriores de Zelda, esta entrega se centra más en la interacción con los personajes no jugables y tiene una mayor variedad de objetos, misiones opcionales y minijuegos. También incluye un sistema de tiempo que abarca tres días, y este ciclo debe reiniciarse periódicamente para avanzar en el juego.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -200,7 +541,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 1030,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Guardado igual."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más nítido."
+            }
+          ]
         },
         {
           "id": 2476,
@@ -208,7 +570,32 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 1030,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Guardado limitado a búhos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Caídas de fps, baja resolución."
+            }
+          ],
+          "codes": [
+            "NZSE",
+            "NZSP"
+          ]
         },
         {
           "id": 2477,
@@ -216,7 +603,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 1030,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Restauración y GamePad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Nítido pero con fps bajos."
+            }
+          ]
         },
         {
           "id": 2811,
@@ -224,14 +632,64 @@
           "kind": "remake",
           "year": 2015,
           "igdbId": 8593,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Jefes nuevos, banco y pesca mejorada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado fácil y mejores menús."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel con retoques."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, 3D y mejores gráficos."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/958c6e525626a72dc5722a63f638a80b.png",
         "hero": "https://cdn2.steamgriddb.com/hero/25fa2d39a0143f1f30c36eece145a526.png",
         "logo": "https://cdn2.steamgriddb.com/logo/fe8c15fed5f808006ce95eddb7366e35.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1,
+          "platform": "n64",
+          "project": "2ship2harkinian",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/2ship2harkinian/2ship2harkinian",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        },
+        {
+          "id": 1305,
+          "platform": "n64",
+          "project": "Zelda64Recomp",
+          "kind": "recomp",
+          "toolchain": "N64Recomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/Zelda64Recomp/Zelda64Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "ares / simple64"
+        }
+      ]
     },
     {
       "id": 1395,
@@ -243,6 +701,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2606",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Ocarina of Time - Master Quest",
           "source": "igdb",
@@ -252,6 +716,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Ocarina of Time - Master Quest",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Ocarina of Time - Master Quest is a reworked version of the original Ocarina of Time for the Nintendo 64. Master Quest contains largely the same content as the original game but with more redesigned and difficult dungeons. Master Quest was available on a special bonus disc that also contained the original Ocarina of Time, it was given out in limited quantities with preorders of The Wind Waker. It was previously developed to be released as an expansion to the original game via the Nintendo 64DD, but that version was cancelled due to the lackluster sales of the hardware.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Ocarina of Time - Master Quest es una versión rehecha del Ocarina of Time original para Nintendo 64. Master Quest contiene en gran medida el mismo contenido que el juego original, pero con mazmorras rediseñadas y más difíciles. Master Quest se incluyó en un disco de bonificación especial que también contenía el Ocarina of Time original; se repartió en cantidades limitadas con las reservas de The Wind Waker. Originalmente se había desarrollado para lanzarse como expansión del juego original a través de la Nintendo 64DD, pero esa versión se canceló debido a las escasas ventas del hardware.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -268,7 +744,14 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 45142,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-D43E-USA",
+            "DL-DOL-D43P-EUR",
+            "DL-DOL-D43P-EUR-1",
+            "DL-DOL-D43U-AUS",
+            "DL-DOL-D43W-KOR"
+          ]
         },
         {
           "id": 2607,
@@ -276,7 +759,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 45142,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CZLE",
+            "NZLP"
+          ]
         }
       ],
       "images": {
@@ -295,6 +782,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2945",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda",
           "source": "igdb",
@@ -304,6 +797,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda is the first title in the Zelda series, it has marked the history of video games particularly for it's game mechanics and universe. The player controls Link and must make his way through the forests, graveyards, plains and deserts of the Otherworld to find the secret entrances to the eight dungeons and try to restore the broken Triforce. Among the game's mechanics, it was the first time we saw a continuous world that could be freely explored, power-ups that permanently enhanced the main character's abilities and a battery save feature that allowed players to keep their progress instead of having to start over. The gameplay balanced action sequences with discovery, secrets and exploration.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda es el primer título de la serie Zelda y ha marcado la historia de los videojuegos, en particular por sus mecánicas de juego y su universo. El jugador controla a Link y debe atravesar los bosques, cementerios, llanuras y desiertos del Otromundo para encontrar las entradas secretas a las ocho mazmorras e intentar restaurar la Trifuerza rota. Entre las mecánicas del juego, fue la primera vez que se vio un mundo continuo que podía explorarse libremente, mejoras que potenciaban de forma permanente las habilidades del personaje principal y una función de guardado con batería que permitía conservar el progreso en lugar de tener que empezar de nuevo. La jugabilidad equilibraba las secuencias de acción con el descubrimiento, los secretos y la exploración.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -320,7 +825,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1022,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Punto de restauración y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación limpia en pantalla chica."
+            }
+          ]
         },
         {
           "id": 2944,
@@ -328,7 +854,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 1022,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado normal, sin puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable en TV."
+            }
+          ]
         },
         {
           "id": 2945,
@@ -336,7 +883,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1022,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración y juego en el GamePad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Imagen nítida en TV, sin lag notable."
+            }
+          ]
         },
         {
           "id": 2946,
@@ -344,7 +912,28 @@
           "kind": "original",
           "year": 1987,
           "igdbId": 1022,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego base sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Guardado por batería y sin ayudas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, 240p, con parpadeo de sprites."
+            }
+          ]
         },
         {
           "id": 3692,
@@ -352,14 +941,64 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 18066,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Sin extras, solo el juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Suspensión y guardado en pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel, con pantalla reducida."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla GBA pequeña y recortada."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/e49cc7c344acaf1160fd6c2a0190f056.png",
         "hero": "https://cdn2.steamgriddb.com/hero/84772b18cf780e3c76ec5e6eec6d6f71.png",
         "logo": "https://cdn2.steamgriddb.com/logo/b81129068ebeabccd293d31c99d510f4.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1196,
+          "platform": "nes",
+          "project": "LegendOfZeldaNESRecomp",
+          "kind": "recomp",
+          "toolchain": "nesrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/LegendOfZeldaNESRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Mesen"
+        },
+        {
+          "id": 1311,
+          "platform": "nes",
+          "project": "ZQuest Classic",
+          "kind": "engine",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://zquestclassic.com/releases/",
+          "source": "readonlymemo.com",
+          "added": "2026-10-14",
+          "emulator": "Mesen"
+        }
+      ]
     },
     {
       "id": 1780,
@@ -367,9 +1006,15 @@
       "originalName": "The Legend of Zelda: The Minish Cap",
       "year": 2004,
       "igdbId": 1035,
-      "popularity": 442,
+      "popularity": 443,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "3474",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Legend of Zelda: The Minish Cap",
@@ -380,6 +1025,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: The Minish Cap",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: The Minish Cap is a top-down action adventure game that tells the origins of the evil Vaati from Four Swords. Like most other titles in the series, The Minish Cap features the fully explorable land of Hyrule, although it can be viewed from the eyes of a human or the eyes of a Minish, a race of tiny people and an alternate form that Link can transform into. Unlike the multiplayer focus of the other games in the series, The Minish Cap retains the original form of exploration and dungeons as seen in A Link to the Past, Oracle of Seasons, and Oracle of Ages, as well as returning characters and game mechanics such as Malon and the Spin Attack. New features include fusing Kinstones and shrinking to the size of a Minish.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: The Minish Cap es un juego de aventuras y acción con perspectiva cenital que narra los orígenes del malvado Vaati, de Four Swords. Como la mayoría de títulos de la serie, The Minish Cap presenta el reino de Hyrule, totalmente explorable, aunque puede verse desde los ojos de un humano o desde los de un Minish, un pueblo de personas diminutas y una forma alternativa en la que Link puede transformarse. A diferencia del enfoque multijugador de otros juegos de la serie, The Minish Cap conserva la forma original de exploración y mazmorras que se ve en A Link to the Past, Oracle of Seasons y Oracle of Ages, así como personajes y mecánicas recurrentes como Malon y el Giro de Ataque. Entre las novedades se encuentran la fusión de Kinstones y el encogimiento hasta el tamaño de un Minish.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -396,7 +1053,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1035,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Restauración y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Pantalla más nítida."
+            }
+          ]
         },
         {
           "id": 3474,
@@ -404,7 +1082,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 1035,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Restauración y GamePad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Imagen nítida en TV."
+            }
+          ]
         },
         {
           "id": 3475,
@@ -412,14 +1111,94 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1035,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado clásico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla GBA oscura."
+            }
+          ],
+          "codes": [
+            "BZME",
+            "BZMP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/a687f78b9842c87225e74921765feb1b.png",
         "hero": "https://cdn2.steamgriddb.com/hero/87294011f0e8aa7e329fa6184874bc44.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/e1dc4bf1f94e87fdfeb2d91ae3dc10ef.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 250,
+          "platform": "gba",
+          "project": "zelda-tmc-3ds",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/EstebanPdN/zelda-tmc-3ds",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "mGBA"
+        },
+        {
+          "id": 251,
+          "platform": "gba",
+          "project": "Project Picori",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/999sian/tmc",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "mGBA"
+        },
+        {
+          "id": 905,
+          "platform": "gba",
+          "project": "MinishCapRecomp",
+          "kind": "recomp",
+          "toolchain": "gbarecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/mstan/MinishCapRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "mGBA"
+        },
+        {
+          "id": 1462,
+          "platform": "gba",
+          "project": "tmc",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/zeldaret/tmc",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "mGBA"
+        }
+      ]
     },
     {
       "id": 2410,
@@ -431,6 +1210,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "4416",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zelda II: The Adventure of Link",
           "source": "igdb",
@@ -440,6 +1225,18 @@
           "field": "original_name",
           "value": "Zelda II: The Adventure of Link",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Zelda II: The Adventure of Link is the second major installment in The Legend of Zelda series and the direct sequel to the first game. Like its predecessor, it features dungeons that must be located in the overworld and searched for an item that will prove useful. However, the game presents many very important gameplay changes compared to the previous one, affecting especially the movements and the combat. Moving around the world map involves encounters with enemies that take place on a side-scrolling playfield rather than the top-down perspective for which the series became known.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Zelda II: The Adventure of Link es la segunda gran entrega de la serie The Legend of Zelda y la secuela directa del primer juego. Al igual que su predecesor, presenta mazmorras que deben localizarse en el mundo exterior y en las que hay que buscar un objeto útil. Sin embargo, el juego introduce muchos cambios importantes en la jugabilidad en comparación con el anterior, afectando especialmente al movimiento y al combate. Desplazarse por el mapa del mundo implica enfrentarse a enemigos en un escenario de desplazamiento lateral, en lugar de la perspectiva cenital por la que la serie se hizo conocida.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -456,7 +1253,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 1025,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Punto de restauración y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación limpia."
+            }
+          ]
         },
         {
           "id": 4415,
@@ -464,7 +1282,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1025,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado básico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable."
+            }
+          ]
         },
         {
           "id": 4416,
@@ -472,7 +1311,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1025,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntos de restauración y GamePad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Imagen nítida en TV."
+            }
+          ]
         },
         {
           "id": 4417,
@@ -480,7 +1340,28 @@
           "kind": "original",
           "year": 1988,
           "igdbId": 1025,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Sin ayudas, muy exigente."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original, 240p."
+            }
+          ]
         },
         {
           "id": 5385,
@@ -488,14 +1369,50 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 136280,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Sin extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado más cómodo, pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla GBA reducida."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/657b0ad0569f3ceae3427be2623753cc.png",
         "hero": "https://cdn2.steamgriddb.com/hero/e8b1cbd05f6e6a358a81dee52493dd06.png",
         "logo": "https://cdn2.steamgriddb.com/logo/a714b6bada5e4ad469abf003c9d2c3d8.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 499,
+          "platform": "nes",
+          "project": "z2rs",
+          "kind": "port",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/troyedwardsjr/z2rs",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Mesen"
+        }
+      ]
     },
     {
       "id": 2542,
@@ -507,6 +1424,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7815",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Four Swords",
           "source": "igdb",
@@ -516,6 +1439,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Four Swords",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Four Swords is a multiplayer game in the Zelda series originally released together with The Legend of Zelda: A Link to the Past for the Game Boy Advance. The game has many features not seen in the series and it requires at least two people to play and uses randomly generated dungeons. During the game, players must collect as many Ruppees as possible while solving puzzles and defeating enemies. When enough Ruppees are collected, the Great Fairy will give the players a key to open the unlockable level. At the end of each level, the one who collects the most Ruppees will be the winner.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Four Swords es un juego multijugador de la serie Zelda, lanzado originalmente junto con The Legend of Zelda: A Link to the Past para Game Boy Advance. El juego tiene muchas características que no se habían visto antes en la serie, requiere al menos dos personas para jugar y utiliza mazmorras generadas aleatoriamente. Durante la partida, los jugadores deben reunir todas las rupias posibles mientras resuelven acertijos y derrotan enemigos. Cuando se reúne una cantidad suficiente de rupias, la Gran Hada entrega a los jugadores una llave para abrir el nivel desbloqueable. Al final de cada nivel, quien haya reunido más rupias es el ganador.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -532,7 +1467,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 163572,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Solo multijugador con varias GBA."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "1",
+              "text": "Requiere varias consolas y cables."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Estable en hardware original."
+            }
+          ]
         },
         {
           "id": 7815,
@@ -540,7 +1496,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 45143,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición aniversario con modos extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Más cómodo en 3DS."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Edición ampliada."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 7816,
@@ -548,7 +1525,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 45143,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Edición aniversario con modos extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Juego por conexión local."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Edición ampliada."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -577,6 +1575,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Freshly-Picked Tingle's Rosy Rupeeland is an adventure video game developed by Vanpool and published by Nintendo for the Nintendo DS handheld game console. It was first released in Japan, and was released in Europe on September 14, 2007, a year after its Japanese release.\nFreshly-Picked Tingle's Rosy Rupeeland stars Tingle, a character who has appeared in several games in The Legend of Zelda series starting from The Legend of Zelda: Majora's Mask for the Nintendo 64. It was commercially successful in Japan, selling 234,862 units by the end of 2007.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Freshly-Picked Tingle's Rosy Rupeeland es un videojuego de aventuras desarrollado por Vanpool y publicado por Nintendo para la consola portátil Nintendo DS. Se lanzó primero en Japón y llegó a Europa el 14 de septiembre de 2007, un año después de su lanzamiento japonés.\nFreshly-Picked Tingle's Rosy Rupeeland protagonizado por Tingle, un personaje que ha aparecido en varios juegos de la serie The Legend of Zelda desde The Legend of Zelda: Majora's Mask para Nintendo 64. Tuvo éxito comercial en Japón, con 234.862 unidades vendidas a finales de 2007.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -590,7 +1600,10 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 11607,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ACHP"
+          ]
         }
       ],
       "images": {
@@ -609,6 +1622,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6194",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Phantom Hourglass",
           "source": "igdb",
@@ -618,6 +1637,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Phantom Hourglass",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Phantom Hourglass is the first Zelda game for the Nintendo DS and a direct sequel to The Wind Waker. The art direction is the same cel-shaded style as the Wind Waker but is displayed from a classic top-down perspective. The gameplay is structured similarly to other games in the series and is divided into two major gameplay sections: sailing between islands and exploring the islands and their dungeons on foot. The touch screen is used to make Link move and attack instead of buttons, you can also make notes of secret treasures and items on the map simply by writing them down. The game received critical acclaim from reviewers, who agreed that the game was a worthy sequel to The Wind Waker.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Phantom Hourglass es el primer juego de Zelda para Nintendo DS y una secuela directa de The Wind Waker. La dirección artística es el mismo estilo con cel-shading de The Wind Waker, pero se muestra desde una clásica perspectiva cenital. La jugabilidad está estructurada de forma similar a otros juegos de la serie y se divide en dos grandes partes: navegar entre islas y explorar las islas y sus mazmorras a pie. La pantalla táctil se usa para mover y atacar a Link en lugar de los botones; además, puedes anotar en el mapa tesoros y objetos secretos simplemente escribiéndolos. El juego recibió elogios de la crítica, que coincidió en que era una digna secuela de The Wind Waker.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -634,7 +1665,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1037,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil en GamePad, micrófono adaptado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Escalado más nítido."
+            }
+          ]
         },
         {
           "id": 6195,
@@ -642,14 +1694,69 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 1037,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Táctil y micrófono originales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Baja resolución de DS."
+            }
+          ],
+          "codes": [
+            "AZEE",
+            "AZEP",
+            "WUP-N-DATE",
+            "WUP-N-DATP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/dc9b1f479f6893e3b4d2c5efc3fb0f05.png",
         "hero": "https://cdn2.steamgriddb.com/hero/aa9fb775b71bb8fffdc3962bccab7cb0.png",
         "logo": "https://cdn2.steamgriddb.com/logo/4311359ed4969e8401880e3c1836fbe1.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1188,
+          "platform": "ds",
+          "project": "phantom-hourglass-recomp",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/dguillot-gh/phantom-hourglass-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "melonDS"
+        },
+        {
+          "id": 1459,
+          "platform": "ds",
+          "project": "ph",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/zeldaret/ph",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "melonDS"
+        }
+      ]
     },
     {
       "id": 3419,
@@ -661,6 +1768,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6711",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Spirit Tracks",
           "source": "igdb",
@@ -670,6 +1783,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Spirit Tracks",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Spirit Tracks is the second Zelda game for the Nintendo DS. The art direction is still cel-shading, but the game have notable changes from Phantom Hourglass with more puzzles and a new mode of transportation by train. You have to draw your route to the next area on the map and then let the train run its course. While the train is moving, caution will be needed to avoid obstacles, animals and enemies on the tracks. In certain dungeons, both Link and Zelda will be playable as they will need to work together to solve puzzles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Spirit Tracks es el segundo juego de Zelda para Nintendo DS. La dirección artística sigue siendo el cel-shading, pero el juego presenta cambios notables respecto a Phantom Hourglass, con más acertijos y un nuevo medio de transporte: el tren. Debes trazar tu ruta hacia la siguiente zona en el mapa y luego dejar que el tren recorra su trayecto. Mientras el tren avanza, hay que tener cuidado para evitar obstáculos, animales y enemigos en las vías. En ciertas mazmorras, tanto Link como Zelda serán jugables, ya que deberán trabajar juntos para resolver acertijos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -686,7 +1811,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1038,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil en GamePad, micrófono adaptado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi idéntico."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Escalado más nítido."
+            }
+          ]
         },
         {
           "id": 6712,
@@ -694,14 +1840,57 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 1038,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Táctil y micrófono originales."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Baja resolución de DS."
+            }
+          ],
+          "codes": [
+            "BKIE",
+            "BKIP",
+            "NTRJ",
+            "WUP-N-DARE",
+            "WUP-N-DARP"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3bf132226d3001406fa2a834558912a2.png",
         "hero": "https://cdn2.steamgriddb.com/hero/6a1eb08082e599be20b641013fb8901c.png",
         "logo": "https://cdn2.steamgriddb.com/logo/92977ae4d2ba21425a59afb269c2a14e.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1461,
+          "platform": "ds",
+          "project": "st",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/zeldaret/st",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "melonDS"
+        }
+      ]
     },
     {
       "id": 4053,
@@ -713,6 +1902,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "12015",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Link's Awakening",
           "source": "igdb",
@@ -722,6 +1917,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Link's Awakening",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Link's Awakening is the first title in the series to be released on a handheld system and the only Zelda title on the original Game Boy. The gameplay is mostly similar to its predecessor with a top-down perspective, however there are short sections in dungeons where the game switches to a side-scrolling view with platforming elements. For this new adventure, Link must go onto each of the 7 temples to retrieve a musical instrument that will help awaken the Wind Fish. Along the way, he must search the land and uncover hidden treasures and items that will allow him to progress on his journey. Since its release, Link's Awakening has been popular among fans and critics.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Link's Awakening es el primer título de la serie lanzado en una consola portátil y el único título de Zelda en la Game Boy original. La jugabilidad es en su mayor parte similar a la de su predecesor, con perspectiva cenital; sin embargo, hay breves secciones en las mazmorras en las que el juego cambia a una vista de desplazamiento lateral con elementos de plataformas. En esta nueva aventura, Link debe visitar cada uno de los 7 templos para recuperar un instrumento musical que ayudará a despertar al Pez del Viento. En el camino, debe explorar la tierra y descubrir tesoros y objetos ocultos que le permitirán avanzar en su viaje. Desde su lanzamiento, Link's Awakening ha sido popular entre los fans y la crítica.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -738,7 +1945,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 1028,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Sin mazmorra de color ni cámara."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles antiguos y pantalla monocroma."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla monocroma de baja resolución."
+            }
+          ]
         },
         {
           "id": 8860,
@@ -746,7 +1974,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 1027,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "DX: color, mazmorra extra y cámara."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles antiguos, inventario limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original con mejoras."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Color y estable."
+            }
+          ]
         },
         {
           "id": 8861,
@@ -754,7 +2003,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 1027,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Igual que DX."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Punto de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original con mejoras."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación limpia."
+            }
+          ]
         },
         {
           "id": 12015,
@@ -762,7 +2032,28 @@
           "kind": "remake",
           "year": 2025,
           "igdbId": 115284,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Igual que el remake."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fps estables."
+            }
+          ]
         },
         {
           "id": 12016,
@@ -770,14 +2061,54 @@
           "kind": "remake",
           "year": 2019,
           "igdbId": 115284,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mundo rehecho y creador de mazmorras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles modernos y mapa cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Fiel en estructura, estilo nuevo."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Caídas de fps notables."
+            }
+          ],
+          "codes": [
+            "01006BB00C6F0000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/0ec360c243d4a23244accb3d04851604.png",
         "hero": "https://cdn2.steamgriddb.com/hero/5fa2bff730d799299a1c095a9f3c031d.png",
         "logo": "https://cdn2.steamgriddb.com/logo/d61f3a760c9bcbc9bb75228deddd9379.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 841,
+          "platform": "switch",
+          "project": "LASRecomp",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/peiikai/LASRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        }
+      ]
     },
     {
       "id": 4086,
@@ -789,6 +2120,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8061",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Oracle of Seasons",
           "source": "igdb",
@@ -798,6 +2135,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Oracle of Seasons",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Oracle of Seasons is one of two Zelda titles released for the Game Boy Color, the other being Oracle of Ages. The game retain many gameplay elements from Link's Awakening such as the graphics, audio and top-view perspective. It also features eight dungeons and a large overworld to explore like in the previous games. Oracle of Seasons is said to be more action-oriented than its counterpart being more puzzle-oriented. After completing one of the two games, both can be linked to form a single linear plot with an alternate ending. Oracle of Seasons and Oracle of Ages were often credited as being two of the top games for the Game Boy Color.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Oracle of Seasons es uno de los dos títulos de Zelda lanzados para Game Boy Color; el otro es Oracle of Ages. El juego conserva muchos elementos de jugabilidad de Link's Awakening, como los gráficos, el audio y la perspectiva cenital. También cuenta con ocho mazmorras y un amplio mundo exterior por explorar, como en los juegos anteriores. Se dice que Oracle of Seasons está más orientado a la acción que su contraparte, que se centra más en los acertijos. Tras completar uno de los dos juegos, ambos pueden enlazarse para formar una única trama lineal con un final alternativo. Oracle of Seasons y Oracle of Ages fueron considerados con frecuencia como dos de los mejores juegos de Game Boy Color.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -814,7 +2163,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 1032,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con enlace a Ages."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado por batería."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original."
+            }
+          ]
         },
         {
           "id": 8061,
@@ -822,7 +2192,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1032,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Restauración y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación limpia."
+            }
+          ]
         }
       ],
       "images": {
@@ -841,6 +2232,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8063",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Oracle of Ages",
           "source": "igdb",
@@ -850,6 +2247,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Oracle of Ages",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Oracle of Ages is one of two Zelda titles released for the Game Boy Color, the other being Oracle of Seasons. The game retain many gameplay elements from Link's Awakening such as the graphics, audio and top-view perspective. It also features eight dungeons and a large overworld to explore like in the previous games. Oracle of Ages is said to be more puzzle-oriented than its counterpart being more action-oriented. After completing one of the two games, both can be linked to form a single linear plot with an alternate ending. Oracle of Ages and Oracle of Seasons were often credited as being two of the top games for the Game Boy Color.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Oracle of Ages es uno de los dos títulos de Zelda lanzados para Game Boy Color; el otro es Oracle of Seasons. El juego conserva muchos elementos de jugabilidad de Link's Awakening, como los gráficos, el audio y la perspectiva cenital. También cuenta con ocho mazmorras y un amplio mundo exterior por explorar, como en los juegos anteriores. Se dice que Oracle of Ages está más orientado a los acertijos que su contraparte, que se centra más en la acción. Tras completar uno de los dos juegos, ambos pueden enlazarse para formar una única trama lineal con un final alternativo. Oracle of Ages y Oracle of Seasons fueron considerados con frecuencia como dos de los mejores juegos de Game Boy Color.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -866,7 +2275,28 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 1041,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo con enlace a Seasons."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado por batería."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Hardware original."
+            }
+          ]
         },
         {
           "id": 8063,
@@ -874,7 +2304,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 1041,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Restauración y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación limpia."
+            }
+          ]
         }
       ],
       "images": {
@@ -905,6 +2356,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Legend of Zelda: A Link Between Worlds is the first Zelda game made exclusively for the Nintendo 3DS. It is an indirect sequel to A Link to the Past with the same version of Hyrule but with new characters and gameplay elements. Unlike the series' tradition, many areas of the world are accessible from the beginning of the game and the dungeons can be visited in any order. Puzzles are encountered not only in dungeons but also in the open world, a part of them revolves around the game's 3D visual effect. The 3DS touch-screen display shows the world, dungeon or map depending on where you are.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: A Link Between Worlds es el primer juego de Zelda creado exclusivamente para Nintendo 3DS. Es una secuela indirecta de A Link to the Past, con la misma versión de Hyrule, pero con nuevos personajes y elementos de jugabilidad. A diferencia de la tradición de la serie, muchas zonas del mundo son accesibles desde el inicio del juego y las mazmorras pueden visitarse en el orden que se desee. Los acertijos aparecen no solo en las mazmorras, sino también en el mundo abierto, y parte de ellos gira en torno al efecto visual 3D de la consola. La pantalla táctil de la 3DS muestra el mundo, la mazmorra o el mapa según dónde te encuentres.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -918,7 +2381,11 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 2909,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-BZLE",
+            "CTR-P-BZLP"
+          ]
         }
       ],
       "images": {
@@ -937,6 +2404,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8554",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hyrule Warriors",
           "source": "igdb",
@@ -946,6 +2419,18 @@
           "field": "original_name",
           "value": "Hyrule Warriors",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A Legendary Pairing: Cut down entire legions of enemies as Link, Zelda, Midna and other characters from The Legend of Zelda franchise using over-the-top powerful Dynasty Warriors-style moves. This tour de force through the beloved locales of Hyrule will have players battling some of the fiercest enemies in The Legend of Zelda history. Two players can play local co-op, with one player joining with the Wii U GamePad controller and another with the Wii U Pro Controller or Wii Remote and Nunchuk controllers.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Una pareja legendaria: Derriba legiones enteras de enemigos como Link, Zelda, Midna y otros personajes de la saga The Legend of Zelda, usando movimientos exagerados y poderosos al estilo de Dynasty Warriors. Esta proeza por los queridos escenarios de Hyrule enfrentará a los jugadores con algunos de los enemigos más feroces de la historia de The Legend of Zelda. Dos jugadores pueden jugar en cooperativo local: uno se une con el mando GamePad de Wii U y el otro con el mando Pro de Wii U o con el Wii Remote y el Nunchuk.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -962,7 +2447,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 5314,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base y DLC con personajes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Combate fluido en pantalla grande."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 8950,
@@ -970,7 +2476,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 11193,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Legends: más personajes y modos incluidos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles más limitados."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Versión ampliada para portátil."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y caídas de fps."
+            }
+          ]
         }
       ],
       "images": {
@@ -1001,6 +2528,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Legend of Zelda: Tri Force Heroes is the direct sequel to The Legend of Zelda: A Link Between Worlds. The game is similar to the Four Swords games in which Link is accompanied by two other Links in the game's multiplayer mode, but it also allows for a single-player mode in which the other Links are replaced by animated dolls that can be swapped out during the game. The three Link can cooperate in a variety of ways to solve puzzles and coordinate their attacks with the help of on-screen notifications that give clues on what to do.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Tri Force Heroes es la secuela directa de The Legend of Zelda: A Link Between Worlds. El juego es similar a los Four Swords, en los que Link está acompañado por otros dos Links en el modo multijugador, pero también incluye un modo para un jugador en el que los otros Links son sustituidos por muñecos animados que pueden intercambiarse durante la partida. Los tres Links pueden cooperar de diversas formas para resolver acertijos y coordinar sus ataques con la ayuda de notificaciones en pantalla que dan pistas sobre qué hacer.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -1014,7 +2553,11 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 11194,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-EA3E",
+            "CTR-P-EA3P"
+          ]
         }
       ],
       "images": {
@@ -1042,6 +2585,18 @@
           "field": "original_name",
           "value": "My Nintendo Picross: The Legend of Zelda Twilight Princess",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "My Nintendo Picross: The Legend of Zelda Twilight Princess is a downloadable title only available through the My Nintendo rewards program.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "My Nintendo Picross: The Legend of Zelda Twilight Princess es un título descargable disponible únicamente a través del programa de recompensas My Nintendo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1077,6 +2632,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "11026",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Picross",
           "source": "igdb",
@@ -1086,6 +2647,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Picross",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A picross fangame based on A Link to the Past, available for Windows and in the Universal Updater for the 3DS homebrew.\n\nYou start at Link's house, go to Hyrule Field where a fork leads you to the main dungeon (since the other ways are blocked by a boulder and a grass respectively), fight an enemy in the dungeon that gives you a sword to cut the grass, and so on. It has exploration, bosses, itens, hearts and a bucketload of picross puzzles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un fangame de picross basado en A Link to the Past, disponible para Windows y en el Universal Updater para el homebrew de la 3DS.\n\nComienzas en la casa de Link, vas a la llanura de Hyrule, donde una bifurcación te lleva a la mazmorra principal (ya que los otros caminos están bloqueados por una roca y por hierba, respectivamente), luego derrotas a un enemigo de la mazmorra que te da una espada para cortar la hierba, y así sucesivamente. Tiene exploración, jefes, objetos, corazones y una gran cantidad de puzles de picross.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1102,7 +2675,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 172690,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego oficial completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil cómodo para Picross."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión de referencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable."
+            }
+          ]
         },
         {
           "id": 11027,
@@ -1110,7 +2704,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 172690,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "No verificado, contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de ratón o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "No verificado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Sin datos claros."
+            }
+          ]
         }
       ],
       "images": {
@@ -1127,6 +2742,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "14913",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Skyward Sword",
           "source": "igdb",
@@ -1136,6 +2757,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Skyward Sword",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Skyward Sword is the first Zelda game created specifically with the Wii in mind. The game makes use of the Wii MotionPlus peripheral for sword fighting, with a revised Wii Remote pointing system used for targeting. Skyward Sword is structured very similar to previous Zelda games, as you travel through an overworld in search of temples to visit and once in you solve a series of puzzles before fighting a boss at the end and receive the next bit of plot. The biggest change is that the overworld is more focused on puzzles with only a handful of action.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Skyward Sword es el primer juego de Zelda creado específicamente pensando en Wii. El juego utiliza el accesorio Wii MotionPlus para los combates con espada, con un sistema de apuntado del Wii Remote revisado para seleccionar objetivos. Skyward Sword está estructurado de forma muy similar a los juegos anteriores de Zelda: viajas por un mundo exterior en busca de templos a los que acceder y, una vez dentro, resuelves una serie de acertijos antes de enfrentarte a un jefe al final y recibir la siguiente parte de la trama. El cambio más importante es que el mundo exterior se centra más en los acertijos, con apenas un puñado de momentos de acción.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1152,7 +2785,12 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 534,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SOUE-USA-B0",
+            "RVL-SOUK-KOR-B0",
+            "RVL-SOUP-EUR-B0"
+          ]
         },
         {
           "id": 14194,
@@ -1175,7 +2813,23 @@
         "cover": "https://cdn2.steamgriddb.com/grid/7618c8abfa8fd1fad7373a8797aa304a.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/5ffdc65e9d413e3acd7b8ba5d03477a1.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/5e3873608c09c533cf44270bae01c6fe.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1460,
+          "platform": "wii",
+          "project": "ss",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/zeldaret/ss",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 7848,
@@ -1183,9 +2837,15 @@
       "originalName": "The Legend of Zelda: Breath of the Wild",
       "year": 2017,
       "igdbId": 7346,
-      "popularity": 3027,
-      "iconic": false,
+      "popularity": 3029,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "118310",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Legend of Zelda: Breath of the Wild",
@@ -1196,6 +2856,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Breath of the Wild",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Breath of the Wild is the first 3D open-world game in the Zelda series. Link can travel anywhere and be equipped with weapons and armor found throughout the world to grant him various bonuses. Unlike many games in the series, Breath of the Wild does not impose a specific order in which quests or dungeons must be completed. While the game still has environmental obstacles such as weather effects, inhospitable lands, or powerful enemies, many of them can be overcome using the right method. A lot of critics ranked Breath of the Wild as one of the best video games of all time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Breath of the Wild es el primer juego de la serie Zelda con un mundo abierto en 3D. Link puede viajar a cualquier lugar y equiparse con armas y armaduras encontradas por todo el mundo, que le otorgan diversas ventajas. A diferencia de muchos juegos de la serie, Breath of the Wild no impone un orden específico para completar las misiones o las mazmorras. Aunque el juego sigue teniendo obstáculos del entorno, como efectos meteorológicos, tierras inhóspitas o enemigos poderosos, muchos de ellos pueden superarse con el método adecuado. Numerosos críticos clasificaron Breath of the Wild como uno de los mejores videojuegos de todos los tiempos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1212,7 +2884,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 7346,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego base con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles buenos, cargas largas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "900p y 30 fps con caídas."
+            }
+          ]
         },
         {
           "id": 14753,
@@ -1220,7 +2913,31 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 7346,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y buenas cargas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución similar, algo más estable."
+            }
+          ],
+          "codes": [
+            "01007EF00011E000"
+          ]
         },
         {
           "id": 118310,
@@ -1228,14 +2945,64 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 338072,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo y funciones extra."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejoras de interfaz y cargas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fps estables."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/121b81f7d167ca2c24fdab4f044048f8.png",
         "hero": "https://cdn2.steamgriddb.com/hero/71d1c0c06e1ab5049644acb5cc69a090.png",
         "logo": "https://cdn2.steamgriddb.com/logo/24df88ee05eb50db7d1d083a37f49b0b.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1184,
+          "platform": "wiiu",
+          "project": "BotW-Native",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/ryderclanky/BotW-Native",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Cemu"
+        },
+        {
+          "id": 1185,
+          "platform": "switch",
+          "project": "SavageWindRecomp",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Revivedx/SavageWindRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        }
+      ]
     },
     {
       "id": 13069,
@@ -1247,6 +3014,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "118311",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Tears of the Kingdom",
           "source": "igdb",
@@ -1256,6 +3029,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Tears of the Kingdom",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An epic adventure across the land and skies of Hyrule awaits in The Legend of Zelda: Tears of the Kingdom for Nintendo Switch. The adventure is yours to create in a world fueled by your imagination.\n\nIn this sequel to The Legend of Zelda: Breath of the Wild, you'll decide your own path through the sprawling landscapes of Hyrule and the mysterious islands floating in the vast skies above. Can you harness the power of Link's new abilities to fight back against the malevolent forces that threaten the kingdom?",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Una épica aventura por las tierras y los cielos de Hyrule te espera en The Legend of Zelda: Tears of the Kingdom para Nintendo Switch. La aventura es tuya para crearla en un mundo alimentado por tu imaginación.\n\nEn esta secuela de The Legend of Zelda: Breath of the Wild, decidirás tu propio camino por los extensos paisajes de Hyrule y las misteriosas islas que flotan en el vasto cielo. ¿Podrás aprovechar el poder de las nuevas habilidades de Link para contraatacar las fuerzas malignas que amenazan el reino?",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1272,7 +3057,31 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 119388,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cargas largas, menús lentos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Caídas de fps en zonas densas."
+            }
+          ],
+          "codes": [
+            "0100F2C0115B6000"
+          ]
         },
         {
           "id": 118311,
@@ -1280,14 +3089,135 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 338073,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mejor interfaz y cargas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Más resolución y fps estables."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/ae758fbcbd5bd841516c53b3c08ebc6f.png",
         "hero": "https://cdn2.steamgriddb.com/hero/7048d1540fa99464f489f1d11db688b1.png",
         "logo": "https://cdn2.steamgriddb.com/logo/19e524e7aa887f6311e8b6ae061bf5d7.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 432,
+          "platform": "switch",
+          "project": "nxnative_totk",
+          "kind": "native-layer",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/T5eng/nxnative_totk",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1190,
+          "platform": "switch",
+          "project": "weeping-of-the-empire",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/daniel-madrid-07/weeping-of-the-empire",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1191,
+          "platform": "switch",
+          "project": "ultratears",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/kuraeow/ultratears",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1192,
+          "platform": "switch",
+          "project": "totk-recomp",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Muhammad1259-sigma/totk-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1193,
+          "platform": "switch",
+          "project": "SkyboundTotk",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/NotRexed/SkyboundTotk",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1194,
+          "platform": "switch",
+          "project": "Zelda-TOTK-Port",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/ZuanCrisp/Zelda-TOTK-Port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        },
+        {
+          "id": 1195,
+          "platform": "switch",
+          "project": "totk-pc-recomp",
+          "kind": "recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/valentderah/totk-pc-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 1
+        }
+      ]
     },
     {
       "id": 14712,
@@ -1299,6 +3229,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "38208",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Hyrule Warriors: La era del cataclismo",
           "source": "igdb",
@@ -1308,6 +3244,18 @@
           "field": "original_name",
           "value": "Hyrule Warriors: Age of Calamity",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "See Hyrule 100 years before the Legend of Zelda: Breath of the Wild game and experience the events of the Great Calamity.\n\nJoin the struggle that brought Hyrule to its knees. Learn more about Zelda, the four Champions, the King of Hyrule and more through dramatic cutscenes as they try to save the kingdom from Calamity. The Hyrule Warriors: Age of Calamity game is the only way to see firsthand what happened 100 years ago.\n\nBattle hordes of Hyrule’s most formidable foes. From barbaric Bokoblins to towering Lynels, menacing monsters have emerged in droves. In addition to Link and Zelda, take control of characters like the four Champions and a young Impa. Use their distinct abilities to carve through hundreds of enemies to save Hyrule from the impending Calamity.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Conoce Hyrule 100 años antes del juego The Legend of Zelda: Breath of the Wild y vive los acontecimientos de la Gran Calamidad.\n\nÚnete a la lucha que llevó a Hyrule de rodillas. Conoce más sobre Zelda, los cuatro Campeones, el Rey de Hyrule y mucho más a través de escenas dramáticas mientras intentan salvar el reino de la Calamidad. Hyrule Warriors: Age of Calamity es la única forma de ver de primera mano lo que sucedió hace 100 años.\n\nEnfréntate a hordas de los enemigos más temibles de Hyrule. Desde bokoblins salvajes hasta lynels colosales, monstruos amenazantes han surgido en gran número. Además de Link y Zelda, toma el control de personajes como los cuatro Campeones y una joven Impa. Usa sus habilidades distintivas para abrirte paso entre cientos de enemigos y salvar Hyrule de la inminente Calamidad.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1324,7 +3272,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 138343,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con DLC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Combate sólido, algo de lentitud."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Caídas de fps en acción intensa."
+            }
+          ],
+          "codes": [
+            "01002B00111A2000"
+          ]
         },
         {
           "id": 118390,
@@ -1332,7 +3304,28 @@
           "kind": "original",
           "year": 2027,
           "igdbId": 417167,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido previsto, sin lanzar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Sin datos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Se espera mejor rendimiento."
+            }
+          ]
         }
       ],
       "images": {
@@ -1348,8 +3341,14 @@
       "year": 2002,
       "igdbId": 1033,
       "popularity": 1064,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "14402",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Legend of Zelda: The Wind Waker",
@@ -1360,6 +3359,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: The Wind Waker",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: The Wind Waker is the first Zelda game for the Nintendo GameCube and also the first in the series to employ cel-shading, a lighting and texturing technique that results in the game having a cartoon-like appearance. Like its predecessors, The Wind Waker is an action game with puzzle-solving and light role-playing elements. Basic gameplay mechanics are similar to those found in Ocarina of Time, but it differentiates itself with its massive Great Sea which must be explored using a boat named King of Red Lions.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: The Wind Waker es el primer juego de Zelda para Nintendo GameCube y también el primero de la serie en emplear el cel-shading, una técnica de iluminación y texturizado que da al juego un aspecto de dibujo animado. Al igual que sus predecesores, The Wind Waker es un juego de acción con resolución de acertijos y elementos ligeros de rol. Las mecánicas básicas son similares a las de Ocarina of Time, pero se diferencia por su enorme Gran Mar, que debe explorarse en un barco llamado King of Red Lions.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1384,14 +3395,79 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 1033,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GZLE-KOR",
+            "DL-DOL-GZLE-USA",
+            "DL-DOL-GZLP-EUR",
+            "DL-DOL-GZLP-EUR-01"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/304678bd2a45713cc7bfcb1a9e19c8e4.png",
         "hero": "https://cdn2.steamgriddb.com/hero/9e975c77eedf11c0c99d3e2d6e8b7b49.png",
         "logo": "https://cdn2.steamgriddb.com/logo/4e0d67e54ad6626e957d15b08ae128a6.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 433,
+          "platform": "gc",
+          "project": "WindowWaker",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/MaskeZenY/WindowWaker",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        },
+        {
+          "id": 571,
+          "platform": "gc",
+          "project": "bluewake",
+          "kind": "recomp",
+          "toolchain": "DolRecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/chrissotraidis/bluewake",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        },
+        {
+          "id": 1271,
+          "platform": "gc",
+          "project": "ww",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/sp00nznet/ww",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        },
+        {
+          "id": 1463,
+          "platform": "gc",
+          "project": "tww",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/zeldaret/tww",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 16680,
@@ -1415,6 +3491,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The Legend of Zelda: Four Swords Adventures is the only console Zelda title to date to incorporate multiplayer elements into its main campaign. Because of its single-player elements, Four Swords Adventures is also the first game in the series to allow a single player to control more than one Link at once, and it utilizes various methods to allow the player to make use of the four Links, such as formations. Also it is the only title to break locations and temples up into succinct, separate stages and levels which can be replayed even after beating them once. The game itself, though an innovation in Zelda gameplay, is heavily inspired by the music, graphics, and locations of A Link to the Past.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Four Swords Adventures es el único título de consola de Zelda hasta la fecha que incorpora elementos multijugador en su campaña principal. Debido a sus elementos para un jugador, Four Swords Adventures es también el primer juego de la serie que permite a un solo jugador controlar más de un Link a la vez, y utiliza diversos métodos para que el jugador pueda aprovechar los cuatro Links, como las formaciones. Además, es el único título que divide los lugares y templos en escenarios y niveles breves y separados, que pueden repetirse incluso después de completarlos una vez. El juego en sí, aunque supone una innovación en la jugabilidad de Zelda, está muy inspirado en la música, los gráficos y los lugares de A Link to the Past.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -1428,7 +3516,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 1034,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-G4SE-USA",
+            "DL-DOL-G4SP-EUR"
+          ]
         }
       ],
       "images": {
@@ -1447,6 +3539,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "15613",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Twilight Princess",
           "source": "igdb",
@@ -1456,6 +3554,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Twilight Princess",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Twilight Princess is the last Zelda game for GameCube, it was highly anticipated by many members of the gaming community and was regarded as finally fulfilling the dreams of those who wanted a much more realistic and mature game than the ones before. The art is similar to the naturalistic style of Ocarina of Time, rather than the cel-shaded look of The Wind Waker. The main adventure takes place in several provinces with dungeons and temples. New to this game is the ability for Link to transform into a Wolf when entering the Twilight. As a wolf, Link can use his senses to solve puzzles and get past obstacles, he can also dig holes to find hearts and rupees. Twilight Princess has received universal acclaim from reviewers and journalists, who cited it as the greatest Zelda game of all time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Twilight Princess es el último juego de Zelda para GameCube. Muchos miembros de la comunidad de videojuegos lo esperaban con gran expectación, y fue considerado como la realización definitiva de los sueños de quienes querían un juego mucho más realista y maduro que los anteriores. El arte se parece al estilo naturalista de Ocarina of Time, en lugar del aspecto con cel-shading de The Wind Waker. La aventura principal transcurre en varias provincias con mazmorras y templos. La novedad de este juego es que Link puede transformarse en lobo al entrar en el Crepúsculo. Como lobo, Link puede usar sus sentidos para resolver acertijos y superar obstáculos; también puede cavar agujeros para encontrar corazones y rupias. Twilight Princess ha recibido una aclamación universal de críticos y periodistas, que lo han citado como el mejor juego de Zelda de todos los tiempos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1480,7 +3590,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 1036,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GZ2E-USA",
+            "DL-DOL-GZ2P-EUR"
+          ]
         },
         {
           "id": 44269,
@@ -1488,14 +3602,52 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 134014,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RZDE-USA",
+            "RVL-RZDE-USA-B0",
+            "RVL-RZDK-KOR-B0",
+            "RVL-RZDP-EUR",
+            "RVL-RZDP-EUR-1",
+            "RVL-RZDP-EUR-B0"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/36d6a670240681fbbf69cbba0c9065ce.png",
         "hero": "https://cdn2.steamgriddb.com/hero/e105b88b3e1ac23ec811a708cd7edebf.png",
         "logo": "https://cdn2.steamgriddb.com/logo/2d8b6c92b659a90e7ef716f811d8bba1.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 138,
+          "platform": "gc",
+          "project": "Dusklight",
+          "kind": "decomp",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/TwilitRealm/dusklight",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        },
+        {
+          "id": 1464,
+          "platform": "gc",
+          "project": "tp",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/zeldaret/tp",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 16879,
@@ -1516,6 +3668,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Navi Trackers",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Legend of Zelda: Navi Trackers was formerly planned as stand alone game, under the subtitle of Tetra's Trackers, but ended up being released as one of the game in the japanese version of The Legend of Zelda: Four Swords Adventures (Four Swords +). In this game, multiple players, using a combination of the television screen and Game Boy Advances, search for members of Tetra's pirate gang to gain stamps from them, as many as possible within a given time limit. All action takes place on the Game Boy Advance used by each player, with the television screen showing a basic map, and Tetra narrating the action.\n\nThe game was first intended to be a remake of BS Marvelous: Time Athletic, but changing the franchise to Zelda. Assets based on BS Marvelous were found in the final game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Legend of Zelda: Navi Trackers estaba previsto originalmente como un juego independiente, con el subtítulo Tetra's Trackers, pero acabó lanzándose como uno de los juegos incluidos en la versión japonesa de The Legend of Zelda: Four Swords Adventures (Four Swords +). En este juego, varios jugadores, usando una combinación de la pantalla del televisor y las Game Boy Advance, buscan a miembros de la banda pirata de Tetra para conseguir sellos de ellos, tantos como sea posible dentro de un límite de tiempo. Toda la acción tiene lugar en la Game Boy Advance de cada jugador, mientras que el televisor muestra un mapa básico y Tetra narra lo que sucede.\n\nEl juego se concibió inicialmente como una versión rehecha de BS Marvelous: Time Athletic, pero cambiando la franquicia por Zelda. En el juego final se encontraron recursos basados en BS Marvelous.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1561,6 +3725,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Link returns from The Legend of Zelda: Twilight Princess to pick up the Wii Zapper and take aim at a host of targets in this shooting-gallery-style game. Link's Crossbow Training comes bundled with the Wii Zapper and is the first game to use it. After a few rounds of Link's Crossbow Training, players will be more than ready to pick up any of the future Wii Zapper titles, like Medal of Honor Heroes 2, Ghost Squad and Resident Evil: The Umbrella Chronicles.\n\nLink's Crossbow Training is set in a world in the style of The Legend of Zelda: Twilight Princess, and in the game the player assumes the role of the protagonist of The Legend of Zelda series, Link. Anyone can pick up the Wii Zapper and become a master marksman in the quick-play shooting galleries of Link's Crossbow Training. Dozens of fast-paced stages offer a wide variety of game play, from shooting stationary targets to defending a supply wagon from onrushing hordes of enemies. Multiplayer modes let players and their friends share a Wii Zapper to shoot for the high score.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Link regresa de The Legend of Zelda: Twilight Princess para coger el Wii Zapper y apuntar a una multitud de objetivos en este juego de tiro al estilo de galerías de tiro. Link's Crossbow Training viene incluido con el Wii Zapper y es el primer juego en usarlo. Tras unas cuantas rondas de Link's Crossbow Training, los jugadores estarán más que listos para probar cualquiera de los futuros títulos para Wii Zapper, como Medal of Honor Heroes 2, Ghost Squad y Resident Evil: The Umbrella Chronicles.\n\nLink's Crossbow Training se desarrolla en un mundo con el estilo de The Legend of Zelda: Twilight Princess, y en el juego el jugador asume el papel del protagonista de la serie The Legend of Zelda, Link. Cualquiera puede coger el Wii Zapper y convertirse en un gran tirador en las galerías de tiro de partida rápida de Link's Crossbow Training. Decenas de fases trepidantes ofrecen una gran variedad de jugabilidad, desde disparar a objetivos fijos hasta defender un carro de suministros de hordas de enemigos que avanzan. Los modos multijugador permiten a los jugadores y a sus amigos compartir un Wii Zapper para conseguir la puntuación más alta.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -1574,7 +3750,12 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 4973,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RZPE-USA",
+            "RVL-RZPE-USA-B0",
+            "RVL-RZPP-EUR"
+          ]
         }
       ],
       "images": {
@@ -1593,6 +3774,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "75882",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Legend of Zelda: Echoes of Wisdom",
           "source": "igdb",
@@ -1602,6 +3789,18 @@
           "field": "original_name",
           "value": "The Legend of Zelda: Echoes of Wisdom",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The people of Hyrule are being stolen away by strange rifts that have appeared, and with a certain swordsman among those missing, it’s up to Princess Zelda to save her kingdom.\n\nTeam up with the mysterious fairy, Tri, and use the power of the Tri Rod to learn how to create echoes, imitations of things found in the environment. You can then recreate those echoes whenever you like to solve puzzles and defeat enemies.\n\nCreate echoes like water blocks to reach new heights, make bridges out of old beds, throw rocks at foes, or find your own creative combination of echoes to do things your way. You can even create echoes of monsters to fight at your side in combat!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Los habitantes de Hyrule están siendo arrebatados por extrañas grietas que han aparecido, y con cierto espadachín entre los desaparecidos, le corresponde a la princesa Zelda salvar su reino.\n\nÚnete a la misteriosa hada Tri y usa el poder de la Vara Tri para aprender a crear ecos, imitaciones de objetos que se encuentran en el entorno. Después puedes recrear esos ecos cuando quieras para resolver acertijos y derrotar enemigos.\n\nCrea ecos como bloques de agua para alcanzar nuevas alturas, construye puentes con camas viejas, lanza piedras a los enemigos o encuentra tu propia combinación creativa de ecos para hacer las cosas a tu manera. ¡Incluso puedes crear ecos de monstruos para que luchen a tu lado en combate!",
+          "source": "claude",
           "manual": false
         },
         {
@@ -1626,14 +3825,33 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 306149,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01008CF01BAAC000"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/e488d6f4064e1584c115f2cd7bed74f0.png",
         "hero": "https://cdn2.steamgriddb.com/hero/e76167029f993d688953d044beb66354.png",
         "logo": "https://cdn2.steamgriddb.com/logo/74f5e42575afb9b375981e9fe85d663d.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1186,
+          "platform": "switch",
+          "project": "EoWRecomp",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Nycolazs/EoWRecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Ryubing",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 50178,
@@ -1657,6 +3875,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fight the war for ancient Hyrule! Step on to the battlefield as Princess Zelda, King Rauru, and other legendary heroes as you fight to reclaim your homeland— and live the story of Demon King Ganondorf's invasion that was only briefly alluded to in The Legend of Zelda: Tears of the Kingdom game.\n\nPrincess Zelda is not alone in this war! Join Mineru, the Sages, and even some brand-new heroes in battles against Ganondorf's forces. Combine powerful Zonai Devices with your heroes' signature abilities to take down powerful bosses and their legions of minions.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "¡Lucha en la guerra por el antiguo Hyrule! Entra al campo de batalla como la princesa Zelda, el rey Rauru y otros héroes legendarios mientras luchas por recuperar tu patria y vives la historia de la invasión del Rey Demonio Ganondorf, que solo se mencionaba brevemente en el juego The Legend of Zelda: Tears of the Kingdom.\n\n¡La princesa Zelda no está sola en esta guerra! Únete a Mineru, a los Sabios e incluso a algunos héroes completamente nuevos en batallas contra las fuerzas de Ganondorf. Combina los poderosos Dispositivos Zonai con las habilidades características de tus héroes para derrotar a jefes poderosos y a sus legiones de secuaces.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2025",
           "source": "igdb",
@@ -1670,10 +3900,392 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 338085,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "04003F40232DE000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/982c3862cb923009235057d94c31c7cb.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/15207b54f8b5b96b817db62d8f930caa.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/f2bb73d66aa6973b5e6cd4ac964d5647.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 208,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1430,
+          "reason": "1986"
+        },
+        {
+          "position": 2,
+          "gameId": 2410,
+          "reason": "1987"
+        },
+        {
+          "position": 3,
+          "gameId": 58,
+          "reason": "1991"
+        },
+        {
+          "position": 4,
+          "gameId": 4053,
+          "reason": "1993"
+        },
+        {
+          "position": 5,
+          "gameId": 1161,
+          "reason": "1998"
+        },
+        {
+          "position": 6,
+          "gameId": 1323,
+          "reason": "2000"
+        },
+        {
+          "position": 7,
+          "gameId": 4086,
+          "reason": "2001"
+        },
+        {
+          "position": 8,
+          "gameId": 4087,
+          "reason": "2001"
+        },
+        {
+          "position": 9,
+          "gameId": 1395,
+          "reason": "2002"
+        },
+        {
+          "position": 10,
+          "gameId": 2542,
+          "reason": "2002"
+        },
+        {
+          "position": 11,
+          "gameId": 16563,
+          "reason": "2002"
+        },
+        {
+          "position": 12,
+          "gameId": 1780,
+          "reason": "2004"
+        },
+        {
+          "position": 13,
+          "gameId": 16680,
+          "reason": "2004"
+        },
+        {
+          "position": 14,
+          "gameId": 16879,
+          "reason": "2004"
+        },
+        {
+          "position": 15,
+          "gameId": 3120,
+          "reason": "2006"
+        },
+        {
+          "position": 16,
+          "gameId": 16784,
+          "reason": "2006"
+        },
+        {
+          "position": 17,
+          "gameId": 3175,
+          "reason": "2007"
+        },
+        {
+          "position": 18,
+          "gameId": 19639,
+          "reason": "2007"
+        },
+        {
+          "position": 19,
+          "gameId": 3419,
+          "reason": "2009"
+        },
+        {
+          "position": 20,
+          "gameId": 7692,
+          "reason": "2011"
+        },
+        {
+          "position": 21,
+          "gameId": 4282,
+          "reason": "2013"
+        },
+        {
+          "position": 22,
+          "gameId": 4307,
+          "reason": "2014"
+        },
+        {
+          "position": 23,
+          "gameId": 4364,
+          "reason": "2015"
+        },
+        {
+          "position": 24,
+          "gameId": 5526,
+          "reason": "2015"
+        },
+        {
+          "position": 25,
+          "gameId": 4716,
+          "reason": "2016"
+        },
+        {
+          "position": 26,
+          "gameId": 7848,
+          "reason": "2017"
+        },
+        {
+          "position": 27,
+          "gameId": 14712,
+          "reason": "2020"
+        },
+        {
+          "position": 28,
+          "gameId": 13069,
+          "reason": "2023"
+        },
+        {
+          "position": 29,
+          "gameId": 30414,
+          "reason": "2024"
+        },
+        {
+          "position": 30,
+          "gameId": 50178,
+          "reason": "2025"
+        }
+      ]
+    },
+    {
+      "id": 3545,
+      "kind": "story",
+      "rationale": "Sigue la cronología oficial de Nintendo (Hyrule Historia). La línea se divide tras Ocarina of Time; aquí va aplanada en una sola ruta. Se omiten spin-offs menores, Master Quest y los juegos de Hyrule Warriors.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7692,
+          "recommendedVersionId": 14913,
+          "reason": "Es el origen de la espada maestra y de Hyrule. La versión HD mejora los controles y el ritmo."
+        },
+        {
+          "position": 2,
+          "gameId": 1780,
+          "recommendedVersionId": 3475,
+          "reason": "Cuenta el origen de la gorra de Link y de Vaati. El original de GBA es la versión canónica."
+        },
+        {
+          "position": 3,
+          "gameId": 2542,
+          "reason": "Es una aventura corta donde Vaati reaparece. Cualquier versión sirve."
+        },
+        {
+          "position": 4,
+          "gameId": 1161,
+          "recommendedVersionId": 2809,
+          "reason": "Es el punto de quiebre de la línea temporal. El remake de 3DS tiene mejores gráficos y menos fricción."
+        },
+        {
+          "position": 5,
+          "gameId": 1323,
+          "recommendedVersionId": 2811,
+          "reason": "Es la continuación directa de Ocarina en la línea del niño. La versión 3DS facilita el sistema de tiempo."
+        },
+        {
+          "position": 6,
+          "gameId": 16784,
+          "recommendedVersionId": 15613,
+          "reason": "Continúa la línea del niño. La versión HD es la más pulida."
+        },
+        {
+          "position": 7,
+          "gameId": 16680,
+          "reason": "Cierra la línea del niño. Es opcional y mejor jugarlo en cooperativo."
+        },
+        {
+          "position": 8,
+          "gameId": 16563,
+          "recommendedVersionId": 14402,
+          "reason": "Abre la línea del héroe caído (era del mar). La versión HD mejora la navegación."
+        },
+        {
+          "position": 9,
+          "gameId": 3175,
+          "recommendedVersionId": 6195,
+          "reason": "Es la continuación directa de Wind Waker."
+        },
+        {
+          "position": 10,
+          "gameId": 3419,
+          "recommendedVersionId": 6712,
+          "reason": "Sigue a Phantom Hourglass, mucho tiempo después."
+        },
+        {
+          "position": 11,
+          "gameId": 58,
+          "recommendedVersionId": 95,
+          "reason": "Abre la línea de la derrota. Se recomienda el original de SNES."
+        },
+        {
+          "position": 12,
+          "gameId": 4087,
+          "recommendedVersionId": 8063,
+          "reason": "Va tras A Link to the Past en la cronología oficial."
+        },
+        {
+          "position": 13,
+          "gameId": 4086,
+          "recommendedVersionId": 8061,
+          "reason": "Es el par de Oracle of Ages."
+        },
+        {
+          "position": 14,
+          "gameId": 4053,
+          "recommendedVersionId": 12016,
+          "reason": "Sigue a los Oracle. El remake de Switch es la versión recomendada."
+        },
+        {
+          "position": 15,
+          "gameId": 4282,
+          "recommendedVersionId": 8490,
+          "reason": "Ocurre mucho después de A Link to the Past."
+        },
+        {
+          "position": 16,
+          "gameId": 4364,
+          "recommendedVersionId": 8696,
+          "reason": "Es una aventura cooperativa que sigue a A Link Between Worlds."
+        },
+        {
+          "position": 17,
+          "gameId": 1430,
+          "recommendedVersionId": 2946,
+          "reason": "Es el primer juego de la saga, pero cronológicamente va casi al final de esa línea."
+        },
+        {
+          "position": 18,
+          "gameId": 2410,
+          "recommendedVersionId": 4417,
+          "reason": "Es la continuación directa del primer Zelda."
+        },
+        {
+          "position": 19,
+          "gameId": 7848,
+          "recommendedVersionId": 14753,
+          "reason": "Es el último juego en la cronología. La versión Switch es la principal."
+        },
+        {
+          "position": 20,
+          "gameId": 13069,
+          "recommendedVersionId": 32606,
+          "reason": "Continúa directamente Breath of the Wild."
+        },
+        {
+          "position": 21,
+          "gameId": 30414,
+          "recommendedVersionId": 75883,
+          "reason": "Se publicó después de Tears of the Kingdom. Su ubicación exacta en la cronología es discutida."
+        }
+      ]
+    },
+    {
+      "id": 3546,
+      "kind": "community",
+      "rationale": "La comunidad suele recomendar empezar por los juegos más accesibles y de más calidad, sin seguir la historia. Se omiten los primeros Zelda de NES y los spin-offs.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7848,
+          "recommendedVersionId": 14753,
+          "reason": "Es la mejor puerta de entrada actual. Se juega en Switch."
+        },
+        {
+          "position": 2,
+          "gameId": 13069,
+          "recommendedVersionId": 32606,
+          "reason": "Continúa Breath of the Wild y amplía todo lo que ofrecía."
+        },
+        {
+          "position": 3,
+          "gameId": 4053,
+          "recommendedVersionId": 12016,
+          "reason": "Es un remake corto y encantador. Es la versión más cómoda."
+        },
+        {
+          "position": 4,
+          "gameId": 58,
+          "recommendedVersionId": 95,
+          "reason": "Es un clásico de diseño de mazmorras. El original de SNES sigue siendo excelente."
+        },
+        {
+          "position": 5,
+          "gameId": 1161,
+          "recommendedVersionId": 2809,
+          "reason": "Es el clásico en 3D. El remake de 3DS es la forma más recomendada."
+        },
+        {
+          "position": 6,
+          "gameId": 1323,
+          "recommendedVersionId": 2811,
+          "reason": "Es una joya más extraña y personal. Conviene jugarla después de Ocarina of Time."
+        },
+        {
+          "position": 7,
+          "gameId": 16563,
+          "recommendedVersionId": 14402,
+          "reason": "Su versión HD corrige lo más tedioso de la navegación."
+        },
+        {
+          "position": 8,
+          "gameId": 16784,
+          "recommendedVersionId": 15613,
+          "reason": "Es una aventura más oscura. La versión HD es la más fluida."
+        },
+        {
+          "position": 9,
+          "gameId": 4282,
+          "recommendedVersionId": 8490,
+          "reason": "Es un homenaje moderno a A Link to the Past con mucha libertad."
+        },
+        {
+          "position": 10,
+          "gameId": 1780,
+          "recommendedVersionId": 3475,
+          "reason": "Es un juego portátil muy querido y corto."
+        },
+        {
+          "position": 11,
+          "gameId": 7692,
+          "recommendedVersionId": 14913,
+          "reason": "La versión HD hace más llevadero un juego dividido de opinión."
+        },
+        {
+          "position": 12,
+          "gameId": 30414,
+          "recommendedVersionId": 75883,
+          "reason": "Es la última entrega, con Zelda como protagonista. Es un buen cierre."
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

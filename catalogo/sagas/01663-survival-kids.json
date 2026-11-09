@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "11826",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Survival Kids",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Survival Kids",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "You wash up on the shore of a deserted island after the cruise ship that you were on with your parents sank in a storm. Unfortunately, your parents are nowhere in sight. Starting with only a knife and a broken radio, you must learn how to survive on the island until someone can rescue you. Food, water, and rest are your main concerns. Luckily, there are plenty of berries, mushrooms, and meat around the island and fresh water flows in all of the streams. As another stroke of luck, there are hollow trees that provide a comfortable place to take a nap. Rather than spend your whole time looking for food and water, collect as many items that a scattered throughout the island. Rocks, sticks, leaves, and other items can be turned into tools that will make your life easier. Try to survive until you are rescued in SURVIVAL KIDS.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 25968,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Es el juego original de supervivencia en isla, con su estructura y objetos de 1999."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles y guardado sencillos pero con la lentitud y torpeza propias de Game Boy."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla monocroma pequeña, sin extras técnicos."
+            }
+          ]
         },
         {
           "id": 118277,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 338087,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Juego nuevo con enfoque cooperativo y contenido distinto, no el mismo de 1999."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles modernos y multijugador, aunque cambia el diseño del juego."
+            },
+            {
+              "criterion": "original",
+              "value": "1",
+              "text": "Reinterpretación con poco en común con el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Gráficos y rendimiento modernos en Switch 2."
+            }
+          ],
+          "codes": [
+            "040003901FBC2000"
+          ]
         }
       ],
       "images": {
@@ -87,6 +144,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "2 brothers are seperated on Twin Islands and need to figure out how to escape the island alive. Survival skills are put to the test, as you hunt for food, make shelter and explore the great unknown islands.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -108,5 +171,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2397,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6012,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 6370,
+          "reason": "2000"
+        }
+      ]
+    }
+  ]
 }

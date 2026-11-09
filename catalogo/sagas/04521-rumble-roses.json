@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Get ready for sexy yet challenging in-the-ring combat. WWX: Rumble Rose delivers intense girl-on-girl wrestling action with an all-female roster of vixens--each with specialty moves. The combat system lets you humiliate your opponents through insults, taunting, and aggressive moves and holds. Your player's costume, attitude, and wrestling style change depending on whether you fight dirty or fair. Naughty or nice, becoming a popular wrestler will earn benefits, including expanded gameplay, additional skills and moves, and more-revealing and flamboyant costumes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -48,7 +54,15 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 27041,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52535",
+            "SLKA-25234",
+            "SLPM-61106",
+            "SLPM-65885",
+            "SLPM-66085",
+            "SLUS-20970"
+          ]
         }
       ],
       "images": {
@@ -79,6 +93,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "It's all female wrestling in Rumble Roses XX, the sequel to Rumble Roses.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -94,8 +114,50 @@
           "igdbId": 7167,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8270a91ca239e552633bd323d8e5ac19.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/00837adcbf018255e8a069691476349f.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/91ca7ff824876a675d873fe72d715f49.png"
+      },
+      "ports": [
+        {
+          "id": 1031,
+          "platform": "x360",
+          "project": "rumble-roses-xx-recomp",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/JesusTaylo/rumble-roses-xx-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 2
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3227,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33349,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 48335,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

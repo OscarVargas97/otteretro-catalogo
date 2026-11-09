@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "16968",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Evoland",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Evoland",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Evoland is a game and a story. The story of action adventure gaming as seen in many popular JRPGs and action RPGs, starting from the very beginning, when a few pixels were enough to make us dream for hours. You will discover a bit of video game history and very fun gameplay, covering 20 years of adventure gaming history.\n\nInspired by a wide variety of the most popular action RPGs and JRPGs, Evoland will take you from monochrome to full 3D graphics and from active time battles to real time boss fights, all with plenty of humor, and many references to legendary titles scattered along the game.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2013,
           "igdbId": 2029,
           "steamAppId": 233470,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del remake."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado/mando fluido y guardado fiable."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión de referencia del catálogo."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y carga rápida."
+            }
+          ]
         },
         {
           "id": 16969,
@@ -57,7 +90,28 @@
           "kind": "remake",
           "year": 2019,
           "igdbId": 2029,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando y modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Idéntico en diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, resolución menor en portátil."
+            }
+          ]
         }
       ],
       "images": {
@@ -76,6 +130,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "17628",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Evoland 2",
           "source": "igdb",
@@ -84,6 +144,12 @@
         {
           "field": "original_name",
           "value": "Evoland 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Evoland 2 is the spiritual successor to the original Evoland with its graphics style changing as you travel through time and its gameplay evolving as you move along the storyline. It is also a much bigger game and a classic RPG at heart, with a complex scenario based on time travel, dozens of characters with their own backgrounds and ambitions and vastly different gameplay styles that are linked to the story and the player’s actions.",
           "source": "igdb",
           "manual": false
         },
@@ -102,7 +168,28 @@
           "year": 2015,
           "igdbId": 11798,
           "steamAppId": 359310,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles precisos con mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y rendimiento estable."
+            }
+          ]
         },
         {
           "id": 17629,
@@ -110,7 +197,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 11798,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen mando y juego portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable pero menor resolución."
+            }
+          ]
         }
       ],
       "images": {
@@ -120,5 +228,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2517,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 8578,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 8739,
+          "reason": "2015"
+        }
+      ]
+    }
+  ]
 }

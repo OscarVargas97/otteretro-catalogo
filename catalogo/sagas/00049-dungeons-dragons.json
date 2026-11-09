@@ -3,7 +3,7 @@
   "name": "Dungeons & Dragons",
   "igdbKind": "franchise",
   "igdbId": 43,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 1991,
       "igdbId": 5384,
       "popularity": 42,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "106",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Eye of the Beholder",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Eye of the Beholder",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Eye of the Beholder is an all 3-D, Legend Series computer role-playing adventure based on the popular Advanced Dungeons & Dragons 2nd Edition rules and on an original story created for this game . The action takes place in the sewers and catacombs beneath the City of Waterdeep located in TSR's Forgotten Realms game world.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Eye of the Beholder es una aventura de rol para computadora totalmente en 3D, de la Legend Series, basada en las populares reglas de Advanced Dungeons & Dragons de 2.ª edición y en una historia original creada para este juego. La acción transcurre en las alcantarillas y catacumbas bajo la ciudad de Waterdeep, situada en el mundo de juego Forgotten Realms de TSR.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 5384,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Adaptación con cambios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control de mando."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta."
+            }
+          ]
         },
         {
           "id": 106,
@@ -57,7 +96,61 @@
           "year": 2015,
           "igdbId": 5384,
           "steamAppId": 1882260,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón y guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Ejecuta bien."
+            }
+          ]
+        },
+        {
+          "id": 3254,
+          "platform": "gba",
+          "kind": "original",
+          "year": 2002,
+          "igdbId": 49197,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión portátil recortada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Limitada."
+            }
+          ],
+          "codes": [
+            "AD4E",
+            "AD4P"
+          ]
         }
       ],
       "images": {
@@ -76,6 +169,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22923",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Idle Champions of the Forgotten Realms",
           "source": "igdb",
@@ -85,6 +184,18 @@
           "field": "original_name",
           "value": "Idle Champions of the Forgotten Realms",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Idle Champions of the Forgotten Realms is a Dungeons & Dragons strategy management game uniting characters from throughout the D&D multiverse into a grand adventure.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Idle Champions of the Forgotten Realms es un juego de estrategia y gestión de Dungeons & Dragons que reúne personajes de todo el multiverso de D&D en una gran aventura.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -101,7 +212,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 43178,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto."
+            }
+          ]
         },
         {
           "id": 22923,
@@ -110,7 +242,28 @@
           "year": 2020,
           "igdbId": 43178,
           "steamAppId": 627690,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más actualizado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón, ideal para idle."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 22924,
@@ -118,7 +271,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 43178,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto."
+            }
+          ]
         },
         {
           "id": 22925,
@@ -126,7 +300,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 43178,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Táctil y portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto."
+            }
+          ],
+          "codes": [
+            "01001E700EB28000"
+          ]
         }
       ],
       "images": {
@@ -145,6 +343,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44520",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeons & Dragons: Heroes",
           "source": "igdb",
@@ -154,6 +358,18 @@
           "field": "original_name",
           "value": "Dungeons & Dragons: Heroes",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Journey through a world filled with magic and monsters, treasures and traps, good and evil--a world unto itself where heroes are made not born. Take on perilous quests through never-before-seen planes of existence and carve a path to righteousness. Conquer dungeons, search for gemstones, fight monsters, improve your skills and more as one of four distinct Hero characters: Fighter, Wizard, Cleric or Thief. Immediately immerse yourself in solo games or play cooperatively with up to 4 players. Dungeons & Dragons: Heroes gives you a chance to taste victory as only a true Hero can.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Recorre un mundo lleno de magia y monstruos, tesoros y trampas, bien y mal: un mundo propio donde los héroes se hacen, no nacen. Emprende misiones peligrosas a través de planos de existencia nunca vistos y abre camino hacia la rectitud. Conquista mazmorras, busca gemas, lucha contra monstruos, mejora tus habilidades y más, como uno de cuatro héroes distintos: Guerrero, Mago, Clérigo o Ladrón. Sumérgete de inmediato en partidas en solitario o juega en cooperativo con hasta 4 jugadores. Dungeons & Dragons: Heroes te da la oportunidad de saborear la victoria como solo puede hacerlo un verdadero héroe.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -217,6 +433,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "In IRON & BLOOD: Warriors of Ravenloft, you and your party are trying to pass through the realm of Ravenloft. However, you are caught in the conflict between Strahd von Zarovich and Lord Soth. In order to escape Ravenloft and continue on your way, you must fight the most malicious and evil monsters in all the land. Choose from any of the 16 playable characters including warriors, mages, elves, and other classes to lead the fight. With over 250 moves and combos, there is plenty ADVANCED DUNGEONS AND DRAGONS action.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "En IRON & BLOOD: Warriors of Ravenloft, tú y tu grupo intentan atravesar el reino de Ravenloft. Sin embargo, quedan atrapados en el conflicto entre Strahd von Zarovich y Lord Soth. Para escapar de Ravenloft y continuar su camino, deben luchar contra los monstruos más malvados y perversos de toda la tierra. Elige cualquiera de los 16 personajes jugables, entre guerreros, magos, elfos y otras clases, para liderar la lucha. Con más de 250 movimientos y combos, hay mucha ACCIÓN DE ADVANCED DUNGEONS & DRAGONS.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -261,6 +489,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Faithfully utilizing the Dungeons & Dragons 3.5 rule-set, Dungeons & Dragons: Tactics allows players to take a party of six adventurers into a wide variety of dangerous environments to experience deep and exciting turn-based action. All of the core races and classes are available to the player, including two Psionic classes, the Psion and the Psychic Warrior. Play with your friends wirelessly in both cooperative and adversarial game modes.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Fiel al conjunto de reglas de Dungeons & Dragons 3.5, Dungeons & Dragons Tactics permite llevar un grupo de seis aventureros a una gran variedad de entornos peligrosos para vivir una acción por turnos profunda y emocionante. Todas las razas y clases básicas están disponibles para el jugador, incluidas dos clases psiónicas: el Psion y el Psychic Warrior. Juega con tus amigos de forma inalámbrica en modos cooperativo y competitivo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -274,9 +514,19 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 23051,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00721",
+            "ULKS-46124",
+            "ULUS-10232"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/29b76ce45d96efd001588eb7496fab17.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/c58b8e327101991952cb575ec8fbfc8c.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/e745a6bad4ffe5a1b35aac134ea148c7.png"
+      }
     },
     {
       "id": 40579,
@@ -288,6 +538,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "97109",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeons and Dragons: Daggerdale",
           "source": "igdb",
@@ -297,6 +553,18 @@
           "field": "original_name",
           "value": "Dungeons and Dragons: Daggerdale",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dungeons & Dragons: Daggerdale offers engaging \"hack and slash\" gameplay, bringing Dungeons & Dragons to life.\n\nTravel to the Dalelands of the Forgotten Realms, where the journey begins in the remote Desertsmouth Mountains. From the sulfuric catacombs of the mines of Tethyamar, to the dizzying heights of the Tower of the Void, Dungeons & Dragons: Daggerdale delivers, action packed challenge that will satisfy the most seasoned of adventurers.\n\nSolo or Co-op Play – Whether you choose to do battle in the mines of Tethyamar or skirmish on the Tower of Rezlus, you can choose to fight solo or join with your friends. Four player online multiplayer, two player local.\n\nQuesting – Explore Daggerdale’s lore and mysteries to reveal an intriguing back story, mysterious characters, and a richly imagined world. Extended depth and experience reward the avid explorer.\n\nImmersive Combat – Battle a wide range of enemies by engaging in intuitive pick-up-and-play melee, or try your hand at ranged combat.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dungeons & Dragons: Daggerdale ofrece una jugabilidad de combate directo (\"hack and slash\") atractiva, que da vida a Dungeons & Dragons.\n\nViaja a las Dalelands de los Forgotten Realms, donde el viaje comienza en las remotas montañas Desertsmouth. Desde las catacumbas sulfurosas de las minas de Tethyamar hasta las vertiginosas alturas de la Torre del Vacío, Dungeons & Dragons: Daggerdale ofrece un desafío lleno de acción que satisfará incluso a los aventureros más experimentados.\n\nJuego en solitario o cooperativo: ya sea que elijas combatir en las minas de Tethyamar o escaramuzar en la Torre de Rezlus, puedes luchar en solitario o unirte a tus amigos. Multijugador en línea para cuatro jugadores y local para dos.\n\nMisiones: explora el trasfondo y los misterios de Daggerdale para descubrir una historia intrigante, personajes misteriosos y un mundo ricamente imaginado. La profundidad y la experiencia adicionales recompensan al explorador más aficionado.\n\nCombate inmersivo: enfréntate a una gran variedad de enemigos con combate cuerpo a cuerpo intuitivo y de empezar a jugar al instante, o prueba suerte con el combate a distancia.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -332,7 +600,12 @@
           "igdbId": 52172,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a8efdb3b3e5ffa243ff1878e067a58eb.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/45be6167a632305cbe39aad807215562.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/2e970f99fa7f2805d8be0cc8a73f770f.png"
+      }
     },
     {
       "id": 40828,
@@ -356,6 +629,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This is a Japan-exclusive PlayStation 3 version of Dungeons & Dragons: Chronicles of Mystara. It was developed internally at Capcom by the original team, and features more accurate emulation than the worldwide release plus exclusive content.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Esta es una versión de Dungeons & Dragons: Chronicles of Mystara exclusiva de Japón para PlayStation 3. Fue desarrollada internamente en Capcom por el equipo original y ofrece una emulación más precisa que la versión mundial, además de contenido exclusivo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -369,9 +654,15 @@
           "kind": "remaster",
           "year": 2013,
           "igdbId": 282312,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLJM-61055"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co95yr.jpg"
+      }
     },
     {
       "id": 41565,
@@ -383,6 +674,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98886",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Neverwinter",
           "source": "igdb",
@@ -392,6 +689,18 @@
           "field": "original_name",
           "value": "Neverwinter",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Neverwinter is a free-to-play, action MMORPG based on the acclaimed Dungeons & Dragons fantasy roleplaying game. Epic stories, action combat and classic roleplaying await those heroes courageous enough to enter the fantastic world of Neverwinter!\n\nExplore and defend one of the most beloved cities from the Dungeons & Dragons Forgotten Realms Campaign Setting as it rises from the ashes of destruction. This immersive MMORPG will take you from the besieged walls of the city to subterranean passageways in search of forgotten secrets and lost treasure.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Neverwinter es un MMORPG de acción gratuito basado en el aclamado juego de rol de fantasía Dungeons & Dragons. ¡Historias épicas, combate de acción y el rol clásico aguardan a los héroes lo bastante valientes para entrar en el fantástico mundo de Neverwinter!\n\nExplora y defiende una de las ciudades más queridas de la ambientación Forgotten Realms de la campaña de Dungeons & Dragons, mientras renace de las cenizas de la destrucción. Este MMORPG inmersivo te llevará desde las murallas asediadas de la ciudad hasta pasadizos subterráneos en busca de secretos olvidados y tesoros perdidos.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -408,7 +717,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 1908,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido algo retrasado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Correcto."
+            }
+          ]
         },
         {
           "id": 98886,
@@ -417,7 +747,28 @@
           "year": 2013,
           "igdbId": 1908,
           "steamAppId": 109600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más contenido y actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 98887,
@@ -425,9 +776,35 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1908,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido algo retrasado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/9a64b68ff2c9b354218e4b014519f28c.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ca1df370637de0c95f799368a0cde293.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/4d612ec00583838471ceff508d9f67c7.png"
+      }
     },
     {
       "id": 41725,
@@ -439,6 +816,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99352",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sword Coast Legends",
           "source": "igdb",
@@ -448,6 +831,18 @@
           "field": "original_name",
           "value": "Sword Coast Legends",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Set in the lush and vibrant world of the Forgotten Realms, Sword Coast Legends offers an all-new way to enjoy the time-tested magic of playing Dungeons & Dragons as a shared storytelling experience. With a deep narrative developed by a team of long-time industry veterans and a partnership with Wizards of the Coast, the single player campaign of Sword Coast Legends brings the world of Faerûn home like never before.\n\nSword Coast Legends also brings the roleplaying dynamic between players and Dungeon Masters to life with DM Mode, a first-of-its-kind real-time experience in which Dungeon Masters guide players through unique customizable adventures. In DM Mode, the Dungeon Master engages players and empowers them to have fun in a way that suits the party best while creating a tailored, non-adversarial 4 with 1 experience that any RPG or pen-and-paper fan will enjoy.\n\nAs of 25 July 2018, multiplayer servers for the game were taken offline and all stored player data deleted. Players owning the game on Steam will still have access to any offline content including the single player campaign.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Ambientado en el exuberante y vibrante mundo de los Forgotten Realms, Sword Coast Legends ofrece una forma totalmente nueva de disfrutar de la magia de jugar a Dungeons & Dragons, probada por el tiempo, como una experiencia de narración compartida. Con una trama profunda desarrollada por un equipo de veteranos de la industria y en colaboración con Wizards of the Coast, la campaña para un jugador de Sword Coast Legends trae el mundo de Faerûn a casa como nunca antes.\n\nSword Coast Legends también da vida a la dinámica de juego de rol entre jugadores y Dungeon Masters con el modo DM, una experiencia en tiempo real de su clase, en la que los Dungeon Masters guían a los jugadores a través de aventuras únicas y personalizables. En el modo DM, el Dungeon Master interactúa con los jugadores y les permite divertirse de la forma que mejor se adapte al grupo, creando una experiencia de 4 contra 1 adaptada y no adversarial que disfrutará cualquier aficionado al rol o a los juegos de mesa.\n\nDesde el 25 de julio de 2018, los servidores multijugador del juego están fuera de línea y todos los datos almacenados de los jugadores fueron eliminados. Quienes tengan el juego en Steam seguirán teniendo acceso a todo el contenido sin conexión, incluida la campaña para un jugador.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -483,7 +878,12 @@
           "igdbId": 9179,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/484862041befb1d3e8fada76b4f2e0d1.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e327b1649d06bf74fceb4fe73f83bdba.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/767d01b4bac1a1e8824c9b9f7cc79a04.png"
+      }
     },
     {
       "id": 42699,
@@ -491,7 +891,7 @@
       "originalName": "Advanced Dungeons & Dragons: Heroes of the Lance",
       "year": 1988,
       "igdbId": 8603,
-      "popularity": 14,
+      "popularity": 13,
       "iconic": false,
       "fields": [
         {
@@ -504,6 +904,18 @@
           "field": "original_name",
           "value": "Advanced Dungeons & Dragons: Heroes of the Lance",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Heroes of the Lance is a side-scrolling action game. The game used actual Dungeons & Dragons statistics, with statistics for the characters exactly as they were in the rule books. Eight heroes from the Dragonlance novels series must be assembled for the quest, and only one is visible on the screen at a time; when one on-screen hero dies, the next in line appears.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Heroes of the Lance es un juego de acción con desplazamiento lateral. Usaba las estadísticas reales de Dungeons & Dragons, con los valores de los personajes exactamente como aparecían en los manuales. Hay que reunir a ocho héroes de la serie de novelas Dragonlance para la misión, pero solo uno es visible en pantalla a la vez; cuando el héroe en pantalla muere, aparece el siguiente de la fila.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -522,7 +934,12 @@
           "igdbId": 8603,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/f0f02ceb9efaaf74436a3a466d0ecdf6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/32f09fa38a2917c715ca0019e1fd3acb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/76fc70800bfad9d87947bd216c449ed0.png"
+      }
     },
     {
       "id": 42740,
@@ -530,7 +947,7 @@
       "originalName": "Advanced Dungeons & Dragons: Dragons of Flame",
       "year": 1989,
       "igdbId": 8602,
-      "popularity": 5,
+      "popularity": 4,
       "iconic": false,
       "fields": [
         {
@@ -543,6 +960,18 @@
           "field": "original_name",
           "value": "Advanced Dungeons & Dragons: Dragons of Flame",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This game is a sequel to Heroes of the Lance. It is arcade oriented, with RPG elements. The player utilizes both a top-down view of map travelling, as well as side-view scrolling combat.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Este juego es la secuela de Heroes of the Lance. Está orientado a la acción arcade, con elementos de juego de rol. El jugador utiliza una vista cenital para desplazarse por el mapa y un combate con desplazamiento lateral.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -561,7 +990,10 @@
           "igdbId": 8602,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9ux2.jpg"
+      }
     },
     {
       "id": 42741,
@@ -585,6 +1017,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Hillsfar: An incredible fantasy that combines the best of role-playing adventures and fast-paced action games.*\n\nEvery visit to Hillsfar is a different, exhilarating experience. Explore the city, meet its colorful denizens on the streets or in pubs and discover a quest (there are many possible ones).\n\nTransfer your favorite character from the Pool of Radiance or Azure Bonds AD&D role-playing games, or create one from scratch. Your quest and the options available to you each game will change to suit your character's specialty (thief, mage, cleric or fighter).\n\nYour quest will keep you constantly on the move. Fight in the arena against raging minotaurs, ill-tempered orcs or insulted swordsmen. Enter different buildings and your maze-running and lock-picking skills will be required. Archery and equestrian events may also be part of your overall quest.\n\nThink fast. Move fast. These mini-games happen in real time!\n\nFor both adventure and action, there's no place like Hillsfar!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Hillsfar: una fantasía increíble que combina lo mejor de las aventuras de rol y los juegos de acción trepidante.*\n\nCada visita a Hillsfar es una experiencia distinta y emocionante. Explora la ciudad, conoce a sus pintorescos habitantes en las calles o en las tabernas y descubre una misión (hay muchas posibles).\n\nTransfiere tu personaje favorito de los juegos de rol AD&D Pool of Radiance o Azure Bonds, o crea uno desde cero. Tu misión y las opciones disponibles en cada partida cambiarán para adaptarse a la especialidad de tu personaje (ladrón, mago, clérigo o guerrero).\n\nTu misión te mantendrá en constante movimiento. Lucha en la arena contra minotauros furiosos, orcos de mal genio o espadachines ofendidos. Entra en distintos edificios, donde necesitarás tus habilidades para recorrer laberintos y forzar cerraduras. También pueden formar parte de tu misión eventos de tiro con arco y de equitación.\n\n¡Piensa rápido. Actúa rápido. Estos minijuegos ocurren en tiempo real!\n\nPara la aventura y la acción, ¡no hay lugar como Hillsfar!",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1989",
           "source": "igdb",
@@ -600,7 +1044,12 @@
           "igdbId": 8622,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/99624abe955bbfcd4b3f53a279165641.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d84d4ec4799ad10fa6f84fd01de40feb.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/621ad6cc8670cef52215c511f4ddde1e.png"
+      }
     },
     {
       "id": 42814,
@@ -612,6 +1061,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101907",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "DragonStrike",
           "source": "igdb",
@@ -621,6 +1076,18 @@
           "field": "original_name",
           "value": "DragonStrike",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "DragonStrike is a flight simulator with some role-playing elements. The player character is a knight who flies on the back of a metallic dragon equipped with a lance and various magic items (among other things a magic orb that acts as a radar in the game).",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "DragonStrike es un simulador de vuelo con algunos elementos de juego de rol. El personaje del jugador es un caballero que vuela sobre el lomo de un dragón metálico equipado con una lanza y diversos objetos mágicos (entre ellos, una esfera mágica que funciona como radar en el juego).",
+          "source": "claude",
           "manual": false
         },
         {
@@ -638,7 +1105,28 @@
           "year": 2023,
           "igdbId": 5467,
           "steamAppId": 2350520,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado y guardado libre."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Ejecuta bien."
+            }
+          ]
         },
         {
           "id": 101908,
@@ -646,7 +1134,28 @@
           "kind": "original",
           "year": 1990,
           "igdbId": 5467,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Adaptación recortada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control de NES limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Hardware antiguo."
+            }
+          ]
         },
         {
           "id": 102081,
@@ -654,9 +1163,35 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 48113,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Adaptación recortada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control de NES limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Hardware antiguo."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3e766c6993d2d41c594eb07c471a7c0e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/bd3d35a934638d330b2b67cfc6363b3b.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6f4cd73791a8df12cd0d78da3b7fa84f.png"
+      }
     },
     {
       "id": 44114,
@@ -668,6 +1203,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "104486",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeons & Dragons: Dark Alliance",
           "source": "igdb",
@@ -677,6 +1218,18 @@
           "field": "original_name",
           "value": "Dungeons & Dragons: Dark Alliance",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Set in the Forgotten Realms, the game features real-time combat and dynamic co-op gameplay, and pits the infamous Drizzt Do'Urden and his legendary companions – Catti-brie, Bruenor, and Wulfgar – against some of the most iconic monsters from the world of Dungeons & Dragons. Frost Giants, Beholders, and White Dragons roam the frozen tundra of Icewind Dale in search of the Crystal Shard— and it's up to the companions to muster the strength to stop them from claiming and using it to destroy their home.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Ambientado en los Forgotten Realms, el juego presenta combate en tiempo real y un cooperativo dinámico, y enfrenta al célebre Drizzt Do'Urden y a sus legendarios compañeros (Catti-brie, Bruenor y Wulfgar) contra algunos de los monstruos más icónicos del mundo de Dungeons & Dragons. Gigantes de escarcha, contempladores y dragones blancos recorren la tundra helada de Icewind Dale en busca del Crystal Shard, y depende de los compañeros reunir la fuerza necesaria para impedir que lo reclamen y lo usen para destruir su hogar.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -728,7 +1281,12 @@
           "igdbId": 127348,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/c544e7bbd0567d28b10962b0d533d5da.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/d032df7c6409e978040d7e7be3a0d42c.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/83507bf96216e11ddc2e0773263cc2b2.png"
+      }
     },
     {
       "id": 47463,
@@ -740,6 +1298,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112653",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Demeo x Dungeons & Dragons: Battlemarked",
           "source": "igdb",
@@ -749,6 +1313,18 @@
           "field": "original_name",
           "value": "Demeo x Dungeons & Dragons: Battlemarked",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A cooperative tactical RPG set in the D&D universe. Embark on a fantasy tabletop adventure. Your quest, on your schedule.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Demeo x Dungeons & Dragons: Battlemarked. Un RPG táctico cooperativo ambientado en el universo de D&D. Emprende una aventura de fantasía de mesa. Tu misión, a tu ritmo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -765,7 +1341,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 346959,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0400F8D026D6A000"
+          ]
         },
         {
           "id": 112653,
@@ -793,7 +1372,12 @@
           "igdbId": 346959,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d34e9520cb82668542e3a8b297c538ee.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/e817bf9f6118ffff3495cde5e75af8a2.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/ad4bf54b69c664e169691d4cc5810df2.png"
+      }
     },
     {
       "id": 47853,
@@ -805,6 +1389,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113663",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Warlock: Dungeons & Dragons",
           "source": "igdb",
@@ -814,6 +1404,18 @@
           "field": "original_name",
           "value": "Warlock: Dungeons & Dragons",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Players control Kaatri, a veteran warrior who forms a pact with an otherworldly entity to wield dark magic against formidable foes. The game focuses on open-world exploration, visceral combat blending melee and spell-casting, and the thematic cost of power.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Los jugadores controlan a Kaatri, un veterano guerrero que forma un pacto con una entidad de otro mundo para empuñar magia oscura contra enemigos formidables. El juego se centra en la exploración de mundo abierto, en un combate visceral que combina cuerpo a cuerpo y lanzamiento de conjuros, y en el coste temático del poder.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -849,7 +1451,10 @@
           "igdbId": 388116,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocu3h.jpg"
+      }
     },
     {
       "id": 48261,
@@ -861,6 +1466,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114613",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dungeons & Dragons: Warriors of the Eternal Sun",
           "source": "igdb",
@@ -870,6 +1481,18 @@
           "field": "original_name",
           "value": "Dungeons & Dragons: Warriors of the Eternal Sun",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dungeon & Dragons: Warriors of the Eternal Sun is set in the world of Mystara, a setting of the Dungeons & Dragons game. The characters find themselves in a strange, red-hued world in which the horizon slopes upward in all directions, eventually vanishing into a crimson haze at the limits of sight. Their mission is to find and make allies in this new world or else the kingdom and its culture will perish.\n\nThe player leads a party of four characters (either the default party or one that the player has created). Characters and races can be chosen from the normal D&D options. The gameworld is viewed from an isometric perspective and the characters can roam around in realtime. Battles are turn based. Like most role-playing games, the gaming experience focuses on exploration, inventory management and character development.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Dungeons & Dragons: Warriors of the Eternal Sun se desarrolla en el mundo de Mystara, un escenario de Dungeons & Dragons. Los personajes se encuentran en un mundo extraño de tono rojizo, donde el horizonte se inclina hacia arriba en todas direcciones y acaba desvaneciéndose en una neblina carmesí en el límite de la vista. Su misión es encontrar aliados en este nuevo mundo y ganárselos; de lo contrario, el reino y su cultura perecerán.\n\nEl jugador dirige un grupo de cuatro personajes (el grupo predeterminado o uno que el jugador haya creado). Los personajes y las razas pueden elegirse entre las opciones habituales de D&D. El mundo de juego se ve desde una perspectiva isométrica y los personajes pueden moverse libremente en tiempo real. Los combates son por turnos. Como en la mayoría de los juegos de rol, la experiencia se centra en la exploración, la gestión del inventario y el desarrollo de los personajes.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -886,7 +1509,28 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 4486,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 114614,
@@ -894,7 +1538,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 4486,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Rendimiento menor."
+            }
+          ]
         },
         {
           "id": 114615,
@@ -902,10 +1567,258 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 4486,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/3a5656cadc643bfe07e5351e14619ab4.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/1c197b9cf4486366f65b0f4c0b0ba5e2.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c16af09e39c7093bd3eaa51069b0e072.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 277,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42699,
+          "reason": "1988"
+        },
+        {
+          "position": 2,
+          "gameId": 42740,
+          "reason": "1989"
+        },
+        {
+          "position": 3,
+          "gameId": 42741,
+          "reason": "1989"
+        },
+        {
+          "position": 4,
+          "gameId": 42814,
+          "reason": "1990"
+        },
+        {
+          "position": 5,
+          "gameId": 65,
+          "reason": "1991"
+        },
+        {
+          "position": 6,
+          "gameId": 48261,
+          "reason": "1992"
+        },
+        {
+          "position": 7,
+          "gameId": 24133,
+          "reason": "1996"
+        },
+        {
+          "position": 8,
+          "gameId": 16847,
+          "reason": "2003"
+        },
+        {
+          "position": 9,
+          "gameId": 35294,
+          "reason": "2007"
+        },
+        {
+          "position": 10,
+          "gameId": 40579,
+          "reason": "2011"
+        },
+        {
+          "position": 11,
+          "gameId": 40828,
+          "reason": "2013"
+        },
+        {
+          "position": 12,
+          "gameId": 41565,
+          "reason": "2013"
+        },
+        {
+          "position": 13,
+          "gameId": 41725,
+          "reason": "2015"
+        },
+        {
+          "position": 14,
+          "gameId": 10142,
+          "reason": "2018"
+        },
+        {
+          "position": 15,
+          "gameId": 44114,
+          "reason": "2021"
+        },
+        {
+          "position": 16,
+          "gameId": 47463,
+          "reason": "2025"
+        },
+        {
+          "position": 17,
+          "gameId": 47853,
+          "reason": "2027"
+        }
+      ]
+    },
+    {
+      "id": 3747,
+      "kind": "story",
+      "rationale": "Dungeons & Dragons no tiene una historia continua: son adaptaciones de distintos mundos (Dragonlance, Forgotten Realms, Mystara, Ravenloft). Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 42699,
+          "reason": "Primer juego por año."
+        },
+        {
+          "position": 2,
+          "gameId": 42740,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 3,
+          "gameId": 42741,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 4,
+          "gameId": 42814,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 5,
+          "gameId": 65,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 6,
+          "gameId": 48261,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 7,
+          "gameId": 24133,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 8,
+          "gameId": 16847,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 9,
+          "gameId": 35294,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 10,
+          "gameId": 40579,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 11,
+          "gameId": 40828,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 12,
+          "gameId": 41565,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 13,
+          "gameId": 41725,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 14,
+          "gameId": 10142,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 15,
+          "gameId": 44114,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 16,
+          "gameId": 47463,
+          "reason": "Sigue el orden de lanzamiento."
+        },
+        {
+          "position": 17,
+          "gameId": 47853,
+          "reason": "Sigue el orden de lanzamiento (aún sin salir)."
+        }
+      ]
+    },
+    {
+      "id": 3748,
+      "kind": "community",
+      "rationale": "Selección corta de lo más recordado, basada en mi conocimiento general (no pude consultar la web). Se omiten los juegos menores de NES y los títulos poco valorados como Daggerdale o Sword Coast Legends.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 65,
+          "recommendedVersionId": 106,
+          "reason": "Clásico del dungeon crawler en primera persona; la versión de PC es la de referencia."
+        },
+        {
+          "position": 2,
+          "gameId": 40828,
+          "recommendedVersionId": 97564,
+          "reason": "Recopilación remasterizada de los beat 'em up de Capcom (Tower of Doom y Shadow over Mystara); es la forma actual de jugarlos."
+        },
+        {
+          "position": 3,
+          "gameId": 41565,
+          "recommendedVersionId": 98886,
+          "reason": "MMO gratuito de Forgotten Realms; se puede probar sin coste en PC."
+        },
+        {
+          "position": 4,
+          "gameId": 44114,
+          "recommendedVersionId": 104486,
+          "reason": "Acción cooperativa moderna; opcional y de recepción mixta."
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

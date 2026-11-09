@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3735",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ten Pin Alley 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Ten Pin Alley 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bowling game that offers two gameplay options: you can either practice with up to three other players on the same system, or head into a tournament layout for competition against three other computer opponents. Players have the choice of eight different competitors and four different alleys. Ten Pin Alley 2's gameplay is a four click affair: first, mark the spot on the lane you want to stand. Then, watch the aim arrow bounce back and forth on the alley. Hit the button again, and set the power of the throw. The fourth button click sets how much or little a hook you want to throw. Released on a 32 megabit Game Boy Advance cartridge, the game was based on the cell phone game of the same name.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,31 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 5215,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Menos modos y presentación limitada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles básicos con botones."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Buen rendimiento en GBA."
+            }
+          ],
+          "codes": [
+            "BTPE"
+          ]
         },
         {
           "id": 3735,
@@ -56,7 +92,31 @@
           "kind": "remake",
           "year": 2008,
           "igdbId": 248606,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Más modos y mejor presentación."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles con movimiento más naturales."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Remake con cambios importantes."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Gráficos mejores y más estables."
+            }
+          ],
+          "codes": [
+            "RVL-RLEE-USA"
+          ]
         }
       ],
       "images": {
@@ -73,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60241",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ten Pin Alley",
           "source": "igdb",
@@ -81,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Ten Pin Alley",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ten Pin Alley is a ten-pin bowling simulation game released by ASC Games in 1996 and developed internally at Adrenalin Entertainment.\n\nThe game was released on November 30, 1996 in North America, and eventually released in February 1998 in the United Kingdom. Just before its North American release, Sony selected the game's demo to be included on its PS1 sampler disc.\n\nA sequel to the game entitled Ten Pin Alley 2, developed by an unknown developer, was mooted for a release on the PlayStation 2, but for unknown reasons was shelved. Despite this, the sequel, developed by Pronto Games and published by XS Games was released on the Game Boy Advance to dismal reviews.\n\nTen Pin Alley should not be confused with an audio game with the same title made by PCS Games",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +170,28 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 6636,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port de PC similar al de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Puede ser incómodo en sistemas modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy cercano al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Puede requerir compatibilidad con Windows moderno."
+            }
+          ]
         },
         {
           "id": 60241,
@@ -106,7 +199,33 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 6636,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con modos de bolos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con mando en consola."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos 3D simples de PS1."
+            }
+          ],
+          "codes": [
+            "SLES-00534",
+            "SLUS-00377",
+            "SLUS-00377GH"
+          ]
         }
       ],
       "images": {
@@ -115,5 +234,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2179,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23801,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 1739,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

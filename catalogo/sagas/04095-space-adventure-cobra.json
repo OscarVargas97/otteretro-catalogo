@@ -1,10 +1,16 @@
 {
   "id": 4095,
-  "name": "Cobra",
+  "name": "Space Adventure Cobra",
   "igdbKind": "franchise",
   "igdbId": 1136,
   "iconic": false,
   "fields": [
+    {
+      "field": "name",
+      "value": "Space Adventure Cobra",
+      "source": "claude",
+      "manual": false
+    },
     {
       "field": "name",
       "value": "Cobra",
@@ -35,6 +41,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Space Adventure Cobra: The Shooting is a fast-paced action shooter based on the anime, featuring five chapters and 23 stages. Players control Cobra through varied sci‑fi environments.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 75735,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00312"
+          ]
         }
       ],
       "images": {
@@ -98,5 +113,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3117,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25379,
+          "reason": "1996"
+        },
+        {
+          "position": 2,
+          "gameId": 25567,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Ricochet HD is an intense action game combining equal parts skill and strategy. With the most comprehensive feature set of any game in this genre, Ricochet HD's dynamic and interactive brick busting levels reward strategic play while the arsenal of power-ups allows you to obliterate everything in your path. 150 dynamic multi-staged unlocking levels deliver hours of non-stop action.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 52708,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3j8u.jpg"
+      }
     },
     {
       "id": 48150,
@@ -62,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "114417",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Ricochet: Lost Worlds",
           "source": "igdb",
@@ -70,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Ricochet: Lost Worlds",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "With its stunning visuals and sound effects, gripping soundtrack and compelling level design, Ricochet Lost Worlds could quite possibly be the most addictive game ever made. This remarkable breakout action game will entertain your whole family for hours on end! Throw into the mix a slew of innovative power-ups, a new \"Ring Game\" and a level editor where you can make your own levels and you have an unbeatable combination. You just have to download this brick-busting game... it's a blast!",
           "source": "igdb",
           "manual": false
         },
@@ -97,8 +118,31 @@
           "igdbId": 28987,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2xfb.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3359,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48150,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 40571,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

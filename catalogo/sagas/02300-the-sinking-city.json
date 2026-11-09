@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "20042",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Sinking City",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Sinking City",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Sinking City is a game of investigation genre taking place in a fictional open world inspired by the works of H.P. Lovecraft.\nThe player incarnates a private investigator in 1920s, who finds himself in a city of New England, Oakmont Massachusetts. It's currently suffering from extensive waterflood, and its cause is clearly supernatural.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 18225,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010028D00BA1A000"
+          ]
         },
         {
           "id": 20040,
@@ -132,6 +147,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "111741",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Sinking City 2",
           "source": "igdb",
@@ -140,6 +161,12 @@
         {
           "field": "original_name",
           "value": "The Sinking City 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Sinking City 2 is a terrifying Lovecraftian journey, powered by Unreal Engine 5. Experience a heart-pounding survival horror as you explore the flooded city of Arkham and fight eldritch monsters beyond human comprehension.",
           "source": "igdb",
           "manual": false
         },
@@ -184,8 +211,33 @@
           "igdbId": 289696,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0943a43c67fd2432d87b268099c231c3.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/9c416c3af399c6354b9b562c7baf28ad.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9df1dc0e664c16bf0d9fe05ec92e7c85.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2593,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9259,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 47111,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

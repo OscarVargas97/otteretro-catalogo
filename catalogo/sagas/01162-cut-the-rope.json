@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6783",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cut the Rope",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Cut the Rope",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Cut the Rope is a series of physics-based puzzle video games developed by ZeptoLab for several platforms and devices. The objective of the Cut the Rope games is to feed candy to a little green creature named Om Nom while collecting stars. In each level, the candy hangs by one or several of the titular ropes which the player must cut with a swipe of their finger using the device's touchscreen. Using various objects such as floating bubbles and bellows, the candy must also be manipulated around obstacles to get to Om Nom's mouth.\n\nEach level pack introduces new challenges. Levels are scored with a zero to three star rating, according to how many stars the player picked up, and a point score depending on the number of stars collected and the amount of time taken to complete the level. Game received multiple award, for example: Apple Design Award 2011, British Academy Video Games Awards 2011 and many others.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 9761,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Más niveles y cajas que en la versión inicial."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control táctil preciso, con guardado automático."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene el diseño con pocos cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de 3DS, estable."
+            }
+          ]
         },
         {
           "id": 6783,
@@ -57,7 +90,28 @@
           "year": 2013,
           "igdbId": 9761,
           "steamAppId": 223280,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye las cajas principales de la versión de escritorio."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón cómodo y partidas guardadas fiables."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al juego, con ajustes menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Alta resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 6784,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 9761,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Primera versión de DS, con menos cajas de niveles que las posteriores."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "El lápiz táctil va muy bien para cortar cuerdas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original en DS."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla de baja resolución, pero estable."
+            }
+          ]
         },
         {
           "id": 10211,
@@ -73,7 +148,28 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 85555,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar a la otra edición de 3DS."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control táctil sólido y cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original con pocos cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución limitada de 3DS."
+            }
+          ]
         }
       ],
       "images": {
@@ -104,6 +200,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "OM NOM: RUN is an arcade action game with clear basic goals: run, bypass obstacles along the way and reach the finish line. You can count on: One Om Nom in many outfits - a rubber glove thief, icy hero, fiery flame? It’s up to you! Choose from crazy hats, capes and pants.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2019",
           "source": "igdb",
@@ -117,7 +219,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 178794,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010032D01641E000"
+          ]
         }
       ],
       "images": {
@@ -125,5 +230,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2284,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3458,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 21423,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99959",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Aaero",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Aaero",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"Speed through stunning, stylised environments tracing ribbons of light, releasing the energy in the music. Battle strange enemies and fight epic boss battles all driven by an incredible licensed soundtrack.\n\nIndependent micro-studio ‘Mad Fellows’ brings you a unique and innovative game featuring music from Noisia, Flux Pavilion, Katy B, The Prototypes, Neosignal and many more.\"",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 18637,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cad903182aee05738a8838fd4f24f28e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/7380ad8a673226ae47fce7bff88e9c33.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/85fc37b18c57097425b52fc7afbb6969.png"
+      }
     },
     {
       "id": 50085,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "118112",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Aaero2",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Aaero2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Speed through stunning alien worlds tracing ribbons of light to release the energy in the music. Fly solo or team up with a friend. Encounter strange enemies and giant boss creatures. Unleash devastating missile barrages and rain heavy cannon fire to the beat of the epic soundtrack from Monstercat.",
           "source": "igdb",
           "manual": false
         },
@@ -115,8 +144,33 @@
           "steamAppId": 3010090,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d356f9288f654d318f59c21888509a41.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/802bbc311af1cfd368e352a198548265.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/36e5ce1c9add47049fde9721d3a2c1c4.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3398,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41938,
+          "reason": "2017"
+        },
+        {
+          "position": 2,
+          "gameId": 50085,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

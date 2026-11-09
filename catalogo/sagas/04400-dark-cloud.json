@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81076",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dark Cloud",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dark Cloud",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "One of the PS2's first RPGs, Dark Cloud is a title that challenges players to not only strategise, battle and solve puzzles, but also to create geographical landscapes using the new Georama system. Gamers assume the role of a young boy named Toran on an unforgettable journey of rebirth, revival and hope. Unfortunately an evil demon spirit has been released and has left destruction in its wake and Toran must harness the spirit of those destroyed to rebuild the lands in time for an epic confrontation. True to life graphics should mesmerise gamers as they create villages complete with houses, hills, churches, volcanoes, and streams; they'll even be able to control the weather!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 1214,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, más trofeos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles, con trofeos y funciones de la consola."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego emulado sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Escalado a mayor resolución y más estable."
+            }
+          ]
         },
         {
           "id": 81077,
@@ -56,7 +89,37 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 1214,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles originales, sin extras de comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja, cargas y algún error de rendimiento."
+            }
+          ],
+          "codes": [
+            "PAPX-90205",
+            "PAPX-90501",
+            "PCPX-96603",
+            "SCES-50295",
+            "SCPS-15004",
+            "SCPS-19203",
+            "SCUS-97111"
+          ]
         }
       ],
       "images": {
@@ -75,6 +138,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "81140",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dark Cloud 2",
           "source": "igdb",
@@ -83,6 +152,12 @@
         {
           "field": "original_name",
           "value": "Dark Cloud 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "BUILD your world. INVENT your weapons. CREATE your adventure.\n\nDiscover a secret binding the past, present and future. A secret where an innocent inventor, a temporal warrior and an ageless evil hold the key.\n\nExperience an epic action/RPG adventure that relies on your innovation as much as exploration and fighting reflexes.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +175,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 1215,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, más trofeos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mismos controles con trofeos y funciones de la consola."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Mismo juego emulado sin cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Escalado a mayor resolución y más estable."
+            }
+          ]
         },
         {
           "id": 81141,
@@ -108,15 +204,77 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 1215,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles originales, sin comodidades añadidas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja y cargas largas."
+            }
+          ],
+          "codes": [
+            "SCKA-20014",
+            "SCUS-97213"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/b084f475f1244ad87ae8faa2b3bd82a5.png",
         "hero": "https://cdn2.steamgriddb.com/hero/807c4063f8fd3da43661d3087d697c7e.png",
         "logo": "https://cdn2.steamgriddb.com/logo/194a988102edcd4b67accb0110e20fd3.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 630,
+          "platform": "ps2",
+          "project": "DC2-PS2RECOMP",
+          "kind": "recomp",
+          "toolchain": "PS2Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": true,
+          "link": "https://github.com/Red-tv141/DC2-PS2RECOMP",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3193,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32448,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 32482,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

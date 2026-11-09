@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Pony Friends is a virtual pet game for the Nintendo DS where players get to emulate every cool aspect of owning their own pet pony. From grooming and accessorizing your pony with colorful custom gear to going on exciting trail rides where you encounter new wildlife friends, the world of Pony Friends offers a cool new interactive environment where kids learn how to care for their dream pony.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -48,7 +54,11 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 47974,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AUFE",
+            "AUFP"
+          ]
         }
       ],
       "images": {
@@ -67,6 +77,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50413",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pony Friends 2",
           "source": "igdb",
@@ -75,6 +91,12 @@
         {
           "field": "original_name",
           "value": "Pony Friends 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Welcome back to the stables with Pony Friends 2 the sequel to the top selling DS title, now coming to the Nintendo Wii! Pony Friends 2 allows players the chance to create their perfect Pony and take part in fun activities. Featuring 12 Pony breeds (4 new breeds) players can customize every aspect of its appearance, along with its own unique personality. Players can choose all their Pony's accessories and even design some of their own. Taking special care of their Pony to keep it clean and healthy, players can take it on trail rides across different landscapes and environments. Grab the reins, photograph wildlife and unlock a whole host of secrets on your journey. Pony Friends 2 features an exciting and energetic competitive mode: players can compete in races and trick competitions alone or with a friend (single cart play).",
           "source": "igdb",
           "manual": false
         },
@@ -92,14 +114,64 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 51022,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido muy similar, con presentación algo más vistosa en TV."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Los controles con Wiimote son menos precisos y se sienten más forzados."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación a Wii con cambios de control respecto al diseño táctil original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y mejores texturas en pantalla grande."
+            }
+          ],
+          "codes": [
+            "RVL-R2RE-USA-B0",
+            "RVL-R2RP-EUR-B0"
+          ]
         },
         {
           "id": 50413,
           "platform": "ds",
           "kind": "original",
           "igdbId": 25385,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Cuidado de ponis, personalización y minijuegos completos, aunque con menos pulido visual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El stylus permite acariciar, cepillar y guiar al poni de forma directa."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original del juego."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Gráficos 3D sencillos en pantalla pequeña, pero estable y con cargas cortas."
+            }
+          ],
+          "codes": [
+            "COYE",
+            "COYP"
+          ]
         }
       ],
       "images": {
@@ -108,5 +180,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2865,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16955,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 20290,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

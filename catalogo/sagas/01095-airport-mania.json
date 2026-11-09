@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6356",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Airport Mania: First Flight",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Airport Mania: First Flight",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pack your bags for an exciting trip to fun with Airport Mania!\n\nPack your bags for a trip through the skies in Airport Mania! Travel through eight amusing airports while you land a variety of planes, purchase upgrades, and avoid delays. Stay on your toes as some planes carry precious cargo and will need to land in a hurry, while others might need a trip to the repair shop. But, with good planning, you're sure to make it to the gate on time! With unique challenges, whimsical characters, and fun that'll put a smile on your face, Airport Mania is one flight you can't miss!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 6476,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Adaptación con contenido similar al original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "El control con mando de Wii funciona, pero es menos preciso."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port ajustado para consola."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución estándar de Wii, estable."
+            }
+          ]
         },
         {
           "id": 6356,
@@ -57,7 +90,28 @@
           "year": 2008,
           "igdbId": 6476,
           "steamAppId": 4674310,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo de gestión de aeropuerto con todos los niveles principales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón da precisión y rapidez al asignar aviones."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Resolución mayor y carga rápida, aunque es un juego casual sencillo."
+            }
+          ]
         },
         {
           "id": 6357,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 6476,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar, adaptado a DS."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "El stylus es natural para arrastrar aviones y es portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port adaptado a las limitaciones de DS."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla pequeña de baja resolución."
+            }
+          ]
         }
       ],
       "images": {
@@ -94,6 +169,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A DSiWare and iOS installment in the Airport Mania series, it is basically an endless mode.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -115,5 +196,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2265,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3249,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 17271,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

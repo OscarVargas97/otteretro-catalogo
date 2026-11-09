@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "597",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Frank Thomas Big Hurt Baseball",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Frank Thomas Big Hurt Baseball",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Baseball player Frank Thomas licensed one of the first baseball games to use motion-captured 3D graphics and multiple camera angles. 28 stadia have been rendered in 3D, and each has its own visible and significant differences.\n\nThere are 6 distinct game modes, allowing for single exhibition matches as well as full seasons on the playoffs. There is also a Home Run Derby mode, allowing the player to pelt the ball out of the ground for points.\n\nYou can choose pitchers and batters, based on their statistics and form. Bowling options are set to define the delivery, with fastballs and curveballs as well as more precise setting of pace and height. Fielding is optional - it's best to leave this to the computer at first You can always alter the infield and outfield depth and shift.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,12 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 20405,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00100",
+            "SLPS-00453",
+            "SLUS-00010"
+          ]
         },
         {
           "id": 895,
@@ -102,6 +119,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Never before has a baseball game been created that captures the details of the sport like MLBPA Baseball. Realistic run-downs, accurate cut-off plays, the double switch, multiple defensive alignments, snap throws, even bad hops and booted balls. Throw in every player from Alamar to Zeile and you've got the only baseball game worth playing for the Super NES.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1994",
           "source": "igdb",
@@ -124,5 +147,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2094,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 711,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 391,
+          "reason": "1995"
+        }
+      ]
+    }
+  ]
 }

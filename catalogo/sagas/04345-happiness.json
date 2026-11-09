@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "76396",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Happiness! Sakura Celebration!",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Happiness! Sakura Celebration!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Once every ten years, the cherry blossoms stay in bloom longer than usual, and the seasonal festivals are much more grandiose. This year is known as the Year of the Cherry Blossoms. With the arrival of the Year of the Cherry Blossoms once more, various people begin to feel various feelings sprout up again.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2020,
           "igdbId": 316015,
           "steamAppId": 2599880,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Novela visual del lanzamiento original de 2020."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Lectura y guardado correctos con ratón o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y carga inmediata."
+            }
+          ]
         },
         {
           "id": 76396,
@@ -57,7 +90,28 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 316015,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido base que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómoda para leer en modo portátil con guardado rápido."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original, con posibles ajustes de adaptación."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable, con resolución menor que en PC."
+            }
+          ]
         }
       ],
       "images": {
@@ -87,6 +141,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The story begins with Valentine's Day coming up in just a few days and there's a rush for all the girls to get the chocolate they want in order to give it to the boys they like, in accordance with Japanese custom. Kamisaka Haruhi, a mage in training, is out with her friend Hiiragi Anri, also a mage in training, in order to do just this. While walking outside in the park, after buying the chocolate she wanted to give to a boy she met when she was a child, Haruhi meets Yuuma, who stops some younger boys bullying a young girl, and Haruhi thinks that he may be the boy she's been searching for all this time. The next day is Valentine's Day and at school, all the girls are giving their gifts to the boys of their choice. Later that day, Anri challenges Haruhi to a magic battle in order to take the chocolate she has by force for the reason that Haruhi wouldn't tell her who she was going to give it to. Before long, Anri loses control of her magic and it is flown outside, almost falling onto Yuuma and his friends. Ultimately, Haruhi gives him the chocolate she had bought, and in turn Anri does the same, which was her plan - to give her chocolate to the same boy as Haruhi and see who would win his favor more. The next day there is a gas explosion at the magic section of the school and all the mages in training must transfer over to the normal section for the time being. Coincidentally, Haruhi and Anri are placed within Yuuma's class.\n\nNow Haruhi and her friends must adjust to the transfer into the normal section of Mizuhosaka Academy.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2007",
           "source": "igdb",
@@ -100,10 +160,38 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 94724,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-25719",
+            "SLPS-25720",
+            "SLPS-25811"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobc4i.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3178,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34610,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 30551,
+          "reason": "2020"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

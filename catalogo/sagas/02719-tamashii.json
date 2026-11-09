@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "30241",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tamashii",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tamashii",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An ancient entity seeking help, a Witch, an unnamed soul and a Twisted Temple. A dark tale about inner discoveries set in a distorted and perverted world.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 115152,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010012800EE3E000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "104925",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Teocida",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Teocida",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A surrealistic and spiritually provocative experience. Explore the ruins of a temple filled with puzzles, riddles, and secrets. Follow the Story of the Matriarch: a prophetess whose doctrine fell into obscurity.",
           "source": "igdb",
           "manual": false
         },
@@ -117,7 +144,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 144568,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Pensado para mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Sin cambios de diseño."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto en PS4, menos opciones."
+            }
+          ]
         },
         {
           "id": 104925,
@@ -126,10 +174,54 @@
           "year": 2021,
           "igdbId": 144568,
           "steamAppId": 1569470,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado y ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y ajustes gráficos."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a23dae9b6ec06092812825d8ac914c2b.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2725,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12397,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 44255,
+          "reason": "2021"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

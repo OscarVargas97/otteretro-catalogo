@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "15068",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Air Zonk",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Air Zonk",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The powered-up Zonk gathers his friends to form Team Cool, and they set out to stop King Drool’s plan to conquer the world. Choose from 3 levels of difficulty and 3 types of Friend Modes. Shoot King Drool's cyber robots and avoid their attacks while collecting the Air Bones to unleash a variety of attacks. Enjoy unique moves such as combining with a friend to create an invincible hybrid form or blasting enemies with a charged attack. Air “Zonk” is filled with humor, like its wacky theme song that plays when you post a huge score or when your game is over.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 42129,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Guardado por suspensión."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480p."
+            }
+          ]
         },
         {
           "id": 15068,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 42129,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Puntos de restauración."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "720p."
+            }
+          ]
         }
       ],
       "images": {
@@ -87,6 +141,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Zonk is back in Super Air Zonk, the sequel to the shooting game spin-off of the Bonk series, Air \"Zonk.\" Now moving to a rockabilly beat and able to transform into nine different characters, Zonk lets loose through seven action-packed stages in another battle against his arch nemesis, SandroVitch. Power up Zonk with the classic Meat item, eventually turning him into the champion of justice, Ultra Zonk, or the fearsome Tyrano Zonk in the latter stages of the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1993",
           "source": "igdb",
@@ -110,5 +170,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2488,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7907,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 20437,
+          "reason": "1993"
+        }
+      ]
+    }
+  ]
 }

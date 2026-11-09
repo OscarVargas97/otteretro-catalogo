@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3086",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "AirForce Delta Storm",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "AirForce Delta Storm",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Strap into your cockpit and blast through the gut-wrenching world of flight combat. Your adrenaline pumps as machine gun fire pelts off your tail, you execute back-breaking barrel rolls and experience dog-fighting action. Take your pick of over 70 planes, including military fighters rendered from actual aircraft. With a full range of extreme missions to numb your senses, AirForce Delta Storm pushes your Xbox to the sky!",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 5718,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AAKE"
+          ]
         }
       ],
       "images": {
@@ -75,6 +90,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "11831",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Airforce Delta",
           "source": "igdb",
@@ -83,6 +104,12 @@
         {
           "field": "original_name",
           "value": "Airforce Delta",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Ever been screaming along at Mach 2 and ordered to drop 6,000 pounds of bombs on a target no bigger than a Yugo? Or get that feeling of multiple bogeys closing in on your tail for a lock-on to blow you out of the sky? You've been contracted by a mercenary group to fuel-up, strap-in and snuff out the enemy. And to sweeten the pot in this \"The more you take out, the more you take home\" deal, you can upgrade your ride, choosing from over 30 different aircraft to get the job done. You in? Then get ready to grab some serious air!",
           "source": "igdb",
           "manual": false
         },
@@ -139,6 +166,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Fly with the 1st, 2nd, and 3rd Element squadrons as you defend country and, eventually, Earth itself from attack. Pilot aircraft that span sixty years of aviation including WWII prop planes, Korean War jets, rare prototypes, and even aircraft from previous Konami games like the Vic Viper and TwinBee.\n\nBetween missions you can explore the base and talk to wingmates, buy new aircraft and special weapons, modify or repaint existing aircraft, and get mission briefings. Missions can have varied objectives, but any enemy crafts shot down will reward money used to buy, modify, and repair aircraft. While Ken Thomas is the main character of the game, other pilots can be used in missions as the game progresses, and using them can open up bonus missions as well as alter the story. The player can only play as Delta Squadron pilots, but the story is told from the perspective of both E.D.A.F.'s Delta Squadron and their O.C.C. Ace counterparts. Medals are awarded to each pilot as they reach milestones, such as number of enemy aces shot down or number of aircraft purchased.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -152,7 +185,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 24187,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLKA-25133",
+            "SLUS-20703"
+          ]
         }
       ],
       "images": {
@@ -162,5 +199,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1458,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6014,
+          "reason": "1999"
+        },
+        {
+          "position": 2,
+          "gameId": 1514,
+          "reason": "2001"
+        },
+        {
+          "position": 3,
+          "gameId": 33300,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

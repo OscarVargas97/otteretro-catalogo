@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The first game in the Oshare Princess fashion game series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 49773,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AOPJ"
+          ]
         }
       ],
       "images": {
@@ -77,6 +86,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Oshare Princess 2 + Doubutsu Kyaranabi Uranai is a Miscellaneous game, published by Culture Brain, which was released in Japan in 2002.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -90,7 +105,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 49767,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AO2J"
+          ]
         }
       ]
     },
@@ -116,6 +134,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Oshare Princess 3 is an Adventure game, published by Culture Brain, which was released in Japan in 2003.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -129,7 +153,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 49772,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BO3J"
+          ]
         }
       ]
     },
@@ -155,6 +182,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Oshare Princess 5 is an Adventure game, developed and published by Culture Brain, which was released in Japan in 2005.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -168,7 +201,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 49771,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BO5J"
+          ]
         }
       ],
       "images": {
@@ -193,6 +229,12 @@
         {
           "field": "original_name",
           "value": "Oshare Princess DS: Oshare ni Koishite!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The first DS installment of the Oshare Princess series.",
           "source": "igdb",
           "manual": false
         },
@@ -227,6 +269,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "45567",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Oshare Princess DS: Oshare ni Koishite! 2",
           "source": "igdb",
@@ -235,6 +283,12 @@
         {
           "field": "original_name",
           "value": "Oshare Princess DS: Oshare ni Koishite! 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The second DS installment of the Oshare Princess series.",
           "source": "igdb",
           "manual": false
         },
@@ -252,7 +306,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 71906,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Control táctil del DS."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Nativo de DS."
+            }
+          ]
         },
         {
           "id": 47691,
@@ -260,7 +335,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 214430,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Reedición con el mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mismo control táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Reedición sin cambios conocidos."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mismo rendimiento."
+            }
+          ]
         }
       ],
       "images": {
@@ -268,5 +364,45 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 730,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2008,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 2102,
+          "reason": "2003"
+        },
+        {
+          "position": 3,
+          "gameId": 2154,
+          "reason": "2003"
+        },
+        {
+          "position": 4,
+          "gameId": 2302,
+          "reason": "2005"
+        },
+        {
+          "position": 5,
+          "gameId": 17404,
+          "reason": "2006"
+        },
+        {
+          "position": 6,
+          "gameId": 17487,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

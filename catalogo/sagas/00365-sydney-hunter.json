@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1530",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sydney Hunter and the Caverns of Death",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Sydney Hunter and the Caverns of Death",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sydney Hunter and the Caverns of Death is a retro platformer that started as a Flash game before being ported to various older and modern platforms.",
           "source": "igdb",
           "manual": false
         },
@@ -73,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24400",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sydney Hunter and the Curse of the Mayan",
           "source": "igdb",
@@ -81,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Sydney Hunter and the Curse of the Mayan",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The third game in the Sydney Hunter series.",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +122,28 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 59297,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que las demás."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable."
+            }
+          ]
         },
         {
           "id": 24398,
@@ -107,7 +152,28 @@
           "year": 2019,
           "igdbId": 59297,
           "steamAppId": 931860,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que las demás."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buenos controles con mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable y configurable."
+            }
+          ]
         },
         {
           "id": 24399,
@@ -115,7 +181,28 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 59297,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que las demás."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles correctos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable."
+            }
+          ]
         },
         {
           "id": 24400,
@@ -123,7 +210,31 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 59297,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que las demás."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Cómodo en modo portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable."
+            }
+          ],
+          "codes": [
+            "010007300C482000"
+          ]
         }
       ],
       "images": {
@@ -133,5 +244,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2123,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 858,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 10582,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

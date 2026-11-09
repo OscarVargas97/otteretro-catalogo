@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "55945",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bit Orchard: Animal Valley",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Bit Orchard: Animal Valley",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pull out weeds, plant new apple trees and gather the literal fruits of your labour. With time, you'll discover ways to make your life easier and explore this charming 2D world.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 199892,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100866017D32000"
+          ]
         }
       ],
       "images": {
@@ -81,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "116499",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bit Orchard",
           "source": "igdb",
@@ -89,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Bit Orchard",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pull weeds, plant seeds and chase the crows away from your apples! Earn money to upgrade your house and expand your land in this charming pixel art farming game!",
           "source": "igdb",
           "manual": false
         },
@@ -117,8 +144,31 @@
           "igdbId": 148250,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3mb8.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3021,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 49435,
+          "reason": "2021"
+        },
+        {
+          "position": 2,
+          "gameId": 22462,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

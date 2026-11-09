@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "With the Queen's Blade Tournament ongoing, rumors arise about a dark, mysterious power threatening to destroy all of Gainos. With the new heroes, Cute and Jean, and the rest of the Queen's Blade competitors, they seek to find the root of this power and destroy it to restore balance to the land.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -48,9 +54,18 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 38458,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJS-00189",
+            "ULJS-00190"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d5c92d91156246964a05585b4b4b9708.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/41aff858ea6945dd198fce2cfafecbe8.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/d782ba2d11b6ccbec33ef6b14618fb38.png"
+      }
     },
     {
       "id": 35858,
@@ -74,6 +89,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "This is the sequel to Queen's Blade: Spiral Chaos.\nIt features returning game exclusive characters Jean and Cute, and introduces a new heroine, Maron Makaron.\nIt also features characters from other forms of media, such as the Soul Calibur, Tekken, Dead or Alive, Samurai Showdown, BlazBlue, Guilty Gear, and the King of Fighters fighting game series, as well as other anime and manga series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -87,9 +108,18 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 66176,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULJS-00376",
+            "ULJS-00377"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/90f8e0d3c2bae417e6a3de7057523642.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/ab3b04527d2c6df3576ce1816961926d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9745dfc0d5ccaa1f9a6ab0a8296a022d.png"
+      }
     },
     {
       "id": 39009,
@@ -101,6 +131,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "93244",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Queen's Blade Re:Build",
           "source": "igdb",
@@ -109,6 +145,12 @@
         {
           "field": "original_name",
           "value": "Queen's Blade Re:Build",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A roguelite deckbuilder featuring strong, beautiful female warriors. We fused real time card games and roguelite together to make the exciting single player deckbuilder. Discover new cards and item, Craft a strong deck. Break your rival of all their armor and defeat them with a finishing move!",
           "source": "igdb",
           "manual": false
         },
@@ -137,8 +179,36 @@
           "igdbId": 406940,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coc9np.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1983,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35371,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 35858,
+          "reason": "2011"
+        },
+        {
+          "position": 3,
+          "gameId": 39009,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83814",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lucian Bee's: Resurrection Supernova",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Lucian Bee's: Resurrection Supernova",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A 5pb developed visual novel released only in Japan.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 59424,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ejc.jpg"
+      }
     },
     {
       "id": 35001,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85329",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lucian Bee's Justice Yellow",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Lucian Bee's Justice Yellow",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A fandisc for Lucian Bee's Resurrection Supernova focusing on METROPOLIS V.",
           "source": "igdb",
           "manual": false
         },
@@ -105,7 +132,10 @@
           "igdbId": 219139,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ejd.jpg"
+      }
     },
     {
       "id": 35002,
@@ -117,6 +147,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "85331",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lucian Bee's Evil Violet",
           "source": "igdb",
@@ -125,6 +161,12 @@
         {
           "field": "original_name",
           "value": "Lucian Bee's Evil Violet",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A fandisc for Lucian Bee's Resurrection Supernova focusing on HONEYBUZZARD Ⅵ.",
           "source": "igdb",
           "manual": false
         },
@@ -152,8 +194,36 @@
           "igdbId": 219140,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5eje.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1960,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33903,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 35001,
+          "reason": "2010"
+        },
+        {
+          "position": 3,
+          "gameId": 35002,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

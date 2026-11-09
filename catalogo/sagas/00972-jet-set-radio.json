@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The government is attempting to silence the kids of Tokyo, but with their Overdrive Magnetic-Motor Skating Shoes, the cops will have to catch 'em first. The Jet Grind Radio program keeps the kids unified and inspired to fight for their rights of expression, which includes graffiti art. Grab your spray cans and design your own piece on one of the immense walls in the 3D, interactive city.\n\nThe Western release of Jet Set Radio, titled Jet Grind Radio in North America due to a trademark dispute, expands the game from its original Japanese release, featuring two new characters and a whole new story chapter set in Grind City. The game would also add new music tracks to the North American and European versions of the game that were thought to appeal to each regions taste, including songs by Jurassic 5, Mix Master Mike, Rob Zombie (North America only) and O.B. One (Europe only), among others.\n\nThis version would later get its own release in Japan featuring all the new content and bug fixes along with the new licensed music from the European release, as De La Jet Set Radio.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2000",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 145186,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AJRE"
+          ]
         }
       ],
       "images": {
@@ -67,6 +76,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96294",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Jet Set Radio",
           "source": "igdb",
@@ -75,6 +90,12 @@
         {
           "field": "original_name",
           "value": "Jet Set Radio",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tag, grind, and trick to the beat in SEGA’s hit game Jet Set Radio!\n\nFight for control of Tokyo-to, mark your turf with graffiti, tag walls, billboards, and even rival gang members! Perform tricks and flips on magnetically driven in-line skates, but watch out for the local police force!",
           "source": "igdb",
           "manual": false
         },
@@ -118,7 +139,10 @@
           "igdbId": 21004,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2dzv.jpg"
+      }
     },
     {
       "id": 48012,
@@ -142,6 +166,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Jet Set Radio Future is a video game developed by Smilebit and is the sequel to Jet Set Radio. Similar to the original, it depicts a future Tokyo where freedom of expression is outlawed. The user plays a character in the GG's, a gang of in-line skating graffiti artists who skate around Tokyo covering up rival gangs' graffiti, knocking over Rokkaku police, and dancing to the electric soundtrack. The game uses a cel-shaded style of animation, and has been widely acclaimed for its unique music style, detailed art, and gameplay. Though the game is set in the future, its style and content incorporates many aspects of 1980's old school hip hop culture, as well as 1990's J-pop culture.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2002",
           "source": "igdb",
@@ -157,8 +187,68 @@
           "igdbId": 1570,
           "criteria": []
         }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1af811e7b980f0101940cface13124d4.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/537d6b881268453f74d286c0f8efefd4.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/67672910f91ad43a7fee016e838b2989.png"
+      },
+      "ports": [
+        {
+          "id": 813,
+          "platform": "xbox",
+          "project": "JSRF-PC",
+          "kind": "recomp",
+          "toolchain": "xboxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/spriteice/JSRF-PC",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "xemu"
+        },
+        {
+          "id": 814,
+          "platform": "xbox",
+          "project": "JetSetRadioFuture-Unleashed",
+          "kind": "recomp",
+          "toolchain": "xboxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/JuMatt/JetSetRadioFuture-Unleashed",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "xemu"
+        }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1497,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2823,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 48012,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 40253,
+          "reason": "2012"
+        }
+      ]
+    }
+  ]
 }

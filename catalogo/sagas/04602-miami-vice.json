@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84119",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Miami Vice",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Miami Vice",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Playing as Sonny Crockett and Ricardo Tubbs, the buddy-cop duo from the 80's TV series of the same name, fight to take down a drug ring led by Manuel Ortega in this third-person shooter.",
           "source": "igdb",
           "manual": false
         },
@@ -64,9 +76,15 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 77244,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52853"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9egk.jpg"
+      }
     },
     {
       "id": 35250,
@@ -90,6 +108,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Miami Vice is a shooter based on the updated Miami Vice movie.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -103,10 +127,39 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 23818,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ULES-00375",
+            "ULES-00376",
+            "ULJM-05165",
+            "ULUS-10109"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/66cbd322a8204138661543fa2857eb4c.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3247,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 34104,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 35250,
+          "reason": "2006"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

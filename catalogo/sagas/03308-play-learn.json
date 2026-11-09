@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Play & Learn Spanish is the fast, fun, and friendly way to learn to speak Spanish!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -73,6 +79,12 @@
         {
           "field": "original_name",
           "value": "Play & Learn Chinese",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Play & Learn Chinese is the fast, fun, and friendly way to learn to speak Chinese!",
           "source": "igdb",
           "manual": false
         },
@@ -119,6 +131,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Includes Three Games to Boost Thinking and Learning! A fun and educational mini-game collection for both kids and adults!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2025",
           "source": "igdb",
@@ -132,9 +150,15 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 345995,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100E810236E6000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9x8v.jpg"
+      }
     },
     {
       "id": 39342,
@@ -171,10 +195,43 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 417918,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100DDE029524000"
+          ]
         }
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1290,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 18151,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 18170,
+          "reason": "2011"
+        },
+        {
+          "position": 3,
+          "gameId": 36458,
+          "reason": "2025"
+        },
+        {
+          "position": 4,
+          "gameId": 39342,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

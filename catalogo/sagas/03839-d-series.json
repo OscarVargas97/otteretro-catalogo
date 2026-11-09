@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60140",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "D",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "D",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The first entry in the D series and one of the first games the company released, it dealt with taboo content such as violence and cannibalism, featured 3D CGI full-motion video, and used a first-person perspective. It was the first game to star the digital actress Laura.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2016,
           "igdbId": 4319,
           "steamAppId": 510590,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Aventura completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado libre y control con ratón o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original de PC."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y sin cargas largas."
+            }
+          ]
         },
         {
           "id": 60141,
@@ -57,14 +90,76 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 4319,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión de PS1 con la aventura completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles con mando aceptables, guardado limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Muy cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Baja resolución y cargas notables."
+            }
+          ],
+          "codes": [
+            "SLES-00065",
+            "SLES-00065-0",
+            "SLES-00160",
+            "SLES-00160-0",
+            "SLES-00161",
+            "SLES-00161-0",
+            "SLES-10065",
+            "SLES-10065-1",
+            "SLES-10160",
+            "SLES-10160-1",
+            "SLES-10161",
+            "SLES-10161-1",
+            "SLES-20065",
+            "SLES-20065-2",
+            "SLES-20160",
+            "SLES-20160-2",
+            "SLES-20161",
+            "SLES-20161-2",
+            "SLUS-00128",
+            "SLUS-00128-0",
+            "SLUS-00173",
+            "SLUS-00173-1",
+            "SLUS-00174",
+            "SLUS-00174-2"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/10ccc3d6b30e89b173594526e81df7b9.png",
         "hero": "https://cdn2.steamgriddb.com/hero/847a7251b574c85da9c2248125c2df93.png",
         "logo": "https://cdn2.steamgriddb.com/logo/c57da8927ddf163c947c733ad5e36550.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 82,
+          "platform": "ps1",
+          "project": "d-psx-pc-recomp",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Bitsandbreakpoints/d-psx-pc-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     }
   ],
   "routes": []

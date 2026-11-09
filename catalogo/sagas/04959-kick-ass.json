@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Kick-Ass is a fully 3D action fighting game set in the third-personperspective, where the player can play and control modern day superheroes based on the super characters found in the film of the samename. Gamers will be able to play as the three primary characters inthe film - Kick-Ass, Hit Girl, and Big Daddy. The story-driven gamedraws heavily from the strengths of the intellectual property; anaction combat game where the characters finally grow sick of the crimearound them, and decide that they will do something about it.Featuring multiple environments within New York City, players will befaced with twelve story missions plus 2 bonus rounds and encounterfrantic super hero action as they face petty thugs and powerful mobbosses. Players will also have a blast with sub-missions andmini-games, to add even more gameplay to the mix. Staying true to theintellectual property, the game will feature visceral combat andplenty of gore, as the player's main goal is to bring justice back tothe city, no matter what the cost!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -50,7 +56,10 @@
           "igdbId": 7545,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/duzdbn88h7ytsvmdkcph.jpg"
+      }
     },
     {
       "id": 40300,
@@ -62,6 +71,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96401",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Kick-Ass 2",
           "source": "igdb",
@@ -70,6 +85,12 @@
         {
           "field": "original_name",
           "value": "Kick-Ass 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Dive into an exciting, action-packed adventure and relive the incredible scenes from the Hollywood blockbuster 'Kick-Ass 2'. A ominous threat is hanging over New York City and only Kick-Ass can stop it. Fight countless hordes of enemies! Put on your mask, hone your weapons, and get ready to kick ass.",
           "source": "igdb",
           "manual": false
         },
@@ -87,7 +108,10 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 17488,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01983"
+          ]
         },
         {
           "id": 96401,
@@ -106,8 +130,33 @@
           "igdbId": 17488,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5af253dd8a4836311da685376fee32c6.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b9fc564be420a43d507d54ffeda81a1d.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/42de1de39dd831ed34ea48cb6e843fd2.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3326,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39931,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 40300,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

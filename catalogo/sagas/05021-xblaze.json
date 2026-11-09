@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96351",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "XBlaze Code: Embryo",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "XBlaze Code: Embryo",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Xblaze Code: Embryo is a Japanese visual novel and the prequel to the fighting game series BlazBlue. The game is set 150 years before the events in BlazBlue: Calamity Trigger. The player assumes the role of Toya Kagari, a resident of Shin Yokozaki City and a sophomore at the prestigious Hakuou North Academy.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,33 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 11636,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo en inglés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Novela visual con ajustes básicos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución estándar de PS3."
+            }
+          ],
+          "codes": [
+            "BLES-02157",
+            "BLJS-10227",
+            "BLUS-31367"
+          ]
         },
         {
           "id": 96351,
@@ -57,7 +95,28 @@
           "year": 2016,
           "igdbId": 11636,
           "steamAppId": 421610,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que las versiones de consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado flexible y control completo del texto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y carga rápida."
+            }
+          ]
         },
         {
           "id": 96352,
@@ -65,9 +124,38 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 11636,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido que PS3."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo para leer en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Idéntico al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución portátil."
+            }
+          ],
+          "codes": [
+            "PCSE-00346"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/be8f46129b9e8b947901c0135c443faf.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/262f3d665f3ebe0bb7af2a1044ea9d23.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/31ca4288044df70bbee259972d45b4a5.png"
+      }
     },
     {
       "id": 40321,
@@ -79,6 +167,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96474",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "XBlaze Lost: Memories",
           "source": "igdb",
@@ -87,6 +181,12 @@
         {
           "field": "original_name",
           "value": "XBlaze Lost: Memories",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "XBlaze Lost: Memories is a visual-novel game based in the BlazBlue universe and the sequel to XBlaze Code: Embryo! Play as the enigmatic pink-haired protagonist as she navigates through a weird and wondrous alternate reality with the help of the mysterious girl Nobody in order to save her sister, who disappeared into this unknown world! While there she is tasked with finding “Memory Fragments”, crystallized memories that not only serve as keys that will help her move on and find her sister, but also uncover the identity and story of the person those memories belong to!",
           "source": "igdb",
           "manual": false
         },
@@ -104,7 +204,11 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 11637,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLJS-10293",
+            "BLUS-31523"
+          ]
         },
         {
           "id": 96474,
@@ -121,10 +225,38 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 11637,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "PCSE-00627"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d27affb48853490444e26ed78b02dc6a.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/a93dddc1fd67c3a6409fafb5801d7d50.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9c453cf6194406f48a40272eec8de2a8.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3353,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40280,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 40321,
+          "reason": "2015"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

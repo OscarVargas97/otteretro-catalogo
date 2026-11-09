@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19363",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mushroom Wars 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Mushroom Wars 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sequel to one of the hit RTS games of the last generation, Mushroom Wars 2 introduces hero characters with customizable skins, reimagined campaigns for each race of Mushroom folk, even wilder competitive multiplayer, as well as a visual overhaul, while preserving the core gameplay mechanics that made Mushroom Wars so enjoyable.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 19786,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100700006EF6000"
+          ]
         }
       ],
       "images": {
@@ -90,6 +105,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "96094",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mushroom Wars",
           "source": "igdb",
@@ -98,6 +119,12 @@
         {
           "field": "original_name",
           "value": "Mushroom Wars",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mushroom Wars is a dynamic real-time strategy game, where smart strategy meets furious action in epic PvP and PvE battles.",
           "source": "igdb",
           "manual": false
         },
@@ -115,7 +142,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 18687,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido base de PS3, con menos extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando correcto, multijugador en línea poco activo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de PS3."
+            }
+          ]
         },
         {
           "id": 96094,
@@ -124,10 +172,56 @@
           "year": 2016,
           "igdbId": 18687,
           "steamAppId": 431250,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Versión de PC con más opciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Ratón ideal para este juego de estrategia."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Mantiene la idea del original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y fluidez."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/8091ee1e9c0122b5fc5a4a3a8c361f15.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/b7fb2884d40fa347e723d7edb3a151d2.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/723d8c61fce870c3474d080313a4a2fd.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 2578,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40160,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 9157,
+          "reason": "2016"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

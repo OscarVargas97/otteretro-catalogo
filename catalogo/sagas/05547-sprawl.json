@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "110413",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sprawl",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Sprawl",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "“You chose exile in search of penance, in place of revenge. I seek to give you both - and in return… I will be set free.” - FATHER\n\nEnter the dystopian world of SPRAWL, a hardcore retro FPS set in an endless cyberpunk megalopolis. Advances in cybernetics and artificial intelligence pushed humanity into a new era, but that golden age has crumbled…leaving behind a broken world.\n\nPlay as SEVEN, a disgraced special ops super soldier who finds herself embroiled in conflict with government forces trying to kill her while a mysterious voice in her head pushes her to survive. Betrayed by her organization and on a mission to overthrow the Junta, a military regime that rules the sprawl with an iron fist, SEVEN must escape the walled city and discover what secrets lie at the SPIRE.\n\nThe streets of the SPRAWL are vast and the armies of the corporate government seem endless. But the dark alleys and dilapidated apartment surfaces are all compatible with the “Icarus” cybernetic implant, allowing SEVEN to perform gravity-defying wall-running maneuvers and slow down time with excess adrenaline drops from dismembered enemies. With a horde of different troop types and carefully designed weapons, she will be pushed to the limit to survive.\n\nThe SPRAWL eventually consumes us all…will you fight your way out?",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 143627,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/010718e35a630662eae608bc5d4ac9b0.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/d1633d470e733150d631c44e3dec1cf9.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/a37d78195d68839448bb0a998f59e0fe.png"
+      }
     },
     {
       "id": 47826,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113584",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sprawl Zero",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Sprawl Zero",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sprawl Zero is a fast-paced shooter inspired by the Golden Age of 2000s FPS. Survive a brutal cyberpunk city collapsing under military rule and cult fanaticism. Use your Gravity-Gloves, augments, and an arsenal of over 40 weapons to crush those who stand in your way.",
           "source": "igdb",
           "manual": false
         },
@@ -112,7 +141,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 393036,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "040002D02752C000"
+          ]
         },
         {
           "id": 113584,
@@ -131,8 +163,31 @@
           "igdbId": 393036,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocs2d.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3481,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 46643,
+          "reason": "2023"
+        },
+        {
+          "position": 2,
+          "gameId": 47826,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

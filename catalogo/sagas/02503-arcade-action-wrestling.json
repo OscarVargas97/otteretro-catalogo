@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24417",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Action Arcade Wrestling",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Action Arcade Wrestling",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Action Arcade Wrestling brings everything you love from 90's wrestling games with its own twist of chaos and fun. Join the action and step through the ropes in this fast-paced, arcade wrestling extravaganza to superkick the overly simulated wrestling games out of the ring!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 61145,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido igual al de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conserva la esencia con retoques."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en consola."
+            }
+          ]
         },
         {
           "id": 24417,
@@ -57,7 +90,28 @@
           "year": 2019,
           "igdbId": 61145,
           "steamAppId": 1072100,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión completa y actualizada."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles ajustables y mando o teclado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conserva la esencia con retoques."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y rendimiento estable."
+            }
+          ]
         },
         {
           "id": 24418,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 61145,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido igual al de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen manejo con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conserva la esencia con retoques."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en consola."
+            }
+          ]
         },
         {
           "id": 24419,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 61145,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido igual al de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y cómodo, con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Conserva la esencia con retoques."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Menor resolución que otras versiones."
+            }
+          ],
+          "codes": [
+            "010030B005CB2000"
+          ]
         },
         {
           "id": 115345,
@@ -81,7 +180,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 62516,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión inicial, con menos mejoras de contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles correctos pero sin los ajustes posteriores."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Hardware antiguo y sin mejoras técnicas."
+            }
+          ]
         }
       ],
       "images": {
@@ -111,6 +231,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The sequel to the original Action Arcade Wrestling game adds the ability to edit/create wrestlers from the players PC then import them into the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -126,8 +252,31 @@
           "igdbId": 62515,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/eqxnfpxvzmpb2sgmmxlf.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2662,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48878,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 10587,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

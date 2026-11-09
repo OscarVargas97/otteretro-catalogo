@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99922",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Titanfall 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Titanfall 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Titanfall 2 is a first-person shooter with both a single-player campaign and competitive multiplayer. The campaign follows a Militia rifleman who bonds with a Titan, a large bipedal mech, after his pilot is killed. Gameplay combines fast-paced infantry movement, including wall-running and double-jumping, with sections where the player controls the Titan in combat. Multiplayer features team-based modes with players fighting as both Pilots and Titans on the same battlefield.",
           "source": "igdb",
           "manual": false
         },
@@ -67,7 +79,12 @@
           "igdbId": 17447,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/77830f686ff945a183bf945451139a54.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/1baff70e2669e8376347efd3a874a341.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/386dcacd43933bfe750a47e708d66462.png"
+      }
     },
     {
       "id": 43408,
@@ -79,6 +96,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "102846",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Titanfall",
           "source": "igdb",
@@ -87,6 +110,12 @@
         {
           "field": "original_name",
           "value": "Titanfall",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In Titanfall, players fight on a war-torn planet in six-on-six online multiplayer-only matches as mech-style Titans and their pilots. The game's action is fast-paced: as pilots, players can run along walls and link jumps together parkour-style, use a variety of futuristic military weapons, and employ one of three special abilities: cloaking, stimming (increasing speed and health regeneration) and radar pinging; as Titans, players are equipped with more destructive armaments and special protective shields, with no limit to their abilities besides cooldown and reloading.",
           "source": "igdb",
           "manual": false
         },
@@ -123,8 +152,33 @@
           "igdbId": 2115,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/0b2be0f13983cc5d1c282ea820f29415.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/8e3ecc6d79b651cabc3b9403543358dd.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/e7a7ba56b1be30e178cd52820e063396.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3397,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 43408,
+          "reason": "2014"
+        },
+        {
+          "position": 2,
+          "gameId": 41926,
+          "reason": "2016"
+        }
+      ]
+    }
+  ]
 }

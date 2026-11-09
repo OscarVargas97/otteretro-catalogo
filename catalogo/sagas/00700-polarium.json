@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3538",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Polarium Advance",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Polarium Advance",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A GBA follow-up for Polarium (Nintendo DS), Nintendo's simple, stylish puzzle game. Make your line through the game board, flipping black and white tiles to change and match their color.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 6536,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el cartucho."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Permite guardar en cualquier momento, útil en puzles."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel, solo cambia la plataforma."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con imagen escalada a HD."
+            }
+          ]
         },
         {
           "id": 3539,
@@ -56,7 +89,32 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 6536,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original con todos sus modos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles precisos con el stylus ausente; guardado solo por batería."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución nativa de GBA, estable."
+            }
+          ],
+          "codes": [
+            "BIIE",
+            "BIIP"
+          ]
         }
       ],
       "images": {
@@ -87,6 +145,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Polarium mixes way-cool gameplay with an electronica soundtrack for the trippiest experience yet on the DS. It's the first game that would look cool at a rave. Polarium is a simple, stylish puzzle game you play entirely with the Nintendo DS touch screen and a stylus. Draw lines to flip black and white tiles and make patterns and puzzles disappear. Use the stylus to draw a stroke, flipping black and white tiles to change and match their color. Three game modes and scores of puzzles will put your puzzle-solving abilities and stylus skills to the test. Challenge a friend to a duel over a wireless connection.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -100,7 +164,11 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 6537,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "ASNE",
+            "ASNP"
+          ]
         }
       ],
       "images": {
@@ -110,5 +178,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2187,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3061,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 1834,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "name": "Wii Sports",
   "igdbKind": "collection",
   "igdbId": 681,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2006,
       "igdbId": 2181,
       "popularity": 443,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "48297",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Wii Sports",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "Wii Sports",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Wii Sports is a sports simulation game built around the motion controls of the Wii Remote. It collects five sports, tennis, baseball, bowling, golf, and boxing, played by moving the controller to mimic real actions such as swinging a racket or rolling a ball. The rules are simplified for accessibility, and players compete against the computer or each other, using customizable avatars. Additional training and fitness modes let players practice individual skills and track their progress over time.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Wii Sports es un juego de simulación deportiva basado en los controles de movimiento del Wii Remote. Reúne cinco deportes: tenis, béisbol, bolos, golf y boxeo, que se juegan moviendo el mando para imitar acciones reales, como golpear con una raqueta o lanzar una bola. Las reglas están simplificadas para facilitar el acceso, y los jugadores compiten contra la IA del juego o entre sí, usando avatares personalizables. Los modos adicionales de entrenamiento y acondicionamiento físico permiten practicar habilidades individuales y seguir el progreso a lo largo del tiempo.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +66,28 @@
           "kind": "remake",
           "year": 2013,
           "igdbId": 23518,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Se trata de Wii Sports Club, con deportes añadidos por partes y en línea ya cerrado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Requiere Wii Remote Plus; sin servicio en línea."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Rehecho y distinto en estructura."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "HD, más nítido."
+            }
+          ]
         },
         {
           "id": 48297,
@@ -56,14 +95,65 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 2181,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Cinco deportes, entrenamiento y Fitness."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Wii Remote nativo, preciso y divertido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "480p, sin problemas."
+            }
+          ],
+          "codes": [
+            "RVL-RSPE-USA",
+            "RVL-RSPE-USA-2",
+            "RVL-RSPE-USA-B1",
+            "RVL-RSPJ-JPN",
+            "RVL-RSPJ-JPN-1",
+            "RVL-RSPK-KOR-1",
+            "RVL-RSPK-KOR-B0",
+            "RVL-RSPP-EUR",
+            "RVL-RSPP-EUR-1",
+            "RVL-RSPP-EUR-B0",
+            "RVL-RSPP-EUR-B1",
+            "RVL-RSPW-TWN"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/3a896c19916e9bc636708ce9a19a542d.png",
         "hero": "https://cdn2.steamgriddb.com/hero/6195f47dcff14b8f242aa333cdb2703e.png",
         "logo": "https://cdn2.steamgriddb.com/logo/b21f9f98829dea9a48fd8aaddc1f159d.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1479,
+          "platform": "wii",
+          "project": "ogws",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/doldecomp/ogws",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "Dolphin",
+          "emulatorLevel": 3
+        }
+      ]
     },
     {
       "id": 19472,
@@ -72,7 +162,7 @@
       "year": 2009,
       "igdbId": 2182,
       "popularity": 219,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -84,6 +174,18 @@
           "field": "original_name",
           "value": "Wii Sports Resort",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Set off on a journey to a tropical island where an array of fun activities await. In Wii Sports Resort, the sequel to the engaging Wii Sports, you'll discover a wide range of new sports and activities you can play anytime. Go head-to-head with your friends and family in the ultimate sports showdown set in a tropical paradise.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Emprende un viaje a una isla tropical donde te esperan múltiples actividades divertidas. En Wii Sports Resort, la secuela de Wii Sports, descubrirás una amplia variedad de deportes y actividades nuevas que puedes jugar en cualquier momento. Enfréntate cara a cara a tus amigos y familiares en el enfrentamiento deportivo definitivo, ambientado en un paraíso tropical.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -100,7 +202,14 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 2182,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RZTE-USA-B0",
+            "RVL-RZTJ-JPN-B0",
+            "RVL-RZTK-KOR-B0",
+            "RVL-RZTP-EUR-B0",
+            "RVL-RZTW-CHT-B0"
+          ]
         }
       ],
       "images": {
@@ -110,5 +219,67 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2490,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19376,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 19472,
+          "reason": "2009"
+        }
+      ]
+    },
+    {
+      "id": 3987,
+      "kind": "story",
+      "rationale": "Wii Sports no tiene una historia continua. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19376,
+          "recommendedVersionId": 48297,
+          "reason": "Primer juego de la saga. La versión original de Wii es la que usa los controles de movimiento pensados para él."
+        },
+        {
+          "position": 2,
+          "gameId": 19472,
+          "recommendedVersionId": 48477,
+          "reason": "Segundo juego. Solo existe en Wii y requiere Wii MotionPlus."
+        }
+      ]
+    },
+    {
+      "id": 3988,
+      "kind": "community",
+      "rationale": "Ambos son colecciones de minijuegos y no dependen uno del otro, así que se juegan en orden de lanzamiento. Resort suele considerarse el más completo. No pude verificarlo con fuentes.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19376,
+          "recommendedVersionId": 48297,
+          "reason": "Es corto y sirve como introducción. Se recomienda la versión original de Wii."
+        },
+        {
+          "position": 2,
+          "gameId": 19472,
+          "recommendedVersionId": 48477,
+          "reason": "Tiene más variedad y mejores controles con Wii MotionPlus. Solo existe en Wii."
+        }
+      ]
+    }
+  ]
 }

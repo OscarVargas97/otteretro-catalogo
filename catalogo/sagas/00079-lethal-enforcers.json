@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "192",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lethal Enforcers",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Lethal Enforcers",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pick up your pistol and be the cop you need to be in order to rid the streets of the criminals out to make your day hell. Aim wisely and quickly, otherwise your lives will be lost quickly in this 1st person arcade shooter, cleaning up the streets. The higher the difficulty level, the more crimes there will be to eliminate, but watch out for the other weapons that can help you along the way.\n\nGo straight into the mayhem, practice in the targeting range or have a friend back you up in two player mode. Use a gun accessory or play with the gamepad.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,10 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 4501,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-00542"
+          ]
         }
       ],
       "images": {
@@ -83,6 +98,12 @@
         {
           "field": "original_name",
           "value": "Lethal Enforcers II: Gun Fighters",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Lethal Enforcers II: Gun Fighters is a 1994 arcade and prequel to the original Lethal Enforcers. In contrast with the first game's modern law enforcement theme, Lethal Enforcers II takes place in the American Old West.",
           "source": "igdb",
           "manual": false
         },
@@ -129,6 +150,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Lethal Enforcers I & II contains the Konami coin-op shooters Lethal Enforcers & Lethal Enforcers II: Gunfighters both on one disc. The games both share a similar gameplay structure with digitized enemy targets \"popping up\" on screen and simply needing to be shot down before they take a shot at you.The original game places you as a 1990s police officer fighting bank robbers, Chinese Mafia and drug dealers while in the sequel you are now a Sheriff up against more bank robbers and wrong doing but now set in the Old West. Lethal Enforcers can be played with either a standard game pad or for more of an authentic arcade experience, the Konami Hyperblaster light gun.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1997",
           "source": "igdb",
@@ -142,7 +169,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 77250,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-00293"
+          ]
         }
       ],
       "images": {
@@ -150,5 +180,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1407,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 117,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 23736,
+          "reason": "1994"
+        },
+        {
+          "position": 3,
+          "gameId": 25451,
+          "reason": "1997"
+        }
+      ]
+    }
+  ]
 }

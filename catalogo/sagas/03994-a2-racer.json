@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62429",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "A2 Racer III: Europa Tour",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "A2 Racer III: Europa Tour",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Part 3 in the Dutch A2 Racer series takes the player to London, Berlin and Vienna. The gameplay remains the same with illegal street races on well known highways and cities.\n\nDuring the races players have to collect power-ups, like money, fuel and time extensions. He has to avoid getting caught by the cops and reach the finish line before his opponents do.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 44841,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Versión completa original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con volante o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mayor resolución y mejores gráficos."
+            }
+          ]
         },
         {
           "id": 62430,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 44841,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Port de consola con posibles recortes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Cómoda con mando, menos precisa."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con recortes técnicos."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución y gráficos reducidos."
+            }
+          ]
         }
       ],
       "images": {
@@ -75,6 +129,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "65367",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Paris-Marseille Racing II",
           "source": "igdb",
@@ -83,6 +143,12 @@
         {
           "field": "original_name",
           "value": "Paris-Marseille Racing II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Almost two years after the first Paris-Marseille Racing, Davilex Games decided to continue the story and make a series.\n\nIn this follow-up, the player can choose between six drivers (one female) with unique driving skills, and two game modes, one or two players. In the single player mode, you will have to choose between the three classic sub-modes : tournament, time attack and single race. New with this release are the two 2-players modes : Duel and Driver Vs Police. In the Duel mode, race head to head against a friend. In the Driver Vs Police mode, one choose to play a police man, the other must try to drive as fast as possible to escape.\n\nThe game also features three skill levels, repairing and fine-tuning options in the tournament mode, and of course new and enhanced graphics to race through France and its famous cities such as Marseilles, Paris or Lyon. Three bonus races can also be played in London, Edinburgh or Las Vegas!",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +174,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 249772,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-03918"
+          ]
         },
         {
           "id": 65369,
@@ -116,7 +185,10 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 249772,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50994"
+          ]
         }
       ],
       "images": {
@@ -133,6 +205,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "118496",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bikini Beach: Stunt Racer",
           "source": "igdb",
@@ -141,6 +219,12 @@
         {
           "field": "original_name",
           "value": "Bikini Beach: Stunt Racer",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bikini Beach: Stunt Racer is a trick based driving game where players must collect diamonds and \"score big\" to woo a female of one of four ethnicities. The game features 12 open arenas, 12 stunts and 4 locations.",
           "source": "igdb",
           "manual": false
         },
@@ -159,9 +243,45 @@
           "year": 2003,
           "igdbId": 73750,
           "criteria": []
+        },
+        {
+          "id": 118496,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2003,
+          "igdbId": 73750,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7yfo.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1885,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 24781,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 26511,
+          "reason": "2002"
+        },
+        {
+          "position": 3,
+          "gameId": 34059,
+          "reason": "2003"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

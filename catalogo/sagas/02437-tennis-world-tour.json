@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22931",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tennis World Tour",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Tennis World Tour",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The new standard developed by veterans of tennis simulations: play as one of 30 professional tennis players, learn all the shots, master each type of surface and experience a realistic career mode. Define your style of play and tactics to become number 1 in the world!",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 36544,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100092006814000"
+          ]
         }
       ],
       "images": {
@@ -90,6 +105,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "36661",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tennis World Tour 2",
           "source": "igdb",
@@ -98,6 +119,12 @@
         {
           "field": "original_name",
           "value": "Tennis World Tour 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Play as the world's top players, master each surface, perfect your game and strive to dominate the world circuit. Choose from multiple game modes, with singles and doubles, local and online games.",
           "source": "igdb",
           "manual": false
         },
@@ -140,7 +167,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 135576,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01002AF011D14000"
+          ]
         }
       ],
       "images": {
@@ -149,5 +179,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2645,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10144,
+          "reason": "2018"
+        },
+        {
+          "position": 2,
+          "gameId": 14314,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

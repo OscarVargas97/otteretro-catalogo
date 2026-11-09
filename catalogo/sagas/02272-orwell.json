@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "19386",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Orwell: Keeping an Eye on You",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Orwell: Keeping an Eye on You",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Using the new governmental security program that has the power to survey the online presence of every person in The Nation, you investigate the lives of citizens to find those responsible for a series of terror attacks. Information from the internet, personal communications and private files are all accessible to you. But, be warned, the information you supply will have consequences…",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2016,
           "igdbId": 22704,
           "steamAppId": 491950,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todos los episodios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mouse y teclado van muy bien con la interfaz de búsqueda y arrastre de datos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y con buen rendimiento en PC."
+            }
+          ]
         },
         {
           "id": 19387,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 22704,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Se puede jugar con pantalla táctil, pero con mando es menos ágil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original, con controles adaptados."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien en portátil, con menor resolución."
+            }
+          ],
+          "codes": [
+            "01006E6025B44000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "24004",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Orwell: Ignorance is Strength",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Orwell: Ignorance is Strength",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Step into the shoes of a government official in a top-secret department of the Orwell surveillance program. Given the power to both uncover and fabricate \"the truth\", how far will you go in the service of your country? Season 2 of Orwell, the award-winning surveillance thriller.",
           "source": "igdb",
           "manual": false
         },
@@ -102,7 +171,28 @@
           "year": 2018,
           "igdbId": 54574,
           "steamAppId": 633060,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todos los episodios."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mouse y teclado son ideales para esta interfaz."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Estable y con buen rendimiento."
+            }
+          ]
         },
         {
           "id": 24005,
@@ -110,7 +200,31 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 54574,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que en PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Táctil útil, pero con mando es menos cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel al original, con controles adaptados."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buen funcionamiento en portátil, con menor resolución."
+            }
+          ],
+          "codes": [
+            "0100564025CD0000"
+          ]
         }
       ],
       "images": {
@@ -120,5 +234,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2579,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9162,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 10460,
+          "reason": "2018"
+        }
+      ]
+    }
+  ]
 }

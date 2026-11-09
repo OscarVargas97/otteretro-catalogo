@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "29205",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rebel Galaxy Outlaw",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rebel Galaxy Outlaw",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rebel Galaxy Outlaw is an open-world space combat adventure game, spread across the nearly 40 systems of the Dodge Sector. Play as a mercenary, a trader, a pirate, or whatever mix of the three you feel fits you best. With an engaging storyline and a full conversation system, you can follow the narrative, or ignore it and forge your own path at any time.",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 107318,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100CAA01084A000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99360",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rebel Galaxy",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Rebel Galaxy",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Rebel Galaxy is an action-packed, swashbuckling space opera. You'll battle pirates, explore anomalies, befriend aliens, scavenge battle wreckage, mine asteroids, and discover artifacts. Choose your path as a roguish do-gooder, crafty space-trader or power-hungry privateer - or maybe a little of each! Buy larger and more powerful craft with your hard-earned credits, and outfit them with a variety of wicked weapons and defenses. Set in a galaxy of fantastic sights, and secrets to be found, Rebel Galaxy is above all a space epic of adventure, exploration, and combat.",
           "source": "igdb",
           "manual": false
         },
@@ -136,8 +163,33 @@
           "igdbId": 11719,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/5429ee7f1bb3ae94e7042acad2375136.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/fd4771e85e1f916f239624486bff502d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1fe606bf06df42bf9f625ab9bb971d52.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2712,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41728,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 12083,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

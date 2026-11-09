@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An exciting new 3D horse adventure awaits you!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2013",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 84718,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AAPP"
+          ]
         }
       ],
       "images": {
@@ -65,6 +74,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "38127",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "My Riding Stables 2: A New Adventure",
           "source": "igdb",
@@ -73,6 +88,12 @@
         {
           "field": "original_name",
           "value": "My Riding Stables 2: A New Adventure",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Run your own riding stable full of horses and take good care of your animals and your guests. Ride freely around the open game world, through a wide variety of landscapes. The riding controls are intuitive. Speed, skill and courage are required for the mounted games – riding games that are both thrilling and fun! Train hard and claim victory in the tournament!",
           "source": "igdb",
           "manual": false
         },
@@ -98,7 +119,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 140008,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010042A00FBF0000"
+          ]
         }
       ],
       "images": {
@@ -115,6 +139,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "59202",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "My Life: Riding Stables 3",
           "source": "igdb",
@@ -123,6 +153,12 @@
         {
           "field": "original_name",
           "value": "My Life: Riding Stables 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Put your heart and soul into looking after the well-being of your beloved four-legged friends on a beautiful stud farm, which you can expand over the course of the game. Climb into the saddle and enjoy challenging training sessions, fantastic tournaments…",
           "source": "igdb",
           "manual": false
         },
@@ -165,7 +201,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 221690,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01001CA0181F2000"
+          ]
         }
       ],
       "images": {
@@ -182,6 +221,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99625",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "My Riding Stables: Life with Horses",
           "source": "igdb",
@@ -190,6 +235,12 @@
         {
           "field": "original_name",
           "value": "My Riding Stables: Life with Horses",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Riding Stables at Mill Creek are mere ruins, but you are about to change that: stables, riding hall and guesthouse are being renovated and guests will happily pay for their stay. Your earnings will help you to build a new breeding stable and soon cute little foals frolic on the pasture with their moms. Later you will train them and sell them to trustworthy customers. Other horse owners bring their horses to be massaged by your knowing hands.\n\nYou also have your own horse, of course, which, if the two of you trained enough, you take to various cross country races. Let’s win the Cup and make your dream come true.",
           "source": "igdb",
           "manual": false
         },
@@ -207,7 +258,28 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 17046,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente, sin extras claros."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Soporte de mando y guardado modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel con ajustes menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona de forma estable en hardware actual."
+            }
+          ]
         },
         {
           "id": 99626,
@@ -216,10 +288,64 @@
           "year": 2005,
           "igdbId": 17046,
           "steamAppId": 276340,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido del lanzamiento original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles y guardado datados, y puede dar problemas en sistemas modernos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos y resolución de 2005; compatibilidad incierta."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a2c49962ab5fdf70fd33f1a20bd5462c.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1305,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41810,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 4988,
+          "reason": "2013"
+        },
+        {
+          "position": 3,
+          "gameId": 14689,
+          "reason": "2020"
+        },
+        {
+          "position": 4,
+          "gameId": 23485,
+          "reason": "2022"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

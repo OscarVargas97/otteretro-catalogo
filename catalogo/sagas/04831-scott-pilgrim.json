@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "88559",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Scott Pilgrim EX",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Scott Pilgrim EX",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Join Scott Pilgrim and Ramona Flowers in a brand-new brawling adventure across space, time, and the streets of Toronto!",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,10 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 347659,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "040073D025D98000"
+          ]
         },
         {
           "id": 88559,
@@ -89,9 +104,17 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 347659,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100D59022590000"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/083b4ae2eb6cfaef35af98c4479a6d2e.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/062cb534c548265361b4de4f2cd04b42.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/ffed8cd4e52d1d00b1225473a0136636.png"
+      }
     },
     {
       "id": 39942,
@@ -103,6 +126,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "95493",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Scott Pilgrim vs. the World: The Game",
           "source": "igdb",
@@ -111,6 +140,12 @@
         {
           "field": "original_name",
           "value": "Scott Pilgrim vs. the World: The Game",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Scott Pilgrim vs. the World: The Game is a side-scrolling beat 'em up based on the Scott Pilgrim series. Play as the cast, who must battle through seven levels in order to defeat Ramona's seven evil exes. Characters have their own individual movesets, which can be expanded upon by gaining enough experience, and are also able to use weapons.",
           "source": "igdb",
           "manual": false
         },
@@ -138,8 +173,33 @@
           "igdbId": 7448,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/fbfddde34e12fb3f4c579e1501f00db9.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/61ab3f5e442e25b1698a4f65696a1901.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/6dd4e10e3296fa63738371ec0d5df818.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3291,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 39942,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 36739,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

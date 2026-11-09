@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "39130",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Eiyuden Chronicle: Hundred Heroes",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Eiyuden Chronicle: Hundred Heroes",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Eiyuden Chronicles: Hundred Heroes is designed to bring players a modern take on a classic JRPG experience. Get ready to lead 100+ playable characters through a war-torn world only you can save.",
           "source": "igdb",
           "manual": false
         },
@@ -89,7 +101,10 @@
           "kind": "original",
           "year": 2024,
           "igdbId": 137451,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100ED9018F3E000"
+          ]
         }
       ],
       "images": {
@@ -108,6 +123,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "42781",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Eiyuden Chronicle: Rising",
           "source": "igdb",
@@ -116,6 +137,12 @@
         {
           "field": "original_name",
           "value": "Eiyuden Chronicle: Rising",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Eiyuden Chronicle: Rising is an action RPG set in the same world as Eiyuden Chronicle: Hundred Heroes. Featuring town-building mechanics, fast-paced combat, and important back-story for several of the Eiyuden Chronicle: Hundred Heroes cast of characters.",
           "source": "igdb",
           "manual": false
         },
@@ -174,7 +201,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 152245,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010039B015CB6000"
+          ]
         }
       ],
       "images": {
@@ -184,5 +214,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2810,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16321,
+          "reason": "2022"
+        },
+        {
+          "position": 2,
+          "gameId": 14972,
+          "reason": "2024"
+        }
+      ]
+    }
+  ]
 }

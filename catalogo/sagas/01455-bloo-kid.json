@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9434",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Bloo Kid 2",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Bloo Kid 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Bloo Kid 2 is a classic 2D retro-style platformer experience with lovely designed pixel-graphics and a full chiptune soundtrack. Run, jump and swim your way through five huge worlds with twelve levels each. Master brutal bossfights and discover lots of secrets in the world of Bloo Kid 2.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 34985,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control de plataformas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja."
+            }
+          ]
         },
         {
           "id": 9433,
@@ -57,7 +90,28 @@
           "year": 2015,
           "igdbId": 34985,
           "steamAppId": 379640,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Estable en PC."
+            }
+          ]
         },
         {
           "id": 9434,
@@ -65,7 +119,31 @@
           "kind": "original",
           "year": 2019,
           "igdbId": 34985,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo, versión más reciente."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Portátil y en TV, cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Fluido y nítido."
+            }
+          ],
+          "codes": [
+            "010055900FADA000"
+          ]
         }
       ],
       "images": {
@@ -96,6 +174,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Help Bloo Kid to rescue his girlfriend from the hands of the evil Wizard in this fancy retro-style \"one-screen\" platformer. Jump and run your way through 96 action-packed levels spread across EIGHT unique worlds.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -109,7 +193,10 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 58463,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100C6A01AD56000"
+          ]
         }
       ],
       "images": {
@@ -117,5 +204,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2349,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 10239,
+          "reason": "2011"
+        },
+        {
+          "position": 2,
+          "gameId": 4612,
+          "reason": "2014"
+        }
+      ]
+    }
+  ]
 }

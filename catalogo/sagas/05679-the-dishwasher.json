@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A 2-D stylistic action platformer showcasing fast action, deep gameplay, and a unique visual style. An undead samurai dishwasher in a dystopian universe is on a quest for revenge against the evil cyborg army. Compete with the rest of the world in a variety of speed run and high score challenges to become the most formidable Dishwasher yet!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 21178,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/35ef164f441c37c96e19d11622604347.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/299ba416fa1e6a3c1a7bbddfe27f6d72.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/9cbb9bc1131781093113ffce4e367923.png"
+      }
     },
     {
       "id": 48555,
@@ -62,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "115051",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Dishwasher: Vampire Smile",
           "source": "igdb",
@@ -70,6 +87,12 @@
         {
           "field": "original_name",
           "value": "The Dishwasher: Vampire Smile",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The followup to 2009's Dead Samurai, The Dishwasher: Vampire Smile is a combo-fueled, fast-paced, stylistic 2D action platformer that features the series' staple gritty, graphic novel-inspired art style, built on a new engine that allows for an even more visually gruesome experience.",
           "source": "igdb",
           "manual": false
         },
@@ -88,7 +111,28 @@
           "year": 2017,
           "igdbId": 20582,
           "steamAppId": 268990,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que la versión de consola."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Soporta mando y teclado, con controles reconfigurables."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel al original, con ajustes técnicos menores."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución más alta y rendimiento fluido en equipos actuales."
+            }
+          ]
         },
         {
           "id": 115052,
@@ -96,10 +140,56 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 20582,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo de acción en 2D, igual al de PC."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Juega bien con mando, pero sin opciones de configuración avanzadas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original de lanzamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución limitada y rendimiento correcto sin extras gráficos."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/cad4f62342b44466451dc77d1d02e783.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/5d78d182fd5f5510588695863d22ac27.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5478c9cd79f4e04b6a2f6e2b4ab9f513.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3506,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48513,
+          "reason": "2009"
+        },
+        {
+          "position": 2,
+          "gameId": 48555,
+          "reason": "2011"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98646",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Silverio Vendetta: Verse of Orpheus",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Silverio Vendetta: Verse of Orpheus",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "This is not a story of a hero.This is the story of the loser. It is a story in which a man who once escaped fights to recover his star.",
           "source": "igdb",
           "manual": false
         },
@@ -59,7 +71,12 @@
           "igdbId": 113203,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/b051315074ddd3ec4681b898cf6e8d3e.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/92beef6f29f3a4b88f8b278c9e9672ea.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/9d32b5d2f68a25097cc16b788efdb912.png"
+      }
     },
     {
       "id": 41521,
@@ -71,6 +88,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98748",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Silverio Trinity: Beyond the Horizon",
           "source": "igdb",
@@ -79,6 +102,12 @@
         {
           "field": "original_name",
           "value": "Silverio Trinity: Beyond the Horizon",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Situated on the eastern border of the military nation of Adler is the historic city of Praga. It remains a powderkeg despite the official ceasefire between the three nations fighting over the territory and its resources, each of whom was completely different militarily, economically and religiously. There is a constant hidden power struggle which threatens the temporary balance and peace.\n\nTo break the tense and stagnant situation, the leader of Adler’s “Virgo” corps, Gilbert Harves, assembled all the “Esperanto” (Astral users) to create an experimental platoon. Among those chosen was Ashley Horizon, who had once been saved by the hero Christopher Valzelide and who will now be tasked with saving others.",
           "source": "igdb",
           "manual": false
         },
@@ -107,8 +136,33 @@
           "igdbId": 113206,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e00f61409b10561d663cc46b272d4cb1.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/078ae904bfbeb89916d4107864e18362.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/3731b1acd0526aebd5bbbe927b7611cf.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3379,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41448,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 41521,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

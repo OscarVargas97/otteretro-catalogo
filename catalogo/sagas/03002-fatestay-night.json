@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The video game adaptation of the deliciously heartwarming world of today’s menu for Emiya Family is finally here! Watch as Saber, Sakura, and Rin slice, stir-fry, bake, and deep-fry their way through a variety of delectable recipes!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2021",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2021,
           "igdbId": 146416,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010031B012254000"
+          ]
         }
       ],
       "images": {
@@ -65,6 +74,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "77366",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fate/Hollow Ataraxia",
           "source": "igdb",
@@ -73,6 +88,12 @@
         {
           "field": "original_name",
           "value": "Fate/Hollow Ataraxia",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fate/Hollow Ataraxia is a 2005 PC visual novel video game developed by TYPE-MOON and the sequel to Fate/Stay Night. The word \"ataraxia\" in the title is a Greek term for \"tranquility\", giving the title the combined meaning of \"empty (or false) tranquility\".\n\nThe game also was ported to PlayStation Vita, adding full-voice acting, among other enhancements. This version was released in Japan on November 27, 2014.",
           "source": "igdb",
           "manual": false
         },
@@ -117,8 +138,33 @@
           "igdbId": 12329,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/95f845cd49274e811ab3c3544248b6aa.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/064593ca7469923213ad1e8a4562da64.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/c412cfe8ddc78a72e78359abd36d6900.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2820,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40841,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 15264,
+          "reason": "2021"
+        }
+      ]
+    }
+  ]
 }

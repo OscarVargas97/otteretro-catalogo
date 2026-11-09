@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98642",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dance with Devils",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Dance with Devils",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Multimedia otome project collaboration between Rejet, Elements Garden, and Avex.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2022,
           "igdbId": 132088,
           "steamAppId": 2206980,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que la versión de Vita."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado libre, salto de texto y mejor interfaz."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y carga rápida."
+            }
+          ]
         },
         {
           "id": 98643,
@@ -57,9 +90,33 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 132088,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo de la novela visual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funcional en portátil, con guardado estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución limitada de Vita."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2zrt.jpg"
+      }
     },
     {
       "id": 41510,
@@ -71,6 +128,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98727",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Dance with Devils My Carol",
           "source": "igdb",
@@ -79,6 +142,12 @@
         {
           "field": "original_name",
           "value": "Dance with Devils My Carol",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fandisk to Dance with Devils.",
           "source": "igdb",
           "manual": false
         },
@@ -96,7 +165,28 @@
           "kind": "original",
           "year": 2023,
           "igdbId": 132089,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que la versión de Vita."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Guardado libre y salto de texto en PC."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mayor resolución y carga rápida."
+            }
+          ]
         },
         {
           "id": 98728,
@@ -104,10 +194,54 @@
           "kind": "original",
           "year": 2018,
           "igdbId": 132089,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo del fan disc."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómoda en portátil, con guardado estándar."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución limitada de Vita."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7a1y.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 3378,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41446,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 41510,
+          "reason": "2018"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60409",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Brave Fencer Musashi",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Brave Fencer Musashi",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "150 years ago, the legendary warrior known as the Brave Fencer Musashi saved the kingdom of Allucaneet from the evil Wizard of Darkness. Now, his spirit is reincarnated in a young, rather short-tempered boy. Fillet, the princess of Allucaneet, summons the reluctant hero to the palace and gives him the powerful sword Fusion, which he needs to defeat the evil Thirstquencher Empire. It soon turns out that the Empire is after another legendary sword, Lumina, so Musashi's first task is to get it before the bad guys do!..\n\nBrave Fencer Musashi is an action game with strong RPG elements. Controlling Musashi, the player explores the pre-rendered backgrounds from third person view (similarly to Final Fantasy VII), visiting towns, talking to NPCs, etc. There is a day/night cycle in the game, which is manifested in the schedules of NPCs and/or monsters, as well as Musashi's fatigue level, which increases if he doesn't sleep enough. Musashi uses the two swords, Fusion and Lumina, to fight his enemies. The two swords have different properties: while Fusion behaves more or less like a traditional melee weapon, Lumina needs to be imbued with various elemental items in order to unleash powerful attacks.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1810,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Emulación PS1 con guardado cómodo y sin cambio de disco."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable con cargas más cortas y escalado."
+            }
+          ]
         },
         {
           "id": 60410,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 1810,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles originales; guardado solo en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y rendimiento de PS1, con cargas del disco."
+            }
+          ],
+          "codes": [
+            "SLUS-00726"
+          ]
         },
         {
           "id": 60411,
@@ -64,14 +121,50 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 1810,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido que el original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo y portátil, pero pantalla pequeña."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación correcta en la pantalla de PSP."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/efbe9ba7be226c38215c564351322490.png",
         "hero": "https://cdn2.steamgriddb.com/hero/ae1d2c2d957a01dcb3f3b39685cdb4fa.png",
         "logo": "https://cdn2.steamgriddb.com/logo/536eecee295b92db6b32194e269541f8.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 39,
+          "platform": "ps1",
+          "project": "Brave-Fencer-Musashi-decomp-port",
+          "kind": "decomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Blizz127/Brave-Fencer-Musashi-decomp-port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 32541,
@@ -95,6 +188,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Musashi Samurai Legend marks the second chapter in the Musashi series. You'll play as Musashi, a young swordsman summoned to rescue a kidnapped princess. The journey, however, is a difficult one, as enemies of all types stand in your way. To survive the onslaught of foes, you must learn your opponents' techniques and use their attacks against them. Some techniques let you attack multiple enemies at once. Musashi Samurai Legend immerses you in a comic book-style adventure by combining Japanese animation with dialogue balloons.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -108,7 +207,12 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 1811,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-53521",
+            "SLUS-20983",
+            "SLUS-20983-F"
+          ]
         }
       ],
       "images": {
@@ -118,5 +222,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3061,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23877,
+          "reason": "1998"
+        },
+        {
+          "position": 2,
+          "gameId": 32541,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

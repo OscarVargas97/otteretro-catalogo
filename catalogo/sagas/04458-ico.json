@@ -3,7 +3,7 @@
   "name": "Ico",
   "igdbKind": "collection",
   "igdbId": 6461,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -14,6 +14,197 @@
   ],
   "games": [
     {
+      "id": 32555,
+      "nameEs": "Shadow of the Colossus",
+      "originalName": "Shadow of the Colossus",
+      "year": 2005,
+      "igdbId": 2207,
+      "popularity": 1348,
+      "iconic": true,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "81490",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Shadow of the Colossus",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Shadow of the Colossus",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An open-world action/adventure game in which a young wanderer, along with a stolen magical sword and his steed companion, trespasses a cursed land, makes a deal with an ancient being to bring a sacrificial victim back to life, and sets off to fulfill his end of the bargain, which involves tracking down and infiltrating the abodes of sixteen colossi and sacrificing them to achieve his goal.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un juego de acción y aventura de mundo abierto en el que un joven errante, junto con una espada mágica robada y su montura, se adentra sin permiso en una tierra maldita, hace un pacto con un ser antiguo para devolver a la vida a una víctima sacrificial, y se pone en marcha para cumplir su parte del trato, que implica rastrear e infiltrarse en las moradas de dieciséis colosos y sacrificarlos para lograr su objetivo.",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2005",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 81311,
+          "platform": "ps2",
+          "kind": "original",
+          "year": 2005,
+          "igdbId": 2207,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Solo el juego base."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Controles y cámara toscos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Caídas de fps frecuentes y baja resolución."
+            }
+          ],
+          "codes": [
+            "SCES-53326",
+            "SCES-53326/ANZ",
+            "SCUS-97472"
+          ]
+        },
+        {
+          "id": 81456,
+          "platform": "ps3",
+          "kind": "remaster",
+          "year": 2012,
+          "igdbId": 139896,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Incluye 1080p y trofeos, junto con Ico."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mismo control antiguo, algo mejor."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Muy fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Mejor resolución, pero con ralentizaciones."
+            }
+          ]
+        },
+        {
+          "id": 81490,
+          "platform": "ps4",
+          "kind": "remake",
+          "year": 2018,
+          "igdbId": 37094,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Modo foto y coleccionables, sin cambiar el diseño."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Controles modernos y cámara mejorada."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel en diseño, con arte renovado."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Gráficos rehechos y rendimiento estable."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/acaca856b38c00847ecc1ca2c02ae4b4.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/4c27cea8526af8cfee3be5e183ac9605.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/97adbcd253402895e56cdeceb5f4ca29.png"
+      },
+      "ports": [
+        {
+          "id": 346,
+          "platform": "ps4",
+          "project": "ShadowOfTheColossus-PC",
+          "kind": "native-layer",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/Oussama268/ShadowOfTheColossus-PC",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "shadPS4",
+          "emulatorLevel": 0
+        },
+        {
+          "id": 347,
+          "platform": "ps4",
+          "project": "ShadowOfTheColossus-PC",
+          "kind": "native-layer",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/AjncSystem/ShadowOfTheColossus-PC",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "shadPS4",
+          "emulatorLevel": 0
+        },
+        {
+          "id": 1043,
+          "platform": "ps2",
+          "project": "sotc-vibe-pc",
+          "kind": "recomp",
+          "toolchain": "PS2Recomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/LightVelox/sotc-vibe-pc",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        }
+      ]
+    },
+    {
       "id": 32799,
       "nameEs": "Ico",
       "originalName": "Ico",
@@ -22,6 +213,12 @@
       "popularity": 302,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "82727",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Ico",
@@ -32,6 +229,18 @@
           "field": "original_name",
           "value": "Ico",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "An action-adventure game in which a boy is abandoned and taken to a massive castle by his people. After exploring it for a while, he meets a girl who speaks a different language than him, then decides to get both of them out of the castle grounds by leading her along, in order to escape the shadow-like creatures that frequently try to kidnap the girl.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un juego de acción y aventura en el que un niño es abandonado y llevado a un enorme castillo por su gente. Tras explorarlo durante un rato, conoce a una niña que habla un idioma distinto al suyo y decide sacar a ambos de los terrenos del castillo, llevándola consigo, para escapar de las criaturas con forma de sombra que con frecuencia intentan secuestrarla.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -48,7 +257,20 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 7170,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "PCPX-96322",
+            "SCAJ-20099",
+            "SCCS-40005",
+            "SCES-50760",
+            "SCKA-20028",
+            "SCPS-11003",
+            "SCPS-19103",
+            "SCPS-19151",
+            "SCPS-55001",
+            "SCPS-56001",
+            "SCUS-97113"
+          ]
         },
         {
           "id": 82727,
@@ -56,15 +278,125 @@
           "kind": "remaster",
           "year": 2012,
           "igdbId": 144612,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BCJS-30070",
+            "BCJS-30073"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/54c8077a3713597237f91535a6082b1f.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/75f023b01584c7f37883f41c2a2b91ca.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/d6368eb1ada0146fbabee40e79f3b4e4.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 198,
+          "platform": "ps2",
+          "project": "ico-pc",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/nathanialf/ico-pc",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1318,
+          "platform": "ps2",
+          "project": "ico-recomp (archivado)",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/nathanialf/ico-recomp",
+          "source": "github",
+          "added": "2026-10-14",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        },
+        {
+          "id": 1376,
+          "platform": "ps2",
+          "project": "ico",
+          "kind": "decomp",
+          "status": "no-port",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/nathanialf/ico",
+          "source": "recompendium",
+          "added": "2026-11-06",
+          "emulator": "PCSX2",
+          "emulatorLevel": 2
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3208,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32799,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 32555,
+          "reason": "2005"
+        }
+      ]
+    },
+    {
+      "id": 3655,
+      "kind": "story",
+      "rationale": "Shadow of the Colossus es una precuela de Ico según su director, así que cronológicamente va primero. Ico ocurre después.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32555,
+          "recommendedVersionId": 81490,
+          "reason": "Es el inicio de la cronología. Se recomienda el remake de PS4 por sus gráficos y controles modernos."
+        },
+        {
+          "position": 2,
+          "gameId": 32799,
+          "recommendedVersionId": 82727,
+          "reason": "Sucede después de Shadow of the Colossus. El remaster de PS3 mejora la imagen y el rendimiento respecto al original de PS2."
+        }
+      ]
+    },
+    {
+      "id": 3656,
+      "kind": "community",
+      "rationale": "La comunidad suele recomendar el orden de lanzamiento, Ico y luego Shadow of the Colossus, porque así se ve la evolución del diseño. Las dos son cortas y también se pueden jugar en el orden contrario.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32799,
+          "recommendedVersionId": 82727,
+          "reason": "Es el primer juego y presenta el estilo de la saga. Se recomienda el remaster de PS3 por su mejor rendimiento y resolución. El original de PS2 también es válido."
+        },
+        {
+          "position": 2,
+          "gameId": 32555,
+          "recommendedVersionId": 81490,
+          "reason": "Es la continuación espiritual y, cronológicamente, una precuela. Se recomienda el remake de PS4 por ser la versión más pulida y accesible."
+        }
+      ]
+    }
+  ]
 }

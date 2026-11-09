@@ -3,7 +3,7 @@
   "name": "Splatoon",
   "igdbKind": "franchise",
   "igdbId": 1228,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,7 +20,7 @@
       "year": 2015,
       "igdbId": 7335,
       "popularity": 168,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -32,6 +32,18 @@
           "field": "original_name",
           "value": "Splatoon",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Splatoon is primarily a team-based third-person shooter which is playable by up to eight players in 4-vs-4 matches, although the game also features a single-player campaign. Players control characters called Inklings, wich can change between human form and squid form. Transforming into a squid allows players to swim through ink of their own color, even up walls and through grates, hiding from the enemy and replenishing their ink supply in the process.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Splatoon es principalmente un shooter en tercera persona por equipos, jugable con hasta ocho jugadores en partidas de 4 contra 4, aunque el juego también incluye una campaña para un jugador. Los jugadores controlan a personajes llamados Inklings, que pueden cambiar entre forma humana y forma de calamar. Al transformarse en calamar, los jugadores pueden nadar por la tinta de su propio color, incluso subiendo por las paredes y a través de rejillas, ocultándose del enemigo y reponiendo su suministro de tinta en el proceso.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -55,7 +67,24 @@
         "cover": "https://cdn2.steamgriddb.com/grid/a79f146eac21726fe73ecbba9d3303c1.png",
         "hero": "https://cdn2.steamgriddb.com/hero/1fd7b875d3473501d1b771ebe934ca59.png",
         "logo": "https://cdn2.steamgriddb.com/logo/6bc24fc1ab650b25b4114e93a98f1eba.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1095,
+          "platform": "wiiu",
+          "project": "SplatPC-Splatoon-Native-PC-Port",
+          "kind": "recomp",
+          "toolchain": "RebrewU",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/PC-PORTERS/SplatPC-Splatoon-Native-PC-Port",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Cemu",
+          "emulatorLevel": 2
+        }
+      ]
     },
     {
       "id": 9561,
@@ -64,7 +93,7 @@
       "year": 2017,
       "igdbId": 26761,
       "popularity": 217,
-      "iconic": false,
+      "iconic": true,
       "fields": [
         {
           "field": "name_es",
@@ -76,6 +105,18 @@
           "field": "original_name",
           "value": "Splatoon 2",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Splatoon 2 is a multiplayer third-person shooter in which players control characters known as Inklings and use colored ink to attack opponents and clear goals. Inklings can alternate between humanoid form, during which they can fire ink with their weapons, and squid form, which allows them to swim through ink of their own color in order to move quickly and replenish ink supplies.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Splatoon 2 es un shooter multijugador en tercera persona en el que los jugadores controlan a personajes llamados Inklings y usan tinta de colores para atacar a los oponentes y cumplir objetivos. Los Inklings pueden alternar entre forma humanoide, en la que pueden disparar tinta con sus armas, y forma de calamar, que les permite nadar por la tinta de su propio color para moverse rápidamente y reponer sus reservas de tinta.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -92,7 +133,10 @@
           "kind": "original",
           "year": 2017,
           "igdbId": 26761,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01003BC0000A0000"
+          ]
         }
       ],
       "images": {
@@ -107,9 +151,15 @@
       "originalName": "Splatoon 3",
       "year": 2022,
       "igdbId": 143613,
-      "popularity": 100,
-      "iconic": false,
+      "popularity": 101,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "40542",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Splatoon 3",
@@ -120,6 +170,18 @@
           "field": "original_name",
           "value": "Splatoon 3",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Enter the Splatlands, a sun-scorched desert inhabited by battle-hardened Inklings and Octolings. Splatsville, the city of chaos, is the adrenaline-fueled heart of this dusty wasteland. Even in this desolate environment, Turf War reigns supreme and battles rage in new stages located in the surrounding wilds. Dynamic new moves help these fighters dodge attacks and cover more ground, along with a new bow-shaped weapon to sling ink.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Entra en los Splatlands, un desierto abrasado por el sol habitado por Inklings y Octolings curtidos en la batalla. Splatsville, la ciudad del caos, es el corazón lleno de adrenalina de este páramo polvoriento. Incluso en este entorno desolado, la Turf War reina por encima de todo, y las batallas se libran en nuevos escenarios situados en los territorios salvajes de los alrededores. Nuevos movimientos dinámicos ayudan a estos luchadores a esquivar ataques y a cubrir más terreno, además de una nueva arma en forma de arco para lanzar tinta.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -136,7 +198,28 @@
           "kind": "original",
           "year": 2025,
           "igdbId": 143613,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Mismo control, con mejoras."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         },
         {
           "id": 40543,
@@ -144,7 +227,31 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 143613,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control, giroscopio."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución dinámica y fps variables."
+            }
+          ],
+          "codes": [
+            "0100C2500FC20000"
+          ]
         }
       ],
       "images": {
@@ -159,7 +266,7 @@
       "originalName": "Splatoon Raiders",
       "year": 2026,
       "igdbId": 348977,
-      "popularity": 15,
+      "popularity": 16,
       "iconic": false,
       "fields": [
         {
@@ -172,6 +279,18 @@
           "field": "original_name",
           "value": "Splatoon Raiders",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Splat scores of enemies and hunt for treasure in this single-player focused action shooter.\n\nPlay as a mechanic working with Deep Cut – a trio of swashbuckling musicians – and venture out into the mysterious Spirhalite Islands! Customize your character, kit yourself out with mechanical gadgets and ink-splattering weapons, and take on waves of foes called Salmonids as you raid the islands for salvage.\n\nThis is mainly a single-player adventure, but you won’t be alone: one member of Deep Cut will raid alongside you in a powerful bot. You can also join with up to three other players online or via local wireless.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Derrota enemigos a salpicaduras de tinta y busca tesoros en este shooter de acción centrado en el modo para un jugador.\n\n¡Juega como un mecánico que trabaja con Deep Cut, un trío de músicos aventureros, y explora las misteriosas Islas Spirhalite! Personaliza tu personaje, equípate con artilugios mecánicos y armas que salpican tinta, y enfréntate a oleadas de enemigos llamados Salmonids mientras saqueas las islas en busca de restos aprovechables.\n\nSe trata principalmente de una aventura para un jugador, pero no estarás solo: uno de los miembros de Deep Cut te acompañará en las incursiones con un robot poderoso controlado por la IA. También puedes unirte con hasta otros tres jugadores en línea o mediante conexión inalámbrica local.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -188,10 +307,98 @@
           "kind": "original",
           "year": 2026,
           "igdbId": 348977,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0400380020056000"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d075aa61e582e34e160418c0b76276a3.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/17667b08596154dc5e9417f410cbced3.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/1cdda99e804b48a2aca00851368f5642.png"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 1210,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7820,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 9561,
+          "reason": "2017"
+        },
+        {
+          "position": 3,
+          "gameId": 15412,
+          "reason": "2022"
+        },
+        {
+          "position": 4,
+          "gameId": 50184,
+          "reason": "2026"
+        }
+      ]
+    },
+    {
+      "id": 3957,
+      "kind": "story",
+      "rationale": "Splatoon no tiene una historia continua: son entregas con lore enlazado de forma suelta. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 7820,
+          "reason": "Primera entrega, solo en Wii U."
+        },
+        {
+          "position": 2,
+          "gameId": 9561,
+          "reason": "Segunda entrega con su modo historia Octo Expansion. Solo en Switch."
+        },
+        {
+          "position": 3,
+          "gameId": 15412,
+          "recommendedVersionId": 40543,
+          "reason": "Tercera entrega, que cierra el lore de Splatsville. Elegí la versión de Switch; la de Switch 2 también sirve."
+        },
+        {
+          "position": 4,
+          "gameId": 50184,
+          "reason": "Spin-off de 2026, el más reciente. Lo puse al final por fecha, sin haber verificado su lugar en el lore."
+        }
+      ]
+    },
+    {
+      "id": 3958,
+      "kind": "community",
+      "rationale": "Se recomienda empezar por Splatoon 3, que tiene la comunidad más activa, y pasar a Splatoon 2 por su modo historia. Splatoon 1 se salta por su servicio online limitado en Wii U, y Raiders queda fuera por ser un spin-off reciente.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 15412,
+          "recommendedVersionId": 40543,
+          "reason": "Es el más completo y con jugadores activos. Elegí la versión de Switch; la de Switch 2 también sirve."
+        },
+        {
+          "position": 2,
+          "gameId": 9561,
+          "reason": "Opcional: su modo historia y Octo Expansion complementan al 3. Solo existe en Switch."
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

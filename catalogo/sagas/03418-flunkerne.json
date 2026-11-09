@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "47895",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Flunkerne: På Månen",
           "source": "igdb",
@@ -73,6 +79,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "48040",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Flunkerne: Pirater",
           "source": "igdb",
@@ -106,7 +118,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 285338,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BFEQ"
+          ]
         }
       ],
       "images": {
@@ -114,5 +129,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2931,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19175,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 19285,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

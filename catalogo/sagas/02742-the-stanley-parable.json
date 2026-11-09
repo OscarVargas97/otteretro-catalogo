@@ -3,7 +3,7 @@
   "name": "The Stanley Parable",
   "igdbKind": "collection",
   "igdbId": 1852,
-  "iconic": false,
+  "iconic": true,
   "fields": [
     {
       "field": "name",
@@ -20,8 +20,14 @@
       "year": 2013,
       "igdbId": 3035,
       "popularity": 1003,
-      "iconic": false,
+      "iconic": true,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "30989",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "The Stanley Parable",
@@ -32,6 +38,18 @@
           "field": "original_name",
           "value": "The Stanley Parable",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A first-person exploration game built around branching narrative choices and an omniscient narrator who reacts to the player's decisions. Players navigate an office environment, choosing whether to follow or defy the narrator's directions, with each choice leading to different story paths and endings. Originally released as a Half-Life 2 mod in 2011, it was remade as a standalone title in 2013 and later expanded with The Stanley Parable: Ultra Deluxe in 2022, which added new routes, environments, and endings across additional platforms.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Un juego de exploración en primera persona basado en decisiones narrativas ramificadas y en un narrador omnisciente que reacciona a las decisiones del jugador. Los jugadores recorren un entorno de oficina, eligiendo si seguir o desobedecer las indicaciones del narrador, y cada decisión conduce a distintos caminos narrativos y finales. Lanzado originalmente como una modificación de Half-Life 2 en 2011, fue rehecho como juego independiente en 2013 y más tarde ampliado con The Stanley Parable: Ultra Deluxe en 2022, que añadió nuevas rutas, entornos y finales en plataformas adicionales.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -49,7 +67,28 @@
           "year": 2013,
           "igdbId": 3035,
           "steamAppId": 247750,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego ampliado con muchos más finales y escenas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Pulido y más claro."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Ampliación fiel del concepto, con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Versión independiente mejor optimizada."
+            }
+          ]
         },
         {
           "id": 102174,
@@ -57,7 +96,28 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 18453,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Mod original, más corto y con menos finales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Funcional pero más tosco."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la visión original del mod."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Motor de Source antiguo, menos pulido."
+            }
+          ]
         }
       ],
       "images": {
@@ -76,6 +136,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "31135",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Stanley Parable: Ultra Deluxe",
           "source": "igdb",
@@ -85,6 +151,18 @@
           "field": "original_name",
           "value": "The Stanley Parable: Ultra Deluxe",
           "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The Stanley Parable: Ultra Deluxe is an expanded re-imagining of 2013's The Stanley Parable. You will play as Stanley, and you will not play as Stanley. You will make a choice, and you will become powerless. You are not here to win. The Stanley Parable is a game that plays you.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "The Stanley Parable: Ultra Deluxe es una reinterpretación ampliada de The Stanley Parable de 2013. Tú interpretarás a Stanley, y no interpretarás a Stanley. Tomarás una decisión y te quedarás sin poder. No estás aquí para ganar. The Stanley Parable es un juego que te juega a ti.",
+          "source": "claude",
           "manual": false
         },
         {
@@ -142,7 +220,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 113119,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010029300E5C4000"
+          ]
         }
       ],
       "images": {
@@ -152,5 +233,65 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2737,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12612,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 12615,
+          "reason": "2022"
+        }
+      ]
+    },
+    {
+      "id": 3653,
+      "kind": "story",
+      "rationale": "La saga no tiene una historia continua: Ultra Deluxe es una reedición ampliada que reinterpreta el original. Se repite el orden de lanzamiento.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12612,
+          "reason": "Es el juego base; ambas versiones de PC son equivalentes, así que da igual cuál."
+        },
+        {
+          "position": 2,
+          "gameId": 12615,
+          "recommendedVersionId": 31135,
+          "reason": "Amplía y comenta el original; se recomienda la versión de PC, aunque cualquier plataforma ofrece el mismo contenido."
+        }
+      ]
+    },
+    {
+      "id": 3654,
+      "kind": "community",
+      "rationale": "Ultra Deluxe incluye todo el juego original rehecho más contenido nuevo, así que a quien empieza hoy le basta con jugarlo directamente. El original solo interesa por curiosidad o para comparar.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 12615,
+          "recommendedVersionId": 31135,
+          "reason": "Es la versión definitiva y contiene el original; se elige PC por rendimiento, pero cualquier plataforma sirve."
+        },
+        {
+          "position": 2,
+          "gameId": 12612,
+          "reason": "Opcional, después de Ultra Deluxe: sirve para ver el juego tal como era en 2013 y apreciar los cambios."
+        }
+      ]
+    }
+  ]
 }

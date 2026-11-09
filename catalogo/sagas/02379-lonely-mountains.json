@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "21460",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lonely Mountains: Downhill",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Lonely Mountains: Downhill",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Just you and your bike - take it on a thrilling ride down an unspoiled mountain landscape. Make your way through thick forests, narrow trails and wild rivers. Race, jump, slide and try not to crash - all the way from the peak to the valley!",
           "source": "igdb",
           "manual": false
         },
@@ -73,7 +85,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 29144,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "0100A0C00E0DE000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +107,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112126",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Lonely Mountains: Snow Riders",
           "source": "igdb",
@@ -100,6 +121,12 @@
         {
           "field": "original_name",
           "value": "Lonely Mountains: Snow Riders",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Test your skiing skills in serene mountain scenery. Perform tricks, discover shortcuts and try to best your time in the snowy followup to Lonely Mountains: Downhill. Enjoy the slopes alone, participate in thrilling online multiplayer races or gather your friends and conquer the mountains together.",
           "source": "igdb",
           "manual": false
         },
@@ -136,8 +163,33 @@
           "igdbId": 313812,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/43f2fd6ce95dd9bb739f4455b8dcdb03.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/74ab74c859512f5a615f1fd85837d141.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/6ad1add0cf1cbe900da1fabd85cd7a7a.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2621,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9717,
+          "reason": "2019"
+        },
+        {
+          "position": 2,
+          "gameId": 47262,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

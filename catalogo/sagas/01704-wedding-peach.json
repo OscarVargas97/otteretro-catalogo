@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Released in 1995 for the Game Boy.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1995",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Released in 1996 for the PlayStation.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1996",
           "source": "igdb",
@@ -90,7 +102,10 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 64951,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00368"
+          ]
         }
       ],
       "images": {
@@ -98,5 +113,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2404,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 6219,
+          "reason": "1995"
+        },
+        {
+          "position": 2,
+          "gameId": 24944,
+          "reason": "1996"
+        }
+      ]
+    }
+  ]
 }

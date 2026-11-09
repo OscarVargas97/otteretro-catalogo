@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86580",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Accel World: Awakening of the Silver Wings",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Accel World: Awakening of the Silver Wings",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Accel World: Ginyoku no Kakusei is an Adventure game, developed and published by Bandai Namco Games, which was released in Japan in 2012.",
           "source": "igdb",
           "manual": false
         },
@@ -58,7 +70,10 @@
           "igdbId": 44598,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5zzc.jpg"
+      }
     },
     {
       "id": 35914,
@@ -70,6 +85,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "86919",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Accel World: The Peak of Acceleration",
           "source": "igdb",
@@ -78,6 +99,12 @@
         {
           "field": "original_name",
           "value": "Accel World: The Peak of Acceleration",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Accel World anime Series gets a PlayStation 3 and PSP follow-up.",
           "source": "igdb",
           "manual": false
         },
@@ -105,7 +132,10 @@
           "igdbId": 64495,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1pqj.jpg"
+      }
     },
     {
       "id": 41107,
@@ -117,6 +147,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "98132",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Accel World vs. Sword Art Online: Millennium Twilight",
           "source": "igdb",
@@ -125,6 +161,12 @@
         {
           "field": "original_name",
           "value": "Accel World vs. Sword Art Online: Millennium Twilight",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Accel World vs. Sword Art Online: Millennium Twilight is a Role-Playing game, developed by Artdink and published by Bandai Namco Games, which was released in Japan in 2017.",
           "source": "igdb",
           "manual": false
         },
@@ -160,8 +202,36 @@
           "igdbId": 36796,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5w7m.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1986,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 35667,
+          "reason": "2012"
+        },
+        {
+          "position": 2,
+          "gameId": 35914,
+          "reason": "2013"
+        },
+        {
+          "position": 3,
+          "gameId": 41107,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

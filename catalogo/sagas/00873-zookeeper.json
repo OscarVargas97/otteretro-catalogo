@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "A puzzle game. The player has to line up the animals pictures and make them disappear.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -56,6 +62,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "45942",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Zoo Keeper",
           "source": "igdb",
@@ -64,6 +76,12 @@
         {
           "field": "original_name",
           "value": "Zoo Keeper",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A Japanese flash game where you must match the animals to reach at a certain number.",
           "source": "igdb",
           "manual": false
         },
@@ -81,7 +99,28 @@
           "kind": "original",
           "year": 2012,
           "igdbId": 222337,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar, posiblemente con algunos extras."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mantiene la pantalla táctil y suma comodidad de 3DS."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original en lo esencial."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor pantalla que DS, y compatible con la consola actual."
+            }
+          ]
         },
         {
           "id": 45942,
@@ -89,7 +128,33 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 69987,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido completo del juego de puzle original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "La pantalla táctil resulta natural para mover las fichas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución de DS, sin problemas importantes."
+            }
+          ],
+          "codes": [
+            "AZKE",
+            "AZKJ",
+            "AZKP"
+          ]
         },
         {
           "id": 83318,
@@ -97,7 +162,28 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 43236,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar, sin extras claros."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Con mando es menos directo que con el lápiz táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con otro esquema de control."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Se ve en pantalla grande y con carga estable."
+            }
+          ]
         }
       ],
       "images": {
@@ -107,5 +193,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2220,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 5346,
+          "reason": "2003"
+        },
+        {
+          "position": 2,
+          "gameId": 2399,
+          "reason": "2004"
+        }
+      ]
+    }
+  ]
 }

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "21492",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Golf With Your Friends",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Golf With Your Friends",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Why have friends if not to play golf... with your friends! Nothing is out of bounds as you take on courses filled with fast paced, exciting, simultaneous mini golf for up to 12 players!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 24985,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Buen contenido, con algo de retraso en novedades."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto, menos pulido."
+            }
+          ]
         },
         {
           "id": 21492,
@@ -57,7 +90,28 @@
           "year": 2016,
           "igdbId": 24985,
           "steamAppId": 431240,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Recibió primero los mapas y modos nuevos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Puntería precisa con ratón y comunidad grande."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fps."
+            }
+          ]
         },
         {
           "id": 21493,
@@ -65,7 +119,28 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 24985,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Buen contenido, con algo de retraso en novedades."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Funciona bien con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcto, menos pulido."
+            }
+          ]
         },
         {
           "id": 21494,
@@ -73,7 +148,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 24985,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Buen contenido, con algo de retraso en novedades."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil y con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y fps."
+            }
+          ],
+          "codes": [
+            "01006FB00EBE0000"
+          ]
         }
       ],
       "images": {
@@ -92,6 +191,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "112497",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Golf With Your Friends 2",
           "source": "igdb",
@@ -100,6 +205,12 @@
         {
           "field": "original_name",
           "value": "Golf With Your Friends 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tee off in Golf With Your Friends 2! Dive into 12-player chaos, wild new course mechanics, a revamped level editor, and nonstop fun—play together no matter how and where your friends play!",
           "source": "igdb",
           "manual": false
         },
@@ -144,8 +255,32 @@
           "igdbId": 325850,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1e8895b8076b8fc5167a921f4ed5f691.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/e19d379f7133add0c902d115f37044a6.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2622,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9725,
+          "reason": "2020"
+        },
+        {
+          "position": 2,
+          "gameId": 47395,
+          "reason": "2026"
+        }
+      ]
+    }
+  ]
 }

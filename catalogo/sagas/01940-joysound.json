@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Karaoke software for the Wii U.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2012",
           "source": "igdb",
@@ -79,6 +85,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Practicing alone, gathering with family and friends and singing, etc.\nYou can enjoy karaoke at home immediately by purchasing a ticket that can be selected according to the usage scene.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2017",
           "source": "igdb",
@@ -109,6 +121,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "50880",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Karaoke Joysound",
           "source": "igdb",
@@ -117,6 +135,12 @@
         {
           "field": "original_name",
           "value": "Karaoke Joysound",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "\"KARAOKE JOYSOUND\" is a game that allows you to enjoy online karaoke in the comfort of your home.\n\nGoing online gives you access to a large library of songs, with more being added all the time!\n\nYour voice's pitch is displayed while you sing, and you can also sing along with guide vocals on some songs.\n\nUsing the scoring system ranks your performance, and you can also see how you fare against others in the rankings singing the same song.\n\nWhat's more, your initial software purchase comes with a complimentary 6-hour ticket (limited to one use).\n\nSo gather your friends and have a blast singing karaoke together! Try it now!",
           "source": "igdb",
           "manual": false
         },
@@ -134,7 +158,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 4948,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Edición más antigua, con menos canciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Misma interfaz de karaoke."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la primera edición."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Igual en Wii."
+            }
+          ]
         },
         {
           "id": 49350,
@@ -142,7 +187,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 131250,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Catálogo algo ampliado."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Misma interfaz."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi igual a la base."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Igual en Wii."
+            }
+          ]
         },
         {
           "id": 50878,
@@ -150,7 +216,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 131263,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Catálogo similar al de 2009."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Misma interfaz."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi igual a la base."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Igual en Wii."
+            }
+          ]
         },
         {
           "id": 50880,
@@ -158,7 +245,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 83680,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más reciente, con más canciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Misma interfaz."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi igual a la base."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Igual en Wii."
+            }
+          ]
         }
       ],
       "images": {
@@ -200,7 +308,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 83668,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SKEJ-JPN-B1"
+          ]
         }
       ],
       "images": {
@@ -242,7 +353,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 83679,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SKDJ-JPN-B1"
+          ]
         }
       ],
       "images": {
@@ -286,8 +400,51 @@
           "igdbId": 136720,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2nj8.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 777,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19702,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 20626,
+          "reason": "2010"
+        },
+        {
+          "position": 3,
+          "gameId": 20627,
+          "reason": "2010"
+        },
+        {
+          "position": 4,
+          "gameId": 7721,
+          "reason": "2012"
+        },
+        {
+          "position": 5,
+          "gameId": 44141,
+          "reason": "2014"
+        },
+        {
+          "position": 6,
+          "gameId": 15023,
+          "reason": "2017"
+        }
+      ]
+    }
+  ]
 }

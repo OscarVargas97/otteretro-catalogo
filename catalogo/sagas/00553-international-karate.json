@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "2952",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "International Karate +",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "International Karate +",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Call it a sequel... And you'll land up flat on your back.\n\nThey called International Karate \"the greatest Karate beat' em up yet\" (Commodore User). And who are we to argue? But Archer Maclean has come up with a stunner: A third fighter. An amazing animated background. New moves (including double head-kick and a spectacular backflip). Re-mixed music by Rob Hubbard. And Balls!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 8397,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor mando y comodidad."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen."
+            }
+          ]
         },
         {
           "id": 2953,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 8397,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control digital correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Correcta."
+            }
+          ],
+          "codes": [
+            "SLES-04040"
+          ]
         },
         {
           "id": 2954,
@@ -64,7 +121,28 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 8397,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Pocos botones."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -95,6 +173,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "How advanced is your karate? Find out in this martial arts game for the Game Boy Advance. Bigger, badder and better than ever before, International Karate Advanced pits you against a series of increasingly skilled opponents, progress from white to black belt in the exciting Tournament and Dojo Game Modes, bump up your score in the demanding Bonus Games and sharpen your skills in the Practice Area.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -108,7 +192,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 49292,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AIKP"
+          ]
         }
       ],
       "images": {
@@ -137,6 +224,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The classic karate fighter is back on the Game Boy Color, remade with the nostalgic gameplay that fans around the world will adore, and new play modes to keep the action fresh and exciting. Hiyah!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -159,5 +252,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1453,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1431,
+          "reason": "1987"
+        },
+        {
+          "position": 2,
+          "gameId": 6017,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 1952,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

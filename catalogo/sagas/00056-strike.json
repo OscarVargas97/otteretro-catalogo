@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "125",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Desert Strike: Return to the Gulf",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Desert Strike: Return to the Gulf",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Desert Strike: Return to the Gulf, commonly known as Desert Strike, is a shoot 'em up video game released by Electronic Arts (EA) in February 1992 for Sega's Mega Drive. The game was later released on several other formats such as the SNES, including a much upgraded version for the Amiga home computer. The game was inspired by the Gulf War and depicts a conflict between an insane Middle Eastern dictator, General Kilbaba, and the United States. The player controls a lone Apache helicopter and attempts to destroy enemy weapons and installations, rescue hostages and capture enemy personnel, while managing supplies of fuel and ammunition.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 6798,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buenos gráficos para su época."
+            }
+          ]
         },
         {
           "id": 126,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 6798,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, con guardado."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         },
         {
           "id": 864,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 228494,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Versión muy reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Monocromo y baja resolución."
+            }
+          ]
         }
       ],
       "images": {
@@ -83,6 +158,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "266",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Jungle Strike",
           "source": "igdb",
@@ -91,6 +172,12 @@
         {
           "field": "original_name",
           "value": "Jungle Strike",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A sequel to Desert Strike: Return to the Gulf (a best-seller released the previous year) and the second instalment in the Strike series. Jungle Strike retained its predecessor's core mechanics and expanded on the model with additional vehicles and settings. The game was well received by most critics upon release, with the Mega Drive release receiving critical acclaim from their respective reviewers. Publications praised its gameplay, strategy, design, controls and graphics, although there were some complaints regarding the interface and difficulty.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +195,28 @@
           "kind": "original",
           "year": 1993,
           "igdbId": 4368,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control correcto."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Buenos gráficos."
+            }
+          ]
         },
         {
           "id": 891,
@@ -116,14 +224,50 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 242319,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Muy reducida."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Muy recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "1",
+              "text": "Monocromo."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/10f39dba81ce772b450e776e718ccff3.png",
         "hero": "https://cdn2.steamgriddb.com/hero/c994a9b0029e3f2dab7cdd694cb2f47b.png",
         "logo": "https://cdn2.steamgriddb.com/logo/6b72ae1b07bcd7ac94b68f62d7cf4d8b.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 818,
+          "platform": "snes",
+          "project": "Jungle-Strike-SNES-Static-Recomp",
+          "kind": "recomp",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Junior-Jones/Jungle-Strike-SNES-Static-Recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "bsnes / Mesen"
+        }
+      ]
     },
     {
       "id": 369,
@@ -135,6 +279,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "570",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Urban Strike: The Sequel to Jungle Strike",
           "source": "igdb",
@@ -143,6 +293,12 @@
         {
           "field": "original_name",
           "value": "Urban Strike: The Sequel to Jungle Strike",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Urban Strike is a helicopter based shoot 'em up, mixing action and strategy, retaining its predecessor's core mechanics, and expanding on the model with additional vehicles and settings. This time, the campaign takes the player all over the North American continent, beginning in Hawaii and moving through locations in Mexico, San Francisco, New York, and Las Vegas.",
           "source": "igdb",
           "manual": false
         },
@@ -185,6 +341,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "1989",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Nuclear Strike",
           "source": "igdb",
@@ -193,6 +355,12 @@
         {
           "field": "original_name",
           "value": "Nuclear Strike",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Nuclear Strike is a shooter video game developed and published by Electronic Arts for the PlayStation in 1997. The game is the sequel to Soviet Strike and the fifth instalment in the Strike series, which began with Desert Strike on the Sega Genesis. The Soviet Strike development team also created Nuclear Strike. EA released a PC port the same year; THQ developed and in 1999 published a Nintendo 64 version called Nuclear Strike 64.\n\nNuclear Strike is a helicopter-based game, with strategy elements added to the action gameplay. The plot concerns an elite special force - the player's allies - pursuing a nuclear-armed rogue spy through a fictionalised Asian setting. It retained the earlier game's engine but added several modifications to improve graphical performance and make the game more accessible. The game features 15 playable vehicles, a large increase from previous games. In addition to the main fictionalised Apache, there are secondary helicopters, jets, armour and a hovercraft. The player also commands ground troops in occasional real-time strategy sections.\n\nThe game received positive, negative and mixed reviews. Critics noted a weak storyline, though GameSpot dismissed this is as unimportant in an action game. GameSpot called the graphics - which made use of specialised hardware such as 3Dfx Voodoo video cards and the N64 Expansion Pak - \"about as good as it gets\", while Allgame said they are \"decent\" and Daily Radar called them \"horrible\". Critics praised the full motion video as well as the music and sound effects. Reviewers enjoyed the straightforward gameplay but several complained of a close similarity to its predecessor Soviet Strike and questioned the game's value as a result.",
           "source": "igdb",
           "manual": false
         },
@@ -210,7 +378,28 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 51274,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Teclado y ratón o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución."
+            }
+          ]
         },
         {
           "id": 1990,
@@ -218,7 +407,35 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 51274,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Campaña completa."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando natural."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja."
+            }
+          ],
+          "codes": [
+            "SLES-00919",
+            "SLES-00920",
+            "SLES-00921",
+            "SLUS-00518",
+            "SLUS-00518GH"
+          ]
         },
         {
           "id": 2721,
@@ -226,7 +443,28 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 47755,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Port con ajustes."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Control con mando de N64."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Adaptación con cambios."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Velocidad de cuadros inestable."
+            }
+          ]
         }
       ],
       "images": {
@@ -245,6 +483,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61196",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Soviet Strike",
           "source": "igdb",
@@ -253,6 +497,12 @@
         {
           "field": "original_name",
           "value": "Soviet Strike",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In 1991, the U.S.S.R. (Union of Soviet Socialist Republics) boasting the largest military force in history, suddenly and unexpectedly collapsed. Since that time the fallen empire has lain lifeless -- a rich corpse waiting to be picked clean. Now, a sinister ex-KGB general codenamed Shadowman directs a flock of vultures to swoop in from all parts of Eastern Europe and claim Russia's nuclear warheads and weapons of mass terror. While directing these 'wars of liberation' Shadowman intends to shake democratic Russia to it's foundations, bringing about a return to the Cold War...or even worse. You chopper into Crimea and discover the plot of this Russian madman using thermal spy devices. You must quickly move on to the Black Sea to prevent the hijacking of ICBM ships, respond to an attack on a chemical weapons plant in the desert passes, and then recover a nuclear reactor core in Transylvania. As you successfully thwart these stages of Operation Vulture, Shadowman is forced to take his coup to the streets of Moscow. Guide your chopper through five unique 3D worlds as you complete 41 deadly missions. Enemy vehicles, tactics, and responses change, based upon your activities, making this the first of STRIKE's new \"Living Battlefields\".",
           "source": "igdb",
           "manual": false
         },
@@ -270,7 +520,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 19418,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado más cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen en TV."
+            }
+          ]
         },
         {
           "id": 61197,
@@ -278,7 +549,36 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 19418,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles antiguos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de PS1."
+            }
+          ],
+          "codes": [
+            "SLES-00507",
+            "SLES-00507-",
+            "SLES-00508",
+            "SLES-00509",
+            "SLPS-00735",
+            "SLUS-00061"
+          ]
         },
         {
           "id": 61198,
@@ -286,7 +586,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 19418,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo juego."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -294,7 +615,211 @@
         "hero": "https://cdn2.steamgriddb.com/hero/fd3946ce29c60eba7608733df338102d.png",
         "logo": "https://cdn2.steamgriddb.com/logo/976f1ecb676aa1bb3bb86ed84e79cdfa.png"
       }
+    },
+    {
+      "id": 24239,
+      "nameEs": "Future Cop: LAPD",
+      "originalName": "Future Cop: LAPD",
+      "year": 1998,
+      "igdbId": 11235,
+      "popularity": 28,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "61392",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Future Cop: LAPD",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Future Cop: LAPD",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Crime War is a story mode, following a day in the life of an LAPD X1-Alpha pilot. The story events range from rogue lunatics arming observatories with weapons, to a malfunctioning supercomputer. Players begin in a futuristic Griffith Park, but as they advance through the game they may unlock areas such as Venice Beach, LAX and Long Beach.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "1998",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 61391,
+          "platform": "ps3",
+          "kind": "original",
+          "year": 2012,
+          "igdbId": 11235,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo juego de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor imagen en TV."
+            }
+          ]
+        },
+        {
+          "id": 61392,
+          "platform": "pc",
+          "kind": "original",
+          "year": 1998,
+          "igdbId": 11235,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Controles flexibles."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución."
+            }
+          ]
+        },
+        {
+          "id": 61393,
+          "platform": "ps1",
+          "kind": "original",
+          "year": 1998,
+          "igdbId": 11235,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Control con mando natural."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja."
+            }
+          ]
+        },
+        {
+          "id": 61394,
+          "platform": "psp",
+          "kind": "original",
+          "year": 2012,
+          "igdbId": 11235,
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo juego de PS1."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/1c06fe3a577f0985d39a737caeda6df5.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/bf20701920a518dc23adeb39de9372c5.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/db15ebe51cd11e718e55244d7440ff7d.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 699,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 80,
+          "reason": "1992"
+        },
+        {
+          "position": 2,
+          "gameId": 173,
+          "reason": "1993"
+        },
+        {
+          "position": 3,
+          "gameId": 369,
+          "reason": "1994"
+        },
+        {
+          "position": 4,
+          "gameId": 24132,
+          "reason": "1996"
+        },
+        {
+          "position": 5,
+          "gameId": 1048,
+          "reason": "1997"
+        },
+        {
+          "position": 6,
+          "gameId": 24239,
+          "reason": "1998"
+        }
+      ]
+    }
+  ]
 }

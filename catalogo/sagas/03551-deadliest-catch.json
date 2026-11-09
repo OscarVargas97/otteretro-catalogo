@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "49751",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deadliest Catch: Sea of Chaos",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Deadliest Catch: Sea of Chaos",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Capturing the drama and excitement of the Discovery Channel’s Emmy-winning TV series Deadliest Catch, this game challenges players to take on the world’s toughest job: crab fishing.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 20448,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLUS-30633"
+          ]
         },
         {
           "id": 49752,
@@ -56,7 +71,10 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 20448,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SOCE-USA-B0"
+          ]
         },
         {
           "id": 49753,
@@ -71,7 +89,91 @@
         "cover": "https://cdn2.steamgriddb.com/grid/946bc00761d098292245d5eabb21022a.png",
         "logo": "https://cdn2.steamgriddb.com/logo/8cf40e328089249cf77075692aa0c09b.png"
       }
+    },
+    {
+      "id": 48288,
+      "nameEs": "Deadliest Catch: Alaskan Storm",
+      "originalName": "Deadliest Catch: Alaskan Storm",
+      "year": 2008,
+      "igdbId": 6962,
+      "popularity": 2,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "best_version",
+          "value": "114648",
+          "source": "script",
+          "manual": false
+        },
+        {
+          "field": "name_es",
+          "value": "Deadliest Catch: Alaskan Storm",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Deadliest Catch: Alaskan Storm",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Deadliest Catch: Alaskan Storm is a simulation computer game for the Xbox 360 and Microsoft Windows developed by Liquid Dragon Studios and published by Greenwave Games. The game was created by Northwestern Games.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2008",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 114648,
+          "platform": "pc",
+          "kind": "original",
+          "year": 2008,
+          "igdbId": 6962,
+          "criteria": []
+        },
+        {
+          "id": 114649,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2008,
+          "igdbId": 6962,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/999a15586a34cc1c055d101991d418b9.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/d59a9dae5c40e8c2cece9848ddf791b9.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/ce8c989497b737f5f2c19a0b06df982f.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2974,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 48288,
+          "reason": "2008"
+        },
+        {
+          "position": 2,
+          "gameId": 20066,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }

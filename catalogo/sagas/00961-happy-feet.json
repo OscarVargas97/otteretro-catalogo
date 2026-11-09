@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5106",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Happy Feet",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Happy Feet",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Step into the shoes of a bird who's got some happy feet in this game based on the Happy Feet animated film. Mumble is a young penguin. He's been born into a flock of Empire Penguins who are great at singing. Each penguin needs a Heartsong to attract their soulmate. Mumble, however, is just about the worst singer in the world. The one thing he can do, and do really well, is tap dance. Sing and dance through the penguin world as you interact with Mumble's friends and foes. Don't give up hope that, somewhere in the freezing Artic, you'll find the song to warm someone's heart!",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,10 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 3940,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GH7E-USA"
+          ]
         },
         {
           "id": 5106,
@@ -64,7 +79,14 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 3940,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54421",
+            "SLES-54421-ANZ",
+            "SLES-54421/ANZ-P",
+            "SLUS-21455",
+            "SLUS-21455P"
+          ]
         },
         {
           "id": 5457,
@@ -80,7 +102,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 243190,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AHFE",
+            "AHFP"
+          ]
         },
         {
           "id": 44268,
@@ -88,7 +114,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 243191,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RHFE-USA",
+            "RVL-RHFP-EUR"
+          ]
         }
       ],
       "images": {
@@ -107,6 +137,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "9874",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Happy Feet Two",
           "source": "igdb",
@@ -115,6 +151,12 @@
         {
           "field": "original_name",
           "value": "Happy Feet Two",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Happy Feet Two - The Videogame is a 3D musical adventure game for the entire family inspired by the whimsical Antarctic world of the animated film Happy Feet Two. The upbeat game is scored by the three time Grammy Award winning band Ozomatli to get players into the penguin groove.",
           "source": "igdb",
           "manual": false
         },
@@ -132,7 +174,11 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 47380,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01425",
+            "BLUS-30846"
+          ]
         },
         {
           "id": 9239,
@@ -140,7 +186,11 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 47380,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AHFE",
+            "CTR-P-AHFP"
+          ]
         },
         {
           "id": 9240,
@@ -148,7 +198,11 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 47380,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-SHXE-USA-B0",
+            "RVL-SHXP-EUR-B0"
+          ]
         },
         {
           "id": 9241,
@@ -164,7 +218,10 @@
           "kind": "original",
           "year": 2011,
           "igdbId": 345552,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BWFE"
+          ]
         }
       ],
       "images": {
@@ -172,5 +229,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2238,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2747,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 4500,
+          "reason": "2011"
+        }
+      ]
+    }
+  ]
 }

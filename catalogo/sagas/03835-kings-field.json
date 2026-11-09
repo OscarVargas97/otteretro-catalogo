@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60125",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "King's Field",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "King's Field",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "King's Field is a first-person 3D RPG which takes place in the underground tomb of the kingdom of Verdite. The player takes the role of Jean who explores 3D dungeons all alone in this dark fantasy-world with his sword and magic spells. A lot of challenges await Jean. The player will gain a great sense of accomplishment when overcoming tough situations in the game.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 7422,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, emulado en PS3."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Sin disco ni tarjeta física."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación con salida HD y cargas más fluidas."
+            }
+          ]
         },
         {
           "id": 60125,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 1994,
           "igdbId": 7422,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original japonés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles torpes de la época, guardado en tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y cargas de PS1."
+            }
+          ]
         },
         {
           "id": 60126,
@@ -64,7 +118,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 7422,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, emulado en PSP."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, pero con controles reducidos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña, imagen blanda."
+            }
+          ]
         },
         {
           "id": 60151,
@@ -72,7 +147,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 7423,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido en PS3."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado digital práctico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Emulación estable en HD."
+            }
+          ]
         },
         {
           "id": 60152,
@@ -80,7 +176,28 @@
           "kind": "original",
           "year": 1995,
           "igdbId": 7423,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido, edición de 1995."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Mismos controles clásicos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Prácticamente igual al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Rendimiento de PS1."
+            }
+          ]
         },
         {
           "id": 60153,
@@ -88,14 +205,51 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 7423,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido en PSP."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, con controles reducidos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/b47071610ab585bc8d0db86cbe8d25dc.jpg",
         "hero": "https://cdn2.steamgriddb.com/hero/391e6809e1c9c36987ad52397b51b8fd.png",
         "logo": "https://cdn2.steamgriddb.com/logo/e83a0812cede8fa1f0efd82374b27ea6.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 828,
+          "platform": "ps1",
+          "project": "verdite2",
+          "kind": "recomp",
+          "toolchain": "RecompOne",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/Voicedrew11/verdite2",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "DuckStation"
+        }
+      ]
     },
     {
       "id": 24109,
@@ -107,6 +261,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "61156",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "King's Field II",
           "source": "igdb",
@@ -115,6 +275,12 @@
         {
           "field": "original_name",
           "value": "King's Field II",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "King's Field II -- the hour of destiny is at hand... Your kingdom is once again under attack by the ruthless minions of evil. This time they have possessed King Alfred himself! As the King's son, Prince Lyle, you must bring forth the tide of change that will effect the universe from now until the end of time. The fate of the world is in your hands!\n\nRe-enter the realm of King's Field for the most explosive debut on the PlayStation yet... ASCII Entertainment went all out to provide a fully non-linear three dimensional world that even blows away the original! The intense action and powerful storytelling will keep you riveted for months!",
           "source": "igdb",
           "manual": false
         },
@@ -132,7 +298,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 9500,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado digital cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Salida HD estable."
+            }
+          ]
         },
         {
           "id": 61155,
@@ -140,7 +327,28 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 9500,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil y con guardado digital."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Emulación en Vita, pantalla nítida."
+            }
+          ]
         },
         {
           "id": 61156,
@@ -148,7 +356,35 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 9500,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles clásicos y tarjeta de memoria."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución y cargas de PS1."
+            }
+          ],
+          "codes": [
+            "SLPS-00069",
+            "SLPS-03579",
+            "SLPS-91003",
+            "SLPS-91423",
+            "SLUS-00255"
+          ]
         },
         {
           "id": 61157,
@@ -156,7 +392,28 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 9500,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil, con controles reducidos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -183,6 +440,12 @@
         {
           "field": "original_name",
           "value": "King's Field: Pilot Style",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "The three King's Field PS1 games form a trilogy relating the saga of a mythical country named Verdite. King's Field 1 (released only in Japan) was the first RPG for the Playstation console and King's Field 2 (released as \"King's Field\" in the US and EU) was the first ever Playstation RPG in the US and Europe.\n\nKing's Field: Pilot Style is a mini game whose story takes place in the period between King's Field 2 and King's Field 3. Pilot Style was given away as a promotional item at a game show in Japan and went relatively unnoticed. It only takes about an hour to complete, but it is an interesting tidbit in the King's Field world.",
           "source": "igdb",
           "manual": false
         },
@@ -229,6 +492,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "King's Field: The Ancient City, known in Japan as King's Field IV, is a medieval-themed first-person role playing video game produced by From Software for the PlayStation 2 in 2001. It is the fourth game in the King's Field series and the last one released for home consoles.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2001",
           "source": "igdb",
@@ -242,7 +511,10 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 9501,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-20318"
+          ]
         }
       ],
       "images": {
@@ -273,6 +545,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "King's Field: Additional I is a RPG video game published by FromSoftware released on July 20th, 2006 for the PlayStation Portable",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -286,9 +564,16 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 38465,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "UCAS-40100",
+            "ULJS-00070"
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5vc4.jpg"
+      }
     },
     {
       "id": 35256,
@@ -312,6 +597,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "King's Field: Additional II is an RPG video game published by FromSoftware and was released on August 24th, 2006, for the PlayStation Portable. It is a sequel to King's Field: Additional I.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -325,10 +616,56 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 38463,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "UCAS-40105"
+          ]
+        }
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5vc5.jpg"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": 813,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23748,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 24109,
+          "reason": "1996"
+        },
+        {
+          "position": 3,
+          "gameId": 25775,
+          "reason": "1996"
+        },
+        {
+          "position": 4,
+          "gameId": 32800,
+          "reason": "2001"
+        },
+        {
+          "position": 5,
+          "gameId": 35251,
+          "reason": "2006"
+        },
+        {
+          "position": 6,
+          "gameId": 35256,
+          "reason": "2006"
         }
       ]
     }
-  ],
-  "routes": []
+  ]
 }

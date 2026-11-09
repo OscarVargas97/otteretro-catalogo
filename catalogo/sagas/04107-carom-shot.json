@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "63753",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Backstreet Billiards",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Backstreet Billiards",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Backstreet Billiards is a unique pool simulation and offers you a variety of pool and carom modes: 8-Ball, 9-Ball, Rotation, Basic Pool, 141 Continuous, Bowlliards, Cutthroat, 5-9 and One Pocket. The special feature of this title is the story mode, which consists of an adventure in which you are on the search for your father's cue and can pick up various objects.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 94359,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Memory card virtual y sin discos."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Suavizado y cargas algo mejores."
+            }
+          ]
         },
         {
           "id": 63754,
@@ -56,7 +89,31 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 94359,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Depende de memory card física."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Calidad de PS1 sin mejoras."
+            }
+          ],
+          "codes": [
+            "SLUS-00659"
+          ]
         },
         {
           "id": 63755,
@@ -64,7 +121,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 94359,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Portátil con suspensión de partida."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Original emulado."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña."
+            }
+          ]
         }
       ],
       "images": {
@@ -95,6 +173,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Billiards, as the title suggests, is a billiards game. The game features a pocket gamemode and a trickshot gamemode. There is also a tutorial mode where the mechanics of the game are explained to the player.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1999",
           "source": "igdb",
@@ -108,7 +192,10 @@
           "kind": "original",
           "year": 1999,
           "igdbId": 94812,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLUS-01289"
+          ]
         }
       ],
       "images": {
@@ -152,7 +239,10 @@
           "kind": "original",
           "year": 1997,
           "igdbId": 334950,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLPS-00837"
+          ]
         }
       ],
       "images": {
@@ -160,5 +250,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1901,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 26582,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 25503,
+          "reason": "1998"
+        },
+        {
+          "position": 3,
+          "gameId": 25581,
+          "reason": "1999"
+        }
+      ]
+    }
+  ]
 }

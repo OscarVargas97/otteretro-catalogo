@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "3630",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Franklin's Great Adventures",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Franklin's Great Adventures",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Franklin the Turtle is off with his friends in the summer embarking on new adventures and meeting new friends. Franklin's Great Adventures is an adventure game with light puzzles.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 48044,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BFLE",
+            "BFLP"
+          ]
         },
         {
           "id": 3630,
@@ -56,7 +72,11 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 48044,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AFKP",
+            "AFLE"
+          ]
         }
       ],
       "images": {
@@ -85,6 +105,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Franklin the Turtle is a Miscellaneous game, developed by InterActive Vision Games and published by The Game Factory, which was released in 2005.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -98,7 +124,11 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 49400,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BFKE",
+            "BFKP"
+          ]
         }
       ],
       "images": {
@@ -115,6 +145,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "44662",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Franklin: Una sorpresa de cumpleaños",
           "source": "igdb",
@@ -123,6 +159,12 @@
         {
           "field": "original_name",
           "value": "Franklin: A Birthday Surprise",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Franklin wants to give his best friend, Bear, a surprise birthday party. Franklin is very busy getting ready for the party. He has to prepare the food, send out invitations, get the decorations and do some errands. He also has to get Bear to the party without giving away the secret. Franklin has to progress through 10 different levels to get ready for the party, solving problems and avoiding obstacles. Franklin finds it difficult to concentrate in his errands as his friends wants to play hide-and-seek.",
           "source": "igdb",
           "manual": false
         },
@@ -157,5 +199,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1470,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2325,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 1883,
+          "reason": "2006"
+        },
+        {
+          "position": 3,
+          "gameId": 16899,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

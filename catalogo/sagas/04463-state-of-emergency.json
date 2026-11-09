@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82075",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "State of Emergency",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "State of Emergency",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In State of Emergency, the player can choose from one of five different characters: Spanky, an ex-gang member; McNeil, a disgruntled ex-cop; Bull, a criminal in prison; Libra, a lawyer; and Phreak, an orphan. The player must complete a variety of missions, ranging from Rescue missions to \"Kill This Person\" missions to \"Blow Up This ...\" missions.\n\nThe player has many different weapons at his or her disposal, including shotguns, machine guns, pistols, knives, rocket launchers, tear gas launchers, flame-throwers, gatling guns, pepper spray, molotov cocktails and more. It is even possible to use street props, such as boxes, construction cones, benches, signposts, trashcans, and more. Breaking and entering stores allows the player to use the items there as a weapon, such as a DVD player or a television. There are many different enemies such as gang members, skinheads, and The Corporation forces.",
           "source": "igdb",
           "manual": false
         },
@@ -64,7 +76,13 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 6161,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50606",
+            "SLES-51046-P",
+            "SLUS-20214",
+            "SLUS-20214GH"
+          ]
         }
       ],
       "images": {
@@ -83,6 +101,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82404",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "State of Emergency 2",
           "source": "igdb",
@@ -91,6 +115,12 @@
         {
           "field": "original_name",
           "value": "State of Emergency 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "State of Emergency 2 (State of Emergency Revenge in Japan) is the sequel to State of Emergency. The game is available on PlayStation 2. It takes place ten years after the first game. It features more game modes and an enhanced engine. State of Emergency 2 was being developed by VIS Entertainment for Rockstar Games, but the title was continued by SouthPeak Interactive with developer DC Studios.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +138,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 6162,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido de PS2."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Guardado y trofeos más cómodos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Fiel al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Mejor resolución y estabilidad."
+            }
+          ]
         },
         {
           "id": 82405,
@@ -116,7 +167,34 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 6162,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de su época."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Resolución baja de PS2."
+            }
+          ],
+          "codes": [
+            "SLES-54089",
+            "SLES-54092",
+            "SLUS-20966",
+            "SLUS-28056"
+          ]
         }
       ],
       "images": {
@@ -126,5 +204,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3211,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 32818,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 33020,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

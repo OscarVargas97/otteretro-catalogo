@@ -48,7 +48,10 @@
           "kind": "original",
           "year": 2007,
           "igdbId": 80230,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AR8J"
+          ]
         }
       ],
       "images": {
@@ -65,6 +68,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "84335",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Code Geass: Lelouch of the Rebellion - Lost Colors",
           "source": "igdb",
@@ -73,6 +82,12 @@
         {
           "field": "original_name",
           "value": "Code Geass: Lelouch of the Rebellion - Lost Colors",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Code Geass: Lost Colors allows you to join the war for Japan, as seen in the anime. Will you join the Black Knights in revolution, or will you join the Britannian Army and fight against the radical elevens? Or will you abstain from the war altogether?",
           "source": "igdb",
           "manual": false
         },
@@ -100,8 +115,33 @@
           "igdbId": 66411,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/e34b71d271ff0259a09173787aad4b79.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/f558bdfd34ca36383c0e6b451a1a9654.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/90542f68447f9ed4fdc1ebc8c9c4614e.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2886,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17452,
+          "reason": "2007"
+        },
+        {
+          "position": 2,
+          "gameId": 34280,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

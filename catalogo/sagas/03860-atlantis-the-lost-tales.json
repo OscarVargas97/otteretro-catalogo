@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60333",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Atlantis. Los Cuentos Perdidos",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Atlantis: The Lost Tales",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Atlantis: The Lost Tales is a fantasy adventure computer game developed by Cryo Interactive and published by DreamCatcher Interactive, and released on September 30, 1997. The game is named after its initial and most important setting, Atlantis. It is the first in a Myst-like series, and is followed by Atlantis II (Beyond Atlantis outside Europe), Atlantis III: The New World (Beyond Atlantis II), Atlantis Evolution and The Secrets of Atlantis: The Sacred Legacy.",
           "source": "igdb",
           "manual": false
         },
@@ -56,14 +68,42 @@
           "kind": "original",
           "year": 1998,
           "igdbId": 2209,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-01291",
+            "SLES-01291-0",
+            "SLES-01605",
+            "SLES-01605-0",
+            "SLES-11291",
+            "SLES-11291-1",
+            "SLES-11605",
+            "SLES-11605-1",
+            "SLES-21291",
+            "SLES-21291-2",
+            "SLES-21605",
+            "SLES-21605-2"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/05d5b29c9a6391435c33e612801fd36a.png",
         "hero": "https://cdn2.steamgriddb.com/hero/004cbc35eed8995456a63ec720fe63c7.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/3bc34021d83bfb53cec7a5b12ea95753.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 15,
+          "platform": "pc",
+          "project": "atlantis-native",
+          "kind": "port",
+          "status": "complete",
+          "fullyPlayable": true,
+          "abandoned": false,
+          "link": "https://github.com/ripleyXLR8/atlantis-native",
+          "source": "recompendium",
+          "added": "2026-11-05"
+        }
+      ]
     },
     {
       "id": 32813,
@@ -75,6 +115,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82067",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Atlantis III: The New World",
           "source": "igdb",
@@ -83,6 +129,12 @@
         {
           "field": "original_name",
           "value": "Atlantis III: The New World",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Step back into the land of dreams and legends. Embark on an incredible adventure and become immersed in an extraordinary tale of intrigue and mystery. Assume the role of an archaeologist as you search for the existence of a metropolis built, according to myth and legend, by the ancient Egyptians. Your quest for the mysterious secrets that have eluded many will take you on a journey through worlds of unequalled beauty. Let wisdom be your guide as you encounter challenging puzzles along your path and travel through time and spirit.Discover and explore the stunning surroundings of the vast Sahara Desert, the wondrous icy plains of Siberia, and the fascinating lands of ancient Egypt. The greatest treasure of all time lies waiting to be discovered.",
           "source": "igdb",
           "manual": false
         },
@@ -108,7 +160,11 @@
           "kind": "original",
           "year": 2001,
           "igdbId": 11095,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50661",
+            "SLES-50757"
+          ]
         }
       ],
       "images": {
@@ -116,5 +172,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3058,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 23844,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 32813,
+          "reason": "2001"
+        }
+      ]
+    }
+  ]
 }

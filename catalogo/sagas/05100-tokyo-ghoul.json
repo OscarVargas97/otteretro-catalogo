@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Tokyo Ghoul: Jail is an adventure RPG video game based on the Tokyo Ghoul manga franchise. The game will allow you to freely travel and explore Tokyo's 23 wards. The RPG features a new protagonist designed by the original manga creator, Sui Ishida. Players can chat with characters and deepen their relationships with them which will also play a factor towards the ending of the game.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2015",
           "source": "igdb",
@@ -50,7 +56,12 @@
           "igdbId": 13195,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/74cc4b0c94b2b9199cb61ba8acea700f.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/73e01b0ea20d4555d17e1ec8744b7afd.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/bb6472a45af4df47e016a90284281308.png"
+      }
     },
     {
       "id": 43896,
@@ -62,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "103854",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Tokyo Ghoul:re Call to Exist",
           "source": "igdb",
@@ -70,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Tokyo Ghoul:re Call to Exist",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tokyo Ghoul: re Call to Exist is a third-person perspective survival action game set in the world of Tokyo Ghoul and Tokyo Ghoul: re.\nPlayers are divided into Ghouls, beings that take on the form of a human while eating humans, and Investigators, humans that battle Ghouls, and will utilize special attack means (weapons), including a Ghoul’s Kagune or an Investigator's Quinque, \"in order to survive\" in heated battles.\nOnline, the game supports battles with a large number of people, as well as co-op battles to survive with friends.",
           "source": "igdb",
           "manual": false
         },
@@ -98,8 +121,33 @@
           "steamAppId": 756530,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ab2e751f4efb3c876d5fc815493774d5.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/bacb8bb857a3f70fd8877d7a0e267deb.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/bf2fe6582ed9ead9161a3d6f6b1d6858.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3368,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 40930,
+          "reason": "2015"
+        },
+        {
+          "position": 2,
+          "gameId": 43896,
+          "reason": "2019"
+        }
+      ]
+    }
+  ]
 }

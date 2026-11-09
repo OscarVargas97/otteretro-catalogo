@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "101787",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Advanced Dungeons & Dragons: Pool of Radiance",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Advanced Dungeons & Dragons: Pool of Radiance",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Located on the northern shore of the Moonsea in the Forgotten Realms, the fabled city of Phlan had been overrun by monsters led by a mysterious leader. Your quest: discover the identity of this evil force and rid Phlan of its scourge.\n\nPool of Radiance represents the first in a line of software created by SSI in collaboration with TSR - the producer of the legendary Advanced Dungeons & Dragons fantasy role-playing system.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2015,
           "igdbId": 8732,
           "steamAppId": 1882370,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todas las reglas y el contenido del original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Ratón y teclado, guardado cómodo y combate táctico más ágil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el juego tal como se concibió."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona de forma estable en PCs actuales, con mejor resolución."
+            }
+          ]
         },
         {
           "id": 101788,
@@ -57,9 +90,35 @@
           "kind": "original",
           "year": 1992,
           "igdbId": 8732,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Versión de NES con contenido reducido y mecánicas simplificadas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Menús con mando lentos e incómodos para un RPG por reglas."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Mantiene la historia pero con cambios de reglas y presentación."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Cargas y combates lentos, gráficos limitados."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ce6312b6b65aac3f3b6ef0c7aa422e34.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/e0c105116a58b64c25ab0ccb23d485bf.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/4176bbc829b30c3001e403a8cf7b4e42.png"
+      }
     }
   ],
   "routes": []

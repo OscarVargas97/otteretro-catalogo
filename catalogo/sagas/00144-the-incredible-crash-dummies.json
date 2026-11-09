@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "330",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "The Incredible Crash Dummies",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "The Incredible Crash Dummies",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "At a time when computer games were being blamed for violence, bad language, epilepsy and everything else the 'moral majority' needed a scapegoat for, Virgin gave us: The Road Safety Game. Or not, as this is a standard platform game with a twist of questionable taste and purpose.",
           "source": "igdb",
           "manual": false
         },
@@ -70,7 +82,22 @@
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/ebc4dcd6245bdf46e4d6ffd89a1e3ec2.png",
         "logo": "https://cdn2.steamgriddb.com/logo/9b1fc5df81cadf52164c02bf92678f95.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 425,
+          "platform": "gb",
+          "project": "Crash-Dummies-Native",
+          "kind": "port",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/KarlLaberfeld/Crash-Dummies-Native",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "SameBoy"
+        }
+      ]
     }
   ],
   "routes": []

@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43434",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Rally Championship",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Rally Championship",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mud! Sweat! Gears!\nDirt! Snow! Rain!\n\n-25 officially licensed rally racing cars.\n-33 races in 6 prestigious rallies over 4 global regions.\n-4-Player simultaneous split-screen intense action.\n-Real car physics simulate all wheel & 2-wheel drive.\n-Extreme weather conditions test your driving skills.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2003,
           "igdbId": 4080,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "DL-DOL-GRAE-USA",
+            "DL-DOL-GRAP-UKV"
+          ]
         },
         {
           "id": 43435,
@@ -56,7 +72,11 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 4080,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-50763",
+            "SLPM-62257"
+          ]
         }
       ],
       "images": {
@@ -73,6 +93,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60552",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mobil 1 Rally Championship",
           "source": "igdb",
@@ -81,6 +107,12 @@
         {
           "field": "original_name",
           "value": "Mobil 1 Rally Championship",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mobil 1 Rally Championship (officially called Mobil 1 British Rally Championship, unofficially nicknamed Rally Championship 2000) is a rally video game which is part of the Rally Championship series. The game was released for Windows and PlayStation on 31 December 1999. It is developed by Magnetic Fields and published by Actualize. The PC version is notable for the stages being based around real-life Ordnance Survey maps. Magnetic Fields exists no more.\n\nAfter the Network-Q RAC Rally Championship (1996), it is a sequel to the International Rally Championship (1997). It features 22 cars and 36 tracks, drivable in two directions: Simulation and Arcade.",
           "source": "igdb",
           "manual": false
         },
@@ -106,7 +138,11 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 793,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-02574",
+            "SLUS-01103"
+          ]
         }
       ],
       "images": {
@@ -125,6 +161,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "62854",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "International Rally Championship",
           "source": "igdb",
@@ -133,6 +175,12 @@
         {
           "field": "original_name",
           "value": "International Rally Championship",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "International Rally Championship is a rally computer game which is part of the Rally Championship series. The game was released for Windows in 30 June 1997. It is developed by Magnetic Fields and published by Europress. Several different front covers were released for the game. The game is a sequel to the 1996 version of Network Q RAC Rally Championship. It would in turn be succeeded in 1999 by Mobil 1 Rally Championship.",
           "source": "igdb",
           "manual": false
         },
@@ -166,5 +214,30 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1780,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 25002,
+          "reason": "1997"
+        },
+        {
+          "position": 2,
+          "gameId": 23942,
+          "reason": "1999"
+        },
+        {
+          "position": 3,
+          "gameId": 16492,
+          "reason": "2002"
+        }
+      ]
+    }
+  ]
 }

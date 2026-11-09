@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "5502",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "ATV Quad Power Racing",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "ATV Quad Power Racing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "ATV Quad Power Racing is an all-terrain vehicle racing video game released in 2000 for the PlayStation and in 2002 for the Game Boy Advance. There are two sequels released: ATV Quad Power Racing 2 and ATV: Quad Frenzy.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,33 @@
           "kind": "original",
           "year": 2000,
           "igdbId": 4142,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Más pistas, modos y contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mejor manejo y control analógico."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "3D más completo, aunque con tecnología de la época."
+            }
+          ],
+          "codes": [
+            "SLES-02822",
+            "SLPM-86636",
+            "SLUS-01137"
+          ]
         },
         {
           "id": 5882,
@@ -56,7 +94,32 @@
           "kind": "original",
           "year": 2002,
           "igdbId": 248615,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "2",
+              "text": "Contenido reducido para portátil."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "Control más limitado."
+            },
+            {
+              "criterion": "original",
+              "value": "2",
+              "text": "Adaptación recortada."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Gráficos más simples y menor detalle."
+            }
+          ],
+          "codes": [
+            "AQRE",
+            "AQRP"
+          ]
         }
       ],
       "images": {
@@ -74,6 +137,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "43621",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "ATV Quad Power Racing 2",
           "source": "igdb",
@@ -82,6 +151,12 @@
         {
           "field": "original_name",
           "value": "ATV Quad Power Racing 2",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "ATV Quad Power Racing is the sequel to ATV Quad Power Racing on the Playstation, with many new features: Choose from 10 of the top professional riders from all over the world, including Dana Creech, Kory Ellis and Tim Farr. Race through 17 massive tracks and five environments, located in challenging countries throughout the world. Get dirty and physically fight with opponents to the finish line, letting them know that you're king off-road. Over-the-top controls and game physics, allowing players to pull huge air and amazingly fun power slides. More than 20 freestyle tricks to let riders express their wild side while tearing up the competition. Several multi-player modes of play, brings the action to players and their friends. Real-life in-game sponsors, adding to the realism of the game.",
           "source": "igdb",
           "manual": false
         },
@@ -149,5 +224,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2242,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 2846,
+          "reason": "2000"
+        },
+        {
+          "position": 2,
+          "gameId": 16568,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

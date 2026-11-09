@@ -41,6 +41,18 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Terraria is a 2D sandbox action-adventure game with platforming and role-playing elements. Players create a character and are placed in a procedurally generated world where they mine resources, craft equipment, build structures, and fight enemies. Progression is driven by defeating bosses that unlock new tiers of items, biomes, and challenges. The game features a class system based on equipped gear, NPC recruitment tied to achievements, and supports both single-player and multiplayer modes. Terraria also includes official modding support through the tModLoader framework.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary_es",
+          "value": "Terraria es un juego de acción y aventura 2D de tipo sandbox, con elementos de plataformas y rol. Los jugadores crean un personaje y se sitúan en un mundo generado proceduralmente, donde extraen recursos, fabrican equipo, construyen estructuras y luchan contra enemigos. La progresión se impulsa al derrotar a jefes, que desbloquean nuevos niveles de objetos, biomas y desafíos. El juego cuenta con un sistema de clases basado en el equipo equipado y con el reclutamiento de PNJ vinculado a logros, y admite los modos de un jugador y multijugador. Terraria también incluye soporte oficial para mods a través del marco tModLoader.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2011",
           "source": "igdb",
@@ -75,6 +87,11 @@
               "value": "2",
               "text": "Cargas largas, resolución baja."
             }
+          ],
+          "codes": [
+            "BLES-01938",
+            "BLJS-10222",
+            "BLUS-31537"
           ]
         },
         {
@@ -133,6 +150,11 @@
               "value": "2",
               "text": "Limitado por hardware."
             }
+          ],
+          "codes": [
+            "CTR-P-BTEE",
+            "CTR-P-BTEJ",
+            "CTR-P-BTEP"
           ]
         },
         {
@@ -221,6 +243,9 @@
               "value": "2",
               "text": "Limitado."
             }
+          ],
+          "codes": [
+            "PCSB-00405"
           ]
         },
         {
@@ -308,6 +333,9 @@
               "value": "3",
               "text": "Buena, algo menos fluida."
             }
+          ],
+          "codes": [
+            "0100E46006708000"
           ]
         }
       ],
@@ -315,7 +343,22 @@
         "cover": "https://cdn2.steamgriddb.com/grid/9ef7f9b81c2532880cfe5cf53f0c906d.png",
         "hero": "https://cdn2.steamgriddb.com/hero/32e8e6c03f3fa46eb672dc5680bff7da.png",
         "logo": "https://cdn2.steamgriddb.com/logo/af922fd52975aee0083fb8e0ba9c1d64.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 416,
+          "platform": "x360",
+          "project": "TerrariaOGC",
+          "kind": "decomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/PPrism/TerrariaOGC",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary"
+        }
+      ]
     }
   ],
   "routes": []

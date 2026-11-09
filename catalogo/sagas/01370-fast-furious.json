@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "8398",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fast & Furious: Showdown",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Fast & Furious: Showdown",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Strap in and get ready for an intense ride as you team up to take down a dangerous international gang that can only be stopped by you and the rest of the Fast & Furious crew.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,12 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 2032,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-01810",
+            "BLES-01861",
+            "BLUS-31153"
+          ]
         },
         {
           "id": 8397,
@@ -56,7 +73,11 @@
           "kind": "original",
           "year": 2013,
           "igdbId": 2032,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CTR-P-AFHE",
+            "CTR-P-AFHP"
+          ]
         },
         {
           "id": 8398,
@@ -99,6 +120,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "89870",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fast & Furious Arcade",
           "source": "igdb",
@@ -107,6 +134,12 @@
         {
           "field": "original_name",
           "value": "Fast & Furious Arcade",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Fast & Furious is the 4th game in The Fast and The Furious arcade racing series. The last time the franchise graced the scene was with Fast & Furious Super Cars. In this game, players race a licensed, modded out supercar against the computer or a real rival, earning in-game cash and completing track-specific missions to further upgrade your vehicle. With 8 licensed supercars and 6 courses which span the world over, this is a guaranteed hit for any arcade.",
           "source": "igdb",
           "manual": false
         },
@@ -142,7 +175,10 @@
           "igdbId": 360917,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co635u.jpg"
+      }
     },
     {
       "id": 44101,
@@ -154,6 +190,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "104438",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Fast & Furious: Crossroads",
           "source": "igdb",
@@ -162,6 +204,12 @@
         {
           "field": "original_name",
           "value": "Fast & Furious: Crossroads",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Gear up for an epic new chapter in the Fast & Furious saga with high-speed heists, cinematic nonstop action, and adrenaline-fueled stunts in exotic locations. Join longtime family and a tough new crew to hunt down an international crime syndicate and bring them to street justice.\n\nLess than 2 years after its release, it was announced that Fast & Furious: Crossroads would be delisted from all stores on 29th April 2022.",
           "source": "igdb",
           "manual": false
         },
@@ -198,8 +246,38 @@
           "igdbId": 127356,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/45fab23fe81f896ae4fc2353fb123f23.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/99cdc8ff87b6478b96b9c63e9ea2f7f7.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/4505ae676b5889b579d2d533d4a38642.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 1550,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4247,
+          "reason": "2013"
+        },
+        {
+          "position": 2,
+          "gameId": 44101,
+          "reason": "2020"
+        },
+        {
+          "position": 3,
+          "gameId": 36805,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

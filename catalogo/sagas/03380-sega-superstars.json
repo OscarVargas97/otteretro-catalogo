@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "47247",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Sega Superstars Tennis",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Sega Superstars Tennis",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Sega Superstars Tennis is a tennis video game developed by Sumo Digital, crossing over numerous Sega franchises, including Sonic the Hedgehog, Alex Kidd, Space Channel 5 and 12 more.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 47367,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "BLES-00232",
+            "BLUS-30123"
+          ]
         },
         {
           "id": 47245,
@@ -56,7 +72,11 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 47367,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "RVL-RT5E-USA",
+            "RVL-RT5P-EUR"
+          ]
         },
         {
           "id": 47246,
@@ -72,7 +92,12 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 47367,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-54946",
+            "SLES-54946-ANZ",
+            "SLUS-21733"
+          ]
         },
         {
           "id": 47630,
@@ -80,14 +105,35 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 255326,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "YT7E",
+            "YT7P"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/cc4e7c9bb2d268a78876927c0343ac5c.png",
         "hero": "https://cdn2.steamgriddb.com/hero/189e60cd90c91182c2c3d47323f7b39b.png",
         "logo": "https://cdn2.steamgriddb.com/logo/c9f2f917078bd2db12f23c3b413d9cba.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 1040,
+          "platform": "x360",
+          "project": "Sega-Superstars-Tennis-ReMatch",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/m1ndcrap/Sega-Superstars-Tennis-ReMatch",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary",
+          "emulatorLevel": 1
+        }
+      ]
     },
     {
       "id": 33746,
@@ -111,6 +157,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "There are a total of 12 different full games to play in the main mode of Sega Superstars:\n\nSonic the Hedgehog – As Sonic runs down a round tunnel, he follows the position of the player's hand. Using this method, the aim of the game is to gather rings and Chaos Emeralds in order to obtain the highest score at the end of the game. It is much like the Special Stage on Sonic the Hedgehog 2, Sonic Heroes, and especially Sonic Rush.\nSamba de Amigo – Players choose a song, and then must hit 6 different targets around the screen as the 'beat balls' reach them in time with the music. Posing with hands over 2 of the targets, or holding one position until a trail of beat balls is complete, may also be required from the player.\nChuChu Rocket! – Movement over a certain target on the screen will cause a bridge to raise, which the chu-chus then follow to the goal. The bridge also must be dropped at certain moments to prevent KapuKapus from destroying the score.\nPuyo Pop Fever – Differently colored puyos will fall from the top of the screen, and the player's body must be positioned to guide them into the corresponding pots and allow bombs to topple off the bottom of the screen.\nCrazy Taxi – Large movements and loud sounds must be undertaken to stop the Crazy Taxi and complete the level.\nSuper Monkey Ball – The player must move their arms into different positions in order to guide the monkey ball around obstacles and towards the goal, picking up as many bananas as possible along the way.\nNiGHTS Into Dreams – NiGHTS must be controlled and navigated through rings, collecting chips along the way, by raising your arms into a 'flying' position and adjusting them along the way.\nHouse of the Dead – A multitude of different zombies must be attacked and defeated by hitting them. Innocent people who occasionally appear must also be avoided.\nVirtua Striker – As footballs drop from the top of the screen, the aim is to head them into differently colored and scored balloons on the opposite side of the screen in order to obtain the highest score.\nVirtua Fighter – Standing to one side, players kick and punch the corresponding attack prompts on the screen in order to defeat the opponent. Block and counter prompts also appear, and must be reacted to accordingly.\nSpace Channel 5 – Different dance move combination must be remembered when shown by the Morolians, and then repeated in time to the music by hitting six different buttons on the screen.\nBilly Hatcher and the Giant Egg – By waving their hands over two different targets, players must move Billy and the egg around, and crush enemies and collect fruits along the way to the goal.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2004",
           "source": "igdb",
@@ -124,7 +176,14 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 43677,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SLES-52834",
+            "SLES-52885",
+            "SLPM-62554",
+            "SLPM-62559",
+            "SLUS-20999"
+          ]
         }
       ],
       "images": {
@@ -134,5 +193,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2923,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33746,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 18784,
+          "reason": "2008"
+        }
+      ]
+    }
+  ]
 }

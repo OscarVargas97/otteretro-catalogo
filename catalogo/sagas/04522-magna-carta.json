@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "83018",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Magna Carta: Tears of Blood",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Magna Carta: Tears of Blood",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Magna Carta: Tears of Blood is a Korean-made RPG in Japanese style, and a sequel to Phantom of Avalanche; it is set in the same world and has the same protagonist. The game's combat system is turn-based at core, but requires the player to press buttons in a rapid succession and with precise timing to execute attacks. The characters can store up energy to unleash a stronger attack later. Using the technique named Carta, they can also perform various special moves which are based on elemental affinities.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,33 @@
           "kind": "original",
           "year": 2004,
           "igdbId": 22595,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Historia completa con doblaje y opciones en inglés en su edición occidental."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Combate en tiempo real original, algo anticuado pero sólido."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Rendimiento estable para PS2 y tiempos de carga aceptables."
+            }
+          ],
+          "codes": [
+            "SLES-53483",
+            "SLUS-21221",
+            "SLUS-28053"
+          ]
         },
         {
           "id": 83333,
@@ -56,7 +94,28 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 196741,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Adaptación portátil coreana sin versión en inglés."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles adaptados a PSP, con menos botones y cámara más limitada."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Reinterpretación con cambios respecto al juego de PS2."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Pantalla pequeña y gráficos recortados respecto a PS2."
+            }
+          ]
         }
       ],
       "images": {
@@ -87,6 +146,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Magnacarta 2 introduces an original new storyline driven by intense themes of love, hate, politics, betrayal and the ultimate question of choosing one’s own fate. Players are immersed in the world of the Lanzheim Continent, a conflict-ridden land deeply divided by a fierce civil war.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2009",
           "source": "igdb",
@@ -102,8 +167,33 @@
           "igdbId": 7061,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/ef241c3eebf3aea7cca8db7bfed58d71.jpg",
+        "hero": "https://cdn2.steamgriddb.com/hero/4764b644dd708b39dfa52eba48c94fec.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/185c2de3f4ad8cfc7bc05dfe5de3e712.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3228,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33352,
+          "reason": "2004"
+        },
+        {
+          "position": 2,
+          "gameId": 48386,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

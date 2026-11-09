@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "22299",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Half Dead",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Half Dead",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Half dead is a multiplayer sci-fi game about a violent TV show. The players' goal is to survive in a network of rooms full of traps.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 2016,
           "igdbId": 33726,
           "steamAppId": 434730,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Teclado o mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor rendimiento."
+            }
+          ]
         },
         {
           "id": 22300,
@@ -57,7 +90,31 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 33726,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Mismo contenido."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Cómodo en portátil."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Port fiel."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Más limitado que PC."
+            }
+          ],
+          "codes": [
+            "0100552011612000"
+          ]
         }
       ],
       "images": {
@@ -76,6 +133,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "52429",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Half Dead 3",
           "source": "igdb",
@@ -84,6 +147,12 @@
         {
           "field": "original_name",
           "value": "Half Dead 3",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Become a member of the highly anticipated sequel of the co-op sci-fi show. Gather a team of four friends. The more partners the more chances to survive. Find your way out in a deadly new room complex filled with even more sophisticated traps.",
           "source": "igdb",
           "manual": false
         },
@@ -110,7 +179,10 @@
           "kind": "original",
           "year": 2022,
           "igdbId": 165106,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "01008FA019A6A000"
+          ]
         }
       ],
       "images": {
@@ -119,5 +191,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2636,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 9954,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 21301,
+          "reason": "2022"
+        }
+      ]
+    }
+  ]
 }

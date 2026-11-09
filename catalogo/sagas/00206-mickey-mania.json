@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Mickey Mouse gets a chance to go down memory lane and walk through the timeless adventures he has lived. Mickey Mania is a platformer where all the levels are based on Mickey's most famous cartoons. The levels range about 75 years, starting off with \"Steamboat Willie\" and going all the way to \"The Prince and the Pauper\".\n\nThe gameplay consists mostly of jumping and marble throwing at enemies, with an occasional puzzle element.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "1994",
           "source": "igdb",
@@ -67,6 +73,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "64957",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Mickey's Wild Adventure",
           "source": "igdb",
@@ -75,6 +87,12 @@
         {
           "field": "original_name",
           "value": "Mickey's Wild Adventure",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Mickey Mouse gets a chance to go down memory lane and walk through the timeless adventures he has lived. Mickey Mania is a platformer where all the levels are based on Mickey's most famous cartoons. The levels range about 75 years, starting off with \"Steamboat Willie\" and going all the way to \"The Prince and the Pauper\".\n\nThe gameplay consists mostly of jumping and marble throwing at enemies, with an occasional puzzle element.\n\nThe game is a remaster of Mickey Mania, building upon the Sega CD version of the game.",
           "source": "igdb",
           "manual": false
         },
@@ -100,7 +118,10 @@
           "kind": "remaster",
           "year": 1996,
           "igdbId": 256368,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "SCES-00163"
+          ]
         },
         {
           "id": 64959,
@@ -117,5 +138,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2089,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 337,
+          "reason": "1994"
+        },
+        {
+          "position": 2,
+          "gameId": 26191,
+          "reason": "1996"
+        }
+      ]
+    }
+  ]
 }

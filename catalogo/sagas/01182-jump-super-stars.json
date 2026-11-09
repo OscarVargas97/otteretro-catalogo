@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Jump Super Stars is a 2D fighting game for the Nintendo DS. It was developed by Ganbarion and published by Nintendo. The game was released on August 8, 2005 in Japan and accompanied the release of a red Nintendo DS. A sequel, Jump Ultimate Stars, was released in Japan on November 23, 2006.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -48,7 +54,10 @@
           "kind": "original",
           "year": 2005,
           "igdbId": 28835,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AJSJ"
+          ]
         }
       ],
       "images": {
@@ -79,6 +88,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Jump Ultimate Stars is a fighting video game developed by Ganbarion and published by Nintendo for the Nintendo DS. It is the sequel to Jump Super Stars. The game was released in Japan on November 23, 2006.\n\nThe game keeps many features from its predecessor, and adds many more. The game boasts 305 characters (56 of which are fully playable) from 41 different Shōnen manga series.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2006",
           "source": "igdb",
@@ -92,15 +107,54 @@
           "kind": "original",
           "year": 2006,
           "igdbId": 40263,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "AJUJ"
+          ]
         }
       ],
       "images": {
         "cover": "https://cdn2.steamgriddb.com/grid/7f099640438bb3b0d4421f3155d9ec51.png",
         "hero": "https://cdn2.steamgriddb.com/hero/8e3f7abc5de7f3c97a1207a55a38e6bd.png",
         "logo": "https://cdn2.steamgriddb.com/logo/197fabf83fac149373c2c7acdd53f0c2.png"
-      }
+      },
+      "ports": [
+        {
+          "id": 817,
+          "platform": "ds",
+          "project": "JUSDecomp",
+          "kind": "recomp",
+          "toolchain": "ndsrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/piuzera/JUSDecomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "melonDS"
+        }
+      ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2287,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3533,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 3596,
+          "reason": "2006"
+        }
+      ]
+    }
+  ]
 }

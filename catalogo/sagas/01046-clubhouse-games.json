@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "6040",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Daredemo Asobi Taizen",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Daredemo Asobi Taizen",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Original Japanese release of the game later released internationally as Clubhouse Games.",
           "source": "igdb",
           "manual": false
         },
@@ -85,6 +97,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Play and discover 51 board games, tabletop games, and more all in one package—Clubhouse Games: 51 Worldwide Classics. This diverse collection includes games from all over the world across multiple genres, from familiar favorites like Chess to international hits like Mancala that have been around for hundreds of years!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2020",
           "source": "igdb",
@@ -98,7 +116,10 @@
           "kind": "original",
           "year": 2020,
           "igdbId": 131961,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "010047700D540000"
+          ]
         }
       ],
       "images": {
@@ -116,6 +137,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "48157",
+          "source": "claude",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Chotto Asobi Taizen: Otegaru Trump",
@@ -142,7 +169,28 @@
           "kind": "original",
           "year": 2008,
           "igdbId": 408599,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Edición inicial (sin confirmar)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Juegos de cartas simples."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Sin diferencias conocidas."
+            }
+          ]
         },
         {
           "id": 45958,
@@ -150,7 +198,28 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 67714,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "3",
+              "text": "Reedición (sin confirmar)."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Igual que la anterior."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Sin diferencias conocidas."
+            }
+          ]
         },
         {
           "id": 48157,
@@ -158,7 +227,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 408609,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Última edición, posiblemente con más juegos."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Igual que las otras."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Cercana al original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Sin diferencias conocidas."
+            }
+          ]
         }
       ]
     },
@@ -171,6 +261,12 @@
       "popularity": 0,
       "iconic": false,
       "fields": [
+        {
+          "field": "best_version",
+          "value": "45659",
+          "source": "script",
+          "manual": false
+        },
         {
           "field": "name_es",
           "value": "Chotto Asobi Taizen: Jikkuri Trump",
@@ -227,6 +323,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "45665",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Chotto Asobi Taizen: Onajimi Table",
           "source": "igdb",
@@ -273,5 +375,40 @@
       ]
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 901,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3090,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 17562,
+          "reason": "2008"
+        },
+        {
+          "position": 3,
+          "gameId": 17567,
+          "reason": "2009"
+        },
+        {
+          "position": 4,
+          "gameId": 17573,
+          "reason": "2009"
+        },
+        {
+          "position": 5,
+          "gameId": 14210,
+          "reason": "2020"
+        }
+      ]
+    }
+  ]
 }

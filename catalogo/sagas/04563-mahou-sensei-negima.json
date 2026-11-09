@@ -35,6 +35,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The first PS2 game based on the manga of the same name. Very loosely corresponds to the events of the first three volumes of the manga.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -77,6 +83,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The second PS2 game based on the manga series of the same name. This visual novel features an original story revolving around a sports festival.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -92,8 +104,31 @@
           "igdbId": 59346,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5tx9.jpg"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3236,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33766,
+          "reason": "2005"
+        },
+        {
+          "position": 2,
+          "gameId": 33793,
+          "reason": "2005"
+        }
+      ]
+    }
+  ]
 }

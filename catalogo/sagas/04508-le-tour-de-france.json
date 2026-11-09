@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "82845",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Le Tour de France",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Le Tour de France",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Based on the famous race around France, Tour de France is a cycling game for PS2 and Xbox from Konami.",
           "source": "igdb",
           "manual": false
         },
@@ -85,6 +97,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Released by Konami in order to celebrate the 100th anniversary of the Tour de France.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2003",
           "source": "igdb",
@@ -106,5 +124,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 3222,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 33216,
+          "reason": "2002"
+        },
+        {
+          "position": 2,
+          "gameId": 33260,
+          "reason": "2003"
+        }
+      ]
+    }
+  ]
 }

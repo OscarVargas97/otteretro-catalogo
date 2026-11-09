@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "60099",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Cyberia",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Cyberia",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "In a future where global terrorists rule and mankind lives on the brink of destruction, the the ultimate doomsday device has just been discovered beneath the frozen wasteland of northern Russia. Code-named Cyberia, it was designed in an era of long forgotten peace by the most brilliant minds in nano technology. In an ancient world of hope, it was to be the ultimate protector of a new order. In the year 2027, it stands as the instrument of humanity's destruction.",
           "source": "igdb",
           "manual": false
         },
@@ -49,7 +61,28 @@
           "year": 1994,
           "igdbId": 4331,
           "steamAppId": 624080,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todas las secuencias y escenas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Controles de ratón e interfaz antiguos, pero precisos."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es el original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Imagen nítida en VGA, pero requiere DOSBox o ScummVM-like para correr hoy."
+            }
+          ]
         },
         {
           "id": 60100,
@@ -57,7 +90,34 @@
           "kind": "original",
           "year": 1996,
           "igdbId": 4331,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mantiene el juego, con secuencias de vídeo más comprimidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "2",
+              "text": "El control con mando resulta torpe para este tipo de juego."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port con cambios y pérdida de calidad visual."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Menor resolución y tiempos de carga notables."
+            }
+          ],
+          "codes": [
+            "SLES-00233",
+            "SLES-00272",
+            "SLPS-00218",
+            "SLUS-00053"
+          ]
         }
       ],
       "images": {

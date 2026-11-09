@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "99935",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Let It Die",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Let It Die",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "LET IT DIE is a hyper-violent hack-and-slash action experience with roguelike elements. Fight your way to the top in this free-to-play collaborative creation brought to you by Grasshopper Manufacture and GungHo Online Entertainment America.",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2016,
           "igdbId": 18854,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido base con actualizaciones; el servicio en línea puede variar."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Buen control con mando."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Lanzamiento original."
+            },
+            {
+              "criterion": "technical",
+              "value": "3",
+              "text": "Tasa de cuadros inestable en PS4."
+            }
+          ]
         },
         {
           "id": 99935,
@@ -57,9 +90,35 @@
           "year": 2018,
           "igdbId": 18854,
           "steamAppId": 794600,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Mismo contenido con actualizaciones."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "4",
+              "text": "Mando o teclado, opciones gráficas."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Misma experiencia."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Mejor resolución y fluidez."
+            }
+          ]
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/84ca5950143557353793f24e65e1af22.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/96bd45d5e935c252c3aa57552a94af25.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/5b438761383f433e622e3bd2236ca028.png"
+      }
     },
     {
       "id": 44460,
@@ -71,6 +130,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "105520",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Deathverse: Let It Die",
           "source": "igdb",
@@ -79,6 +144,12 @@
         {
           "field": "original_name",
           "value": "Deathverse: Let It Die",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Players take the stage in the world’s most popular survival reality TV show, set hundreds of years after the events of Let it Die. Armed with a robotic combat tool equipped with many deadly features, each player can use a variety of weapons, protective shields, and skills to create a character who can outlive the competition. They’ll also have to fend off monsters and assassins to stay alive in this gloriously gory arena.",
           "source": "igdb",
           "manual": false
         },
@@ -115,7 +186,11 @@
           "igdbId": 178297,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co45kf.jpg",
+        "logo": "https://cdn2.steamgriddb.com/logo/977b6a116be8b48863909592c646cc0e.png"
+      }
     },
     {
       "id": 47664,
@@ -127,6 +202,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "113170",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Let It Die: Inferno",
           "source": "igdb",
@@ -135,6 +216,12 @@
         {
           "field": "original_name",
           "value": "Let It Die: Inferno",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "LET IT DIE: INFERNO is a roguelite survival action game where you can engage in chaotic battles with grotesque monsters, enemy factions, and even other players.\n\nHumanity had just recovered from the unprecedented cataclysm known as “Earth Rage,” when suddenly, a massive chasm appeared—large enough to swallow an entire city whole.​ Someone began calling the hole “Hell Gate,” and lying at its depths is the “Eye of the Reaper,” a powerful crystal containing the energy to rule the world. Explore, survive, and extract from the Inferno, where stage layouts and item placements differ every match.\n\nIn this game, on top of player-versus-environment-versus-player—where players and enemies collide within Hell Gate—there is also a mode for battling exclusively with other players. We hope you enjoy this powered-up version of the LET IT DIE world!",
           "source": "igdb",
           "manual": false
         },
@@ -163,8 +250,36 @@
           "igdbId": 369994,
           "criteria": []
         }
-      ]
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/a5e455ff6fb70c94a3d56da2ea91b459.png"
+      }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2024,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 41931,
+          "reason": "2016"
+        },
+        {
+          "position": 2,
+          "gameId": 44460,
+          "reason": "2022"
+        },
+        {
+          "position": 3,
+          "gameId": 47664,
+          "reason": "2025"
+        }
+      ]
+    }
+  ]
 }

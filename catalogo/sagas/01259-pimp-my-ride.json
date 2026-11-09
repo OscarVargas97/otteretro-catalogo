@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "7504",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pimp My Ride Street Racing",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Pimp My Ride Street Racing",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pimp my Ride: Street Racing was the second game related to the automotive show.",
           "source": "igdb",
           "manual": false
         },
@@ -56,7 +68,11 @@
           "kind": "original",
           "year": 2009,
           "igdbId": 20904,
-          "criteria": []
+          "criteria": [],
+          "codes": [
+            "CUZE",
+            "CUZP"
+          ]
         }
       ],
       "images": {
@@ -73,6 +89,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "48869",
+          "source": "script",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Pimp My Ride",
           "source": "igdb",
@@ -81,6 +103,12 @@
         {
           "field": "original_name",
           "value": "Pimp My Ride",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Pimp My Ride is a simulation/racing game published by Activision. This game is based on the popular MTV show. It was released in 2006 for the Wii, Xbox 360, PlayStation Portable and PlayStation 2 consoles. In the game, players are challenged to pimp out their friends' cars by Xzibit, transforming something old and rusty into something worthy of displaying on the streets. Cars can be redesigned from bumper to bumper and it will be players’ responsibilities to capture the styles, likes and interests of their clients.",
           "source": "igdb",
           "manual": false
         },
@@ -132,5 +160,25 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 2303,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19601,
+          "reason": "2006"
+        },
+        {
+          "position": 2,
+          "gameId": 3826,
+          "reason": "2009"
+        }
+      ]
+    }
+  ]
 }

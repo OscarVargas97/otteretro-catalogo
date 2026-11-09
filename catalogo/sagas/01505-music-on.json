@@ -23,6 +23,12 @@
       "iconic": false,
       "fields": [
         {
+          "field": "best_version",
+          "value": "10033",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "name_es",
           "value": "Music on: Electric Guitar",
           "source": "igdb",
@@ -31,6 +37,12 @@
         {
           "field": "original_name",
           "value": "Music on: Electric Guitar",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "DsiWare",
           "source": "igdb",
           "manual": false
         },
@@ -48,7 +60,28 @@
           "kind": "original",
           "year": 2015,
           "igdbId": 79881,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido similar o igual."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Posible adaptación del control táctil."
+            },
+            {
+              "criterion": "original",
+              "value": "4",
+              "text": "Casi igual."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Pantalla algo mejor en 3DS."
+            }
+          ]
         },
         {
           "id": 10033,
@@ -56,7 +89,28 @@
           "kind": "original",
           "year": 2010,
           "igdbId": 79881,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Contenido completo original."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "Diseñado para el doble pantalla táctil de DS."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Original."
+            },
+            {
+              "criterion": "technical",
+              "value": "4",
+              "text": "Funciona bien en DS."
+            }
+          ]
         }
       ],
       "images": {
@@ -81,6 +135,12 @@
         {
           "field": "original_name",
           "value": "Music on: Acoustic Guitar",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "A music game for DSiWare",
           "source": "igdb",
           "manual": false
         },
@@ -127,6 +187,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "An electronic keyboard to take everywhere with you!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -165,6 +231,12 @@
         {
           "field": "original_name",
           "value": "Music On: Retro Keyboard",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "“One will be able to perform the soundtrack of the best classic video games how they originally sounded” - said Alberto Gonzalez, producer at Abylight and responsible for over 40 original video game soundtracks since 1989",
           "source": "igdb",
           "manual": false
         },
@@ -211,6 +283,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "Playing the piano has never been so easy and so much fun!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -253,6 +331,12 @@
           "manual": false
         },
         {
+          "field": "summary",
+          "value": "The definitive beatbox for creating songs and rhythms!",
+          "source": "igdb",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2010",
           "source": "igdb",
@@ -274,5 +358,45 @@
       }
     }
   ],
-  "routes": []
+  "routes": [
+    {
+      "id": 766,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 4875,
+          "reason": "2010"
+        },
+        {
+          "position": 2,
+          "gameId": 17769,
+          "reason": "2010"
+        },
+        {
+          "position": 3,
+          "gameId": 17998,
+          "reason": "2010"
+        },
+        {
+          "position": 4,
+          "gameId": 18008,
+          "reason": "2010"
+        },
+        {
+          "position": 5,
+          "gameId": 18051,
+          "reason": "2010"
+        },
+        {
+          "position": 6,
+          "gameId": 18073,
+          "reason": "2010"
+        }
+      ]
+    }
+  ]
 }
