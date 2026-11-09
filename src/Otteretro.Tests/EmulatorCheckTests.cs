@@ -158,4 +158,34 @@ public class EmulatorCheckTests : IAsyncDisposable
         using (var c = f.Db.Open())
             Assert.Equal(2, c.ExecuteScalar<int>("SELECT json_array_length(json, '$.downloads') FROM recipe WHERE id = 'mgba'"));
     }
+    [Fact]
+    public async Task AcceptingAForkCreatesItsExperimentalRecipeAndRejectingMarksItSeen()
+    {
+        await Done();
+        var page = ClaudeReview.Page(f.Db);
+        Assert.Equal(["a/mgba-good", "e/mgba-plus"], page.Forks.Select(x => x.Repo));
+        Assert.Equal(["cemu", "dolphin", "pcsx2", "ppsspp"], page.Notices.Select(x => x.Recipe));
+
+        var (found, error) = await EmulatorReview.Accept(f.Db, page.Forks[1].Id, null);
+        Assert.True(found);
+        Assert.Null(error);
+        using (var doc = JsonDocument.Parse(Recipes.Get(f.Db, "e-mgba-plus")!))
+        {
+            var r = doc.RootElement;
+            Assert.True(r.GetProperty("experimental").GetBoolean());
+            Assert.Equal("mgba", r.GetProperty("forkOf").GetString());
+            Assert.Equal("e/mgba-plus", r.GetProperty("updates").GetProperty("repo").GetString());
+            Assert.Equal("Pokémon Emerald", r.GetProperty("recommendedFor")[0].GetProperty("game").GetString());
+            Assert.False(r.TryGetProperty("downloads", out _));
+        }
+        Assert.False((await EmulatorReview.Accept(f.Db, page.Forks[1].Id, null)).Found); // ya resuelto
+
+        Assert.True(EmulatorReview.Dismiss(f.Db, page.Forks[0].Id));
+        Assert.True(EmulatorReview.Dismiss(f.Db, page.Notices[0].Id));
+        page = ClaudeReview.Page(f.Db);
+        Assert.Empty(page.Forks);
+        Assert.Equal(3, page.Notices.Count);
+        using var c = f.Db.Open();
+        Assert.Equal("rejected", c.ExecuteScalar<string>("SELECT result FROM fork_seen WHERE repo = 'github.com/a/mgba-good'"));
+    }
 }

@@ -247,7 +247,7 @@ public static class CatalogEndpoints
     static Igdb IgdbFor(Database db, AppSession s, SecretBox box) =>
         new(new ApiClient(db, IgdbImport.Handler), new Credentials(db, s.Config.MachineId, box), IgdbImport.Handler);
 
-    static string? GitHubToken(Database db, AppSession s, SecretBox box) =>
+    internal static string? GitHubToken(Database db, AppSession s, SecretBox box) =>
         new Credentials(db, s.Config.MachineId, box).Read("github.token") is { Length: > 0 } token ? token : null;
 
     static GitHubPublisher? Publisher(Database db, AppSession s, SecretBox box) =>

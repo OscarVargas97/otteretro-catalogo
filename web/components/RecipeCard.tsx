@@ -10,10 +10,10 @@ import type { RecipeInfo, RecipeStatus, RecipeTest } from "@/lib/types";
 /**
  * La tarjeta de una receta (#108, decisión 365), con Emuladores de Otteretro como modelo (369): nombre, consolas y tipo; la última
  * release y su fecha; si el patrón calza con ella; y si está publicada, cambiada sin publicar o es local. Sin estado todavía (se está
- * consultando), esa parte no se muestra. Los forks llegan con #98.
+ * consultando), esa parte no se muestra. Si es un fork lo dice (`forkOf`) y la original muestra los suyos (#98).
  */
-export function RecipeCard({ recipe, status, editing, busy, onEdit, onDuplicate }: {
-  recipe: RecipeInfo; status?: RecipeStatus; editing: boolean; busy: boolean; onEdit: () => void; onDuplicate: () => void;
+export function RecipeCard({ recipe, status, editing, busy, onEdit, onDuplicate, original, forks = [] }: {
+  recipe: RecipeInfo; original?: RecipeInfo; forks?: RecipeInfo[]; status?: RecipeStatus; editing: boolean; busy: boolean; onEdit: () => void; onDuplicate: () => void;
 }) {
   const t = useTranslations("emulators");
   const format = useFormatter();
@@ -33,6 +33,8 @@ export function RecipeCard({ recipe, status, editing, busy, onEdit, onDuplicate 
       <div className="version-row">
         <span className="grow">
           <h3 style={{ margin: 0 }}>{recipe.name || recipe.id}</h3>
+          {(original || recipe.forkOf) && <span className="small"><span className="ot-badge ot-badge-info">{t("card.forkOf", { name: original?.name || String(recipe.forkOf) })}</span></span>}
+          {forks.length > 0 && <span className="small muted" style={{ display: "block" }}>{t("card.forks", { names: forks.map((f) => f.name || f.id).join(", ") })}</span>}
           <span className="small muted">{t(`kinds.${recipe.kind as "emulator"}`)}{recipe.consoles.length > 0 && ` · ${recipe.consoles.map(consoleName).join(", ")}`}</span>
         </span>
         <span style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>

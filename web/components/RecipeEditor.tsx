@@ -15,7 +15,7 @@ type Path = (string | number)[];
 
 /** Qué campos de primer nivel van en cada sección (decisión 368). Uno del esquema que no esté en ninguna cae en Opciones. */
 const SECTIONS = {
-  basic: ["id", "kind", "name", "folder", "game", "parent", "link", "detect", "version", "license", "experimental", "devOnly"],
+  basic: ["id", "kind", "name", "folder", "game", "parent", "link", "detect", "version", "license", "experimental", "devOnly", "forkOf", "recommendedFor"],
   download: ["updates", "asset", "saveAs", "downloads"],
   consoles: ["consoles", "baseFor", "formats", "install"],
   perGame: ["perGame", "input", "saves", "config", "content", "gamePaths", "contentPaths"],

@@ -67,6 +67,14 @@
     "baseFor": { "type": "array", "items": { "type": "string" }, "description": "Las consolas de las que es el emulador base (decisión 291); salen de consoles" },
     "license": { "type": "string", "description": "Licencia (SPDX; LicenseRef-<nombre> si no tiene). Las no comerciales se pueden usar, pero no redistribuir modificadas" },
     "experimental": { "type": "boolean", "description": "Corre pocos juegos: se instala para probar (decisión 291, PS5)" },
+    "forkOf": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Fork de otro emulador: el id de la receta original (#98)" },
+    "recommendedFor": {
+      "type": "array", "description": "Los juegos para los que la comunidad recomienda este fork, con su fuente (#98)",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["game"],
+        "properties": { "game": { "type": "string" }, "source": { "type": "string" } }
+      }
+    },
     "devOnly": { "type": "boolean", "description": "Solo publica versiones de desarrollo: se instala la última con aviso (decisión 292)" },
     "updates": {
       "type": "object", "additionalProperties": false, "required": ["source"],

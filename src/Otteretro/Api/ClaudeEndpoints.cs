@@ -52,6 +52,17 @@ public static class ClaudeEndpoints
         api.MapPost("/review/{id:long}/reject", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : ClaudeReview.Reject(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
 
+        // Forks y avisos de recetas (#98): aceptar crea la receta del fork; rechazar o descartar lo marca resuelto.
+        api.MapPost("/review/{id:long}/fork/accept", async Task<Results<Ok<ReviewPage>, NotFound, BadRequest<ApiError>, Conflict<ApiError>>> (long id, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            var (found, error) = await EmulatorReview.Accept(db, id, GitHubToken(db, s, box), ct);
+            return !found ? TypedResults.NotFound() : error is not null ? TypedResults.BadRequest(error) : TypedResults.Ok(ClaudeReview.Page(db));
+        });
+
+        api.MapPost("/review/{id:long}/dismiss", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
+            Db(s) is not { } db ? NoData() : EmulatorReview.Dismiss(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
+
         api.MapPost("/learnings/{id:long}/undo", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : CatalogCleanup.Undo(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
         // «Corregir» (F2.12): deshace y deja la nota como regla de la saga para la próxima depuración.

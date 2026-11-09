@@ -11,7 +11,7 @@ using Otteretro.Data;
 namespace Otteretro.Catalog;
 
 /// <summary>Una receta en la lista de «Emuladores» (#95).</summary>
-public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false, string? Url = null);
+public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false, string? Url = null, string? ForkOf = null);
 /// <summary>Una receta entera, como JSON.</summary>
 public record RecipeText(string Json);
 /// <summary>
@@ -58,7 +58,7 @@ public static partial class Recipes
     {
         var r = JsonNode.Parse(json)!;
         return new RecipeInfo((string)r["id"]!, (string?)r["name"] ?? "", (string?)r["kind"] ?? "", (string?)r["folder"] ?? "",
-            r["consoles"]?.AsArray().Select(x => (string)x!).ToList() ?? [], local, RepoUrl(r));
+            r["consoles"]?.AsArray().Select(x => (string)x!).ToList() ?? [], local, RepoUrl(r), (string?)r["forkOf"]);
     }
 
     static string? RepoUrl(JsonNode r) => (string?)r["updates"]?["repo"] is { } repo

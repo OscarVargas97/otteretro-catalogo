@@ -2,7 +2,7 @@
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useConsoleName } from "@/components/Catalog";
 import { RecipeAdd } from "@/components/RecipeAdd";
 import { RecipeCard } from "@/components/RecipeCard";
@@ -39,6 +39,13 @@ export default function Emulators() {
     onSuccess: (r) => setEditing({ recipe: JSON.parse(r.json), create: false }),
   });
 
+  // Desde un aviso de Revisar (#98): /emulators/?edit=<id> abre el editor de esa receta.
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get("edit");
+    if (id) open.mutate(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const duplicate = useMutation({
     mutationFn: (id: string) => request<RecipeText>(`/api/recipes/${encodeURIComponent(id)}`),
     onSuccess: (r) => {
@@ -48,6 +55,7 @@ export default function Emulators() {
   });
 
   // Las de la pestaña, por su primera consola (la tarjeta nombra las demás); las sin consola van al final.
+  const byId = new Map((recipes.data ?? []).map((r) => [r.id, r]));
   const groups = new Map<string, RecipeInfo[]>();
   for (const r of (recipes.data ?? []).filter((r) => r.kind === kind)) groups.set(r.consoles[0] ?? "", [...(groups.get(r.consoles[0] ?? "") ?? []), r]);
   const title = (key: string) => key ? consoleName(key) : t("noConsole");
@@ -75,7 +83,7 @@ export default function Emulators() {
           <div key={key} style={{ display: "grid", gap: 8 }}>
             <h2 className="console-group">{title(key)}</h2>
             {list.map((r) => (
-              <RecipeCard key={r.id} recipe={r} status={statusOf.get(r.id)} editing={editing?.recipe.id === r.id} busy={open.isPending || duplicate.isPending} onEdit={() => open.mutate(r.id)} onDuplicate={() => duplicate.mutate(r.id)} />
+              <RecipeCard key={r.id} recipe={r} original={byId.get(String(r.forkOf))} forks={recipes.data?.filter((f) => f.forkOf === r.id)} status={statusOf.get(r.id)} editing={editing?.recipe.id === r.id} busy={open.isPending || duplicate.isPending} onEdit={() => open.mutate(r.id)} onDuplicate={() => duplicate.mutate(r.id)} />
             ))}
           </div>
         ))}

@@ -406,6 +406,7 @@
       "edit": "Editar", "duplicate": "Duplicar", "openRepo": "Abrir el repo", "discard": "Descartar cambios", "test": "Probar la descarga", "testing": "Descargando…",
       "discardConfirm": "¿Descartar lo no publicado de {id}? Vuelve a la de main; si no está en main, se borra de este catálogo.",
       "testResult": "{file} · {size} MB · versión {tag}", "testFound": "Detecta {detect} dentro del archivo.", "testNotFound": "No se encontró {detect} dentro del archivo.", "testUnknown": "No se puede mirar dentro de este archivo; se esperaba {detect}.", "copySuffix": "-copia", "copyName": "{name} (copia)", "latest": "Última release", "matches": "Calza", "noMatch": "No calza",
+      "forkOf": "Fork de {name}", "forks": "Forks: {names}",
       "noMatchHint": "El patrón del archivo no calza con ningún archivo de la última release.",
       "published": "Publicada", "changed": "Sin publicar", "changedHint": "Cambió y todavía no está en main: Publicar la lleva al PR."
     },
@@ -442,6 +443,7 @@
       "consoles": "Consolas", "baseFor": "Base de", "formats": "Formatos", "saves": "Partidas", "config": "Configuración", "content": "Contenido",
       "version": "Versión", "versionValue": "Valor de la versión", "source": "Fuente", "repo": "Repo", "host": "Servidor",
       "dev": "Versión de desarrollo", "experimental": "Experimental", "devOnly": "Solo desarrollo",
+      "forkOf": "Fork de (id de la original)", "recommendedFor": "Recomendado para",
       "portable": "Portable", "gamePaths": "Rutas de juegos", "settings": "Valores", "perGame": "Por juego", "install": "Instalar contenido", "options": "Opciones",
       "optionsUpTo": "Opciones revisadas hasta", "optionFlags": "Formato de opciones", "contentPaths": "Rutas de contenido", "input": "Mandos", "downloads": "Descargas", "updates": "Actualizaciones",
       "type": "Tipo", "path": "Ruta", "from": "Desde", "system": "Sistema", "file": "Archivo", "format": "Formato",
@@ -474,6 +476,9 @@
     },
     "http": "La app respondió con un error ({status}).",
     "unknown": "Algo salió mal ({code}).",
+    "review": {
+      "noOriginal": "La receta original {recipe} ya no existe."
+    },
     "recipes": {
       "badJson": "La receta no es un JSON válido: {detail}",
       "schema": "La receta no cumple el esquema: {problems}",
@@ -1252,7 +1257,28 @@
       "pending": "Por aprobar ({count})",
       "doubtful": "Dudosas ({count})",
       "unidentified": "Sin identificar ({count})",
-      "learnings": "Aprendizajes ({count})"
+      "learnings": "Aprendizajes ({count})",
+      "forks": "Forks ({count})",
+      "recipes": "Recetas ({count})"
+    },
+    "forksEmptyTitle": "Sin forks por revisar",
+    "forksEmptyText": "La tarea Emuladores deja aquí los forks que pasaron los filtros.",
+    "recipesEmptyTitle": "Sin avisos de recetas",
+    "recipesEmptyText": "La tarea Emuladores avisa aquí si el patrón de una receta no calza o su repo cambió.",
+    "fork": {
+      "of": "Fork de {recipe}", "stars": "{count} estrellas", "release": "Release {tag} con {file}", "isFork": "Fork en GitHub", "found": "Encontrado por {how}",
+      "recommended": "Recomendado para", "noRecommended": "Sin juegos recomendados todavía.", "claude": "Claude: {reason}",
+      "accept": "Aceptar y crear la receta", "reject": "Rechazar", "openRepo": "Abrir el repo"
+    },
+    "notice": {
+      "title": "{recipe}",
+      "gone": "El repo {repo} ya no existe.",
+      "moved": "El repo {repo} se movió a {to}.",
+      "archived": "El repo {repo} está archivado.",
+      "noRelease": "El repo {repo} no tiene releases.",
+      "noAsset": "Ningún archivo de la release {tag} calza con {pattern}.",
+      "proposed": "Patrón propuesto: {pattern}",
+      "openEditor": "Abrir el editor", "dismiss": "Descartar el aviso"
     },
     "pendingEmptyTitle": "Nada por aprobar",
     "pendingEmptyText": "Cuando Claude prepare rutas, lo icónico o la mejor versión de una saga, aparecerán aquí para que los apruebes.",

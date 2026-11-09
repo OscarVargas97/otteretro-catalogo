@@ -3077,6 +3077,121 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/review/{id}/fork/accept": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: number;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ReviewPage"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/review/{id}/dismiss": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: number;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ReviewPage"];
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/learnings/{id}/undo": {
         parameters: {
             query?: never;
@@ -4420,6 +4535,27 @@ export interface components {
         FolderRequest: {
             path: string;
         };
+        ForkCandidate: {
+            /** Format: int64 */
+            id: number | string;
+            repo: string;
+            url: string;
+            recipe: string;
+            recipeName: null | string;
+            foundBy: string;
+            reason: null | string;
+            /** Format: int32 */
+            stars: number | string;
+            tag: string;
+            publishedAt: null | string;
+            file: string;
+            isFork: boolean;
+            recommendedFor: components["schemas"]["ForkGame"][];
+        };
+        ForkGame: {
+            game: string;
+            source: null | string;
+        };
         GameCard: {
             /** Format: int64 */
             id: number | string;
@@ -4606,6 +4742,19 @@ export interface components {
             /** @default false */
             local: boolean;
             url?: null | string;
+            forkOf?: null | string;
+        };
+        RecipeNotice: {
+            /** Format: int64 */
+            id: number | string;
+            recipe: string;
+            recipeName: null | string;
+            reason: string;
+            repo: string;
+            to: null | string;
+            tag: null | string;
+            pattern: null | string;
+            proposed: null | string;
         };
         RecipeStatus: {
             id: string;
@@ -4659,6 +4808,8 @@ export interface components {
             /** Format: int32 */
             activeLearnings: number | string;
             files: components["schemas"]["FileReview"][];
+            forks: components["schemas"]["ForkCandidate"][];
+            notices: components["schemas"]["RecipeNotice"][];
         };
         Route: {
             kind: string;

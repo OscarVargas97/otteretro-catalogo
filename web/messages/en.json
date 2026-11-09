@@ -406,6 +406,7 @@
       "edit": "Edit", "duplicate": "Duplicate", "openRepo": "Open the repo", "discard": "Discard changes", "test": "Test the download", "testing": "Downloading…",
       "discardConfirm": "Discard what is unpublished in {id}? It goes back to main's; if it is not in main, it is deleted from this catalog.",
       "testResult": "{file} · {size} MB · version {tag}", "testFound": "Detects {detect} inside the file.", "testNotFound": "{detect} was not found inside the file.", "testUnknown": "Cannot look inside this file; {detect} was expected.", "copySuffix": "-copy", "copyName": "{name} (copy)", "latest": "Latest release", "matches": "Matches", "noMatch": "No match",
+      "forkOf": "Fork of {name}", "forks": "Forks: {names}",
       "noMatchHint": "The file pattern matches no file in the latest release.",
       "published": "Published", "changed": "Unpublished", "changedHint": "Changed and not in main yet: Publish takes it to the PR."
     },
@@ -442,6 +443,7 @@
       "consoles": "Consoles", "baseFor": "Base for", "formats": "Formats", "saves": "Saves", "config": "Config", "content": "Content",
       "version": "Version", "versionValue": "Version value", "source": "Source", "repo": "Repo", "host": "Server",
       "dev": "Development build", "experimental": "Experimental", "devOnly": "Development only",
+      "forkOf": "Fork of (original id)", "recommendedFor": "Recommended for",
       "portable": "Portable", "gamePaths": "Game paths", "settings": "Settings", "perGame": "Per game", "install": "Install content", "options": "Options",
       "optionsUpTo": "Options checked up to", "optionFlags": "Options format", "contentPaths": "Content paths", "input": "Controllers", "downloads": "Downloads", "updates": "Updates",
       "type": "Type", "path": "Path", "from": "From", "system": "System", "file": "File", "format": "Format",
@@ -474,6 +476,9 @@
     },
     "http": "The app responded with an error ({status}).",
     "unknown": "Something went wrong ({code}).",
+    "review": {
+      "noOriginal": "The original recipe {recipe} no longer exists."
+    },
     "recipes": {
       "badJson": "The recipe is not valid JSON: {detail}",
       "schema": "The recipe does not match the schema: {problems}",
@@ -1252,7 +1257,28 @@
       "pending": "To approve ({count})",
       "doubtful": "Doubtful ({count})",
       "unidentified": "Unidentified ({count})",
-      "learnings": "Learnings ({count})"
+      "learnings": "Learnings ({count})",
+      "forks": "Forks ({count})",
+      "recipes": "Recipes ({count})"
+    },
+    "forksEmptyTitle": "No forks to review",
+    "forksEmptyText": "The Emulators task leaves here the forks that passed the filters.",
+    "recipesEmptyTitle": "No recipe notices",
+    "recipesEmptyText": "The Emulators task warns here when a recipe's pattern no longer matches or its repo changed.",
+    "fork": {
+      "of": "Fork of {recipe}", "stars": "{count} stars", "release": "Release {tag} with {file}", "isFork": "GitHub fork", "found": "Found by {how}",
+      "recommended": "Recommended for", "noRecommended": "No recommended games yet.", "claude": "Claude: {reason}",
+      "accept": "Accept and create the recipe", "reject": "Reject", "openRepo": "Open the repo"
+    },
+    "notice": {
+      "title": "{recipe}",
+      "gone": "The repo {repo} no longer exists.",
+      "moved": "The repo {repo} moved to {to}.",
+      "archived": "The repo {repo} is archived.",
+      "noRelease": "The repo {repo} has no releases.",
+      "noAsset": "No file in release {tag} matches {pattern}.",
+      "proposed": "Suggested pattern: {pattern}",
+      "openEditor": "Open the editor", "dismiss": "Dismiss the notice"
     },
     "pendingEmptyTitle": "Nothing to approve",
     "pendingEmptyText": "When Claude prepares a saga's routes, what's iconic or the best version, they'll show up here for you to approve.",
