@@ -32,6 +32,11 @@ export function TaskSettings() {
       ({ ...d, ...Object.fromEntries(Object.entries(body).filter(([, v]) => v != null)) })),
     onSuccess: done,
   });
+  // «Probar ahora» (#117): si el límite ya se reinició, sale de la pausa y las tareas siguen.
+  const retry = useMutation({
+    mutationFn: () => request<ClaudeStatus>("/api/claude/retry", { method: "POST" }),
+    onSuccess: (data) => { done(data); cache.invalidateQueries({ queryKey: ["tasks"] }); },
+  });
 
   if (!status.data) return status.isError ? <p className="error" role="alert">{describe(status.error)}</p> : null;
   const s = status.data;
@@ -78,6 +83,9 @@ export function TaskSettings() {
             : task.resumeAt ? t("taskWaiting", { id: Number(task.id), at: at(task.resumeAt) })
               : t("taskQueued", { id: Number(task.id) })}</>}
         </p>
+        {s.pausedUntil && <button className="ot-btn ot-btn-sm" type="button" disabled={retry.isPending} onClick={() => retry.mutate()}>{t("retry")}</button>}
+        {retry.isSuccess && <p className="small" role="status" style={{ margin: 0 }}>{retry.data.pausedUntil ? t("stillLimited") : t("limitReset")}</p>}
+        {retry.error && <p className="error small" role="alert">{describe(retry.error)}</p>}
       </section>
 
       <TaskGroup claude />

@@ -62,6 +62,8 @@ public sealed class TaskQueue(AppSession session, Events events, FolderMoveServi
     /// </summary>
     public static bool OnOpen { get; set; } = Environment.GetEnvironmentVariable("OTTERETRO_E2E") is null;
 
+    /// <summary>Mientras dure la pausa por el límite, cada cuánto prueba la cola si ya se reinició (#117).</summary>
+    public static TimeSpan ProbeEvery { get; set; } = TimeSpan.FromMinutes(15);
 
     /// <summary>
     /// Espera antes de cada reintento de un error pasajero (#59): se corta la red, vence el tiempo, o la fuente responde 429 o 5xx.
@@ -157,6 +159,22 @@ public sealed class TaskQueue(AppSession session, Events events, FolderMoveServi
         return true;
     }
 
+    /// <summary>
+    /// «Probar ahora» y la prueba de cada 15 minutos (#117): si el límite de Claude se reinició, las tareas que lo esperaban
+    /// siguen ya desde su punto de control. False si sigue el límite (la pausa queda con la hora nueva).
+    /// </summary>
+    public async Task<bool> RetryClaude(Database db, CancellationToken ct, bool notify = false)
+    {
+        if (await Claude.ClaudeBudget.Retry(db, ct) is not { } ids) return false;
+        foreach (var id in ids)
+        {
+            Log(db, id, ApiError.Of("tasks.log.limitReset"));
+            Publish(db, id);
+        }
+        if (notify) Notify.LimitReset(session.Config.EffectiveLanguage);
+        return true;
+    }
+
     bool Stop(Database db, long id, string status, string[] from)
     {
         lock (gate)
@@ -179,6 +197,7 @@ public sealed class TaskQueue(AppSession session, Events events, FolderMoveServi
     protected override async Task ExecuteAsync(CancellationToken ct)
     {
         string? recovered = null;
+        DateTime? probeAt = null;
         while (!ct.IsCancellationRequested)
         {
             try
@@ -193,6 +212,14 @@ public sealed class TaskQueue(AppSession session, Events events, FolderMoveServi
                         recovered = db.FilePath;
                     }
                     if (AutoClaude) Claude.ClaudeBudget.AutoStart(db);
+                    // La pausa por el límite se prueba sola cada 15 minutos (#117), desde que empieza.
+                    if (!AutoClaude || !Claude.ClaudeBudget.IsPaused(db)) probeAt = null;
+                    else if (probeAt is null) probeAt = Claude.ClaudeBudget.UtcNow() + ProbeEvery;
+                    else if (Claude.ClaudeBudget.UtcNow() >= probeAt)
+                    {
+                        probeAt = null;
+                        await RetryClaude(db, ct, notify: true);
+                    }
                     StartPending(db, ct);
                 }
             }
@@ -403,6 +430,10 @@ static class Notify
         (_, false) => "Terminó una tarea en segundo plano. Mírala en el panel de tareas.",
         (_, true) => "Falló una tarea en segundo plano. Mírala en el panel de tareas.",
     });
+
+    public static void LimitReset(string language) => Send(language == "en"
+        ? "Claude's limit reset: the tasks continue."
+        : "El límite de Claude se reinició: las tareas siguen.");
 
     static void Send(string text)
     {

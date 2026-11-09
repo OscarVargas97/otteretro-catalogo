@@ -113,6 +113,44 @@ public static partial class ClaudeBudget
         return new ClaudePausedException(until, ApiError.Of("tasks.claude.limit", ("at", until.ToString("O"))));
     }
 
+    /// <summary>Lo que se pide en la prueba del límite: una palabra.</summary>
+    public record Probe(string Word);
+
+    /// <summary>Si espera por el límite de la suscripción (la cola prueba cada 15 minutos mientras tanto, #117).</summary>
+    public static bool IsPaused(Database db)
+    {
+        using var c = db.Open();
+        return Date(Settings(c), PausedUntil) > UtcNow();
+    }
+
+    /// <summary>
+    /// «Probar ahora» (#117): saca la pausa por el límite y hace una llamada mínima. Si responde, las tareas que esperaban el
+    /// límite vuelven a la cola ya (devuelve sus ids); si sigue el límite, <see cref="LimitReached"/> guarda la hora nueva y
+    /// devuelve null. Otro fallo deja la pausa como estaba y sigue de largo. Queda en el registro de uso como `retry`.
+    /// </summary>
+    public static async Task<List<long>?> Retry(Database db, CancellationToken ct)
+    {
+        string? saved;
+        using (var c = db.Open())
+        {
+            saved = c.ExecuteScalar<string?>("SELECT value FROM setting WHERE machine_id = '' AND name = @PausedUntil", new { PausedUntil });
+            c.Execute("DELETE FROM setting WHERE machine_id = '' AND name = @PausedUntil", new { PausedUntil });
+        }
+        try
+        {
+            await ClaudeRunner.Run<Probe>(db, null, "retry", "Responde solo con la palabra ok.", new { }, ct, "haiku", probe: true);
+        }
+        catch (ClaudePausedException) { return null; }
+        catch when (saved is not null)
+        {
+            using var c = db.Open();
+            Set(c, PausedUntil, saved);
+            throw;
+        }
+        using (var c = db.Open())
+            return c.Query<long>($"UPDATE task SET resume_at = NULL, detail = NULL WHERE {Pending} AND status = 'queued' AND detail LIKE '%tasks.claude.limit%' RETURNING id").ToList();
+    }
+
     /// <summary>Ajustes › Claude (F2.6): horario, tope de día, si está en pausa y las últimas llamadas.</summary>
     public static ClaudeStatus Status(Database db)
     {

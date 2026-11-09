@@ -115,6 +115,15 @@ public static class ClaudeEndpoints
             return ClaudeBudget.Save(db, request) is { } error ? TypedResults.BadRequest(error) : TypedResults.Ok(ClaudeBudget.Status(db));
         });
 
+        // «Probar ahora» (#117): si el límite ya se reinició, sale de la pausa y las tareas que esperaban siguen.
+        api.MapPost("/claude/retry", async Task<Results<Ok<ClaudeStatus>, BadRequest<ApiError>, Conflict<ApiError>>> (AppSession s, TaskQueue q, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            try { await q.RetryClaude(db, ct); }
+            catch (TaskException e) { return TypedResults.BadRequest(e.Error); }
+            return TypedResults.Ok(ClaudeBudget.Status(db));
+        });
+
         api.MapPost("/claude/run-now", Results<Ok<ClaudeStatus>, Conflict<ApiError>> (AppSession s) =>
         {
             if (Db(s) is not { } db) return NoData();
