@@ -63,9 +63,17 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         return text.Length == 0 ? null : JsonNode.Parse(text);
     }
 
-    Task<JsonNode?> Get(string path, CancellationToken ct) => Send(HttpMethod.Get, path, null, ct);
+    internal Task<JsonNode?> Get(string path, CancellationToken ct) => Send(HttpMethod.Get, path, null, ct);
 
-    async Task<JsonNode> Must(HttpMethod method, string path, object? body, CancellationToken ct) =>
+    /// <summary>Un archivo entero (#104: los de una release); la dirección viene de la propia API de GitHub.</summary>
+    internal async Task<byte[]> Bytes(string url, CancellationToken ct)
+    {
+        using var response = await http.SendAsync(Request(HttpMethod.Get, url), ct);
+        if (!response.IsSuccessStatusCode) throw new TaskException(ApiError.Of("publish.failed", ("status", ((int)response.StatusCode).ToString())));
+        return await response.Content.ReadAsByteArrayAsync(ct);
+    }
+
+    internal async Task<JsonNode> Must(HttpMethod method, string path, object? body, CancellationToken ct) =>
         await Send(method, path, body, ct) ?? throw new TaskException(ApiError.Of("publish.failed", ("status", "404")));
 
     /// <summary>La carpeta de recetas de Otteretro (#96); null usa la de su carpeta de datos. Las pruebas la fijan.</summary>
@@ -260,7 +268,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     /// Publicar también lo toma, porque lee los archivos del plan.
     /// </summary>
     // ponytail: un solo candado para todo el programa; por carpeta de trabajo si alguna vez hay más de un catálogo abierto.
-    static readonly SemaphoreSlim Gate = new(1, 1);
+    internal static readonly SemaphoreSlim Gate = new(1, 1);
 
     /// <summary>
     /// Cambia cuando se escribe la base: SQLite toca el archivo o su -wal.
@@ -342,7 +350,7 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
     public string Work { get; init; } = Path.Combine(Path.GetTempPath(), "otteretro-publicar");
 
     /// <summary>La carpeta `catalogo` de main en ese commit; se baja una vez por commit.</summary>
-    async Task<string> MainFolder(string head, CancellationToken ct)
+    internal async Task<string> MainFolder(string head, CancellationToken ct)
     {
         var folder = Path.Combine(Work, "main-" + head);
         if (Directory.Exists(folder)) return folder;

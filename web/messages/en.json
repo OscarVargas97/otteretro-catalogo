@@ -712,6 +712,11 @@
       "nothingChanged": "There's nothing to publish.",
       "invalid": "What would be published doesn't pass validation ({count} errors).",
       "conflict": "Changed on GitHub: {files}. It isn't published so as not to overwrite it.",
+      "pendingConflicts": "{count} conflicts from the previous version are still waiting for a choice: resolve them before applying another.",
+      "noBase": "It isn't known which version the local catalog starts from: set it with “catalogo base <sha>”.",
+      "noRelease": "Version {tag} isn't there or lacks its published database.",
+      "badDownload": "The database of version {tag} doesn't match its manifest: it isn't applied.",
+      "mergeFailed": "Version {tag} couldn't be merged without breaking the catalog; nothing was changed.",
       "change": {
         "replaced": "{count} games or versions become replaced",
         "sagaAdded": "New saga: {name}",
