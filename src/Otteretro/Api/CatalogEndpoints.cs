@@ -142,6 +142,16 @@ public static class CatalogEndpoints
             Db(s) is { } db ? TypedResults.Ok(Recipes.List(db)) : NoData());
         api.MapGet("/recipes/{id}", Results<Ok<RecipeText>, NotFound, Conflict<ApiError>> (string id, AppSession s) =>
             Db(s) is not { } db ? NoData() : Recipes.Get(db, id) is { } json ? TypedResults.Ok(new RecipeText(json)) : TypedResults.NotFound());
+        // Lo de cada tarjeta (#108): última release, si el patrón calza y si está publicada. Sin la clave o sin red, main queda sin leer.
+        api.MapGet("/recipes/status", async Task<Results<Ok<List<RecipeStatus>>, Conflict<ApiError>>> (AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            string? main = null;
+            if (Publisher(db, s, box) is { } publisher)
+                try { main = await publisher.MainRecipes(ct); }
+                catch (Exception e) when (e is TaskException or HttpRequestException) { }
+            return TypedResults.Ok(await Recipes.Status(db, main, GitHubToken(db, s, box), ct: ct));
+        });
         // Las de main, con sus bytes, mientras la base local no las tenga.
         api.MapPost("/recipes/import", async Task<Results<Ok<int>, Conflict<ApiError>>> (AppSession s, SecretBox box, CancellationToken ct) =>
         {

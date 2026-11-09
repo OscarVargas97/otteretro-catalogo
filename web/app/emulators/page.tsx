@@ -4,9 +4,11 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useConsoleName } from "@/components/Catalog";
+import { RecipeCard } from "@/components/RecipeCard";
+import { Tabs } from "@/components/Tabs";
 import { request } from "@/lib/client";
 import { useDescribeError } from "@/lib/i18n";
-import type { RecipeInfo, RecipeText } from "@/lib/types";
+import type { RecipeInfo, RecipeStatus, RecipeText } from "@/lib/types";
 
 type Recipe = Record<string, unknown>;
 
@@ -23,7 +25,8 @@ const json = (method: string, body: unknown) => ({ method, body: JSON.stringify(
 const empty = (v: unknown) => v === undefined || v === "" || v === false || (Array.isArray(v) && v.length === 0);
 
 /**
- * Emuladores (#95): las recetas por consola, «Crear desde su repo» y un formulario por campo. Se guardan en la base local, como las
+ * Emuladores (#95, #108): una pestaña por tipo de receta (sin Sistema, decisión 364) con sus tarjetas agrupadas por consola, «Crear
+ * desde su repo» y un formulario por campo. Se guardan en la base local, como las
  * sagas, y Publicar las lleva al PR. Al guardar, el servidor revisa el esquema y que la fuente tenga una release con un archivo que calce.
  */
 export default function Emulators() {
@@ -32,6 +35,10 @@ export default function Emulators() {
   const consoleName = useConsoleName();
   const cache = useQueryClient();
   const recipes = useQuery({ queryKey: ["recipes"], queryFn: () => request<RecipeInfo[]>("/api/recipes") });
+  // Aparte de la lista: consulta cada repo (con caché en el servidor) y main, así que llega después.
+  const status = useQuery({ queryKey: ["recipes", "status"], queryFn: () => request<RecipeStatus[]>("/api/recipes/status") });
+  const statusOf = new Map((status.data ?? []).map((x) => [x.id, x]));
+  const [kind, setKind] = useState<(typeof KINDS)[number]>("emulator");
   const [editing, setEditing] = useState<{ recipe: Recipe; create: boolean } | null>(null);
   const [url, setUrl] = useState("");
   const importMain = useMutation({ mutationFn: () => request<number>("/api/recipes/import", { method: "POST" }), onSuccess: () => cache.invalidateQueries({ queryKey: ["recipes"] }) });
@@ -44,13 +51,11 @@ export default function Emulators() {
     onSuccess: (r) => setEditing({ recipe: JSON.parse(r.json), create: false }),
   });
 
-  // Por consola; una receta sin consolas (complemento, herramienta) va con las de su tipo.
+  // Las de la pestaña, por su primera consola (la tarjeta nombra las demás); las sin consola van al final.
   const groups = new Map<string, RecipeInfo[]>();
-  for (const r of recipes.data ?? [])
-    for (const key of r.consoles.length ? r.consoles.map((c) => `console:${c}`) : [`kind:${r.kind}`])
-      groups.set(key, [...(groups.get(key) ?? []), r]);
-  const title = (key: string) => key.startsWith("console:") ? consoleName(key.slice(8)) : t(`kinds.${key.slice(5) as (typeof KINDS)[number]}`);
-  const sorted = [...groups.entries()].sort(([a], [b]) => (a[0] === b[0] ? title(a).localeCompare(title(b)) : a < b ? -1 : 1));
+  for (const r of (recipes.data ?? []).filter((r) => r.kind === kind)) groups.set(r.consoles[0] ?? "", [...(groups.get(r.consoles[0] ?? "") ?? []), r]);
+  const title = (key: string) => key ? consoleName(key) : t("noConsole");
+  const sorted = [...groups.entries()].sort(([a], [b]) => (!a ? 1 : !b ? -1 : title(a).localeCompare(title(b))));
 
   return (
     <div className="content">
@@ -67,20 +72,18 @@ export default function Emulators() {
           <div><button className="ot-btn" type="button" disabled={importMain.isPending} onClick={() => importMain.mutate()}>{t("importMain")}</button></div>
         </section>
       )}
-      {sorted.map(([key, list]) => (
-        <section key={key} className="panel">
-          <h2 className="small muted" style={{ margin: 0 }}>{title(key)}</h2>
-          <div className="chips">
+      <Tabs tabs={KINDS.map((k) => ({ id: k, label: t(`tabs.${k}`) }))} current={kind} onSelect={(id) => setKind(id as typeof kind)} label={t("tabsLabel")} panel="recipes-panel" />
+      <div id="recipes-panel" role="tabpanel" aria-labelledby={`tab-${kind}`} style={{ display: "grid", gap: 8 }}>
+        {recipes.data && recipes.data.length > 0 && sorted.length === 0 && <p className="muted">{t("emptyTab")}</p>}
+        {sorted.map(([key, list]) => (
+          <div key={key} style={{ display: "grid", gap: 8 }}>
+            <h2 className="console-group">{title(key)}</h2>
             {list.map((r) => (
-              <button key={r.id} type="button" className="chip" aria-pressed={editing?.recipe.id === r.id} disabled={open.isPending} onClick={() => open.mutate(r.id)}
-                title={`${r.id} · ${t(`kinds.${r.kind as (typeof KINDS)[number]}`)}`}>
-                {r.name || r.id}
-                {r.local && <span className="small muted" title={t("localHint")}> · {t("local")}</span>}
-              </button>
+              <RecipeCard key={r.id} recipe={r} status={statusOf.get(r.id)} editing={editing?.recipe.id === r.id} busy={open.isPending} onEdit={() => open.mutate(r.id)} />
             ))}
           </div>
-        </section>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
@@ -124,7 +127,7 @@ function RecipeForm({ recipe, create, onDone }: { recipe: Recipe; create: boolea
   };
   const save = useMutation({
     mutationFn: (out: Recipe) => request<RecipeInfo[]>(`/api/recipes/${encodeURIComponent(String(out.id ?? ""))}?create=${create}`, json("PUT", { json: JSON.stringify(out, null, 2) })),
-    onSuccess: (list) => { cache.setQueryData(["recipes"], list); onDone(); },
+    onSuccess: (list) => { cache.setQueryData(["recipes"], list); cache.invalidateQueries({ queryKey: ["recipes", "status"] }); onDone(); },
   });
   const submit = () => {
     const out = build();

@@ -101,4 +101,31 @@ public class RecipesTests
         Assert.Equal("recipes.badRepo", (await Recipes.Draft("no es un repo", token: null)).Error!.Code);
         Assert.Equal(("forgejo", "eden-emu/eden", "git.eden-emu.dev"), Recipes.Source("https://git.eden-emu.dev/eden-emu/eden.git"));
     }
+
+    /// <summary>#108: la tarjeta sabe la última release, si el patrón calza con ella y si la receta está publicada; la release se guarda un rato.</summary>
+    [Fact]
+    public async Task TheStatusComparesTheLatestReleaseAndMain()
+    {
+        await using var f = new Fixture();
+        var fake = new FakeReleases(new() { [Releases] = MgbaReleases });
+        Recipes.Http = new HttpClient(fake);
+        Assert.Null(await Recipes.Save(f.Db, "mgba", Recipe("^mGBA-[0-9.]+-win64\\\\.7z$"), create: true, token: null));
+        var main = Directory.CreateDirectory(Path.Combine(f.Tmp["main"], Published.RecipesFolder)).FullName;
+        var none = f.Tmp["sin-otteretro"];
+
+        Assert.Equal(new RecipeStatus("mgba", "0.10.5", "2026-01-01", true, "changed"), Assert.Single(await Recipes.Status(f.Db, main, token: null, local: none)));
+        File.WriteAllText(Path.Combine(main, "mgba.json"), Recipes.Get(f.Db, "mgba")!.Replace("\n", " "));
+        Assert.Equal("published", Assert.Single(await Recipes.Status(f.Db, main, token: null, local: none)).State);
+        Assert.Null(Assert.Single(await Recipes.Status(f.Db, null, token: null, local: none)).State);
+        Assert.Equal(2, fake.Calls.Count); // la de Save y una de Status: las otras dos la tomaron de lo guardado
+
+        // Una release nueva sin el archivo de siempre: el patrón calza con una vieja (se puede guardar), pero no con la última.
+        Recipes.Http = new HttpClient(new FakeReleases(new() { [Releases] = """
+            [
+              { "tag_name": "0.11", "draft": false, "published_at": "2026-10-01", "assets": [{ "name": "mGBA-0.11-win64.zip" }] },
+              { "tag_name": "0.10.5", "draft": false, "published_at": "2026-01-01", "assets": [{ "name": "mGBA-0.10.5-win64.7z" }] }
+            ]
+            """ }));
+        Assert.Equal(new RecipeStatus("mgba", "0.11", "2026-10-01", false, "published"), Assert.Single(await Recipes.Status(f.Db, main, token: null, local: none)));
+    }
 }

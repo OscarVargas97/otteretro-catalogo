@@ -2102,6 +2102,50 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/recipes/status": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["RecipeStatus"][];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/recipes/import": {
         parameters: {
             query?: never;
@@ -4397,6 +4441,13 @@ export interface components {
             consoles: string[];
             /** @default false */
             local: boolean;
+        };
+        RecipeStatus: {
+            id: string;
+            tag: null | string;
+            publishedAt: null | string;
+            matches: null | boolean;
+            state: null | string;
         };
         RecipeText: {
             json: string;

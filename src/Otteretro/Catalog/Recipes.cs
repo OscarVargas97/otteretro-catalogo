@@ -14,6 +14,12 @@ namespace Otteretro.Catalog;
 public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false);
 /// <summary>Una receta entera, como JSON.</summary>
 public record RecipeText(string Json);
+/// <summary>
+/// Lo que muestra la tarjeta de una receta (#108, decisión 365): su última release (sin borradores) y su fecha, si el patrón calza con
+/// algún archivo de ella, y si está publicada (igual que en main), cambiada sin publicar o es local (de Otteretro, todavía sin traer).
+/// Release y calce van null si la receta no tiene fuente con releases o no se pudo consultar; State, si no se pudo leer main.
+/// </summary>
+public record RecipeStatus(string Id, string? Tag, string? PublishedAt, bool? Matches, string? State);
 /// <summary>La URL del repo de un emulador (GitHub, Forgejo o Gitea).</summary>
 public record RepoRequest(string Url);
 
@@ -25,7 +31,17 @@ public record RepoRequest(string Url);
 public static partial class Recipes
 {
     /// <summary>Para pedir las releases; las pruebas lo cambian por uno falso.</summary>
-    public static HttpClient Http { get; set; } = new() { Timeout = TimeSpan.FromSeconds(30) };
+    public static HttpClient Http
+    {
+        get => http;
+        set { http = value; Latest.Clear(); }
+    }
+    static HttpClient http = new() { Timeout = TimeSpan.FromSeconds(30) };
+
+    /// <summary>La última release de cada fuente (#108), por un rato: la lista de tarjetas no consulta cada repo cada vez que se abre.</summary>
+    // ponytail: en memoria y por tiempo; se pierde al cerrar el programa, y una release nueva tarda hasta LatestFor en verse.
+    static readonly System.Collections.Concurrent.ConcurrentDictionary<string, (DateTime At, Release? Release)> Latest = new();
+    public static TimeSpan LatestFor { get; set; } = TimeSpan.FromMinutes(15);
 
     static readonly JsonSerializerOptions Indented = new() { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
 
@@ -155,6 +171,57 @@ public static partial class Recipes
         {
             return ApiError.Of("recipes.sourceFailed", ("repo", repo), ("detail", e.Message));
         }
+    }
+
+    /// <summary>
+    /// El estado de cada receta para su tarjeta (#108). <paramref name="main"/> es la carpeta de recetas de main (null si no se pudo
+    /// traer: el estado queda sin saber). Las releases se piden en paralelo y se guardan un rato; una fuente que falla queda sin release.
+    /// </summary>
+    public static async Task<List<RecipeStatus>> Status(Database db, string? main, string? token, string? local = null, CancellationToken ct = default)
+    {
+        List<(string Id, string Json, bool Local)> all;
+        using (var c = db.Open())
+            all = c.Query<(string, string)>("SELECT id, json FROM recipe ORDER BY id").Select(r => (r.Item1, r.Item2, false))
+                .Concat(Local(db, local).Select(r => (r.Key, r.Value, true))).ToList();
+        return (await Task.WhenAll(all.Select(async r =>
+        {
+            var node = JsonNode.Parse(r.Json)!;
+            var (tag, at, matches) = await LatestRelease(node, token, ct);
+            var file = main is null ? null : Path.Combine(main, r.Id + ".json");
+            var state = r.Local ? "local" : file is null ? null : File.Exists(file) && SameJson(File.ReadAllText(file), r.Json) ? "published" : "changed";
+            return new RecipeStatus(r.Id, tag, at, matches, state);
+        }))).OrderBy(r => r.Id, StringComparer.Ordinal).ToList();
+    }
+
+    static bool SameJson(string a, string b)
+    {
+        try
+        {
+            using var x = JsonDocument.Parse(a);
+            using var y = JsonDocument.Parse(b);
+            return JsonElement.DeepEquals(x.RootElement, y.RootElement);
+        }
+        catch (JsonException) { return false; }
+    }
+
+    static async Task<(string? Tag, string? At, bool? Matches)> LatestRelease(JsonNode r, string? token, CancellationToken ct)
+    {
+        var source = (string?)r["updates"]?["source"];
+        var repo = (string?)r["updates"]?["repo"];
+        var host = (string?)r["updates"]?["host"];
+        if (source is not ("github" or "forgejo") || repo is null || source == "forgejo" && host is null) return (null, null, null);
+        var key = $"{source}|{host}|{repo}";
+        Release? latest;
+        if (Latest.TryGetValue(key, out var hit) && DateTime.UtcNow - hit.At < LatestFor) latest = hit.Release;
+        else
+        {
+            try { latest = (await Releases(source, host, repo, token, ct)).FirstOrDefault(); }
+            catch (Exception e) when (e is HttpRequestException or JsonException or TaskCanceledException && !ct.IsCancellationRequested) { return (null, null, null); }
+            Latest[key] = (DateTime.UtcNow, latest);
+        }
+        if (latest is null) return (null, null, null);
+        var pattern = (string?)r["asset"];
+        return (latest.Tag, latest.PublishedAt, pattern is null ? null : latest.Assets.Any(a => Regex.IsMatch(a, pattern)));
     }
 
     sealed record Release(string Tag, string? PublishedAt, List<string> Assets);
