@@ -516,6 +516,15 @@
         "unreachable": "No se pudo leer {source}: se sigue con lo demás.",
         "rejected": "Descartado: {repo}. {reason}",
         "candidate": "Posible fork de {recipe}: {repo}. Va a Revisar."
+      },
+      "best": {
+        "searching": "Claude busca el mejor emulador de {game} en {consoles, plural, one {# consola} other {# consolas}}",
+        "noGame": "El juego ya no está en el catálogo.",
+        "log": {
+          "invalid": "{console}: la recomendación {pick} no calza con el juego o el catálogo, o no trae su fuente. No se guarda.",
+          "known": "{console}: {pick} ya estaba en Revisar o ya se resolvió. No vuelve a entrar.",
+          "done": "Listo: {picks, plural, one {# recomendación} other {# recomendaciones}} de {game} a Revisar."
+        }
       }
     },
     "http": "La app respondió con un error ({status}).",
@@ -935,7 +944,8 @@
   "tasks": {
     "kind": {
       "emulators": {
-        "check": "Revisar emuladores"
+        "check": "Revisar emuladores",
+        "best": "Buscar el mejor emulador"
       },
       "demo": "Tarea de prueba",
       "igdb": {

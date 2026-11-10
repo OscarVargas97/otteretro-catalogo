@@ -7,7 +7,7 @@ using Otteretro.Data;
 
 namespace Otteretro.Catalog;
 
-/// <param name="Id">igdb, codes, ports, portSearch, emulators, cleanup, routes, iconic, best, translate o images.</param>
+/// <param name="Id">igdb, codes, ports, portSearch, emulators, emulatorsBest, cleanup, routes, iconic, best, translate o images.</param>
 /// <param name="Model">El modelo de Claude que usa; null si es un script.</param>
 /// <param name="Auto">Si corre sola en el horario (decisión 284).</param>
 /// <param name="Days">Solo IGDB: cada cuántos días se pone al día.</param>
@@ -54,6 +54,8 @@ public static class CatalogTasks
         // Emuladores (#97, decisiones 357 y 371): una sola tarea revisa las recetas y busca forks; el contador es lo que espera en Revisar.
         new("emulators", EmulatorCheck.Model, [EmulatorCheck.PromptName], (db, _) => EmulatorCheck.Enqueue(db), (kind, _) => kind == EmulatorCheck.Kind,
             EmulatorCheck.Pending),
+        // Mejor emulador (#130): solo por juego, con POST /games/{id}/best-emulator; nunca todo el catálogo, así que ni la noche ni «Ejecutar» la encolan.
+        new("emulatorsBest", BestEmulator.Model, [BestEmulator.PromptName], (_, _) => null, (kind, _) => kind == BestEmulator.Kind),
         new("cleanup", "haiku", [CatalogCleanup.PromptName], (db, _) => CatalogCleanup.Enqueue(db), (kind, _) => kind == CatalogCleanup.Kind),
         // Con consola, «Reevaluar sagas icónicas» (F2.15): olvida lo dicho de esas sagas y lo vuelve a pedir.
         new("iconic", "sonnet", [SagaAnalysis.Iconic], (db, console) => console is null ? SagaAnalysis.EnqueueStep(db, SagaAnalysis.Iconic) : SagaAnalysis.EnqueueIconic(db, console),

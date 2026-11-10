@@ -36,6 +36,7 @@ public sealed class TaskQueue(AppSession session, Events events, FolderMoveServi
         [Catalog.Ports.Kind] = Catalog.Ports.Refresh,
         [Catalog.PortSearch.Kind] = Catalog.PortSearch.Run,
         [Catalog.EmulatorCheck.Kind] = Catalog.EmulatorCheck.Run,
+        [Catalog.BestEmulator.Kind] = Catalog.BestEmulator.Run,
         ["sgdb.webp"] = Catalog.SteamGridDb.Convert,
         ["catalog.extra"] = Catalog.ExtraSources.Run,
         [Claude.CatalogCleanup.Kind] = Claude.CatalogCleanup.Run,

@@ -516,6 +516,15 @@
         "unreachable": "Could not read {source}: moving on.",
         "rejected": "Discarded: {repo}. {reason}",
         "candidate": "Possible fork of {recipe}: {repo}. Sent to Review."
+      },
+      "best": {
+        "searching": "Claude is looking for the best emulator for {game} on {consoles, plural, one {# console} other {# consoles}}",
+        "noGame": "The game is no longer in the catalog.",
+        "log": {
+          "invalid": "{console}: the pick {pick} does not match the game or the catalog, or has no source. Not saved.",
+          "known": "{console}: {pick} was already in Review or already resolved. Not added again.",
+          "done": "Done: {picks, plural, one {# pick} other {# picks}} for {game} sent to Review."
+        }
       }
     },
     "http": "The app responded with an error ({status}).",
@@ -935,7 +944,8 @@
   "tasks": {
     "kind": {
       "emulators": {
-        "check": "Check emulators"
+        "check": "Check emulators",
+        "best": "Find the best emulator"
       },
       "demo": "Test task",
       "igdb": {
