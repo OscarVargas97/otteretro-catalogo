@@ -150,6 +150,16 @@ public static class CatalogEndpoints
         // «Mejor emulador» (#130): encola la búsqueda de Claude para un juego y devuelve la tarea; lo que encuentra va a Revisar.
         api.MapPost("/games/{id:long}/best-emulator", Results<Ok<long>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : BestEmulator.Enqueue(db, id) is { } task ? TypedResults.Ok(task) : TypedResults.NotFound());
+        // La ficha (#132): la fecha de la última búsqueda y la que está en curso.
+        api.MapGet("/games/{id:long}/best-emulator", Results<Ok<BestEmulatorState>, Conflict<ApiError>> (long id, AppSession s) =>
+            Db(s) is { } db ? TypedResults.Ok(new BestEmulatorState(BestEmulator.LastSearch(db, id), BestEmulator.Pending(db, id))) : NoData());
+        // Elegir a mano el recomendado de una consola (#132): queda uno solo por juego y consola, como cambio sin publicar.
+        api.MapPut("/games/{id:long}/recommended/{console}", async Task<Results<Ok<List<GameRecipe>>, BadRequest<ApiError>, Conflict<ApiError>>> (long id, string console, RecommendRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
+            Db(s) is not { } db ? NoData()
+            : await Recipes.Recommend(db, id, console, request.Recipe, request.Source, GitHubToken(db, s, box), ct) is { } error ? TypedResults.BadRequest(error) : TypedResults.Ok(Recipes.ForGame(db, id)));
+        api.MapDelete("/games/{id:long}/recommended/{console}", async Task<Results<Ok<List<GameRecipe>>, BadRequest<ApiError>, Conflict<ApiError>>> (long id, string console, AppSession s, SecretBox box, CancellationToken ct) =>
+            Db(s) is not { } db ? NoData()
+            : await Recipes.Recommend(db, id, console, null, null, GitHubToken(db, s, box), ct) is { } error ? TypedResults.BadRequest(error) : TypedResults.Ok(Recipes.ForGame(db, id)));
         // El editor de recetas (#111) se arma con el esquema: el mismo que valida al guardar.
         api.MapGet("/recipes/schema", () => TypedResults.Ok(new RecipeText(Published.RecipeSchema())));
         api.MapGet("/recipes/{id}", Results<Ok<RecipeText>, NotFound, Conflict<ApiError>> (string id, AppSession s) =>
