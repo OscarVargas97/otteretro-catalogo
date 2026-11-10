@@ -60,6 +60,14 @@ public static class ClaudeEndpoints
             return !found ? TypedResults.NotFound() : error is not null ? TypedResults.BadRequest(error) : TypedResults.Ok(ClaudeReview.Page(db));
         });
 
+        // «Emulador por juego» (#131): aceptar lo deja como el recomendado de la receta; descartar usa /dismiss.
+        api.MapPost("/review/{id:long}/pick/accept", async Task<Results<Ok<ReviewPage>, NotFound, BadRequest<ApiError>, Conflict<ApiError>>> (long id, AppSession s, SecretBox box, CancellationToken ct) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            var (found, error) = await EmulatorReview.AcceptPick(db, id, GitHubToken(db, s, box), ct);
+            return !found ? TypedResults.NotFound() : error is not null ? TypedResults.BadRequest(error) : TypedResults.Ok(ClaudeReview.Page(db));
+        });
+
         api.MapPost("/review/{id:long}/dismiss", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : EmulatorReview.Dismiss(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
 
