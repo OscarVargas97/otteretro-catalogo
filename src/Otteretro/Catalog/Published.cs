@@ -283,8 +283,24 @@ public static partial class Published
                         c.Execute("""
                             INSERT INTO catalog.port (id, console, game, project, kind, toolchain, status, abandoned, delisted, link, source, added, emulator, emulator_level, game_id)
                             VALUES (@Id, @Platform, @NameEs, @Project, @Kind, @Toolchain, @Status, @Abandoned, @Delisted, @Link, @Source, @Added, @Emulator, @EmulatorLevel, @GameId)
-                            """, new { p.Id, p.Platform, g.NameEs, p.Project, p.Kind, p.Toolchain, p.Status, p.Abandoned, Delisted = p.Delisted == true, p.Link, p.Source, p.Added,
-                                p.Emulator, p.EmulatorLevel, GameId = g.Id }, t);
+                            """, new
+                        {
+                            p.Id,
+                            p.Platform,
+                            g.NameEs,
+                            p.Project,
+                            p.Kind,
+                            p.Toolchain,
+                            p.Status,
+                            p.Abandoned,
+                            Delisted = p.Delisted == true,
+                            p.Link,
+                            p.Source,
+                            p.Added,
+                            p.Emulator,
+                            p.EmulatorLevel,
+                            GameId = g.Id
+                        }, t);
                     foreach (var v in g.Versions)
                     {
                         c.Execute("INSERT INTO catalog.version (id, game_id, platform, kind, year, igdb_id, steam_app_id) VALUES (@Id, @GameId, @Platform, @Kind, @Year, @IgdbId, @SteamAppId)",

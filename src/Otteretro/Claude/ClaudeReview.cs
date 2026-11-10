@@ -153,8 +153,12 @@ public static class ClaudeReview
                     return item with { Kept = Game(merge.Keep), Games = merge.Games.Select(g => g.Year is { } y ? $"{g.NameEs} ({y})" : g.NameEs).ToList() };
                 case "rename":
                     var rename = before.Deserialize<CatalogCleanup.RenameBefore>(CatalogCleanup.Tuples)!;
-                    return item with { NameBefore = rename.Claude ?? c.ExecuteScalar<string?>(
-                        "SELECT value FROM field_value WHERE entity = 'saga' AND entity_id = @saga AND field = 'name' AND source = 'igdb'", new { saga = rename.Saga }), NameAfter = c2.Name };
+                    return item with
+                    {
+                        NameBefore = rename.Claude ?? c.ExecuteScalar<string?>(
+                        "SELECT value FROM field_value WHERE entity = 'saga' AND entity_id = @saga AND field = 'name' AND source = 'igdb'", new { saga = rename.Saga }),
+                        NameAfter = c2.Name
+                    };
                 default:
                     return item;
             }

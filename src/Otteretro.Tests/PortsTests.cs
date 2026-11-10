@@ -296,7 +296,9 @@ public class PortsTests : IAsyncDisposable
             ]);
             return Task.FromResult(new ProcessOutput(0, JsonSerializer.Serialize(new
             {
-                is_error = false, structured_output = reply, total_cost_usd = 0.01,
+                is_error = false,
+                structured_output = reply,
+                total_cost_usd = 0.01,
                 usage = new { input_tokens = 100, output_tokens = 10, cache_read_input_tokens = 0, cache_creation_input_tokens = 0 },
             }, JsonSerializerOptions.Web), ""));
         };
