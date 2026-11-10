@@ -64,6 +64,18 @@ public class RecipesTests
     }
 
     [Fact]
+    public async Task ForGameListsTheRecipesThatRecommendIt()
+    {
+        await using var f = new Fixture();
+        Recipes.Http = new HttpClient(new FakeReleases(new() { [Releases] = MgbaReleases }));
+        var json = Recipe("^mGBA-[0-9.]+-win64\\\\.7z$").Replace("\"id\"", "\"recommendedFor\": [{ \"game\": \"X\", \"gameId\": 7, \"source\": \"wiki\" }, { \"game\": \"Y\" }], \"id\"");
+        Assert.Null(await Recipes.Save(f.Db, "mgba", json, create: true, token: null));
+        var r = Assert.Single(Recipes.ForGame(f.Db, 7));
+        Assert.Equal(("mgba", "wiki"), (r.Id, r.Source));
+        Assert.Empty(Recipes.ForGame(f.Db, 8));
+    }
+
+    [Fact]
     public async Task ARepoWithoutReleasesIsRejected()
     {
         await using var f = new Fixture();

@@ -2004,6 +2004,52 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/games/{id}/recipes": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: number;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["GameRecipe"][];
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/recipes/schema": {
         parameters: {
             query?: never;
@@ -5010,6 +5056,12 @@ export interface components {
             items: components["schemas"]["GameCard"][];
             /** Format: int32 */
             total: number | string;
+        };
+        GameRecipe: {
+            id: string;
+            name: string;
+            kind: string;
+            source: null | string;
         };
         IconicRequest: {
             iconic: boolean;

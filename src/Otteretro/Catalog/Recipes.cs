@@ -12,6 +12,8 @@ namespace Otteretro.Catalog;
 
 /// <summary>Una receta en la lista de «Emuladores» (#95).</summary>
 public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false, string? Url = null, string? ForkOf = null);
+/// <summary>Una receta que recomienda un juego (#123), con la fuente de la recomendación.</summary>
+public record GameRecipe(string Id, string Name, string Kind, string? Source);
 /// <summary>Una receta entera, como JSON.</summary>
 public record RecipeText(string Json);
 /// <summary>
@@ -70,6 +72,18 @@ public static partial class Recipes
         using var c = db.Open();
         return c.Query<string>("SELECT json FROM recipe ORDER BY id").Select(json => Info(json, false))
             .Concat(Local(db, local).Values.Select(json => Info(json, true))).OrderBy(r => r.Id, StringComparer.Ordinal).ToList();
+    }
+
+    /// <summary>Las recetas que recomiendan un juego del catálogo (#123): las que lo traen en <c>recommendedFor</c> con su <c>gameId</c>.</summary>
+    public static List<GameRecipe> ForGame(Database db, long gameId)
+    {
+        using var c = db.Open();
+        return c.Query<string>("SELECT json FROM recipe ORDER BY id").SelectMany(json =>
+        {
+            var r = JsonNode.Parse(json)!;
+            return (r["recommendedFor"]?.AsArray() ?? []).Where(g => (long?)g?["gameId"] == gameId)
+                .Select(g => new GameRecipe((string)r["id"]!, (string?)r["name"] ?? "", (string?)r["kind"] ?? "", (string?)g!["source"]));
+        }).ToList();
     }
 
     public static string? Get(Database db, string id)
