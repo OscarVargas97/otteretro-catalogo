@@ -154,16 +154,8 @@ public class PublishedTests
     [Fact]
     public async Task AValidRecipeIsPublishedInTheRecipeTable()
     {
-        var all = Directory.CreateTempSubdirectory("otteretro-recetas").FullName;
-        try
-        {
-            File.WriteAllText(Path.Combine(all, "consolas.json"), "[]");
-            File.WriteAllText(Path.Combine(all, "reemplazados.json"), "[]");
-            Directory.CreateDirectory(Path.Combine(all, Published.RecipesFolder));
-            foreach (var file in Directory.GetFiles(RepoRecipes())) File.Copy(file, Path.Combine(all, Published.RecipesFolder, Path.GetFileName(file)));
-            Assert.Empty(Published.Validate(all));
-        }
-        finally { Directory.Delete(all, true); }
+        // Contra el catálogo real: las recetas recomiendan juegos por gameId (#121), que tienen que existir.
+        Assert.Empty(Published.Validate(Path.GetDirectoryName(RepoRecipes())!));
 
         await using var f = new Fixture();
         Fill(f);
