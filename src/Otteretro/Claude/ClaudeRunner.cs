@@ -61,7 +61,8 @@ public static class ClaudeRunner
     /// <param name="prompt">Las instrucciones (normalmente <see cref="Prompt"/>).</param>
     /// <param name="input">Los datos, que van por la entrada estándar como JSON.</param>
     /// <param name="model">haiku, sonnet u opus; null usa el del Claude Code del usuario.</param>
-    public static async Task<ClaudeResult<T>> Run<T>(Database db, long? taskId, string name, string prompt, object input, CancellationToken ct, string? model = null)
+    /// <param name="probe">La prueba del límite (#117): no mira el horario ni el tope, solo si `claude` responde.</param>
+    public static async Task<ClaudeResult<T>> Run<T>(Database db, long? taskId, string name, string prompt, object input, CancellationToken ct, string? model = null, bool probe = false)
     {
         var start = new ProcessStartInfo(Command)
         {
@@ -84,7 +85,7 @@ public static class ClaudeRunner
         var usage = new ClaudeUsage(0, 0, 0, 0);
         for (var attempt = 1; ; attempt++)
         {
-            ClaudeBudget.Check(db);
+            if (!probe) ClaudeBudget.Check(db);
             ProcessOutput output;
             var call = Stopwatch.StartNew();
             try { output = await Launch(start, stdin, ct); }

@@ -314,6 +314,49 @@ public class ClaudeRunnerTests : IDisposable
         Assert.NotNull(ClaudeBudget.AutoStart(db));
     }
 
+    /// <summary>
+    /// #117: «Probar ahora» con el límite ya reiniciado saca la pausa y la tarea que lo esperaba vuelve a la cola; con el límite
+    /// vigente guarda la hora nueva. La pausada a mano no se mueve y la prueba queda en el registro de uso.
+    /// </summary>
+    [Fact]
+    public async Task RetryLiftsThePauseOnlyIfTheLimitReset()
+    {
+        var zone = TimeZoneInfo.Local.Id;
+        ClaudeBudget.LimitReached(db, $"You've hit your session limit · resets 5pm ({zone})");
+        now = Local(12); // fuera del horario: la prueba no lo mira
+        var limit = JsonSerializer.Serialize(Api.ApiError.Of("tasks.claude.limit"), JsonSerializerOptions.Web);
+        long waiting, byHand;
+        using (var c = db.Open())
+        {
+            const string Insert = "INSERT INTO task (kind, status, resume_at, detail, data, created_at) VALUES (@kind, @status, @at, @limit, 'lote 2', @at) RETURNING id";
+            waiting = c.ExecuteScalar<long>(Insert, new { kind = CatalogCleanup.Kind, status = "queued", at = Local(17).ToString("O"), limit });
+            byHand = c.ExecuteScalar<long>(Insert, new { kind = CatalogCleanup.Kind, status = "paused", at = Local(17).ToString("O"), limit });
+        }
+        (string Status, string? ResumeAt, string Data) Row(long id)
+        {
+            using var c = db.Open();
+            return c.QuerySingle<(string, string?, string)>("SELECT status, resume_at, data FROM task WHERE id = @id", new { id });
+        }
+        List<string> Probes()
+        {
+            using var c = db.Open();
+            return c.Query<string>("SELECT result FROM claude_usage WHERE prompt = 'retry' ORDER BY id").ToList();
+        }
+
+        Fake(Limit($"You've hit your session limit · resets 6pm ({zone})"), Reply(new { word = "ok" }));
+
+        Assert.Null(await ClaudeBudget.Retry(db, CancellationToken.None));
+        Assert.Equal(Local(18).ToString("O"), ClaudeBudget.Status(db).PausedUntil);
+        Assert.Equal(("queued", Local(17).ToString("O"), "lote 2"), Row(waiting));
+
+        Assert.Equal([waiting], await ClaudeBudget.Retry(db, CancellationToken.None));
+        Assert.False(ClaudeBudget.IsPaused(db));
+        Assert.Equal(("queued", (string?)null, "lote 2"), Row(waiting));
+        Assert.Equal("paused", Row(byHand).Status);
+        Assert.Equal(["limit", "ok"], Probes());
+        Assert.Equal("haiku", calls[1].Start.ArgumentList[calls[1].Start.ArgumentList.IndexOf("--model") + 1]);
+    }
+
     /// <summary>F2.2: la cola devuelve la tarea a la espera con su punto de control y no le cuenta el intento.</summary>
     [Fact]
     public async Task QueuePutsAPausedTaskBackWithItsCheckpoint()

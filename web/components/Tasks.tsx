@@ -54,6 +54,11 @@ export function TaskRows() {
     mutationFn: ({ id, action }: { id: number; action: "pause" | "resume" | "cancel" }) => request<void>(`/api/tasks/${id}/${action}`, { method: "POST" }),
     onSettled: () => { setConfirm(null); cache.invalidateQueries({ queryKey: ["tasks"] }); },
   });
+  // «Probar ahora» en la tarea que espera el límite de Claude (#117).
+  const retry = useMutation({
+    mutationFn: () => request<unknown>("/api/claude/retry", { method: "POST" }),
+    onSettled: () => { cache.invalidateQueries({ queryKey: ["tasks"] }); cache.invalidateQueries({ queryKey: ["claude"] }); },
+  });
   return useTasks().map((task) => {
     const kind = `tasks.kind.${task.kind}`;
     const finished = FINISHED.includes(task.status);
@@ -83,6 +88,8 @@ export function TaskRows() {
                 {task.status === "paused"
                   ? <button type="button" className="ot-btn ot-btn-sm" disabled={act.isPending} onClick={() => act.mutate({ id, action: "resume" })}>{t("tasks.resume")}</button>
                   : <button type="button" className="ot-btn ot-btn-sm" disabled={act.isPending} onClick={() => act.mutate({ id, action: "pause" })}>{t("tasks.pause")}</button>}
+                {task.status === "queued" && task.detail?.code === "tasks.claude.limit" &&
+                  <button type="button" className="ot-btn ot-btn-sm" disabled={retry.isPending} onClick={() => retry.mutate()}>{t("tasks.retryLimit")}</button>}
                 <button type="button" className="ot-btn ot-btn-sm ot-btn-ghost" onClick={() => setConfirm(id)}>{t("tasks.cancel")}</button>
               </>
             )}
@@ -90,6 +97,7 @@ export function TaskRows() {
         )}
         <div className={`ot-progress${task.status === "error" ? " is-error" : ""}`}><span style={{ width: `${progress}%` }} /></div>
         {task.detail && <span className="ot-task-detail">{describe(task.detail)}</span>}
+        {retry.error && task.detail?.code === "tasks.claude.limit" && <span className="error small">{describe(retry.error)}</span>}
         {open === id && <TaskLog id={id} stamp={`${task.status}|${task.progress}|${JSON.stringify(task.detail)}`} />}
       </div>
     );
