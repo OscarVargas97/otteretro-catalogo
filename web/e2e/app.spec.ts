@@ -136,7 +136,7 @@ test("una receta se edita por secciones, con chips y el JSON solo en la vista av
 
 test("Ajustes tiene claves, consolas, tareas y general", async () => {
   await page.goto(`${base()}/settings/`);
-  await expect(page.getByRole("tab")).toHaveCount(4);
+  await expect(page.getByRole("tab")).toHaveCount(5); // con Catálogo (#105)
   // #58: la pestaña Claude pasó a ser Tareas (el enlace viejo lleva ahí), con cada tarea en su grupo y su «Ejecutar».
   await page.goto(`${base()}/settings/?s=claude`);
   await expect(page.getByRole("tab", { name: es.settings.claude.title })).toHaveAttribute("aria-selected", "true");
@@ -144,7 +144,7 @@ test("Ajustes tiene claves, consolas, tareas y general", async () => {
   // #77: cada tarea es una fila plegada; el interruptor aparece al expandirla (cuando las filas ya llegaron).
   await expect(group(es.settings.claude.groupClaude).getByText(es.settings.claude.task.routes.name, { exact: true })).toBeVisible();
   await page.locator("section.panel details").evaluateAll((all) => all.forEach((d) => d.setAttribute("open", "")));
-  await expect(group(es.settings.claude.groupClaude).getByRole("switch")).toHaveCount(6);
+  await expect(group(es.settings.claude.groupClaude).getByRole("switch")).toHaveCount(7); // con los ports (#118)
   await expect(group(es.settings.claude.groupScript).getByRole("switch")).toHaveCount(4);
   // #83: todos los «Ejecutar» con el mismo estilo.
   await expect(page.locator("section.panel button.ot-btn-primary", { hasText: es.settings.claude.run })).toHaveCount(0);
