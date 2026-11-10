@@ -22,6 +22,8 @@ public static class BestEmulator
     /// <param name="Repo">El repo del emulador cuando no hay receta; vacío si la hay.</param>
     public record Pick(string Console, string Recipe, string Repo, string Source, string Reason);
     public record Reply(List<Pick> Picks);
+    /// <summary>Un juego del selector (#133), con la fecha de su última búsqueda (null si nunca).</summary>
+    public record BestEmulatorGame(long Id, string Name, int? Year, string? Saga, string[] Platforms, string? SearchedAt);
 
     /// <summary>Encola la búsqueda de un juego; si ya está en la cola, devuelve esa. Null si el juego no existe.</summary>
     public static long? Enqueue(Database db, long gameId)
@@ -35,6 +37,21 @@ public static class BestEmulator
         }
         ClaudeBudget.AllowNow(db); // la pide la persona: corre ya, también fuera del horario, como «Ejecutar»
         return TaskQueue.Enqueue(db, Kind, data);
+    }
+
+    /// <summary>Encola una búsqueda por juego elegido (#133); devuelve cuántos quedaron en la cola. Los que no existen se saltan.</summary>
+    public static int Enqueue(Database db, IEnumerable<long> gameIds) => gameIds.Distinct().Count(id => Enqueue(db, id) is not null);
+
+    /// <summary>Los juegos de las sagas elegidas más los juegos sueltos (#133): nunca todo el catálogo.</summary>
+    public static List<BestEmulatorGame> Choices(Database db, long[] sagas, long[] games)
+    {
+        using var c = db.Open();
+        return c.Query<(long Id, string Name, int? Year, string? Saga, string? Platforms, string? SearchedAt)>("""
+            SELECT g.id, g.name_es, g.year, s.name, (SELECT group_concat(DISTINCT v.platform) FROM version v WHERE v.game_id = g.id), e.searched_at
+            FROM game g LEFT JOIN saga s ON s.id = g.saga_id LEFT JOIN emulator_search e ON e.game_id = g.id
+            WHERE g.saga_id IN @sagas OR g.id IN @games
+            ORDER BY s.name IS NULL, s.name, g.year IS NULL, g.year, g.name_es
+            """, new { sagas, games }).Select(r => new BestEmulatorGame(r.Id, r.Name, r.Year, r.Saga, r.Platforms?.Split(',') ?? [], r.SearchedAt)).ToList();
     }
 
     /// <summary>Cuándo se buscó por última vez el mejor emulador de un juego; null si nunca.</summary>

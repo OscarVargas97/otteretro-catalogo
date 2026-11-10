@@ -112,4 +112,30 @@ public class BestEmulatorTests : IAsyncDisposable
         Assert.Empty(Picks());
         Assert.NotNull(BestEmulator.LastSearch(f.Db, 8));
     }
+
+    [Fact]
+    public async Task OnlyTheChosenGamesAreListedAndQueued()
+    {
+        using (var c = f.Db.Open())
+            c.Execute("""
+                INSERT INTO saga (id, name) VALUES (1, 'Pokémon'), (2, 'Otra');
+                UPDATE game SET saga_id = 1 WHERE id = 7;
+                INSERT INTO game (id, saga_id, name_es) VALUES (9, 1, 'Pokémon Rubí'), (10, 2, 'Fuera');
+                """);
+        await Search(7);
+
+        // Las sagas elegidas y los juegos sueltos; lo de otras sagas no. El ya buscado trae su fecha.
+        var choices = BestEmulator.Choices(f.Db, [1], [8]);
+        Assert.Equal([7L, 9, 8], choices.Select(g => g.Id));
+        Assert.Equal(["ds", "gba"], choices[0].Platforms.Order());
+        Assert.Equal("Pokémon", choices[0].Saga);
+        Assert.NotNull(choices[0].SearchedAt);
+        Assert.Null(choices[1].SearchedAt);
+        Assert.Empty(BestEmulator.Choices(f.Db, [], []));
+
+        // Solo se encolan los marcados; los que no existen se saltan.
+        Assert.Equal(2, BestEmulator.Enqueue(f.Db, [9, 8, 9, 999]));
+        using var db = f.Db.Open();
+        Assert.Equal(["8", "9"], db.Query<string>("SELECT data FROM task WHERE kind = @Kind AND status = 'queued' ORDER BY data", new { BestEmulator.Kind }));
+    }
 }
