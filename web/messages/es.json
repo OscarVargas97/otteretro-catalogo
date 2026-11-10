@@ -520,6 +520,7 @@
       "best": {
         "searching": "Claude busca el mejor emulador de {game} en {consoles, plural, one {# consola} other {# consolas}}",
         "noGame": "El juego ya no está en el catálogo.",
+        "noGames": "Marca al menos un juego.",
         "log": {
           "invalid": "{console}: la recomendación {pick} no calza con el juego o el catálogo, o no trae su fuente. No se guarda.",
           "known": "{console}: {pick} ya estaba en Revisar o ya se resolvió. No vuelve a entrar.",
@@ -1635,5 +1636,21 @@
     "more": "y {count, plural, one {# archivo más} other {# archivos más}}",
     "files": "{count, plural, one {# archivo} other {# archivos}}",
     "showList": "ver lista"
+  },
+  "bestEmulator": {
+    "button": "Buscar el mejor emulador",
+    "title": "Buscar el mejor emulador",
+    "intro": "Claude busca con Sonnet, en la web, el emulador que recomienda la comunidad en cada consola de los juegos que marques. Lo que encuentra va a Revisar. Nunca busca en todo el catálogo.",
+    "add": "Agregar una saga o un juego",
+    "addPlaceholder": "Nombre de la saga o del juego",
+    "noResults": "Nada con ese nombre.",
+    "saga": "Saga · {count, plural, one {# juego} other {# juegos}}",
+    "remove": "Quitar {name}",
+    "searched": "Buscado el {date}",
+    "never": "Sin buscar",
+    "count": "{count, plural, =0 {Ningún juego marcado} one {Se buscará en # juego} other {Se buscará en # juegos}}",
+    "start": "Buscar",
+    "queued": "{count, plural, =0 {No se encoló ningún juego.} one {# búsqueda en la cola. Lo que encuentre va a Revisar.} other {# búsquedas en la cola. Lo que encuentren va a Revisar.}}",
+    "close": "Cerrar"
   }
 }

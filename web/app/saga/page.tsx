@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { Suspense, useState } from "react";
 import { Cover, ShortPlatforms, useConsoleName, useConsoles, useIdParam } from "@/components/Catalog";
 import { PublishButton } from "@/components/Publish";
+import { BestEmulatorButton } from "@/components/BestEmulator";
 import { AddGame, GameActions, ROUTE_KINDS, RouteEditor, SagaDataEditor, type RouteKind } from "@/components/SagaEditing";
 import { Tabs } from "@/components/Tabs";
 import { useHeroArt } from "@/components/HeroArt";
@@ -60,6 +61,7 @@ function Saga() {
           <div className="hero-actions">
             <button className="ot-btn" type="button" aria-pressed={editing} onClick={() => setEditing(!editing)}>{editing ? t("edit.done") : t("edit.edit")}</button>
             {!emulation && <PublishButton kind="saga" id={Number(s.id)} />}
+            {!emulation && <BestEmulatorButton saga={{ id: String(s.id), name: s.name }} />}
             {!emulation && <MoreActions sagaId={String(s.id)} />}
           </div>
         </div>

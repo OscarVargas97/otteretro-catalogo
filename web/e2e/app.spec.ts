@@ -103,6 +103,34 @@ test("se crea una saga, se le agregan juegos, se arma su ruta y se fusiona un ju
   await page.getByRole("button", { name: es.publish.close }).click();
 });
 
+test("el mejor emulador se busca solo en las sagas y juegos elegidos, y dice cuántos son (#133)", async () => {
+  const { DatabaseSync } = await import("node:sqlite");
+  let db = new DatabaseSync(join(dataDir("data"), "catalogo", "catalogo.db"));
+  db.exec("INSERT INTO game (id, saga_id, name_es, year) SELECT 502, id, 'Legend of Mana', 1999 FROM saga WHERE name = 'Saga de Mana'");
+  db.close();
+  db = new DatabaseSync(join(dataDir("data"), "data", "otteretro.db")); // la fecha de la búsqueda va en la base propia
+  db.exec("INSERT INTO emulator_search (game_id, searched_at) VALUES (500, '2026-01-02T12:00:00Z')");
+  db.close();
+  const t = es.bestEmulator;
+
+  await page.goto(`${base()}/sagas/`);
+  await page.getByRole("button", { name: t.button }).click();
+  const dialog = page.getByRole("dialog", { name: t.title });
+  await expect(dialog.getByRole("checkbox")).toHaveCount(0); // nada elegido: nada que buscar
+  await expect(dialog.getByRole("button", { name: t.start, exact: true })).toBeDisabled();
+  await dialog.getByLabel(t.add).fill("Saga de Mana");
+  await dialog.getByRole("button", { name: /^Saga de Mana/ }).click();
+  // El ya buscado viene desmarcado y con su fecha; el otro, marcado.
+  await expect(dialog.getByRole("checkbox", { name: /Secret of Mana/ })).not.toBeChecked();
+  await expect(dialog.getByRole("checkbox", { name: /Legend of Mana/ })).toBeChecked();
+  await expect(dialog.getByText(t.never)).toHaveCount(1);
+  await expect(dialog.getByText("Se buscará en 1 juego")).toBeVisible();
+  await dialog.getByRole("checkbox", { name: /Secret of Mana/ }).check();
+  await expect(dialog.getByText("Se buscará en 2 juegos")).toBeVisible();
+  await dialog.getByRole("button", { name: t.close }).click(); // sin encolar: llamaría a Claude de verdad
+  await expect(dialog).toBeHidden();
+});
+
 test("una receta se edita por secciones, con chips y el JSON solo en la vista avanzada plegada (#111)", async () => {
   const { DatabaseSync } = await import("node:sqlite");
   const file = join(dataDir("data"), "catalogo", "catalogo.db");
