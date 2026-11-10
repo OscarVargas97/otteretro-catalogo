@@ -26,7 +26,7 @@ public class BestEmulatorTests : IAsyncDisposable
                 """);
             void Add(string id, string console) => c.Execute("INSERT INTO recipe (id, kind, json) VALUES (@id, 'emulator', @json)", new
             {
-                id, json = $$"""{ "id": "{{id}}", "name": "{{id}}", "kind": "emulator", "consoles": ["{{console}}"], "updates": { "source": "github", "repo": "x/{{id}}" } }""",
+                id, json = $$"""{ "id": "{{id}}", "name": "{{id}}", "kind": "emulator", "folder": "{{id}}", "detect": "{{id}}.exe", "consoles": ["{{console}}"], "updates": { "source": "github", "repo": "x/{{id}}" } }""",
             });
             Add("mgba", "gba");
             Add("pcsx2", "ps2");
@@ -111,5 +111,58 @@ public class BestEmulatorTests : IAsyncDisposable
         Assert.Empty(claude);
         Assert.Empty(Picks());
         Assert.NotNull(BestEmulator.LastSearch(f.Db, 8));
+    }
+
+    /// <summary>#131: aceptar deja la receta como el recomendado del juego en esa consola y lo saca de la que lo tenía.</summary>
+    [Fact]
+    public async Task AcceptingAPickReplacesTheRecommendedOne()
+    {
+        await Search(7);
+        using (var c = f.Db.Open())
+        {
+            // vba ya recomendaba el juego en gba (y otro juego que se queda); melonds, en ds, no se toca.
+            c.Execute("""
+                INSERT INTO recipe (id, kind, json) VALUES
+                  ('vba', 'emulator', '{ "id": "vba", "name": "VBA", "kind": "emulator", "consoles": ["gba"], "recommendedFor": [{ "game": "Pokémon Esmeralda", "gameId": 7 }, { "game": "Otro", "gameId": 8 }] }'),
+                  ('melonds', 'emulator', '{ "id": "melonds", "name": "melonDS", "kind": "emulator", "consoles": ["ds"], "recommendedFor": [{ "game": "Pokémon Esmeralda", "gameId": 7 }] }')
+                """);
+        }
+        var page = ClaudeReview.Page(f.Db).Picks;
+        Assert.Equal(2, page.Count);
+        var gba = page.Single(p => p.Console == "gba");
+        var ds = page.Single(p => p.Console == "ds");
+        Assert.Equal(("mgba", "mgba", "Pokémon Esmeralda"), (gba.Recipe, gba.RecipeName, gba.Game));
+        Assert.Null(ds.Recipe); // solo un repo, todavía sin receta
+
+        Assert.Equal("review.pick.noRecipe", (await EmulatorReview.AcceptPick(f.Db, ds.Id, null)).Error!.Code);
+        var (found, error) = await EmulatorReview.AcceptPick(f.Db, gba.Id, null);
+        Assert.True(found);
+        Assert.Null(error);
+        Assert.False((await EmulatorReview.AcceptPick(f.Db, gba.Id, null)).Found); // ya resuelta
+
+        JsonElement Recipe(string id) => JsonDocument.Parse(Recipes.Get(f.Db, id)!).RootElement;
+        var mgba = Assert.Single(Recipe("mgba").GetProperty("recommendedFor").EnumerateArray());
+        Assert.Equal((7, "Pokémon Esmeralda", "https://example.org/gba"), (mgba.GetProperty("gameId").GetInt64(), mgba.GetProperty("game").GetString(), mgba.GetProperty("source").GetString()));
+        Assert.Equal([8], Recipe("vba").GetProperty("recommendedFor").EnumerateArray().Select(g => g.GetProperty("gameId").GetInt64()));
+        Assert.Single(Recipe("melonds").GetProperty("recommendedFor").EnumerateArray()); // otra consola
+        Assert.Single(Picks("approved"));
+
+        // Con la receta del repo ya agregada, la recomendación la encuentra y se acepta; descartar una cerrada no hace nada.
+        using (var c = f.Db.Open())
+            c.Execute("""INSERT INTO recipe (id, kind, json) VALUES ('fork', 'emulator', '{ "id": "fork", "name": "Fork", "kind": "emulator", "folder": "Fork", "detect": "fork.exe", "consoles": ["ds"], "updates": { "source": "github", "repo": "y/melonDS-fork" } }')""");
+        Assert.Equal("fork", ClaudeReview.Page(f.Db).Picks.Single().Recipe);
+        Assert.Null((await EmulatorReview.AcceptPick(f.Db, ds.Id, null)).Error);
+        Assert.False(Recipe("melonds").TryGetProperty("recommendedFor", out _)); // sin juegos, sin el campo
+        Assert.False(EmulatorReview.Dismiss(f.Db, ds.Id));
+    }
+
+    [Fact]
+    public async Task DismissingAPickLeavesItSeen()
+    {
+        await Search(7);
+        var pick = ClaudeReview.Page(f.Db).Picks[0];
+        Assert.True(EmulatorReview.Dismiss(f.Db, pick.Id));
+        Assert.Single(Picks("rejected"));
+        Assert.DoesNotContain(ClaudeReview.Page(f.Db).Picks, p => p.Id == pick.Id);
     }
 }
