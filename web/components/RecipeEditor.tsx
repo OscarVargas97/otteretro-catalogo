@@ -4,6 +4,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useConsoleName, useConsoles } from "@/components/Catalog";
+import { useSearch } from "@/components/SagaEditing";
 import { Tabs } from "@/components/Tabs";
 import { request } from "@/lib/client";
 import { useDescribeError } from "@/lib/i18n";
@@ -107,7 +108,13 @@ export function RecipeEditor({ recipe, create, onDone }: { recipe: Recipe; creat
           <legend className="small muted">{label(name)}</legend>
           {rows.map((row, i) => (
             <div className="fields-row recipe-row" key={i}>
-              {Object.entries(item.properties ?? {}).map(([k, sub]) => field(k, sub, [...path, i, k], row?.[k], `${key}.${k}`))}
+              {key === "recommendedFor"
+                ? <>
+                  <GamePick game={row?.game as string | undefined} gameId={row?.gameId as number | undefined}
+                    onChange={(game, gameId) => set([...path, i], { ...row, game, gameId })} />
+                  {field("source", item.properties!.source, [...path, i, "source"], row?.source, `${key}.source`)}
+                </>
+                : Object.entries(item.properties ?? {}).map(([k, sub]) => field(k, sub, [...path, i, k], row?.[k], `${key}.${k}`))}
               <button className="ot-btn" type="button" aria-label={t("removeRow", { name: label(name), n: i + 1 })} onClick={() => set(path, rows.filter((_, j) => j !== i))}>{t("remove")}</button>
             </div>
           ))}
@@ -209,6 +216,35 @@ function Chips({ label, values, onChange, consoles, choices }: { label: string; 
           onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); add(); } }} />
         {list && <datalist id={list}>{all?.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}</datalist>}
       </div>
+    </div>
+  );
+}
+
+/**
+ * Un juego recomendado (#121): se busca en el catálogo y se guarda su nombre con su `gameId`. Escribir a mano deja solo el nombre (sin id),
+ * como las recetas viejas.
+ */
+function GamePick({ game, gameId, onChange }: { game?: string; gameId?: number; onChange: (game: string, gameId?: number) => void }) {
+  const t = useTranslations("emulators");
+  const [text, setText] = useState<string | null>(null); // lo que se escribe mientras se busca; null: el juego elegido
+  const search = useSearch(text ?? "");
+  return (
+    <div className="field">
+      <label className="field">
+        <span className="small muted">{t("field.game")}{gameId !== undefined && <> · <span className="ot-badge">{t("gameLinked", { id: gameId })}</span></>}</span>
+        <input value={text ?? game ?? ""} placeholder={t("gameSearch")} spellCheck={false}
+          onChange={(e) => { setText(e.target.value); onChange(e.target.value, undefined); }} />
+      </label>
+      {text !== null && text.trim().length >= 2 && (
+        <div className="chips">
+          {search.data?.games.length === 0 && <span className="small muted">{t("gameNotFound")}</span>}
+          {search.data?.games.map((g) => (
+            <button key={g.id} className="chip" type="button" onClick={() => { onChange(g.name, Number(g.id)); setText(null); }}>
+              {g.name}{g.year ? ` (${g.year})` : ""}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

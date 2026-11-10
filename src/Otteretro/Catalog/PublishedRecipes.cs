@@ -32,8 +32,8 @@ public static partial class Published
         return new PublishedRecipe(r.GetProperty("id").GetString()!, r.GetProperty("kind").GetString()!, consoles, JsonSerializer.Serialize(r));
     }).ToList();
 
-    /// <summary>Cada receta cumple el esquema, se llama como su id y no se repite.</summary>
-    static void ValidateRecipes(string folder, List<string> errors)
+    /// <summary>Cada receta cumple el esquema, se llama como su id, no se repite y sus juegos recomendados con id existen (#121).</summary>
+    static void ValidateRecipes(string folder, HashSet<long> gameIds, List<string> errors)
     {
         var files = RecipeFiles(folder).ToList();
         if (files.Count == 0) return;
@@ -53,6 +53,10 @@ public static partial class Published
                 errors.AddRange(problems.Select(p => $"La receta {name} no cumple el esquema: {p}."));
                 if (problems.Count == 0 && doc.RootElement.GetProperty("id").GetString() + ".json" != name)
                     errors.Add($"La receta {name} tiene otro id: {doc.RootElement.GetProperty("id").GetString()} (el archivo se llama como su id).");
+                if (problems.Count == 0 && doc.RootElement.TryGetProperty("recommendedFor", out var games))
+                    foreach (var g in games.EnumerateArray())
+                        if (g.TryGetProperty("gameId", out var id) && !gameIds.Contains(id.GetInt64()))
+                            errors.Add($"La receta {name} recomienda un juego que no existe: {id.GetInt64()} ({g.GetProperty("game").GetString()}).");
             }
         }
     }

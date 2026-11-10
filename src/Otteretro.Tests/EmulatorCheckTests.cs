@@ -166,6 +166,7 @@ public class EmulatorCheckTests : IAsyncDisposable
         Assert.Equal(["a/mgba-good", "e/mgba-plus"], page.Forks.Select(x => x.Repo));
         Assert.Equal(["cemu", "dolphin", "pcsx2", "ppsspp"], page.Notices.Select(x => x.Recipe));
 
+        using (var g = f.Db.Open()) g.Execute("INSERT INTO game (id, name_es) VALUES (4242, 'Pokémon Emerald')"); // #121: el nombre se cruza con el catálogo
         var (found, error) = await EmulatorReview.Accept(f.Db, page.Forks[1].Id, null);
         Assert.True(found);
         Assert.Null(error);
@@ -176,6 +177,7 @@ public class EmulatorCheckTests : IAsyncDisposable
             Assert.Equal("mgba", r.GetProperty("forkOf").GetString());
             Assert.Equal("e/mgba-plus", r.GetProperty("updates").GetProperty("repo").GetString());
             Assert.Equal("Pokémon Emerald", r.GetProperty("recommendedFor")[0].GetProperty("game").GetString());
+            Assert.Equal(4242, r.GetProperty("recommendedFor")[0].GetProperty("gameId").GetInt64());
             Assert.False(r.TryGetProperty("downloads", out _));
         }
         Assert.False((await EmulatorReview.Accept(f.Db, page.Forks[1].Id, null)).Found); // ya resuelto

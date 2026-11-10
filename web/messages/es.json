@@ -468,6 +468,7 @@
     "remove": "Quitar",
     "removeRow": "Quitar la fila {n} de {name}",
     "chipAdd": "Agregar…",
+    "gameSearch": "Buscar en el catálogo…", "gameLinked": "id {id}", "gameNotFound": "No está en el catálogo: queda solo el nombre",
     "removeChip": "Quitar {value}",
     "noConsoles": "Primero elige sus consolas.",
     "assetNoRepo": "Con la fuente y el repo se prueba el patrón contra la última release.",
@@ -520,7 +521,8 @@
     "http": "La app respondió con un error ({status}).",
     "unknown": "Algo salió mal ({code}).",
     "review": {
-      "noOriginal": "La receta original {recipe} ya no existe."
+      "noOriginal": "La receta original {recipe} ya no existe.",
+      "chooseFile": "Elige cuál de los archivos de Windows de la release usa la receta."
     },
     "recipes": {
       "badJson": "La receta no es un JSON válido: {detail}",
@@ -857,6 +859,7 @@
       "reading": "Bajando la lista de Recompendium",
       "compat": "Consultando la compatibilidad en los emuladores",
       "matching": "Cruzando los ports con los juegos",
+      "recipes": "Buscando releases para proponer recetas",
       "search": {
         "reading": "Leyendo el RSS de Recompendium y las listas conocidas",
         "verifying": "Claude verifica {done} de {total} candidatos"
@@ -868,7 +871,10 @@
         "unreachable": "No se pudo leer {source}: se sigue con lo demás.",
         "added": "Nuevo: {game} ({console}), {link}.",
         "rejected": "Descartado: {link}. {reason}",
-        "search": "Listo: {added} ports nuevos y {rejected} descartados; {matched} de {total} con juego."
+        "search": "Listo: {added} ports nuevos y {rejected} descartados; {matched} de {total} con juego.",
+        "recipes": "Recetas propuestas: {added} nuevas en Revisar.",
+        "recipesLimited": "GitHub llegó a su límite de consultas: las releases que faltan se miran la próxima vez.",
+        "recipeFailed": "No se pudo leer la release de {repo}: {detail}"
       }
     }
   },
@@ -1171,6 +1177,7 @@
       "notFound": "Este juego ya no está en el catálogo.",
       "favorite": "★ Favorito",
       "versions": "Versiones",
+      "recommendedBy": "Recomendado en",
       "version": "Versión",
       "have": "Tienes",
       "where": "Dónde lo tienes",
@@ -1309,10 +1316,14 @@
       "unidentified": "Sin identificar ({count})",
       "learnings": "Aprendizajes ({count})",
       "forks": "Forks ({count})",
+      "ports": "Ports ({count})",
       "recipes": "Recetas ({count})"
     },
     "forksEmptyTitle": "Sin forks por revisar",
     "forksEmptyText": "La tarea Emuladores deja aquí los forks que pasaron los filtros.",
+    "portsEmptyTitle": "Sin ports por revisar",
+    "portsEmptyText": "La tarea Emuladores deja aquí los ports de juegos que encontró.",
+    "port": { "release": "Release {tag}", "file": "Archivo", "accept": "Aceptar y crear la receta", "dismiss": "Descartar" },
     "recipesEmptyTitle": "Sin avisos de recetas",
     "recipesEmptyText": "La tarea Emuladores avisa aquí si el patrón de una receta no calza o su repo cambió.",
     "fork": {

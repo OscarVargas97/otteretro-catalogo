@@ -14,7 +14,7 @@ import { request } from "@/lib/client";
 import { PageSkeleton } from "@/components/Skeleton";
 import { useDescribeError } from "@/lib/i18n";
 import { optimistic } from "@/lib/optimistic";
-import { compareQuery, gameQuery } from "@/lib/queries";
+import { compareQuery, gameQuery, gameRecipesQuery } from "@/lib/queries";
 import type { FieldRow, GameDetail, ProgressInfo, RoutesPage, VersionCompare } from "@/lib/types";
 
 const STATUSES = ["pending", "playing", "finished", "completed", "dropped"] as const;
@@ -35,6 +35,7 @@ function Game() {
   const game = useQuery({ ...gameQuery(id ?? ""), enabled: id !== null });
   // La comparativa va a la par con la ficha y se muestran juntas: si llegara después, empujaría lo de abajo (#105).
   const compare = useQuery({ ...compareQuery(id ?? ""), enabled: id !== null });
+  const recipes = useQuery({ ...gameRecipesQuery(id ?? ""), enabled: id !== null });
   const hero = useHeroArt(game.data?.hasHero ? Number(game.data.id) : null);
 
   if (id === null) return <div className="content"><Empty title={t("game.noneTitle")} text={t("game.noneText")}><Link className="ot-btn ot-btn-primary" href="/sagas/">{t("goToSagas")}</Link></Empty></div>;
@@ -70,6 +71,17 @@ function Game() {
         )}
 
         <Versions game={g} compare={compare.data ?? []} />
+
+        {recipes.data && recipes.data.length > 0 && (
+          <section className="sec">
+            <div className="sec-h"><h2>{t("game.recommendedBy")}</h2></div>
+            <ul className="small source-list">
+              {recipes.data.map((r) => (
+                <li key={r.id}><Link href="/emulators/">{r.name || r.id}</Link>{r.source && <span className="muted"> · {r.source}</span>}</li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <Sources game={g} />
       </div>

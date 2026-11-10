@@ -72,6 +72,10 @@ public static partial class Ports
         run.Report(95, ApiError.Of("ports.matching"));
         var (total, matched) = Match(run.Db);
         run.Log(ApiError.Of("ports.log.done", ("total", total.ToString()), ("matched", matched.ToString())));
+
+        // Recetas propuestas (#119): sin Claude, lo nuevo va a Revisar.
+        run.Report(97, ApiError.Of("ports.recipes"));
+        await PortRecipes.Propose(run, ct);
     }
 
     public static string Today() => DateTime.UtcNow.ToString("yyyy-MM-dd");

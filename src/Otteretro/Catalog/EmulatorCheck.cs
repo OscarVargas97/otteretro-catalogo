@@ -332,7 +332,7 @@ public static partial class EmulatorCheck
     }
 
     /// <summary>Un archivo de Windows: dice serlo y no es de otro sistema ni de depuración.</summary>
-    static bool IsWindows(string file) => !Recipes.NotWindows().IsMatch(file) && WindowsFile().IsMatch(file);
+    internal static bool IsWindows(string file) => !Recipes.NotWindows().IsMatch(file) && WindowsFile().IsMatch(file);
 
     /// <summary>
     /// Un candidato a Revisar (#98 lo muestra y lo acepta): su repo, la receta original, por qué pasó los filtros y los juegos para los
