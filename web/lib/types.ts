@@ -57,6 +57,7 @@ export type PlatformInfo = Schemas["PlatformInfo"];
 export type GameRecipe = Schemas["GameRecipe"];
 export type RecipeInfo = Schemas["RecipeInfo"];
 export type ForkCandidate = Schemas["ForkCandidate"];
+export type PortCandidate = Schemas["PortCandidate"];
 export type RecipeNotice = Schemas["RecipeNotice"];
 export type RecipeText = Schemas["RecipeText"];
 export type RepoRelease = Schemas["RepoRelease"];

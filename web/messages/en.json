@@ -518,7 +518,8 @@
     "http": "The app responded with an error ({status}).",
     "unknown": "Something went wrong ({code}).",
     "review": {
-      "noOriginal": "The original recipe {recipe} no longer exists."
+      "noOriginal": "The original recipe {recipe} no longer exists.",
+      "chooseFile": "Choose which of the release's Windows files the recipe uses."
     },
     "recipes": {
       "badJson": "The recipe is not valid JSON: {detail}",
@@ -854,6 +855,7 @@
       "reading": "Downloading the Recompendium list",
       "compat": "Checking emulator compatibility",
       "matching": "Matching ports with games",
+      "recipes": "Looking for releases to propose recipes",
       "search": {
         "reading": "Reading the Recompendium RSS and the known lists",
         "verifying": "Claude is verifying {done} of {total} candidates"
@@ -865,7 +867,10 @@
         "unreachable": "Could not read {source}: continuing with the rest.",
         "added": "New: {game} ({console}), {link}.",
         "rejected": "Rejected: {link}. {reason}",
-        "search": "Done: {added} new ports and {rejected} rejected; {matched} of {total} with a game."
+        "search": "Done: {added} new ports and {rejected} rejected; {matched} of {total} with a game.",
+        "recipes": "Proposed recipes: {added} new in Review.",
+        "recipesLimited": "GitHub reached its request limit: the missing releases are checked next time.",
+        "recipeFailed": "Could not read the release of {repo}: {detail}"
       }
     }
   },
@@ -1306,10 +1311,14 @@
       "unidentified": "Unidentified ({count})",
       "learnings": "Learnings ({count})",
       "forks": "Forks ({count})",
+      "ports": "Ports ({count})",
       "recipes": "Recipes ({count})"
     },
     "forksEmptyTitle": "No forks to review",
     "forksEmptyText": "The Emulators task leaves here the forks that passed the filters.",
+    "portsEmptyTitle": "No ports to review",
+    "portsEmptyText": "The Emulators task leaves here the game ports it found.",
+    "port": { "release": "Release {tag}", "file": "File", "accept": "Accept and create the recipe", "dismiss": "Dismiss" },
     "recipesEmptyTitle": "No recipe notices",
     "recipesEmptyText": "The Emulators task warns here when a recipe's pattern no longer matches or its repo changed.",
     "fork": {

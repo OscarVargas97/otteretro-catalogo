@@ -13,9 +13,9 @@ import { Tabs } from "@/components/Tabs";
 import { usePaged } from "@/lib/paged";
 import { reviewQuery, sagaQuery } from "@/lib/queries";
 import { Cover, useConsoleName } from "@/components/Catalog";
-import type { FileReview, ForkCandidate, LearningItem, LearningPage, ReviewItem, RecipeNotice, ReviewPage, SearchResults } from "@/lib/types";
+import type { FileReview, ForkCandidate, PortCandidate, LearningItem, LearningPage, ReviewItem, RecipeNotice, ReviewPage, SearchResults } from "@/lib/types";
 
-const TABS = ["pending", "doubtful", "unidentified", "forks", "recipes", "learnings"] as const;
+const TABS = ["pending", "doubtful", "unidentified", "forks", "ports", "recipes", "learnings"] as const;
 type Tab = (typeof TABS)[number];
 
 // Lo que trae cada resultado de Claude (F2.5): la forma depende del prompt.
@@ -59,13 +59,13 @@ function Review() {
 
   if (page.isError) return <div className="content"><p className="error" role="alert">{describe(page.error)}</p></div>;
   if (!page.data) return <div className="content" aria-busy="true"><Panels count={3} /></div>;
-  const { pending, activeLearnings, files, forks, notices } = page.data;
+  const { pending, activeLearnings, files, forks, ports, notices } = page.data;
   const pendingItem = (item: ReviewItem) => (
     <Pending key={item.id} item={item} busy={act.isPending}
       approve={(routes) => act.mutate(routes ? { path: `/api/review/${item.id}/approve-edited`, body: { routes } } : { path: `/api/review/${item.id}/approve` })}
       reject={() => act.mutate({ path: `/api/review/${item.id}/reject` })} />
   );
-  const count = (k: Tab) => k === "pending" ? pending.length : k === "learnings" ? Number(activeLearnings) : k === "forks" ? forks.length : k === "recipes" ? notices.length : files.filter((f) => f.kind === k).length;
+  const count = (k: Tab) => k === "pending" ? pending.length : k === "learnings" ? Number(activeLearnings) : k === "forks" ? forks.length : k === "ports" ? ports.length : k === "recipes" ? notices.length : files.filter((f) => f.kind === k).length;
 
   return (
     <div className="content">
@@ -109,6 +109,13 @@ function Review() {
         : forks.map((f) => (
           <Fork key={f.id} fork={f} busy={act.isPending}
             accept={() => act.mutate({ path: `/api/review/${f.id}/fork/accept` })} reject={() => act.mutate({ path: `/api/review/${f.id}/dismiss` })} />
+        )))}
+
+      {tab === "ports" && (ports.length === 0
+        ? <Empty title={t("portsEmptyTitle")} text={t("portsEmptyText")} />
+        : ports.map((c) => (
+          <Port key={c.id} port={c} busy={act.isPending}
+            accept={(file) => act.mutate({ path: `/api/review/${c.id}/port/accept`, body: { file } })} reject={() => act.mutate({ path: `/api/review/${c.id}/port/dismiss` })} />
         )))}
 
       {tab === "recipes" && (notices.length === 0
@@ -326,6 +333,32 @@ function Fork({ fork, busy, accept, reject }: { fork: ForkCandidate; busy: boole
         <button className="ot-btn ot-btn-primary" type="button" disabled={busy} onClick={accept}>{t("fork.accept")}</button>
         <button className="ot-btn" type="button" disabled={busy} onClick={reject}>{t("fork.reject")}</button>
         <a className="ot-btn" href={fork.url} target="_blank" rel="noreferrer">{t("fork.openRepo")}</a>
+      </div>
+    </section>
+  );
+}
+
+/** Un candidato de port (#118): el juego, el proyecto y su release; con varios archivos se elige cuál antes de aceptar. */
+function Port({ port, busy, accept, reject }: { port: PortCandidate; busy: boolean; accept: (file?: string) => void; reject: () => void }) {
+  const t = useTranslations("review");
+  const consoleName = useConsoleName();
+  const [file, setFile] = useState(port.files[0] ?? "");
+  return (
+    <section className="panel" style={{ display: "grid", gap: 6 }}>
+      <div className="sec-h">
+        <h2><a href={port.url} target="_blank" rel="noreferrer">{port.project}</a></h2>
+        <span className="ot-badge ot-badge-info">{port.game} · {consoleName(port.console)}</span>
+      </div>
+      <span className="small">{t("port.release", { tag: port.tag })}{port.publishedAt && ` · ${port.publishedAt.slice(0, 10)}`}</span>
+      {port.files.length > 1
+        ? <label className="small">{t("port.file")} <select value={file} onChange={(e) => setFile(e.target.value)}>
+          {port.files.map((f) => <option key={f} value={f}>{f}</option>)}
+        </select></label>
+        : <span className="small muted">{port.files[0]}</span>}
+      <div className="hero-actions">
+        <button className="ot-btn ot-btn-primary" type="button" disabled={busy} onClick={() => accept(file || undefined)}>{t("port.accept")}</button>
+        <button className="ot-btn" type="button" disabled={busy} onClick={reject}>{t("port.dismiss")}</button>
+        <a className="ot-btn" href={port.url} target="_blank" rel="noreferrer">{t("fork.openRepo")}</a>
       </div>
     </section>
   );
