@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text;
+using Dapper;
 using Otteretro.Catalog;
 
 namespace Otteretro.Tests;
@@ -73,6 +74,39 @@ public class RecipesTests
         var r = Assert.Single(Recipes.ForGame(f.Db, 7));
         Assert.Equal(("mgba", "wiki"), (r.Id, r.Source));
         Assert.Empty(Recipes.ForGame(f.Db, 8));
+    }
+
+    /// <summary>#132: elegir a mano el recomendado de una consola lo saca de la receta que lo tenía; queda uno solo por juego y consola.</summary>
+    [Fact]
+    public async Task ChoosingARecommendedEmulatorReplacesThePreviousOne()
+    {
+        await using var f = new Fixture();
+        using (var c = f.Db.Open())
+        {
+            c.Execute("INSERT INTO game (id, name_es) VALUES (7, 'Pokémon Esmeralda')");
+            // Sin «asset», Save no consulta releases.
+            void Add(string id, string consoles, string recommended = "") => c.Execute("INSERT INTO recipe (id, kind, json) VALUES (@id, 'emulator', @json)", new
+            {
+                id, json = $$"""{ "id": "{{id}}", "name": "{{id}}", "kind": "emulator", "folder": "x", "detect": "x.exe", "consoles": [{{consoles}}]{{recommended}} }""",
+            });
+            Add("mgba", "\"gba\"", """, "recommendedFor": [{ "game": "Pokémon Esmeralda", "gameId": 7, "source": "https://a" }, { "game": "Otro", "gameId": 8 }]""");
+            Add("vba", "\"gba\"");
+            Add("melonds", "\"ds\"", """, "recommendedFor": [{ "game": "Pokémon Esmeralda", "gameId": 7 }]""");
+        }
+        List<(string, string?)> Of(long game) => Recipes.ForGame(f.Db, game).Select(r => (r.Id, r.Source)).ToList();
+
+        Assert.Null(await Recipes.Recommend(f.Db, 7, "gba", "vba", " https://b ", token: null));
+        Assert.Equal([("melonds", null), ("vba", "https://b")], Of(7));
+        Assert.Equal([("mgba", null)], Of(8)); // los otros juegos de la receta anterior siguen
+        Assert.Contains("\"recommendedFor\"", Recipes.Get(f.Db, "mgba"));
+
+        Assert.Equal("recipes.notForConsole", (await Recipes.Recommend(f.Db, 7, "ds", "vba", null, token: null))!.Code);
+        Assert.Equal("recipes.noGame", (await Recipes.Recommend(f.Db, 99, "gba", "vba", null, token: null))!.Code);
+
+        // «Quitar» lo saca de esa consola y deja la otra; sin juegos, la receta queda sin «recommendedFor».
+        Assert.Null(await Recipes.Recommend(f.Db, 7, "gba", null, null, token: null));
+        Assert.Equal([("melonds", null)], Of(7));
+        Assert.DoesNotContain("recommendedFor", Recipes.Get(f.Db, "vba"));
     }
 
     [Fact]
