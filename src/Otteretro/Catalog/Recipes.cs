@@ -13,8 +13,9 @@ namespace Otteretro.Catalog;
 /// <summary>Una receta en la lista de «Emuladores» (#95).</summary>
 /// <param name="Consoles">Las que corre; un port, la de su fila del catálogo de ports (#149).</param>
 /// <param name="Game">Port: su juego.</param>
+/// <param name="Notices">Sus avisos de las tareas (otteretro-catalogo#153): un patrón que ya no calza, un repo que cambió o un archivo por elegir.</param>
 public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false, string? Url = null, string? ForkOf = null,
-    string? Game = null);
+    string? Game = null, List<RecipeNotice>? Notices = null);
 /// <summary>Una receta que recomienda un juego (#123), con la fuente de la recomendación y las consolas que corre (#132).</summary>
 public record GameRecipe(string Id, string Name, string Kind, string? Source, List<string> Consoles);
 /// <summary>El recomendado de un juego en una consola, elegido a mano en su ficha (#132); la fuente es opcional.</summary>
@@ -61,12 +62,12 @@ public static partial class Recipes
 
     internal static readonly JsonSerializerOptions Indented = new() { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
 
-    static RecipeInfo Info(string json, bool local, Database db)
+    static RecipeInfo Info(string json, bool local, Database db, ILookup<string, RecipeNotice> notices)
     {
         var r = JsonNode.Parse(json)!;
         var port = (string?)r["kind"] == "port" && (string?)r["port"] is { } link ? Ports.ByLink(db, link) : null;
         return new RecipeInfo((string)r["id"]!, (string?)r["name"] ?? "", (string?)r["kind"] ?? "", (string?)r["folder"] ?? "",
-            port is null ? Consoles(r) : [port.Console], local, RepoUrl(r), (string?)r["forkOf"], port?.Game ?? (string?)r["game"]);
+            port is null ? Consoles(r) : [port.Console], local, RepoUrl(r), (string?)r["forkOf"], port?.Game ?? (string?)r["game"], [.. notices[(string)r["id"]!]]);
     }
 
     internal static string? RepoUrl(JsonNode r) => (string?)r["updates"]?["repo"] is { } repo
@@ -75,9 +76,10 @@ public static partial class Recipes
 
     public static List<RecipeInfo> List(Database db, string? local = null)
     {
+        var notices = EmulatorReview.Notices(db).ToLookup(n => n.Recipe);
         using var c = db.Open();
-        return c.Query<string>("SELECT json FROM recipe ORDER BY id").Select(json => Info(json, false, db))
-            .Concat(Local(db, local).Values.Select(json => Info(json, true, db))).OrderBy(r => r.Id, StringComparer.Ordinal).ToList();
+        return c.Query<string>("SELECT json FROM recipe ORDER BY id").Select(json => Info(json, false, db, notices))
+            .Concat(Local(db, local).Values.Select(json => Info(json, true, db, notices))).OrderBy(r => r.Id, StringComparer.Ordinal).ToList();
     }
 
     /// <summary>Las recetas que recomiendan un juego del catálogo (#123): las que lo traen en <c>recommendedFor</c> con su <c>gameId</c>.</summary>

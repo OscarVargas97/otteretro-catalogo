@@ -68,13 +68,15 @@ public static partial class Ports
         if (merged + mergedExtras > 0) run.Log(ApiError.Of("ports.log.merged", ("count", (merged + mergedExtras).ToString())), "warn");
 
         run.Report(30, ApiError.Of("ports.compat"));
-        await PortCompat.Fill(run.Db, http, run.Credentials.Read("github.token"), (m, l) => run.Log(m, l), ct);
+        // Del 30 al 95, juego a juego, con la consola y cuánto lleva de ella (#153).
+        await PortCompat.Fill(run.Db, http, run.Credentials.Read("github.token"), (m, l) => run.Log(m, l), (console, done, total, percent) =>
+            run.Report(30 + 65 * percent / 100, ApiError.Of("ports.compatProgress", ("console", console), ("done", done.ToString()), ("total", total.ToString()))), ct);
 
         run.Report(95, ApiError.Of("ports.matching"));
         var (total, matched) = Match(run.Db);
         run.Log(ApiError.Of("ports.log.done", ("total", total.ToString()), ("matched", matched.ToString())));
 
-        // Recetas propuestas (#119): sin Claude, lo nuevo va a Revisar.
+        // Recetas de los ports (#119): sin Claude, todo queda en Emuladores sin publicar (#153).
         run.Report(97, ApiError.Of("ports.recipes"));
         await PortRecipes.Propose(run, ct);
     }

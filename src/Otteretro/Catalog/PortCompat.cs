@@ -70,16 +70,33 @@ public static partial class PortCompat
         ["wiiu"] = new(null, Cemu),
     };
 
-    public static async Task Fill(Database db, HttpClient http, string? token, Action<ApiError, string> log, CancellationToken ct)
+    /// <summary>Cada cuánto se vuelve a consultar un juego (#153).</summary>
+    static readonly TimeSpan Recheck = TimeSpan.FromDays(30);
+
+    /// <summary>
+    /// Consulta los juegos nuevos o los de hace más de <see cref="Recheck"/> e informa el avance por consola en <paramref name="report"/>
+    /// («Xbox 360: 120/210») y el porcentaje del total. Un juego cuya consulta falló queda sin fecha y se reintenta la próxima vez.
+    /// </summary>
+    public static async Task Fill(Database db, HttpClient http, string? token, Action<ApiError, string> log, Action<string, int, int, int>? report, CancellationToken ct)
     {
+        var since = (DateTime.UtcNow - Recheck).ToString("O", CultureInfo.InvariantCulture);
         List<(string Console, string Game)> games;
-        using (var c = db.Open()) games = c.Query<(string, string)>("SELECT DISTINCT console, game FROM port ORDER BY console, game").ToList();
+        using (var c = db.Open())
+            games = c.Query<(string, string)>("""
+                SELECT console, game FROM port GROUP BY console, game
+                HAVING min(coalesce(compat_at, '')) < @since ORDER BY console, game
+                """, new { since }).ToList();
+        var totals = games.CountBy(g => g.Console).ToDictionary();
         var context = new Context(http, string.IsNullOrWhiteSpace(token) ? null : token);
         var loaded = new Dictionary<string, Task<Func<string, int?>>>();
-        var results = new List<(string Console, string Game, string? Emulator, int? Level)>();
+        var results = new List<(string Console, string Game, string? Emulator, int? Level, bool Ok)>();
+        var done = 0;
         foreach (var (console, game) in games)
         {
+            done = results.Count > 0 && results[^1].Console == console ? done + 1 : 1;
+            report?.Invoke(console, done, totals[console], 100 * results.Count / games.Count);
             int? level = null;
+            var ok = true;
             if (Sources.TryGetValue(console, out var source))
                 try
                 {
@@ -96,13 +113,19 @@ public static partial class PortCompat
                 {
                     log(ApiError.Of("ports.log.compatFailed", ("console", console), ("game", game)), "warn");
                     loaded.Remove(Emulators[console]); // una lista que no bajó se intenta con el próximo juego
+                    ok = false;
                 }
-            results.Add((console, game, Emulators.GetValueOrDefault(console), level));
+            results.Add((console, game, Emulators.GetValueOrDefault(console), level, ok));
         }
+        var now = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture);
         using var w = db.Open();
         using var t = w.BeginTransaction();
         foreach (var r in results)
-            w.Execute("UPDATE port SET emulator = @Emulator, emulator_level = @Level WHERE console = @Console AND game = @Game", new { r.Console, r.Game, r.Emulator, r.Level }, t);
+            w.Execute("""
+                UPDATE port SET emulator = @Emulator, emulator_level = CASE WHEN @Ok THEN @Level ELSE emulator_level END,
+                  compat_at = CASE WHEN @Ok THEN @now ELSE compat_at END
+                WHERE console = @Console AND game = @Game
+                """, new { r.Console, r.Game, r.Emulator, r.Level, r.Ok, now }, t);
         t.Commit();
     }
 

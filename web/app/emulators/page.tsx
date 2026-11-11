@@ -33,13 +33,16 @@ export default function Emulators() {
   const [kind, setKind] = useState<(typeof KINDS)[number]>("emulator");
   const [editing, setEditing] = useState<{ recipe: Recipe; create: boolean } | null>(null);
   const [adding, setAdding] = useState(false);
+  // Buscar y filtrar (#153): lo que las tareas dejaron sin publicar o con un aviso.
+  const [query, setQuery] = useState("");
+  const [only, setOnly] = useState<"unpublished" | "notices" | null>(null);
   const importMain = useMutation({ mutationFn: () => request<number>("/api/recipes/import", { method: "POST" }), onSuccess: () => cache.invalidateQueries({ queryKey: ["recipes"] }) });
   const open = useMutation({
     mutationFn: (id: string) => request<RecipeText>(`/api/recipes/${encodeURIComponent(id)}`),
     onSuccess: (r) => setEditing({ recipe: JSON.parse(r.json), create: false }),
   });
 
-  // Desde un aviso de Revisar (#98): /emulators/?edit=<id> abre el editor de esa receta.
+  // /emulators/?edit=<id> abre el editor de esa receta.
   useEffect(() => {
     const id = new URLSearchParams(window.location.search).get("edit");
     if (id) open.mutate(id);
@@ -57,7 +60,12 @@ export default function Emulators() {
   // Las de la pestaña, por su primera consola (la tarjeta nombra las demás); las sin consola van al final.
   const byId = new Map((recipes.data ?? []).map((r) => [r.id, r]));
   const groups = new Map<string, RecipeInfo[]>();
-  for (const r of (recipes.data ?? []).filter((r) => r.kind === kind)) groups.set(r.consoles[0] ?? "", [...(groups.get(r.consoles[0] ?? "") ?? []), r]);
+  const text = query.trim().toLowerCase();
+  const shown = (recipes.data ?? []).filter((r) => r.kind === kind
+    && (!text || [r.id, r.name, r.game, r.url].some((v) => v?.toLowerCase().includes(text)))
+    && (only !== "unpublished" || r.local || statusOf.get(r.id)?.state === "changed")
+    && (only !== "notices" || (r.notices?.length ?? 0) > 0));
+  for (const r of shown) groups.set(r.consoles[0] ?? "", [...(groups.get(r.consoles[0] ?? "") ?? []), r]);
   const title = (key: string) => key ? consoleName(key) : t("noConsole");
   const sorted = [...groups.entries()].sort(([a], [b]) => (!a ? 1 : !b ? -1 : title(a).localeCompare(title(b))));
 
@@ -77,6 +85,12 @@ export default function Emulators() {
         </section>
       )}
       <Tabs tabs={KINDS.map((k) => ({ id: k, label: t(`tabs.${k}`) }))} current={kind} onSelect={(id) => setKind(id as typeof kind)} label={t("tabsLabel")} panel="recipes-panel" />
+      <div className="chips" style={{ alignItems: "center" }}>
+        <input type="search" aria-label={t("search")} placeholder={t("search")} value={query} onChange={(e) => setQuery(e.target.value)} />
+        {(["unpublished", "notices"] as const).map((k) => (
+          <button key={k} className="chip" type="button" aria-pressed={only === k} onClick={() => setOnly(only === k ? null : k)}>{t(`filter.${k}`)}</button>
+        ))}
+      </div>
       <div id="recipes-panel" role="tabpanel" aria-labelledby={`tab-${kind}`} style={{ display: "grid", gap: 8 }}>
         {recipes.data && recipes.data.length > 0 && sorted.length === 0 && <p className="muted">{t("emptyTab")}</p>}
         {sorted.map(([key, list]) => (

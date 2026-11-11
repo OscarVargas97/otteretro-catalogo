@@ -16,6 +16,7 @@ export function RecipeCard({ recipe, status, editing, busy, onEdit, onDuplicate,
   recipe: RecipeInfo; original?: RecipeInfo; forks?: RecipeInfo[]; status?: RecipeStatus; editing: boolean; busy: boolean; onEdit: () => void; onDuplicate: () => void;
 }) {
   const t = useTranslations("emulators");
+  const tr = useTranslations("review");
   const format = useFormatter();
   const consoleName = useConsoleName();
   const state = recipe.local ? "local" : status?.state;
@@ -25,6 +26,11 @@ export function RecipeCard({ recipe, status, editing, busy, onEdit, onDuplicate,
   const test = useMutation({ mutationFn: () => request<RecipeTest>(`/api/recipes/${id}/test`, { method: "POST" }) });
   const discard = useMutation({
     mutationFn: () => request<unknown>(`/api/recipes/${id}`, { method: "DELETE" }),
+    onSuccess: () => cache.invalidateQueries({ queryKey: ["recipes"] }),
+  });
+  // Los avisos de la tarea Emuladores (#153): receta movida, sin release, o un port sin un archivo claro.
+  const dismiss = useMutation({
+    mutationFn: (notice: number) => request<unknown>(`/api/review/${notice}/dismiss`, { method: "POST" }),
     onSuccess: () => cache.invalidateQueries({ queryKey: ["recipes"] }),
   });
   const result = test.data;
@@ -55,18 +61,26 @@ export function RecipeCard({ recipe, status, editing, busy, onEdit, onDuplicate,
         <button className="ot-btn ot-btn-sm" type="button" disabled={busy} onClick={onDuplicate}>{t("card.duplicate")}</button>
         {recipe.url && <a className="ot-btn ot-btn-sm" href={recipe.url} target="_blank" rel="noreferrer">{t("card.openRepo")}</a>}
         <button className="ot-btn ot-btn-sm" type="button" disabled={test.isPending} onClick={() => test.mutate()}>{test.isPending ? t("card.testing") : t("card.test")}</button>
-        {state === "changed" && (
+        {(state === "changed" || state === "local") && (
           <button className="ot-btn ot-btn-sm" type="button" disabled={discard.isPending}
             onClick={() => { if (window.confirm(t("card.discardConfirm", { id: recipe.id }))) discard.mutate(); }}>{t("card.discard")}</button>
         )}
       </div>
+      {recipe.notices?.map((n) => (
+        <p key={n.id} className="small" style={{ margin: 0 }} role="note">
+          <span className="ot-badge ot-badge-review">{t("card.notice")}</span>{" "}
+          {tr(`notice.${n.reason as "gone"}`, { repo: n.repo, to: n.to ?? "", tag: n.tag ?? "", pattern: n.pattern ?? "", files: n.files.join(", ") })}
+          {n.proposed && <> · {tr("notice.proposed", { pattern: n.proposed })}</>}{" "}
+          <button className="ot-btn ot-btn-sm" type="button" disabled={dismiss.isPending} onClick={() => dismiss.mutate(Number(n.id))}>{tr("notice.dismiss")}</button>
+        </p>
+      ))}
       {result && (
         <p className="small" style={{ margin: 0 }} role="status">
           {t("card.testResult", { file: result.file, size: (Number(result.size) / 1048576).toFixed(1), tag: result.tag })}{" "}
           {t(result.found === true ? "card.testFound" : result.found === false ? "card.testNotFound" : "card.testUnknown", { detect: result.detect })}
         </p>
       )}
-      {[test.error, discard.error].filter(Boolean).map((e, i) => <p key={i} className="error small" role="alert" style={{ margin: 0 }}>{describe(e)}</p>)}
+      {[test.error, discard.error, dismiss.error].filter(Boolean).map((e, i) => <p key={i} className="error small" role="alert" style={{ margin: 0 }}>{describe(e)}</p>)}
     </section>
   );
 }

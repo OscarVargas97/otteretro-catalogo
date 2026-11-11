@@ -76,11 +76,11 @@ public static partial class EmulatorCheck
         return c.ExecuteScalar<long?>("SELECT id FROM task WHERE kind = @Kind AND status IN ('queued', 'running') LIMIT 1", new { Kind }) ?? TaskQueue.Enqueue(db, Kind);
     }
 
-    /// <summary>Lo que espera en Revisar de esta tarea (recetas y forks): su contador en Ajustes › Tareas.</summary>
+    /// <summary>Los avisos que esperan en las tarjetas de Emuladores (otteretro-catalogo#153): su contador en Ajustes › Tareas.</summary>
     public static int Pending(Database db)
     {
         using var c = db.Open();
-        return c.ExecuteScalar<int>("SELECT count(*) FROM review_item WHERE entity IN ('recipe', 'fork') AND status = 'open'");
+        return c.ExecuteScalar<int>("SELECT count(*) FROM review_item WHERE entity = 'recipe' AND status = 'open'");
     }
 
     public record Recommendation(string Game, string Source);
@@ -132,6 +132,7 @@ public static partial class EmulatorCheck
 
         // 2. Forks: juntar, filtrar por API y lo dudoso a Claude.
         var forks = await SearchForks(run, recipes, token, ct);
+        await EmulatorReview.AcceptForks(run, token, ct);
         run.Log(ApiError.Of("emulators.log.done", ("updated", updated.ToString()), ("problems", problems.ToString()), ("forks", forks.ToString())));
     }
 
@@ -166,7 +167,10 @@ public static partial class EmulatorCheck
         var dev = r.Json["devOnly"]?.GetValue<bool>() == true || r.Json["updates"]?["dev"]?.GetValue<bool>() == true;
         var latest = dev ? releases.FirstOrDefault() : releases.FirstOrDefault(x => !x.Prerelease) ?? releases.FirstOrDefault();
         if (latest is null) return Problem(db, run, r, "noRelease", new() { ["repo"] = r.Repo });
-        if ((string?)r.Json["asset"] is not { } pattern) return null;
+        // Un port sin archivo de Linux lo suma si la release tiene uno claro (otteretro-catalogo#153): sin publicar, como lo demás.
+        var linux = r.Kind == "port" && r.Json["assetLinux"] is null && PortRecipes.Pick(latest.Assets.Where(IsLinux).ToList()) is { } lin
+            && SetLinux(db, run, r, lin);
+        if ((string?)r.Json["asset"] is not { } pattern) return linux ? true : null;
         if (latest.Assets.FirstOrDefault(a => Regex.IsMatch(a, pattern)) is not { } file)
         {
             // Si la release tiene un solo archivo de Windows, el patrón que saldría de él; si no, lo elige la persona en Revisar.
@@ -180,7 +184,19 @@ public static partial class EmulatorCheck
                 ["proposed"] = windows.Count == 1 ? Recipes.AssetPattern(windows[0]) : null,
             });
         }
-        return await AddDownload(db, run, r, latest, file, ct) ? true : null;
+        return await AddDownload(db, run, r, latest, file, ct) || linux ? true : null;
+    }
+
+    static bool SetLinux(Database db, TaskRun run, Recipe r, string file)
+    {
+        r.Json["assetLinux"] = Recipes.AssetPattern(file);
+        var text = r.Json.ToJsonString(Recipes.Indented).ReplaceLineEndings("\n") + "\n";
+        using var doc = JsonDocument.Parse(text);
+        if (Published.CheckRecipe(doc.RootElement).Count > 0) { r.Json.Remove("assetLinux"); return false; }
+        using var c = db.Open();
+        Recipes.Store(c, doc.RootElement, text);
+        run.Log(ApiError.Of("emulators.log.linux", ("recipe", r.Id), ("file", file)));
+        return true;
     }
 
     /// <summary>
@@ -357,6 +373,14 @@ public static partial class EmulatorCheck
             return (null, "old");
         return (new Passed(meta.Stars, release.Tag, release.PublishedAt, release.Assets.First(IsWindows), meta.Fork), "");
     }
+
+    /// <summary>Un archivo de Linux para PC (otteretro-catalogo#153): un AppImage o que diga «linux», y no de ARM ni de otro sistema.</summary>
+    internal static bool IsLinux(string file) => LinuxFile().IsMatch(file) && !NotLinux().IsMatch(file);
+
+    [GeneratedRegex(@"linux|\.appimage$", RegexOptions.IgnoreCase)]
+    private static partial Regex LinuxFile();
+    [GeneratedRegex(@"(?<![a-z])(arm|arm64|armhf|armv\d+|aarch64|riscv64|android|windows|win32|win64|macos|mac|osx|darwin|debug|symbols)(?![a-z])|\.(sha\d*|sig|asc|md5)$", RegexOptions.IgnoreCase)]
+    private static partial Regex NotLinux();
 
     /// <summary>Un archivo de Windows: dice serlo y no es de otro sistema ni de depuración.</summary>
     internal static bool IsWindows(string file) => !Recipes.NotWindows().IsMatch(file) && WindowsFile().IsMatch(file);

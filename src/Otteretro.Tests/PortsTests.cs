@@ -175,48 +175,50 @@ public class PortsTests : IAsyncDisposable
         $$"""[{ "tag_name": "{{tag}}", "draft": false, "published_at": "2026-10-01T00:00:00Z", "assets": [{{string.Join(",", files.Select(a => $$"""{ "name": "{{a}}", "browser_download_url": "https://dl/{{a}}" }"""))}}] }]""";
 
     /// <summary>
-    /// #119: después del cruce, cada port con juego y una release de Windows tiene su receta, sin pasar por Revisar. Solo va a Revisar el
-    /// que tiene varios archivos sin uno claro; lo que ya tiene receta no se pide y lo que no tiene archivo de Windows no se repite hasta
-    /// que cambie su release. Lo que esperaba en Revisar de antes se convierte en receta.
+    /// #119, otteretro-catalogo#153: después del cruce, cada port con juego y una release tiene su receta, sin pasar por Revisar, con el
+    /// archivo de cada sistema (<c>asset</c> de Windows, <c>assetLinux</c> de Linux); el de solo Linux también. Si de un sistema hay varios
+    /// archivos sin uno claro, la receta se crea igual con el aviso «Elegir el archivo» en su tarjeta. Lo que ya tiene receta no se pide, lo
+    /// que no tiene archivo no se repite hasta que cambie su release, y lo que esperaba en Revisar de antes se convierte en receta.
     /// </summary>
     [Fact]
-    public async Task PortsWithAWindowsReleaseGetTheirRecipe()
+    public async Task PortsWithAReleaseGetTheirRecipeWithAFilePerSystem()
     {
         net.Releases["Zelda64Recomp/Zelda64Recomp"] = Release("v1.2.0", "Zelda64Recompiled-1.2.0-Windows.zip", "Zelda64Recompiled-1.2.0-Linux.tar.gz");
         net.Releases["a/prime-recomp"] = Release("v0.3", "prime-0.3-win64.zip", "prime-0.3-win32.zip", "prime-0.3-win64-debug.zip");
-        net.Releases["b/nb-recomp"] = Release("v1", "nb-linux.tar.gz");
+        net.Releases["b/nb-recomp"] = Release("v1", "nb-source.tar.gz");
         net.Releases["HarbourMasters/2ship2harkinian"] = Release("v2", "2ship-win64.zip");
         using (var c = f.Db.Open())
             c.Execute("""INSERT INTO recipe (id, kind, json) VALUES ('2ship', 'port', '{ "id": "2ship", "updates": { "source": "github", "repo": "HarbourMasters/2ship2harkinian" } }')""");
 
         await Done(Ports.Enqueue(f.Db));
-        Assert.Empty(PortRecipes.List(f.Db));
         Assert.DoesNotContain(net.Asked, u => u.Contains("2ship2harkinian")); // ya tiene receta
         var zelda = System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "zelda64recomp")!)!;
         Assert.Equal(@"^Zelda64Recompiled-[0-9.]+-Windows\.zip$", (string)zelda["asset"]!);
+        Assert.Equal(@"^Zelda64Recompiled-[0-9.]+-Linux\.tar\.gz$", (string)zelda["assetLinux"]!);
         var recipe = System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "prime-recomp")!)!;
         Assert.Equal(("port", "GameCube", "Metroid Prime", true, "a/prime-recomp", "https://github.com/a/prime-recomp"),
             ((string)recipe["kind"]!, (string)recipe["folder"]!, (string)recipe["game"]!, (bool)recipe["experimental"]!, (string)recipe["updates"]!["repo"]!, (string)recipe["port"]!));
         Assert.Matches((string)recipe["asset"]!, "prime-0.3-win64.zip"); // de varios, el de 64 bits que no es de depuración
+        Assert.Null(Recipes.Get(f.Db, "nb-recomp")); // sin archivo de Windows ni de Linux
 
-        // Otra vez: lo creado no se vuelve a pedir; el que no tenía archivo de Windows se mira de nuevo. Con dos archivos sin uno claro va a
-        // Revisar, y aceptarlo pide elegir.
+        // Otra vez: lo creado no se vuelve a pedir; el que no tenía archivo se mira de nuevo. Solo Linux, con dos archivos sin uno claro: la
+        // receta se crea con el aviso «Elegir el archivo» y los archivos de la release.
         net.Asked.Clear();
         await Done(Ports.Enqueue(f.Db));
         Assert.Contains(net.Asked, u => u.Contains("b/nb-recomp"));
         Assert.DoesNotContain(net.Asked, u => u.Contains("prime-recomp") || u.Contains("Zelda64Recomp"));
-        net.Releases["b/nb-recomp"] = Release("v2", "nb-linux.tar.gz", "nb-windows.zip", "nb-win32.zip");
+        net.Releases["b/nb-recomp"] = Release("v2", "nb-linux-gl.tar.gz", "nb-linux-vk.tar.gz");
         await Done(Ports.Enqueue(f.Db));
-        var nb = Assert.Single(PortRecipes.List(f.Db));
-        Assert.Equal(("nb-recomp", 2), (nb.Project, nb.Files.Count));
-        Assert.Equal(1, CatalogTasks.PendingCounts(f.Db)["portsReview"]);
-        var (found, error) = await PortRecipes.Accept(f.Db, nb.Id, null);
-        Assert.True(found);
-        Assert.Equal("review.chooseFile", error?.Code);
-        Assert.True(PortRecipes.Dismiss(f.Db, nb.Id));
-        Assert.False(PortRecipes.Dismiss(f.Db, nb.Id));
+        var nb = System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "nb-recomp")!)!;
+        Assert.Null(nb["asset"]);
+        Assert.Null(nb["assetLinux"]);
+        var notice = Assert.Single(EmulatorReview.Notices(f.Db));
+        Assert.Equal(("nb-recomp", "pickFile", 2), (notice.Recipe, notice.Reason, notice.Files.Count));
+        Assert.Equal(notice.Id, Assert.Single(Recipes.List(f.Db).Single(r => r.Id == "nb-recomp").Notices!).Id);
+        Assert.True(EmulatorReview.Dismiss(f.Db, notice.Id));
+        Assert.Empty(EmulatorReview.Notices(f.Db));
 
-        // Lo que esperaba en Revisar de antes, con un archivo claro, se convierte en receta en la próxima vuelta.
+        // Lo que esperaba en Revisar de antes se convierte en receta en la próxima vuelta.
         using (var c = f.Db.Open())
         {
             c.Execute("DELETE FROM recipe WHERE id = 'zelda64recomp'");
@@ -228,7 +230,7 @@ public class PortsTests : IAsyncDisposable
         }
         await Done(Ports.Enqueue(f.Db));
         Assert.NotNull(Recipes.Get(f.Db, "zelda64recomp"));
-        Assert.Empty(PortRecipes.List(f.Db));
+        using (var c = f.Db.Open()) Assert.Equal(0, c.ExecuteScalar<int>("SELECT count(*) FROM review_item WHERE entity = 'port' AND status = 'open'"));
     }
 
     /// <summary>#149: la receta de un port apunta a su fila por el enlace, que le da su consola, su carpeta y su juego; un enlace repetido no tumba la tarea.</summary>

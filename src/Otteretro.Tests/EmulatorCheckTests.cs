@@ -151,28 +151,30 @@ public class EmulatorCheckTests : IAsyncDisposable
         Assert.Contains("e/mgba-plus", input);
         Assert.Contains("f/other-emu", input);
         Assert.DoesNotContain("a/mgba-good", input); // seguro: salió de los forks de la receta
-        Assert.Equal(6, CatalogTasks.PendingCounts(f.Db)["emulators"]);
+        Assert.Equal(4, CatalogTasks.PendingCounts(f.Db)["emulators"]); // los avisos; los forks ya son tarjetas (#153)
         Assert.Contains(CatalogTasks.List(f.Db), t => t.Id == "emulators" && t.Model == "sonnet");
 
         // Otra vez: no repite candidatos, ni problemas, ni vuelve a consultar a Claude.
         await Done();
         Assert.Single(claude);
+        // Las recetas de los forks ya se revisan como las demás: sin release en el repo de prueba, cada una suma su aviso.
         Assert.Equal(6, CatalogTasks.PendingCounts(f.Db)["emulators"]);
         using (var c = f.Db.Open())
             Assert.Equal(2, c.ExecuteScalar<int>("SELECT json_array_length(json, '$.downloads') FROM recipe WHERE id = 'mgba'"));
     }
+    /// <summary>
+    /// otteretro-catalogo#153: cada fork que pasa los filtros queda como receta experimental sin publicar en Emuladores; los avisos van en la
+    /// tarjeta de su receta. Descartar la receta la borra y el fork no vuelve.
+    /// </summary>
     [Fact]
-    public async Task AcceptingAForkCreatesItsExperimentalRecipeAndRejectingMarksItSeen()
+    public async Task ForksBecomeUnpublishedExperimentalRecipesAndADiscardedOneDoesNotComeBack()
     {
-        await Done();
-        var page = ClaudeReview.Page(f.Db);
-        Assert.Equal(["a/mgba-good", "e/mgba-plus"], page.Forks.Select(x => x.Repo));
-        Assert.Equal(["cemu", "dolphin", "pcsx2", "ppsspp"], page.Notices.Select(x => x.Recipe));
-
         using (var g = f.Db.Open()) g.Execute("INSERT INTO game (id, name_es) VALUES (4242, 'Pokémon Emerald')"); // #121: el nombre se cruza con el catálogo
-        var (found, error) = await EmulatorReview.Accept(f.Db, page.Forks[1].Id, null);
-        Assert.True(found);
-        Assert.Null(error);
+        await Done();
+        Assert.Equal(["cemu", "dolphin", "pcsx2", "ppsspp"], EmulatorReview.Notices(f.Db).Select(x => x.Recipe));
+        var list = Recipes.List(f.Db);
+        Assert.Equal("moved", Assert.Single(list.Single(r => r.Id == "cemu").Notices!).Reason);
+        Assert.Contains(list, r => r.Id == "a-mgba-good");
         using (var doc = JsonDocument.Parse(Recipes.Get(f.Db, "e-mgba-plus")!))
         {
             var r = doc.RootElement;
@@ -183,14 +185,13 @@ public class EmulatorCheckTests : IAsyncDisposable
             Assert.Equal(4242, r.GetProperty("recommendedFor")[0].GetProperty("gameId").GetInt64());
             Assert.False(r.TryGetProperty("downloads", out _));
         }
-        Assert.False((await EmulatorReview.Accept(f.Db, page.Forks[1].Id, null)).Found); // ya resuelto
 
-        Assert.True(EmulatorReview.Dismiss(f.Db, page.Forks[0].Id));
-        Assert.True(EmulatorReview.Dismiss(f.Db, page.Notices[0].Id));
-        page = ClaudeReview.Page(f.Db);
-        Assert.Empty(page.Forks);
-        Assert.Equal(3, page.Notices.Count);
-        using var c = f.Db.Open();
-        Assert.Equal("rejected", c.ExecuteScalar<string>("SELECT result FROM fork_seen WHERE repo = 'github.com/a/mgba-good'"));
+        var main = Directory.CreateTempSubdirectory().FullName; // main sin la receta: descartarla la borra
+        Assert.True(Recipes.Discard(f.Db, "a-mgba-good", main));
+        await Done();
+        Assert.Null(Recipes.Get(f.Db, "a-mgba-good"));
+        Assert.True(EmulatorReview.Dismiss(f.Db, EmulatorReview.Notices(f.Db)[0].Id));
+        // Quedan tres de las cuatro y el de la receta del fork que sigue (sin release en el repo de prueba).
+        Assert.Equal(["dolphin", "e-mgba-plus", "pcsx2", "ppsspp"], EmulatorReview.Notices(f.Db).Select(n => n.Recipe).Order());
     }
 }

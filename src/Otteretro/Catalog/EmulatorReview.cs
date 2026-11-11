@@ -3,26 +3,21 @@ using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
 using Dapper;
 using Otteretro.Api;
+using Otteretro.App;
 using Otteretro.Data;
 
 namespace Otteretro.Catalog;
 
-public record ForkGame(string Game, string? Source);
-/// <param name="Recipe">El id de la receta original.</param>
-/// <param name="FoundBy">Cómo se encontró (forks, búsqueda o lista:&lt;nombre&gt;).</param>
-/// <param name="Reason">Lo que dijo Claude, si hubo que preguntarle.</param>
-/// <param name="Tag">La release que pasó los filtros, con su archivo de Windows.</param>
-/// <param name="RecommendedFor">Los juegos para los que se recomienda; puede venir vacío (forks del repo de la receta).</param>
-public record ForkCandidate(long Id, string Repo, string Url, string Recipe, string? RecipeName, string FoundBy, string? Reason, int Stars, string Tag,
-    string? PublishedAt, string File, bool IsFork, List<ForkGame> RecommendedFor);
-/// <param name="Reason">gone, moved, archived, noRelease o noAsset.</param>
-/// <param name="Proposed">noAsset: el patrón que saldría del único archivo de Windows de la release.</param>
 /// <param name="Recipe">La receta recomendada; si Claude dio un repo, la del catálogo con ese repo y esa consola, o null si todavía no hay.</param>
 /// <param name="Repo">El repo que dio Claude cuando no había receta.</param>
 public record EmulatorPick(long Id, long GameId, string Game, string Console, string? Recipe, string? RecipeName, string? Repo, string Source, string Reason);
-public record RecipeNotice(long Id, string Recipe, string? RecipeName, string Reason, string Repo, string? To, string? Tag, string? Pattern, string? Proposed);
+/// <summary>Un aviso en la tarjeta de una receta (#98, otteretro-catalogo#153).</summary>
+/// <param name="Reason">gone, moved, archived, noRelease, noAsset o pickFile (un port con varios archivos sin uno claro).</param>
+/// <param name="Proposed">noAsset: el patrón que saldría del único archivo de Windows de la release.</param>
+/// <param name="Files">pickFile: los archivos de la release entre los que elegir.</param>
+public record RecipeNotice(long Id, string Recipe, string Reason, string Repo, string? To, string? Tag, string? Pattern, string? Proposed, List<string> Files);
 
-/// <summary>Lo que la tarea «Emuladores» (#97) deja en Revisar y se resuelve ahí (#98): candidatos de fork y avisos de recetas.</summary>
+/// <summary>Lo que la tarea «Emuladores» (#97) deja en Emuladores (otteretro-catalogo#153): los forks como recetas sin publicar y los avisos en su tarjeta.</summary>
 public static class EmulatorReview
 {
     /// <summary>El juego del catálogo que se llama así (nombre en español u original, sin distinguir mayúsculas), si es uno solo (#121).</summary>
@@ -32,20 +27,6 @@ public static class EmulatorReview
 
     static string? Name(Database db, string id) => Recipes.Get(db, id) is { } json ? (string?)JsonNode.Parse(json)!["name"] : null;
 
-    public static List<ForkCandidate> Forks(Database db)
-    {
-        using var c = db.Open();
-        return c.Query<(long Id, string Data)>("SELECT id, data FROM review_item WHERE entity = 'fork' AND status = 'open' ORDER BY id").Select(r =>
-        {
-            var j = JsonNode.Parse(r.Data)!;
-            var recipe = (string)j["recipe"]!;
-            return new ForkCandidate(r.Id, (string)j["repo"]!, (string)j["url"]!, recipe, Name(db, recipe), (string?)j["foundBy"] ?? "", (string?)j["reason"],
-                (int?)j["passed"]?["stars"] ?? 0, (string?)j["passed"]?["tag"] ?? "", (string?)j["passed"]?["publishedAt"], (string?)j["passed"]?["file"] ?? "",
-                (bool?)j["passed"]?["isFork"] ?? false,
-                j["recommendedFor"]?.AsArray().Select(g => new ForkGame((string?)g?["game"] ?? "", (string?)g?["source"])).ToList() ?? []);
-        }).ToList();
-    }
-
     public static List<RecipeNotice> Notices(Database db)
     {
         using var c = db.Open();
@@ -53,8 +34,8 @@ public static class EmulatorReview
         {
             var j = JsonNode.Parse(r.Data)!;
             var recipe = (string)j["recipe"]!;
-            return new RecipeNotice(r.Id, recipe, Name(db, recipe), (string)j["reason"]!, (string?)j["repo"] ?? "", (string?)j["to"], (string?)j["tag"],
-                (string?)j["pattern"], (string?)j["proposed"]);
+            return new RecipeNotice(r.Id, recipe, (string)j["reason"]!, (string?)j["repo"] ?? "", (string?)j["to"], (string?)j["tag"],
+                (string?)j["pattern"], (string?)j["proposed"], j["files"]?.AsArray().Select(f => (string)f!).ToList() ?? []);
         }).ToList();
     }
 
@@ -125,6 +106,27 @@ public static class EmulatorReview
         if ((string?)JsonNode.Parse(data)!["url"] is { } url)
             c.Execute("UPDATE fork_seen SET result = 'rejected' WHERE repo = @repo", new { repo = Regex.Replace(url, "^https?://", "").ToLowerInvariant() });
         return true;
+    }
+
+    /// <summary>
+    /// Cada fork que pasó los filtros pasa a ser una receta experimental sin publicar (otteretro-catalogo#153). La que no se puede guardar
+    /// queda en el registro y no se reintenta; descartar la tarjeta la borra y el fork no vuelve (queda en <c>fork_seen</c>). Cuántas creó.
+    /// </summary>
+    public static async Task<int> AcceptForks(TaskRun run, string? token, CancellationToken ct)
+    {
+        var db = run.Db;
+        List<long> ids;
+        using (var c = db.Open()) ids = c.Query<long>("SELECT id FROM review_item WHERE entity = 'fork' AND status = 'open' ORDER BY id").ToList();
+        var created = 0;
+        foreach (var id in ids)
+        {
+            if (await Accept(db, id, token, ct) is (true, null)) { created++; continue; }
+            using var c = db.Open();
+            var repo = c.ExecuteScalar<string>("SELECT json_extract(data, '$.repo') FROM review_item WHERE id = @id", new { id });
+            c.Execute("UPDATE review_item SET status = 'rejected' WHERE id = @id", new { id });
+            run.Log(ApiError.Of("emulators.log.forkFailed", ("repo", repo ?? "")), "warn");
+        }
+        return created;
     }
 
     /// <summary>
