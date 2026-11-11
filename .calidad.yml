@@ -1,0 +1,11 @@
+# .calidad.yml — lo copia y lo actualiza la skill `calidad` de ia-qa. Lo particular del repo se edita aquí.
+catalogo: ia-qa@0.2.0
+modo: completo                 # minimo: repo sin stack (docs, notas): solo hooks, gitleaks y checks del flujo
+stacks: [dotnet, node]      # node vive en web/
+visibilidad: publico
+umbrales:                      # sobrescriben los de estandar/umbrales.md
+  complejidad_ciclomatica: 10
+  lineas_por_funcion: 60
+  duplicacion_pct: 3
+apagar: []                     # herramientas del catálogo que no corren aquí (con su razón en un comentario)
+sumar: []                      # herramientas extra (fichas de herramientas/)

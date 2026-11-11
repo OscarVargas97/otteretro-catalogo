@@ -103,20 +103,20 @@ public static class Migrations
             //    cero: hasta el paso 2, la base propia sigue entera.
             using (var t = c.BeginTransaction())
             {
-            foreach (var table in CatalogTables.Append("catalog_migration")) c.Execute($"DROP TABLE IF EXISTS catalog.{table}", transaction: t);
-            c.Execute("CREATE TABLE catalog.catalog_migration (name TEXT PRIMARY KEY, applied_at TEXT NOT NULL)", transaction: t);
-            foreach (var table in CatalogTables)
-            {
-                var create = schema.Single(x => x.Type == "table" && x.Name == table).Sql;
-                c.Execute(Regex.Replace(create, @"^CREATE TABLE\s+""?(\w+)""?", "CREATE TABLE catalog.$1"), transaction: t);
-                c.Execute($"INSERT INTO catalog.{table} SELECT * FROM main.{table}", transaction: t);
-                var (from, to) = (c.ExecuteScalar<long>($"SELECT count(*) FROM main.{table}", transaction: t),
-                    c.ExecuteScalar<long>($"SELECT count(*) FROM catalog.{table}", transaction: t));
-                if (from != to) throw new InvalidOperationException($"{table}: {from} filas, se copiaron {to}");
-            }
-            foreach (var index in schema.Where(x => x.Type == "index" && CatalogTables.Contains(x.Table)))
-                c.Execute(Regex.Replace(index.Sql, @"^CREATE (UNIQUE )?INDEX\s+(IF NOT EXISTS\s+)?", "CREATE $1INDEX $2catalog."), transaction: t);
-            t.Commit();
+                foreach (var table in CatalogTables.Append("catalog_migration")) c.Execute($"DROP TABLE IF EXISTS catalog.{table}", transaction: t);
+                c.Execute("CREATE TABLE catalog.catalog_migration (name TEXT PRIMARY KEY, applied_at TEXT NOT NULL)", transaction: t);
+                foreach (var table in CatalogTables)
+                {
+                    var create = schema.Single(x => x.Type == "table" && x.Name == table).Sql;
+                    c.Execute(Regex.Replace(create, @"^CREATE TABLE\s+""?(\w+)""?", "CREATE TABLE catalog.$1"), transaction: t);
+                    c.Execute($"INSERT INTO catalog.{table} SELECT * FROM main.{table}", transaction: t);
+                    var (from, to) = (c.ExecuteScalar<long>($"SELECT count(*) FROM main.{table}", transaction: t),
+                        c.ExecuteScalar<long>($"SELECT count(*) FROM catalog.{table}", transaction: t));
+                    if (from != to) throw new InvalidOperationException($"{table}: {from} filas, se copiaron {to}");
+                }
+                foreach (var index in schema.Where(x => x.Type == "index" && CatalogTables.Contains(x.Table)))
+                    c.Execute(Regex.Replace(index.Sql, @"^CREATE (UNIQUE )?INDEX\s+(IF NOT EXISTS\s+)?", "CREATE $1INDEX $2catalog."), transaction: t);
+                t.Commit();
             }
 
             // 2. Lo propio: solo escribe la base propia (lee el catálogo), así que es atómico. Las columnas propias que quedan en el
