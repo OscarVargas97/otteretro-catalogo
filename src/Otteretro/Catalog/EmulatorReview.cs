@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
 using Dapper;
@@ -16,6 +17,9 @@ public record ForkCandidate(long Id, string Repo, string Url, string Recipe, str
     string? PublishedAt, string File, bool IsFork, List<ForkGame> RecommendedFor);
 /// <param name="Reason">gone, moved, archived, noRelease o noAsset.</param>
 /// <param name="Proposed">noAsset: el patrón que saldría del único archivo de Windows de la release.</param>
+/// <param name="Recipe">La receta recomendada; si Claude dio un repo, la del catálogo con ese repo y esa consola, o null si todavía no hay.</param>
+/// <param name="Repo">El repo que dio Claude cuando no había receta.</param>
+public record EmulatorPick(long Id, long GameId, string Game, string Console, string? Recipe, string? RecipeName, string? Repo, string Source, string Reason);
 public record RecipeNotice(long Id, string Recipe, string? RecipeName, string Reason, string Repo, string? To, string? Tag, string? Pattern, string? Proposed);
 
 /// <summary>Lo que la tarea «Emuladores» (#97) deja en Revisar y se resuelve ahí (#98): candidatos de fork y avisos de recetas.</summary>
@@ -54,11 +58,68 @@ public static class EmulatorReview
         }).ToList();
     }
 
+    /// <summary>La receta del catálogo con ese repo que corre esa consola (#131): la que se creó desde «Agregar una receta».</summary>
+    static string? RecipeForRepo(Database db, string repo, string console)
+    {
+        using var c = db.Open();
+        return c.Query<string>("SELECT json FROM recipe WHERE kind = 'emulator' ORDER BY id").Select(json => JsonNode.Parse(json)!)
+            .FirstOrDefault(r => string.Equals(Recipes.RepoUrl(r), repo, StringComparison.OrdinalIgnoreCase)
+                && r["consoles"]?.AsArray().Any(k => (string?)k == console) == true) is { } found ? (string)found["id"]! : null;
+    }
+
+    /// <summary>Las recomendaciones de «Mejor emulador» (#130) por revisar (#131).</summary>
+    public static List<EmulatorPick> Picks(Database db)
+    {
+        List<(long Id, string Data)> rows;
+        using (var c = db.Open())
+            rows = c.Query<(long, string)>("SELECT id, data FROM review_item WHERE entity = @Entity AND status = 'open' ORDER BY id", new { BestEmulator.Entity }).ToList();
+        return rows.Select(r =>
+        {
+            var j = JsonNode.Parse(r.Data)!;
+            var console = (string)j["console"]!;
+            var repo = (string?)j["repo"];
+            var recipe = (string?)j["recipe"] ?? (repo is null ? null : RecipeForRepo(db, repo, console));
+            return new EmulatorPick(r.Id, (long)j["gameId"]!, (string?)j["game"] ?? "", console, recipe, recipe is null ? null : Name(db, recipe), repo,
+                (string?)j["source"] ?? "", (string?)j["reason"] ?? "");
+        }).ToList();
+    }
+
+    /// <summary>
+    /// Acepta una recomendación (#131): suma <c>{ game, gameId, source }</c> al <c>recommendedFor</c> de su receta y lo saca de las demás recetas
+    /// de esa consola que recomendaban el juego (un solo recomendado por juego y consola). Queda sin publicar, como cualquier receta guardada.
+    /// Found es false si no existe o ya se resolvió; sin receta (solo un repo) devuelve el error: se agrega primero con «Agregar una receta».
+    /// </summary>
+    public static async Task<(bool Found, ApiError? Error)> AcceptPick(Database db, long id, string? token, CancellationToken ct = default)
+    {
+        if (Picks(db).FirstOrDefault(p => p.Id == id) is not { } pick) return (false, null);
+        if (pick.Recipe is null || Recipes.Get(db, pick.Recipe) is not { } json) return (true, ApiError.Of("review.pick.noRecipe", ("repo", pick.Repo ?? pick.Recipe ?? "")));
+        var target = JsonNode.Parse(json)!.AsObject();
+        var item = new JsonObject { ["game"] = pick.Game, ["gameId"] = pick.GameId, ["source"] = pick.Source };
+        var list = target["recommendedFor"]?.AsArray() ?? [];
+        target["recommendedFor"] = new JsonArray([.. list.Where(g => (long?)g?["gameId"] != pick.GameId).Select(g => g!.DeepClone()), item]);
+        // La receta nueva primero: si no se puede guardar (esquema o release), no cambia nada.
+        if (await Recipes.Save(db, pick.Recipe, target.ToJsonString(), false, token, ct) is { } error) return (true, error);
+
+        using var c = db.Open();
+        // shortcut: recommendedFor no dice la consola; una receta de varias consolas pierde el juego en todas, si hace falta guardar la consola en cada entrada.
+        foreach (var other in c.Query<string>("SELECT json FROM recipe WHERE id <> @Recipe", new { pick.Recipe }).Select(x => JsonNode.Parse(x)!.AsObject()))
+        {
+            if (other["consoles"]?.AsArray().Any(k => (string?)k == pick.Console) != true || other["recommendedFor"] is not JsonArray games
+                || !games.Any(g => (long?)g?["gameId"] == pick.GameId)) continue;
+            var rest = games.Where(g => (long?)g?["gameId"] != pick.GameId).Select(g => g!.DeepClone()).ToArray();
+            if (rest.Length > 0) other["recommendedFor"] = new JsonArray(rest); else other.Remove("recommendedFor");
+            using var doc = JsonDocument.Parse(other.ToJsonString());
+            Recipes.Store(c, doc.RootElement, JsonSerializer.Serialize(doc.RootElement, Recipes.Indented).ReplaceLineEndings("\n") + "\n");
+        }
+        c.Execute("UPDATE review_item SET status = 'approved' WHERE id = @id", new { id });
+        return (true, null);
+    }
+
     /// <summary>Descarta un aviso o rechaza un candidato. Un fork rechazado queda visto: no vuelve a salir. False si no existe o ya se resolvió.</summary>
     public static bool Dismiss(Database db, long id)
     {
         using var c = db.Open();
-        var data = c.ExecuteScalar<string?>("SELECT data FROM review_item WHERE id = @id AND entity IN ('recipe', 'fork') AND status = 'open'", new { id });
+        var data = c.ExecuteScalar<string?>("SELECT data FROM review_item WHERE id = @id AND entity IN ('recipe', 'fork', 'emulatorPick') AND status = 'open'", new { id });
         if (data is null) return false;
         c.Execute("UPDATE review_item SET status = 'rejected' WHERE id = @id", new { id });
         if ((string?)JsonNode.Parse(data)!["url"] is { } url)

@@ -532,7 +532,8 @@
     "unknown": "Something went wrong ({code}).",
     "review": {
       "noOriginal": "The original recipe {recipe} no longer exists.",
-      "chooseFile": "Choose which of the release's Windows files the recipe uses."
+      "chooseFile": "Choose which of the release's Windows files the recipe uses.",
+      "pick": { "noRecipe": "That recommendation has no recipe: add it first ({repo})." }
     },
     "recipes": {
       "badJson": "The recipe is not valid JSON: {detail}",
@@ -1328,7 +1329,15 @@
       "learnings": "Learnings ({count})",
       "forks": "Forks ({count})",
       "ports": "Ports ({count})",
-      "recipes": "Recipes ({count})"
+      "recipes": "Recipes ({count})",
+      "picks": "Emulator per game ({count})"
+    },
+    "picksEmptyTitle": "No emulators to review",
+    "picksEmptyText": "A game's «Find the best emulator» leaves here what Claude recommends.",
+    "pick": {
+      "noRecipe": "No recipe: {repo}", "source": "Source", "accept": "Accept", "addRecipe": "Add the recipe",
+      "acceptHint": "It becomes the recipe's recommendation for this game and console, and leaves the one that had it. It goes out with «Publish all».",
+      "addHint": "This emulator has no recipe: add it, then accept.", "dismiss": "Dismiss"
     },
     "forksEmptyTitle": "No forks to review",
     "forksEmptyText": "The Emulators task leaves here the forks that passed the filters.",

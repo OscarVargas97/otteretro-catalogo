@@ -58,6 +58,7 @@ export type GameRecipe = Schemas["GameRecipe"];
 export type BestEmulatorGame = Schemas["BestEmulatorGame"];
 export type RecipeInfo = Schemas["RecipeInfo"];
 export type ForkCandidate = Schemas["ForkCandidate"];
+export type EmulatorPick = Schemas["EmulatorPick"];
 export type PortCandidate = Schemas["PortCandidate"];
 export type RecipeNotice = Schemas["RecipeNotice"];
 export type RecipeText = Schemas["RecipeText"];

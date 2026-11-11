@@ -532,7 +532,8 @@
     "unknown": "Algo salió mal ({code}).",
     "review": {
       "noOriginal": "La receta original {recipe} ya no existe.",
-      "chooseFile": "Elige cuál de los archivos de Windows de la release usa la receta."
+      "chooseFile": "Elige cuál de los archivos de Windows de la release usa la receta.",
+      "pick": { "noRecipe": "Esa recomendación no tiene receta: agrégala primero ({repo})." }
     },
     "recipes": {
       "badJson": "La receta no es un JSON válido: {detail}",
@@ -1328,7 +1329,15 @@
       "learnings": "Aprendizajes ({count})",
       "forks": "Forks ({count})",
       "ports": "Ports ({count})",
-      "recipes": "Recetas ({count})"
+      "recipes": "Recetas ({count})",
+      "picks": "Emulador por juego ({count})"
+    },
+    "picksEmptyTitle": "Sin emuladores por revisar",
+    "picksEmptyText": "«Buscar el mejor emulador» de un juego deja aquí lo que recomienda Claude.",
+    "pick": {
+      "noRecipe": "Sin receta: {repo}", "source": "Fuente", "accept": "Aceptar", "addRecipe": "Agregar la receta",
+      "acceptHint": "Queda como el recomendado de la receta para este juego y consola, y sale de la que lo tenía. Sale con «Publicar todo».",
+      "addHint": "Este emulador no tiene receta: agrégala y luego acepta.", "dismiss": "Descartar"
     },
     "forksEmptyTitle": "Sin forks por revisar",
     "forksEmptyText": "La tarea Emuladores deja aquí los forks que pasaron los filtros.",
