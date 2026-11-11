@@ -85,9 +85,9 @@
       "type": "object", "additionalProperties": false, "required": ["source"],
       "description": "Dónde publica sus versiones, para avisar de las nuevas (decisión 294)",
       "properties": {
-        "source": { "enum": ["github", "forgejo", "dolphin"], "description": "github y forgejo: sus releases (las prereleases son de desarrollo); dolphin: su servidor de actualizaciones" },
+        "source": { "enum": ["github", "forgejo", "gitlab", "dolphin"], "description": "github, forgejo y gitlab: sus releases (las prereleases son de desarrollo); dolphin: su servidor de actualizaciones" },
         "repo": { "type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$" },
-        "host": { "type": "string", "description": "Con forgejo: el servidor (codeberg.org)" },
+        "host": { "type": "string", "description": "Con forgejo o gitlab: el servidor (codeberg.org, gitlab.com)" },
         "dev": { "type": "boolean", "description": "También avisa de las versiones de desarrollo (como mucho una vez por semana)" },
         "devRepo": { "type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$", "description": "Las versiones de desarrollo están en otro repo del mismo servidor (Ryubing Canary). Sin dev, no se avisa de ellas: se piden a mano" },
         "devPattern": { "type": "string", "format": "regex", "description": "Los tags que cuentan como de desarrollo aunque no vengan marcados como prerelease (Eden: -rc)" }

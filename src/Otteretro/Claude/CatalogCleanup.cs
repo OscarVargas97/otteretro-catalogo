@@ -111,6 +111,7 @@ public static partial class CatalogCleanup
                 ApiError.Of("tasks.claude.cleanup", ("done", reviewed.ToString()), ("total", job.Total.ToString())),
                 JsonSerializer.Serialize(job, JsonSerializerOptions.Web));
         }
+        IgdbImport.DropEmptySagas(run); // las que quedaron vacías al mover sus juegos (#155)
     }
 
     /// <summary>El orden: primero tus sagas, después las icónicas y las más grandes; las de un solo juego no entran (§F2.9).</summary>

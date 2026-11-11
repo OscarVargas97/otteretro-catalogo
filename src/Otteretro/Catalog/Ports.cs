@@ -58,12 +58,13 @@ public static partial class Ports
     {
         var today = Today();
         using var http = Http();
+        await PortRecipes.AcceptOpen(run.Db); // lo que esperaba en Revisar, antes de que se pierda en una cancelación (#155)
         run.Report(0, ApiError.Of("ports.reading"));
         List<Entry> list;
         await using (var stream = await http.GetStreamAsync(Recompendium, ct))
             list = await ReadRecompendium(stream, today, ct);
-        var (added, delisted, merged) = Save(run.Db, list, "recompendium");
-        var (extras, _, mergedExtras) = Save(run.Db, Extras(today), null);
+        var (added, delisted, merged) = Save(run.Db, list, "recompendium", m => run.Log(m));
+        var (extras, _, mergedExtras) = Save(run.Db, Extras(today), null, m => run.Log(m));
         run.Log(ApiError.Of("ports.log.list", ("count", list.Count.ToString()), ("added", (added + extras).ToString()), ("delisted", delisted.ToString())));
         if (merged + mergedExtras > 0) run.Log(ApiError.Of("ports.log.merged", ("count", (merged + mergedExtras).ToString())), "warn");
 
@@ -107,15 +108,24 @@ public static partial class Ports
     internal static bool Known(HashSet<string> links, string link) => links.Contains(Key(link));
 
     /// <summary>
+    /// Solo entran los ports de las consolas del catálogo (#155): lo de otras consolas no se guarda, y lo que ya estaba se borra si no tiene receta.
     /// Suma a la lista lo que no estaba (por enlace) y pone al día lo que es de la misma fuente; lo de otra fuente no se toca. Con
     /// <paramref name="replace"/>, lo de esa fuente que ya no viene no se quita: queda marcado «ya no listado» y vuelve si reaparece.
     /// Una decompilación que pasa a tener port toma la fecha de hoy: es una novedad. Nunca toca el cruce.
     /// </summary>
-    internal static (int Added, int Delisted, int Merged) Save(Database db, List<Entry> entries, string? replace)
+    internal static (int Added, int Delisted, int Merged) Save(Database db, List<Entry> entries, string? replace, Action<ApiError>? log = null)
     {
         using var c = db.Open();
-        var rows = c.Query<(long Id, string Link, string Source)>("SELECT id, link, source FROM port ORDER BY id").ToList();
+        var consoles = c.Query<string>("SELECT id FROM console").ToHashSet();
+        entries = entries.Select(e => e with { Console = ConsoleId(e.Console) }).Where(e => consoles.Contains(e.Console)).ToList();
+        foreach (var alias in c.Query<string>("SELECT DISTINCT console FROM port").Where(x => ConsoleId(x) != x && consoles.Contains(ConsoleId(x))).ToList())
+            c.Execute("UPDATE port SET console = @to WHERE console = @alias", new { alias, to = ConsoleId(alias) });
+        var withRecipe = c.Query<string?>("SELECT json_extract(json, '$.port') FROM recipe").OfType<string>().Select(Key).ToHashSet();
+        foreach (var (id, link) in c.Query<(long, string)>("SELECT id, link FROM port WHERE console NOT IN (SELECT id FROM console)").ToList())
+            if (!withRecipe.Contains(Key(link))) c.Execute("DELETE FROM port WHERE id = @id", new { id });
+        var rows = c.Query<(long Id, string Link, string Source, string Status)>("SELECT id, link, source, status FROM port ORDER BY id").ToList();
         int added = 0, delisted = 0, merged = 0;
+        var changes = new List<ApiError>(); // se registran después del commit: el registro escribe en otra conexión
         using var t = c.BeginTransaction();
         // Dos filas del mismo enlace y la misma fuente son el mismo port (#149): queda la más vieja, que es la que ya se publicó.
         foreach (var extra in rows.GroupBy(r => (Key(r.Link), r.Source)).SelectMany(g => g.Skip(1)))
@@ -135,17 +145,22 @@ public static partial class Ports
                 added++;
             }
             else if (row.Source == e.Source)
+            {
+                // El estado de un port cambia con el tiempo (#155): queda en el registro, por ejemplo «playable → complete».
+                if (row.Status != e.Status) changes.Add(ApiError.Of("ports.log.status", ("game", e.Game), ("project", e.Project), ("from", row.Status), ("to", e.Status)));
                 c.Execute("""
                     UPDATE port SET console = @Console, game = @Game, project = @Project, kind = @Kind, toolchain = @Toolchain, status = @Status,
                         abandoned = @Abandoned, link = @Link, igdb_id = @IgdbId, delisted = 0,
                         added = CASE WHEN status = 'no-port' AND @Status <> 'no-port' THEN @Added ELSE added END
                     WHERE id = @Id
                     """, new { e.Console, e.Game, e.Project, e.Kind, e.Toolchain, e.Status, e.Abandoned, e.Link, e.IgdbId, e.Added, row.Id }, t);
+            }
         }
         if (replace is not null && entries.Count > 0)
             foreach (var (key, row) in existing.Where(x => x.Value.Source == replace && !seen.Contains(x.Key)))
                 delisted += c.Execute("UPDATE port SET delisted = 1 WHERE id = @Id AND delisted = 0", new { row.Id }, t);
         t.Commit();
+        if (log is not null) changes.ForEach(log);
         return (added, delisted, merged);
     }
 
@@ -159,14 +174,15 @@ public static partial class Ports
             .Select(x => new Entry(x.Console, x.Game, x.Project, x.Kind, x.Toolchain, x.Status, false, x.Link, x.Source, x.Added ?? today)).ToList();
     }
 
-    /// <summary>Las consolas de Recompendium que el catálogo llama distinto; las que no tiene quedan con su clave (y sin juego).</summary>
+    /// <summary>Las consolas de Recompendium que el catálogo llama distinto; las que no tiene quedan con su clave y no se guardan.</summary>
     internal static string ConsoleId(string? key) => key switch
     {
         null or "" => "pc",
         "gamecube" => "gc",
         "nds" => "ds",
         "gbc" => "gb",
-        "genesis" => "megadrive",
+        "virtualboy" => "vb",
+        "xboxone" => "xone",
         _ => key,
     };
 

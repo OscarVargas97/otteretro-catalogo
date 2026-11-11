@@ -25,13 +25,9 @@ public static class PortRecipes
 
     static string Key(string? host, string repo) => $"{host ?? "github.com"}/{repo}".ToLowerInvariant();
 
-    /// <summary>
-    /// El paso de la tarea: crea la receta de cada port con una release de Windows o de Linux. Antes convierte lo que esperaba en Revisar
-    /// (de antes de otteretro-catalogo#153). Devuelve cuántas recetas creó.
-    /// </summary>
-    public static async Task<int> Propose(TaskRun run, CancellationToken ct)
+    /// <summary>Convierte en receta lo que esperaba en Revisar (de antes de otteretro-catalogo#153). «Ports» lo hace al empezar (#155).</summary>
+    public static async Task<int> AcceptOpen(Database db)
     {
-        var db = run.Db;
         var created = 0;
         List<(long Id, string Data)> open;
         using (var c = db.Open()) open = c.Query<(long, string)>("SELECT id, data FROM review_item WHERE entity = 'port' AND status = 'open' ORDER BY id").ToList();
@@ -43,13 +39,24 @@ public static class PortRecipes
             c.Execute("UPDATE review_item SET status = 'approved' WHERE id = @id", new { id });
             Seen(db, Key(d.Host, d.Repo), d.Tag, "accepted");
         }
+        return created;
+    }
+
+    /// <summary>
+    /// El paso de la tarea: crea la receta de cada port con una release de Windows o de Linux. Antes convierte lo que esperaba en Revisar
+    /// (de antes de otteretro-catalogo#153). Devuelve cuántas recetas creó.
+    /// </summary>
+    public static async Task<int> Propose(TaskRun run, CancellationToken ct)
+    {
+        var db = run.Db;
+        var created = await AcceptOpen(db);
 
         var token = run.Credentials.Read("github.token") is { Length: > 0 } t ? t : null;
         HashSet<string> own, ownRepos; // los ports que ya tienen receta: por su enlace (#149) o, en una receta sin «port», por su repo
-        // ponytail: Forgejo solo en Codeberg y los servidores de las recetas; cualquier otro enlace (una web, GitLab) no es un repo con esta API.
+        // ponytail: Forgejo solo en Codeberg y los servidores de las recetas; otro enlace (una web) no es un repo: su repo lo busca Claude (#155).
         HashSet<string> hosts = new(StringComparer.OrdinalIgnoreCase) { "codeberg.org" };
         Dictionary<string, (string? Tag, string Result)> seen;
-        List<(long Id, string Console, string Game, string Project, string Link, string Folder)> ports;
+        List<(long Id, string Console, string Game, string Project, string Link, string Folder, string? Repo)> ports;
         using (var c = db.Open())
         {
             var recipes = c.Query<string>("SELECT json FROM recipe").Select(j => JsonNode.Parse(j)!).ToList();
@@ -59,14 +66,14 @@ public static class PortRecipes
             ownRepos = sources.Select(s => Key(s.Item1, s.Item2)).ToHashSet();
             hosts.UnionWith(sources.Where(s => s.Item1 is not null).Select(s => s.Item1!));
             seen = c.Query<(string Repo, string? Tag, string Result)>("SELECT repo, tag, result FROM port_recipe_seen").ToDictionary(x => x.Repo, x => (x.Tag, x.Result));
-            ports = c.Query<(long, string, string, string, string, string)>("""
-                SELECT p.id, p.console, p.game, p.project, p.link, COALESCE(k.name, p.console) FROM port p LEFT JOIN console k ON k.id = p.console
+            ports = c.Query<(long, string, string, string, string, string, string?)>("""
+                SELECT p.id, p.console, p.game, p.project, p.link, COALESCE(k.name, p.console), p.repo FROM port p LEFT JOIN console k ON k.id = p.console
                 WHERE p.game_id IS NOT NULL AND p.status <> 'no-port' AND p.delisted = 0 ORDER BY p.id
                 """).ToList();
         }
 
-        var todo = ports.Select(p => (p, src: Recipes.Source(p.Link)))
-            .Where(x => x.src is { } s && (s.Source == "github" || hosts.Contains(s.Host!)))
+        var todo = ports.Select(p => (p, src: Recipes.Source(p.Repo ?? p.Link))) // el repo que encontró Claude, si el enlace es una web (#155)
+            .Where(x => x.src is { } s && (s.Source is "github" or "gitlab" || hosts.Contains(s.Host!)))
             .Select(x => (x.p, x.src!.Value.Source, x.src.Value.Repo, x.src.Value.Host, key: Key(x.src.Value.Host, x.src.Value.Repo)))
             .Where(x => !own.Contains(Ports.Key(x.p.Link)) && !ownRepos.Contains(x.key) && !(seen.TryGetValue(x.key, out var s) && s.Result != "noWindows"))
             .DistinctBy(x => x.key).ToList();
