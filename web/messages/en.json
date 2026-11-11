@@ -18,7 +18,8 @@
     "pending": "{count, plural, one {# to review} other {# to review}}",
     "comingIn": "Coming in phase {phase}",
     "collapse": "Collapse menu",
-    "expand": "Expand menu"
+    "expand": "Expand menu",
+    "history": "Change history"
   },
   "topBar": {
     "catchUpConflicts": "{count} conflicts left from the last version",
@@ -1355,20 +1356,13 @@
     "openReview": "Open Review"
   },
   "review": {
-    "tabs": "Review sections",
-    "tab": {
-      "pending": "To approve ({count})",
-      "doubtful": "Doubtful ({count})",
-      "unidentified": "Unidentified ({count})",
-      "learnings": "Learnings ({count})",
-      "picks": "Emulator per game ({count})"
-    },
-    "picksEmptyTitle": "No emulators to review",
-    "picksEmptyText": "A game's «Find the best emulator» leaves here what Claude recommends.",
     "pick": {
-      "noRecipe": "No recipe: {repo}", "source": "Source", "accept": "Accept", "addRecipe": "Add the recipe",
+      "noRecipe": "No recipe: {repo}",
+      "source": "Source",
+      "addRecipe": "Add the recipe",
       "acceptHint": "It becomes the recipe's recommendation for this game and console, and leaves the one that had it. It goes out with «Publish all».",
-      "addHint": "This emulator has no recipe: add it, then accept.", "openRepo": "Open the repo", "dismiss": "Dismiss"
+      "addHint": "This emulator has no recipe: add it, then accept.",
+      "openRepo": "Open the repo"
     },
     "notice": {
       "gone": "The repo {repo} no longer exists.",
@@ -1380,8 +1374,6 @@
       "proposed": "Suggested pattern: {pattern}",
       "dismiss": "Dismiss the notice"
     },
-    "pendingEmptyTitle": "Nothing to approve",
-    "pendingEmptyText": "When Claude prepares a saga's routes, what's iconic or the best version, they'll show up here for you to approve.",
     "learningsEmptyTitle": "No learnings",
     "learningsEmptyText": "The changes Claude made to the catalog stay here, with their reason, so you can undo them.",
     "prompt": {
@@ -1393,15 +1385,7 @@
       "identificar-juego": "Identify file"
     },
     "approve": "Approve",
-    "approveAll": "Approve all ({count})",
-    "acceptAll": "Accept all",
-    "acceptAllConfirm": "Accept all? To approve: {pending}. Emulator per game (with a recipe): {picks}. Files and learnings are reviewed one by one.",
-    "approveAllConfirm": "Approve all {count} pending results? Each one is applied as if you approved it.",
-    "groupHint": "{count, plural, one {# result} other {# results}} · open it to see them one by one",
     "reject": "Reject",
-    "change": "Change",
-    "reason": "Why",
-    "date": "Date",
     "undo": "Undo",
     "undone": "Undone",
     "learning": {
@@ -1434,10 +1418,10 @@
     "correctPlaceholder": "What is wrong (Claude reads it in the next cleanup)",
     "send": "Undo and send to Claude",
     "cancel": "Cancel",
-    "rule": "Your correction: {text}",
+    "rule": "Learned rule: {text}",
     "openSaga": "Open saga",
     "count": "{count, plural, one {# change} other {# changes}}",
-    "edit": "Edit",
+    "edit": "Change the order",
     "approveEdited": "Approve as edited",
     "stepUp": "Move step {step} up",
     "stepDown": "Move step {step} down",
@@ -1445,18 +1429,38 @@
     "openClaude": "Open Settings › Claude",
     "aliased": "“{text}” is {game}",
     "files": {
-      "doubtfulEmptyTitle": "Nothing doubtful",
-      "doubtfulEmptyText": "When Claude assigns a file the scan did not recognize, it shows up here for you to confirm.",
-      "unidentifiedEmptyTitle": "Everything identified",
-      "unidentifiedEmptyText": "Files that neither the scan nor Claude recognize show up here for you to pick their game.",
-      "openCollection": "Open Collection",
       "proposed": "Claude says: {name}",
       "noProposal": "Claude did not know: {reason}",
       "assigned": "Assigned to",
-      "confirm": "Confirm",
       "change": "Change game",
       "search": "Search for the game",
       "noResults": "No {console} game with that name."
+    },
+    "intro": "What Claude proposed. Nothing changes in the catalog until you approve it; what you approve or reject can be undone for a few seconds.",
+    "filterType": "Type",
+    "all": "All",
+    "list": "To review",
+    "detail": "Detail",
+    "skip": "Skip",
+    "approveType": "Approve all {count} of {type}",
+    "type": {
+      "picks": "Emulator",
+      "doubtful": "Doubtful file",
+      "unidentified": "Unidentified"
+    },
+    "done": {
+      "approved": "Approved: {title}.",
+      "rejected": "Rejected: {title}.",
+      "resolved": "Game chosen for {title}.",
+      "approvedType": "Approved {count} of {type}."
+    },
+    "emptyTitle": "All reviewed",
+    "emptyText": "Claude's tasks will leave new things here: routes, iconic games, the best version and emulators.",
+    "history": {
+      "back": "Review",
+      "intro": "What Claude already changed in the catalog. Click a change to see why. If something is wrong, undo it or correct it with a note and Claude won't repeat it.",
+      "byClaude": "Claude, without going through Review",
+      "undoneByYou": "undone by you"
     }
   },
   "home": {

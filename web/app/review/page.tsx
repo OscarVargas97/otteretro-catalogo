@@ -3,23 +3,16 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useSearchParams } from "next/navigation";
-import { Suspense, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Empty } from "@/components/Shell";
 import { request } from "@/lib/client";
 import { useDescribeError } from "@/lib/i18n";
 import { Panels } from "@/components/Skeleton";
-import { Tabs } from "@/components/Tabs";
-import { usePaged } from "@/lib/paged";
 import { reviewQuery, sagaQuery } from "@/lib/queries";
 import { Cover, useConsoleName } from "@/components/Catalog";
 import { RecipeAdd } from "@/components/RecipeAdd";
 import { RecipeEditor } from "@/components/RecipeEditor";
-import type { EmulatorPick, FileReview, LearningItem, LearningPage, ReviewItem, ReviewPage, SearchResults } from "@/lib/types";
-
-// Forks, ports y avisos de recetas viven en Emuladores (#153).
-const TABS = ["pending", "doubtful", "unidentified", "picks", "learnings"] as const;
-type Tab = (typeof TABS)[number];
+import type { EmulatorPick, FileReview, ReviewItem, ReviewPage, SearchResults } from "@/lib/types";
 
 // Lo que trae cada resultado de Claude (F2.5): la forma depende del prompt.
 type Source = { title: string; url: string };
@@ -30,126 +23,212 @@ type Best = { bestVersionId: number; reason: string; versions: { versionId: numb
 type Kind = { kind: string; reason: string; before: string };
 type Text = { text: string };
 
-// La pestaña puede venir en la URL (/review/?tab=unidentified, desde el aviso de Inicio).
-export default function ReviewScreen() {
-  return <Suspense><Review /></Suspense>;
-}
+/** Una fila de la bandeja: lo de Claude por aprobar (type = su prompt), una recomendación de emulador (picks) o un archivo (doubtful, unidentified). */
+type Entry = { id: number; type: string; title: string; item?: ReviewItem; pick?: EmulatorPick; file?: FileReview };
+type Call = { path: string; body?: unknown };
+type Done = { ids: number[]; text: string; call: Call };
 
-/** Revisar (§2.1, D3): lo de Claude por aprobar, los archivos dudosos o sin identificar (#181) y los aprendizajes. */
-function Review() {
+// Lo aprobado o rechazado espera este rato antes de ir al servidor, para poder deshacerlo sin tocar el catálogo.
+const UNDO_MS = 8000;
+const FILE_TYPES = ["doubtful", "unidentified"];
+
+/**
+ * Revisar como bandeja (#164): lista corta a la izquierda y el detalle de uno a la derecha. Aprobar (A), Rechazar (R) y Saltar (S, ↑↓)
+ * con el teclado; lo hecho se puede deshacer hasta que se manda. Los archivos dudosos o sin identificar (#181) quedan como filtro,
+ * hasta confirmar si se revisan solo en Otteretro.
+ */
+export default function Review() {
   const t = useTranslations("review");
   const describe = useDescribeError();
+  const consoleName = useConsoleName();
   const cache = useQueryClient();
-  const asked = useSearchParams().get("tab");
-  const [tab, setTab] = useState<Tab>(TABS.includes(asked as Tab) ? (asked as Tab) : "pending");
   const page = useQuery(reviewQuery);
+  const [type, setType] = useState<string | null>(null);
+  const [selected, setSelected] = useState<number | null>(null);
+  const [hidden, setHidden] = useState<number[]>([]);
+  const [last, setLast] = useState<Done | null>(null);
+  const [routes, setRoutes] = useState<Route[] | null>(null);
+  const queued = useRef<Done | null>(null);
+  const listRef = useRef<HTMLDivElement>(null);
   const act = useMutation({
-    mutationFn: ({ path, body }: { path: string; body?: unknown }) =>
+    mutationFn: ({ path, body }: Call) =>
       request<ReviewPage>(path, { method: "POST", body: body === undefined ? undefined : JSON.stringify(body) }),
     onSuccess: (data) => {
       cache.setQueryData(["review"], data);
-      cache.invalidateQueries({ queryKey: ["learnings"] });
-      cache.invalidateQueries({ queryKey: ["recipes"] });
+      for (const key of ["learnings", "recipes", "saga", "home", "notices", "collection", "consoles", "game"]) cache.invalidateQueries({ queryKey: [key] });
       cache.invalidateQueries({ queryKey: ["review", "count"] });
-      cache.invalidateQueries({ queryKey: ["saga"] });
-      cache.invalidateQueries({ queryKey: ["home"] });
-      cache.invalidateQueries({ queryKey: ["notices"] });
-      cache.invalidateQueries({ queryKey: ["collection"] });
-      cache.invalidateQueries({ queryKey: ["consoles"] });
-      cache.invalidateQueries({ queryKey: ["game"] });
     },
   });
 
+  // Manda lo que esperaba; si falla, vuelve a la lista.
+  const flush = () => {
+    const done = queued.current;
+    queued.current = null;
+    setLast(null);
+    if (done) act.mutateAsync(done.call).catch(() => setHidden((h) => h.filter((id) => !done.ids.includes(id))));
+  };
+  const flushRef = useRef(flush);
+  flushRef.current = flush;
+  useEffect(() => {
+    if (!last) return;
+    const timer = setTimeout(() => flushRef.current(), UNDO_MS);
+    return () => clearTimeout(timer);
+  }, [last]);
+  useEffect(() => () => flushRef.current(), []); // al salir de la pantalla, lo pendiente se manda
+
+  const data = page.data;
+  const entries: Entry[] = data ? [
+    ...data.pending.map((i) => ({ id: Number(i.id), type: i.prompt, title: i.title, item: i })),
+    ...data.picks.map((p) => ({ id: Number(p.id), type: "picks", title: p.recipe ? p.recipeName || p.recipe : t("pick.noRecipe", { repo: p.repo ?? "" }), pick: p })),
+    ...data.files.map((f) => ({ id: Number(f.id), type: f.kind, title: f.path.split(/[\\/]/).pop() ?? f.path, file: f })),
+  ].filter((e) => !hidden.includes(e.id)) : [];
+  const shown = type && entries.some((e) => e.type === type) ? type : null;
+  const list = entries.filter((e) => !shown || e.type === shown);
+  const at = Math.max(0, list.findIndex((e) => e.id === selected));
+  const current = list[at] as Entry | undefined;
+  const near = (step: number) => (list.length > 1 ? list[(at + step + list.length) % list.length].id : null);
+  const label = (k: string) => t(FILE_TYPES.includes(k) || k === "picks" ? `type.${k as "picks"}` : `prompt.${k as "ruta-saga"}`);
+
+  useEffect(() => {
+    listRef.current?.querySelector('[aria-current="true"]')?.scrollIntoView({ block: "nearest" });
+  }, [current?.id]);
+
+  const select = (id: number | null) => { setSelected(id); setRoutes(null); };
+  const run = (ids: number[], text: string, call: Call) => {
+    flush();
+    queued.current = { ids, text, call };
+    setHidden((h) => [...h, ...ids]);
+    setLast(queued.current);
+  };
+  const undo = () => {
+    const done = queued.current;
+    if (!done) return;
+    queued.current = null;
+    setLast(null);
+    setHidden((h) => h.filter((id) => !done.ids.includes(id)));
+    select(done.ids[0]);
+  };
+  const close = (call: Call | null, verb: "approved" | "rejected" | "resolved") => {
+    if (!current || !call) return;
+    run([current.id], t(`done.${verb}`, { title: current.title }), call);
+    select(near(1));
+  };
+  const approveCall = (e: Entry): Call | null =>
+    e.item ? (routes ? { path: `/api/review/${e.id}/approve-edited`, body: { routes } } : { path: `/api/review/${e.id}/approve` })
+      : e.pick ? (e.pick.recipe ? { path: `/api/review/${e.id}/pick/accept` } : null)
+        : e.file?.kind === "doubtful" ? { path: `/api/review/${e.id}/file`, body: { gameId: null } } : null;
+  const rejectCall = (e: Entry): Call | null =>
+    e.item ? { path: `/api/review/${e.id}/reject` } : e.pick ? { path: `/api/review/${e.id}/dismiss` } : null;
+  const approve = () => current && close(approveCall(current), "approved");
+  const reject = () => current && close(rejectCall(current), "rejected");
+
+  // Teclas de la bandeja; no cuando se escribe en un campo.
+  const keys = useRef<(e: KeyboardEvent) => void>(() => {});
+  keys.current = (e) => {
+    if (e.ctrlKey || e.metaKey || e.altKey || e.defaultPrevented || !current) return;
+    if ((e.target as HTMLElement | null)?.closest?.("input, textarea, select, [contenteditable]")) return;
+    const go = { a: approve, r: reject, s: () => select(near(1)), arrowdown: () => select(near(1)), arrowup: () => select(near(-1)) }[e.key.toLowerCase()];
+    if (!go) return;
+    e.preventDefault();
+    go();
+  };
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => keys.current(e);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   if (page.isError) return <div className="content"><p className="error" role="alert">{describe(page.error)}</p></div>;
-  if (!page.data) return <div className="content" aria-busy="true"><Panels count={3} /></div>;
-  const { pending, activeLearnings, files, picks } = page.data;
-  const pendingItem = (item: ReviewItem) => (
-    <Pending key={item.id} item={item} busy={act.isPending}
-      approve={(routes) => act.mutate(routes ? { path: `/api/review/${item.id}/approve-edited`, body: { routes } } : { path: `/api/review/${item.id}/approve` })}
-      reject={() => act.mutate({ path: `/api/review/${item.id}/reject` })} />
-  );
-  const count = (k: Tab) => k === "pending" ? pending.length : k === "learnings" ? Number(activeLearnings) : k === "picks" ? picks.length : files.filter((f) => f.kind === k).length;
+  if (!data) return <div className="content" aria-busy="true"><Panels count={3} /></div>;
+
+  // «Aprobar las N» (reemplaza «Aceptar todo», #153): lo de Claude de un tipo, o los emuladores con receta. Los archivos, uno a uno.
+  const batch = shown && !FILE_TYPES.includes(shown) ? list.filter((e) => !e.pick || e.pick.recipe) : [];
+  const approveBatch = () => {
+    run(batch.map((e) => e.id), t("done.approvedType", { count: batch.length, type: label(shown!) }),
+      { path: shown === "picks" ? "/api/review/accept-all?tab=picks" : `/api/review/approve-all?prompt=${encodeURIComponent(shown!)}` });
+    setType(null);
+    select(null);
+  };
+  const types = [...new Set(entries.map((e) => e.type))];
 
   return (
     <div className="content">
-      <Tabs tabs={TABS.map((k) => ({ id: k, label: t(`tab.${k}`, { count: count(k) }) }))}
-        current={tab} onSelect={(k) => setTab(k as Tab)} label={t("tabs")} panel="review-panel" />
-      {act.error && <p className="error small" role="alert">{describe(act.error)}</p>}
-      {/* Aceptar todo (#153): lo de Claude y las recomendaciones de emulador con receta; los archivos y aprendizajes se ven uno a uno. */}
-      {pending.length + picks.length > 0 && <div className="hero-actions">
-        <button className="ot-btn" type="button" disabled={act.isPending}
-          onClick={() => confirm(t("acceptAllConfirm", { pending: pending.length, picks: picks.filter((p) => p.recipe).length })) && act.mutate({ path: "/api/review/accept-all" })}>
-          {t("acceptAll")}</button>
-      </div>}
-      <div id="review-panel" role="tabpanel" aria-labelledby={`tab-${tab}`} style={{ display: "contents" }}>
-
-      {tab === "pending" && (pending.length === 0
-        ? <Empty title={t("pendingEmptyTitle")} text={t("pendingEmptyText")}><Link className="ot-btn" href="/settings/?s=claude">{t("openClaude")}</Link></Empty>
-        : <>
-          <div className="hero-actions">
-            <button className="ot-btn ot-btn-primary" type="button" disabled={act.isPending}
-              onClick={() => confirm(t("approveAllConfirm", { count: pending.length })) && act.mutate({ path: "/api/review/approve-all" })}>
-              {t("approveAll", { count: pending.length })}</button>
-          </div>
-          {/* Lo que no es de saga (mejor versión, clasificar, traducir) va agrupado por tipo y plegado (#56). */}
-          {Object.entries(Object.groupBy(pending.filter((i) => i.entity !== "saga"), (i) => i.prompt)).map(([prompt, items = []]) => (
-            <details key={prompt} className="panel">
-              <summary className="sec-h">
-                <h2>{t(`prompt.${prompt as "ruta-saga"}`)}</h2>
-                <span className="small muted">{t("groupHint", { count: items.length })}</span>
-                <button className="ot-btn ot-btn-primary" type="button" disabled={act.isPending}
-                  onClick={(e) => { e.preventDefault(); act.mutate({ path: `/api/review/approve-all?prompt=${encodeURIComponent(prompt)}` }); }}>
-                  {t("approveAll", { count: items.length })}</button>
-              </summary>
-              {items.map(pendingItem)}
-            </details>
+      <p className="small muted" style={{ margin: 0 }}>{t("intro")}</p>
+      {entries.length > 0 && <div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "center", justifyContent: "space-between" }}>
+        <div className="chips" role="group" aria-label={t("filterType")}>
+          {[null, ...types].map((k) => (
+            <button key={k ?? "all"} className="chip" type="button" aria-pressed={shown === k} onClick={() => { setType(k); select(null); }}>
+              {k ? label(k) : t("all")} <span className="muted">{k ? entries.filter((e) => e.type === k).length : entries.length}</span>
+            </button>
           ))}
-          {pending.filter((i) => i.entity === "saga").map(pendingItem)}
-        </>)}
+        </div>
+        {batch.length > 1 && <button className="ot-btn" type="button" onClick={approveBatch}>{t("approveType", { count: batch.length, type: label(shown!) })}</button>}
+      </div>}
+      {last && <div className="panel" role="status" style={{ flexDirection: "row", alignItems: "center", gap: 12, padding: "10px 14px" }}>
+        <span className="small">{last.text}</span>
+        <button className="ot-btn ot-btn-ghost" type="button" onClick={undo}>{t("undo")}</button>
+      </div>}
+      {act.error && <p className="error small" role="alert">{describe(act.error)}</p>}
 
-      {(tab === "doubtful" || tab === "unidentified") && (count(tab) === 0
-        ? <Empty title={t(`files.${tab}EmptyTitle`)} text={t(`files.${tab}EmptyText`)}><Link className="ot-btn" href="/collection/">{t("files.openCollection")}</Link></Empty>
-        : files.filter((f) => f.kind === tab).map((f) => (
-          <FileItem key={f.id} file={f} busy={act.isPending} resolve={(gameId) => act.mutate({ path: `/api/review/${f.id}/file`, body: { gameId } })} />
-        )))}
-
-      {tab === "picks" && (picks.length === 0
-        ? <Empty title={t("picksEmptyTitle")} text={t("picksEmptyText")} />
-        : <>{picks.some((p) => p.recipe) && <div className="hero-actions">
-          <button className="ot-btn ot-btn-primary" type="button" disabled={act.isPending}
-            onClick={() => act.mutate({ path: "/api/review/accept-all?tab=picks" })}>{t("approveAll", { count: picks.filter((p) => p.recipe).length })}</button>
-        </div>}{picks.map((p) => (
-          <Pick key={p.id} pick={p} busy={act.isPending}
-            accept={() => act.mutate({ path: `/api/review/${p.id}/pick/accept` })} dismiss={() => act.mutate({ path: `/api/review/${p.id}/dismiss` })} />
-        ))}</>)}
-
-      {tab === "learnings" && <Learnings busy={act.isPending} undo={(id) => act.mutate({ path: `/api/learnings/${id}/undo` })}
-        onCorrected={(data) => { cache.setQueryData(["review"], data); cache.invalidateQueries({ queryKey: ["learnings"] }); }} />}
-      </div>
+      {!current ? (
+        <Empty title={t("emptyTitle")} text={t("emptyText")}><Link className="ot-btn" href="/settings/?s=claude">{t("openClaude")}</Link></Empty>
+      ) : (
+        <div className="inbox">
+          <div className="panel inbox-list" ref={listRef} role="list" aria-label={t("list")}>
+            {list.map((e) => (
+              <div key={e.id} role="listitem">
+                <button className="inbox-row" type="button" aria-current={e.id === current.id} onClick={() => select(e.id)}>
+                  <span style={{ display: "flex", gap: 8, alignItems: "center", minWidth: 0 }}>
+                    <span className="ot-badge ot-badge-info">{label(e.type)}</span><b className="one">{e.title}</b>
+                  </span>
+                  <span className="small muted one">
+                    {e.item ? <Summary item={e.item} /> : e.pick ? `${e.pick.game} · ${consoleName(e.pick.console)}` : consoleName(e.file!.console)}
+                  </span>
+                </button>
+              </div>
+            ))}
+          </div>
+          <section className="panel inbox-detail" aria-label={t("detail")}>
+            <div className="sec-h">
+              <h2>{current.item?.entity === "saga" ? <Link href={`/saga/?id=${current.item.entityId}`}>{current.title}</Link> : current.title}</h2>
+              <span className="ot-badge ot-badge-info">{label(current.type)}</span>
+            </div>
+            {current.item && (routes ? <RouteEditor routes={routes} onChange={setRoutes} /> : <Result item={current.item} />)}
+            {current.pick && <Pick key={current.id} pick={current.pick} />}
+            {current.file && <FileItem key={current.id} file={current.file} resolve={(gameId) => close({ path: `/api/review/${current.id}/file`, body: { gameId } }, "resolved")} />}
+            <div className="inbox-actions">
+              <button className="ot-btn ot-btn-primary" type="button" aria-keyshortcuts="A" disabled={!approveCall(current)} onClick={approve}>
+                {routes ? t("approveEdited") : t("approve")}<span className="kbd-hint" aria-hidden="true">A</span></button>
+              {current.item?.prompt === "ruta-saga" && <button className="ot-btn" type="button"
+                onClick={() => setRoutes(routes ? null : JSON.parse(current.item!.result) as Route[])}>{routes ? t("cancel") : t("edit")}</button>}
+              <button className="ot-btn" type="button" aria-keyshortcuts="R" disabled={!rejectCall(current)} onClick={reject}>
+                {t("reject")}<span className="kbd-hint" aria-hidden="true">R</span></button>
+              <button className="ot-btn ot-btn-ghost" type="button" aria-keyshortcuts="S" disabled={list.length < 2} onClick={() => select(near(1))}>
+                {t("skip")}<span className="kbd-hint" aria-hidden="true">S</span></button>
+            </div>
+          </section>
+        </div>
+      )}
     </div>
   );
 }
 
-/** Un resultado por aprobar. Las rutas se pueden editar antes (F2.21): subir, bajar o quitar pasos. */
-function Pending({ item, busy, approve, reject }: { item: ReviewItem; busy: boolean; approve: (routes?: Route[]) => void; reject: () => void }) {
+/** Una línea de lo que propone, para la fila de la bandeja. */
+function Summary({ item }: { item: ReviewItem }) {
   const t = useTranslations("review");
-  const [routes, setRoutes] = useState<Route[] | null>(null);
-  const editable = item.prompt === "ruta-saga";
-  return (
-    <section className="panel">
-      <div className="sec-h">
-        <h2>{item.entity === "saga" ? <Link href={`/saga/?id=${item.entityId}`}>{item.title}</Link> : item.title}</h2>
-        <span className="ot-badge ot-badge-info">{t(`prompt.${item.prompt as "ruta-saga"}`)}</span>
-      </div>
-      {routes ? <RouteEditor routes={routes} onChange={setRoutes} /> : <Result item={item} />}
-      <div className="hero-actions">
-        <button className="ot-btn ot-btn-primary" type="button" disabled={busy} onClick={() => approve(routes ?? undefined)}>{routes ? t("approveEdited") : t("approve")}</button>
-        {editable && !routes && <button className="ot-btn" type="button" onClick={() => setRoutes(JSON.parse(item.result) as Route[])}>{t("edit")}</button>}
-        {routes && <button className="ot-btn" type="button" onClick={() => setRoutes(null)}>{t("cancel")}</button>}
-        <button className="ot-btn" type="button" disabled={busy} onClick={reject}>{t("reject")}</button>
-      </div>
-    </section>
-  );
+  const tc = useTranslations("catalog");
+  const value: unknown = JSON.parse(item.result);
+  switch (item.prompt) {
+    case "ruta-saga": return (value as Route[]).map((r) => tc(`route.${r.kind}`)).join(" · ");
+    case "iconico": return (value as Iconic).iconic ? t("iconicYes") : t("iconicNo");
+    case "mejor-version": return (value as Best).reason;
+    case "clasificar-version": {
+      const v = value as Kind;
+      return `${tc(`kind.${v.before as "original"}`)} → ${tc(`kind.${v.kind as "original"}`)}`;
+    }
+    case "traducir-descripcion": return (value as Text).text;
+    default: return null;
+  }
 }
 
 function RouteEditor({ routes, onChange }: { routes: Route[]; onChange: (routes: Route[]) => void }) {
@@ -237,114 +316,33 @@ function Result({ item }: { item: ReviewItem }) {
 }
 
 /**
- * Aprendizajes (F2.12): cada cambio en claro, con filtros, agrupado por tarea; se deshace o se corrige con una nota para Claude.
- * Llega por tramos al bajar, ya filtrado por el servidor (#177).
- */
-function Learnings({ busy, undo, onCorrected }: { busy: boolean; undo: (id: number) => void; onCorrected: (page: ReviewPage) => void }) {
-  const t = useTranslations("review");
-  const [kind, setKind] = useState<string | null>(null);
-  const [query, setQuery] = useState("");
-  const text = query.trim();
-  const page = usePaged(["learnings", kind, text], (offset) => `/api/learnings?${new URLSearchParams({ ...(kind && { kind }), ...(text && { q: text }), offset: String(offset) })}`,
-    (p: LearningPage) => ({ items: p.items, total: Number(p.total) }));
-  if (page.data && page.total === 0 && !kind && !text) return <Empty title={t("learningsEmptyTitle")} text={t("learningsEmptyText")} />;
-  const groups = Map.groupBy(page.items, (l: LearningItem) => (l.taskId == null ? null : Number(l.taskId)));
-  return (
-    <>
-      <div className="chips" style={{ alignItems: "center" }}>
-        {([null, "move", "merge", "rename", "alias"] as const).map((k) => (
-          <button key={k ?? "all"} className="chip" type="button" aria-pressed={kind === k} onClick={() => setKind(k)}>
-            {k ? t(`kindFilter.${k}`) : t("filterAll")}
-          </button>
-        ))}
-        <input type="search" aria-label={t("search")} placeholder={t("search")} value={query} onChange={(e) => setQuery(e.target.value)} />
-      </div>
-      {[...groups].map(([task, items]) => (
-        <section key={task ?? "none"} className="sec">
-          <div className="sec-h"><h2>{task == null ? t("noTask") : t("task", { id: task })}</h2><span className="small muted">{t("count", { count: items.length })}</span></div>
-          {items.map((l) => <Learning key={l.id} l={l} busy={busy} undo={undo} onCorrected={onCorrected} />)}
-        </section>
-      ))}
-      {(!page.data || page.hasNextPage) && <Panels count={page.data ? 2 : 4} />}
-      <div ref={page.end} aria-hidden="true" />
-    </>
-  );
-}
-
-function Learning({ l, busy, undo, onCorrected }: { l: LearningItem; busy: boolean; undo: (id: number) => void; onCorrected: (page: ReviewPage) => void }) {
-  const t = useTranslations("review");
-  const describe = useDescribeError();
-  const [note, setNote] = useState<string | null>(null);
-  const correct = useMutation({
-    mutationFn: () => request<ReviewPage>(`/api/learnings/${l.id}/correct`, { method: "POST", body: JSON.stringify({ note }) }),
-    onSuccess: (data) => { setNote(null); onCorrected(data); },
-  });
-  const list = (names: string[]) => names.map((n) => n || t("loose")).join(", ");
-  const what = l.change === "alias" ? t("aliased", { text: l.nameBefore ?? "", game: l.nameAfter ?? "?" })
-    : l.change === "move"
-    ? t("moved", { games: list(l.games), from: list(l.from), to: l.toKind === "new" ? t("toNew", { name: l.to ?? "" }) : l.toKind === "none" ? t("toNone") : l.to ?? "" })
-    : l.change === "merge" ? t("merged", { games: list(l.games), kept: l.kept ?? "" })
-      : l.change === "rename" ? t("renamed", { before: l.nameBefore ?? "?", after: l.nameAfter ?? "" })
-        : t(`learning.${l.change as "move"}`);
-  return (
-    <div className={`panel${l.undone ? " is-unplayable" : ""}`} style={{ display: "grid", gap: 6 }}>
-      <div><b>{what}</b> <span className="small muted">#{l.id}</span>{l.undone && <> <span className="ot-badge">{t("undone")}</span></>}</div>
-      {l.reason && <span className="small muted">{l.reason}</span>}
-      {l.rules.map((r, i) => <span key={i} className="small">{t("rule", { text: r })}</span>)}
-      {note !== null ? (
-        <form style={{ display: "grid", gap: 6 }} onSubmit={(e) => { e.preventDefault(); correct.mutate(); }}>
-          <textarea rows={2} maxLength={500} aria-label={t("correct")} placeholder={t("correctPlaceholder")} value={note} onChange={(e) => setNote(e.target.value)} />
-          <div className="hero-actions">
-            <button className="ot-btn ot-btn-primary" type="submit" disabled={correct.isPending || note.trim() === ""}>{t("send")}</button>
-            <button className="ot-btn" type="button" onClick={() => setNote(null)}>{t("cancel")}</button>
-          </div>
-          {correct.error && <p className="error small" role="alert">{describe(correct.error)}</p>}
-        </form>
-      ) : (
-        <div className="hero-actions">
-          {l.sagaId != null && <Link className="ot-btn ot-btn-sm" href={`/saga/?id=${l.sagaId}`}>{t("openSaga")}</Link>}
-          {!l.undone && <button className="ot-btn ot-btn-sm" type="button" disabled={busy} onClick={() => undo(Number(l.id))}>{t("undo")}</button>}
-          {l.change !== "alias" && <button className="ot-btn ot-btn-sm" type="button" onClick={() => setNote("")}>{t("correct")}</button>}
-        </div>
-      )}
-    </div>
-  );
-}
-
-/**
  * Una recomendación de «Mejor emulador» (#131): receta, juego, consola, fuente y motivo. Sin receta, «Agregar la receta» abre «Agregar una
- * receta» (decisión 367) con el repo puesto; al guardarla, la recomendación la encuentra por su repo y ya se puede aceptar.
+ * receta» (decisión 367) con el repo puesto; al guardarla, la recomendación la encuentra por su repo y ya se puede aprobar.
  */
-function Pick({ pick, busy, accept, dismiss }: { pick: EmulatorPick; busy: boolean; accept: () => void; dismiss: () => void }) {
+function Pick({ pick }: { pick: EmulatorPick }) {
   const t = useTranslations("review");
   const consoleName = useConsoleName();
   const cache = useQueryClient();
   const [draft, setDraft] = useState<Record<string, unknown> | null>(null);
   const [adding, setAdding] = useState(false);
   return (
-    <section className="panel" style={{ display: "grid", gap: 6 }}>
-      <div className="sec-h">
-        <h2>{pick.recipe ? pick.recipeName || pick.recipe : t("pick.noRecipe", { repo: pick.repo ?? "" })}</h2>
-        <span className="ot-badge ot-badge-info"><Link href={`/game/?id=${pick.gameId}`}>{pick.game}</Link> · {consoleName(pick.console)}</span>
-      </div>
+    <>
+      <span className="small"><Link href={`/game/?id=${pick.gameId}`}>{pick.game}</Link> · {consoleName(pick.console)}</span>
       <span className="small">{pick.reason}</span>
       <span className="small muted">{t("pick.source")}: <a href={pick.source} target="_blank" rel="noreferrer">{pick.source}</a></span>
       <span className="small muted">{pick.recipe ? t("pick.acceptHint") : t("pick.addHint")}</span>
       <div className="hero-actions">
-        {pick.recipe
-          ? <button className="ot-btn ot-btn-primary" type="button" disabled={busy} onClick={accept}>{t("pick.accept")}</button>
-          : <button className="ot-btn ot-btn-primary" type="button" disabled={adding || !!draft} onClick={() => setAdding(true)}>{t("pick.addRecipe")}</button>}
-        <button className="ot-btn" type="button" disabled={busy} onClick={dismiss}>{t("pick.dismiss")}</button>
+        {!pick.recipe && <button className="ot-btn" type="button" disabled={adding || !!draft} onClick={() => setAdding(true)}>{t("pick.addRecipe")}</button>}
         {pick.repo && <a className="ot-btn" href={pick.repo} target="_blank" rel="noreferrer">{t("pick.openRepo")}</a>}
       </div>
       {adding && <RecipeAdd repo={pick.repo ?? ""} onDraft={(r) => { setAdding(false); setDraft(r); }} onCancel={() => setAdding(false)} />}
       {draft && <RecipeEditor recipe={draft} create onDone={() => { setDraft(null); cache.invalidateQueries({ queryKey: ["review"] }); }} />}
-    </section>
+    </>
   );
 }
 
-/** Un archivo en Dudosas o Sin identificar (#181): qué es, qué propuso Claude, confirmar o elegir el juego con el buscador. */
-function FileItem({ file, busy, resolve }: { file: FileReview; busy: boolean; resolve: (gameId: number | null) => void }) {
+/** Un archivo dudoso o sin identificar (#181): qué es, qué propuso Claude y el buscador para elegir otro juego. Aprobar confirma lo propuesto. */
+function FileItem({ file, resolve }: { file: FileReview; resolve: (gameId: number) => void }) {
   const t = useTranslations("review");
   const consoleName = useConsoleName();
   const [picking, setPicking] = useState(file.kind === "unidentified");
@@ -358,28 +356,25 @@ function FileItem({ file, busy, resolve }: { file: FileReview; busy: boolean; re
   // Solo los juegos que salen en la consola del archivo.
   const games = (search.data?.games ?? []).filter((g) => g.platforms.includes(file.console)).slice(0, 8);
   return (
-    <div className="panel" style={{ display: "grid", gap: 6 }}>
+    <>
       <div><span className="folder-path">{file.path}</span>{file.component && <span className="ot-badge" style={{ marginLeft: 6 }}>{file.component}</span>}</div>
       <span className="small muted">{consoleName(file.console)}{file.titleId ? ` · ${file.titleId}` : ""}</span>
       {file.proposed
         ? <span className="small">{t("files.proposed", { name: file.proposed })}{file.reason && <span className="muted"> · {file.reason}</span>}</span>
         : file.reason && <span className="small muted">{t("files.noProposal", { reason: file.reason })}</span>}
       {file.gameId != null && <span className="small">{t("files.assigned")} <Link href={`/game/?id=${file.gameId}`}>{file.gameName}</Link></span>}
-      <div className="hero-actions">
-        {file.kind === "doubtful" && <button className="ot-btn ot-btn-primary ot-btn-sm" type="button" disabled={busy} onClick={() => resolve(null)}>{t("files.confirm")}</button>}
-        {!picking && <button className="ot-btn ot-btn-sm" type="button" onClick={() => setPicking(true)}>{t("files.change")}</button>}
-      </div>
+      {!picking && <div className="hero-actions"><button className="ot-btn ot-btn-sm" type="button" onClick={() => setPicking(true)}>{t("files.change")}</button></div>}
       {picking && (
         <div style={{ display: "grid", gap: 6 }}>
           <input type="search" aria-label={t("files.search")} placeholder={t("files.search")} value={query} onChange={(e) => setQuery(e.target.value)} />
           {games.map((g) => (
-            <button key={g.id} className="ot-btn ot-btn-sm" type="button" style={{ justifySelf: "start" }} disabled={busy} onClick={() => resolve(Number(g.id))}>
+            <button key={g.id} className="ot-btn ot-btn-sm" type="button" style={{ justifySelf: "start" }} onClick={() => resolve(Number(g.id))}>
               {g.name}{g.year ? ` (${g.year})` : ""}
             </button>
           ))}
           {search.data && games.length === 0 && <span className="small muted">{t("files.noResults", { console: consoleName(file.console) })}</span>}
         </div>
       )}
-    </div>
+    </>
   );
 }

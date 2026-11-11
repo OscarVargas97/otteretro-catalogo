@@ -18,7 +18,8 @@
     "pending": "{count, plural, one {# por revisar} other {# por revisar}}",
     "comingIn": "Llega en la fase {phase}",
     "collapse": "Retraer el menú",
-    "expand": "Expandir el menú"
+    "expand": "Expandir el menú",
+    "history": "Historial de cambios"
   },
   "topBar": {
     "catchUpConflicts": "Quedan {count} conflictos de la última versión",
@@ -1355,20 +1356,13 @@
     "openReview": "Abrir Revisar"
   },
   "review": {
-    "tabs": "Secciones de Revisar",
-    "tab": {
-      "pending": "Por aprobar ({count})",
-      "doubtful": "Dudosas ({count})",
-      "unidentified": "Sin identificar ({count})",
-      "learnings": "Aprendizajes ({count})",
-      "picks": "Emulador por juego ({count})"
-    },
-    "picksEmptyTitle": "Sin emuladores por revisar",
-    "picksEmptyText": "«Buscar el mejor emulador» de un juego deja aquí lo que recomienda Claude.",
     "pick": {
-      "noRecipe": "Sin receta: {repo}", "source": "Fuente", "accept": "Aceptar", "addRecipe": "Agregar la receta",
+      "noRecipe": "Sin receta: {repo}",
+      "source": "Fuente",
+      "addRecipe": "Agregar la receta",
       "acceptHint": "Queda como el recomendado de la receta para este juego y consola, y sale de la que lo tenía. Sale con «Publicar todo».",
-      "addHint": "Este emulador no tiene receta: agrégala y luego acepta.", "openRepo": "Abrir el repo", "dismiss": "Descartar"
+      "addHint": "Este emulador no tiene receta: agrégala y luego acepta.",
+      "openRepo": "Abrir el repo"
     },
     "notice": {
       "gone": "El repo {repo} ya no existe.",
@@ -1380,8 +1374,6 @@
       "proposed": "Patrón propuesto: {pattern}",
       "dismiss": "Descartar el aviso"
     },
-    "pendingEmptyTitle": "Nada por aprobar",
-    "pendingEmptyText": "Cuando Claude prepare rutas, lo icónico o la mejor versión de una saga, aparecerán aquí para que los apruebes.",
     "learningsEmptyTitle": "Sin aprendizajes",
     "learningsEmptyText": "Aquí quedan los cambios que Claude aplicó al catálogo, con su razón, para deshacerlos.",
     "prompt": {
@@ -1393,15 +1385,7 @@
       "identificar-juego": "Identificar archivo"
     },
     "approve": "Aprobar",
-    "approveAll": "Aprobar todas ({count})",
-    "acceptAll": "Aceptar todo",
-    "acceptAllConfirm": "¿Aceptar todo? Por aprobar: {pending}. Emulador por juego (con receta): {picks}. Los archivos y los aprendizajes se ven uno a uno.",
-    "approveAllConfirm": "¿Aprobar los {count} resultados por revisar? Se aplican como si aprobaras cada uno.",
-    "groupHint": "{count, plural, one {# resultado} other {# resultados}} · ábrelo para verlos uno por uno",
     "reject": "Rechazar",
-    "change": "Cambio",
-    "reason": "Por qué",
-    "date": "Fecha",
     "undo": "Deshacer",
     "undone": "Deshecho",
     "learning": {
@@ -1434,10 +1418,10 @@
     "correctPlaceholder": "Qué está mal (Claude lo leerá en la próxima depuración)",
     "send": "Deshacer y enviar a Claude",
     "cancel": "Cancelar",
-    "rule": "Tu corrección: {text}",
+    "rule": "Regla aprendida: {text}",
     "openSaga": "Ver saga",
     "count": "{count, plural, one {# cambio} other {# cambios}}",
-    "edit": "Editar",
+    "edit": "Cambiar el orden",
     "approveEdited": "Aprobar como quedó",
     "stepUp": "Subir el paso {step}",
     "stepDown": "Bajar el paso {step}",
@@ -1445,18 +1429,38 @@
     "openClaude": "Abrir Ajustes › Claude",
     "aliased": "«{text}» es {game}",
     "files": {
-      "doubtfulEmptyTitle": "Nada dudoso",
-      "doubtfulEmptyText": "Cuando Claude asigne un archivo que el escaneo no reconoció, aparecerá aquí para que lo confirmes.",
-      "unidentifiedEmptyTitle": "Todo identificado",
-      "unidentifiedEmptyText": "Los archivos que ni el escaneo ni Claude reconozcan aparecerán aquí para que elijas su juego.",
-      "openCollection": "Abrir Colección",
       "proposed": "Claude dice: {name}",
       "noProposal": "Claude no supo: {reason}",
       "assigned": "Asignado a",
-      "confirm": "Confirmar",
       "change": "Cambiar juego",
       "search": "Buscar el juego",
       "noResults": "Ningún juego de {console} con ese nombre."
+    },
+    "intro": "Lo que Claude propuso. Nada cambia en el catálogo hasta que lo apruebes; lo aprobado o rechazado se puede deshacer unos segundos.",
+    "filterType": "Tipo",
+    "all": "Todo",
+    "list": "Por revisar",
+    "detail": "Detalle",
+    "skip": "Saltar",
+    "approveType": "Aprobar las {count} de {type}",
+    "type": {
+      "picks": "Emulador",
+      "doubtful": "Archivo dudoso",
+      "unidentified": "Sin identificar"
+    },
+    "done": {
+      "approved": "Aprobado: {title}.",
+      "rejected": "Rechazado: {title}.",
+      "resolved": "Juego elegido para {title}.",
+      "approvedType": "Aprobadas {count} de {type}."
+    },
+    "emptyTitle": "Todo revisado",
+    "emptyText": "Las tareas de Claude dejarán aquí lo nuevo: rutas, lo icónico, la mejor versión y los emuladores.",
+    "history": {
+      "back": "Revisar",
+      "intro": "Lo que Claude ya cambió en el catálogo. Pulsa un cambio para ver por qué. Si algo está mal, deshazlo o corrígelo con una nota y Claude no lo repite.",
+      "byClaude": "Claude, sin pasar por Revisar",
+      "undoneByYou": "deshecho por ti"
     }
   },
   "home": {
