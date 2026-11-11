@@ -3475,6 +3475,68 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/review/{id}/pick/accept": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: number;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ReviewPage"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ApiError"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/review/{id}/dismiss": {
         parameters: {
             query?: never;
@@ -5050,6 +5112,19 @@ export interface components {
             folder: string;
             suggested: boolean;
         };
+        EmulatorPick: {
+            /** Format: int64 */
+            id: number | string;
+            /** Format: int64 */
+            gameId: number | string;
+            game: string;
+            console: string;
+            recipe: null | string;
+            recipeName: null | string;
+            repo: null | string;
+            source: string;
+            reason: string;
+        };
         EnableConsoleRequest: {
             /** Format: int64 */
             igdbId: number | string;
@@ -5408,6 +5483,7 @@ export interface components {
             forks: components["schemas"]["ForkCandidate"][];
             notices: components["schemas"]["RecipeNotice"][];
             ports: components["schemas"]["PortCandidate"][];
+            picks: components["schemas"]["EmulatorPick"][];
         };
         Route: {
             kind: string;

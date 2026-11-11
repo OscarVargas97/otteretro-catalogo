@@ -3104,6 +3104,60 @@
         }
       }
     },
+    "/api/review/{id}/pick/accept": {
+      "post": {
+        "tags": [
+          "OtteretroCatalogo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReviewPage"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/review/{id}/dismiss": {
       "post": {
         "tags": [
@@ -5199,6 +5253,68 @@
           }
         }
       },
+      "EmulatorPick": {
+        "required": [
+          "id",
+          "gameId",
+          "game",
+          "console",
+          "recipe",
+          "recipeName",
+          "repo",
+          "source",
+          "reason"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int64"
+          },
+          "gameId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int64"
+          },
+          "game": {
+            "type": "string"
+          },
+          "console": {
+            "type": "string"
+          },
+          "recipe": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "recipeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "repo": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "source": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      },
       "EnableConsoleRequest": {
         "required": [
           "igdbId"
@@ -6851,7 +6967,8 @@
           "files",
           "forks",
           "notices",
-          "ports"
+          "ports",
+          "picks"
         ],
         "type": "object",
         "properties": {
@@ -6891,6 +7008,12 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PortCandidate"
+            }
+          },
+          "picks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmulatorPick"
             }
           }
         }
