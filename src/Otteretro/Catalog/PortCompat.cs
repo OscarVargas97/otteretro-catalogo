@@ -19,10 +19,27 @@ public static partial class PortCompat
     /// <summary>El emulador de referencia de cada consola (de `datos/emuladores.json`).</summary>
     static readonly Dictionary<string, string> Emulators = new()
     {
-        ["nes"] = "Mesen", ["snes"] = "bsnes / Mesen", ["n64"] = "ares / simple64", ["gc"] = "Dolphin", ["wii"] = "Dolphin", ["wiiu"] = "Cemu",
-        ["switch"] = "Ryubing", ["gb"] = "SameBoy", ["gba"] = "mGBA", ["ds"] = "melonDS", ["3ds"] = "Azahar", ["ps1"] = "DuckStation",
-        ["ps2"] = "PCSX2", ["ps3"] = "RPCS3", ["ps4"] = "shadPS4", ["psp"] = "PPSSPP", ["xbox"] = "xemu", ["x360"] = "Xenia Canary",
-        ["megadrive"] = "Genesis Plus GX", ["dreamcast"] = "Flycast", ["arcade"] = "MAME / FBNeo",
+        ["nes"] = "Mesen",
+        ["snes"] = "bsnes / Mesen",
+        ["n64"] = "ares / simple64",
+        ["gc"] = "Dolphin",
+        ["wii"] = "Dolphin",
+        ["wiiu"] = "Cemu",
+        ["switch"] = "Ryubing",
+        ["gb"] = "SameBoy",
+        ["gba"] = "mGBA",
+        ["ds"] = "melonDS",
+        ["3ds"] = "Azahar",
+        ["ps1"] = "DuckStation",
+        ["ps2"] = "PCSX2",
+        ["ps3"] = "RPCS3",
+        ["ps4"] = "shadPS4",
+        ["psp"] = "PPSSPP",
+        ["xbox"] = "xemu",
+        ["x360"] = "Xenia Canary",
+        ["megadrive"] = "Genesis Plus GX",
+        ["dreamcast"] = "Flycast",
+        ["arcade"] = "MAME / FBNeo",
     };
 
     /// <summary>Entre búsquedas de GitHub: 30 por minuto con token, 10 sin él. Las pruebas lo ponen en cero.</summary>
@@ -42,10 +59,15 @@ public static partial class PortCompat
 
     static readonly Dictionary<string, Source> Sources = new()
     {
-        ["gc"] = new(Dolphin, null), ["wii"] = new(Dolphin, null), ["ps2"] = new(Pcsx2, null), ["switch"] = new(Ryubing, null), ["xbox"] = new(Xemu, null),
+        ["gc"] = new(Dolphin, null),
+        ["wii"] = new(Dolphin, null),
+        ["ps2"] = new(Pcsx2, null),
+        ["switch"] = new(Ryubing, null),
+        ["xbox"] = new(Xemu, null),
         ["x360"] = new(null, Issues("xenia-project/game-compatibility", "state-", new() { ["playable"] = 2, ["gameplay"] = 1 })),
         ["ps4"] = new(null, Issues("shadps4-compatibility/shadps4-game-compatibility", "status-", new() { ["playable"] = 2, ["ingame"] = 1 })),
-        ["ps3"] = new(null, Rpcs3), ["wiiu"] = new(null, Cemu),
+        ["ps3"] = new(null, Rpcs3),
+        ["wiiu"] = new(null, Cemu),
     };
 
     public static async Task Fill(Database db, HttpClient http, string? token, Action<ApiError, string> log, CancellationToken ct)
