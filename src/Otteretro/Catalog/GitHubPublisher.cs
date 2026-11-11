@@ -115,16 +115,25 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
         var (owner, target) = await Target(createFork: true, ct);
         var tree = (await Must(HttpMethod.Get, $"repos/{Repo}/git/commits/{plan.Head}", null, ct))["tree"]!["sha"]!.GetValue<string>();
         // El contenido va dentro del árbol, de a tandas (#41): «Publicar todo» puede tocar miles de archivos, y un pedido por archivo
-        // tardaría mucho y gastaría el límite de GitHub. Cada tanda parte del árbol de la anterior.
-        foreach (var chunk in plan.Files.Chunk(TreeChunk))
+        // tardaría mucho y gastaría el límite de GitHub. Cada tanda parte del árbol de la anterior. #146: la tanda se corta también por
+        // tamaño, porque GitHub rechaza con un 422 un pedido grande (los archivos de sin-saga pesan ~1,5 MB cada uno).
+        var entries = new List<object>();
+        var size = 0L;
+        async Task Flush()
         {
-            var entries = new List<object>();
-            foreach (var (change, local) in chunk)
-                entries.Add(local is null
-                    ? new { path = $"{Folder}/{change.Path}", mode = "100644", type = "blob", sha = (string?)null }
-                    : new { path = $"{Folder}/{change.Path}", mode = "100644", type = "blob", content = await File.ReadAllTextAsync(local, ct) });
             tree = (await Must(HttpMethod.Post, $"repos/{target}/git/trees", new { base_tree = tree, tree = entries }, ct))["sha"]!.GetValue<string>();
+            (entries, size) = ([], 0);
         }
+        foreach (var (change, local) in plan.Files)
+        {
+            var content = local is null ? null : await File.ReadAllTextAsync(local, ct);
+            if (entries.Count > 0 && (entries.Count == TreeChunk || size + (content?.Length ?? 0) > TreeBytes)) await Flush();
+            entries.Add(content is null
+                ? new { path = $"{Folder}/{change.Path}", mode = "100644", type = "blob", sha = (string?)null }
+                : new { path = $"{Folder}/{change.Path}", mode = "100644", type = "blob", content });
+            size += content?.Length ?? 0;
+        }
+        await Flush();
         var commit = await Must(HttpMethod.Post, $"repos/{target}/git/commits",
             new { message = $"feat(catalogo): {plan.Title}", tree, parents = new[] { plan.Head } }, ct);
         var sha = commit["sha"]!.GetValue<string>();
@@ -148,6 +157,8 @@ public sealed class GitHubPublisher(Database db, string token, HttpMessageHandle
 
     /// <summary>Archivos por pedido al armar el árbol: unos 200 archivos de saga son 1 a 2 MB.</summary>
     const int TreeChunk = 200;
+    /// <summary>Caracteres de contenido por pedido al armar el árbol (#146): con 8 MB GitHub responde bien, con 50 MB da un 422.</summary>
+    public long TreeBytes { get; init; } = 4_000_000;
     /// <summary>Con más archivos que esto, el cuerpo del PR no los lista: el resumen de cambios lo comenta la revisión del PR (#32).</summary>
     const int ListedFiles = 100;
 
