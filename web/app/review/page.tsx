@@ -13,9 +13,11 @@ import { Tabs } from "@/components/Tabs";
 import { usePaged } from "@/lib/paged";
 import { reviewQuery, sagaQuery } from "@/lib/queries";
 import { Cover, useConsoleName } from "@/components/Catalog";
-import type { FileReview, ForkCandidate, PortCandidate, LearningItem, LearningPage, ReviewItem, RecipeNotice, ReviewPage, SearchResults } from "@/lib/types";
+import { RecipeAdd } from "@/components/RecipeAdd";
+import { RecipeEditor } from "@/components/RecipeEditor";
+import type { EmulatorPick, FileReview, ForkCandidate, PortCandidate, LearningItem, LearningPage, ReviewItem, RecipeNotice, ReviewPage, SearchResults } from "@/lib/types";
 
-const TABS = ["pending", "doubtful", "unidentified", "forks", "ports", "recipes", "learnings"] as const;
+const TABS = ["pending", "doubtful", "unidentified", "forks", "ports", "picks", "recipes", "learnings"] as const;
 type Tab = (typeof TABS)[number];
 
 // Lo que trae cada resultado de Claude (F2.5): la forma depende del prompt.
@@ -59,13 +61,13 @@ function Review() {
 
   if (page.isError) return <div className="content"><p className="error" role="alert">{describe(page.error)}</p></div>;
   if (!page.data) return <div className="content" aria-busy="true"><Panels count={3} /></div>;
-  const { pending, activeLearnings, files, forks, ports, notices } = page.data;
+  const { pending, activeLearnings, files, forks, ports, notices, picks } = page.data;
   const pendingItem = (item: ReviewItem) => (
     <Pending key={item.id} item={item} busy={act.isPending}
       approve={(routes) => act.mutate(routes ? { path: `/api/review/${item.id}/approve-edited`, body: { routes } } : { path: `/api/review/${item.id}/approve` })}
       reject={() => act.mutate({ path: `/api/review/${item.id}/reject` })} />
   );
-  const count = (k: Tab) => k === "pending" ? pending.length : k === "learnings" ? Number(activeLearnings) : k === "forks" ? forks.length : k === "ports" ? ports.length : k === "recipes" ? notices.length : files.filter((f) => f.kind === k).length;
+  const count = (k: Tab) => k === "pending" ? pending.length : k === "learnings" ? Number(activeLearnings) : k === "forks" ? forks.length : k === "ports" ? ports.length : k === "picks" ? picks.length : k === "recipes" ? notices.length : files.filter((f) => f.kind === k).length;
 
   return (
     <div className="content">
@@ -116,6 +118,13 @@ function Review() {
         : ports.map((c) => (
           <Port key={c.id} port={c} busy={act.isPending}
             accept={(file) => act.mutate({ path: `/api/review/${c.id}/port/accept`, body: { file } })} reject={() => act.mutate({ path: `/api/review/${c.id}/port/dismiss` })} />
+        )))}
+
+      {tab === "picks" && (picks.length === 0
+        ? <Empty title={t("picksEmptyTitle")} text={t("picksEmptyText")} />
+        : picks.map((p) => (
+          <Pick key={p.id} pick={p} busy={act.isPending}
+            accept={() => act.mutate({ path: `/api/review/${p.id}/pick/accept` })} dismiss={() => act.mutate({ path: `/api/review/${p.id}/dismiss` })} />
         )))}
 
       {tab === "recipes" && (notices.length === 0
@@ -360,6 +369,38 @@ function Port({ port, busy, accept, reject }: { port: PortCandidate; busy: boole
         <button className="ot-btn" type="button" disabled={busy} onClick={reject}>{t("port.dismiss")}</button>
         <a className="ot-btn" href={port.url} target="_blank" rel="noreferrer">{t("fork.openRepo")}</a>
       </div>
+    </section>
+  );
+}
+
+/**
+ * Una recomendación de «Mejor emulador» (#131): receta, juego, consola, fuente y motivo. Sin receta, «Agregar la receta» abre «Agregar una
+ * receta» (decisión 367) con el repo puesto; al guardarla, la recomendación la encuentra por su repo y ya se puede aceptar.
+ */
+function Pick({ pick, busy, accept, dismiss }: { pick: EmulatorPick; busy: boolean; accept: () => void; dismiss: () => void }) {
+  const t = useTranslations("review");
+  const consoleName = useConsoleName();
+  const cache = useQueryClient();
+  const [draft, setDraft] = useState<Record<string, unknown> | null>(null);
+  const [adding, setAdding] = useState(false);
+  return (
+    <section className="panel" style={{ display: "grid", gap: 6 }}>
+      <div className="sec-h">
+        <h2>{pick.recipe ? pick.recipeName || pick.recipe : t("pick.noRecipe", { repo: pick.repo ?? "" })}</h2>
+        <span className="ot-badge ot-badge-info"><Link href={`/game/?id=${pick.gameId}`}>{pick.game}</Link> · {consoleName(pick.console)}</span>
+      </div>
+      <span className="small">{pick.reason}</span>
+      <span className="small muted">{t("pick.source")}: <a href={pick.source} target="_blank" rel="noreferrer">{pick.source}</a></span>
+      <span className="small muted">{pick.recipe ? t("pick.acceptHint") : t("pick.addHint")}</span>
+      <div className="hero-actions">
+        {pick.recipe
+          ? <button className="ot-btn ot-btn-primary" type="button" disabled={busy} onClick={accept}>{t("pick.accept")}</button>
+          : <button className="ot-btn ot-btn-primary" type="button" disabled={adding || !!draft} onClick={() => setAdding(true)}>{t("pick.addRecipe")}</button>}
+        <button className="ot-btn" type="button" disabled={busy} onClick={dismiss}>{t("pick.dismiss")}</button>
+        {pick.repo && <a className="ot-btn" href={pick.repo} target="_blank" rel="noreferrer">{t("fork.openRepo")}</a>}
+      </div>
+      {adding && <RecipeAdd repo={pick.repo ?? ""} onDraft={(r) => { setAdding(false); setDraft(r); }} onCancel={() => setAdding(false)} />}
+      {draft && <RecipeEditor recipe={draft} create onDone={() => { setDraft(null); cache.invalidateQueries({ queryKey: ["review"] }); }} />}
     </section>
   );
 }
