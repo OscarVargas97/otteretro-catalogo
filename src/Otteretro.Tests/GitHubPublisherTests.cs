@@ -318,7 +318,8 @@ public class GitHubPublisherTests
         {
             Directory.CreateDirectory(Path.Combine(folder, Published.RecipesFolder));
             File.WriteAllText(Path.Combine(folder, Published.RecipesFolder, "mgba.json"), mgba);
-        }), canPush: true) { Zips = { ["base0"] = MainZip(f) } };
+        }), canPush: true)
+        { Zips = { ["base0"] = MainZip(f) } };
         GitHubPublisher.SetBase(f.Db, "base0");
         var local = Directory.CreateDirectory(f.Tmp["recetas-traidas"]).FullName;
         File.WriteAllText(Path.Combine(local, "mgba.json"), mgba.Replace("\"mGBA\"", "\"mGBA dev\""));

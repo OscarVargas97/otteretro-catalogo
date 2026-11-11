@@ -129,7 +129,13 @@ public static class PortRecipes
         var exe = file is not null && file.EndsWith(".exe", StringComparison.OrdinalIgnoreCase) ? file : d.Repo.Split('/')[1] + ".exe";
         var r = new JsonObject
         {
-            ["id"] = id, ["name"] = d.Project, ["kind"] = "port", ["folder"] = d.Folder, ["game"] = d.Game, ["detect"] = exe, ["experimental"] = true,
+            ["id"] = id,
+            ["name"] = d.Project,
+            ["kind"] = "port",
+            ["folder"] = d.Folder,
+            ["game"] = d.Game,
+            ["detect"] = exe,
+            ["experimental"] = true,
             ["updates"] = updates,
         };
         if (file is not null) r["asset"] = Recipes.AssetPattern(file);

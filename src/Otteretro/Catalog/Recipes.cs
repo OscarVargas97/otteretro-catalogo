@@ -63,7 +63,7 @@ public static partial class Recipes
             r["consoles"]?.AsArray().Select(x => (string)x!).ToList() ?? [], local, RepoUrl(r), (string?)r["forkOf"]);
     }
 
-    static string? RepoUrl(JsonNode r) => (string?)r["updates"]?["repo"] is { } repo
+    internal static string? RepoUrl(JsonNode r) => (string?)r["updates"]?["repo"] is { } repo
         ? (string?)r["updates"]?["source"] switch { "github" => "https://github.com/" + repo, "forgejo" when (string?)r["updates"]?["host"] is { } h => $"https://{h}/{repo}", _ => null }
         : null;
 

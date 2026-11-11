@@ -22,8 +22,8 @@ public class CatalogTasksTests : IAsyncDisposable
     public void TheyAreListedInTheNightOrder()
     {
         var list = CatalogTasks.List(f.Db);
-        Assert.Equal(["igdb", "codes", "ports", "portSearch", "emulators", "cleanup", "iconic", "routes", "best", "translate", "images"], list.Select(t => t.Id));
-        Assert.Equal(7, list.Count(t => t.Model is not null)); // con Claude
+        Assert.Equal(["igdb", "codes", "ports", "portSearch", "emulators", "emulatorsBest", "cleanup", "iconic", "routes", "best", "translate", "images"], list.Select(t => t.Id));
+        Assert.Equal(8, list.Count(t => t.Model is not null)); // con Claude
         Assert.All(list, t => Assert.True(t.Auto));
         Assert.Equal(7, list[0].Days);
     }
