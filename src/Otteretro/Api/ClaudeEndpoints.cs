@@ -109,6 +109,12 @@ public static class ClaudeEndpoints
             Db(s) is { } db ? TypedResults.Ok(CatalogTasks.PendingCounts(db)) : NoData());
         api.MapPut("/catalog-tasks/{id}", Results<Ok<List<CatalogTaskInfo>>, NotFound, Conflict<ApiError>> (string id, CatalogTaskRequest request, AppSession s) =>
             Db(s) is not { } db ? NoData() : CatalogTasks.Save(db, id, request) ? TypedResults.Ok(CatalogTasks.List(db)) : TypedResults.NotFound());
+        api.MapPost("/catalog-tasks/run", Results<Ok<List<CatalogTaskInfo>>, Conflict<ApiError>> (AppSession s) =>
+        {
+            if (Db(s) is not { } db) return NoData();
+            CatalogTasks.RunAll(db);
+            return TypedResults.Ok(CatalogTasks.List(db));
+        });
         api.MapPost("/catalog-tasks/{id}/run", Results<Ok<List<CatalogTaskInfo>>, NotFound, Conflict<ApiError>> (string id, AppSession s, string? console) =>
             Db(s) is not { } db ? NoData() : CatalogTasks.Run(db, id, console) ? TypedResults.Ok(CatalogTasks.List(db)) : TypedResults.NotFound());
 

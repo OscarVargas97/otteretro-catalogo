@@ -40,17 +40,18 @@ public static class CatalogTasks
     }
 
     /// <summary>
-    /// Todas, en el orden de la noche: IGDB → códigos → ports → buscar ports → emuladores → depurar → icónico → rutas → mejor versión → traducir → imágenes. Icónico va
-    /// antes que rutas porque historia y comunidad se piden solo para las icónicas (#54).
+    /// Todas, en el orden de la noche: IGDB → códigos → buscar ports → ports → emuladores → depurar → icónico → rutas → mejor versión → traducir → imágenes. Icónico va
+    /// antes que rutas porque historia y comunidad se piden solo para las icónicas (#54). Buscar ports va antes que ports para que las
+    /// recetas de los repos que encuentra salgan esa misma noche (#161).
     /// </summary>
     static readonly Def[] All =
     [
         new("igdb", null, [], (db, _) => IgdbImport.EnqueueRefresh(db), (kind, _) => kind == "igdb.refresh"),
         new("codes", null, [], (db, _) => GameCodes.Enqueue(db), (kind, _) => kind == GameCodes.Kind, GameCodes.Missing),
-        // Ports (#69): la lista y su cruce con los juegos, después de IGDB; la búsqueda de nuevos solo pide a Claude lo dudoso.
+        // Ports (#69): la búsqueda de nuevos solo pide a Claude lo dudoso; después, la lista y su cruce con los juegos.
+        new("portSearch", PortSearch.Model, [PortSearch.PromptName, PortSearch.RepoPrompt], (db, _) => PortSearch.Enqueue(db), (kind, _) => kind == PortSearch.Kind),
         new("ports", null, [], (db, _) => Ports.Enqueue(db), (kind, _) => kind == Ports.Kind,
             db => Scalar(db, "SELECT count(*) FROM port WHERE game_id IS NULL")), // «ports sin juego», como Ports.Page
-        new("portSearch", PortSearch.Model, [PortSearch.PromptName, PortSearch.RepoPrompt], (db, _) => PortSearch.Enqueue(db), (kind, _) => kind == PortSearch.Kind),
         // Emuladores (#97, decisiones 357 y 371): una sola tarea revisa las recetas y busca forks; el contador es lo que espera en Revisar.
         new("emulators", EmulatorCheck.Model, [EmulatorCheck.PromptName], (db, _) => EmulatorCheck.Enqueue(db), (kind, _) => kind == EmulatorCheck.Kind,
             EmulatorCheck.Pending),
@@ -72,6 +73,9 @@ public static class CatalogTasks
                 WHERE COALESCE(i.n, 0) < 3
                 """)),
     ];
+
+    /// <summary>Los tipos que no son de Claude y van en la fila del catálogo, de a una (#161); las de Claude (`claude.*`) ya van ahí.</summary>
+    public static readonly HashSet<string> InOrder = ["igdb.refresh", GameCodes.Kind, PortSearch.Kind, Ports.Kind, EmulatorCheck.Kind];
 
     static string Setting(string id) => $"task.auto.{id}";
     static string LastSetting(string id) => $"task.last.{id}";
@@ -160,6 +164,13 @@ public static class CatalogTasks
             first ??= id;
         }
         return first;
+    }
+
+    /// <summary>«Ejecutar todo en orden» (#161): la secuencia de la noche, ahora.</summary>
+    public static long? RunAll(Database db)
+    {
+        ClaudeBudget.AllowNow(db);
+        return Nightly(db);
     }
 
     static bool Queued(Database db, Def task)
