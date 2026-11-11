@@ -544,6 +544,8 @@
       "noRelease": "{repo} has no published releases.",
       "noAsset": "No release of {repo} has a file matching {pattern}.",
       "sourceFailed": "Could not query {repo}: {detail}",
+      "noPort": "A port recipe says which port it belongs to: «port», the port's link, is missing.",
+      "portUnknown": "No port in the catalog has the link {link}.",
       "badRepo": "That address is not a GitHub, Forgejo or Gitea repo.",
       "notFound": "There is no recipe {id}.",
       "noMain": "Could not read main: without it there is nothing to go back to.",
@@ -880,6 +882,7 @@
       "log": {
         "list": "Recompendium: {count} ports and decompilations; {added} new in the list and {delisted} no longer listed (kept).",
         "done": "Done: {matched} of {total} ports with a game.",
+        "merged": "{count, plural, one {# repeated port (same link and source) was merged} other {# repeated ports (same link and source) were merged}}.",
         "compatFailed": "Could not check the compatibility of {game} ({console}).",
         "unreachable": "Could not read {source}: continuing with the rest.",
         "added": "New: {game} ({console}), {link}.",

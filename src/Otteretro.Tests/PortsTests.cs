@@ -224,6 +224,33 @@ public class PortsTests : IAsyncDisposable
         Assert.Equal(["nb-recomp"], PortRecipes.List(f.Db).Select(p => p.Project));
     }
 
+    /// <summary>#149: la receta de un port apunta a su fila por el enlace, que le da su consola, su carpeta y su juego; un enlace repetido no tumba la tarea.</summary>
+    [Fact]
+    public async Task APortRecipePointsToItsPortRow()
+    {
+        net.Releases["a/prime-recomp"] = Release("v0.3", "prime-0.3-win64.zip");
+        await Done(Ports.Enqueue(f.Db));
+        var prime = PortRecipes.List(f.Db).Single(p => p.Project == "prime-recomp");
+        Assert.Equal("https://github.com/a/prime-recomp", (string)System.Text.Json.Nodes.JsonNode.Parse(prime.Recipe)!["port"]!);
+
+        // A mano: sin «port» o con un enlace que no es un port no se guarda; la carpeta y el juego escritos a mano los pisa la fila.
+        const string recipe = """{ "id": "prime", "name": "Prime", "kind": "port", "folder": "Otra", "game": "Otro", "detect": "prime.exe"PORT }""";
+        Assert.Equal("recipes.noPort", (await Recipes.Save(f.Db, "prime", recipe.Replace("PORT", ""), true, null))?.Code);
+        Assert.Equal("recipes.portUnknown", (await Recipes.Save(f.Db, "prime", recipe.Replace("PORT", @", ""port"": ""https://github.com/x/y"""), true, null))?.Code);
+        Assert.Null(await Recipes.Save(f.Db, "prime", recipe.Replace("PORT", @", ""port"": ""https://github.com/a/prime-recomp/"""), true, null));
+        var saved = System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "prime")!)!;
+        Assert.Equal(("GameCube", "Metroid Prime"), ((string)saved["folder"]!, (string)saved["game"]!));
+        var info = Recipes.List(f.Db, "").Single(r => r.Id == "prime");
+        Assert.Equal(("gc", "Metroid Prime"), (Assert.Single(info.Consoles), info.Game)); // «Emuladores» la agrupa en GameCube, no en «Sin consola»
+
+        // Dos filas del mismo enlace y la misma fuente (como quedó NX2navi): la tarea termina y queda la más vieja.
+        var id = PortId("prime-recomp");
+        using (var c = f.Db.Open())
+            c.Execute("INSERT INTO port (console, game, project, kind, status, link, source, added) SELECT console, 'Driver', project, kind, status, link, source, added FROM port WHERE id = @id", new { id });
+        await Done(Ports.Enqueue(f.Db));
+        Assert.Equal(id, PortId("prime-recomp"));
+    }
+
     /// <summary>#72: cada juego publica sus ports, la base compilada los trae y un cambio de ports cambia el hash de contenido.</summary>
     [Fact]
     public async Task PortsArePublishedWithTheirGameAndCompiled()

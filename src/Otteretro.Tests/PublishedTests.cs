@@ -186,6 +186,8 @@ public class PublishedTests
     [InlineData("\"id\": \"dolphin\"", "\"id\": \"otro\"", "tiene otro id")]
     [InlineData("\"id\": \"dolphin\"", "\"id\": \"dolphin\", \"recommendedFor\": [{ \"game\": \"Zelda\", \"gameId\": \"x\" }]", "«recommendedFor[0].gameId» tiene que ser integer")]
     [InlineData("\"id\": \"dolphin\"", "\"id\": \"dolphin\", \"recommendedFor\": [{ \"game\": \"Zelda\", \"gameId\": 999999 }]", "recomienda un juego que no existe: 999999")]
+    [InlineData("\"kind\": \"emulator\"", "\"kind\": \"port\"", "es de un port y no dice cuál")] // #149
+    [InlineData("\"kind\": \"emulator\"", "\"kind\": \"port\", \"port\": \"https://x.test/y\"", "apunta a un port que no está en el catálogo")]
     public async Task AnInvalidRecipeDoesNotPass(string from, string to, string expected)
     {
         await using var f = new Fixture();

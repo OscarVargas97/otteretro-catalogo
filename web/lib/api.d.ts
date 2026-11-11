@@ -5668,6 +5668,7 @@ export interface components {
             local: boolean;
             url?: null | string;
             forkOf?: null | string;
+            game?: null | string;
         };
         RecipeNotice: {
             /** Format: int64 */

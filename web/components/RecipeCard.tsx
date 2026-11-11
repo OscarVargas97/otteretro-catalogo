@@ -35,7 +35,7 @@ export function RecipeCard({ recipe, status, editing, busy, onEdit, onDuplicate,
           <h3 style={{ margin: 0 }}>{recipe.name || recipe.id}</h3>
           {(original || recipe.forkOf) && <span className="small"><span className="ot-badge ot-badge-info">{t("card.forkOf", { name: original?.name || String(recipe.forkOf) })}</span></span>}
           {forks.length > 0 && <span className="small muted" style={{ display: "block" }}>{t("card.forks", { names: forks.map((f) => f.name || f.id).join(", ") })}</span>}
-          <span className="small muted">{t(`kinds.${recipe.kind as "emulator"}`)}{recipe.consoles.length > 0 && ` · ${recipe.consoles.map(consoleName).join(", ")}`}</span>
+          <span className="small muted">{t(`kinds.${recipe.kind as "emulator"}`)}{recipe.consoles.length > 0 && ` · ${recipe.consoles.map(consoleName).join(", ")}`}{recipe.game && ` · ${recipe.game}`}</span>
         </span>
         <span style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
           {status?.tag != null && (

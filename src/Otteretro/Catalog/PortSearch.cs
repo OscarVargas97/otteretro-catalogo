@@ -52,7 +52,7 @@ public static partial class PortSearch
         catch (HttpRequestException) { run.Log(ApiError.Of("ports.log.unreachable", ("source", "Read Only Memo")), "warn"); }
 
         var known = Ports.Links(db);
-        var (added, _) = Ports.Save(db, sure.Where(e => !Ports.Known(known, e.Link)).ToList(), null);
+        var (added, _, _) = Ports.Save(db, sure.Where(e => !Ports.Known(known, e.Link)).ToList(), null);
         known = Ports.Links(db);
 
         // Lo dudoso que no está en la lista ni pasó ya por Claude.
