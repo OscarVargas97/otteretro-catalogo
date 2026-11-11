@@ -1396,83 +1396,76 @@
         "hero": "https://cdn2.steamgriddb.com/hero/145756e80e1aa6f940792751a4b9d05c.jpg",
         "logo": "https://cdn2.steamgriddb.com/logo/e4da3b7fbbce2345d7772b0674a318d5.png"
       }
+    },
+    {
+      "id": 50369,
+      "nameEs": "Tom Clancy's Ghost Recon 2: Summit Strike",
+      "originalName": "Tom Clancy's Ghost Recon 2: Summit Strike",
+      "year": 2005,
+      "igdbId": 1299,
+      "popularity": 3,
+      "iconic": false,
+      "fields": [
+        {
+          "field": "name_es",
+          "value": "Tom Clancy's Ghost Recon 2: Summit Strike",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "original_name",
+          "value": "Tom Clancy's Ghost Recon 2: Summit Strike",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "summary",
+          "value": "Tom Clancy's Ghost Recon 2: Summit Strike is the expansion to Tom Clancy's Ghost Recon 2. There are several minor differences between Tom Clancy's Ghost Recon 2: Summit Strike, and Tom Clancy's Ghost Recon 2. The most notable being the difficulty, Summit Strike being regarded as the harder of the two. Other differences would include new multiplayer modes, such as Heli Hunt.",
+          "source": "igdb",
+          "manual": false
+        },
+        {
+          "field": "year",
+          "value": "2005",
+          "source": "igdb",
+          "manual": false
+        }
+      ],
+      "versions": [
+        {
+          "id": 118736,
+          "platform": "xbox",
+          "kind": "original",
+          "year": 2005,
+          "igdbId": 1299,
+          "criteria": []
+        }
+      ],
+      "images": {
+        "cover": "https://cdn2.steamgriddb.com/grid/d1a7f4b79ca7ab93094b5420bdaf37fc.png",
+        "hero": "https://cdn2.steamgriddb.com/hero/2136b45823f05666fccd88125758077d.png",
+        "logo": "https://cdn2.steamgriddb.com/logo/48c7d1fae24482ae4f62348d49e65e35.png"
+      },
+      "ports": [
+        {
+          "id": 1218,
+          "platform": "xbox",
+          "project": "summitstrike-recomp",
+          "kind": "recomp",
+          "toolchain": "xboxrecomp",
+          "status": "playable",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/ElKev118/summitstrike-recomp",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "xemu",
+          "emulatorLevel": 2
+        }
+      ]
     }
   ],
   "routes": [
-    {
-      "id": 357,
-      "kind": "release",
-      "rationale": "Orden de lanzamiento, por año.",
-      "sources": "[]",
-      "approved": true,
-      "steps": [
-        {
-          "position": 1,
-          "gameId": 16470,
-          "reason": "2001"
-        },
-        {
-          "position": 2,
-          "gameId": 48207,
-          "reason": "2003"
-        },
-        {
-          "position": 3,
-          "gameId": 16714,
-          "reason": "2004"
-        },
-        {
-          "position": 4,
-          "gameId": 32514,
-          "reason": "2004"
-        },
-        {
-          "position": 5,
-          "gameId": 48167,
-          "reason": "2004"
-        },
-        {
-          "position": 6,
-          "gameId": 16776,
-          "reason": "2006"
-        },
-        {
-          "position": 7,
-          "gameId": 35106,
-          "reason": "2007"
-        },
-        {
-          "position": 8,
-          "gameId": 35160,
-          "reason": "2010"
-        },
-        {
-          "position": 9,
-          "gameId": 4135,
-          "reason": "2011"
-        },
-        {
-          "position": 10,
-          "gameId": 39645,
-          "reason": "2012"
-        },
-        {
-          "position": 11,
-          "gameId": 7782,
-          "reason": "2014"
-        },
-        {
-          "position": 12,
-          "gameId": 41781,
-          "reason": "2017"
-        },
-        {
-          "position": 13,
-          "gameId": 43775,
-          "reason": "2019"
-        }
-      ]
-    },
     {
       "id": 3805,
       "kind": "story",
@@ -1577,6 +1570,85 @@
           "gameId": 16470,
           "recommendedVersionId": 43383,
           "reason": "El original, solo para quien quiera ver el origen de la saga."
+        }
+      ]
+    },
+    {
+      "id": 4008,
+      "kind": "release",
+      "rationale": "Orden de lanzamiento, por año.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16470,
+          "reason": "2001"
+        },
+        {
+          "position": 2,
+          "gameId": 48207,
+          "reason": "2003"
+        },
+        {
+          "position": 3,
+          "gameId": 16714,
+          "reason": "2004"
+        },
+        {
+          "position": 4,
+          "gameId": 32514,
+          "reason": "2004"
+        },
+        {
+          "position": 5,
+          "gameId": 48167,
+          "reason": "2004"
+        },
+        {
+          "position": 6,
+          "gameId": 50369,
+          "reason": "2005"
+        },
+        {
+          "position": 7,
+          "gameId": 16776,
+          "reason": "2006"
+        },
+        {
+          "position": 8,
+          "gameId": 35106,
+          "reason": "2007"
+        },
+        {
+          "position": 9,
+          "gameId": 35160,
+          "reason": "2010"
+        },
+        {
+          "position": 10,
+          "gameId": 4135,
+          "reason": "2011"
+        },
+        {
+          "position": 11,
+          "gameId": 39645,
+          "reason": "2012"
+        },
+        {
+          "position": 12,
+          "gameId": 7782,
+          "reason": "2014"
+        },
+        {
+          "position": 13,
+          "gameId": 41781,
+          "reason": "2017"
+        },
+        {
+          "position": 14,
+          "gameId": 43775,
+          "reason": "2019"
         }
       ]
     }
