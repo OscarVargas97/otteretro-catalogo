@@ -520,6 +520,7 @@
       "best": {
         "searching": "Claude is looking for the best emulator for {game} on {consoles, plural, one {# console} other {# consoles}}",
         "noGame": "The game is no longer in the catalog.",
+        "noGames": "Check at least one game.",
         "log": {
           "invalid": "{console}: the pick {pick} does not match the game or the catalog, or has no source. Not saved.",
           "known": "{console}: {pick} was already in Review or already resolved. Not added again.",
@@ -1662,5 +1663,21 @@
     "more": "and {count, plural, one {# more file} other {# more files}}",
     "files": "{count, plural, one {# file} other {# files}}",
     "showList": "show list"
+  },
+  "bestEmulator": {
+    "button": "Find the best emulator",
+    "title": "Find the best emulator",
+    "intro": "Claude uses Sonnet to search the web for the emulator the community recommends on each console of the games you check. What it finds goes to Review. It never searches the whole catalog.",
+    "add": "Add a saga or a game",
+    "addPlaceholder": "Saga or game name",
+    "noResults": "Nothing with that name.",
+    "saga": "Saga · {count, plural, one {# game} other {# games}}",
+    "remove": "Remove {name}",
+    "searched": "Searched on {date}",
+    "never": "Not searched",
+    "count": "{count, plural, =0 {No games checked} one {Will search # game} other {Will search # games}}",
+    "start": "Search",
+    "queued": "{count, plural, =0 {No games were queued.} one {# search queued. What it finds goes to Review.} other {# searches queued. What they find goes to Review.}}",
+    "close": "Close"
   }
 }

@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { SagaTile, useConsoles } from "@/components/Catalog";
 import { NewSaga } from "@/components/SagaEditing";
+import { BestEmulatorButton } from "@/components/BestEmulator";
 import Link from "next/link";
 import { Empty } from "@/components/Shell";
 import { useDescribeError } from "@/lib/i18n";
@@ -58,6 +59,7 @@ export default function Sagas() {
             </select>
           </label>
           <NewSaga />
+          <BestEmulatorButton />
           <span className="small muted tabular toolbar-total" aria-live="polite">{sagas.data ? t("total", { count: sagas.total }) : ""}</span>
         </div>
       )}

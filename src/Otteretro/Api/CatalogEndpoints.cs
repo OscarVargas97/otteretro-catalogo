@@ -15,6 +15,8 @@ public record NewSagaResponse(long Id);
 /// <param name="SagaId">Null: sin saga («Emulación»).</param>
 public record MoveGameRequest(long? SagaId);
 public record MergeGameRequest(long IntoId);
+/// <summary>Los juegos elegidos en el selector de «Mejor emulador» (#133).</summary>
+public record BestEmulatorRequest(List<long> GameIds);
 
 /// <summary>Una consola o un juego (#179).</summary>
 public record VerifyRequest(string? Console, long? GameId);
@@ -150,6 +152,12 @@ public static class CatalogEndpoints
         // «Mejor emulador» (#130): encola la búsqueda de Claude para un juego y devuelve la tarea; lo que encuentra va a Revisar.
         api.MapPost("/games/{id:long}/best-emulator", Results<Ok<long>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : BestEmulator.Enqueue(db, id) is { } task ? TypedResults.Ok(task) : TypedResults.NotFound());
+        // El selector (#133): los juegos de las sagas elegidas y los sueltos, con su última búsqueda; y encolar solo los marcados.
+        api.MapGet("/best-emulator/games", Results<Ok<List<BestEmulator.BestEmulatorGame>>, Conflict<ApiError>> (AppSession s, long[]? sagas, long[]? games) =>
+            Db(s) is { } db ? TypedResults.Ok(BestEmulator.Choices(db, sagas ?? [], games ?? [])) : NoData());
+        api.MapPost("/best-emulator", Results<Ok<int>, BadRequest<ApiError>, Conflict<ApiError>> (BestEmulatorRequest request, AppSession s) =>
+            Db(s) is not { } db ? NoData() : request.GameIds is not { Count: > 0 } ? TypedResults.BadRequest(ApiError.Of("emulators.best.noGames"))
+                : TypedResults.Ok(BestEmulator.Enqueue(db, request.GameIds)));
         // La ficha (#132): la fecha de la última búsqueda y la que está en curso.
         api.MapGet("/games/{id:long}/best-emulator", Results<Ok<BestEmulatorState>, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is { } db ? TypedResults.Ok(new BestEmulatorState(BestEmulator.LastSearch(db, id), BestEmulator.Pending(db, id))) : NoData());
