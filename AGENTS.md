@@ -12,7 +12,7 @@ C# ASP.NET Core + SQLite, interfaz Next.js estática en una ventana Photino, con
 
 ## Cómo se trabaja
 
-Con Claude Code en un worktree por rama (más adelante, desde [ottercode](https://github.com/OscarVargas97/ottercode), proyecto `game-system`): un issue por tarea y una rama por issue (`<tipo>/<n>-<slug>`); el estado en el issue y sin issue no hay trabajo. Las decisiones se registran en `docs/historial/decisiones.md` de Otteretro, el registro único del proyecto. Commits en Conventional Commits, en español, con `Refs #n`. Todo entra a `main` por PR, y lo fusiona la persona. Los checks de calidad (ia-qa) viven en `.calidad/`: `sh .calidad/checks.sh rapidos` antes de subir y `ci` como en el PR; los hooks de git se activan con `git config core.hooksPath .githooks`.
+Con Claude Code en un worktree por rama (más adelante, desde [ottercode](https://github.com/OscarVargas97/ottercode), proyecto `game-system`): un issue por tarea y una rama por issue (`<tipo>/<n>-<slug>`); el estado en el issue y sin issue no hay trabajo. Las decisiones se registran en `docs/historial/decisiones.md` de Otteretro, el registro único del proyecto. Commits en Conventional Commits, en español, con `Refs #n`. Todo entra a `main` por PR, y lo fusiona la persona.
 
 ## Reglas
 
