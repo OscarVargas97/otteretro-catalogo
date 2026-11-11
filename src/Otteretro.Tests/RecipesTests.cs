@@ -87,7 +87,8 @@ public class RecipesTests
             // Sin «asset», Save no consulta releases.
             void Add(string id, string consoles, string recommended = "") => c.Execute("INSERT INTO recipe (id, kind, json) VALUES (@id, 'emulator', @json)", new
             {
-                id, json = $$"""{ "id": "{{id}}", "name": "{{id}}", "kind": "emulator", "folder": "x", "detect": "x.exe", "consoles": [{{consoles}}]{{recommended}} }""",
+                id,
+                json = $$"""{ "id": "{{id}}", "name": "{{id}}", "kind": "emulator", "folder": "x", "detect": "x.exe", "consoles": [{{consoles}}]{{recommended}} }""",
             });
             Add("mgba", "\"gba\"", """, "recommendedFor": [{ "game": "Pokémon Esmeralda", "gameId": 7, "source": "https://a" }, { "game": "Otro", "gameId": 8 }]""");
             Add("vba", "\"gba\"");
