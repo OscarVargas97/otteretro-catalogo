@@ -1,0 +1,50 @@
+{
+  "id": "diegolix29-azalon3-ds",
+  "name": "Azahar (AzaharPlus) (diegolix29)",
+  "kind": "emulator",
+  "folder": "Nintendo 3DS",
+  "detect": "azahar.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "3ds"
+  ],
+  "license": "GPL-2.0-or-later",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "saves": [
+    "user/sdmc"
+  ],
+  "config": [
+    "user/config"
+  ],
+  "perGame": {
+    "mods": [
+      "user/load/mods/{titleId}",
+      "user/load/textures/{titleId}"
+    ]
+  },
+  "install": [
+    {
+      "formats": [
+        "cia"
+      ],
+      "args": [
+        "--install",
+        "{file}"
+      ]
+    }
+  ],
+  "updates": {
+    "source": "github",
+    "repo": "diegolix29/Azalon3-DS"
+  },
+  "asset": "^azahar-windows-msvc-v[0-9.]+-installer\\.exe$",
+  "experimental": true,
+  "forkOf": "azaharplus-azaharplus"
+}
