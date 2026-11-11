@@ -12,11 +12,11 @@ import type { RecipeText, RepoRelease } from "@/lib/types";
  * Gitea), se ven sus releases con los archivos de cada una y, al elegir el de Windows, el servidor arma el borrador (id y nombre del
  * repo, fuente y el patrón del archivo con la versión cambiada por un comodín) que se completa en el formulario de edición.
  */
-export function RecipeAdd({ onDraft, onCancel }: { onDraft: (recipe: Record<string, unknown>) => void; onCancel: () => void }) {
+export function RecipeAdd({ onDraft, onCancel, repo = "" }: { onDraft: (recipe: Record<string, unknown>) => void; onCancel: () => void; repo?: string }) {
   const t = useTranslations("emulators");
   const format = useFormatter();
   const describe = useDescribeError();
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState(repo);
   const find = useMutation({ mutationFn: () => request<RepoRelease[]>(`/api/recipes/releases?url=${encodeURIComponent(url.trim())}`) });
   const draft = useMutation({
     mutationFn: (file: string) => request<RecipeText>("/api/recipes/draft", { method: "POST", body: JSON.stringify({ url: url.trim(), file }) }),

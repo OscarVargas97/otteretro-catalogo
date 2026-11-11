@@ -23,7 +23,7 @@ public record CorrectRequest(string Note);
 /// <param name="Files">Archivos en Dudosas y Sin identificar (#181).</param>
 /// <param name="Forks">Candidatos de fork de la tarea «Emuladores» (#98).</param>
 /// <param name="Notices">Avisos de recetas de la misma tarea (#98).</param>
-public record ReviewPage(List<ReviewItem> Pending, int ActiveLearnings, List<FileReview> Files, List<ForkCandidate> Forks, List<RecipeNotice> Notices, List<PortCandidate> Ports);
+public record ReviewPage(List<ReviewItem> Pending, int ActiveLearnings, List<FileReview> Files, List<ForkCandidate> Forks, List<RecipeNotice> Notices, List<PortCandidate> Ports, List<EmulatorPick> Picks);
 
 /// <param name="Kind">doubtful (Claude lo asignó) o unidentified.</param>
 /// <param name="Proposed">El nombre que dio Claude, si dio uno.</param>
@@ -85,7 +85,7 @@ public static class ClaudeReview
             return new FileReview(r.Id, r.Kind, r.SourceId, Path.Combine(r.Root, r.Relative), r.Console, r.Component, r.TitleId, Text("name"), Text("reason"),
                 r.GameId, r.GameName);
         }).ToList();
-        return new ReviewPage(pending, c.ExecuteScalar<int>("SELECT count(*) FROM learning WHERE undone = 0"), files, EmulatorReview.Forks(db), EmulatorReview.Notices(db), PortRecipes.List(db));
+        return new ReviewPage(pending, c.ExecuteScalar<int>("SELECT count(*) FROM learning WHERE undone = 0"), files, EmulatorReview.Forks(db), EmulatorReview.Notices(db), PortRecipes.List(db), EmulatorReview.Picks(db));
     }
 
     /// <summary>
