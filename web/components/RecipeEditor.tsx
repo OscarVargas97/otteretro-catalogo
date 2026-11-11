@@ -16,7 +16,7 @@ type Path = (string | number)[];
 
 /** Qué campos de primer nivel van en cada sección (decisión 368). Uno del esquema que no esté en ninguna cae en Opciones. */
 const SECTIONS = {
-  basic: ["id", "kind", "name", "folder", "game", "parent", "link", "detect", "version", "license", "experimental", "devOnly", "forkOf", "recommendedFor"],
+  basic: ["id", "kind", "name", "folder", "game", "port", "parent", "link", "detect", "version", "license", "experimental", "devOnly", "forkOf", "recommendedFor"],
   download: ["updates", "asset", "saveAs", "downloads"],
   consoles: ["consoles", "baseFor", "formats", "install"],
   perGame: ["perGame", "input", "saves", "config", "content", "gamePaths", "contentPaths"],
@@ -24,7 +24,7 @@ const SECTIONS = {
 } as const;
 type Section = keyof typeof SECTIONS;
 /** Campos que solo tienen sentido en un tipo de receta: se ven en ese tipo o si ya traen algo. */
-const ONLY: Record<string, string> = { game: "port", parent: "complement", link: "complement" };
+const ONLY: Record<string, string> = { game: "port", port: "port", parent: "complement", link: "complement" };
 /** Los enum que ya tienen nombre en los catálogos de textos; los demás (ini, json, github…) se muestran tal cual. */
 const ENUM_LABELS: Record<string, string> = { kind: "kinds", "updates.source": "sources", "version.from": "versionFrom" };
 

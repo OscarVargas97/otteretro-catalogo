@@ -62,9 +62,10 @@ public static partial class Ports
         List<Entry> list;
         await using (var stream = await http.GetStreamAsync(Recompendium, ct))
             list = await ReadRecompendium(stream, today, ct);
-        var (added, delisted) = Save(run.Db, list, "recompendium");
-        var (extras, _) = Save(run.Db, Extras(today), null);
+        var (added, delisted, merged) = Save(run.Db, list, "recompendium");
+        var (extras, _, mergedExtras) = Save(run.Db, Extras(today), null);
         run.Log(ApiError.Of("ports.log.list", ("count", list.Count.ToString()), ("added", (added + extras).ToString()), ("delisted", delisted.ToString())));
+        if (merged + mergedExtras > 0) run.Log(ApiError.Of("ports.log.merged", ("count", (merged + mergedExtras).ToString())), "warn");
 
         run.Report(30, ApiError.Of("ports.compat"));
         await PortCompat.Fill(run.Db, http, run.Credentials.Read("github.token"), (m, l) => run.Log(m, l), ct);
@@ -80,7 +81,20 @@ public static partial class Ports
 
     public static string Today() => DateTime.UtcNow.ToString("yyyy-MM-dd");
 
-    static string Key(string link) => link.Trim().TrimEnd('/').ToLowerInvariant();
+    internal static string Key(string link) => link.Trim().TrimEnd('/').ToLowerInvariant();
+
+    /// <summary>El port de un enlace, para su receta (#149): su consola, el nombre de la consola (la carpeta de la receta) y su juego.</summary>
+    public record PortRef(string Console, string Folder, string Game);
+
+    public static PortRef? ByLink(Database db, string link)
+    {
+        using var c = db.Open();
+        return c.QueryFirstOrDefault<PortRef>("""
+            SELECT p.console AS Console, COALESCE(k.name, p.console) AS Folder, COALESCE(g.name_es, p.game) AS Game
+            FROM port p LEFT JOIN console k ON k.id = p.console LEFT JOIN game g ON g.id = p.game_id
+            WHERE lower(rtrim(trim(p.link), '/')) = @key ORDER BY p.id LIMIT 1
+            """, new { key = Key(link) });
+    }
 
     internal static HashSet<string> Links(Database db)
     {
@@ -95,13 +109,17 @@ public static partial class Ports
     /// <paramref name="replace"/>, lo de esa fuente que ya no viene no se quita: queda marcado «ya no listado» y vuelve si reaparece.
     /// Una decompilación que pasa a tener port toma la fecha de hoy: es una novedad. Nunca toca el cruce.
     /// </summary>
-    internal static (int Added, int Delisted) Save(Database db, List<Entry> entries, string? replace)
+    internal static (int Added, int Delisted, int Merged) Save(Database db, List<Entry> entries, string? replace)
     {
         using var c = db.Open();
-        var existing = c.Query<(long Id, string Link, string Source)>("SELECT id, link, source FROM port").ToDictionary(r => Key(r.Link));
-        var seen = new HashSet<string>();
-        int added = 0, delisted = 0;
+        var rows = c.Query<(long Id, string Link, string Source)>("SELECT id, link, source FROM port ORDER BY id").ToList();
+        int added = 0, delisted = 0, merged = 0;
         using var t = c.BeginTransaction();
+        // Dos filas del mismo enlace y la misma fuente son el mismo port (#149): queda la más vieja, que es la que ya se publicó.
+        foreach (var extra in rows.GroupBy(r => (Key(r.Link), r.Source)).SelectMany(g => g.Skip(1)))
+            merged += c.Execute("DELETE FROM port WHERE id = @Id", new { extra.Id }, t);
+        var existing = rows.GroupBy(r => Key(r.Link)).ToDictionary(g => g.Key, g => g.First());
+        var seen = new HashSet<string>();
         foreach (var e in entries)
         {
             var key = Key(e.Link);
@@ -126,7 +144,7 @@ public static partial class Ports
             foreach (var (key, row) in existing.Where(x => x.Value.Source == replace && !seen.Contains(x.Key)))
                 delisted += c.Execute("UPDATE port SET delisted = 1 WHERE id = @Id AND delisted = 0", new { row.Id }, t);
         t.Commit();
-        return (added, delisted);
+        return (added, delisted, merged);
     }
 
     record ExtraEntry(string Console, string Game, string Project, string Kind, string? Toolchain, string Status, string Link, string Source, string? Added);

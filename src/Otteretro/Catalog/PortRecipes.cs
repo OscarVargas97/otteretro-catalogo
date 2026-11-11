@@ -36,7 +36,7 @@ public static class PortRecipes
     }
 
     record Data(long Port, string Game, string Project, string Console, string Folder, string Source, string? Host, string Repo, string Url, string Tag,
-        string? PublishedAt, List<string> Files);
+        string? PublishedAt, List<string> Files, string? Link = null);
 
     static string Key(string? host, string repo) => $"{host ?? "github.com"}/{repo}".ToLowerInvariant();
 
@@ -45,16 +45,18 @@ public static class PortRecipes
     {
         var db = run.Db;
         var token = run.Credentials.Read("github.token") is { Length: > 0 } t ? t : null;
-        HashSet<string> own;
+        HashSet<string> own, ownRepos; // los ports que ya tienen receta: por su enlace (#149) o, en una receta sin «port», por su repo
         // ponytail: Forgejo solo en Codeberg y los servidores de las recetas; cualquier otro enlace (una web, GitLab) no es un repo con esta API.
         HashSet<string> hosts = new(StringComparer.OrdinalIgnoreCase) { "codeberg.org" };
         Dictionary<string, (string? Tag, string Result)> seen;
         List<(long Id, string Console, string Game, string Project, string Link, string Folder)> ports;
         using (var c = db.Open())
         {
-            var sources = c.Query<string>("SELECT json FROM recipe").Select(j => JsonNode.Parse(j)!["updates"])
+            var recipes = c.Query<string>("SELECT json FROM recipe").Select(j => JsonNode.Parse(j)!).ToList();
+            own = recipes.Select(r => (string?)r["port"]).OfType<string>().Select(Ports.Key).ToHashSet();
+            var sources = recipes.Select(r => r["updates"])
                 .Where(u => (string?)u?["repo"] is not null).Select(u => ((string?)u!["host"], (string)u["repo"]!)).ToList();
-            own = sources.Select(s => Key(s.Item1, s.Item2)).ToHashSet();
+            ownRepos = sources.Select(s => Key(s.Item1, s.Item2)).ToHashSet();
             hosts.UnionWith(sources.Where(s => s.Item1 is not null).Select(s => s.Item1!));
             seen = c.Query<(string Repo, string? Tag, string Result)>("SELECT repo, tag, result FROM port_recipe_seen").ToDictionary(x => x.Repo, x => (x.Tag, x.Result));
             ports = c.Query<(long, string, string, string, string, string)>("""
@@ -66,7 +68,7 @@ public static class PortRecipes
         var todo = ports.Select(p => (p, src: Recipes.Source(p.Link)))
             .Where(x => x.src is { } s && (s.Source == "github" || hosts.Contains(s.Host!)))
             .Select(x => (x.p, x.src!.Value.Source, x.src.Value.Repo, x.src.Value.Host, key: Key(x.src.Value.Host, x.src.Value.Repo)))
-            .Where(x => !own.Contains(x.key) && !(seen.TryGetValue(x.key, out var s) && s.Result != "noWindows"))
+            .Where(x => !own.Contains(Ports.Key(x.p.Link)) && !ownRepos.Contains(x.key) && !(seen.TryGetValue(x.key, out var s) && s.Result != "noWindows"))
             .DistinctBy(x => x.key).ToList();
 
         var added = 0;
@@ -95,7 +97,7 @@ public static class PortRecipes
                 continue;
             }
             var data = new Data(p.Id, p.Game, p.Project, p.Console, p.Folder, source, host, repo, $"https://{host ?? "github.com"}/{repo}", latest!.Tag,
-                latest.PublishedAt, files);
+                latest.PublishedAt, files, p.Link);
             using (var c = db.Open())
                 c.Execute("INSERT INTO review_item (kind, entity, entity_id, data, created_at) VALUES ('doubtful', 'port', @Port, @json, @now)",
                     new { data.Port, json = JsonSerializer.Serialize(data, JsonSerializerOptions.Web), now = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture) });
@@ -134,6 +136,7 @@ public static class PortRecipes
             ["kind"] = "port",
             ["folder"] = d.Folder,
             ["game"] = d.Game,
+            ["port"] = d.Link ?? d.Url, // los candidatos de antes de #149 no guardaban el enlace; su repo suele serlo
             ["detect"] = exe,
             ["experimental"] = true,
             ["updates"] = updates,

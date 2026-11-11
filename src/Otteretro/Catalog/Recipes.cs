@@ -11,7 +11,10 @@ using Otteretro.Data;
 namespace Otteretro.Catalog;
 
 /// <summary>Una receta en la lista de «Emuladores» (#95).</summary>
-public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false, string? Url = null, string? ForkOf = null);
+/// <param name="Consoles">Las que corre; un port, la de su fila del catálogo de ports (#149).</param>
+/// <param name="Game">Port: su juego.</param>
+public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false, string? Url = null, string? ForkOf = null,
+    string? Game = null);
 /// <summary>Una receta que recomienda un juego (#123), con la fuente de la recomendación y las consolas que corre (#132).</summary>
 public record GameRecipe(string Id, string Name, string Kind, string? Source, List<string> Consoles);
 /// <summary>El recomendado de un juego en una consola, elegido a mano en su ficha (#132); la fuente es opcional.</summary>
@@ -58,11 +61,12 @@ public static partial class Recipes
 
     internal static readonly JsonSerializerOptions Indented = new() { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
 
-    static RecipeInfo Info(string json, bool local)
+    static RecipeInfo Info(string json, bool local, Database db)
     {
         var r = JsonNode.Parse(json)!;
+        var port = (string?)r["kind"] == "port" && (string?)r["port"] is { } link ? Ports.ByLink(db, link) : null;
         return new RecipeInfo((string)r["id"]!, (string?)r["name"] ?? "", (string?)r["kind"] ?? "", (string?)r["folder"] ?? "",
-            r["consoles"]?.AsArray().Select(x => (string)x!).ToList() ?? [], local, RepoUrl(r), (string?)r["forkOf"]);
+            port is null ? Consoles(r) : [port.Console], local, RepoUrl(r), (string?)r["forkOf"], port?.Game ?? (string?)r["game"]);
     }
 
     internal static string? RepoUrl(JsonNode r) => (string?)r["updates"]?["repo"] is { } repo
@@ -72,8 +76,8 @@ public static partial class Recipes
     public static List<RecipeInfo> List(Database db, string? local = null)
     {
         using var c = db.Open();
-        return c.Query<string>("SELECT json FROM recipe ORDER BY id").Select(json => Info(json, false))
-            .Concat(Local(db, local).Values.Select(json => Info(json, true))).OrderBy(r => r.Id, StringComparer.Ordinal).ToList();
+        return c.Query<string>("SELECT json FROM recipe ORDER BY id").Select(json => Info(json, false, db))
+            .Concat(Local(db, local).Values.Select(json => Info(json, true, db))).OrderBy(r => r.Id, StringComparer.Ordinal).ToList();
     }
 
     /// <summary>Las recetas que recomiendan un juego del catálogo (#123): las que lo traen en <c>recommendedFor</c> con su <c>gameId</c>.</summary>
@@ -199,6 +203,11 @@ public static partial class Recipes
     /// </summary>
     public static async Task<ApiError?> Save(Database db, string id, string json, bool create, string? token, CancellationToken ct = default)
     {
+        if (FromPort(db, json) is { } port)
+        {
+            if (port.Error is not null) return port.Error;
+            json = port.Json!;
+        }
         JsonDocument doc;
         try { doc = JsonDocument.Parse(json); }
         catch (JsonException e) { return ApiError.Of("recipes.badJson", ("detail", e.Message)); }
@@ -217,6 +226,22 @@ public static partial class Recipes
             Store(c, r, same ? before! : JsonSerializer.Serialize(r, Indented).ReplaceLineEndings("\n") + "\n");
             return null;
         }
+    }
+
+    /// <summary>
+    /// Una receta de port (#149) apunta a su fila del catálogo de ports con <c>port</c> (su enlace) y de ahí toma su juego y su carpeta (el
+    /// nombre de su consola): no se escriben a mano. Null si no es un port o no es JSON (eso lo dice Save).
+    /// </summary>
+    static (string? Json, ApiError? Error)? FromPort(Database db, string json)
+    {
+        JsonObject r;
+        try { if (JsonNode.Parse(json) is JsonObject o && (string?)o["kind"] == "port") r = o; else return null; }
+        catch (JsonException) { return null; }
+        if ((string?)r["port"] is not { Length: > 0 } link) return (null, ApiError.Of("recipes.noPort"));
+        if (Ports.ByLink(db, link) is not { } port) return (null, ApiError.Of("recipes.portUnknown", ("link", link)));
+        r["folder"] = port.Folder;
+        r["game"] = port.Game;
+        return (r.ToJsonString(), null);
     }
 
     /// <summary>

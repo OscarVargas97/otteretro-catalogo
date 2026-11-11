@@ -10,8 +10,9 @@
     "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
     "name": { "type": "string", "description": "Nombre de la carpeta de la instalación en Herramientas" },
     "kind": { "enum": ["emulator", "port", "complement", "tool"], "description": "tool: una herramienta que no es emulador ni port (Steam ROM Manager), en Herramientas/<Nombre>/<versión>" },
-    "folder": { "type": "string", "description": "Consola (emulador o port) o nombre del emulador o port padre (complemento): el segundo nivel de su carpeta. Una herramienta no lo usa en la ruta: solo agrupa" },
-    "game": { "type": "string", "description": "Port: el juego que cubre (#193)" },
+    "folder": { "type": "string", "description": "Consola (emulador; en un port, el nombre de la consola de su fila, que escribe el catálogo) o nombre del emulador o port padre (complemento): el segundo nivel de su carpeta. Una herramienta no lo usa en la ruta: solo agrupa" },
+    "game": { "type": "string", "description": "Port: el juego que cubre (#193). Lo escribe el catálogo desde la fila de su port (otteretro-catalogo#149)" },
+    "port": { "type": "string", "description": "Port: el enlace de su fila del catálogo de ports, de la que salen su juego y su consola (otteretro-catalogo#149). Obligatorio en un port" },
     "parent": { "type": "string", "description": "Complemento: id de la receta del emulador o port al que pertenece" },
     "detect": { "type": "string", "description": "Ruta relativa que identifica la instalación (el ejecutable; en un complemento, su carpeta dentro del padre)" },
     "version": {

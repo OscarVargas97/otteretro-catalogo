@@ -208,7 +208,11 @@ public static partial class Published
             else if (known.Contains(r.OldId)) errors.Add($"{r.Kind} {r.OldId} figura como reemplazado, pero sigue en el catálogo.");
             else if (r.NewId is { } to && !known.Contains(to)) errors.Add($"{r.Kind} {r.OldId} se reemplaza por algo que no existe: {to}.");
         }
-        ValidateRecipes(folder, gameIds, errors);
+        // Una receta de port apunta a su port por el enlace (#149): el enlace no se repite y su consola da la carpeta de la receta.
+        var portLinks = games.SelectMany(g => g.Ports ?? []).GroupBy(p => Ports.Key(p.Link)).ToList();
+        foreach (var g in portLinks.Where(g => g.Count() > 1)) errors.Add($"El enlace {g.First().Link} está en más de un port: {string.Join(", ", g.Select(p => p.Id))}.");
+        var consoleNames = all.Consoles.ToDictionary(k => k.Id, k => k.Name);
+        ValidateRecipes(folder, gameIds, portLinks.ToDictionary(g => g.Key, g => consoleNames.GetValueOrDefault(g.First().Platform, g.First().Platform)), errors);
         return errors;
     }
 

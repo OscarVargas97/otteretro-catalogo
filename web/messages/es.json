@@ -544,6 +544,8 @@
       "noRelease": "{repo} no tiene releases publicadas.",
       "noAsset": "Ninguna release de {repo} tiene un archivo que calce con {pattern}.",
       "sourceFailed": "No se pudo consultar {repo}: {detail}",
+      "noPort": "Una receta de port dice a qué port pertenece: falta «port», el enlace del port.",
+      "portUnknown": "Ningún port del catálogo tiene el enlace {link}.",
       "badRepo": "Esa dirección no es un repo de GitHub, Forgejo o Gitea.",
       "notFound": "No hay una receta {id}.",
       "noMain": "No se pudo leer main: sin eso no se sabe a qué volver.",
@@ -880,6 +882,7 @@
       "log": {
         "list": "Recompendium: {count} ports y decompilaciones; {added} nuevos en la lista y {delisted} ya no listados (se conservan).",
         "done": "Listo: {matched} de {total} ports con juego.",
+        "merged": "{count, plural, one {# port repetido (mismo enlace y fuente) se unió con su par} other {# ports repetidos (mismo enlace y fuente) se unieron con su par}}.",
         "compatFailed": "No se pudo consultar la compatibilidad de {game} ({console}).",
         "unreachable": "No se pudo leer {source}: se sigue con lo demás.",
         "added": "Nuevo: {game} ({console}), {link}.",

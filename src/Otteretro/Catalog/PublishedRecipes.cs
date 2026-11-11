@@ -32,8 +32,12 @@ public static partial class Published
         return new PublishedRecipe(r.GetProperty("id").GetString()!, r.GetProperty("kind").GetString()!, consoles, JsonSerializer.Serialize(r));
     }).ToList();
 
-    /// <summary>Cada receta cumple el esquema, se llama como su id, no se repite y sus juegos recomendados con id existen (#121).</summary>
-    static void ValidateRecipes(string folder, HashSet<long> gameIds, List<string> errors)
+    /// <summary>
+    /// Cada receta cumple el esquema, se llama como su id, no se repite y sus juegos recomendados con id existen (#121). Una de port apunta a un
+    /// port publicado y va en la carpeta de su consola (#149).
+    /// </summary>
+    /// <param name="ports">Los enlaces de los ports publicados (normalizados), con el nombre de su consola.</param>
+    static void ValidateRecipes(string folder, HashSet<long> gameIds, Dictionary<string, string> ports, List<string> errors)
     {
         var files = RecipeFiles(folder).ToList();
         if (files.Count == 0) return;
@@ -53,6 +57,13 @@ public static partial class Published
                 errors.AddRange(problems.Select(p => $"La receta {name} no cumple el esquema: {p}."));
                 if (problems.Count == 0 && doc.RootElement.GetProperty("id").GetString() + ".json" != name)
                     errors.Add($"La receta {name} tiene otro id: {doc.RootElement.GetProperty("id").GetString()} (el archivo se llama como su id).");
+                if (problems.Count == 0 && doc.RootElement.GetProperty("kind").GetString() == "port")
+                {
+                    if (!doc.RootElement.TryGetProperty("port", out var link)) errors.Add($"La receta {name} es de un port y no dice cuál (falta «port», su enlace).");
+                    else if (!ports.TryGetValue(Ports.Key(link.GetString()!), out var console)) errors.Add($"La receta {name} apunta a un port que no está en el catálogo: {link.GetString()}.");
+                    else if (doc.RootElement.GetProperty("folder").GetString() != console)
+                        errors.Add($"La receta {name} va en la carpeta {doc.RootElement.GetProperty("folder").GetString()}, y su port es de {console}.");
+                }
                 if (problems.Count == 0 && doc.RootElement.TryGetProperty("recommendedFor", out var games))
                     foreach (var g in games.EnumerateArray())
                         if (g.TryGetProperty("gameId", out var id) && !gameIds.Contains(id.GetInt64()))
