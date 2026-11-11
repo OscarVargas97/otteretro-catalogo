@@ -45,12 +45,29 @@ public static partial class EmulatorCheck
     /// <summary>Las páginas de Emulation General Wiki de cada consola de las recetas (su texto de wiki, con los enlaces).</summary>
     static readonly Dictionary<string, string> WikiPages = new()
     {
-        ["3ds"] = "Nintendo_3DS_emulators", ["dc"] = "Dreamcast_emulators", ["ds"] = "Nintendo_DS_emulators", ["gb"] = "Game_Boy_emulators",
-        ["gba"] = "Game_Boy_Advance_emulators", ["gc"] = "GameCube_emulators", ["wii"] = "Wii_emulators", ["genesis-slash-megadrive"] = "Sega_Genesis_emulators",
-        ["n64"] = "Nintendo_64_emulators", ["nes"] = "NES_emulators", ["snes"] = "SNES_emulators", ["ps1"] = "PlayStation_emulators",
-        ["ps2"] = "PlayStation_2_emulators", ["ps3"] = "PlayStation_3_emulators", ["ps4"] = "PlayStation_4_emulators", ["ps5"] = "PlayStation_5_emulators",
-        ["psp"] = "PlayStation_Portable_emulators", ["vita"] = "PlayStation_Vita_emulators", ["switch"] = "Nintendo_Switch_emulators",
-        ["switch2"] = "Nintendo_Switch_2_emulators", ["wiiu"] = "Wii_U_emulators", ["xbox"] = "Xbox_emulators", ["x360"] = "Xbox_360_emulators",
+        ["3ds"] = "Nintendo_3DS_emulators",
+        ["dc"] = "Dreamcast_emulators",
+        ["ds"] = "Nintendo_DS_emulators",
+        ["gb"] = "Game_Boy_emulators",
+        ["gba"] = "Game_Boy_Advance_emulators",
+        ["gc"] = "GameCube_emulators",
+        ["wii"] = "Wii_emulators",
+        ["genesis-slash-megadrive"] = "Sega_Genesis_emulators",
+        ["n64"] = "Nintendo_64_emulators",
+        ["nes"] = "NES_emulators",
+        ["snes"] = "SNES_emulators",
+        ["ps1"] = "PlayStation_emulators",
+        ["ps2"] = "PlayStation_2_emulators",
+        ["ps3"] = "PlayStation_3_emulators",
+        ["ps4"] = "PlayStation_4_emulators",
+        ["ps5"] = "PlayStation_5_emulators",
+        ["psp"] = "PlayStation_Portable_emulators",
+        ["vita"] = "PlayStation_Vita_emulators",
+        ["switch"] = "Nintendo_Switch_emulators",
+        ["switch2"] = "Nintendo_Switch_2_emulators",
+        ["wiiu"] = "Wii_U_emulators",
+        ["xbox"] = "Xbox_emulators",
+        ["x360"] = "Xbox_360_emulators",
     };
 
     public static long Enqueue(Database db)
@@ -156,7 +173,10 @@ public static partial class EmulatorCheck
             var windows = latest.Assets.Where(IsWindows).ToList();
             return Problem(db, run, r, "noAsset", new()
             {
-                ["repo"] = r.Repo, ["tag"] = latest.Tag, ["pattern"] = pattern, ["files"] = new JsonArray([.. latest.Assets.Select(a => JsonValue.Create(a))]),
+                ["repo"] = r.Repo,
+                ["tag"] = latest.Tag,
+                ["pattern"] = pattern,
+                ["files"] = new JsonArray([.. latest.Assets.Select(a => JsonValue.Create(a))]),
                 ["proposed"] = windows.Count == 1 ? Recipes.AssetPattern(windows[0]) : null,
             });
         }
@@ -295,8 +315,15 @@ public static partial class EmulatorCheck
         {
             run.Report(85 + i * 15 / ask.Count, ApiError.Of("emulators.verifying", ("done", i.ToString()), ("total", ask.Count.ToString())));
             var batch = ask.Skip(i).Take(Batch).ToList();
-            var candidates = batch.Select(b => new { link = b.Item1.Url, name = b.Item3.FullName, description = b.Item3.Description ?? "", hint = b.Item1.Hint ?? "",
-                foundBy = b.Item1.FoundBy, guess = b.Item1.Guess ?? "" }).ToList();
+            var candidates = batch.Select(b => new
+            {
+                link = b.Item1.Url,
+                name = b.Item3.FullName,
+                description = b.Item3.Description ?? "",
+                hint = b.Item1.Hint ?? "",
+                foundBy = b.Item1.FoundBy,
+                guess = b.Item1.Guess ?? ""
+            }).ToList();
             var reply = await ClaudeRunner.Run<Reply>(db, run.Id, PromptName, prompt, new { recipes = catalog, candidates }, ct, Model);
             foreach (var (x, passed, _) in batch)
             {
@@ -342,8 +369,16 @@ public static partial class EmulatorCheck
     {
         var data = new
         {
-            repo = x.Repo, url = x.Url, source = x.Source, host = x.Host, recipe = x.Recipe, foundBy = x.FoundBy, hint = x.Hint,
-            passed, recommendedFor = recommended, reason,
+            repo = x.Repo,
+            url = x.Url,
+            source = x.Source,
+            host = x.Host,
+            recipe = x.Recipe,
+            foundBy = x.FoundBy,
+            hint = x.Hint,
+            passed,
+            recommendedFor = recommended,
+            reason,
         };
         using (var c = db.Open())
             c.Execute("INSERT INTO review_item (kind, entity, data, created_at) VALUES ('doubtful', 'fork', @data, @now)",

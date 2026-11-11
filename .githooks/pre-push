@@ -1,0 +1,29 @@
+#!/bin/sh
+# ia-qa: sin push a main/master ni force push; corre los checks rápidos y gitleaks antes de subir.
+zero=0000000000000000000000000000000000000000
+fail=0
+while read -r lref lsha rref rsha; do
+  case "$rref" in
+    refs/heads/main|refs/heads/master)
+      echo "pre-push: no se sube a ${rref#refs/heads/}; abre un PR (lo fusiona la persona)." >&2; fail=1 ;;
+  esac
+  [ "$lsha" = "$zero" ] && continue
+  if [ "$rsha" != "$zero" ] && ! git merge-base --is-ancestor "$rsha" "$lsha" 2>/dev/null; then
+    echo "pre-push: $rref no avanza en línea (force push). Integra con merge, no reescribas." >&2; fail=1
+  fi
+  if [ "$rsha" = "$zero" ]; then range="$lsha --not --remotes"; else range="$rsha..$lsha"; fi
+  if command -v gitleaks >/dev/null 2>&1; then
+    gitleaks git --redact --no-banner --log-opts="$range" . >&2 || { echo "pre-push: gitleaks encontró secretos." >&2; fail=1; }
+  elif command -v docker >/dev/null 2>&1 && docker info >/dev/null 2>&1; then
+    # Por stdin: montar el repo falla en worktrees (su .git apunta afuera) y Git Bash reescribe los paths.
+    # shellcheck disable=SC2086
+    git log -p $range | docker run --rm -i zricethezav/gitleaks:v8.24.0 stdin --redact --no-banner >&2 \
+      || { echo "pre-push: gitleaks encontró secretos." >&2; fail=1; }
+  else
+    echo "pre-push: aviso: sin gitleaks ni Docker, no se buscaron secretos." >&2
+  fi
+done
+[ $fail -ne 0 ] && exit 1
+if [ -x .calidad/checks.sh ] || [ -f .calidad/checks.sh ]; then
+  sh .calidad/checks.sh rapidos || { echo "pre-push: fallaron los checks rápidos (.calidad/checks.sh)." >&2; exit 1; }
+fi
