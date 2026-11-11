@@ -22,7 +22,7 @@ public class CatalogTasksTests : IAsyncDisposable
     public void TheyAreListedInTheNightOrder()
     {
         var list = CatalogTasks.List(f.Db);
-        Assert.Equal(["igdb", "codes", "ports", "portSearch", "emulators", "emulatorsBest", "cleanup", "iconic", "routes", "best", "translate", "images"], list.Select(t => t.Id));
+        Assert.Equal(["igdb", "codes", "portSearch", "ports", "emulators", "emulatorsBest", "cleanup", "iconic", "routes", "best", "translate", "images"], list.Select(t => t.Id));
         Assert.Equal(8, list.Count(t => t.Model is not null)); // con Claude
         Assert.All(list, t => Assert.True(t.Auto));
         Assert.Equal(7, list[0].Days);
@@ -55,13 +55,22 @@ public class CatalogTasksTests : IAsyncDisposable
 
         Assert.NotNull(CatalogTasks.Nightly(f.Db));
 
-        Assert.Equal(["igdb.refresh", GameCodes.Kind, Ports.Kind, PortSearch.Kind, EmulatorCheck.Kind, CatalogCleanup.Kind, "iconico", "mejor-version", "sgdb.images"],
+        Assert.Equal(["igdb.refresh", GameCodes.Kind, PortSearch.Kind, Ports.Kind, EmulatorCheck.Kind, CatalogCleanup.Kind, "iconico", "mejor-version", "sgdb.images"],
             Queued().Select(q => q.Kind == SagaAnalysis.Kind ? (SagaAnalysis.IsStep(q.Data, SagaAnalysis.Iconic) ? "iconico" : "mejor-version") : q.Kind));
         var list = CatalogTasks.List(f.Db);
         Assert.False(list.Single(t => t.Id == "routes").Auto);
         Assert.Equal(3, list[0].Days);
 
         Assert.Null(CatalogTasks.Nightly(f.Db)); // todo sigue en la cola: no se encola de nuevo
+    }
+
+    /// <summary>#161: «Ejecutar todo en orden» encola la secuencia de la noche ya, también fuera del horario.</summary>
+    [Fact]
+    public void RunAllQueuesTheNightSequenceNow()
+    {
+        Assert.NotNull(CatalogTasks.RunAll(f.Db));
+        Assert.Equal(["igdb.refresh", GameCodes.Kind, PortSearch.Kind, Ports.Kind], Queued().Take(4).Select(q => q.Kind));
+        Assert.Null(CatalogTasks.RunAll(f.Db)); // ya está todo en la cola
     }
 
     [Fact]

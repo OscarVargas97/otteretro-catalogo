@@ -1,6 +1,7 @@
 using Dapper;
 using Otteretro.Api;
 using Otteretro.App;
+using Otteretro.Catalog;
 using Otteretro.Data;
 
 namespace Otteretro.Tests;
@@ -181,5 +182,34 @@ public class TaskQueueTests
         Assert.Equal("error", failed.Status);
         Assert.Equal(ApiError.Of("tasks.failed", ("detail", "sin red")).Code, failed.Detail!.Code);
         Assert.Equal("sin red", failed.Detail.Params!["detail"]);
+    }
+
+    /// <summary>#161: las tareas del catálogo, aunque sean de tipos distintos, corren de a una y en el orden en que se encolaron.</summary>
+    [Fact]
+    public async Task CatalogTasksRunOneAtATimeInQueueOrder()
+    {
+        var order = new List<string>();
+        int now = 0, max = 0;
+        foreach (var kind in new[] { "test-first", "test-second" })
+        {
+            CatalogTasks.InOrder.Add(kind);
+            TaskQueue.Handlers[kind] = async (run, ct) =>
+            {
+                max = Math.Max(max, Interlocked.Increment(ref now));
+                lock (order) order.Add(kind);
+                await Task.Delay(kind == "test-first" ? 200 : 10, ct); // la primera tarda más: si corrieran a la vez, la segunda no esperaría
+                Interlocked.Decrement(ref now);
+            };
+        }
+        using var tmp = new TempDir();
+        var (queue, db) = NewQueue(tmp);
+        var ids = new[] { TaskQueue.Enqueue(db, "test-first"), TaskQueue.Enqueue(db, "test-second") };
+
+        await queue.StartAsync(CancellationToken.None);
+        await Until(() => ids.All(id => Status(db, id) == "done"));
+        await queue.StopAsync(CancellationToken.None);
+
+        Assert.Equal(1, max);
+        Assert.Equal(["test-first", "test-second"], order);
     }
 }

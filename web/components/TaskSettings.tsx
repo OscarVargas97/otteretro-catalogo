@@ -88,6 +88,7 @@ export function TaskSettings() {
         {retry.error && <p className="error small" role="alert">{describe(retry.error)}</p>}
       </section>
 
+      <RunAll />
       <TaskGroup claude />
       <TaskGroup claude={false} />
 
@@ -220,6 +221,30 @@ function usePendingCounts(tasks: CatalogTaskInfo[] | undefined) {
     if (left) refetch();
   }, [active, refetch]);
   return counts;
+}
+
+/** «Ejecutar todo en orden» (#161): encola ahora la secuencia de la noche; la cola las corre de a una. */
+function RunAll() {
+  const t = useTranslations("settings.claude");
+  const describe = useDescribeError();
+  const cache = useQueryClient();
+  const run = useMutation({
+    mutationFn: () => request<CatalogTaskInfo[]>("/api/catalog-tasks/run", { method: "POST" }),
+    onSuccess: (data) => {
+      cache.setQueryData(["catalog-tasks"], data);
+      cache.invalidateQueries({ queryKey: ["tasks"] });
+      cache.invalidateQueries({ queryKey: ["claude"] });
+    },
+  });
+  return (
+    <section className="panel">
+      <div className="chips" style={{ alignItems: "center" }}>
+        <button className="ot-btn ot-btn-sm" type="button" disabled={run.isPending} onClick={() => run.mutate()}>{t("runAll")}</button>
+        <span className="small muted">{t("runAllText")}</span>
+      </div>
+      {run.error && <p className="error small" role="alert">{describe(run.error)}</p>}
+    </section>
+  );
 }
 
 /** Un grupo de tareas (decisión 283): con Claude o sin Claude, en el orden en que corren de noche. */
