@@ -1,9 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState, type ReactNode } from "react";
 
-type Tab = { id: string; label: string };
+type Tab = { id: string; label: ReactNode };
 
 /**
  * Pestañas subrayadas en una sola línea (#108): nunca barra de desplazamiento ni segunda línea. Las que no caben pasan a

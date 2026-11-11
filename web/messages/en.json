@@ -13,7 +13,7 @@
     "saga": "Saga",
     "game": "Game",
     "review": "Review",
-    "emulators": "Emulators",
+    "emulators": "Programs",
     "settings": "Settings",
     "pending": "{count, plural, one {# to review} other {# to review}}",
     "comingIn": "Coming in phase {phase}",
@@ -208,7 +208,7 @@
       "dueIn": "due in {days, plural, one {# day} other {# days}}",
       "dueToday": "due today",
       "lastRun": {"done": "{ago} · finished fine", "error": "{ago} · failed", "canceled": "{ago} · canceled"},
-      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}", "emulators": "{count, plural, one {# notice in Emulators} other {# notices in Emulators}}"},
+      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}", "emulators": "{count, plural, one {# notice in Programs} other {# notices in Programs}}"},
       "never": "Never ran",
       "month": "this month: {calls, plural, one {# call} other {# calls}} · {cost}",
       "covers": "{have} of {total} with a cover",
@@ -261,7 +261,7 @@
         },
         "emulators": {
           "name": "Emulators",
-          "text": "Checks every recipe: a new release that matches its pattern is applied automatically and left unpublished; a pattern that no longer matches or an archived, moved or missing repo stays as a notice in Emulators. Then it looks for forks (the repo's own, by name on GitHub and in known lists) and filters them through the API: a Windows release from the last 6 months, their own commits and at least 10 stars. Only the doubtful ones are checked by Sonnet, once per repo; those that pass stay as unpublished recipes."
+          "text": "Checks every recipe: a new release that matches its pattern is applied automatically and left unpublished; a pattern that no longer matches or an archived, moved or missing repo stays as a notice in Programs. Then it looks for forks (the repo's own, by name on GitHub and in known lists) and filters them through the API: a Windows release from the last 6 months, their own commits and at least 10 stars. Only the doubtful ones are checked by Sonnet, once per repo; those that pass stay as unpublished recipes."
         }
       },
       "ports": {
@@ -429,25 +429,60 @@
     },
     "withSystemBadge": "With the system"
   },
+  "programs": {
+    "intro": "Everything Otteretro knows how to install: emulators, ports, add-ons and tools. Each one is a recipe.",
+    "add": "+ Add",
+    "saved": "{name} saved and checked. It is now in Programs › {tab}, unpublished.",
+    "shown": "Showing {shown} of {total}. More load as you scroll.",
+    "col": { "name": "Name", "source": "Source", "state": "Status" },
+    "kind": {
+      "port": { "column": "Game", "search": "Search by game or name…", "help": "A port is a game rebuilt for PC (recompilation, decompilation or fan remake). It belongs to a game, not to a console.", "desc": "A game rebuilt for PC", "step": "Game", "question": "Which game does it rebuild?" },
+      "emulator": { "column": "Console", "search": "Search by console or name…", "help": "They open the games of one or more consoles. Versions by another author (forks) are shown next to their original.", "desc": "Opens a console's games", "step": "Consoles", "question": "Which consoles does it open?" },
+      "complement": { "column": "Adds to", "search": "Search…", "help": "Installed on top of another program: textures, packs, patches.", "desc": "Textures or packs for another", "step": "Program", "question": "Which program does it add to?" },
+      "tool": { "column": "Used for", "search": "Search…", "help": "Programs that don't open games but help: bringing the library to Steam, converting files, etc.", "desc": "Helps, but doesn't open games", "step": "Use", "question": "What is it for?" }
+    },
+    "wizard": {
+      "steps": "Steps",
+      "origin": "Source",
+      "what": "What are you adding?",
+      "repo": "Link to the repository or the downloads page",
+      "looking": "Looking up its releases…",
+      "found": "✓ {source} repository · latest release {tag}",
+      "noWindows": "No release has a Windows file.",
+      "file": "Windows file",
+      "fileMatches": "✓ matches {file}",
+      "fileHint": "We picked it from the release's file list. Change it only if it isn't the right one.",
+      "formats": "The files it opens come from the console; no need to type them.",
+      "pickConsole": "Pick at least one.",
+      "gameSearch": "Search the game in the catalog",
+      "chosen": "Chosen",
+      "portHint": "That way the game's page in Otteretro offers it as a way to play.",
+      "parentSearch": "Search the program",
+      "parentHint": "It is installed inside that program's folder, after it.",
+      "toolUse": "In one line, what is it for?",
+      "toolHint": "It doesn't open games, so it has no consoles. It shows up in Otteretro › Tools.",
+      "review": "Review and save",
+      "download": "Download",
+      "more": "More fields (optional) · rarely needed",
+      "back": "← Back",
+      "next": "Next →"
+    }
+  },
   "emulators": {
     "local": "local",
     "localHint": "Otteretro recipe from this computer: Publish offers it as a change.",
     "repoUrl": "Repo address",
     "repoPlaceholder": "https://github.com/owner/repo",
-    "fromRepo": "Add a recipe",
     "addFind": "Find releases",
     "addPick": "Pick the Windows file of a release: the pattern is built from its name, replacing the version with a wildcard.",
     "addWindows": "Windows",
     "addUse": "Use this file",
     "addNoDate": "No date",
-    "total": "{count, plural, one {# recipe} other {# recipes}}",
     "empty": "This catalog has no recipes yet.",
     "importMain": "Bring the recipes from main",
     "tabsLabel": "Recipe types",
     "tabs": { "emulator": "Emulators", "port": "Ports", "complement": "Add-ons", "tool": "Tools" },
-    "noConsole": "No console",
     "emptyTab": "There are no recipes of this type.",
-    "search": "Search by name, game or repo",
     "filter": { "unpublished": "Unpublished", "notices": "With a notice" },
     "card": {
       "notice": "Notice", "edit": "Edit", "duplicate": "Duplicate", "openRepo": "Open the repo", "discard": "Discard changes", "test": "Test the download", "testing": "Downloading…",
@@ -510,7 +545,7 @@
       "log": {
         "failed": "Could not check {repo}: {detail}",
         "rateLimited": "GitHub hit its rate limit: the remaining forks will be searched next time.",
-        "done": "Done: {updated} recipes with their new release, {problems} notices on their cards and {forks} new unpublished forks in Emulators.",
+        "done": "Done: {updated} recipes with their new release, {problems} notices on their cards and {forks} new unpublished forks in Programs.",
         "updated": "{recipe}: adds release {tag}, unpublished.",
         "gone": "{recipe}: the repo {repo} no longer exists. Shown on its card.",
         "moved": "{recipe}: the repo {repo} moved to {to}. Shown on its card.",
@@ -901,7 +936,7 @@
         "added": "New: {game} ({console}), {link}.",
         "rejected": "Rejected: {link}. {reason}",
         "search": "Done: {added} new ports and {rejected} rejected; {matched} of {total} with a game.",
-        "recipes": "Port recipes: {created} created, unpublished in Emulators.",
+        "recipes": "Port recipes: {created} created, unpublished in Programs.",
         "recipesLimited": "GitHub reached its request limit: the missing releases are checked next time.",
         "recipeFailed": "Could not read the release of {repo}: {detail}"
       }

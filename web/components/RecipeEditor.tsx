@@ -52,19 +52,22 @@ function resolve(root: Schema, s: Schema): Schema {
  * El editor de una receta (#111, decisión 368), dibujado desde `receta.schema.json` (el que el servidor usa para validar): una pestaña por
  * sección y cada campo según su tipo (lista para un enum, casilla, chips para una lista de textos, filas para una de objetos). El JSON
  * entero solo se edita en la vista avanzada, plegada al pie. Guardar valida esquema y fuente en el servidor, como antes.
+ * Con `onChange` (los «Más campos» de Agregar programa, #166) la receta es la de quien lo usa: sin título ni guardar propios.
  */
-export function RecipeEditor({ recipe, create, onDone }: { recipe: Recipe; create: boolean; onDone: () => void }) {
+export function RecipeEditor({ recipe, create, onDone, onChange }: { recipe: Recipe; create: boolean; onDone?: () => void; onChange?: (r: Recipe) => void }) {
   const t = useTranslations("emulators");
   const describe = useDescribeError();
   const cache = useQueryClient();
   const schema = useQuery({ queryKey: ["recipes", "schema"], queryFn: () => request<RecipeText>("/api/recipes/schema").then((r) => JSON.parse(r.json) as Schema), staleTime: Infinity });
-  const [r, setR] = useState<Recipe>(recipe);
+  const [own, setOwn] = useState<Recipe>(recipe);
+  const r = onChange ? recipe : own;
+  const setR = onChange ? (f: Recipe | ((old: Recipe) => Recipe)) => onChange(typeof f === "function" ? f(recipe) : f) : setOwn;
   const [section, setSection] = useState<Section>("basic");
   const [text, setText] = useState<string | null>(null); // el JSON de la vista avanzada mientras se escribe; null: el de la receta
   const [bad, setBad] = useState(false);
   const save = useMutation({
     mutationFn: (out: Recipe) => request<RecipeInfo[]>(`/api/recipes/${encodeURIComponent(String(out.id ?? ""))}?create=${create}`, json("PUT", { json: JSON.stringify(out, null, 2) })),
-    onSuccess: (list) => { cache.setQueryData(["recipes"], list); cache.invalidateQueries({ queryKey: ["recipes", "status"] }); onDone(); },
+    onSuccess: (list) => { cache.setQueryData(["recipes"], list); cache.invalidateQueries({ queryKey: ["recipes", "status"] }); onDone?.(); },
   });
   // Un JSON a medio corregir se conserva; si no, la vista avanzada vuelve a mostrar la receta con el cambio.
   const set = (path: Path, value: unknown) => { setR((old) => setIn(old, path, value) as Recipe); if (!bad) setText(null); };
@@ -143,9 +146,8 @@ export function RecipeEditor({ recipe, create, onDone }: { recipe: Recipe; creat
 
   const sections = Object.keys(SECTIONS) as Section[];
 
-  return (
-    <form className="panel" onSubmit={(e) => { e.preventDefault(); if (!bad) save.mutate(r); }}>
-      <h2 style={{ margin: 0 }}>{create ? t("newTitle") : t("editTitle", { id: String(recipe.id ?? "") })}</h2>
+  const body = (
+    <>
       <Tabs tabs={sections.map((s) => ({ id: s, label: t(`sections.${s}`) }))} current={section} onSelect={(id) => setSection(id as Section)} label={t("sectionsLabel")} panel="recipe-section" />
       <div id="recipe-section" role="tabpanel" aria-labelledby={`tab-${section}`} style={{ display: "grid", gap: 12 }}>
         {schema.error && <p className="error small" role="alert" style={{ margin: 0 }}>{describe(schema.error)}</p>}
@@ -161,8 +163,16 @@ export function RecipeEditor({ recipe, create, onDone }: { recipe: Recipe; creat
           }} />
         </label>
       </details>
-      <p className="small muted" style={{ margin: 0 }}>{t("checkNote")}</p>
       {bad && <p className="error small" role="alert" style={{ margin: 0 }}>{t("badJson")}</p>}
+    </>
+  );
+  if (onChange) return <div style={{ display: "grid", gap: 12 }}>{body}</div>;
+
+  return (
+    <form className="panel" onSubmit={(e) => { e.preventDefault(); if (!bad) save.mutate(r); }}>
+      <h2 style={{ margin: 0 }}>{create ? t("newTitle") : t("editTitle", { id: String(recipe.id ?? "") })}</h2>
+      {body}
+      <p className="small muted" style={{ margin: 0 }}>{t("checkNote")}</p>
       {save.error && <p className="error small" role="alert" style={{ margin: 0 }}>{describe(save.error)}</p>}
       <div className="dialog-actions">
         <button className="ot-btn" type="button" onClick={onDone}>{t("cancel")}</button>

@@ -2,9 +2,9 @@
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { useConsoleName } from "@/components/Catalog";
-import { RecipeAdd } from "@/components/RecipeAdd";
+import { KINDS, ProgramAdd, type Kind } from "@/components/ProgramAdd";
 import { RecipeCard } from "@/components/RecipeCard";
 import { RecipeEditor } from "@/components/RecipeEditor";
 import { Tabs } from "@/components/Tabs";
@@ -14,15 +14,16 @@ import type { RecipeInfo, RecipeStatus, RecipeText } from "@/lib/types";
 
 type Recipe = Record<string, unknown>;
 
-const KINDS = ["emulator", "port", "complement", "tool"] as const;
+const PAGE = 100;
 
 /**
- * Emuladores (#95, #108): una pestaña por tipo de receta (sin Sistema, decisión 364) con sus tarjetas agrupadas por consola, «Agregar
- * una receta» (RecipeAdd, #110) y el editor por secciones (RecipeEditor, #111). Se guardan en la base local, como las
- * sagas, y Publicar las lleva al PR. Al guardar, el servidor revisa el esquema y que la fuente tenga una release con un archivo que calce.
+ * Programas (antes Emuladores, #166): una pestaña por tipo de receta con una tabla y la columna que le sirve a cada tipo (el juego de un
+ * port, las consolas de un emulador, a qué se suma un complemento, para qué sirve una herramienta). El nombre abre su tarjeta (RecipeCard)
+ * con editar, duplicar, probar y descartar; «Agregar» lleva a Agregar programa en 3 pasos (ProgramAdd). Publicar las lleva al PR.
  */
-export default function Emulators() {
+export default function Programs() {
   const t = useTranslations("emulators");
+  const tp = useTranslations("programs");
   const describe = useDescribeError();
   const consoleName = useConsoleName();
   const cache = useQueryClient();
@@ -30,16 +31,25 @@ export default function Emulators() {
   // Aparte de la lista: consulta cada repo (con caché en el servidor) y main, así que llega después.
   const status = useQuery({ queryKey: ["recipes", "status"], queryFn: () => request<RecipeStatus[]>("/api/recipes/status") });
   const statusOf = new Map((status.data ?? []).map((x) => [x.id, x]));
-  const [kind, setKind] = useState<(typeof KINDS)[number]>("emulator");
+  const [kind, setKind] = useState<Kind>("port");
   const [editing, setEditing] = useState<{ recipe: Recipe; create: boolean } | null>(null);
   const [adding, setAdding] = useState(false);
+  const [saved, setSaved] = useState<{ name: string; kind: Kind } | null>(null);
+  const [opened, setOpened] = useState<string | null>(null);
   // Buscar y filtrar (#153): lo que las tareas dejaron sin publicar o con un aviso.
   const [query, setQuery] = useState("");
   const [only, setOnly] = useState<"unpublished" | "notices" | null>(null);
+  const [limit, setLimit] = useState(PAGE);
+  const end = useRef<HTMLDivElement>(null);
   const importMain = useMutation({ mutationFn: () => request<number>("/api/recipes/import", { method: "POST" }), onSuccess: () => cache.invalidateQueries({ queryKey: ["recipes"] }) });
   const open = useMutation({
     mutationFn: (id: string) => request<RecipeText>(`/api/recipes/${encodeURIComponent(id)}`),
-    onSuccess: (r) => setEditing({ recipe: JSON.parse(r.json), create: false }),
+    onSuccess: (r) => {
+      const recipe = JSON.parse(r.json) as Recipe;
+      if (KINDS.includes(recipe.kind as Kind)) setKind(recipe.kind as Kind);
+      setOpened(String(recipe.id));
+      setEditing({ recipe, create: false });
+    },
   });
 
   // /emulators/?edit=<id> abre el editor de esa receta.
@@ -57,25 +67,47 @@ export default function Emulators() {
     },
   });
 
-  // Las de la pestaña, por su primera consola (la tarjeta nombra las demás); las sin consola van al final.
-  const byId = new Map((recipes.data ?? []).map((r) => [r.id, r]));
-  const groups = new Map<string, RecipeInfo[]>();
+  const all = recipes.data ?? [];
+  const byId = new Map(all.map((r) => [r.id, r]));
   const text = query.trim().toLowerCase();
-  const shown = (recipes.data ?? []).filter((r) => r.kind === kind
-    && (!text || [r.id, r.name, r.game, r.url].some((v) => v?.toLowerCase().includes(text)))
-    && (only !== "unpublished" || r.local || statusOf.get(r.id)?.state === "changed")
-    && (only !== "notices" || (r.notices?.length ?? 0) > 0));
-  for (const r of shown) groups.set(r.consoles[0] ?? "", [...(groups.get(r.consoles[0] ?? "") ?? []), r]);
-  const title = (key: string) => key ? consoleName(key) : t("noConsole");
-  const sorted = [...groups.entries()].sort(([a], [b]) => (!a ? 1 : !b ? -1 : title(a).localeCompare(title(b))));
+  const nameOf = (r: RecipeInfo) => r.name || r.id;
+  // Un fork va justo después de su original (ordena por el nombre de la original y después por el suyo).
+  const sortKey = (r: RecipeInfo) => `${(r.forkOf && byId.get(r.forkOf) ? nameOf(byId.get(r.forkOf)!) : nameOf(r)).toLowerCase()}\u0000${r.forkOf ? 1 : 0}${nameOf(r).toLowerCase()}`;
+  const unpublished = (r: RecipeInfo) => r.local || statusOf.get(r.id)?.state === "changed";
+  const forWhat = (r: RecipeInfo) => r.kind === "port" ? [r.game, r.folder].filter(Boolean).join(" · ")
+    : r.kind === "emulator" ? [r.consoles.map(consoleName).join(", "), r.forkOf && t("card.forkOf", { name: byId.get(r.forkOf)?.name || r.forkOf })].filter(Boolean).join(" · ")
+      : r.folder;
+  const shown = all.filter((r) => r.kind === kind
+    && (!text || [r.id, r.name, r.game, r.url, forWhat(r)].some((v) => v?.toLowerCase().includes(text)))
+    && (only !== "unpublished" || unpublished(r))
+    && (only !== "notices" || (r.notices?.length ?? 0) > 0))
+    .sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+  const rows = shown.slice(0, limit);
+  const source = (url?: string | null) => { try { return url ? new URL(url).hostname.replace(/^www\./, "") : ""; } catch { return ""; } };
 
+  // Al bajar se cargan más: un marcador al pie de la tabla, como usePaged pero con la lista ya en memoria.
+  useEffect(() => {
+    const node = end.current;
+    if (!node || rows.length >= shown.length) return;
+    const watch = new IntersectionObserver(([e]) => { if (e.isIntersecting) setLimit((n) => n + PAGE); }, { rootMargin: "0px 0px 1500px 0px" });
+    watch.observe(node);
+    return () => watch.disconnect();
+  }, [rows.length, shown.length]);
+
+  if (adding) return (
+    <div className="content">
+      <ProgramAdd onCancel={() => setAdding(false)} onSaved={(name, k) => { setAdding(false); setKind(k); setLimit(PAGE); setSaved({ name, kind: k }); }} />
+    </div>
+  );
+
+  const pick = (k: Kind) => { setKind(k); setOnly(null); setLimit(PAGE); setOpened(null); };
   return (
     <div className="content">
       <div className="toolbar">
-        <button className="ot-btn ot-btn-primary" type="button" disabled={adding} onClick={() => setAdding(true)}>{t("fromRepo")}</button>
-        <span className="small muted tabular toolbar-total" aria-live="polite">{recipes.data ? t("total", { count: recipes.data.length }) : ""}</span>
+        <p className="small muted" style={{ margin: 0, flex: 1 }}>{tp("intro")}</p>
+        <button className="ot-btn ot-btn-primary" type="button" onClick={() => { setSaved(null); setAdding(true); }}>{tp("add")}</button>
       </div>
-      {adding && <RecipeAdd onDraft={(recipe) => { setAdding(false); setEditing({ recipe, create: true }); }} onCancel={() => setAdding(false)} />}
+      {saved && <p className="panel small" role="status" style={{ margin: 0 }}>{tp("saved", { name: saved.name, tab: t(`tabs.${saved.kind}`) })}</p>}
       {[open.error, duplicate.error, recipes.error, importMain.error].filter(Boolean).map((e, i) => <p key={i} className="error small" role="alert">{describe(e)}</p>)}
       {editing && <RecipeEditor key={String(editing.recipe.id)} recipe={editing.recipe} create={editing.create} onDone={() => setEditing(null)} />}
       {recipes.data?.length === 0 && (
@@ -84,24 +116,51 @@ export default function Emulators() {
           <div><button className="ot-btn" type="button" disabled={importMain.isPending} onClick={() => importMain.mutate()}>{t("importMain")}</button></div>
         </section>
       )}
-      <Tabs tabs={KINDS.map((k) => ({ id: k, label: t(`tabs.${k}`) }))} current={kind} onSelect={(id) => setKind(id as typeof kind)} label={t("tabsLabel")} panel="recipes-panel" />
+      <Tabs tabs={KINDS.map((k) => ({ id: k, label: <>{t(`tabs.${k}`)} <span className="muted">{all.filter((r) => r.kind === k).length}</span></> }))}
+        current={kind} onSelect={(id) => pick(id as Kind)} label={t("tabsLabel")} panel="recipes-panel" />
+      <p className="small muted" style={{ margin: 0 }}>{tp(`kind.${kind}.help`)}</p>
       <div className="chips" style={{ alignItems: "center" }}>
-        <input type="search" aria-label={t("search")} placeholder={t("search")} value={query} onChange={(e) => setQuery(e.target.value)} />
+        <input type="search" aria-label={tp(`kind.${kind}.search`)} placeholder={tp(`kind.${kind}.search`)} value={query} onChange={(e) => { setQuery(e.target.value); setLimit(PAGE); }} />
         {(["unpublished", "notices"] as const).map((k) => (
-          <button key={k} className="chip" type="button" aria-pressed={only === k} onClick={() => setOnly(only === k ? null : k)}>{t(`filter.${k}`)}</button>
+          <button key={k} className="chip" type="button" aria-pressed={only === k} onClick={() => { setOnly(only === k ? null : k); setLimit(PAGE); }}>{t(`filter.${k}`)}</button>
         ))}
       </div>
-      <div id="recipes-panel" role="tabpanel" aria-labelledby={`tab-${kind}`} style={{ display: "grid", gap: 8 }}>
-        {recipes.data && recipes.data.length > 0 && sorted.length === 0 && <p className="muted">{t("emptyTab")}</p>}
-        {sorted.map(([key, list]) => (
-          <div key={key} style={{ display: "grid", gap: 8 }}>
-            <h2 className="console-group">{title(key)}</h2>
-            {list.map((r) => (
-              <RecipeCard key={r.id} recipe={r} original={byId.get(String(r.forkOf))} forks={recipes.data?.filter((f) => f.forkOf === r.id)} status={statusOf.get(r.id)} editing={editing?.recipe.id === r.id} busy={open.isPending || duplicate.isPending} onEdit={() => open.mutate(r.id)} onDuplicate={() => duplicate.mutate(r.id)} />
-            ))}
-          </div>
-        ))}
+      <div id="recipes-panel" role="tabpanel" aria-labelledby={`tab-${kind}`} className="panel table-wrap" style={{ padding: 0 }}>
+        {recipes.data && recipes.data.length > 0 && shown.length === 0 ? <p className="muted" style={{ padding: 12, margin: 0 }}>{t("emptyTab")}</p> : (
+          <table className="t">
+            <thead><tr><th>{tp("col.name")}</th><th>{tp(`kind.${kind}.column`)}</th><th>{tp("col.source")}</th><th>{tp("col.state")}</th></tr></thead>
+            <tbody>
+              {rows.map((r) => {
+                const state = r.local ? "local" : statusOf.get(r.id)?.state;
+                return (
+                  <Fragment key={r.id}>
+                    <tr>
+                      <td><button type="button" className="link-button" aria-expanded={opened === r.id} onClick={() => setOpened(opened === r.id ? null : r.id)}><b>{nameOf(r)}</b></button></td>
+                      <td>{forWhat(r)}</td>
+                      <td className="small muted">{source(r.url)}</td>
+                      <td>
+                        <span className="sentence">
+                          {state === "published" && <span className="ot-badge ot-badge-have">{t("card.published")}</span>}
+                          {(state === "changed" || state === "local") && <span className="ot-badge ot-badge-info" title={t(state === "local" ? "localHint" : "card.changedHint")}>{t("card.changed")}</span>}
+                          {(r.notices?.length ?? 0) > 0 && <span className="ot-badge ot-badge-danger">{t("filter.notices")}</span>}
+                        </span>
+                      </td>
+                    </tr>
+                    {opened === r.id && (
+                      <tr><td colSpan={4}>
+                        <RecipeCard recipe={r} original={byId.get(String(r.forkOf))} forks={all.filter((f) => f.forkOf === r.id)} status={statusOf.get(r.id)} editing={editing?.recipe.id === r.id}
+                          busy={open.isPending || duplicate.isPending} onEdit={() => open.mutate(r.id)} onDuplicate={() => duplicate.mutate(r.id)} />
+                      </td></tr>
+                    )}
+                  </Fragment>
+                );
+              })}
+            </tbody>
+          </table>
+        )}
+        <div ref={end} aria-hidden="true" />
       </div>
+      {shown.length > rows.length && <p className="small muted" style={{ margin: 0 }}>{tp("shown", { shown: rows.length, total: shown.length })}</p>}
     </div>
   );
 }
