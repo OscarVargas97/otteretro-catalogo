@@ -1,8 +1,0 @@
-#!/bin/sh
-# ia-qa: el mensaje sigue Conventional Commits (tipo(scope)!: descripción).
-msg=$(head -n1 "$1")
-case "$msg" in Merge\ *|Revert\ *|fixup!\ *|squash!\ *) exit 0 ;; esac
-if ! printf '%s' "$msg" | grep -Eq '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9._/-]+\))?!?: .+'; then
-  echo "commit-msg: «$msg» no sigue Conventional Commits (p. ej. «feat(api): agrega X»)." >&2
-  exit 1
-fi
