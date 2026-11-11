@@ -147,6 +147,9 @@ public static class CatalogEndpoints
         // Las recetas que recomiendan un juego (#123), para su ficha.
         api.MapGet("/games/{id:long}/recipes", Results<Ok<List<GameRecipe>>, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is { } db ? TypedResults.Ok(Recipes.ForGame(db, id)) : NoData());
+        // «Mejor emulador» (#130): encola la búsqueda de Claude para un juego y devuelve la tarea; lo que encuentra va a Revisar.
+        api.MapPost("/games/{id:long}/best-emulator", Results<Ok<long>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
+            Db(s) is not { } db ? NoData() : BestEmulator.Enqueue(db, id) is { } task ? TypedResults.Ok(task) : TypedResults.NotFound());
         // El editor de recetas (#111) se arma con el esquema: el mismo que valida al guardar.
         api.MapGet("/recipes/schema", () => TypedResults.Ok(new RecipeText(Published.RecipeSchema())));
         api.MapGet("/recipes/{id}", Results<Ok<RecipeText>, NotFound, Conflict<ApiError>> (string id, AppSession s) =>
