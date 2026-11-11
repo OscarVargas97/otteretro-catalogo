@@ -67,8 +67,14 @@ public static class BestEmulator
         }
         // Solo las recetas de sus consolas, con lo que el prompt necesita.
         var catalog = recipes
-            .Select(r => new { id = (string)r["id"]!, name = (string?)r["name"] ?? "", repo = Recipes.RepoUrl(r) ?? "", forkOf = (string?)r["forkOf"] ?? "",
-                consoles = r["consoles"]?.AsArray().Select(k => (string)k!).Where(consoles.Contains).ToList() ?? [] })
+            .Select(r => new
+            {
+                id = (string)r["id"]!,
+                name = (string?)r["name"] ?? "",
+                repo = Recipes.RepoUrl(r) ?? "",
+                forkOf = (string?)r["forkOf"] ?? "",
+                consoles = r["consoles"]?.AsArray().Select(k => (string)k!).Where(consoles.Contains).ToList() ?? []
+            })
             .Where(r => r.consoles.Count > 0).ToList();
 
         run.Report(10, ApiError.Of("emulators.best.searching", ("game", game.Name), ("consoles", consoles.Count.ToString(CultureInfo.InvariantCulture))));
