@@ -201,7 +201,7 @@ public static partial class Recipes
     /// Guarda la receta <paramref name="id"/> (nueva, con <paramref name="create"/>) si cumple el esquema y su fuente tiene una release con
     /// un archivo que calce con su patrón; si no, el porqué y no guarda nada.
     /// </summary>
-    public static async Task<ApiError?> Save(Database db, string id, string json, bool create, string? token, CancellationToken ct = default)
+    public static async Task<ApiError?> Save(Database db, string id, string json, bool create, string? token, CancellationToken ct = default, bool checkRelease = true)
     {
         if (FromPort(db, json) is { } port)
         {
@@ -218,7 +218,7 @@ public static partial class Recipes
             if (r.GetProperty("id").GetString() != id) return ApiError.Of("recipes.idChanged", ("id", id));
             var before = Get(db, id);
             if (create && before is not null) return ApiError.Of("recipes.exists", ("id", id));
-            if (await CheckRelease(r, token, ct) is { } error) return error;
+            if (checkRelease && await CheckRelease(r, token, ct) is { } error) return error;
             // Sin cambios, conserva sus bytes (los de main): así no aparece como cambiada solo por el formato.
             bool same;
             using (var old = before is null ? null : JsonDocument.Parse(before)) same = old is not null && JsonElement.DeepEquals(old.RootElement, r);

@@ -20,9 +20,9 @@ public record PortCandidate(long Id, long Port, string Game, string Project, str
 public record AcceptPortRequest(string? File = null);
 
 /// <summary>
-/// Recetas propuestas para los ports (#119, solicitud #118): un paso de la tarea «Ports», después del cruce y sin Claude. Cada port con
-/// juego cuyo enlace es un repo de GitHub o Forgejo pide su última release; con archivos de Windows, va a Revisar una receta mínima
-/// (<c>kind: port</c>, juego, carpeta de su consola, fuente y patrón del archivo). Lo visto queda en <c>port_recipe_seen</c>: lo
+/// Las recetas de los ports (#119, solicitud #118): un paso de la tarea «Ports», después del cruce y sin Claude. Cada port con
+/// juego cuyo enlace es un repo de GitHub o Forgejo pide su última release; con archivos de Windows, se crea su receta mínima
+/// (<c>kind: port</c>, su fila, fuente y patrón del archivo). A Revisar solo va la que no tiene un archivo claro. Lo visto queda en <c>port_recipe_seen</c>: lo
 /// resuelto en Revisar no vuelve y lo que no tiene archivo de Windows se vuelve a mirar cuando cambie su release. Un repo que ya es
 /// fuente de una receta no se propone.
 /// </summary>
@@ -40,10 +40,19 @@ public static class PortRecipes
 
     static string Key(string? host, string repo) => $"{host ?? "github.com"}/{repo}".ToLowerInvariant();
 
-    /// <summary>El paso de la tarea. Devuelve cuántos candidatos nuevos fueron a Revisar.</summary>
+    /// <summary>
+    /// El paso de la tarea: crea la receta de cada port con una release de Windows. Solo va a Revisar el que tiene varios archivos sin uno
+    /// claro, o cuya receta no se pudo guardar. Antes convierte lo que ya esperaba en Revisar. Devuelve cuántas recetas creó.
+    /// </summary>
     public static async Task<int> Propose(TaskRun run, CancellationToken ct)
     {
         var db = run.Db;
+        var created = 0;
+        List<(long Id, string Data)> open;
+        using (var c = db.Open()) open = c.Query<(long, string)>("SELECT id, data FROM review_item WHERE entity = 'port' AND status = 'open' ORDER BY id").ToList();
+        foreach (var (id, json) in open)
+            if (Pick(Read(json).Files) is { } file && await Accept(db, id, file, ct) is (true, null)) created++;
+
         var token = run.Credentials.Read("github.token") is { Length: > 0 } t ? t : null;
         HashSet<string> own, ownRepos; // los ports que ya tienen receta: por su enlace (#149) o, en una receta sin «port», por su repo
         // ponytail: Forgejo solo en Codeberg y los servidores de las recetas; cualquier otro enlace (una web, GitLab) no es un repo con esta API.
@@ -98,14 +107,44 @@ public static class PortRecipes
             }
             var data = new Data(p.Id, p.Game, p.Project, p.Console, p.Folder, source, host, repo, $"https://{host ?? "github.com"}/{repo}", latest!.Tag,
                 latest.PublishedAt, files, p.Link);
+            if (Pick(files) is { } file)
+            {
+                if (await Create(db, data, file, ct) is not { } error)
+                {
+                    Seen(db, key, latest.Tag, "accepted");
+                    created++;
+                    continue;
+                }
+                run.Log(ApiError.Of("ports.log.recipeFailed", ("repo", repo), ("detail", error.Code)), "warn");
+            }
             using (var c = db.Open())
                 c.Execute("INSERT INTO review_item (kind, entity, entity_id, data, created_at) VALUES ('doubtful', 'port', @Port, @json, @now)",
                     new { data.Port, json = JsonSerializer.Serialize(data, JsonSerializerOptions.Web), now = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture) });
             Seen(db, key, latest.Tag, "review");
             added++;
         }
-        run.Log(ApiError.Of("ports.log.recipes", ("added", added.ToString(CultureInfo.InvariantCulture))));
-        return added;
+        run.Log(ApiError.Of("ports.log.recipes", ("created", created.ToString(CultureInfo.InvariantCulture)), ("added", added.ToString(CultureInfo.InvariantCulture))));
+        return created;
+    }
+
+    /// <summary>
+    /// El archivo de la receta: el único, o entre varios el de 64 bits que no sea de depuración ni símbolos. Null si sigue sin ser uno claro
+    /// (va a Revisar a elegirlo).
+    /// </summary>
+    internal static string? Pick(List<string> files)
+    {
+        if (files.Count == 1) return files[0];
+        var real = files.Where(f => !Regex.IsMatch(f, "debug|symbols|pdb", RegexOptions.IgnoreCase)).ToList();
+        if (real.Count == 1) return real[0];
+        var x64 = real.Where(f => Regex.IsMatch(f, "x64|x86_64|amd64|win64", RegexOptions.IgnoreCase)).ToList();
+        return x64.Count == 1 ? x64[0] : null;
+    }
+
+    // El archivo salió de la release recién leída: no hace falta volver a pedirla para validar el patrón.
+    static async Task<ApiError?> Create(Database db, Data d, string file, CancellationToken ct)
+    {
+        var newId = NewId(db, d.Project);
+        return await Recipes.Save(db, newId, Build(d, newId, file).ToJsonString(), true, null, ct, checkRelease: false);
     }
 
     static void Seen(Database db, string repo, string? tag, string result)
@@ -169,7 +208,7 @@ public static class PortRecipes
     /// Acepta un candidato: crea la receta experimental con el archivo elegido (o el único) y la guarda como cualquier receta (esquema y
     /// una release que calce con el patrón). Found es false si el candidato no existe o ya se resolvió.
     /// </summary>
-    public static async Task<(bool Found, ApiError? Error)> Accept(Database db, long id, string? file, string? token, CancellationToken ct = default)
+    public static async Task<(bool Found, ApiError? Error)> Accept(Database db, long id, string? file, CancellationToken ct = default)
     {
         string? json;
         using (var c = db.Open())
@@ -178,8 +217,7 @@ public static class PortRecipes
         var d = Read(json);
         file ??= d.Files.Count == 1 ? d.Files[0] : null;
         if (file is null || !d.Files.Contains(file)) return (true, ApiError.Of("review.chooseFile"));
-        var newId = NewId(db, d.Project);
-        if (await Recipes.Save(db, newId, Build(d, newId, file).ToJsonString(), true, token, ct) is { } error) return (true, error);
+        if (await Create(db, d, file, ct) is { } error) return (true, error);
         Resolve(db, id, d, "approved", "accepted");
         return (true, null);
     }
