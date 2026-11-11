@@ -1,0 +1,45 @@
+{
+  "id": "wael3rd-eglantine-mkw",
+  "name": "Eglantine (Wael3rd)",
+  "kind": "emulator",
+  "folder": "Switch 2",
+  "detect": "eglantine.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "switch2"
+  ],
+  "experimental": true,
+  "devOnly": true,
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config"
+  ],
+  "content": [
+    "user/nand"
+  ],
+  "perGame": {
+    "args": [
+      "-g",
+      "{rom}"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "Wael3rd/Eglantine-MKW"
+  },
+  "asset": "^Eglantine-MKW-2026-10-30-windows-x64\\.zip$",
+  "formats": [
+    "nsp",
+    "xci",
+    "nca",
+    "nro"
+  ],
+  "forkOf": "eglantine"
+}

@@ -350,6 +350,12 @@
         {
           "field": "best_version",
           "value": "8107",
+          "source": "claude",
+          "manual": false
+        },
+        {
+          "field": "best_version",
+          "value": "8107",
           "source": "script",
           "manual": false
         },
@@ -391,7 +397,28 @@
           "kind": "original",
           "year": 2014,
           "igdbId": 5513,
-          "criteria": [],
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "4",
+              "text": "Contenido equivalente adaptado a 3DS, sin diferencias importantes conocidas."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "3",
+              "text": "Pantalla táctil funcional, pero menos precisa y más incómoda."
+            },
+            {
+              "criterion": "original",
+              "value": "3",
+              "text": "Port fiel en esencia, con ajustes visuales y de interfaz."
+            },
+            {
+              "criterion": "technical",
+              "value": "2",
+              "text": "Resolución baja de 3DS y arte comprimido."
+            }
+          ],
           "codes": [
             "CTR-P-AR2P"
           ]
@@ -403,7 +430,28 @@
           "year": 2008,
           "igdbId": 5513,
           "steamAppId": 51000,
-          "criteria": []
+          "criteria": [
+            {
+              "criterion": "content",
+              "value": "5",
+              "text": "Juego completo con todos los capítulos y escenas originales."
+            },
+            {
+              "criterion": "gameplay",
+              "value": "5",
+              "text": "El ratón da precisión al buscar objetos y puzles; guardado cómodo."
+            },
+            {
+              "criterion": "original",
+              "value": "5",
+              "text": "Es la versión original de lanzamiento."
+            },
+            {
+              "criterion": "technical",
+              "value": "5",
+              "text": "Resolución alta y escalable, carga rápida y estable."
+            }
+          ]
         }
       ],
       "images": {

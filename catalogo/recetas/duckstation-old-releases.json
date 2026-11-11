@@ -1,0 +1,87 @@
+{
+  "id": "duckstation-old-releases",
+  "name": "DuckStation (duckstation)",
+  "kind": "emulator",
+  "folder": "PlayStation",
+  "detect": "duckstation-qt-x64-ReleaseLTCG.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps1"
+  ],
+  "license": "CC-BY-NC-ND-4.0",
+  "portable": [
+    {
+      "type": "file",
+      "path": "portable.txt",
+      "system": "windows"
+    }
+  ],
+  "saves": [
+    "memcards"
+  ],
+  "config": [
+    "settings.ini",
+    "gamesettings",
+    "inputprofiles"
+  ],
+  "perGame": {
+    "config": "gamesettings/{serial}.ini",
+    "apply": "file",
+    "mods": [
+      "textures/{serial}"
+    ]
+  },
+  "options": [
+    {
+      "name": "renderer",
+      "file": "settings.ini",
+      "format": "ini",
+      "section": "GPU",
+      "key": "Renderer"
+    },
+    {
+      "name": "resolution",
+      "file": "settings.ini",
+      "format": "ini",
+      "section": "GPU",
+      "key": "ResolutionScale"
+    },
+    {
+      "name": "filter",
+      "file": "settings.ini",
+      "format": "ini",
+      "section": "GPU",
+      "key": "TextureFilter"
+    },
+    {
+      "name": "aspectRatio",
+      "file": "settings.ini",
+      "format": "ini",
+      "section": "Display",
+      "key": "AspectRatio"
+    },
+    {
+      "name": "vsync",
+      "file": "settings.ini",
+      "format": "ini",
+      "section": "Display",
+      "key": "VSync"
+    },
+    {
+      "name": "speed",
+      "file": "settings.ini",
+      "format": "ini",
+      "section": "Main",
+      "key": "EmulationSpeed"
+    }
+  ],
+  "updates": {
+    "source": "github",
+    "repo": "duckstation/old-releases"
+  },
+  "asset": "^duckstation-windows-x64-release\\.zip$",
+  "experimental": true,
+  "forkOf": "duckstation"
+}

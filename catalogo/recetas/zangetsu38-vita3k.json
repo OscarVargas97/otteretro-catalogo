@@ -1,0 +1,85 @@
+{
+  "id": "zangetsu38-vita3k",
+  "name": "Vita3K (Zangetsu38)",
+  "kind": "emulator",
+  "folder": "PS Vita",
+  "detect": "Vita3K.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "vita"
+  ],
+  "license": "GPL-2.0-only",
+  "devOnly": true,
+  "portable": [
+    {
+      "type": "folder",
+      "path": "portable"
+    }
+  ],
+  "config": [
+    "portable/config.yml"
+  ],
+  "install": [
+    {
+      "formats": [
+        "pkg"
+      ],
+      "args": [
+        "--pkg",
+        "{file}",
+        "--zrif",
+        "{zrif}"
+      ]
+    },
+    {
+      "formats": [
+        "pup"
+      ],
+      "args": [
+        "--firmware",
+        "{file}"
+      ]
+    }
+  ],
+  "options": [
+    {
+      "name": "renderer",
+      "file": "portable/config.yml",
+      "format": "yml",
+      "key": "backend-renderer"
+    },
+    {
+      "name": "resolution",
+      "file": "portable/config.yml",
+      "format": "yml",
+      "key": "resolution-multiplier"
+    },
+    {
+      "name": "filter",
+      "file": "portable/config.yml",
+      "format": "yml",
+      "key": "screen-filter"
+    },
+    {
+      "name": "vsync",
+      "file": "portable/config.yml",
+      "format": "yml",
+      "key": "v-sync"
+    },
+    {
+      "name": "anisotropy",
+      "file": "portable/config.yml",
+      "format": "yml",
+      "key": "anisotropic-filtering"
+    }
+  ],
+  "updates": {
+    "source": "github",
+    "repo": "Zangetsu38/Vita3K"
+  },
+  "asset": "^windows-latest\\.zip$",
+  "experimental": true,
+  "forkOf": "vita3k"
+}

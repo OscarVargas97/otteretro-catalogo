@@ -1,0 +1,41 @@
+{
+  "id": "prismfox67-cemu-uwp",
+  "name": "Cemu (PrismFox67)",
+  "kind": "emulator",
+  "folder": "Wii U",
+  "detect": "Cemu.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "wiiu"
+  ],
+  "license": "MPL-2.0",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "portable"
+    }
+  ],
+  "saves": [
+    "portable/mlc01/usr/save"
+  ],
+  "config": [
+    "portable/settings.xml",
+    "portable/gameProfiles"
+  ],
+  "content": [
+    "portable/mlc01"
+  ],
+  "perGame": {
+    "config": "portable/gameProfiles/{titleId}.ini",
+    "apply": "file"
+  },
+  "updates": {
+    "source": "github",
+    "repo": "PrismFox67/Cemu-UWP"
+  },
+  "asset": "^windows-build\\.log$",
+  "experimental": true,
+  "forkOf": "cemu"
+}

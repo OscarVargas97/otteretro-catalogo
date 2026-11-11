@@ -1,0 +1,38 @@
+{
+  "id": "diegolix29-shadps4",
+  "name": "shadPS4 (diegolix29)",
+  "kind": "emulator",
+  "folder": "PlayStation 4",
+  "detect": "shadPS4.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps4"
+  ],
+  "license": "GPL-2.0-only",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config.json",
+    "user/custom_configs"
+  ],
+  "perGame": {
+    "config": "user/custom_configs/{serial}.json",
+    "apply": "file",
+    "mods": [
+      "{game}-mods"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "diegolix29/shadPS4"
+  },
+  "asset": "^Shadlix-shadps4-win64-qt-2026-11-03-66d26c5\\.zip$",
+  "experimental": true,
+  "forkOf": "shadps4"
+}

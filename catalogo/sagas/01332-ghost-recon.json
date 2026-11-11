@@ -3,7 +3,7 @@
   "name": "Ghost Recon",
   "igdbKind": "collection",
   "igdbId": 287,
-  "iconic": true,
+  "iconic": false,
   "fields": [
     {
       "field": "name",
@@ -150,7 +150,7 @@
       "year": 2001,
       "igdbId": 1294,
       "popularity": 83,
-      "iconic": true,
+      "iconic": false,
       "fields": [
         {
           "field": "best_version",
@@ -455,7 +455,7 @@
       "year": 2006,
       "igdbId": 1300,
       "popularity": 81,
-      "iconic": true,
+      "iconic": false,
       "fields": [
         {
           "field": "best_version",
@@ -999,7 +999,7 @@
       "year": 2017,
       "igdbId": 11171,
       "popularity": 308,
-      "iconic": true,
+      "iconic": false,
       "fields": [
         {
           "field": "best_version",
@@ -1425,6 +1425,12 @@
           "manual": false
         },
         {
+          "field": "summary_es",
+          "value": "Tom Clancy's Ghost Recon 2: Summit Strike es la expansión de Tom Clancy's Ghost Recon 2. Existen varias diferencias menores entre Tom Clancy's Ghost Recon 2: Summit Strike y Tom Clancy's Ghost Recon 2. La más notable es la dificultad, ya que Summit Strike se considera el más difícil de los dos. Otras diferencias incluyen nuevos modos multijugador, como Heli Hunt.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2005",
           "source": "igdb",
@@ -1466,113 +1472,6 @@
     }
   ],
   "routes": [
-    {
-      "id": 3805,
-      "kind": "story",
-      "rationale": "La saga tiene dos líneas que no encajan del todo: la clásica y Advanced Warfighter, y la de mundo abierto (Wildlands y Breakpoint). Se ordena aproximadamente por fecha en el juego y se omiten Predator, Shadow Wars y Phantoms por su continuidad poco clara.",
-      "sources": "[]",
-      "approved": true,
-      "steps": [
-        {
-          "position": 1,
-          "gameId": 16470,
-          "recommendedVersionId": 43383,
-          "reason": "Primer juego de la saga; en PC es la versión de referencia."
-        },
-        {
-          "position": 2,
-          "gameId": 48207,
-          "recommendedVersionId": 114523,
-          "reason": "Expansión independiente que sigue al primero; solo en Xbox."
-        },
-        {
-          "position": 3,
-          "gameId": 16714,
-          "reason": "Segundo capítulo con conflicto nuevo; la versión da casi igual."
-        },
-        {
-          "position": 4,
-          "gameId": 32514,
-          "recommendedVersionId": 81212,
-          "reason": "Spin-off ambientado en la misma época que Ghost Recon 2."
-        },
-        {
-          "position": 5,
-          "gameId": 16776,
-          "recommendedVersionId": 44148,
-          "reason": "Inicia la línea Advanced Warfighter; la de PC es la más completa."
-        },
-        {
-          "position": 6,
-          "gameId": 35106,
-          "recommendedVersionId": 85592,
-          "reason": "Continuación directa de Advanced Warfighter."
-        },
-        {
-          "position": 7,
-          "gameId": 39645,
-          "recommendedVersionId": 94587,
-          "reason": "Futuro cercano de la línea clásica; la de PC es la más estable."
-        },
-        {
-          "position": 8,
-          "gameId": 41781,
-          "recommendedVersionId": 99512,
-          "reason": "Inicio de la línea de mundo abierto."
-        },
-        {
-          "position": 9,
-          "gameId": 43775,
-          "recommendedVersionId": 103495,
-          "reason": "Continuación de Wildlands en la línea de mundo abierto."
-        }
-      ]
-    },
-    {
-      "id": 3806,
-      "kind": "community",
-      "rationale": "La comunidad suele recomendar empezar por Wildlands y Future Soldier, que son los más accesibles hoy. Los Advanced Warfighter y el original se dejan como clásicos, y se omiten los spin-offs menores y Phantoms.",
-      "sources": "[]",
-      "approved": true,
-      "steps": [
-        {
-          "position": 1,
-          "gameId": 41781,
-          "recommendedVersionId": 99512,
-          "reason": "El más popular y jugable hoy, con cooperativo; se recomienda la versión de PC."
-        },
-        {
-          "position": 2,
-          "gameId": 39645,
-          "recommendedVersionId": 94587,
-          "reason": "Campaña cinematográfica y buena acción táctica."
-        },
-        {
-          "position": 3,
-          "gameId": 35106,
-          "recommendedVersionId": 85592,
-          "reason": "Considerado uno de los mejores shooters tácticos de la saga."
-        },
-        {
-          "position": 4,
-          "gameId": 16776,
-          "recommendedVersionId": 44148,
-          "reason": "Primer Advanced Warfighter, un clásico táctico."
-        },
-        {
-          "position": 5,
-          "gameId": 43775,
-          "recommendedVersionId": 103495,
-          "reason": "Recibido con críticas dispares; se juega mejor tras Wildlands."
-        },
-        {
-          "position": 6,
-          "gameId": 16470,
-          "recommendedVersionId": 43383,
-          "reason": "El original, solo para quien quiera ver el origen de la saga."
-        }
-      ]
-    },
     {
       "id": 4008,
       "kind": "release",
@@ -1649,6 +1548,108 @@
           "position": 14,
           "gameId": 43775,
           "reason": "2019"
+        }
+      ]
+    },
+    {
+      "id": 4029,
+      "kind": "story",
+      "rationale": "La saga tiene una continuidad laxa: la subsaga clásica (2008-2011), luego Advanced Warfighter (2013-2014) y Future Soldier. Wildlands y Breakpoint son una historia aparte, y el orden coincide casi con el de lanzamiento. Se omiten expansiones, versiones portátiles y Phantoms (free-to-play).",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16470,
+          "recommendedVersionId": 43383,
+          "reason": "Inicio de la cronología (Rusia, 2008). PC es la versión de referencia."
+        },
+        {
+          "position": 2,
+          "gameId": 48207,
+          "recommendedVersionId": 114523,
+          "reason": "Expansión que continúa la historia en Cuba. Solo está en Xbox."
+        },
+        {
+          "position": 3,
+          "gameId": 32514,
+          "recommendedVersionId": 81212,
+          "reason": "Segunda expansión, ambientada en Sudamérica. Única versión disponible."
+        },
+        {
+          "position": 4,
+          "gameId": 16714,
+          "recommendedVersionId": 43983,
+          "reason": "Secuela directa, ambientada en 2011. Versión de PS2."
+        },
+        {
+          "position": 5,
+          "gameId": 16776,
+          "recommendedVersionId": 44148,
+          "reason": "Inicia la etapa moderna (2013). La versión de PC es la más completa."
+        },
+        {
+          "position": 6,
+          "gameId": 35106,
+          "recommendedVersionId": 85594,
+          "reason": "Continúa Advanced Warfighter en 2014. X360 es la versión principal."
+        },
+        {
+          "position": 7,
+          "gameId": 39645,
+          "recommendedVersionId": 94587,
+          "reason": "Cierra la etapa futurista de los Ghosts, ambientada en 2024. PC por estabilidad y rendimiento."
+        },
+        {
+          "position": 8,
+          "gameId": 41781,
+          "recommendedVersionId": 99512,
+          "reason": "Nueva continuidad, aparte de la anterior. PC por rendimiento y mods."
+        },
+        {
+          "position": 9,
+          "gameId": 43775,
+          "recommendedVersionId": 103495,
+          "reason": "Continuación directa de Wildlands. PC por rendimiento."
+        }
+      ]
+    },
+    {
+      "id": 4030,
+      "kind": "community",
+      "rationale": "Hoy se recomienda empezar por los juegos modernos y jugables: Advanced Warfighter, Future Soldier, Wildlands y Breakpoint. Los clásicos de 2001-2005 se dejan como opcionales por su dificultad y su antigüedad. Se omiten spin-offs, expansiones y portátiles. Esta ruta se basa en mi conocimiento general y no pude contrastarla con fuentes.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 16776,
+          "recommendedVersionId": 44148,
+          "reason": "Buen punto de entrada, con cobertura y tácticas modernas. Versión de PC."
+        },
+        {
+          "position": 2,
+          "gameId": 35106,
+          "recommendedVersionId": 85594,
+          "reason": "Mejora a su predecesor. Versión X360 o PC."
+        },
+        {
+          "position": 3,
+          "gameId": 39645,
+          "recommendedVersionId": 94587,
+          "reason": "Shooter por escuadra más lineal y cinematográfico. Versión de PC."
+        },
+        {
+          "position": 4,
+          "gameId": 41781,
+          "recommendedVersionId": 99512,
+          "reason": "Mundo abierto cooperativo y el más recomendado para empezar hoy. PC o consolas actuales."
+        },
+        {
+          "position": 5,
+          "gameId": 43775,
+          "recommendedVersionId": 103495,
+          "reason": "Secuela de Wildlands, con supervivencia y mundo abierto. Se juega mejor en PC o consolas actuales."
         }
       ]
     }

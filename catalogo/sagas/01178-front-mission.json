@@ -3,7 +3,7 @@
   "name": "Front Mission",
   "igdbKind": "franchise",
   "igdbId": 1293,
-  "iconic": true,
+  "iconic": false,
   "fields": [
     {
       "field": "name",
@@ -952,7 +952,7 @@
       "year": 1999,
       "igdbId": 1502,
       "popularity": 32,
-      "iconic": true,
+      "iconic": false,
       "fields": [
         {
           "field": "best_version",
@@ -1583,6 +1583,12 @@
           "manual": false
         },
         {
+          "field": "summary_es",
+          "value": "Left Alive es un nuevo shooter de acción y supervivencia lanzado en 2019 para PlayStation 4 y Steam.\n\nLos desarrolladores veteranos Toshifumi Nabeshima (director, serie Armored Core), Yoji Shinkawa (diseñador de personajes, serie METAL GEAR) y Takayuki Yanase (diseñador de mechas, Ghost in the Shell: Arise, Mobile Suit Gundam 00, Xenoblade Chronicles X) unen fuerzas para crear el mundo oscuro y crudo de LEFT ALIVE.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2019",
           "source": "igdb",
@@ -1616,106 +1622,6 @@
     }
   ],
   "routes": [
-    {
-      "id": 3883,
-      "kind": "story",
-      "rationale": "Cronología interna aproximada. Dejé fuera Front Mission Online por no tener la ubicación temporal clara.",
-      "sources": "[]",
-      "approved": true,
-      "steps": [
-        {
-          "position": 1,
-          "gameId": 17496,
-          "reason": "Precuela situada en 2089."
-        },
-        {
-          "position": 2,
-          "gameId": 3523,
-          "recommendedVersionId": 55307,
-          "reason": "Primera guerra; remake moderno de Switch."
-        },
-        {
-          "position": 3,
-          "gameId": 23856,
-          "recommendedVersionId": 60369,
-          "reason": "Historia paralela tras el primero."
-        },
-        {
-          "position": 4,
-          "gameId": 23842,
-          "recommendedVersionId": 55474,
-          "reason": "Continúa el conflicto; remake moderno."
-        },
-        {
-          "position": 5,
-          "gameId": 23924,
-          "recommendedVersionId": 59919,
-          "reason": "Historia posterior; remake moderno."
-        },
-        {
-          "position": 6,
-          "gameId": 19354,
-          "recommendedVersionId": 48232,
-          "reason": "Spin-off de acción posterior."
-        },
-        {
-          "position": 7,
-          "gameId": 32512,
-          "recommendedVersionId": 81207,
-          "reason": "Nueva guerra; única versión."
-        },
-        {
-          "position": 8,
-          "gameId": 32565,
-          "recommendedVersionId": 81327,
-          "reason": "Continúa tras el 4; única versión."
-        },
-        {
-          "position": 9,
-          "gameId": 39582,
-          "reason": "Futuro lejano; cualquier versión sirve."
-        }
-      ]
-    },
-    {
-      "id": 3884,
-      "kind": "community",
-      "rationale": "Las entregas son bastante independientes, así que se empieza por la mejor valorada (3) y luego los remakes. Se omiten los spin-offs y Online.",
-      "sources": "[]",
-      "approved": true,
-      "steps": [
-        {
-          "position": 1,
-          "gameId": 23924,
-          "recommendedVersionId": 59919,
-          "reason": "La más recomendada y accesible; remake moderno."
-        },
-        {
-          "position": 2,
-          "gameId": 3523,
-          "recommendedVersionId": 55307,
-          "reason": "Origen de la saga; remake con mejoras."
-        },
-        {
-          "position": 3,
-          "gameId": 23842,
-          "recommendedVersionId": 55474,
-          "reason": "Remake moderno de una entrega apreciada."
-        },
-        {
-          "position": 4,
-          "gameId": 32512,
-          "recommendedVersionId": 81207,
-          "reason": "Buena entrega independiente de PS2."
-        },
-        {
-          "position": 5,
-          "gameId": 32565,
-          "recommendedVersionId": 81327,
-          "reason": "Cierra la línea de PS2 con un sistema distinto."
-        }
-      ]
-    },
     {
       "id": 4009,
       "kind": "release",
@@ -1777,6 +1683,95 @@
           "position": 11,
           "gameId": 42480,
           "reason": "2019"
+        }
+      ]
+    },
+    {
+      "id": 4031,
+      "kind": "story",
+      "rationale": "Cronología interna aproximada, de memoria y sin verificar. Online, Alternative y Evolved se dejan fuera o al final por ser spin-offs con otro género o una historia aparte.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 17496,
+          "recommendedVersionId": 45576,
+          "reason": "Precuela: la guerra de 2089 que da origen al conflicto. Solo existe la versión de DS."
+        },
+        {
+          "position": 2,
+          "gameId": 3523,
+          "recommendedVersionId": 55307,
+          "reason": "Inicio de la guerra OCU contra USN. Versión remake para Switch, la más cómoda hoy."
+        },
+        {
+          "position": 3,
+          "gameId": 19354,
+          "recommendedVersionId": 48232,
+          "reason": "Historia paralela posterior a la primera guerra. Solo existe la versión de Wii."
+        },
+        {
+          "position": 4,
+          "gameId": 23842,
+          "recommendedVersionId": 55474,
+          "reason": "Continúa el conflicto en Huffman. Se recomienda el remake para Switch."
+        },
+        {
+          "position": 5,
+          "gameId": 23924,
+          "recommendedVersionId": 59919,
+          "reason": "Nueva etapa con otros protagonistas. Se recomienda el remake para Switch."
+        },
+        {
+          "position": 6,
+          "gameId": 32512,
+          "recommendedVersionId": 81207,
+          "reason": "Continuación de la historia en la era posterior. Solo existe la versión de PS2."
+        },
+        {
+          "position": 7,
+          "gameId": 32565,
+          "recommendedVersionId": 81327,
+          "reason": "Cierra esta etapa de la guerra. Solo existe la versión de PS2, sin localización oficial al inglés."
+        },
+        {
+          "position": 8,
+          "gameId": 42480,
+          "reason": "Spin-off de acción ambientado más adelante. Da igual la plataforma."
+        }
+      ]
+    },
+    {
+      "id": 4032,
+      "kind": "community",
+      "rationale": "Se empieza por el remake de 1st y se pasa a los remakes de 3 y 2, que son los más jugables hoy. FM4 va después. Se omiten Alternative, Online, Evolved, Left Alive y 2089. FM5 también queda fuera porque no tiene versión oficial en inglés. Orden basado en conocimiento general, sin fuente verificada.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 3523,
+          "recommendedVersionId": 55307,
+          "reason": "Mejor puerta de entrada y el remake más pulido. Versión de Switch."
+        },
+        {
+          "position": 2,
+          "gameId": 23924,
+          "recommendedVersionId": 59919,
+          "reason": "Suele considerarse el mejor de la saga y se entiende solo. Versión remake."
+        },
+        {
+          "position": 3,
+          "gameId": 23842,
+          "recommendedVersionId": 55474,
+          "reason": "Táctica más profunda. Funciona tras haber visto el primer juego. Versión remake."
+        },
+        {
+          "position": 4,
+          "gameId": 32512,
+          "recommendedVersionId": 81207,
+          "reason": "Tiene un sistema táctico refinado y un buen cierre de la saga principal con localización. Solo en PS2."
         }
       ]
     }

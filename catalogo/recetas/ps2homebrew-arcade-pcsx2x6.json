@@ -1,0 +1,42 @@
+{
+  "id": "ps2homebrew-arcade-pcsx2x6",
+  "name": "PCSX2 (PS2Homebrew-arcade)",
+  "kind": "emulator",
+  "folder": "PlayStation 2",
+  "detect": "pcsx2-qt.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps2"
+  ],
+  "license": "GPL-3.0-only",
+  "portable": [
+    {
+      "type": "file",
+      "path": "portable.txt",
+      "system": "windows"
+    }
+  ],
+  "saves": [
+    "memcards"
+  ],
+  "config": [
+    "gamesettings",
+    "inputprofiles"
+  ],
+  "perGame": {
+    "config": "gamesettings/{serial}_{crc}.ini",
+    "apply": "file",
+    "mods": [
+      "patches/{serial}_{crc}.pnach"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "PS2Homebrew-arcade/pcsx2x6"
+  },
+  "asset": "^pcsx2x6-v[0-9.]+-windows-x64-Qt\\.7z$",
+  "experimental": true,
+  "forkOf": "pcsx2"
+}

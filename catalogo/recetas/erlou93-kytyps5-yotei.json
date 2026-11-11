@@ -1,0 +1,22 @@
+{
+  "id": "erlou93-kytyps5-yotei",
+  "name": "KytyPS5 (Erlou93)",
+  "kind": "emulator",
+  "folder": "PlayStation 5",
+  "detect": "kyty_launcher.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps5"
+  ],
+  "license": "GPL-2.0-only",
+  "experimental": true,
+  "devOnly": true,
+  "updates": {
+    "source": "github",
+    "repo": "Erlou93/KytyPS5-Yotei"
+  },
+  "asset": "^KytyPS5-Yotei-v[0-9.]+-windows-x64\\.zip$",
+  "forkOf": "kytyps5"
+}

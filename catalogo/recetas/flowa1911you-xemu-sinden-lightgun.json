@@ -1,0 +1,64 @@
+{
+  "id": "flowa1911you-xemu-sinden-lightgun",
+  "name": "xemu (flowa1911you)",
+  "kind": "emulator",
+  "folder": "Xbox",
+  "detect": "xemu.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "xbox"
+  ],
+  "license": "GPL-2.0-only",
+  "portable": [
+    {
+      "type": "file",
+      "path": "xemu.toml",
+      "system": "windows"
+    }
+  ],
+  "config": [
+    "xemu.toml"
+  ],
+  "perGame": {
+    "apply": "argument",
+    "args": [
+      "-config_path",
+      "{config}"
+    ]
+  },
+  "options": [
+    {
+      "name": "renderer",
+      "file": "xemu.toml",
+      "format": "toml",
+      "key": "display.renderer"
+    },
+    {
+      "name": "resolution",
+      "file": "xemu.toml",
+      "format": "toml",
+      "key": "display.quality.surface_scale"
+    },
+    {
+      "name": "filter",
+      "file": "xemu.toml",
+      "format": "toml",
+      "key": "display.filtering"
+    },
+    {
+      "name": "vsync",
+      "file": "xemu.toml",
+      "format": "toml",
+      "key": "display.window.vsync"
+    }
+  ],
+  "updates": {
+    "source": "github",
+    "repo": "flowa1911you/xemu-sinden-lightgun"
+  },
+  "asset": "^xemu-lightgun-edition-windows-v[0-9.]+\\.zip$",
+  "experimental": true,
+  "forkOf": "xemu"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "axylpup-shadps4",
+  "name": "shadPS4 (axylpup)",
+  "kind": "emulator",
+  "folder": "PlayStation 4",
+  "detect": "shadPS4.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps4"
+  ],
+  "license": "GPL-2.0-only",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config.json",
+    "user/custom_configs"
+  ],
+  "perGame": {
+    "config": "user/custom_configs/{serial}.json",
+    "apply": "file",
+    "mods": [
+      "{game}-mods"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "axylpup/shadPS4"
+  },
+  "asset": "^inFAMOUS-SecondSon-shadPS4-v[0-9.]+-win64\\.zip$",
+  "experimental": true,
+  "forkOf": "shadps4"
+}

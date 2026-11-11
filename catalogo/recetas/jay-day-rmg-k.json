@@ -1,0 +1,39 @@
+{
+  "id": "jay-day-rmg-k",
+  "name": "Rosalie's Mupen GUI (Jay-Day)",
+  "kind": "emulator",
+  "folder": "Nintendo 64",
+  "detect": "RMG.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "n64"
+  ],
+  "license": "GPL-3.0-only",
+  "portable": [
+    {
+      "type": "file",
+      "path": "portable.txt",
+      "system": "windows"
+    }
+  ],
+  "saves": [
+    "Save/Game",
+    "Save/State"
+  ],
+  "config": [
+    "Config"
+  ],
+  "perGame": {
+    "config": "Config/mupen64plus.cfg",
+    "apply": "section"
+  },
+  "updates": {
+    "source": "github",
+    "repo": "Jay-Day/RMG-K"
+  },
+  "asset": "^RMG-K-Test-Windows64\\.zip$",
+  "experimental": true,
+  "forkOf": "rmg"
+}

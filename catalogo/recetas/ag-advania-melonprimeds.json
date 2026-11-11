@@ -1,0 +1,24 @@
+{
+  "id": "ag-advania-melonprimeds",
+  "name": "melonDS (ag-advania)",
+  "kind": "emulator",
+  "folder": "Nintendo DS",
+  "detect": "melonDS.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ds"
+  ],
+  "license": "GPL-3.0-only",
+  "perGame": {
+    "apply": "swap"
+  },
+  "updates": {
+    "source": "github",
+    "repo": "ag-advania/melonPrimeDS"
+  },
+  "asset": "^melonPrimeDS-windows-x86_64\\.zip$",
+  "experimental": true,
+  "forkOf": "melonds"
+}
