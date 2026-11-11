@@ -56,6 +56,7 @@ export type ConsoleInfo = Schemas["ConsoleInfo"];
 export type PlatformInfo = Schemas["PlatformInfo"];
 export type GameRecipe = Schemas["GameRecipe"];
 export type BestEmulatorGame = Schemas["BestEmulatorGame"];
+export type BestEmulatorState = Schemas["BestEmulatorState"];
 export type RecipeInfo = Schemas["RecipeInfo"];
 export type ForkCandidate = Schemas["ForkCandidate"];
 export type EmulatorPick = Schemas["EmulatorPick"];

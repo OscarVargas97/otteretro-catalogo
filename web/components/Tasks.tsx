@@ -24,6 +24,11 @@ export function upsertTask(cache: QueryClient, task: TaskInfo) {
     cache.invalidateQueries({ queryKey: ["tools"] });
     cache.invalidateQueries({ queryKey: ["consoles", "detail"] });
   }
+  // «Mejor emulador» terminado (#132): la ficha muestra la fecha de la búsqueda y Revisar, lo que encontró.
+  if (task.kind === "emulators.best" && !["running", "queued", "paused"].includes(task.status)) {
+    cache.invalidateQueries({ queryKey: ["game"] });
+    cache.invalidateQueries({ queryKey: ["review"] });
+  }
   // Un escaneo terminado cambia lo que tienes (#178).
   if ((task.kind === "library.scan" || task.kind === "library.verify" || task.kind === "library.import" || task.kind === "library.convert") && task.status === "done") {
     cache.invalidateQueries({ queryKey: ["game"] });

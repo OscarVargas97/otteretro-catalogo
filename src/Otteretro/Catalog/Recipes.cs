@@ -12,8 +12,10 @@ namespace Otteretro.Catalog;
 
 /// <summary>Una receta en la lista de «Emuladores» (#95).</summary>
 public record RecipeInfo(string Id, string Name, string Kind, string Folder, List<string> Consoles, bool Local = false, string? Url = null, string? ForkOf = null);
-/// <summary>Una receta que recomienda un juego (#123), con la fuente de la recomendación.</summary>
-public record GameRecipe(string Id, string Name, string Kind, string? Source);
+/// <summary>Una receta que recomienda un juego (#123), con la fuente de la recomendación y las consolas que corre (#132).</summary>
+public record GameRecipe(string Id, string Name, string Kind, string? Source, List<string> Consoles);
+/// <summary>El recomendado de un juego en una consola, elegido a mano en su ficha (#132); la fuente es opcional.</summary>
+public record RecommendRequest(string Recipe, string? Source = null);
 /// <summary>Una receta entera, como JSON.</summary>
 public record RecipeText(string Json);
 /// <summary>
@@ -82,8 +84,50 @@ public static partial class Recipes
         {
             var r = JsonNode.Parse(json)!;
             return (r["recommendedFor"]?.AsArray() ?? []).Where(g => (long?)g?["gameId"] == gameId)
-                .Select(g => new GameRecipe((string)r["id"]!, (string?)r["name"] ?? "", (string?)r["kind"] ?? "", (string?)g!["source"]));
+                .Select(g => new GameRecipe((string)r["id"]!, (string?)r["name"] ?? "", (string?)r["kind"] ?? "", (string?)g!["source"], Consoles(r)));
         }).ToList();
+    }
+
+    static List<string> Consoles(JsonNode r) => r["consoles"]?.AsArray().Select(x => (string)x!).ToList() ?? [];
+
+    /// <summary>
+    /// Elige a mano el recomendado de un juego en una consola (#132, plan de #128): suma <c>{ game, gameId, source }</c> al
+    /// <c>recommendedFor</c> de <paramref name="recipeId"/> y lo saca de las otras recetas de esa consola, para que quede uno solo. Sin
+    /// receta, solo lo quita. Se guarda con <see cref="Save"/>, como un cambio sin publicar.
+    /// </summary>
+    public static async Task<ApiError?> Recommend(Database db, long gameId, string console, string? recipeId, string? source, string? token, CancellationToken ct = default)
+    {
+        string? name;
+        List<JsonNode> all;
+        using (var c = db.Open())
+        {
+            name = c.ExecuteScalar<string?>("SELECT name_es FROM game WHERE id = @gameId", new { gameId });
+            all = c.Query<string>("SELECT json FROM recipe ORDER BY id").Select(json => JsonNode.Parse(json)!).ToList();
+        }
+        if (name is null) return ApiError.Of("recipes.noGame");
+        var chosen = recipeId is null ? null : all.FirstOrDefault(r => (string?)r["id"] == recipeId);
+        if (recipeId is not null && (chosen is null || !Consoles(chosen).Contains(console))) return ApiError.Of("recipes.notForConsole", ("id", recipeId), ("console", console));
+
+        bool Drop(JsonNode r)
+        {
+            if (r["recommendedFor"] is not JsonArray games) return false;
+            var removed = games.Where(g => (long?)g?["gameId"] == gameId).ToList();
+            foreach (var g in removed) games.Remove(g);
+            if (games.Count == 0) r.AsObject().Remove("recommendedFor");
+            return removed.Count > 0;
+        }
+        // La elegida primero: si no se puede guardar, el juego sigue con la que tenía.
+        if (chosen is not null)
+        {
+            Drop(chosen);
+            var item = new JsonObject { ["game"] = name, ["gameId"] = gameId };
+            if (source?.Trim() is { Length: > 0 } s) item["source"] = s;
+            if (chosen["recommendedFor"] is JsonArray games) games.Add(item); else chosen["recommendedFor"] = new JsonArray(item);
+            if (await Save(db, recipeId!, chosen.ToJsonString(), false, token, ct) is { } error) return error;
+        }
+        foreach (var r in all.Where(r => r != chosen && Consoles(r).Contains(console) && Drop(r)))
+            if (await Save(db, (string)r["id"]!, r.ToJsonString(), false, token, ct) is { } error) return error;
+        return null;
     }
 
     public static string? Get(Database db, string id)

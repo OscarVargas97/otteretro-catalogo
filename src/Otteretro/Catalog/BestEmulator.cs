@@ -9,6 +9,9 @@ using Otteretro.Data;
 
 namespace Otteretro.Catalog;
 
+/// <summary>Lo que muestra la ficha del juego (#132): la fecha de la última búsqueda y la búsqueda en curso, si la hay.</summary>
+public record BestEmulatorState(string? LastSearch, long? Task);
+
 /// <summary>
 /// La tarea «Mejor emulador» de un juego (#130, plan de #128): Sonnet con búsqueda web elige, en cada consola donde existe el juego,
 /// el emulador que recomienda la comunidad, con receta del catálogo o, si no la hay, con su repo. Cada recomendación va a Revisar como
@@ -28,15 +31,19 @@ public static class BestEmulator
     /// <summary>Encola la búsqueda de un juego; si ya está en la cola, devuelve esa. Null si el juego no existe.</summary>
     public static long? Enqueue(Database db, long gameId)
     {
-        var data = gameId.ToString(CultureInfo.InvariantCulture);
         using (var c = db.Open())
-        {
             if (c.ExecuteScalar<long>("SELECT count(*) FROM game WHERE id = @gameId", new { gameId }) == 0) return null;
-            if (c.ExecuteScalar<long?>("SELECT id FROM task WHERE kind = @Kind AND data = @data AND status IN ('queued', 'running', 'paused') LIMIT 1", new { Kind, data }) is { } queued)
-                return queued;
-        }
+        if (Pending(db, gameId) is { } queued) return queued;
         ClaudeBudget.AllowNow(db); // la pide la persona: corre ya, también fuera del horario, como «Ejecutar»
-        return TaskQueue.Enqueue(db, Kind, data);
+        return TaskQueue.Enqueue(db, Kind, gameId.ToString(CultureInfo.InvariantCulture));
+    }
+
+    /// <summary>La búsqueda de un juego que está en la cola o corriendo; null si no hay.</summary>
+    public static long? Pending(Database db, long gameId)
+    {
+        using var c = db.Open();
+        return c.ExecuteScalar<long?>("SELECT id FROM task WHERE kind = @Kind AND data = @data AND status IN ('queued', 'running', 'paused') LIMIT 1",
+            new { Kind, data = gameId.ToString(CultureInfo.InvariantCulture) });
     }
 
     /// <summary>Encola una búsqueda por juego elegido (#133); devuelve cuántos quedaron en la cola. Los que no existen se saltan.</summary>

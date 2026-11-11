@@ -121,6 +121,24 @@ public class CatalogApiTests : IAsyncLifetime
         Assert.Equal(HttpStatusCode.NotFound, (await http.PutAsJsonAsync("/api/games/11/fields/saga_id", new FieldRequest("2"))).StatusCode);
     }
 
+    /// <summary>#132: el recomendado de una consola, elegido a mano en la ficha, reemplaza al anterior.</summary>
+    [Fact]
+    public async Task GameSheetChoosesTheRecommendedEmulator()
+    {
+        using (var c = f.Db.Open())
+            foreach (var id in new[] { "mupen64plus", "rmg" }) // sin «asset»: guardar no consulta releases
+                c.Execute("INSERT INTO recipe (id, kind, json) VALUES (@id, 'emulator', @json)",
+                    new { id, json = $$"""{ "id": "{{id}}", "name": "{{id}}", "kind": "emulator", "folder": "N64", "detect": "x.exe", "consoles": ["n64"] }""" });
+
+        Assert.Equal(new BestEmulatorState(null, null), await Get<BestEmulatorState>("/api/games/10/best-emulator"));
+        var first = await (await http.PutAsJsonAsync("/api/games/10/recommended/n64", new RecommendRequest("mupen64plus", "https://example.org"))).Content.ReadFromJsonAsync<List<GameRecipe>>();
+        Assert.Equal(("mupen64plus", "https://example.org"), first!.Select(r => (r.Id, r.Source)).Single());
+        var second = await (await http.PutAsJsonAsync("/api/games/10/recommended/n64", new RecommendRequest("rmg"))).Content.ReadFromJsonAsync<List<GameRecipe>>();
+        Assert.Equal(("rmg", null), second!.Select(r => (r.Id, r.Source)).Single());
+        Assert.Equal(HttpStatusCode.BadRequest, (await http.PutAsJsonAsync("/api/games/10/recommended/3ds", new RecommendRequest("rmg"))).StatusCode);
+        Assert.Empty((await (await http.DeleteAsync("/api/games/10/recommended/n64")).Content.ReadFromJsonAsync<List<GameRecipe>>())!);
+    }
+
     [Fact]
     public async Task SearchFindsSagasAndGamesAndNoticesListMissingKeys()
     {
