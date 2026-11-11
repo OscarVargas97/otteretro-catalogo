@@ -70,7 +70,8 @@ public class PortsTests : IAsyncDisposable
         ["ports/2ship2harkinian.yaml"] = "name: 2 Ship 2 Harkinian\ncategory: decomp-port\nconsole: n64\nstatus: fully\nrepo: HarbourMasters/2ship2harkinian\n",
         ["recomps/metroid-prime.yaml"] = "name: Metroid Prime\nconsole: gamecube\nstatus: playable\nrepo: a/prime-recomp\ntoolchain: Wiicompiled\n",
         ["recomps/banjo.yaml"] = "name: \"Banjo-Kazooie: Nuts & Bolts\"\nconsole: x360\nstatus: experimental\nrepo: b/nb-recomp\ntoolchain: ReXGlue\n",
-        ["recomps/rush.yaml"] = "name: Rush 2049\nconsole: arcade\nstatus: beta\nabandoned: true\nrepo: c/rush\n",
+        ["recomps/rush.yaml"] = "name: Rush 2049\nconsole: virtualboy\nstatus: beta\nabandoned: true\nrepo: c/rush\n", // Virtual Boy es «vb» en el catálogo
+        ["recomps/doom-dos.yaml"] = "name: Doom\nconsole: dos\nstatus: playable\nrepo: d/doom-dos\n", // DOS no es una consola del catálogo: no entra (#155)
         ["decomps/sm64.yaml"] = "name: Super Mario 64\nconsole: n64\nrepo: n64decomp/sm64\n", // entra como «sin port todavía»
         ["decomps/sin-consola.yaml"] = "name: Algo\nrepo: x/algo\n", // sin consola no entra
     };
@@ -123,7 +124,9 @@ public class PortsTests : IAsyncDisposable
     {
         await Done(Ports.Enqueue(f.Db));
 
-        Assert.Equal(28, Scalar<long>("SELECT count(*) FROM port")); // 5 ports y 1 decompilación de Recompendium, y 22 extras (uno ya estaba)
+        // 5 ports y 1 decompilación de Recompendium, y 20 extras (uno ya estaba; los de Mega Drive y arcade no son consolas del catálogo).
+        Assert.Equal(26, Scalar<long>("SELECT count(*) FROM port"));
+        Assert.Equal(0, Scalar<long>("SELECT count(*) FROM port WHERE console NOT IN (SELECT id FROM console)"));
         Assert.Equal("recompendium", Scalar<string>("SELECT source FROM port WHERE link = 'https://github.com/Zelda64Recomp/Zelda64Recomp'"));
         using (var c = f.Db.Open())
         {
@@ -137,12 +140,12 @@ public class PortsTests : IAsyncDisposable
             Assert.Equal(("decomp", true), c.QuerySingle<(string, bool)>("SELECT kind, abandoned = 0 FROM port WHERE project = '2ship2harkinian'"));
         }
         var page = Ports.Page(f.Db);
-        Assert.Equal((28, 8), (page.Total, page.Matched));
+        Assert.Equal((26, 8), (page.Total, page.Matched));
         Assert.Equal(Ports.Statuses, page.ByStatus.Keys); // «100 % jugable» primero, aparte de lo jugable con fallos
         Assert.Equal(1, page.ByStatus["no-port"]);
         Assert.Equal(Scalar<long>("SELECT count(*) FROM port WHERE status = 'complete'"), page.ByStatus["complete"]);
         Assert.Contains(page.Unmatched, p => p.Project == "PsyDoom");
-        Assert.Contains(page.Unmatched, p => p.Console == "arcade");
+        Assert.Contains(page.Unmatched, p => p.Console == "vb" && p.Project == "rush");
 
         // A mano: el cruce no lo cambia y, si el juego se fusiona, sigue al que lo reemplazó.
         Assert.True(Ports.Assign(f.Db, PortId("PsyDoom"), 14));
@@ -157,8 +160,16 @@ public class PortsTests : IAsyncDisposable
         yaml.Remove("recomps/rush.yaml");
         yaml.Remove("decomps/sm64.yaml");
         yaml["ports/sm64-port.yaml"] = "name: SM64 Port\ncategory: decomp-port\nconsole: n64\nstatus: playable\nrepo: n64decomp/sm64\n";
-        using (var c = f.Db.Open()) c.Execute("UPDATE port SET added = '2020-01-01' WHERE project = 'sm64'");
-        await Done(Ports.Enqueue(f.Db));
+        using (var c = f.Db.Open())
+            c.Execute("""
+                UPDATE port SET added = '2020-01-01' WHERE project = 'sm64';
+                INSERT INTO port (console, game, project, kind, status, link, source, added) VALUES ('mac', 'Marathon', 'Aleph One', 'engine', 'complete', 'https://x/aleph', 'readonlymemo', '2026-01-01')
+                """);
+        var refresh = Ports.Enqueue(f.Db);
+        await Done(refresh);
+        Assert.Equal(0, Scalar<long>("SELECT count(*) FROM port WHERE console = 'mac'")); // de antes, de una consola que no está y sin receta: se borra
+        using (var c = f.Db.Open()) // el cambio de estado queda en el registro
+            Assert.Contains(c.Query<string>("SELECT message FROM task_log WHERE task_id = @refresh", new { refresh }), m => m.Contains("ports.log.status") && m.Contains("playable"));
         Assert.Equal(1, Scalar<long>("SELECT delisted FROM port WHERE project = 'rush'"));
         Assert.Equal(9, Ports.Page(f.Db).Matched);
         Assert.Equal(15, Scalar<long>("SELECT game_id FROM port WHERE project = 'PsyDoom'"));
@@ -166,7 +177,7 @@ public class PortsTests : IAsyncDisposable
             Assert.Equal(("playable", Ports.Today(), 17L), c.QuerySingle<(string, string, long)>("SELECT status, added, game_id FROM port WHERE link = 'https://github.com/n64decomp/sm64'"));
 
         // Si vuelve a aparecer, deja de estar marcado.
-        yaml["recomps/rush.yaml"] = "name: Rush 2049\nconsole: arcade\nstatus: beta\nrepo: c/rush\n";
+        yaml["recomps/rush.yaml"] = "name: Rush 2049\nconsole: virtualboy\nstatus: beta\nrepo: c/rush\n";
         await Done(Ports.Enqueue(f.Db));
         Assert.Equal(0, Scalar<long>("SELECT delisted FROM port WHERE project = 'rush'"));
     }

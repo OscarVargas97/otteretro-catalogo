@@ -251,15 +251,15 @@
         },
         "ports": {
           "name": "Ports",
-          "text": "Downloads the list of native PC ports from Recompendium, adds the catalog extras, checks how each game runs in the emulators' compatibility lists and matches each port with its game."
+          "text": "Downloads the list of native PC ports from Recompendium, adds the catalog extras (only for its consoles) and logs every port whose status changes. Checks how each game runs in the emulators' compatibility lists and matches each port with its game."
         },
         "portSearch": {
           "name": "Find new ports",
-          "text": "Reads the Recompendium RSS and known lists (Read Only Memo). What the script cannot confirm, Claude verifies at its primary source, once per link. It only adds ports: it never changes existing ones."
+          "text": "Reads the Recompendium RSS and known lists (Read Only Memo). What the script cannot confirm, Claude verifies at its primary source, once per link. It only adds ports: it never changes existing ones. For ports whose link is a web page, Claude looks for their repo (GitHub, GitLab, Codeberg…) once a month until it finds it, to create their recipe."
         },
         "emulators": {
           "name": "Emulators",
-          "text": "Checks every recipe: a new release that matches its pattern is applied automatically and left unpublished; a pattern that no longer matches or an archived, moved or missing repo goes to Review. Then it looks for forks (the repo's own, by name on GitHub and in known lists) and filters them through the API: a Windows release from the last 6 months, their own commits and at least 10 stars. Only the doubtful ones are checked by Sonnet, once per repo."
+          "text": "Checks every recipe: a new release that matches its pattern is applied automatically and left unpublished; a pattern that no longer matches or an archived, moved or missing repo stays as a notice in Emulators. Then it looks for forks (the repo's own, by name on GitHub and in known lists) and filters them through the API: a Windows release from the last 6 months, their own commits and at least 10 stars. Only the doubtful ones are checked by Sonnet, once per repo; those that pass stay as unpublished recipes."
         }
       },
       "ports": {
@@ -481,7 +481,7 @@
     "assetMatches": "Matches {files} in {tag}.",
     "assetNoMatch": "Matches no file in {tag}: {files}",
     "kinds": { "emulator": "Emulator", "port": "Port", "complement": "Add-on", "tool": "Tool" },
-    "sources": { "github": "GitHub", "forgejo": "Forgejo or Gitea", "dolphin": "Dolphin" },
+    "sources": { "github": "GitHub", "forgejo": "Forgejo or Gitea", "gitlab": "GitLab", "dolphin": "Dolphin" },
     "versionFrom": { "exe": "From the executable", "date": "Release date", "fixed": "Fixed" },
     "field": {
       "id": "Id", "kind": "Kind", "name": "Name", "folder": "Folder", "detect": "File that detects it", "parent": "Parent recipe",
@@ -669,6 +669,7 @@
         "images": "{game}: references for {kinds}.",
         "noImages": "{game}: no images found.",
         "refresh": "{platform}: {count} new or changed games.",
+        "emptySagas": "{count, plural, one {Deleted # saga with no games} other {Deleted # sagas with no games}}.",
         "paused": "Paused: it continues from here when resumed.",
         "resumed": "Resumed.",
         "canceled": "Canceled.",
@@ -883,13 +884,17 @@
       "recipes": "Looking for releases to create recipes",
       "search": {
         "reading": "Reading the Recompendium RSS and the known lists",
-        "verifying": "Claude is verifying {done} of {total} candidates"
+        "verifying": "Claude is verifying {done} of {total} candidates",
+        "repos": "Claude is looking for the repo of {done} of {total} ports that are a web page"
       },
       "log": {
         "list": "Recompendium: {count} ports and decompilations; {added} new in the list and {delisted} no longer listed (kept).",
         "done": "Done: {matched} of {total} ports with a game.",
         "merged": "{count, plural, one {# repeated port (same link and source) was merged} other {# repeated ports (same link and source) were merged}}.",
         "compatFailed": "Could not check the compatibility of {game} ({console}).",
+        "status": "{game} ({project}): {from} → {to}",
+        "repo": "{game} ({project}): its repo is {repo}.",
+        "noRepo": "{game} ({project}): no repo. {reason}",
         "unreachable": "Could not read {source}: continuing with the rest.",
         "added": "New: {game} ({console}), {link}.",
         "rejected": "Rejected: {link}. {reason}",

@@ -71,7 +71,7 @@ public static partial class Recipes
     }
 
     internal static string? RepoUrl(JsonNode r) => (string?)r["updates"]?["repo"] is { } repo
-        ? (string?)r["updates"]?["source"] switch { "github" => "https://github.com/" + repo, "forgejo" when (string?)r["updates"]?["host"] is { } h => $"https://{h}/{repo}", _ => null }
+        ? (string?)r["updates"]?["source"] switch { "github" => "https://github.com/" + repo, "forgejo" or "gitlab" when (string?)r["updates"]?["host"] is { } h => $"https://{h}/{repo}", _ => null }
         : null;
 
     public static List<RecipeInfo> List(Database db, string? local = null)
@@ -254,10 +254,10 @@ public static partial class Recipes
     {
         if (!r.TryGetProperty("asset", out var asset) || !r.TryGetProperty("updates", out var u)) return null;
         var source = u.GetProperty("source").GetString()!;
-        if (source is not ("github" or "forgejo")) return null;
+        if (source is not ("github" or "forgejo" or "gitlab")) return null;
         var repo = u.TryGetProperty("repo", out var x) ? x.GetString() : null;
         var host = u.TryGetProperty("host", out var h) ? h.GetString() : null;
-        if (repo is null || source == "forgejo" && host is null) return ApiError.Of("recipes.noRepo");
+        if (repo is null || !HasRepo(source, host)) return ApiError.Of("recipes.noRepo");
         var pattern = asset.GetString()!;
         try
         {
@@ -307,7 +307,7 @@ public static partial class Recipes
         var source = (string?)r["updates"]?["source"];
         var repo = (string?)r["updates"]?["repo"];
         var host = (string?)r["updates"]?["host"];
-        if (source is not ("github" or "forgejo") || repo is null || source == "forgejo" && host is null) return (null, null, null);
+        if (repo is null || !HasRepo(source, host)) return (null, null, null);
         var key = $"{source}|{host}|{repo}";
         Release? latest;
         if (Latest.TryGetValue(key, out var hit) && DateTime.UtcNow - hit.At < LatestFor) latest = hit.Release;
@@ -359,7 +359,7 @@ public static partial class Recipes
         var repo = (string?)r["updates"]?["repo"];
         var host = (string?)r["updates"]?["host"];
         var pattern = (string?)r["asset"];
-        if (source is not ("github" or "forgejo") || repo is null || pattern is null || source == "forgejo" && host is null) return (null, ApiError.Of("recipes.noRepo"));
+        if (repo is null || pattern is null || !HasRepo(source, host)) return (null, ApiError.Of("recipes.noRepo"));
         var dir = Path.Combine(Path.GetTempPath(), "otteretro-catalogo-test-" + Guid.NewGuid().ToString("N"));
         try
         {
@@ -399,15 +399,36 @@ public static partial class Recipes
         }
     }
 
+    /// <summary>Una fuente con releases que se leen por API: GitHub, o Forgejo, Gitea y GitLab con su servidor.</summary>
+    internal static bool HasRepo([System.Diagnostics.CodeAnalysis.NotNullWhen(true)] string? source, string? host) => source == "github" || source is "forgejo" or "gitlab" && host is not null;
+
     /// <summary>Las releases publicadas (sin borradores) de un repo de GitHub, o de Forgejo o Gitea (la misma API, en <paramref name="host"/>).</summary>
     internal static async Task<List<Release>> Releases(string source, string? host, string repo, string? token, CancellationToken ct)
     {
+        if (source == "gitlab") return await GitLabReleases(host!, repo, ct);
         var url = source == "forgejo" ? $"https://{host}/api/v1/repos/{repo}/releases?limit=30" : $"https://api.github.com/repos/{repo}/releases?per_page=30";
         if (await Api(url, token, ct) is not JsonArray list) return [];
         return list.Where(g => g?["draft"]?.GetValue<bool>() != true)
             .Select(g => new Release((string?)g!["tag_name"] ?? "", (string?)g["published_at"], g["assets"]?.AsArray().Select(a => (string)a!["name"]!).ToList() ?? [],
                 g["assets"]?.AsArray().Where(a => (string?)a!["browser_download_url"] is not null).ToDictionary(a => (string)a!["name"]!, a => (string)a!["browser_download_url"]!, StringComparer.Ordinal),
                 g["prerelease"]?.GetValue<bool>() == true))
+            .OrderByDescending(g => g.PublishedAt ?? "").ToList();
+    }
+
+    /// <summary>
+    /// Las releases de GitLab (#155): sus archivos son los enlaces de cada release; upcoming_release (una release futura) cuenta como
+    /// prerelease. Los paquetes del código fuente que GitLab agrega solo no son archivos.
+    /// </summary>
+    static async Task<List<Release>> GitLabReleases(string host, string repo, CancellationToken ct)
+    {
+        if (await Api($"https://{host}/api/v4/projects/{Uri.EscapeDataString(repo)}/releases?per_page=30", null, ct) is not JsonArray list) return [];
+        return list.OfType<JsonObject>().Select(g =>
+            {
+                var links = g["assets"]?["links"]?.AsArray().OfType<JsonObject>().ToList() ?? [];
+                return new Release((string?)g["tag_name"] ?? "", (string?)(g["released_at"] ?? g["created_at"]), links.Select(a => (string)a["name"]!).ToList(),
+                    links.DistinctBy(a => (string)a["name"]!).ToDictionary(a => (string)a["name"]!, a => (string?)a["direct_asset_url"] ?? (string)a["url"]!, StringComparer.Ordinal),
+                    g["upcoming_release"]?.GetValue<bool>() == true);
+            })
             .OrderByDescending(g => g.PublishedAt ?? "").ToList();
     }
 
@@ -439,7 +460,9 @@ public static partial class Recipes
         if (parts.Length < 2) return null;
         var repo = $"{parts[0]}/{(parts[1].EndsWith(".git", StringComparison.OrdinalIgnoreCase) ? parts[1][..^4] : parts[1])}";
         if (!RepoName().IsMatch(repo)) return null;
-        return uri.Host is "github.com" or "www.github.com" ? ("github", repo, null) : ("forgejo", repo, uri.Authority);
+        if (uri.Host is "github.com" or "www.github.com") return ("github", repo, null);
+        // shortcut: GitLab se reconoce por el nombre del servidor (gitlab.com, gitlab.algo, framagit); uno propio con otro nombre pasa por Forgejo.
+        return (uri.Host == "framagit.org" || uri.Host == "gitlab.com" || uri.Host.StartsWith("gitlab.", StringComparison.Ordinal) ? "gitlab" : "forgejo", repo, uri.Authority);
     }
 
     [GeneratedRegex("^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$")]

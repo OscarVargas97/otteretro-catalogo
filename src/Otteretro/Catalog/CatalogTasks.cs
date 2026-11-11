@@ -50,7 +50,7 @@ public static class CatalogTasks
         // Ports (#69): la lista y su cruce con los juegos, después de IGDB; la búsqueda de nuevos solo pide a Claude lo dudoso.
         new("ports", null, [], (db, _) => Ports.Enqueue(db), (kind, _) => kind == Ports.Kind,
             db => Scalar(db, "SELECT count(*) FROM port WHERE game_id IS NULL")), // «ports sin juego», como Ports.Page
-        new("portSearch", PortSearch.Model, [PortSearch.PromptName], (db, _) => PortSearch.Enqueue(db), (kind, _) => kind == PortSearch.Kind),
+        new("portSearch", PortSearch.Model, [PortSearch.PromptName, PortSearch.RepoPrompt], (db, _) => PortSearch.Enqueue(db), (kind, _) => kind == PortSearch.Kind),
         // Emuladores (#97, decisiones 357 y 371): una sola tarea revisa las recetas y busca forks; el contador es lo que espera en Revisar.
         new("emulators", EmulatorCheck.Model, [EmulatorCheck.PromptName], (db, _) => EmulatorCheck.Enqueue(db), (kind, _) => kind == EmulatorCheck.Kind,
             EmulatorCheck.Pending),

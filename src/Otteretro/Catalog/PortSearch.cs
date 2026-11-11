@@ -17,7 +17,7 @@ namespace Otteretro.Catalog;
 /// </summary>
 public static partial class PortSearch
 {
-    public const string Kind = "ports.search", PromptName = "verificar-port", Model = "sonnet";
+    public const string Kind = "ports.search", PromptName = "verificar-port", RepoPrompt = "buscar-repo-port", Model = "sonnet";
     const string Rss = "https://recompendium.com/en/rss.xml";
     const string ReadOnlyMemo = "https://readonlymemo.com/decompilation-projects-and-n64-recompiled-list/";
 
@@ -36,6 +36,9 @@ public static partial class PortSearch
 
     public record Verdict(string Link, bool Verified, string Console, string Game, string Project, string Kind, string? Toolchain, string Status, string Reason);
     public record Reply(List<Verdict> Ports);
+
+    public record RepoVerdict(string Link, string? Repo, string Reason);
+    public record RepoReply(List<RepoVerdict> Ports);
 
     static readonly string[] Kinds = ["decomp", "recomp", "remake", "port", "native-layer", "engine"];
     static readonly string[] Statuses = ["complete", "playable", "beta", "experimental"];
@@ -91,14 +94,55 @@ public static partial class PortSearch
         var (total, matched) = Ports.Match(db);
         run.Log(ApiError.Of("ports.log.search", ("added", (added + verified).ToString()), ("rejected", rejected.ToString()), ("total", total.ToString()),
             ("matched", matched.ToString())));
+        await FindRepos(run, ct);
     }
+
+    /// <summary>
+    /// El repo de los ports cuyo enlace no es uno (#155): una web, itch.io, un artículo. Claude lo busca una vez al mes por port, hasta
+    /// encontrarlo; queda en <c>port.repo</c> y «Ports» crea la receta desde ahí. GitHub, GitLab y Codeberg ya son repos.
+    /// </summary>
+    static async Task FindRepos(TaskRun run, CancellationToken ct)
+    {
+        var db = run.Db;
+        List<(long Id, string Console, string Game, string Project, string Link)> ports;
+        using (var c = db.Open())
+            ports = c.Query<(long, string, string, string, string)>("""
+                SELECT id, console, game, project, link FROM port WHERE repo IS NULL AND game_id IS NOT NULL AND status <> 'no-port' AND delisted = 0 ORDER BY id
+                """).ToList();
+        var month = DateTime.UtcNow.ToString("yyyy-MM");
+        var todo = ports.Where(p => !IsRepo(p.Link)).DistinctBy(p => Ports.Key(p.Link))
+            .Where(p => ClaudeFingerprint.Changed(db, RepoPrompt, "repo:" + Ports.Key(p.Link), month)).Take(MaxCandidates).ToList();
+        var prompt = ClaudeRunner.Prompt(RepoPrompt);
+        for (var i = 0; i < todo.Count; i += Batch)
+        {
+            run.Report(95, ApiError.Of("ports.search.repos", ("done", i.ToString()), ("total", todo.Count.ToString())));
+            var batch = todo.Skip(i).Take(Batch).ToList();
+            var reply = await ClaudeRunner.Run<RepoReply>(db, run.Id, RepoPrompt, prompt,
+                new { ports = batch.Select(p => new { link = p.Link, game = p.Game, project = p.Project, console = p.Console }) }, ct, Model);
+            foreach (var p in batch)
+            {
+                if (reply.Value.Ports.FirstOrDefault(v => Ports.Key(v.Link) == Ports.Key(p.Link)) is not { } v) continue; // sin respuesta: la próxima vez
+                ClaudeFingerprint.Save(db, RepoPrompt, "repo:" + Ports.Key(p.Link), month);
+                if (v.Repo is { } repo && IsRepo(repo))
+                {
+                    using var c = db.Open();
+                    c.Execute("UPDATE port SET repo = @repo WHERE lower(rtrim(trim(link), '/')) = @key", new { repo = repo.Trim().TrimEnd('/'), key = Ports.Key(p.Link) });
+                    run.Log(ApiError.Of("ports.log.repo", ("game", p.Game), ("project", p.Project), ("repo", repo)));
+                }
+                else run.Log(ApiError.Of("ports.log.noRepo", ("game", p.Game), ("project", p.Project), ("reason", v.Reason)));
+            }
+        }
+    }
+
+    /// <summary>Un enlace a un repo con releases que se leen por API: GitHub, GitLab o Codeberg.</summary>
+    public static bool IsRepo(string link) => Recipes.Source(link) is { } s && (s.Source is "github" or "gitlab" || s.Host == "codeberg.org");
 
     static string Key(Candidate c) => "port:" + c.Link.TrimEnd('/').ToLowerInvariant();
 
     static List<string> Consoles(Database db)
     {
         using var c = db.Open();
-        return [.. c.Query<string>("SELECT id FROM console ORDER BY rowid"), "megadrive", "dreamcast", "arcade"];
+        return [.. c.Query<string>("SELECT id FROM console ORDER BY rowid")];
     }
 
     /// <summary>Las consolas como las nombra el RSS de Recompendium.</summary>

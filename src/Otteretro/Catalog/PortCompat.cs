@@ -89,12 +89,14 @@ public static partial class PortCompat
         var totals = games.CountBy(g => g.Console).ToDictionary();
         var context = new Context(http, string.IsNullOrWhiteSpace(token) ? null : token);
         var loaded = new Dictionary<string, Task<Func<string, int?>>>();
-        var results = new List<(string Console, string Game, string? Emulator, int? Level, bool Ok)>();
-        var done = 0;
+        int done = 0, count = 0;
+        string? last = null;
+        using var w = db.Open();
         foreach (var (console, game) in games)
         {
-            done = results.Count > 0 && results[^1].Console == console ? done + 1 : 1;
-            report?.Invoke(console, done, totals[console], 100 * results.Count / games.Count);
+            done = last == console ? done + 1 : 1;
+            last = console;
+            report?.Invoke(console, done, totals[console], 100 * count++ / games.Count);
             int? level = null;
             var ok = true;
             if (Sources.TryGetValue(console, out var source))
@@ -115,18 +117,13 @@ public static partial class PortCompat
                     loaded.Remove(Emulators[console]); // una lista que no bajó se intenta con el próximo juego
                     ok = false;
                 }
-            results.Add((console, game, Emulators.GetValueOrDefault(console), level, ok));
-        }
-        var now = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture);
-        using var w = db.Open();
-        using var t = w.BeginTransaction();
-        foreach (var r in results)
+            // Juego a juego: si se cancela, lo hecho queda (#155).
             w.Execute("""
-                UPDATE port SET emulator = @Emulator, emulator_level = CASE WHEN @Ok THEN @Level ELSE emulator_level END,
-                  compat_at = CASE WHEN @Ok THEN @now ELSE compat_at END
-                WHERE console = @Console AND game = @Game
-                """, new { r.Console, r.Game, r.Emulator, r.Level, r.Ok, now }, t);
-        t.Commit();
+                UPDATE port SET emulator = @emulator, emulator_level = CASE WHEN @ok THEN @level ELSE emulator_level END,
+                  compat_at = CASE WHEN @ok THEN @now ELSE compat_at END
+                WHERE console = @console AND game = @game
+                """, new { console, game, emulator = Emulators.GetValueOrDefault(console), level, ok, now = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture) });
+        }
     }
 
     static async Task<string> Get(Context x, string url, CancellationToken ct, bool github = false)

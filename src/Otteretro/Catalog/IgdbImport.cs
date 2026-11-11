@@ -146,7 +146,30 @@ public static class IgdbImport
                 ("done", (total - job.Consoles.Count).ToString()), ("total", total.ToString())), job);
         }
         using (var c = run.Db.Open()) Claude.ClaudeBudget.Set(c, LastRefresh, job.Started);
+        DropEmptySagas(run);
         QueueFollowUps(run.Db);
+    }
+
+    /// <summary>
+    /// Borra las sagas sin juegos, sin rutas y que nadie sigue (#155). Salen sobre todo de la colección y la franquicia de IGDB: los
+    /// juegos quedan en una y la otra queda vacía. La corren «Actualizar el catálogo desde IGDB» y «Depurar el catálogo».
+    /// </summary>
+    public static int DropEmptySagas(TaskRun run)
+    {
+        using var c = run.Db.Open();
+        using var t = c.BeginTransaction();
+        var ids = c.Query<long>("""
+            SELECT id FROM saga s WHERE NOT EXISTS (SELECT 1 FROM game WHERE saga_id = s.id) AND NOT EXISTS (SELECT 1 FROM route WHERE saga_id = s.id)
+              AND NOT EXISTS (SELECT 1 FROM saga_user WHERE saga_id = s.id)
+            """, transaction: t).ToList();
+        foreach (var id in ids)
+            c.Execute("""
+                DELETE FROM field_value WHERE entity = 'saga' AND entity_id = @id; DELETE FROM saga_rule WHERE saga_id = @id;
+                DELETE FROM dismissal WHERE saga_id = @id; DELETE FROM saga WHERE id = @id
+                """, new { id }, t);
+        t.Commit();
+        if (ids.Count > 0) run.Log(ApiError.Of("tasks.log.emptySagas", ("count", ids.Count.ToString())));
+        return ids.Count;
     }
 
     /// <param name="Started">Cuándo empezó: lo que cambie en IGDB mientras corre entra en la próxima.</param>

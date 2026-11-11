@@ -108,6 +108,7 @@ public static partial class EmulatorCheck
     {
         var db = run.Db;
         var token = run.Credentials.Read("github.token") is { Length: > 0 } t ? t : null;
+        await EmulatorReview.AcceptForks(run, token, ct); // los forks que esperaban en Revisar, al empezar (#155)
         var recipes = Load(db);
 
         // 1. Cada receta.
@@ -141,13 +142,17 @@ public static partial class EmulatorCheck
         using var c = db.Open();
         return c.Query<string>("SELECT json FROM recipe ORDER BY id").Select(json => JsonNode.Parse(json)!.AsObject())
             .Select(j => (j, source: (string?)j["updates"]?["source"], repo: (string?)j["updates"]?["repo"], host: (string?)j["updates"]?["host"]))
-            .Where(x => x.repo is not null && (x.source == "github" || x.source == "forgejo" && x.host is not null))
-            .Select(x => new Recipe((string)x.j["id"]!, (string?)x.j["name"] ?? "", (string?)x.j["kind"] ?? "", x.source!, x.source == "forgejo" ? x.host : null, x.repo!,
+            .Where(x => x.repo is not null && Recipes.HasRepo(x.source, x.host))
+            .Select(x => new Recipe((string)x.j["id"]!, (string?)x.j["name"] ?? "", (string?)x.j["kind"] ?? "", x.source!, x.source == "github" ? null : x.host, x.repo!,
                 x.j["consoles"]?.AsArray().Select(k => (string)k!).ToList() ?? [], x.j))
             .ToList();
     }
 
     static string ApiBase(string source, string? host) => source == "forgejo" ? $"https://{host}/api/v1" : "https://api.github.com";
+
+    /// <summary>El repo por API, para saber si se movió o se archivó. GitLab lo nombra por su ruta codificada (#155).</summary>
+    static string RepoApi(string source, string? host, string repo) =>
+        source == "gitlab" ? $"https://{host}/api/v4/projects/{Uri.EscapeDataString(repo)}" : ApiBase(source, host) + "/repos/" + repo;
 
     /// <summary>
     /// Revisa una receta: true si aplicó una release nueva, false si fue a Revisar, null si está al día. El repo se pide directo: si
@@ -155,7 +160,7 @@ public static partial class EmulatorCheck
     /// </summary>
     static async Task<bool?> Check(Database db, TaskRun run, Recipe r, string? token, CancellationToken ct)
     {
-        if (await Api(ApiBase(r.Source, r.Host) + "/repos/" + r.Repo, token, ct) is not { } node)
+        if (await Api(RepoApi(r.Source, r.Host, r.Repo), r.Source == "gitlab" ? null : token, ct) is not { } node)
             return Problem(db, run, r, "gone", new() { ["repo"] = r.Repo });
         var meta = ReadMeta(node);
         if (!string.Equals(meta.FullName, r.Repo, StringComparison.OrdinalIgnoreCase))
@@ -247,7 +252,7 @@ public static partial class EmulatorCheck
     static async Task<int> SearchForks(TaskRun run, List<Recipe> recipes, string? token, CancellationToken ct)
     {
         var db = run.Db;
-        var emulators = recipes.Where(r => r.Kind == "emulator").ToList();
+        var emulators = recipes.Where(r => r.Kind == "emulator" && r.Source != "gitlab").ToList(); // shortcut: sin forks de GitLab, hasta que un emulador viva ahí
         run.Report(40, ApiError.Of("emulators.searching"));
         var found = new List<Candidate>();
         // Con el límite de consultas de GitHub se sigue con lo juntado: lo que falta se busca la próxima vez.
@@ -426,7 +431,7 @@ public static partial class EmulatorCheck
     static Task<JsonNode?> Api(string url, string? token, CancellationToken ct) => Recipes.Api(url, token, ct);
 
     /// <summary>Un repo como lo da GitHub o Gitea (los nombres de algunos campos cambian).</summary>
-    static Meta ReadMeta(JsonNode j) => new((string)j["full_name"]!, (int?)(j["stargazers_count"] ?? j["stars_count"]) ?? 0, (bool?)j["archived"] ?? false,
+    static Meta ReadMeta(JsonNode j) => new((string)(j["full_name"] ?? j["path_with_namespace"])!, (int?)(j["stargazers_count"] ?? j["stars_count"] ?? j["star_count"]) ?? 0, (bool?)j["archived"] ?? false,
         (bool?)j["fork"] ?? false, (string?)(j["source"]?["full_name"] ?? j["parent"]?["full_name"]), Date(j["created_at"]), Date(j["pushed_at"] ?? j["updated_at"]),
         (string?)j["description"]);
 

@@ -113,10 +113,18 @@ public class CatalogCleanupTests : IAsyncDisposable
             new("move", "Inventado", GameIds: [999], ToSagaId: 1), // fuera del lote: se descarta
             new("move", "Otra saga", GameIds: [30], ToSagaId: 1),  // Half-Life no venía en el lote
         ], []));
+        using (var c = f.Db.Open()) // #155: una saga vacía se borra con sus datos; una vacía que alguien sigue, no
+            c.Execute("""
+                INSERT INTO saga (id, name) VALUES (4, 'Vacía'), (5, 'Seguida');
+                INSERT INTO field_value (entity, entity_id, field, value, source) VALUES ('saga', 4, 'name', 'Vacía', 'igdb');
+                INSERT INTO saga_user (saga_id, following) VALUES (5, 1);
+                """);
 
         var task = await f.Run(CatalogCleanup.Enqueue(f.Db));
 
         Assert.Equal("done", task.Status);
+        Assert.Equal([5], Scalar<string>("SELECT group_concat(id) FROM saga WHERE id IN (4, 5)").Split(',').Select(int.Parse));
+        Assert.Equal(0, Scalar<long>("SELECT count(*) FROM field_value WHERE entity = 'saga' AND entity_id = 4"));
         Assert.Contains("haiku", calls[0]);
         Assert.Contains("Echoes of Wisdom", calls[0][^1]);
         Assert.Equal(0, Scalar<long>("SELECT count(*) FROM game WHERE id = 11"));
@@ -130,7 +138,7 @@ public class CatalogCleanupTests : IAsyncDisposable
         // F2.10: el registro de la tarea dice qué hizo, lo más nuevo arriba; F2.11: limpiar la borra con su registro.
         var log = TaskQueue.ReadLog(f.Db, task.Id).Select(l => l.Message.Code).Reverse().ToList();
         Assert.Equal(["tasks.log.started", "tasks.log.claude", "tasks.log.change.merge", "tasks.log.change.move", "tasks.log.change.move",
-            "tasks.log.change.rename", "tasks.log.done"], log);
+            "tasks.log.change.rename", "tasks.log.emptySagas", "tasks.log.done"], log);
         Assert.Equal(1, TaskQueue.Clear(f.Db));
         Assert.Empty(TaskQueue.ReadLog(f.Db, task.Id));
 

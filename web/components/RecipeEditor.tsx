@@ -253,7 +253,7 @@ function GamePick({ game, gameId, onChange }: { game?: string; gameId?: number; 
 function AssetTest({ pattern, updates }: { pattern: string; updates?: Recipe }) {
   const t = useTranslations("emulators");
   const repo = typeof updates?.repo === "string" && /^[^/\s]+\/[^/\s]+$/.test(updates.repo) ? updates.repo : null;
-  const url = !repo ? null : updates?.source === "github" ? `https://github.com/${repo}` : updates?.source === "forgejo" && updates.host ? `https://${updates.host}/${repo}` : null;
+  const url = !repo ? null : updates?.source === "github" ? `https://github.com/${repo}` : (updates?.source === "forgejo" || updates?.source === "gitlab") && updates.host ? `https://${updates.host}/${repo}` : null;
   const releases = useQuery({
     queryKey: ["recipes", "releases", url],
     queryFn: () => request<RepoRelease[]>(`/api/recipes/releases?url=${encodeURIComponent(url!)}`),

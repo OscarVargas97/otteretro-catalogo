@@ -151,6 +151,29 @@ public class RecipesTests
         Assert.Equal(("forgejo", "eden-emu/eden", "git.eden-emu.dev"), Recipes.Source("https://git.eden-emu.dev/eden-emu/eden.git"));
     }
 
+    /// <summary>#155: GitLab es una fuente; sus releases salen de su API, con los enlaces como archivos y la release futura (upcoming) incluida.</summary>
+    [Fact]
+    public async Task GitLabIsASourceOfReleases()
+    {
+        Assert.Equal(("gitlab", "owner/repo", "gitlab.com"), Recipes.Source("https://gitlab.com/owner/repo/-/releases"));
+        Assert.Equal("gitlab", Recipes.Source("framagit.org/a/b")?.Source);
+        Assert.True(PortSearch.IsRepo("https://codeberg.org/a/b"));
+        Assert.False(PortSearch.IsRepo("https://example.com/a/b"));
+
+        const string url = "https://gitlab.com/api/v4/projects/a%2Fb/releases?per_page=30";
+        Recipes.Http = new HttpClient(new FakeReleases(new() { [url] = """
+            [
+              { "tag_name": "v2", "released_at": "2026-12-01", "upcoming_release": true, "assets": { "links": [] } },
+              { "tag_name": "v1", "released_at": "2026-01-01", "assets": { "links": [
+                { "name": "juego-win64.zip", "url": "https://x/1", "direct_asset_url": "https://gitlab.com/a/b/-/releases/v1/downloads/juego-win64.zip" } ] } }
+            ]
+            """ }));
+        var (releases, error) = await Recipes.RepoReleases("https://gitlab.com/a/b", token: null);
+        Assert.Null(error);
+        Assert.Equal(["v2", "v1"], releases!.Select(r => r.Tag));
+        Assert.Equal("juego-win64.zip", Assert.Single(releases![1].Files).Name);
+    }
+
     /// <summary>#110: el patrón de un archivo calza con la versión siguiente, y el repo lista sus releases con archivos para elegir.</summary>
     [Fact]
     public async Task ThePatternMatchesTheNextVersionAndReleasesListTheirFiles()
