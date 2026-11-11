@@ -71,11 +71,11 @@ public static class ClaudeEndpoints
         api.MapPost("/review/{id:long}/dismiss", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : EmulatorReview.Dismiss(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
 
-        // Recetas propuestas para los ports (#119, #120): aceptar crea la receta experimental con el archivo elegido; descartar la deja vista.
-        api.MapPost("/review/{id:long}/port/accept", async Task<Results<Ok<ReviewPage>, NotFound, BadRequest<ApiError>, Conflict<ApiError>>> (long id, AcceptPortRequest request, AppSession s, SecretBox box, CancellationToken ct) =>
+        // Recetas de ports sin un archivo claro (#119, #120): aceptar crea la receta experimental con el archivo elegido; descartar la deja vista.
+        api.MapPost("/review/{id:long}/port/accept", async Task<Results<Ok<ReviewPage>, NotFound, BadRequest<ApiError>, Conflict<ApiError>>> (long id, AcceptPortRequest request, AppSession s, CancellationToken ct) =>
         {
             if (Db(s) is not { } db) return NoData();
-            var (found, error) = await PortRecipes.Accept(db, id, request.File, GitHubToken(db, s, box), ct);
+            var (found, error) = await PortRecipes.Accept(db, id, request.File, ct);
             return !found ? TypedResults.NotFound() : error is not null ? TypedResults.BadRequest(error) : TypedResults.Ok(ClaudeReview.Page(db));
         });
 

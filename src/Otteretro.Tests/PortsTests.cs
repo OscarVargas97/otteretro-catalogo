@@ -175,53 +175,60 @@ public class PortsTests : IAsyncDisposable
         $$"""[{ "tag_name": "{{tag}}", "draft": false, "published_at": "2026-10-01T00:00:00Z", "assets": [{{string.Join(",", files.Select(a => $$"""{ "name": "{{a}}", "browser_download_url": "https://dl/{{a}}" }"""))}}] }]""";
 
     /// <summary>
-    /// #119: después del cruce, cada port con juego y repo propone una receta (con su archivo, o la lista si hay varios); lo que ya
-    /// tiene receta no se propone, lo resuelto no vuelve y lo que no tiene archivo de Windows no se repite hasta que cambie su release.
+    /// #119: después del cruce, cada port con juego y una release de Windows tiene su receta, sin pasar por Revisar. Solo va a Revisar el
+    /// que tiene varios archivos sin uno claro; lo que ya tiene receta no se pide y lo que no tiene archivo de Windows no se repite hasta
+    /// que cambie su release. Lo que esperaba en Revisar de antes se convierte en receta.
     /// </summary>
     [Fact]
-    public async Task PortsWithAWindowsReleaseProposeARecipe()
+    public async Task PortsWithAWindowsReleaseGetTheirRecipe()
     {
         net.Releases["Zelda64Recomp/Zelda64Recomp"] = Release("v1.2.0", "Zelda64Recompiled-1.2.0-Windows.zip", "Zelda64Recompiled-1.2.0-Linux.tar.gz");
-        net.Releases["a/prime-recomp"] = Release("v0.3", "prime-0.3-win64.zip", "prime-0.3-win32.zip");
+        net.Releases["a/prime-recomp"] = Release("v0.3", "prime-0.3-win64.zip", "prime-0.3-win32.zip", "prime-0.3-win64-debug.zip");
         net.Releases["b/nb-recomp"] = Release("v1", "nb-linux.tar.gz");
         net.Releases["HarbourMasters/2ship2harkinian"] = Release("v2", "2ship-win64.zip");
         using (var c = f.Db.Open())
             c.Execute("""INSERT INTO recipe (id, kind, json) VALUES ('2ship', 'port', '{ "id": "2ship", "updates": { "source": "github", "repo": "HarbourMasters/2ship2harkinian" } }')""");
 
         await Done(Ports.Enqueue(f.Db));
-        var ports = PortRecipes.List(f.Db);
-        Assert.Equal(["Zelda64Recomp", "prime-recomp"], ports.Select(p => p.Project).Order(StringComparer.Ordinal));
+        Assert.Empty(PortRecipes.List(f.Db));
         Assert.DoesNotContain(net.Asked, u => u.Contains("2ship2harkinian")); // ya tiene receta
-        Assert.Equal(2, CatalogTasks.PendingCounts(f.Db)["portsReview"]);
-        var zelda = ports.Single(p => p.Project == "Zelda64Recomp");
-        Assert.Equal(["Zelda64Recompiled-1.2.0-Windows.zip"], zelda.Files);
-        Assert.Equal(@"^Zelda64Recompiled-[0-9.]+-Windows\.zip$", (string)System.Text.Json.Nodes.JsonNode.Parse(zelda.Recipe)!["asset"]!);
-        var prime = ports.Single(p => p.Project == "prime-recomp");
-        Assert.Equal(2, prime.Files.Count);
-        Assert.DoesNotContain("asset", prime.Recipe); // se elige al aceptar
-
-        // Aceptar: con varios archivos hay que elegir; la receta queda experimental, en la carpeta de su consola y calzando con la release.
-        var (found, error) = await PortRecipes.Accept(f.Db, prime.Id, null, null);
-        Assert.True(found);
-        Assert.Equal("review.chooseFile", error?.Code);
-        (found, error) = await PortRecipes.Accept(f.Db, prime.Id, "prime-0.3-win64.zip", null);
-        Assert.True(found && error is null, error?.Code);
+        var zelda = System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "zelda64recomp")!)!;
+        Assert.Equal(@"^Zelda64Recompiled-[0-9.]+-Windows\.zip$", (string)zelda["asset"]!);
         var recipe = System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "prime-recomp")!)!;
-        Assert.Equal(("port", "GameCube", "Metroid Prime", true, "a/prime-recomp"),
-            ((string)recipe["kind"]!, (string)recipe["folder"]!, (string)recipe["game"]!, (bool)recipe["experimental"]!, (string)recipe["updates"]!["repo"]!));
-        Assert.Matches((string)recipe["asset"]!, "prime-0.3-win64.zip");
-        Assert.True(PortRecipes.Dismiss(f.Db, zelda.Id));
-        Assert.False(PortRecipes.Dismiss(f.Db, zelda.Id));
+        Assert.Equal(("port", "GameCube", "Metroid Prime", true, "a/prime-recomp", "https://github.com/a/prime-recomp"),
+            ((string)recipe["kind"]!, (string)recipe["folder"]!, (string)recipe["game"]!, (bool)recipe["experimental"]!, (string)recipe["updates"]!["repo"]!, (string)recipe["port"]!));
+        Assert.Matches((string)recipe["asset"]!, "prime-0.3-win64.zip"); // de varios, el de 64 bits que no es de depuración
 
-        // Otra vez: nada vuelve; el que no tenía archivo de Windows se mira de nuevo, pero con la misma release no se propone.
+        // Otra vez: lo creado no se vuelve a pedir; el que no tenía archivo de Windows se mira de nuevo. Con dos archivos sin uno claro va a
+        // Revisar, y aceptarlo pide elegir.
         net.Asked.Clear();
         await Done(Ports.Enqueue(f.Db));
-        Assert.Empty(PortRecipes.List(f.Db));
         Assert.Contains(net.Asked, u => u.Contains("b/nb-recomp"));
-        Assert.DoesNotContain(net.Asked, u => u.Contains("prime-recomp") || u.Contains("Zelda64Recomp")); // aceptado y descartado
-        net.Releases["b/nb-recomp"] = Release("v2", "nb-linux.tar.gz", "nb-windows.zip");
+        Assert.DoesNotContain(net.Asked, u => u.Contains("prime-recomp") || u.Contains("Zelda64Recomp"));
+        net.Releases["b/nb-recomp"] = Release("v2", "nb-linux.tar.gz", "nb-windows.zip", "nb-win32.zip");
         await Done(Ports.Enqueue(f.Db));
-        Assert.Equal(["nb-recomp"], PortRecipes.List(f.Db).Select(p => p.Project));
+        var nb = Assert.Single(PortRecipes.List(f.Db));
+        Assert.Equal(("nb-recomp", 2), (nb.Project, nb.Files.Count));
+        Assert.Equal(1, CatalogTasks.PendingCounts(f.Db)["portsReview"]);
+        var (found, error) = await PortRecipes.Accept(f.Db, nb.Id, null);
+        Assert.True(found);
+        Assert.Equal("review.chooseFile", error?.Code);
+        Assert.True(PortRecipes.Dismiss(f.Db, nb.Id));
+        Assert.False(PortRecipes.Dismiss(f.Db, nb.Id));
+
+        // Lo que esperaba en Revisar de antes, con un archivo claro, se convierte en receta en la próxima vuelta.
+        using (var c = f.Db.Open())
+        {
+            c.Execute("DELETE FROM recipe WHERE id = 'zelda64recomp'");
+            c.Execute("""
+                INSERT INTO review_item (kind, entity, entity_id, data, created_at) SELECT 'doubtful', 'port', id, json_object('port', id, 'game', game,
+                'project', project, 'console', console, 'folder', 'Nintendo 64', 'source', 'github', 'repo', 'Zelda64Recomp/Zelda64Recomp',
+                'url', link, 'tag', 'v1.2.0', 'files', json_array('Zelda64Recompiled-1.2.0-Windows.zip'), 'link', link), '2026-01-01' FROM port WHERE project = 'Zelda64Recomp'
+                """);
+        }
+        await Done(Ports.Enqueue(f.Db));
+        Assert.NotNull(Recipes.Get(f.Db, "zelda64recomp"));
+        Assert.Empty(PortRecipes.List(f.Db));
     }
 
     /// <summary>#149: la receta de un port apunta a su fila por el enlace, que le da su consola, su carpeta y su juego; un enlace repetido no tumba la tarea.</summary>
@@ -230,8 +237,7 @@ public class PortsTests : IAsyncDisposable
     {
         net.Releases["a/prime-recomp"] = Release("v0.3", "prime-0.3-win64.zip");
         await Done(Ports.Enqueue(f.Db));
-        var prime = PortRecipes.List(f.Db).Single(p => p.Project == "prime-recomp");
-        Assert.Equal("https://github.com/a/prime-recomp", (string)System.Text.Json.Nodes.JsonNode.Parse(prime.Recipe)!["port"]!);
+        Assert.Equal("https://github.com/a/prime-recomp", (string)System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "prime-recomp")!)!["port"]!);
 
         // A mano: sin «port» o con un enlace que no es un port no se guarda; la carpeta y el juego escritos a mano los pisa la fila.
         const string recipe = """{ "id": "prime", "name": "Prime", "kind": "port", "folder": "Otra", "game": "Otro", "detect": "prime.exe"PORT }""";
