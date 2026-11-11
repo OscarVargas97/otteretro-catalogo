@@ -3729,7 +3729,7 @@
       "year": 2023,
       "igdbId": 203259,
       "popularity": 39,
-      "iconic": true,
+      "iconic": false,
       "fields": [
         {
           "field": "best_version",
@@ -4385,6 +4385,12 @@
           "manual": false
         },
         {
+          "field": "summary_es",
+          "value": "Conviértete en acólito de la Inquisición en este cRPG sombrío y oscuro, basado en grupo y en la historia. Dirige investigaciones, descubre grandes conspiraciones, domina el combate táctico y libra una guerra secreta contra la herejía. Toma decisiones difíciles como conducto de la voluntad del Dios-Emperador.",
+          "source": "claude",
+          "manual": false
+        },
+        {
           "field": "year",
           "value": "2027",
           "source": "igdb",
@@ -4610,9 +4616,9 @@
       ]
     },
     {
-      "id": 3701,
+      "id": 4023,
       "kind": "story",
-      "rationale": "Los juegos de Warhammer 40,000 comparten universo, pero no tienen una historia continua entre sí. Se repite el orden de lanzamiento, con los títulos principales y sin los spin-offs menores.",
+      "rationale": "La saga no tiene una historia continua: son juegos independientes en el mismo universo, con campañas y personajes distintos. Repito el orden de lanzamiento de los principales, sin spin-offs menores. Sin fuentes verificadas.",
       "sources": "[]",
       "approved": true,
       "steps": [
@@ -4620,117 +4626,106 @@
           "position": 1,
           "gameId": 43365,
           "recommendedVersionId": 103097,
-          "reason": "Dawn of War, en orden de lanzamiento; la versión remasterizada es la actual."
+          "reason": "Inicio de la serie Dawn of War; la versión remaster es la actual."
         },
         {
           "position": 2,
           "gameId": 43724,
           "recommendedVersionId": 103425,
-          "reason": "Dark Crusade, en orden de lanzamiento."
+          "reason": "Expansión independiente con varias facciones."
         },
         {
           "position": 3,
           "gameId": 43732,
           "recommendedVersionId": 103435,
-          "reason": "Dawn of War II, en orden de lanzamiento."
+          "reason": "Secuela con enfoque táctico de escuadras."
         },
         {
           "position": 4,
           "gameId": 39613,
-          "recommendedVersionId": 94872,
-          "reason": "Space Marine, en orden de lanzamiento; la versión remasterizada es la actual."
+          "recommendedVersionId": 94873,
+          "reason": "Shooter en tercera persona; la versión remaster de PC es la actual."
         },
         {
           "position": 5,
           "gameId": 10980,
           "recommendedVersionId": 25670,
-          "reason": "Mechanicus, en orden de lanzamiento."
+          "reason": "Estrategia por turnos del Adeptus Mechanicus; versión de PC."
         },
         {
           "position": 6,
           "gameId": 44335,
           "recommendedVersionId": 105166,
-          "reason": "Chaos Gate - Daemonhunters, en orden de lanzamiento."
+          "reason": "Táctica por turnos con Caballeros Grises; versión de PC."
         },
         {
           "position": 7,
-          "gameId": 46601,
-          "recommendedVersionId": 110290,
-          "reason": "Darktide, en orden de lanzamiento."
+          "gameId": 46808,
+          "recommendedVersionId": 110898,
+          "reason": "RPG con Rogue Trader; versión de PC."
         },
         {
           "position": 8,
-          "gameId": 22698,
-          "recommendedVersionId": 56707,
-          "reason": "Boltgun, en orden de lanzamiento."
-        },
-        {
-          "position": 9,
-          "gameId": 46808,
-          "recommendedVersionId": 110898,
-          "reason": "Rogue Trader, en orden de lanzamiento."
-        },
-        {
-          "position": 10,
           "gameId": 43463,
           "recommendedVersionId": 103014,
-          "reason": "Space Marine II, en orden de lanzamiento."
+          "reason": "Continuación directa de Space Marine; versión de PC."
         }
       ]
     },
     {
-      "id": 3702,
+      "id": 4024,
       "kind": "community",
-      "rationale": "No hace falta orden: cada juego es independiente. Se recomienda elegir por género; aquí hay un recorrido variado con lo más aclamado, sin los spin-offs menores.",
+      "rationale": "Se suele empezar por lo más reciente y mejor valorado según el género que prefieras: acción (Space Marine II, Boltgun), estrategia (Dawn of War, Mechanicus) o RPG (Rogue Trader). Dejo fuera spin-offs menores. Sin fuentes verificadas.",
       "sources": "[]",
       "approved": true,
       "steps": [
         {
           "position": 1,
-          "gameId": 43463,
-          "reason": "La entrada más accesible: acción en tercera persona, muy popular y sin requerir conocimientos previos."
+          "gameId": 39613,
+          "recommendedVersionId": 94873,
+          "reason": "Buena puerta de entrada al universo y su tono; usa el remaster."
         },
         {
           "position": 2,
-          "gameId": 39613,
-          "recommendedVersionId": 94872,
-          "reason": "El primer Space Marine, para quien quiera su historia; la versión remasterizada es mejor."
+          "gameId": 43463,
+          "recommendedVersionId": 103014,
+          "reason": "Secuela directa, con campaña y cooperativo; versión de PC."
         },
         {
           "position": 3,
-          "gameId": 43365,
-          "recommendedVersionId": 103097,
-          "reason": "El RTS clásico; la versión remasterizada es la actual."
+          "gameId": 22698,
+          "recommendedVersionId": 56707,
+          "reason": "Shooter retro corto y directo; versión de PC."
         },
         {
           "position": 4,
-          "gameId": 43724,
-          "recommendedVersionId": 103425,
-          "reason": "Dark Crusade suele considerarse la mejor expansión de Dawn of War."
+          "gameId": 43365,
+          "recommendedVersionId": 103097,
+          "reason": "Estrategia en tiempo real clásica; versión remaster."
         },
         {
           "position": 5,
-          "gameId": 10980,
-          "recommendedVersionId": 25670,
-          "reason": "Estrategia por turnos con mucha ambientación sobre el Adeptus Mechanicus."
+          "gameId": 43724,
+          "recommendedVersionId": 103425,
+          "reason": "Expansión muy querida por su campaña de conquista."
         },
         {
           "position": 6,
-          "gameId": 46808,
-          "recommendedVersionId": 110898,
-          "reason": "Un RPG profundo para fans del lore."
+          "gameId": 10980,
+          "recommendedVersionId": 25670,
+          "reason": "Estrategia por turnos con mucha ambientación."
         },
         {
           "position": 7,
-          "gameId": 22698,
-          "recommendedVersionId": 56707,
-          "reason": "Un shooter retro, rápido y directo."
+          "gameId": 46808,
+          "recommendedVersionId": 110898,
+          "reason": "RPG largo y muy valorado; versión de PC."
         },
         {
           "position": 8,
           "gameId": 46601,
           "recommendedVersionId": 110290,
-          "reason": "Cooperativo en equipo para quien quiera jugar acompañado."
+          "reason": "Cooperativo para cuatro jugadores; versión de PC."
         }
       ]
     }

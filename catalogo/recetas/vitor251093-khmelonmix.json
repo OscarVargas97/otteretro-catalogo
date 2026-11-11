@@ -1,0 +1,24 @@
+{
+  "id": "vitor251093-khmelonmix",
+  "name": "melonDS (vitor251093)",
+  "kind": "emulator",
+  "folder": "Nintendo DS",
+  "detect": "melonDS.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ds"
+  ],
+  "license": "GPL-3.0-only",
+  "perGame": {
+    "apply": "swap"
+  },
+  "updates": {
+    "source": "github",
+    "repo": "vitor251093/KHMelonMix"
+  },
+  "asset": "^MelonMix-windows-x86_64\\.zip$",
+  "experimental": true,
+  "forkOf": "melonds"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "rayhlancaner-png-shadps4-infamous-fixbuild",
+  "name": "shadPS4 (rayhlancaner-png)",
+  "kind": "emulator",
+  "folder": "PlayStation 4",
+  "detect": "shadPS4.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps4"
+  ],
+  "license": "GPL-2.0-only",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config.json",
+    "user/custom_configs"
+  ],
+  "perGame": {
+    "config": "user/custom_configs/{serial}.json",
+    "apply": "file",
+    "mods": [
+      "{game}-mods"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "rayhlancaner-png/shadPS4-Infamous-FixBuild"
+  },
+  "asset": "^shadPS4\\.exe$",
+  "experimental": true,
+  "forkOf": "shadps4"
+}

@@ -6,21 +6,86 @@
   "game": "The Legend of Zelda: Twilight Princess",
   "port": "https://github.com/TwilitRealm/dusklight",
   "detect": "dusklight.exe",
-  "version": { "from": "exe" },
+  "version": {
+    "from": "exe"
+  },
   "license": "CC0-1.0",
-  "portable": [{ "type": "rename", "from": "Datos", "path": "data", "link": "%APPDATA%/TwilitRealm/Dusklight" }, { "type": "folder", "path": "data" }],
-  "saves": ["data/EUR", "data/USA", "data/JAP"],
-  "config": ["data/config.json"],
-  "gamePaths": [{ "file": "data/config.json", "format": "json", "key": "backend.isoPath" }],
-  "perGame": { "config": "data/config.json", "apply": "swap", "mods": ["data/mods"], "modsArg": "--mods" },
-  "options": [
-    { "name": "resolution", "file": "data/config.json", "format": "json", "key": "game.internalResolutionScale" },
-    { "name": "fps", "file": "data/config.json", "format": "json", "key": "video.maxFrameRate" },
-    { "name": "vsync", "file": "data/config.json", "format": "json", "key": "video.enableVsync" },
-    { "name": "aspectRatio", "file": "data/config.json", "format": "json", "key": "video.lockAspectRatio" },
-    { "name": "renderer", "file": "data/config.json", "format": "json", "key": "backend.graphicsBackend" }
+  "portable": [
+    {
+      "type": "rename",
+      "from": "Datos",
+      "path": "data",
+      "link": "%APPDATA%/TwilitRealm/Dusklight"
+    },
+    {
+      "type": "folder",
+      "path": "data"
+    }
   ],
-  "updates": { "source": "github", "repo": "TwilitRealm/dusklight" },
+  "saves": [
+    "data/EUR",
+    "data/USA",
+    "data/JAP"
+  ],
+  "config": [
+    "data/config.json"
+  ],
+  "gamePaths": [
+    {
+      "file": "data/config.json",
+      "format": "json",
+      "key": "backend.isoPath"
+    }
+  ],
+  "perGame": {
+    "config": "data/config.json",
+    "apply": "swap",
+    "mods": [
+      "data/mods"
+    ],
+    "modsArg": "--mods"
+  },
+  "options": [
+    {
+      "name": "resolution",
+      "file": "data/config.json",
+      "format": "json",
+      "key": "game.internalResolutionScale"
+    },
+    {
+      "name": "fps",
+      "file": "data/config.json",
+      "format": "json",
+      "key": "video.maxFrameRate"
+    },
+    {
+      "name": "vsync",
+      "file": "data/config.json",
+      "format": "json",
+      "key": "video.enableVsync"
+    },
+    {
+      "name": "aspectRatio",
+      "file": "data/config.json",
+      "format": "json",
+      "key": "video.lockAspectRatio"
+    },
+    {
+      "name": "renderer",
+      "file": "data/config.json",
+      "format": "json",
+      "key": "backend.graphicsBackend"
+    }
+  ],
+  "updates": {
+    "source": "github",
+    "repo": "TwilitRealm/dusklight"
+  },
   "asset": "^Dusklight-v.*-win32-x86_64\\.zip$",
-  "formats": ["iso", "rvz", "gcm"]
+  "formats": [
+    "iso",
+    "rvz",
+    "gcm"
+  ],
+  "assetLinux": "^Dusklight-v[0-9.]+-linux-x86_64\\.AppImage$"
 }

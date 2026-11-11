@@ -1,0 +1,35 @@
+{
+  "id": "sunlitspace542-snes9x-neo",
+  "name": "Snes9x (Sunlitspace542)",
+  "kind": "emulator",
+  "folder": "SNES",
+  "detect": "snes9x-x64.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "snes"
+  ],
+  "license": "LicenseRef-Snes9x",
+  "saves": [
+    "Saves"
+  ],
+  "config": [
+    "snes9x.conf"
+  ],
+  "perGame": {
+    "apply": "swap",
+    "mods": [
+      "Patches/{rom}.ips",
+      "Patches/{rom}.bps",
+      "Patches/{rom}.ups"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "Sunlitspace542/snes9x-neo"
+  },
+  "asset": "^snes9x\\.exe$",
+  "experimental": true,
+  "forkOf": "snes9x"
+}

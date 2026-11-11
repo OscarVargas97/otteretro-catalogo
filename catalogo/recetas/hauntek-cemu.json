@@ -1,0 +1,41 @@
+{
+  "id": "hauntek-cemu",
+  "name": "Cemu (hauntek)",
+  "kind": "emulator",
+  "folder": "Wii U",
+  "detect": "Cemu.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "wiiu"
+  ],
+  "license": "MPL-2.0",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "portable"
+    }
+  ],
+  "saves": [
+    "portable/mlc01/usr/save"
+  ],
+  "config": [
+    "portable/settings.xml",
+    "portable/gameProfiles"
+  ],
+  "content": [
+    "portable/mlc01"
+  ],
+  "perGame": {
+    "config": "portable/gameProfiles/{titleId}.ini",
+    "apply": "file"
+  },
+  "updates": {
+    "source": "github",
+    "repo": "hauntek/Cemu"
+  },
+  "asset": "^cemu-[0-9.]+-windows-x64-installer\\.exe$",
+  "experimental": true,
+  "forkOf": "cemu"
+}

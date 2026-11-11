@@ -1,0 +1,38 @@
+{
+  "id": "junminlee2004-gr2fork",
+  "name": "shadPS4 (junminlee2004)",
+  "kind": "emulator",
+  "folder": "PlayStation 4",
+  "detect": "shadPS4.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps4"
+  ],
+  "license": "GPL-2.0-only",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config.json",
+    "user/custom_configs"
+  ],
+  "perGame": {
+    "config": "user/custom_configs/{serial}.json",
+    "apply": "file",
+    "mods": [
+      "{game}-mods"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "junminlee2004/GR2fork"
+  },
+  "asset": "^GR2fork-EXODUS-win64-sdl-2026-11-08-cc13a77\\.zip$",
+  "experimental": true,
+  "forkOf": "shadps4"
+}

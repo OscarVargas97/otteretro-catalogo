@@ -1,0 +1,27 @@
+{
+  "id": "libretro-bsnes-libretro",
+  "name": "bsnes (libretro)",
+  "kind": "emulator",
+  "folder": "SNES",
+  "detect": "bsnes.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "snes"
+  ],
+  "license": "GPL-3.0-only",
+  "config": [
+    "settings.bml"
+  ],
+  "perGame": {
+    "apply": "swap"
+  },
+  "updates": {
+    "source": "github",
+    "repo": "libretro/bsnes-libretro"
+  },
+  "asset": "^bsnes-windows\\.zip$",
+  "experimental": true,
+  "forkOf": "bsnes"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "jojo-chaechae-eglantine",
+  "name": "Eglantine (jojo-chaechae)",
+  "kind": "emulator",
+  "folder": "Switch 2",
+  "detect": "eglantine.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "switch2"
+  ],
+  "experimental": true,
+  "devOnly": true,
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config"
+  ],
+  "content": [
+    "user/nand"
+  ],
+  "perGame": {
+    "args": [
+      "-g",
+      "{rom}"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "jojo-chaechae/Eglantine"
+  },
+  "asset": "^eglantine-jojo-windows-x86_64-pgo-0834370b6c5566d3f7a983fcfd5ff29f3d6db667\\.zip$",
+  "formats": [
+    "nsp",
+    "xci",
+    "nca",
+    "nro"
+  ],
+  "forkOf": "eglantine"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "pruefsumme-widemelon",
+  "name": "melonDS (pruefsumme)",
+  "kind": "emulator",
+  "folder": "Nintendo DS",
+  "detect": "melonDS.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ds"
+  ],
+  "license": "GPL-3.0-only",
+  "perGame": {
+    "apply": "swap"
+  },
+  "updates": {
+    "source": "github",
+    "repo": "pruefsumme/widemelon"
+  },
+  "asset": "^WideMelon-[0-9.]+-Windows-x86_64\\.exe$",
+  "experimental": true,
+  "forkOf": "melonds"
+}

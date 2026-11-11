@@ -1,0 +1,38 @@
+{
+  "id": "weshayoub92-shadps4-ayoub1080p",
+  "name": "shadPS4 (weshayoub92)",
+  "kind": "emulator",
+  "folder": "PlayStation 4",
+  "detect": "shadPS4.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps4"
+  ],
+  "license": "GPL-2.0-only",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config.json",
+    "user/custom_configs"
+  ],
+  "perGame": {
+    "config": "user/custom_configs/{serial}.json",
+    "apply": "file",
+    "mods": [
+      "{game}-mods"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "weshayoub92/shadPS4-AYOUB1080p"
+  },
+  "asset": "^shadPS4-AYOUB1080p-[0-9.]+-windows-x64\\.zip$",
+  "experimental": true,
+  "forkOf": "shadps4"
+}

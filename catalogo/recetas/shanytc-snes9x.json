@@ -1,0 +1,35 @@
+{
+  "id": "shanytc-snes9x",
+  "name": "Snes9x (shanytc)",
+  "kind": "emulator",
+  "folder": "SNES",
+  "detect": "snes9x-x64.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "snes"
+  ],
+  "license": "LicenseRef-Snes9x",
+  "saves": [
+    "Saves"
+  ],
+  "config": [
+    "snes9x.conf"
+  ],
+  "perGame": {
+    "apply": "swap",
+    "mods": [
+      "Patches/{rom}.ips",
+      "Patches/{rom}.bps",
+      "Patches/{rom}.ups"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "shanytc/snes9x"
+  },
+  "asset": "^super-snes9x-nightly-win32-x64\\.zip$",
+  "experimental": true,
+  "forkOf": "snes9x"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "cuesta4-shadps4",
+  "name": "shadPS4 (cuesta4)",
+  "kind": "emulator",
+  "folder": "PlayStation 4",
+  "detect": "shadPS4.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps4"
+  ],
+  "license": "GPL-2.0-only",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config.json",
+    "user/custom_configs"
+  ],
+  "perGame": {
+    "config": "user/custom_configs/{serial}.json",
+    "apply": "file",
+    "mods": [
+      "{game}-mods"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "cuesta4/shadPS4"
+  },
+  "asset": "^shadps4-eltutz\\.exe$",
+  "experimental": true,
+  "forkOf": "shadps4"
+}
