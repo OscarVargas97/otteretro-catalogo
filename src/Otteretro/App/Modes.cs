@@ -131,42 +131,42 @@ public static class CliMode
                     output.WriteLine($"Publicado en {folder}");
                 });
             case ["catalogo", "validar", var folder]:
-            {
-                var errors = Catalog.Published.Validate(Path.GetFullPath(folder));
-                foreach (var error in errors) output.WriteLine(error);
-                output.WriteLine(errors.Count == 0 ? "Sin errores." : $"{errors.Count} errores.");
-                if (errors.Count == 0)
-                    output.WriteLine("Juegos con imagen: " + string.Join(", ", Catalog.Published.ImageCounts(Path.GetFullPath(folder)).Select(i => $"{i.Key} {i.Value}")));
-                return errors.Count == 0 ? 0 : 1;
-            }
+                {
+                    var errors = Catalog.Published.Validate(Path.GetFullPath(folder));
+                    foreach (var error in errors) output.WriteLine(error);
+                    output.WriteLine(errors.Count == 0 ? "Sin errores." : $"{errors.Count} errores.");
+                    if (errors.Count == 0)
+                        output.WriteLine("Juegos con imagen: " + string.Join(", ", Catalog.Published.ImageCounts(Path.GetFullPath(folder)).Select(i => $"{i.Key} {i.Value}")));
+                    return errors.Count == 0 ? 0 : 1;
+                }
             // #31: el historial de cambios que publica cada versión. Sin versión anterior, empieza desde esta.
             case ["catalogo", "cambios", var folder, var version, var file, .. var previous] when previous is [] or [_, _] or [_, _, _]:
-            {
-                var changes = previous is [var before, _, ..] ? Catalog.Published.Changes(Path.GetFullPath(before), Path.GetFullPath(folder), version) : [];
-                var images = previous is [var old2, _, ..] ? Catalog.Published.ImageChanges(Path.GetFullPath(old2), Path.GetFullPath(folder)) : 0;
-                var history = Catalog.Published.Extend(previous is [_, _, var old] ? Catalog.Published.ReadHistory(Path.GetFullPath(old)) : null,
-                    previous is [_, var previousVersion, ..] ? previousVersion : null, changes, version, images);
-                Catalog.Published.SaveHistory(Path.GetFullPath(file), history);
-                output.WriteLine($"{changes.Count} cambios y {images} juegos con imágenes distintas en {version}; el historial tiene {history.Versions.Count} versiones.");
-                return 0;
-            }
+                {
+                    var changes = previous is [var before, _, ..] ? Catalog.Published.Changes(Path.GetFullPath(before), Path.GetFullPath(folder), version) : [];
+                    var images = previous is [var old2, _, ..] ? Catalog.Published.ImageChanges(Path.GetFullPath(old2), Path.GetFullPath(folder)) : 0;
+                    var history = Catalog.Published.Extend(previous is [_, _, var old] ? Catalog.Published.ReadHistory(Path.GetFullPath(old)) : null,
+                        previous is [_, var previousVersion, ..] ? previousVersion : null, changes, version, images);
+                    Catalog.Published.SaveHistory(Path.GetFullPath(file), history);
+                    output.WriteLine($"{changes.Count} cambios y {images} juegos con imágenes distintas en {version}; el historial tiene {history.Versions.Count} versiones.");
+                    return 0;
+                }
             // #32: lo que revisa cada PR contra main, con el resumen que se comenta en el PR.
             case ["catalogo", "revisar-pr", var main, var folder, var summary]:
-            {
-                var (before, after) = (Path.GetFullPath(main), Path.GetFullPath(folder));
-                var errors = Catalog.Published.CheckPullRequest(before, after);
-                File.WriteAllText(Path.GetFullPath(summary), Catalog.Published.Summary(Catalog.Published.Changes(before, after, "pr"), errors));
-                foreach (var error in errors) output.WriteLine(error);
-                output.WriteLine(errors.Count == 0 ? "Sin problemas respecto de main." : $"{errors.Count} problemas respecto de main.");
-                return errors.Count == 0 ? 0 : 1;
-            }
+                {
+                    var (before, after) = (Path.GetFullPath(main), Path.GetFullPath(folder));
+                    var errors = Catalog.Published.CheckPullRequest(before, after);
+                    File.WriteAllText(Path.GetFullPath(summary), Catalog.Published.Summary(Catalog.Published.Changes(before, after, "pr"), errors));
+                    foreach (var error in errors) output.WriteLine(error);
+                    output.WriteLine(errors.Count == 0 ? "Sin problemas respecto de main." : $"{errors.Count} problemas respecto de main.");
+                    return errors.Count == 0 ? 0 : 1;
+                }
             case ["catalogo", "compilar", var folder, var file]:
-            {
-                var manifest = Catalog.Published.Compile(Path.GetFullPath(folder), Path.GetFullPath(file));
-                File.WriteAllText(Path.GetFullPath(file) + ".json", System.Text.Json.JsonSerializer.Serialize(manifest, System.Text.Json.JsonSerializerOptions.Web));
-                output.WriteLine($"{manifest.Sagas} sagas, {manifest.Games} juegos, {manifest.Versions} versiones. SHA-256: {manifest.Sha256}");
-                return 0;
-            }
+                {
+                    var manifest = Catalog.Published.Compile(Path.GetFullPath(folder), Path.GetFullPath(file));
+                    File.WriteAllText(Path.GetFullPath(file) + ".json", System.Text.Json.JsonSerializer.Serialize(manifest, System.Text.Json.JsonSerializerOptions.Web));
+                    output.WriteLine($"{manifest.Sagas} sagas, {manifest.Games} juegos, {manifest.Versions} versiones. SHA-256: {manifest.Sha256}");
+                    return 0;
+                }
             case ["catalogo", "depurar", "--contar"]:
                 return WithData(output, db =>
                 {

@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(gh pr merge *)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat | grep -q '\"stop_hook_active\": *true' && exit 0; [ -f .calidad/checks.sh ] || exit 0; out=$(sh .calidad/checks.sh rapidos 2>&1) && exit 0; printf 'Checks rápidos en rojo (.calidad/checks.sh rapidos). Arréglalos antes de terminar:\n%s\n' \"$(printf '%s' \"$out\" | tail -n 40)\" >&2; exit 2",
+            "timeout": 300
+          }
+        ]
+      }
+    ]
+  }
+}

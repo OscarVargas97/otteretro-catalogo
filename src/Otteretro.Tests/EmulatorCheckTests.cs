@@ -70,7 +70,8 @@ public class EmulatorCheckTests : IAsyncDisposable
         using var c = f.Db.Open();
         void Add(string id, string kind, string repo, string asset, string extra = "") => c.Execute("INSERT INTO recipe (id, kind, json) VALUES (@id, @kind, @json)", new
         {
-            id, kind,
+            id,
+            kind,
             json = $$"""{ "id": "{{id}}", "name": "{{(id == "mgba" ? "mGBA" : id)}}", "kind": "{{kind}}", "folder": "Game Boy Advance", "detect": "mGBA.exe", "consoles": ["gba"], "updates": { "source": "github", "repo": "{{repo}}" }, "asset": "{{asset}}"{{extra}} }""",
         });
         Add("mgba", "emulator", "mgba-emu/mgba", @"^mGBA-[0-9.]+-win64\\.7z$",
@@ -90,7 +91,9 @@ public class EmulatorCheckTests : IAsyncDisposable
             ]);
             return Task.FromResult(new ProcessOutput(0, JsonSerializer.Serialize(new
             {
-                is_error = false, structured_output = reply, total_cost_usd = 0.01,
+                is_error = false,
+                structured_output = reply,
+                total_cost_usd = 0.01,
                 usage = new { input_tokens = 100, output_tokens = 10, cache_read_input_tokens = 0, cache_creation_input_tokens = 0 },
             }, JsonSerializerOptions.Web), ""));
         };

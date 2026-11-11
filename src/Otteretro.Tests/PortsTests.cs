@@ -123,7 +123,7 @@ public class PortsTests : IAsyncDisposable
     {
         await Done(Ports.Enqueue(f.Db));
 
-        Assert.Equal(27, Scalar<long>("SELECT count(*) FROM port")); // 5 ports y 1 decompilación de Recompendium, y 21 extras (uno ya estaba)
+        Assert.Equal(28, Scalar<long>("SELECT count(*) FROM port")); // 5 ports y 1 decompilación de Recompendium, y 22 extras (uno ya estaba)
         Assert.Equal("recompendium", Scalar<string>("SELECT source FROM port WHERE link = 'https://github.com/Zelda64Recomp/Zelda64Recomp'"));
         using (var c = f.Db.Open())
         {
@@ -137,7 +137,7 @@ public class PortsTests : IAsyncDisposable
             Assert.Equal(("decomp", true), c.QuerySingle<(string, bool)>("SELECT kind, abandoned = 0 FROM port WHERE project = '2ship2harkinian'"));
         }
         var page = Ports.Page(f.Db);
-        Assert.Equal((27, 8), (page.Total, page.Matched));
+        Assert.Equal((28, 8), (page.Total, page.Matched));
         Assert.Equal(Ports.Statuses, page.ByStatus.Keys); // «100 % jugable» primero, aparte de lo jugable con fallos
         Assert.Equal(1, page.ByStatus["no-port"]);
         Assert.Equal(Scalar<long>("SELECT count(*) FROM port WHERE status = 'complete'"), page.ByStatus["complete"]);
@@ -296,7 +296,9 @@ public class PortsTests : IAsyncDisposable
             ]);
             return Task.FromResult(new ProcessOutput(0, JsonSerializer.Serialize(new
             {
-                is_error = false, structured_output = reply, total_cost_usd = 0.01,
+                is_error = false,
+                structured_output = reply,
+                total_cost_usd = 0.01,
                 usage = new { input_tokens = 100, output_tokens = 10, cache_read_input_tokens = 0, cache_creation_input_tokens = 0 },
             }, JsonSerializerOptions.Web), ""));
         };
@@ -331,6 +333,6 @@ public class PortsTests : IAsyncDisposable
         Assert.True(PortCompat.Same("Fable II (himdo)", "Fable II"));
         Assert.False(PortCompat.Same("Halo 3", "Halo: Combat Evolved"));
         Assert.False(PortCompat.Same("Crackdown", "Crackdown 2"));
-        Assert.Equal(22, Ports.Extras("2026-01-01").Count);
+        Assert.Equal(23, Ports.Extras("2026-01-01").Count);
     }
 }
