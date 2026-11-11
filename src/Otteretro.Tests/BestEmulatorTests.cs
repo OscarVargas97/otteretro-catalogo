@@ -26,7 +26,8 @@ public class BestEmulatorTests : IAsyncDisposable
                 """);
             void Add(string id, string console) => c.Execute("INSERT INTO recipe (id, kind, json) VALUES (@id, 'emulator', @json)", new
             {
-                id, json = $$"""{ "id": "{{id}}", "name": "{{id}}", "kind": "emulator", "folder": "{{id}}", "detect": "{{id}}.exe", "consoles": ["{{console}}"], "updates": { "source": "github", "repo": "x/{{id}}" } }""",
+                id,
+                json = $$"""{ "id": "{{id}}", "name": "{{id}}", "kind": "emulator", "folder": "{{id}}", "detect": "{{id}}.exe", "consoles": ["{{console}}"], "updates": { "source": "github", "repo": "x/{{id}}" } }""",
             });
             Add("mgba", "gba");
             Add("pcsx2", "ps2");
