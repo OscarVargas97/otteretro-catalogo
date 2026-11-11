@@ -208,7 +208,7 @@
       "dueIn": "toca en {days, plural, one {# día} other {# días}}",
       "dueToday": "toca hoy",
       "lastRun": {"done": "{ago} · terminó bien", "error": "{ago} · con error", "canceled": "{ago} · cancelada"},
-      "pending": {"codes": "{count, plural, one {# versión sin código} other {# versiones sin código}}", "ports": "{count, plural, one {# port sin juego} other {# ports sin juego}}", "images": "{count, plural, one {# juego con imágenes incompletas} other {# juegos con imágenes incompletas}}", "translate": "{count, plural, one {# juego sin traducir} other {# juegos sin traducir}}", "iconic": "{count, plural, one {# saga por analizar} other {# sagas por analizar}}", "routes": "{count, plural, one {# saga sin rutas} other {# sagas sin rutas}}", "best": "{count, plural, one {# juego sin mejor versión} other {# juegos sin mejor versión}}", "emulators": "{count, plural, one {# en Revisar} other {# en Revisar}}"},
+      "pending": {"codes": "{count, plural, one {# versión sin código} other {# versiones sin código}}", "ports": "{count, plural, one {# port sin juego} other {# ports sin juego}}", "images": "{count, plural, one {# juego con imágenes incompletas} other {# juegos con imágenes incompletas}}", "translate": "{count, plural, one {# juego sin traducir} other {# juegos sin traducir}}", "iconic": "{count, plural, one {# saga por analizar} other {# sagas por analizar}}", "routes": "{count, plural, one {# saga sin rutas} other {# sagas sin rutas}}", "best": "{count, plural, one {# juego sin mejor versión} other {# juegos sin mejor versión}}", "emulators": "{count, plural, one {# aviso en Emuladores} other {# avisos en Emuladores}}"},
       "never": "Nunca corrió",
       "month": "este mes: {calls, plural, one {# llamada} other {# llamadas}} · {cost}",
       "covers": "{have} de {total} con portada",
@@ -445,8 +445,10 @@
     "tabs": { "emulator": "Emuladores", "port": "Ports", "complement": "Complementos", "tool": "Herramientas" },
     "noConsole": "Sin consola",
     "emptyTab": "No hay recetas de este tipo.",
+    "search": "Buscar por nombre, juego o repo",
+    "filter": { "unpublished": "Sin publicar", "notices": "Con aviso" },
     "card": {
-      "edit": "Editar", "duplicate": "Duplicar", "openRepo": "Abrir el repo", "discard": "Descartar cambios", "test": "Probar la descarga", "testing": "Descargando…",
+      "notice": "Aviso", "edit": "Editar", "duplicate": "Duplicar", "openRepo": "Abrir el repo", "discard": "Descartar cambios", "test": "Probar la descarga", "testing": "Descargando…",
       "discardConfirm": "¿Descartar lo no publicado de {id}? Vuelve a la de main; si no está en main, se borra de este catálogo.",
       "testResult": "{file} · {size} MB · versión {tag}", "testFound": "Detecta {detect} dentro del archivo.", "testNotFound": "No se encontró {detect} dentro del archivo.", "testUnknown": "No se puede mirar dentro de este archivo; se esperaba {detect}.", "copySuffix": "-copia", "copyName": "{name} (copia)", "latest": "Última release", "matches": "Calza", "noMatch": "No calza",
       "forkOf": "Fork de {name}", "forks": "Forks: {names}",
@@ -506,16 +508,18 @@
       "log": {
         "failed": "No se pudo revisar {repo}: {detail}",
         "rateLimited": "GitHub llegó a su límite de consultas: los forks que faltan se buscan la próxima vez.",
-        "done": "Listo: {updated} recetas con su release nueva, {problems} a Revisar y {forks} forks nuevos a Revisar.",
+        "done": "Listo: {updated} recetas con su release nueva, {problems} avisos en sus tarjetas y {forks} forks nuevos sin publicar en Emuladores.",
         "updated": "{recipe}: suma la release {tag}, sin publicar.",
-        "gone": "{recipe}: el repo {repo} ya no existe. Va a Revisar.",
-        "moved": "{recipe}: el repo {repo} se movió a {to}. Va a Revisar.",
-        "archived": "{recipe}: el repo {repo} está archivado. Va a Revisar.",
-        "noRelease": "{recipe}: {repo} no tiene releases. Va a Revisar.",
-        "noAsset": "{recipe}: ningún archivo de la release {tag} calza con {pattern}. Va a Revisar.",
+        "gone": "{recipe}: el repo {repo} ya no existe. Queda en su tarjeta.",
+        "moved": "{recipe}: el repo {repo} se movió a {to}. Queda en su tarjeta.",
+        "archived": "{recipe}: el repo {repo} está archivado. Queda en su tarjeta.",
+        "noRelease": "{recipe}: {repo} no tiene releases. Queda en su tarjeta.",
+        "noAsset": "{recipe}: ningún archivo de la release {tag} calza con {pattern}. Queda en su tarjeta.",
         "unreachable": "No se pudo leer {source}: se sigue con lo demás.",
         "rejected": "Descartado: {repo}. {reason}",
-        "candidate": "Posible fork de {recipe}: {repo}. Va a Revisar."
+        "candidate": "Posible fork de {recipe}: {repo}.",
+        "forkFailed": "No se pudo crear la receta del fork {repo}: queda descartado.",
+        "linux": "{recipe}: suma el archivo de Linux {file}, sin publicar."
       },
       "best": {
         "searching": "Claude busca el mejor emulador de {game} en {consoles, plural, one {# consola} other {# consolas}}",
@@ -873,6 +877,8 @@
     "ports": {
       "reading": "Bajando la lista de Recompendium",
       "compat": "Consultando la compatibilidad en los emuladores",
+      "compatProgress": "Compatibilidad · {console}: {done}/{total}",
+      "recipesProgress": "Buscando releases para crear recetas: {done}/{total}",
       "matching": "Cruzando los ports con los juegos",
       "recipes": "Buscando releases para crear recetas",
       "search": {
@@ -888,7 +894,7 @@
         "added": "Nuevo: {game} ({console}), {link}.",
         "rejected": "Descartado: {link}. {reason}",
         "search": "Listo: {added} ports nuevos y {rejected} descartados; {matched} de {total} con juego.",
-        "recipes": "Recetas de ports: {created} creadas, {added} nuevas en Revisar para elegir su archivo.",
+        "recipes": "Recetas de ports: {created} creadas, sin publicar en Emuladores.",
         "recipesLimited": "GitHub llegó a su límite de consultas: las releases que faltan se miran la próxima vez.",
         "recipeFailed": "No se pudo leer la release de {repo}: {detail}"
       }
@@ -1348,9 +1354,6 @@
       "doubtful": "Dudosas ({count})",
       "unidentified": "Sin identificar ({count})",
       "learnings": "Aprendizajes ({count})",
-      "forks": "Forks ({count})",
-      "ports": "Ports ({count})",
-      "recipes": "Recetas ({count})",
       "picks": "Emulador por juego ({count})"
     },
     "picksEmptyTitle": "Sin emuladores por revisar",
@@ -1358,29 +1361,17 @@
     "pick": {
       "noRecipe": "Sin receta: {repo}", "source": "Fuente", "accept": "Aceptar", "addRecipe": "Agregar la receta",
       "acceptHint": "Queda como el recomendado de la receta para este juego y consola, y sale de la que lo tenía. Sale con «Publicar todo».",
-      "addHint": "Este emulador no tiene receta: agrégala y luego acepta.", "dismiss": "Descartar"
-    },
-    "forksEmptyTitle": "Sin forks por revisar",
-    "forksEmptyText": "La tarea Emuladores deja aquí los forks que pasaron los filtros.",
-    "portsEmptyTitle": "Sin ports por revisar",
-    "portsEmptyText": "La tarea Emuladores deja aquí los ports de juegos que encontró.",
-    "port": { "release": "Release {tag}", "file": "Archivo", "accept": "Aceptar y crear la receta", "dismiss": "Descartar" },
-    "recipesEmptyTitle": "Sin avisos de recetas",
-    "recipesEmptyText": "La tarea Emuladores avisa aquí si el patrón de una receta no calza o su repo cambió.",
-    "fork": {
-      "of": "Fork de {recipe}", "stars": "{count} estrellas", "release": "Release {tag} con {file}", "isFork": "Fork en GitHub", "found": "Encontrado por {how}",
-      "recommended": "Recomendado para", "noRecommended": "Sin juegos recomendados todavía.", "claude": "Claude: {reason}",
-      "accept": "Aceptar y crear la receta", "reject": "Rechazar", "openRepo": "Abrir el repo"
+      "addHint": "Este emulador no tiene receta: agrégala y luego acepta.", "openRepo": "Abrir el repo", "dismiss": "Descartar"
     },
     "notice": {
-      "title": "{recipe}",
       "gone": "El repo {repo} ya no existe.",
       "moved": "El repo {repo} se movió a {to}.",
       "archived": "El repo {repo} está archivado.",
       "noRelease": "El repo {repo} no tiene releases.",
       "noAsset": "Ningún archivo de la release {tag} calza con {pattern}.",
+      "pickFile": "Elegir el archivo: la release {tag} trae varios sin uno claro ({files}).",
       "proposed": "Patrón propuesto: {pattern}",
-      "openEditor": "Abrir el editor", "dismiss": "Descartar el aviso"
+      "dismiss": "Descartar el aviso"
     },
     "pendingEmptyTitle": "Nada por aprobar",
     "pendingEmptyText": "Cuando Claude prepare rutas, lo icónico o la mejor versión de una saga, aparecerán aquí para que los apruebes.",
@@ -1396,6 +1387,8 @@
     },
     "approve": "Aprobar",
     "approveAll": "Aprobar todas ({count})",
+    "acceptAll": "Aceptar todo",
+    "acceptAllConfirm": "¿Aceptar todo? Por aprobar: {pending}. Emulador por juego (con receta): {picks}. Los archivos y los aprendizajes se ven uno a uno.",
     "approveAllConfirm": "¿Aprobar los {count} resultados por revisar? Se aplican como si aprobaras cada uno.",
     "groupHint": "{count, plural, one {# resultado} other {# resultados}} · ábrelo para verlos uno por uno",
     "reject": "Rechazar",

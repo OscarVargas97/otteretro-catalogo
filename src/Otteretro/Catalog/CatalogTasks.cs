@@ -118,11 +118,9 @@ public static class CatalogTasks
     /// Cuánto le falta a cada tarea con un pendiente contable (juegos, versiones, sagas o ports; 0 = al día), aparte de <see cref="List"/>
     /// porque recorre el catálogo (#83): la lista llega al instante y esto se pide al abrir y al terminar una tarea.
     /// </summary>
-    /// <remarks>portsReview: las recetas de ports que esperan en Revisar (#119), el «N en Revisar» de la tarea «Ports».</remarks>
     public static Dictionary<string, int> PendingCounts(Database db)
     {
         var counts = All.Where(t => t.Count is not null).ToDictionary(t => t.Id, t => t.Count!(db));
-        counts["portsReview"] = PortRecipes.Pending(db);
         return counts;
     }
 

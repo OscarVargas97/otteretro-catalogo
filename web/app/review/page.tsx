@@ -15,9 +15,10 @@ import { reviewQuery, sagaQuery } from "@/lib/queries";
 import { Cover, useConsoleName } from "@/components/Catalog";
 import { RecipeAdd } from "@/components/RecipeAdd";
 import { RecipeEditor } from "@/components/RecipeEditor";
-import type { EmulatorPick, FileReview, ForkCandidate, PortCandidate, LearningItem, LearningPage, ReviewItem, RecipeNotice, ReviewPage, SearchResults } from "@/lib/types";
+import type { EmulatorPick, FileReview, LearningItem, LearningPage, ReviewItem, ReviewPage, SearchResults } from "@/lib/types";
 
-const TABS = ["pending", "doubtful", "unidentified", "forks", "ports", "picks", "recipes", "learnings"] as const;
+// Forks, ports y avisos de recetas viven en Emuladores (#153).
+const TABS = ["pending", "doubtful", "unidentified", "picks", "learnings"] as const;
 type Tab = (typeof TABS)[number];
 
 // Lo que trae cada resultado de Claude (F2.5): la forma depende del prompt.
@@ -61,19 +62,25 @@ function Review() {
 
   if (page.isError) return <div className="content"><p className="error" role="alert">{describe(page.error)}</p></div>;
   if (!page.data) return <div className="content" aria-busy="true"><Panels count={3} /></div>;
-  const { pending, activeLearnings, files, forks, ports, notices, picks } = page.data;
+  const { pending, activeLearnings, files, picks } = page.data;
   const pendingItem = (item: ReviewItem) => (
     <Pending key={item.id} item={item} busy={act.isPending}
       approve={(routes) => act.mutate(routes ? { path: `/api/review/${item.id}/approve-edited`, body: { routes } } : { path: `/api/review/${item.id}/approve` })}
       reject={() => act.mutate({ path: `/api/review/${item.id}/reject` })} />
   );
-  const count = (k: Tab) => k === "pending" ? pending.length : k === "learnings" ? Number(activeLearnings) : k === "forks" ? forks.length : k === "ports" ? ports.length : k === "picks" ? picks.length : k === "recipes" ? notices.length : files.filter((f) => f.kind === k).length;
+  const count = (k: Tab) => k === "pending" ? pending.length : k === "learnings" ? Number(activeLearnings) : k === "picks" ? picks.length : files.filter((f) => f.kind === k).length;
 
   return (
     <div className="content">
       <Tabs tabs={TABS.map((k) => ({ id: k, label: t(`tab.${k}`, { count: count(k) }) }))}
         current={tab} onSelect={(k) => setTab(k as Tab)} label={t("tabs")} panel="review-panel" />
       {act.error && <p className="error small" role="alert">{describe(act.error)}</p>}
+      {/* Aceptar todo (#153): lo de Claude y las recomendaciones de emulador con receta; los archivos y aprendizajes se ven uno a uno. */}
+      {pending.length + picks.length > 0 && <div className="hero-actions">
+        <button className="ot-btn" type="button" disabled={act.isPending}
+          onClick={() => confirm(t("acceptAllConfirm", { pending: pending.length, picks: picks.filter((p) => p.recipe).length })) && act.mutate({ path: "/api/review/accept-all" })}>
+          {t("acceptAll")}</button>
+      </div>}
       <div id="review-panel" role="tabpanel" aria-labelledby={`tab-${tab}`} style={{ display: "contents" }}>
 
       {tab === "pending" && (pending.length === 0
@@ -106,30 +113,15 @@ function Review() {
           <FileItem key={f.id} file={f} busy={act.isPending} resolve={(gameId) => act.mutate({ path: `/api/review/${f.id}/file`, body: { gameId } })} />
         )))}
 
-      {tab === "forks" && (forks.length === 0
-        ? <Empty title={t("forksEmptyTitle")} text={t("forksEmptyText")} />
-        : forks.map((f) => (
-          <Fork key={f.id} fork={f} busy={act.isPending}
-            accept={() => act.mutate({ path: `/api/review/${f.id}/fork/accept` })} reject={() => act.mutate({ path: `/api/review/${f.id}/dismiss` })} />
-        )))}
-
-      {tab === "ports" && (ports.length === 0
-        ? <Empty title={t("portsEmptyTitle")} text={t("portsEmptyText")} />
-        : ports.map((c) => (
-          <Port key={c.id} port={c} busy={act.isPending}
-            accept={(file) => act.mutate({ path: `/api/review/${c.id}/port/accept`, body: { file } })} reject={() => act.mutate({ path: `/api/review/${c.id}/port/dismiss` })} />
-        )))}
-
       {tab === "picks" && (picks.length === 0
         ? <Empty title={t("picksEmptyTitle")} text={t("picksEmptyText")} />
-        : picks.map((p) => (
+        : <>{picks.some((p) => p.recipe) && <div className="hero-actions">
+          <button className="ot-btn ot-btn-primary" type="button" disabled={act.isPending}
+            onClick={() => act.mutate({ path: "/api/review/accept-all?tab=picks" })}>{t("approveAll", { count: picks.filter((p) => p.recipe).length })}</button>
+        </div>}{picks.map((p) => (
           <Pick key={p.id} pick={p} busy={act.isPending}
             accept={() => act.mutate({ path: `/api/review/${p.id}/pick/accept` })} dismiss={() => act.mutate({ path: `/api/review/${p.id}/dismiss` })} />
-        )))}
-
-      {tab === "recipes" && (notices.length === 0
-        ? <Empty title={t("recipesEmptyTitle")} text={t("recipesEmptyText")} />
-        : notices.map((n) => <Notice key={n.id} notice={n} busy={act.isPending} dismiss={() => act.mutate({ path: `/api/review/${n.id}/dismiss` })} />))}
+        ))}</>)}
 
       {tab === "learnings" && <Learnings busy={act.isPending} undo={(id) => act.mutate({ path: `/api/learnings/${id}/undo` })}
         onCorrected={(data) => { cache.setQueryData(["review"], data); cache.invalidateQueries({ queryKey: ["learnings"] }); }} />}
@@ -319,60 +311,6 @@ function Learning({ l, busy, undo, onCorrected }: { l: LearningItem; busy: boole
   );
 }
 
-/** Un candidato de fork (#98): su repo, la receta original, por qué pasó los filtros y los juegos para los que se recomienda. */
-function Fork({ fork, busy, accept, reject }: { fork: ForkCandidate; busy: boolean; accept: () => void; reject: () => void }) {
-  const t = useTranslations("review");
-  return (
-    <section className="panel" style={{ display: "grid", gap: 6 }}>
-      <div className="sec-h">
-        <h2><a href={fork.url} target="_blank" rel="noreferrer">{fork.repo}</a></h2>
-        <span className="ot-badge ot-badge-info">{t("fork.of", { recipe: fork.recipeName || fork.recipe })}</span>
-      </div>
-      <span className="small">
-        {t("fork.stars", { count: fork.stars })} · {t("fork.release", { tag: fork.tag, file: fork.file })}{fork.isFork && ` · ${t("fork.isFork")}`}
-        {" · "}{t("fork.found", { how: fork.foundBy })}
-      </span>
-      {fork.reason && <span className="small muted">{t("fork.claude", { reason: fork.reason })}</span>}
-      {fork.recommendedFor.length === 0
-        ? <span className="small muted">{t("fork.noRecommended")}</span>
-        : <span className="small">{t("fork.recommended")}: {fork.recommendedFor.map((g, i) => (
-          <span key={i}>{i > 0 && " · "}{g.source?.startsWith("http") ? <a href={g.source} target="_blank" rel="noreferrer">{g.game}</a> : g.game}</span>
-        ))}</span>}
-      <div className="hero-actions">
-        <button className="ot-btn ot-btn-primary" type="button" disabled={busy} onClick={accept}>{t("fork.accept")}</button>
-        <button className="ot-btn" type="button" disabled={busy} onClick={reject}>{t("fork.reject")}</button>
-        <a className="ot-btn" href={fork.url} target="_blank" rel="noreferrer">{t("fork.openRepo")}</a>
-      </div>
-    </section>
-  );
-}
-
-/** Un candidato de port (#118): el juego, el proyecto y su release; con varios archivos se elige cuál antes de aceptar. */
-function Port({ port, busy, accept, reject }: { port: PortCandidate; busy: boolean; accept: (file?: string) => void; reject: () => void }) {
-  const t = useTranslations("review");
-  const consoleName = useConsoleName();
-  const [file, setFile] = useState(port.files[0] ?? "");
-  return (
-    <section className="panel" style={{ display: "grid", gap: 6 }}>
-      <div className="sec-h">
-        <h2><a href={port.url} target="_blank" rel="noreferrer">{port.project}</a></h2>
-        <span className="ot-badge ot-badge-info">{port.game} · {consoleName(port.console)}</span>
-      </div>
-      <span className="small">{t("port.release", { tag: port.tag })}{port.publishedAt && ` · ${port.publishedAt.slice(0, 10)}`}</span>
-      {port.files.length > 1
-        ? <label className="small">{t("port.file")} <select value={file} onChange={(e) => setFile(e.target.value)}>
-          {port.files.map((f) => <option key={f} value={f}>{f}</option>)}
-        </select></label>
-        : <span className="small muted">{port.files[0]}</span>}
-      <div className="hero-actions">
-        <button className="ot-btn ot-btn-primary" type="button" disabled={busy} onClick={() => accept(file || undefined)}>{t("port.accept")}</button>
-        <button className="ot-btn" type="button" disabled={busy} onClick={reject}>{t("port.dismiss")}</button>
-        <a className="ot-btn" href={port.url} target="_blank" rel="noreferrer">{t("fork.openRepo")}</a>
-      </div>
-    </section>
-  );
-}
-
 /**
  * Una recomendación de «Mejor emulador» (#131): receta, juego, consola, fuente y motivo. Sin receta, «Agregar la receta» abre «Agregar una
  * receta» (decisión 367) con el repo puesto; al guardarla, la recomendación la encuentra por su repo y ya se puede aceptar.
@@ -397,26 +335,10 @@ function Pick({ pick, busy, accept, dismiss }: { pick: EmulatorPick; busy: boole
           ? <button className="ot-btn ot-btn-primary" type="button" disabled={busy} onClick={accept}>{t("pick.accept")}</button>
           : <button className="ot-btn ot-btn-primary" type="button" disabled={adding || !!draft} onClick={() => setAdding(true)}>{t("pick.addRecipe")}</button>}
         <button className="ot-btn" type="button" disabled={busy} onClick={dismiss}>{t("pick.dismiss")}</button>
-        {pick.repo && <a className="ot-btn" href={pick.repo} target="_blank" rel="noreferrer">{t("fork.openRepo")}</a>}
+        {pick.repo && <a className="ot-btn" href={pick.repo} target="_blank" rel="noreferrer">{t("pick.openRepo")}</a>}
       </div>
       {adding && <RecipeAdd repo={pick.repo ?? ""} onDraft={(r) => { setAdding(false); setDraft(r); }} onCancel={() => setAdding(false)} />}
       {draft && <RecipeEditor recipe={draft} create onDone={() => { setDraft(null); cache.invalidateQueries({ queryKey: ["review"] }); }} />}
-    </section>
-  );
-}
-
-/** Un aviso de receta (#98): el motivo y abrir el editor de la receta o descartar el aviso. */
-function Notice({ notice, busy, dismiss }: { notice: RecipeNotice; busy: boolean; dismiss: () => void }) {
-  const t = useTranslations("review");
-  return (
-    <section className="panel" style={{ display: "grid", gap: 6 }}>
-      <h2>{notice.recipeName || notice.recipe}</h2>
-      <span className="small">{t(`notice.${notice.reason as "gone"}`, { repo: notice.repo, to: notice.to ?? "", tag: notice.tag ?? "", pattern: notice.pattern ?? "" })}</span>
-      {notice.proposed && <span className="small muted">{t("notice.proposed", { pattern: notice.proposed })}</span>}
-      <div className="hero-actions">
-        <Link className="ot-btn ot-btn-primary" href={`/emulators/?edit=${encodeURIComponent(notice.recipe)}`}>{t("notice.openEditor")}</Link>
-        <button className="ot-btn" type="button" disabled={busy} onClick={dismiss}>{t("notice.dismiss")}</button>
-      </div>
     </section>
   );
 }

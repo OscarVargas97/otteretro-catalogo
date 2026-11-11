@@ -23,7 +23,7 @@ public record CorrectRequest(string Note);
 /// <param name="Files">Archivos en Dudosas y Sin identificar (#181).</param>
 /// <param name="Forks">Candidatos de fork de la tarea «Emuladores» (#98).</param>
 /// <param name="Notices">Avisos de recetas de la misma tarea (#98).</param>
-public record ReviewPage(List<ReviewItem> Pending, int ActiveLearnings, List<FileReview> Files, List<ForkCandidate> Forks, List<RecipeNotice> Notices, List<PortCandidate> Ports, List<EmulatorPick> Picks);
+public record ReviewPage(List<ReviewItem> Pending, int ActiveLearnings, List<FileReview> Files, List<EmulatorPick> Picks);
 
 /// <param name="Kind">doubtful (Claude lo asignó) o unidentified.</param>
 /// <param name="Proposed">El nombre que dio Claude, si dio uno.</param>
@@ -85,7 +85,7 @@ public static class ClaudeReview
             return new FileReview(r.Id, r.Kind, r.SourceId, Path.Combine(r.Root, r.Relative), r.Console, r.Component, r.TitleId, Text("name"), Text("reason"),
                 r.GameId, r.GameName);
         }).ToList();
-        return new ReviewPage(pending, c.ExecuteScalar<int>("SELECT count(*) FROM learning WHERE undone = 0"), files, EmulatorReview.Forks(db), EmulatorReview.Notices(db), PortRecipes.List(db), EmulatorReview.Picks(db));
+        return new ReviewPage(pending, c.ExecuteScalar<int>("SELECT count(*) FROM learning WHERE undone = 0"), files, EmulatorReview.Picks(db));
     }
 
     /// <summary>
@@ -250,6 +250,19 @@ public static class ClaudeReview
                   AND (@prompt IS NULL OR json_extract(data, '$.prompt') = @prompt) ORDER BY id
                 """, new { prompt }).ToList();
         return ids.Count(id => Approve(db, id));
+    }
+
+    /// <summary>
+    /// «Aceptar todo» (otteretro-catalogo#153): <paramref name="tab"/> pending o picks, o null para las dos. Las recomendaciones sin receta
+    /// (solo un repo) quedan: primero hay que agregar la receta. Cuántas aceptó.
+    /// </summary>
+    public static async Task<int> AcceptAll(Database db, string? tab, string? token, CancellationToken ct)
+    {
+        var count = tab is null or "pending" ? ApproveAll(db, null) : 0;
+        if (tab is null or "picks")
+            foreach (var pick in EmulatorReview.Picks(db).Where(p => p.Recipe is not null))
+                if (await EmulatorReview.AcceptPick(db, pick.Id, token, ct) is (true, null)) count++;
+        return count;
     }
 
     static IEnumerable<SagaAnalysis.Route> Edited(List<SagaAnalysis.Route> proposed, List<SagaAnalysis.Route> edited) =>

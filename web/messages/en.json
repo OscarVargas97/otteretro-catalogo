@@ -208,7 +208,7 @@
       "dueIn": "due in {days, plural, one {# day} other {# days}}",
       "dueToday": "due today",
       "lastRun": {"done": "{ago} · finished fine", "error": "{ago} · failed", "canceled": "{ago} · canceled"},
-      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}", "emulators": "{count, plural, one {# in Review} other {# in Review}}"},
+      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}", "emulators": "{count, plural, one {# notice in Emulators} other {# notices in Emulators}}"},
       "never": "Never ran",
       "month": "this month: {calls, plural, one {# call} other {# calls}} · {cost}",
       "covers": "{have} of {total} with a cover",
@@ -445,8 +445,10 @@
     "tabs": { "emulator": "Emulators", "port": "Ports", "complement": "Add-ons", "tool": "Tools" },
     "noConsole": "No console",
     "emptyTab": "There are no recipes of this type.",
+    "search": "Search by name, game or repo",
+    "filter": { "unpublished": "Unpublished", "notices": "With a notice" },
     "card": {
-      "edit": "Edit", "duplicate": "Duplicate", "openRepo": "Open the repo", "discard": "Discard changes", "test": "Test the download", "testing": "Downloading…",
+      "notice": "Notice", "edit": "Edit", "duplicate": "Duplicate", "openRepo": "Open the repo", "discard": "Discard changes", "test": "Test the download", "testing": "Downloading…",
       "discardConfirm": "Discard what is unpublished in {id}? It goes back to main's; if it is not in main, it is deleted from this catalog.",
       "testResult": "{file} · {size} MB · version {tag}", "testFound": "Detects {detect} inside the file.", "testNotFound": "{detect} was not found inside the file.", "testUnknown": "Cannot look inside this file; {detect} was expected.", "copySuffix": "-copy", "copyName": "{name} (copy)", "latest": "Latest release", "matches": "Matches", "noMatch": "No match",
       "forkOf": "Fork of {name}", "forks": "Forks: {names}",
@@ -506,16 +508,18 @@
       "log": {
         "failed": "Could not check {repo}: {detail}",
         "rateLimited": "GitHub hit its rate limit: the remaining forks will be searched next time.",
-        "done": "Done: {updated} recipes with their new release, {problems} sent to Review and {forks} new forks sent to Review.",
+        "done": "Done: {updated} recipes with their new release, {problems} notices on their cards and {forks} new unpublished forks in Emulators.",
         "updated": "{recipe}: adds release {tag}, unpublished.",
-        "gone": "{recipe}: the repo {repo} no longer exists. Sent to Review.",
-        "moved": "{recipe}: the repo {repo} moved to {to}. Sent to Review.",
-        "archived": "{recipe}: the repo {repo} is archived. Sent to Review.",
-        "noRelease": "{recipe}: {repo} has no releases. Sent to Review.",
-        "noAsset": "{recipe}: no file in release {tag} matches {pattern}. Sent to Review.",
+        "gone": "{recipe}: the repo {repo} no longer exists. Shown on its card.",
+        "moved": "{recipe}: the repo {repo} moved to {to}. Shown on its card.",
+        "archived": "{recipe}: the repo {repo} is archived. Shown on its card.",
+        "noRelease": "{recipe}: {repo} has no releases. Shown on its card.",
+        "noAsset": "{recipe}: no file in release {tag} matches {pattern}. Shown on its card.",
         "unreachable": "Could not read {source}: moving on.",
         "rejected": "Discarded: {repo}. {reason}",
-        "candidate": "Possible fork of {recipe}: {repo}. Sent to Review."
+        "candidate": "Possible fork of {recipe}: {repo}.",
+        "forkFailed": "Could not create the recipe for fork {repo}: it is discarded.",
+        "linux": "{recipe}: adds the Linux file {file}, unpublished."
       },
       "best": {
         "searching": "Claude is looking for the best emulator for {game} on {consoles, plural, one {# console} other {# consoles}}",
@@ -873,6 +877,8 @@
     "ports": {
       "reading": "Downloading the Recompendium list",
       "compat": "Checking emulator compatibility",
+      "compatProgress": "Compatibility · {console}: {done}/{total}",
+      "recipesProgress": "Looking for releases to create recipes: {done}/{total}",
       "matching": "Matching ports with games",
       "recipes": "Looking for releases to create recipes",
       "search": {
@@ -888,7 +894,7 @@
         "added": "New: {game} ({console}), {link}.",
         "rejected": "Rejected: {link}. {reason}",
         "search": "Done: {added} new ports and {rejected} rejected; {matched} of {total} with a game.",
-        "recipes": "Port recipes: {created} created, {added} new in Review to pick their file.",
+        "recipes": "Port recipes: {created} created, unpublished in Emulators.",
         "recipesLimited": "GitHub reached its request limit: the missing releases are checked next time.",
         "recipeFailed": "Could not read the release of {repo}: {detail}"
       }
@@ -1348,9 +1354,6 @@
       "doubtful": "Doubtful ({count})",
       "unidentified": "Unidentified ({count})",
       "learnings": "Learnings ({count})",
-      "forks": "Forks ({count})",
-      "ports": "Ports ({count})",
-      "recipes": "Recipes ({count})",
       "picks": "Emulator per game ({count})"
     },
     "picksEmptyTitle": "No emulators to review",
@@ -1358,29 +1361,17 @@
     "pick": {
       "noRecipe": "No recipe: {repo}", "source": "Source", "accept": "Accept", "addRecipe": "Add the recipe",
       "acceptHint": "It becomes the recipe's recommendation for this game and console, and leaves the one that had it. It goes out with «Publish all».",
-      "addHint": "This emulator has no recipe: add it, then accept.", "dismiss": "Dismiss"
-    },
-    "forksEmptyTitle": "No forks to review",
-    "forksEmptyText": "The Emulators task leaves here the forks that passed the filters.",
-    "portsEmptyTitle": "No ports to review",
-    "portsEmptyText": "The Emulators task leaves here the game ports it found.",
-    "port": { "release": "Release {tag}", "file": "File", "accept": "Accept and create the recipe", "dismiss": "Dismiss" },
-    "recipesEmptyTitle": "No recipe notices",
-    "recipesEmptyText": "The Emulators task warns here when a recipe's pattern no longer matches or its repo changed.",
-    "fork": {
-      "of": "Fork of {recipe}", "stars": "{count} stars", "release": "Release {tag} with {file}", "isFork": "GitHub fork", "found": "Found by {how}",
-      "recommended": "Recommended for", "noRecommended": "No recommended games yet.", "claude": "Claude: {reason}",
-      "accept": "Accept and create the recipe", "reject": "Reject", "openRepo": "Open the repo"
+      "addHint": "This emulator has no recipe: add it, then accept.", "openRepo": "Open the repo", "dismiss": "Dismiss"
     },
     "notice": {
-      "title": "{recipe}",
       "gone": "The repo {repo} no longer exists.",
       "moved": "The repo {repo} moved to {to}.",
       "archived": "The repo {repo} is archived.",
       "noRelease": "The repo {repo} has no releases.",
       "noAsset": "No file in release {tag} matches {pattern}.",
+      "pickFile": "Pick the file: release {tag} has several and none is clear ({files}).",
       "proposed": "Suggested pattern: {pattern}",
-      "openEditor": "Open the editor", "dismiss": "Dismiss the notice"
+      "dismiss": "Dismiss the notice"
     },
     "pendingEmptyTitle": "Nothing to approve",
     "pendingEmptyText": "When Claude prepares a saga's routes, what's iconic or the best version, they'll show up here for you to approve.",
@@ -1396,6 +1387,8 @@
     },
     "approve": "Approve",
     "approveAll": "Approve all ({count})",
+    "acceptAll": "Accept all",
+    "acceptAllConfirm": "Accept all? To approve: {pending}. Emulator per game (with a recipe): {picks}. Files and learnings are reviewed one by one.",
     "approveAllConfirm": "Approve all {count} pending results? Each one is applied as if you approved it.",
     "groupHint": "{count, plural, one {# result} other {# results}} · open it to see them one by one",
     "reject": "Reject",

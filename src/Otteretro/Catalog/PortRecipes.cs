@@ -10,39 +10,24 @@ using Otteretro.Data;
 
 namespace Otteretro.Catalog;
 
-/// <summary>Un candidato de receta para un port (#119), como lo muestra Revisar › Ports (#120).</summary>
-/// <param name="Files">Los archivos de Windows de la release: con uno, la receta ya lo lleva; con varios, se elige uno al aceptar.</param>
-/// <param name="Recipe">La receta que se crearía (con el único archivo, o sin <c>asset</c> hasta elegir uno).</param>
-public record PortCandidate(long Id, long Port, string Game, string Project, string Console, string Url, string Tag, string? PublishedAt, List<string> Files,
-    string Recipe);
-
-/// <param name="File">El archivo de Windows elegido; hace falta si la release tiene varios.</param>
-public record AcceptPortRequest(string? File = null);
-
 /// <summary>
 /// Las recetas de los ports (#119, solicitud #118): un paso de la tarea «Ports», después del cruce y sin Claude. Cada port con
 /// juego cuyo enlace es un repo de GitHub o Forgejo pide su última release; con archivos de Windows, se crea su receta mínima
-/// (<c>kind: port</c>, su fila, fuente y patrón del archivo). A Revisar solo va la que no tiene un archivo claro. Lo visto queda en <c>port_recipe_seen</c>: lo
-/// resuelto en Revisar no vuelve y lo que no tiene archivo de Windows se vuelve a mirar cuando cambie su release. Un repo que ya es
-/// fuente de una receta no se propone.
+/// (<c>kind: port</c>, su fila, fuente y el patrón del archivo de cada sistema). Todo queda en Emuladores sin publicar
+/// (otteretro-catalogo#153): sin un archivo claro, la receta va sin él y con el aviso «Elegir el archivo» en su tarjeta. Lo visto queda en
+/// <c>port_recipe_seen</c>; lo que no tiene archivos de Windows ni de Linux se vuelve a mirar en cada pasada. Un repo que ya es fuente de una
+/// receta no se propone.
 /// </summary>
 public static class PortRecipes
 {
-    /// <summary>Lo que espera en Revisar: el «N en Revisar» de la tarea «Ports».</summary>
-    public static int Pending(Database db)
-    {
-        using var c = db.Open();
-        return c.ExecuteScalar<int>("SELECT count(*) FROM review_item WHERE entity = 'port' AND status = 'open'");
-    }
-
     record Data(long Port, string Game, string Project, string Console, string Folder, string Source, string? Host, string Repo, string Url, string Tag,
         string? PublishedAt, List<string> Files, string? Link = null);
 
     static string Key(string? host, string repo) => $"{host ?? "github.com"}/{repo}".ToLowerInvariant();
 
     /// <summary>
-    /// El paso de la tarea: crea la receta de cada port con una release de Windows. Solo va a Revisar el que tiene varios archivos sin uno
-    /// claro, o cuya receta no se pudo guardar. Antes convierte lo que ya esperaba en Revisar. Devuelve cuántas recetas creó.
+    /// El paso de la tarea: crea la receta de cada port con una release de Windows o de Linux. Antes convierte lo que esperaba en Revisar
+    /// (de antes de otteretro-catalogo#153). Devuelve cuántas recetas creó.
     /// </summary>
     public static async Task<int> Propose(TaskRun run, CancellationToken ct)
     {
@@ -51,7 +36,13 @@ public static class PortRecipes
         List<(long Id, string Data)> open;
         using (var c = db.Open()) open = c.Query<(long, string)>("SELECT id, data FROM review_item WHERE entity = 'port' AND status = 'open' ORDER BY id").ToList();
         foreach (var (id, json) in open)
-            if (Pick(Read(json).Files) is { } file && await Accept(db, id, file, ct) is (true, null)) created++;
+        {
+            var d = Read(json);
+            if (Ports.ByLink(db, d.Link ?? d.Url) is not null && await Create(db, d, d.Files, []) is null) created++;
+            using var c = db.Open();
+            c.Execute("UPDATE review_item SET status = 'approved' WHERE id = @id", new { id });
+            Seen(db, Key(d.Host, d.Repo), d.Tag, "accepted");
+        }
 
         var token = run.Credentials.Read("github.token") is { Length: > 0 } t ? t : null;
         HashSet<string> own, ownRepos; // los ports que ya tienen receta: por su enlace (#149) o, en una receta sin «port», por su repo
@@ -80,9 +71,10 @@ public static class PortRecipes
             .Where(x => !own.Contains(Ports.Key(x.p.Link)) && !ownRepos.Contains(x.key) && !(seen.TryGetValue(x.key, out var s) && s.Result != "noWindows"))
             .DistinctBy(x => x.key).ToList();
 
-        var added = 0;
+        var done = 0;
         foreach (var (p, source, repo, host, key) in todo)
         {
+            run.Report(97, ApiError.Of("ports.recipesProgress", ("done", (done++).ToString(CultureInfo.InvariantCulture)), ("total", todo.Count.ToString(CultureInfo.InvariantCulture))));
             Recipes.Release? latest;
             try
             {
@@ -99,37 +91,30 @@ public static class PortRecipes
                 run.Log(ApiError.Of("ports.log.recipeFailed", ("repo", repo), ("detail", e.Message)), "warn");
                 continue;
             }
-            var files = latest?.Assets.Where(EmulatorCheck.IsWindows).ToList() ?? [];
-            if (files.Count == 0)
+            var windows = latest?.Assets.Where(EmulatorCheck.IsWindows).ToList() ?? [];
+            var linux = latest?.Assets.Where(EmulatorCheck.IsLinux).ToList() ?? [];
+            if (windows.Count + linux.Count == 0)
             {
-                Seen(db, key, latest?.Tag, "noWindows");
+                Seen(db, key, latest?.Tag, "noWindows"); // shortcut: el nombre viene de antes de Linux; significa «sin archivos de PC»
                 continue;
             }
             var data = new Data(p.Id, p.Game, p.Project, p.Console, p.Folder, source, host, repo, $"https://{host ?? "github.com"}/{repo}", latest!.Tag,
-                latest.PublishedAt, files, p.Link);
-            if (Pick(files) is { } file)
+                latest.PublishedAt, windows, p.Link);
+            if (await Create(db, data, windows, linux) is { } error)
             {
-                if (await Create(db, data, file, ct) is not { } error)
-                {
-                    Seen(db, key, latest.Tag, "accepted");
-                    created++;
-                    continue;
-                }
                 run.Log(ApiError.Of("ports.log.recipeFailed", ("repo", repo), ("detail", error.Code)), "warn");
+                continue;
             }
-            using (var c = db.Open())
-                c.Execute("INSERT INTO review_item (kind, entity, entity_id, data, created_at) VALUES ('doubtful', 'port', @Port, @json, @now)",
-                    new { data.Port, json = JsonSerializer.Serialize(data, JsonSerializerOptions.Web), now = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture) });
-            Seen(db, key, latest.Tag, "review");
-            added++;
+            Seen(db, key, latest.Tag, "accepted");
+            created++;
         }
-        run.Log(ApiError.Of("ports.log.recipes", ("created", created.ToString(CultureInfo.InvariantCulture)), ("added", added.ToString(CultureInfo.InvariantCulture))));
+        run.Log(ApiError.Of("ports.log.recipes", ("created", created.ToString(CultureInfo.InvariantCulture))));
         return created;
     }
 
     /// <summary>
     /// El archivo de la receta: el único, o entre varios el de 64 bits que no sea de depuración ni símbolos. Null si sigue sin ser uno claro
-    /// (va a Revisar a elegirlo).
+    /// (la receta va sin él y con el aviso «Elegir el archivo»).
     /// </summary>
     internal static string? Pick(List<string> files)
     {
@@ -140,11 +125,27 @@ public static class PortRecipes
         return x64.Count == 1 ? x64[0] : null;
     }
 
-    // El archivo salió de la release recién leída: no hace falta volver a pedirla para validar el patrón.
-    static async Task<ApiError?> Create(Database db, Data d, string file, CancellationToken ct)
+    /// <summary>
+    /// Crea la receta con el archivo claro de cada sistema. Si de alguno hay varios sin uno claro, deja en su tarjeta el aviso «Elegir el
+    /// archivo» con todos los de la release (otteretro-catalogo#153). Los archivos salieron de la release recién leída: no se vuelve a pedir.
+    /// </summary>
+    static async Task<ApiError?> Create(Database db, Data d, List<string> windows, List<string> linux)
     {
         var newId = NewId(db, d.Project);
-        return await Recipes.Save(db, newId, Build(d, newId, file).ToJsonString(), true, null, ct, checkRelease: false);
+        var (win, lin) = (Pick(windows), Pick(linux));
+        if (await Recipes.Save(db, newId, Build(d, newId, win, lin).ToJsonString(), true, null, checkRelease: false) is { } error) return error;
+        if (windows.Count > 0 && win is null || linux.Count > 0 && lin is null)
+        {
+            var notice = new JsonObject
+            {
+                ["recipe"] = newId, ["reason"] = "pickFile", ["repo"] = d.Repo, ["tag"] = d.Tag,
+                ["files"] = new JsonArray([.. windows.Concat(linux).Select(f => JsonValue.Create(f))]),
+            };
+            using var c = db.Open();
+            c.Execute("INSERT INTO review_item (kind, entity, data, created_at) VALUES ('doubtful', 'recipe', @data, @now)",
+                new { data = notice.ToJsonString(), now = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture) });
+        }
+        return null;
     }
 
     static void Seen(Database db, string repo, string? tag, string result)
@@ -162,7 +163,7 @@ public static class PortRecipes
     /// La receta mínima: lo que se puede sacar del port y su release. El ejecutable es un supuesto (el archivo si es un .exe, si no el
     /// nombre del repo), como en «Crear desde su repo»; lo demás (partidas, opciones, <c>detect</c> real) se completa en el editor.
     /// </summary>
-    static JsonObject Build(Data d, string id, string? file)
+    static JsonObject Build(Data d, string id, string? file, string? linux)
     {
         var updates = new JsonObject { ["source"] = d.Source };
         if (d.Host is not null) updates["host"] = d.Host;
@@ -181,6 +182,7 @@ public static class PortRecipes
             ["updates"] = updates,
         };
         if (file is not null) r["asset"] = Recipes.AssetPattern(file);
+        if (linux is not null) r["assetLinux"] = Recipes.AssetPattern(linux);
         return r;
     }
 
@@ -191,51 +193,5 @@ public static class PortRecipes
         var id = slug;
         for (var n = 2; Recipes.Get(db, id) is not null; n++) id = $"{slug}-{n}";
         return id;
-    }
-
-    public static List<PortCandidate> List(Database db)
-    {
-        using var c = db.Open();
-        return c.Query<(long Id, string Data)>("SELECT id, data FROM review_item WHERE entity = 'port' AND status = 'open' ORDER BY id").Select(r =>
-        {
-            var d = Read(r.Data);
-            var recipe = Build(d, NewId(db, d.Project), d.Files.Count == 1 ? d.Files[0] : null).ToJsonString(Recipes.Indented).ReplaceLineEndings("\n");
-            return new PortCandidate(r.Id, d.Port, d.Game, d.Project, d.Console, d.Url, d.Tag, d.PublishedAt, d.Files, recipe);
-        }).ToList();
-    }
-
-    /// <summary>
-    /// Acepta un candidato: crea la receta experimental con el archivo elegido (o el único) y la guarda como cualquier receta (esquema y
-    /// una release que calce con el patrón). Found es false si el candidato no existe o ya se resolvió.
-    /// </summary>
-    public static async Task<(bool Found, ApiError? Error)> Accept(Database db, long id, string? file, CancellationToken ct = default)
-    {
-        string? json;
-        using (var c = db.Open())
-            json = c.ExecuteScalar<string?>("SELECT data FROM review_item WHERE id = @id AND entity = 'port' AND status = 'open'", new { id });
-        if (json is null) return (false, null);
-        var d = Read(json);
-        file ??= d.Files.Count == 1 ? d.Files[0] : null;
-        if (file is null || !d.Files.Contains(file)) return (true, ApiError.Of("review.chooseFile"));
-        if (await Create(db, d, file, ct) is { } error) return (true, error);
-        Resolve(db, id, d, "approved", "accepted");
-        return (true, null);
-    }
-
-    /// <summary>Descarta un candidato: queda visto y no vuelve a salir. False si no existe o ya se resolvió.</summary>
-    public static bool Dismiss(Database db, long id)
-    {
-        string? json;
-        using (var c = db.Open())
-            json = c.ExecuteScalar<string?>("SELECT data FROM review_item WHERE id = @id AND entity = 'port' AND status = 'open'", new { id });
-        if (json is null) return false;
-        Resolve(db, id, Read(json), "rejected", "rejected");
-        return true;
-    }
-
-    static void Resolve(Database db, long id, Data d, string status, string result)
-    {
-        using (var c = db.Open()) c.Execute("UPDATE review_item SET status = @status WHERE id = @id", new { id, status });
-        Seen(db, Key(d.Host, d.Repo), d.Tag, result);
     }
 }

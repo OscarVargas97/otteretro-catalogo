@@ -254,7 +254,7 @@ function TaskGroup({ claude }: { claude: boolean }) {
       <h2>{t(claude ? "groupClaude" : "groupScript")}</h2>
       {tasks.isError && <p className="error small" role="alert">{describe(tasks.error)}</p>}
       {list.map((task) => (
-        <TaskRow key={task.id} task={task} pendingCount={counts.data?.[task.id]} review={task.id === "ports" ? counts.data?.portsReview : undefined} busy={run.isPending}
+        <TaskRow key={task.id} task={task} pendingCount={counts.data?.[task.id]} busy={run.isPending}
           onAuto={(auto) => save.mutate({ id: task.id, auto })} onDays={(days) => save.mutate({ id: task.id, days })}
           onRun={(console) => run.mutate({ id: task.id, console })} />
       ))}
@@ -264,8 +264,8 @@ function TaskGroup({ claude }: { claude: boolean }) {
 }
 
 /** Una tarea: qué hace, si corre sola en el horario, su última ejecución, lo del mes y «Ejecutar». */
-function TaskRow({ task, pendingCount, review, busy, onAuto, onDays, onRun }: {
-  task: CatalogTaskInfo; pendingCount?: number | string; review?: number | string; busy: boolean; onAuto: (auto: boolean) => void; onDays: (days: number) => void; onRun: (console?: string) => void;
+function TaskRow({ task, pendingCount, busy, onAuto, onDays, onRun }: {
+  task: CatalogTaskInfo; pendingCount?: number | string; busy: boolean; onAuto: (auto: boolean) => void; onDays: (days: number) => void; onRun: (console?: string) => void;
 }) {
   const t = useTranslations("settings.claude");
   const ts = useTranslations("tasks.status");
@@ -284,7 +284,6 @@ function TaskRow({ task, pendingCount, review, busy, onAuto, onDays, onRun }: {
     ? (Number(pendingCount) > 0 ? t(`pending.${id as "translate"}`, { count: Number(pendingCount) }) : t("upToDate"))
     : task.days != null ? (due > 0 ? t("dueIn", { days: due }) : t("dueToday")) : null;
   // «Ports» suma sus recetas propuestas que esperan en Revisar (#119).
-  const leftAll = Number(review) > 0 ? `${left} · ${t("pending.emulators", { count: Number(review) })}` : left;
   const last = task.lastStatus == null || !task.lastAt ? t("never")
     : pending ? t("last", { status: ts(status!, { progress: "…" }), ago })
       : t(`lastRun.${(task.lastStatus === "done" ? "done" : task.lastStatus === "error" ? "error" : "canceled")}`, { ago });
@@ -295,7 +294,7 @@ function TaskRow({ task, pendingCount, review, busy, onAuto, onDays, onRun }: {
       <details style={{ flex: 1 }}>
         <summary>
           <strong>{t(`task.${id}.name`)}</strong> {task.model && <span className="ot-badge">{task.model}</span>}
-          {leftAll && <span className="small"> · {leftAll}</span>}
+          {left && <span className="small"> · {left}</span>}
           <span className={`small ${task.lastStatus === "error" ? "error" : "muted"}`}> · {last}</span>
         </summary>
         <p className="small muted" style={{ margin: "2px 0" }}>{t(`task.${id}.text`)}</p>

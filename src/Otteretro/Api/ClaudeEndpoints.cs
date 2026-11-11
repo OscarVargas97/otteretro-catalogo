@@ -52,12 +52,12 @@ public static class ClaudeEndpoints
         api.MapPost("/review/{id:long}/reject", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : ClaudeReview.Reject(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
 
-        // Forks y avisos de recetas (#98): aceptar crea la receta del fork; rechazar o descartar lo marca resuelto.
-        api.MapPost("/review/{id:long}/fork/accept", async Task<Results<Ok<ReviewPage>, NotFound, BadRequest<ApiError>, Conflict<ApiError>>> (long id, AppSession s, SecretBox box, CancellationToken ct) =>
+        // «Aceptar todo» (otteretro-catalogo#153): tab pending o picks, o sin tab para las dos.
+        api.MapPost("/review/accept-all", async Task<Results<Ok<ReviewPage>, Conflict<ApiError>>> (AppSession s, SecretBox box, string? tab, CancellationToken ct) =>
         {
             if (Db(s) is not { } db) return NoData();
-            var (found, error) = await EmulatorReview.Accept(db, id, GitHubToken(db, s, box), ct);
-            return !found ? TypedResults.NotFound() : error is not null ? TypedResults.BadRequest(error) : TypedResults.Ok(ClaudeReview.Page(db));
+            await ClaudeReview.AcceptAll(db, tab, GitHubToken(db, s, box), ct);
+            return TypedResults.Ok(ClaudeReview.Page(db));
         });
 
         // «Emulador por juego» (#131): aceptar lo deja como el recomendado de la receta; descartar usa /dismiss.
@@ -68,19 +68,9 @@ public static class ClaudeEndpoints
             return !found ? TypedResults.NotFound() : error is not null ? TypedResults.BadRequest(error) : TypedResults.Ok(ClaudeReview.Page(db));
         });
 
+        // Descartar una recomendación, o un aviso desde la tarjeta de su receta en Emuladores (otteretro-catalogo#153).
         api.MapPost("/review/{id:long}/dismiss", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : EmulatorReview.Dismiss(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
-
-        // Recetas de ports sin un archivo claro (#119, #120): aceptar crea la receta experimental con el archivo elegido; descartar la deja vista.
-        api.MapPost("/review/{id:long}/port/accept", async Task<Results<Ok<ReviewPage>, NotFound, BadRequest<ApiError>, Conflict<ApiError>>> (long id, AcceptPortRequest request, AppSession s, CancellationToken ct) =>
-        {
-            if (Db(s) is not { } db) return NoData();
-            var (found, error) = await PortRecipes.Accept(db, id, request.File, ct);
-            return !found ? TypedResults.NotFound() : error is not null ? TypedResults.BadRequest(error) : TypedResults.Ok(ClaudeReview.Page(db));
-        });
-
-        api.MapPost("/review/{id:long}/port/dismiss", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
-            Db(s) is not { } db ? NoData() : PortRecipes.Dismiss(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
 
         api.MapPost("/learnings/{id:long}/undo", Results<Ok<ReviewPage>, NotFound, Conflict<ApiError>> (long id, AppSession s) =>
             Db(s) is not { } db ? NoData() : CatalogCleanup.Undo(db, id) ? TypedResults.Ok(ClaudeReview.Page(db)) : TypedResults.NotFound());
