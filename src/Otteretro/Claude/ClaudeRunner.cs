@@ -72,7 +72,7 @@ public static class ClaudeRunner
             CreateNoWindow = true,
         };
         foreach (var arg in (string[])["-p", prompt, "--output-format", "json", "--json-schema", Schema<T>(),
-                     "--restricted", "--tools", Tools, "--strict-mcp-config", "--no-session-persistence"])
+                     "--restricted", "--tools", Tools, "--allowedTools", Tools, "--strict-mcp-config", "--no-session-persistence"])
             start.ArgumentList.Add(arg);
         if (model is not null)
         {

@@ -88,6 +88,7 @@ public class ClaudeRunnerTests : IDisposable
         Assert.Equal("Duplica n.", args[args.IndexOf("-p") + 1]);
         Assert.Equal(ClaudeRunner.Tools, args[args.IndexOf("--tools") + 1]); // solo búsqueda y lectura web
         Assert.Contains("--restricted", args);
+        Assert.Equal("WebSearch,WebFetch", args[args.IndexOf("--allowedTools") + 1]); // con --restricted no hay permisos del usuario: sin esto se niegan
         Assert.Equal("haiku", args[args.IndexOf("--model") + 1]);
         var schema = JsonDocument.Parse(args[args.IndexOf("--json-schema") + 1]).RootElement;
         Assert.Equal(["value", "note"], schema.GetProperty("required").EnumerateArray().Select(e => e.GetString()));
