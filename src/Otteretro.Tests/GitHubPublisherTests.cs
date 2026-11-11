@@ -372,6 +372,11 @@ public class GitHubPublisherTests
         Assert.Equal(2, github.Calls.Count(c => c == $"POST repos/{Repo}/git/trees"));
         Assert.Contains($"GET repos/{Repo}/git/ref/heads/catalogo/todo", github.Calls);
         Assert.Contains($"POST repos/{Repo}/pulls", github.Calls);
+
+        // #146: la tanda también se corta por tamaño; con un tope mínimo, cada archivo va en su propio pedido.
+        github.Calls.Clear();
+        await new GitHubPublisher(f.Db, "secreto", github) { Work = publisher.Work, TreeBytes = 1 }.Publish(new("all", 0));
+        Assert.Equal(251, github.Calls.Count(c => c == $"POST repos/{Repo}/git/trees"));
     }
 
     /// <summary>#85: lo aceptado en Revisar (rutas, icónico, mejor versión, traducción) y un port asignado a mano salen en lo publicado.</summary>
