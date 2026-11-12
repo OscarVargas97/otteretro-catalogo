@@ -12,5 +12,13 @@
     "repo": "JFryy/reshadowtower"
   },
   "asset": "^ReShadowTower-[0-9.]+-windows-x64-setup\\.exe$",
-  "assetLinux": "^ReShadowTower-[0-9.]+-x86_64\\.AppImage$"
+  "assetLinux": "^ReShadowTower-[0-9.]+-x86_64\\.AppImage$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }

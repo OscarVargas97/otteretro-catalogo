@@ -12,5 +12,13 @@
     "repo": "FH1-ReImagined/ForzaHorizon1-ReImagined"
   },
   "asset": "^ForzaHorizon1-ReImagined-Setup-[0-9.]+\\.exe$",
-  "assetLinux": "^ForzaHorizon1-ReImagined-linux-x86_64\\.tar\\.gz$"
+  "assetLinux": "^ForzaHorizon1-ReImagined-linux-x86_64\\.tar\\.gz$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }

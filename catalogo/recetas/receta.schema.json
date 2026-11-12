@@ -151,6 +151,7 @@
         "keys": { "type": "array", "items": { "type": "string" }, "description": "Claves de perGame.config que eligen el perfil o guardan los mandos" }
       }
     },
+    "installer": { "type": "array", "items": { "type": "string" }, "description": "Si lo bajado es un instalador: los argumentos para instalar sin preguntar, con {dir} donde va la carpeta de destino (otteretro#443)" },
     "saveAs": { "type": "string", "description": "Si lo bajado no es un zip (un .exe con la versión en el nombre), con qué nombre se guarda en la instalación: el de detect (#268)" },
     "downloads": {
       "type": "array", "description": "Por versión y sistema: URL y hash SRI (Nix las arma en PlayOS; Otteretro las descarga en Windows, F5)",
