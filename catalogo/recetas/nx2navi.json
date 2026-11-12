@@ -10,6 +10,7 @@
     "source": "github",
     "repo": "tangerineturtle1/NX2navi"
   },
-  "asset": "^NX2navi-app-[0-9.]+\\.zip$",
+  "asset": "^NX2navi-Setup-[0-9.]+\\.exe$",
+  "installer": ["--dest", "{dir}", "--no-shortcuts", "--no-launch", "--quiet"],
   "assetLinux": "^NX2navi-Linux-[0-9.]+-x86_64\\.AppImage$"
 }
