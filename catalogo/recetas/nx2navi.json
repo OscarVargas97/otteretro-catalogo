@@ -12,5 +12,6 @@
   },
   "asset": "^NX2navi-Setup-[0-9.]+\\.exe$",
   "installer": ["--dest", "{dir}", "--no-shortcuts", "--no-launch", "--quiet"],
-  "assetLinux": "^NX2navi-Linux-[0-9.]+-x86_64\\.AppImage$"
+  "assetLinux": "^NX2navi-Linux-[0-9.]+-x86_64\\.AppImage$",
+  "gameFile": { "deliver": "arg", "args": ["--from", "{romDir}"], "formats": ["nup"] }
 }

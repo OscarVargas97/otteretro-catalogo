@@ -95,6 +95,16 @@
     },
     "asset": { "type": "string", "format": "regex", "description": "El archivo de Windows de cada release de updates (expresión regular sobre su nombre)" },
     "assetLinux": { "type": "string", "format": "regex", "description": "El archivo de Linux de cada release de updates (expresión regular sobre su nombre), para PlayOS (#153)" },
+    "gameFile": {
+      "type": "object", "additionalProperties": false, "required": ["deliver"],
+      "description": "Solo ports: cómo recibe el archivo del juego (otteretro#449, #182). Sin esto, la persona lo elige en el port",
+      "properties": {
+        "deliver": { "enum": ["arg", "copy", "none", "manual"], "description": "arg: en args; copy: copiado a copyTo; none: no lo necesita; manual: lo pide el port" },
+        "args": { "type": "array", "items": { "type": "string" }, "description": "Con arg: los argumentos, con {rom} (el archivo) y {romDir} (su carpeta)" },
+        "copyTo": { "type": "string", "description": "Con copy: dónde, relativo a la instalación. Nunca pisa lo que ya está" },
+        "formats": { "type": "array", "items": { "type": "string" }, "description": "Extensiones que acepta, sin punto" }
+      }
+    },
     "perGame": {
       "type": "object", "additionalProperties": false,
       "description": "Lo de un juego (perfiles, decisión 286). Plantillas: {titleId}, {serial}, {crc}, {gameId}, {rom} (nombre de la ROM sin extensión), {game} (carpeta del juego) y, en args, {config}",
