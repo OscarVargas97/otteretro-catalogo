@@ -13,7 +13,7 @@
     "saga": "Saga",
     "game": "Juego",
     "review": "Revisar",
-    "emulators": "Emuladores",
+    "emulators": "Programas",
     "settings": "Ajustes",
     "pending": "{count, plural, one {# por revisar} other {# por revisar}}",
     "comingIn": "Llega en la fase {phase}",
@@ -209,7 +209,7 @@
       "dueIn": "toca en {days, plural, one {# día} other {# días}}",
       "dueToday": "toca hoy",
       "lastRun": {"done": "{ago} · terminó bien", "error": "{ago} · con error", "canceled": "{ago} · cancelada"},
-      "pending": {"codes": "{count, plural, one {# versión sin código} other {# versiones sin código}}", "ports": "{count, plural, one {# port sin juego} other {# ports sin juego}}", "images": "{count, plural, one {# juego con imágenes incompletas} other {# juegos con imágenes incompletas}}", "translate": "{count, plural, one {# juego sin traducir} other {# juegos sin traducir}}", "iconic": "{count, plural, one {# saga por analizar} other {# sagas por analizar}}", "routes": "{count, plural, one {# saga sin rutas} other {# sagas sin rutas}}", "best": "{count, plural, one {# juego sin mejor versión} other {# juegos sin mejor versión}}", "emulators": "{count, plural, one {# aviso en Emuladores} other {# avisos en Emuladores}}"},
+      "pending": {"codes": "{count, plural, one {# versión sin código} other {# versiones sin código}}", "ports": "{count, plural, one {# port sin juego} other {# ports sin juego}}", "images": "{count, plural, one {# juego con imágenes incompletas} other {# juegos con imágenes incompletas}}", "translate": "{count, plural, one {# juego sin traducir} other {# juegos sin traducir}}", "iconic": "{count, plural, one {# saga por analizar} other {# sagas por analizar}}", "routes": "{count, plural, one {# saga sin rutas} other {# sagas sin rutas}}", "best": "{count, plural, one {# juego sin mejor versión} other {# juegos sin mejor versión}}", "emulators": "{count, plural, one {# aviso en Programas} other {# avisos en Programas}}"},
       "never": "Nunca corrió",
       "month": "este mes: {calls, plural, one {# llamada} other {# llamadas}} · {cost}",
       "covers": "{have} de {total} con portada",
@@ -262,7 +262,7 @@
         },
         "emulators": {
           "name": "Emuladores",
-          "text": "Revisa cada receta: una release nueva que calza con su patrón se aplica sola y queda sin publicar; un patrón que ya no calza o un repo archivado, movido o desaparecido queda como aviso en Emuladores. Después busca forks (los del repo, por nombre en GitHub y en listas conocidas) y los filtra por API: release para Windows de los últimos 6 meses, commits propios y al menos 10 estrellas. Solo lo dudoso lo verifica Sonnet, una vez por repo; los que pasan quedan como recetas sin publicar."
+          "text": "Revisa cada receta: una release nueva que calza con su patrón se aplica sola y queda sin publicar; un patrón que ya no calza o un repo archivado, movido o desaparecido queda como aviso en Programas. Después busca forks (los del repo, por nombre en GitHub y en listas conocidas) y los filtra por API: release para Windows de los últimos 6 meses, commits propios y al menos 10 estrellas. Solo lo dudoso lo verifica Sonnet, una vez por repo; los que pasan quedan como recetas sin publicar."
         }
       },
       "ports": {
@@ -430,12 +430,50 @@
     },
     "withSystemBadge": "Con el sistema"
   },
+  "programs": {
+    "intro": "Todo lo que Otteretro sabe instalar: emuladores, ports, complementos y herramientas. Cada uno es una receta.",
+    "add": "+ Agregar",
+    "saved": "{name} guardado y validado. Ya aparece en Programas › {tab}, sin publicar.",
+    "shown": "Mostrando {shown} de {total}. Al bajar se cargan más.",
+    "col": { "name": "Nombre", "source": "Fuente", "state": "Estado" },
+    "kind": {
+      "port": { "column": "Juego", "search": "Buscar por juego o por nombre…", "help": "Un port es un juego rehecho para PC (recompilación, decompilación o remake de fans). Va ligado a un juego, no a una consola.", "desc": "Un juego rehecho para PC", "step": "Juego", "question": "¿Qué juego rehace?" },
+      "emulator": { "column": "Consola", "search": "Buscar por consola o por nombre…", "help": "Abren los juegos de una o varias consolas. Las versiones de otro autor (forks) se ven junto a su original.", "desc": "Abre juegos de una consola", "step": "Consolas", "question": "¿Qué consolas abre?" },
+      "complement": { "column": "Se suma a", "search": "Buscar…", "help": "Se instalan encima de otro programa: texturas, packs, parches.", "desc": "Texturas o packs para otro", "step": "Programa", "question": "¿A qué programa se suma?" },
+      "tool": { "column": "Sirve para", "search": "Buscar…", "help": "Programas que no abren juegos pero ayudan: llevar la biblioteca a Steam, convertir archivos, etc.", "desc": "Ayuda, pero no abre juegos", "step": "Uso", "question": "¿Para qué sirve?" }
+    },
+    "wizard": {
+      "steps": "Pasos",
+      "origin": "Origen",
+      "what": "¿Qué vas a agregar?",
+      "repo": "Enlace del repositorio o de la página de descargas",
+      "looking": "Buscando sus versiones…",
+      "found": "✓ Repositorio de {source} · última versión {tag}",
+      "noWindows": "Ninguna versión tiene un archivo para Windows.",
+      "file": "Archivo para Windows",
+      "fileMatches": "✓ coincide con {file}",
+      "fileHint": "Lo elegimos de la lista de archivos de la versión. Cámbialo solo si no es el correcto.",
+      "formats": "Los archivos que abre salen de la consola; no hace falta escribirlos.",
+      "pickConsole": "Elige al menos una.",
+      "gameSearch": "Buscar el juego en el catálogo",
+      "chosen": "Elegido",
+      "portHint": "Así la ficha del juego en Otteretro lo ofrece como forma de jugar.",
+      "parentSearch": "Buscar el programa",
+      "parentHint": "Se instala dentro de la carpeta de ese programa, después de él.",
+      "toolUse": "En una línea, ¿para qué sirve?",
+      "toolHint": "No abre juegos, así que no lleva consolas. Aparece en Otteretro › Herramientas.",
+      "review": "Revisa y guarda",
+      "download": "Descarga",
+      "more": "Más campos (opcional) · casi nunca hacen falta",
+      "back": "← Atrás",
+      "next": "Seguir →"
+    }
+  },
   "emulators": {
     "local": "local",
     "localHint": "Recetas de Otteretro de este equipo: Publicar las ofrece como un cambio.",
     "repoUrl": "Dirección del repo",
     "repoPlaceholder": "https://github.com/dueño/repo",
-    "fromRepo": "Agregar una receta",
     "addFind": "Buscar releases",
     "addPick": "Elige el archivo de Windows de una release: el patrón se arma con su nombre, cambiando la versión por un comodín.",
     "addWindows": "Windows",
@@ -445,14 +483,11 @@
     "addUseExe": "Usar este ejecutable",
     "addContinue": "Seguir sin elegir",
     "addNoDate": "Sin fecha",
-    "total": "{count, plural, one {# receta} other {# recetas}}",
     "empty": "Todavía no hay recetas en este catálogo.",
     "importMain": "Traer las recetas de main",
     "tabsLabel": "Tipos de receta",
     "tabs": { "emulator": "Emuladores", "port": "Ports", "complement": "Complementos", "tool": "Herramientas" },
-    "noConsole": "Sin consola",
     "emptyTab": "No hay recetas de este tipo.",
-    "search": "Buscar por nombre, juego o repo",
     "filter": { "unpublished": "Sin publicar", "notices": "Con aviso" },
     "card": {
       "notice": "Aviso", "edit": "Editar", "duplicate": "Duplicar", "openRepo": "Abrir el repo", "discard": "Descartar cambios", "test": "Probar la descarga", "testing": "Descargando…",
@@ -515,7 +550,7 @@
       "log": {
         "failed": "No se pudo revisar {repo}: {detail}",
         "rateLimited": "GitHub llegó a su límite de consultas: los forks que faltan se buscan la próxima vez.",
-        "done": "Listo: {updated} recetas con su release nueva, {problems} avisos en sus tarjetas y {forks} forks nuevos sin publicar en Emuladores.",
+        "done": "Listo: {updated} recetas con su release nueva, {problems} avisos en sus tarjetas y {forks} forks nuevos sin publicar en Programas.",
         "updated": "{recipe}: suma la release {tag}, sin publicar.",
         "gone": "{recipe}: el repo {repo} ya no existe. Queda en su tarjeta.",
         "moved": "{recipe}: el repo {repo} se movió a {to}. Queda en su tarjeta.",
@@ -909,7 +944,7 @@
         "added": "Nuevo: {game} ({console}), {link}.",
         "rejected": "Descartado: {link}. {reason}",
         "search": "Listo: {added} ports nuevos y {rejected} descartados; {matched} de {total} con juego.",
-        "recipes": "Recetas de ports: {created} creadas, sin publicar en Emuladores.",
+        "recipes": "Recetas de ports: {created} creadas, sin publicar en Programas.",
         "recipesLimited": "GitHub llegó a su límite de consultas: las releases que faltan se miran la próxima vez.",
         "recipeFailed": "No se pudo leer la release de {repo}: {detail}"
       }

@@ -140,6 +140,8 @@ test("una receta se edita por secciones, con chips y el JSON solo en la vista av
   const t = es.emulators;
 
   await page.goto(`${base()}/emulators/`);
+  await page.getByRole("tab", { name: new RegExp(`^${t.tabs.emulator}`) }).click();
+  await page.getByRole("button", { name: "Prueba", exact: true }).click();
   await page.getByRole("button", { name: t.card.edit }).click();
   await expect(page.getByRole("tab", { name: t.sections.basic })).toHaveAttribute("aria-selected", "true");
   await expect(page.getByLabel(t.field.name, { exact: true })).toHaveValue("Prueba");
@@ -160,6 +162,50 @@ test("una receta se edita por secciones, con chips y el JSON solo en la vista av
   const saved = db.prepare("SELECT json FROM recipe WHERE id = 'prueba'").get() as { json: string };
   db.close();
   expect(JSON.parse(saved.json).formats).toEqual(["sfc", "smc"]);
+});
+
+test("Programas: una pestaña por tipo y Agregar en 3 pasos, con el archivo detectado y los demás campos plegados (#166)", async () => {
+  const t = es.programs;
+  const e = es.emulators;
+  // Sin red: las releases, el borrador y el guardado (que mira la fuente en GitHub) se responden acá.
+  const files = [{ name: "azahar-2121-macos.zip", windows: false, pattern: "" }, { name: "azahar-2121-windows-msvc.zip", windows: true, pattern: "^azahar-[0-9.]+-windows-msvc\.zip$" }];
+  await page.route("**/api/recipes/releases?*", (r) => r.fulfill({ json: [{ tag: "2121", publishedAt: null, files }] }));
+  await page.route("**/api/recipes/draft", (r) => r.fulfill({ json: { json: JSON.stringify({ id: "azahar-e2e", name: "azahar", kind: "emulator", folder: "", detect: "azahar.exe", consoles: [], updates: { source: "github", repo: "azahar-emu/azahar" }, asset: "^azahar-[0-9.]+-windows-msvc\.zip$", file: JSON.parse(r.request().postData()!).file }) } }));
+  let saved: Record<string, unknown> | null = null;
+  await page.route("**/api/recipes/azahar-e2e?create=true", (r) => { saved = JSON.parse(JSON.parse(r.request().postData()!).json); return r.fulfill({ json: [] }); });
+
+  await page.goto(`${base()}/emulators/`);
+  await expect(page.locator(".top h1")).toHaveText(es.nav.emulators);
+  await expect(page.getByRole("tab")).toHaveCount(4);
+  await expect(page.getByRole("tab", { name: new RegExp(`^${e.tabs.port}`) })).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByText(e.emptyTab)).toBeVisible(); // sin ports en la base de prueba
+  await page.getByRole("tab", { name: new RegExp(`^${e.tabs.emulator}`) }).click();
+  await expect(page.getByRole("columnheader", { name: t.kind.emulator.column })).toBeVisible();
+
+  await page.getByRole("button", { name: t.add }).click();
+  await expect(page.getByRole("button", { name: new RegExp(e.kinds.emulator) })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByRole("button", { name: t.wizard.next })).toBeDisabled();
+  await page.getByLabel(t.wizard.repo).fill("https://github.com/azahar-emu/azahar");
+  await page.getByLabel(t.wizard.repo).press("Enter");
+  await expect(page.getByLabel(t.wizard.file)).toHaveValue("azahar-2121-windows-msvc.zip"); // el de Windows, solo
+  await page.getByLabel(e.field.name, { exact: true }).fill("Azahar");
+  await page.getByRole("button", { name: t.wizard.next }).click();
+
+  await expect(page.getByRole("heading", { name: t.kind.emulator.question })).toBeVisible();
+  await expect(page.getByRole("button", { name: t.wizard.next })).toBeDisabled();
+  await page.getByRole("group", { name: e.field.consoles }).getByRole("button").first().click();
+  await expect(page.getByText(t.wizard.formats)).toBeVisible();
+  await page.getByRole("button", { name: t.wizard.next }).click();
+
+  await expect(page.getByRole("heading", { name: t.wizard.review })).toBeVisible();
+  await expect(page.getByRole("tab", { name: e.sections.basic })).toBeHidden(); // los demás campos, plegados
+  await page.getByText(t.wizard.more).click();
+  await expect(page.getByLabel(e.field.detect)).toHaveValue("azahar.exe");
+  await page.getByRole("button", { name: e.save, exact: true }).click();
+  await expect(page.getByRole("status").filter({ hasText: "Azahar" })).toContainText(e.tabs.emulator);
+  expect(saved).toMatchObject({ id: "azahar-e2e", name: "Azahar", kind: "emulator" });
+  expect((saved as unknown as { consoles: string[] }).consoles).toHaveLength(1);
+  await page.unrouteAll();
 });
 
 test("Ajustes tiene claves, consolas, tareas y general", async () => {

@@ -332,6 +332,19 @@ a.ot-btn, a.chip { text-decoration: none; }
 .chip .chip-remove { margin-left: 6px; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
 .chips input { height: 28px; min-width: 10ch; }
 
+/* Programas › Agregar programa (#166): los 3 pasos, los 4 tipos y lo detectado. */
+.program-steps { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
+.program-step { display: flex; gap: var(--space-2); align-items: center; font: inherit; font-weight: 700; background: none; border: 0; color: inherit; cursor: pointer; padding: 0; }
+.program-step:disabled { cursor: default; opacity: .5; }
+.program-step-n { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; border: 2px solid var(--line); font-size: 13px; }
+.program-step[aria-current="step"] .program-step-n { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
+.program-step.ok .program-step-n { border-color: var(--accent); color: var(--accent); }
+.program-kinds { display: grid; gap: var(--space-2); grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.program-kind { display: grid; gap: 2px; text-align: left; font: inherit; color: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); cursor: pointer; }
+.program-kind[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft); }
+.program-ok { color: var(--have); }
+.program-pick { flex-direction: row; align-items: center; gap: var(--space-3); padding: 10px 12px; }
+
 /* Revisar como bandeja (#164): lista corta a la izquierda y el detalle de uno a la derecha; en ventana angosta, apilados. */
 .inbox { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: flex-start; }
 .inbox-list { flex: 1 1 300px; max-width: 380px; max-height: 70vh; overflow-y: auto; padding: 0; gap: 0; }
