@@ -11,7 +11,7 @@ import type { AutomationSuggestion, CatalogTaskInfo, ClaudeSettingsRequest, Clau
 import { useSearch } from "./SagaEditing";
 
 /** Los prompts de cada tarea de Claude, para filtrar el registro de uso (#58). */
-const PROMPTS: Record<string, string> = { portSearch: "verificar-port", emulators: "verificar-fork", cleanup: "depurar-sagas", routes: "ruta-saga", iconic: "iconico", best: "mejor-version", translate: "traducir-descripcion" };
+const PROMPTS: Record<string, string> = { portSearch: "verificar-port", emulators: "verificar-fork", gameFile: "archivo-del-juego", cleanup: "depurar-sagas", routes: "ruta-saga", iconic: "iconico", best: "mejor-version", translate: "traducir-descripcion" };
 
 /**
  * Ajustes › Tareas (#58, decisiones 283 a 285; antes «Claude», #110): el horario común, cada tarea del catálogo en dos grupos
@@ -194,7 +194,7 @@ function AutomationSuggestions() {
   );
 }
 
-const IDS = { claude: ["portSearch", "emulators", "cleanup", "iconic", "routes", "best", "translate"], script: ["igdb", "codes", "ports", "images"] } as const;
+const IDS = { claude: ["portSearch", "emulators", "gameFile", "cleanup", "iconic", "routes", "best", "translate"], script: ["igdb", "codes", "ports", "images"] } as const;
 
 const ACTIVE = ["queued", "running", "paused"];
 

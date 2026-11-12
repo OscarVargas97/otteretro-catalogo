@@ -209,7 +209,7 @@
       "dueIn": "due in {days, plural, one {# day} other {# days}}",
       "dueToday": "due today",
       "lastRun": {"done": "{ago} · finished fine", "error": "{ago} · failed", "canceled": "{ago} · canceled"},
-      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}", "emulators": "{count, plural, one {# notice in Programs} other {# notices in Programs}}"},
+      "pending": {"codes": "{count, plural, one {# version without a code} other {# versions without a code}}", "ports": "{count, plural, one {# port without a game} other {# ports without a game}}", "images": "{count, plural, one {# game with missing images} other {# games with missing images}}", "translate": "{count, plural, one {# game untranslated} other {# games untranslated}}", "iconic": "{count, plural, one {# saga to analyze} other {# sagas to analyze}}", "routes": "{count, plural, one {# saga without routes} other {# sagas without routes}}", "best": "{count, plural, one {# game without a best version} other {# games without a best version}}", "emulators": "{count, plural, one {# notice in Programs} other {# notices in Programs}}", "gameFile": "{count, plural, one {# port without a game file} other {# ports without a game file}}"},
       "never": "Never ran",
       "month": "this month: {calls, plural, one {# call} other {# calls}} · {cost}",
       "covers": "{have} of {total} with a cover",
@@ -263,6 +263,10 @@
         "emulators": {
           "name": "Emulators",
           "text": "Checks every recipe: a new release that matches its pattern is applied automatically and left unpublished; a pattern that no longer matches or an archived, moved or missing repo stays as a notice in Programs. Then it looks for forks (the repo's own, by name on GitHub and in known lists) and filters them through the API: a Windows release from the last 6 months, their own commits and at least 10 stars. Only the doubtful ones are checked by Sonnet, once per repo; those that pass stay as unpublished recipes."
+        },
+        "gameFile": {
+          "name": "Game file",
+          "text": "Decides how each port receives the game file (as an argument, copied with a fixed name, no file, or by hand) so Otteretro hands it over on its own. A script gathers the evidence from the repo (README and files) and Haiku decides with it, 5 ports at a time. What is certain stays unpublished; what is doubtful, as a notice on the port's card. It only takes ports without a game file that it has not seen with their current release, so it can run again when new ports arrive."
         }
       },
       "ports": {
@@ -542,6 +546,17 @@
     }
   },
   "errors": {
+    "gamefile": {
+      "reading": "Reading the repos of {done} of {total} ports",
+      "log": {
+        "rateLimited": "GitHub hit its query limit: the remaining ports are checked next time.",
+        "failed": "Could not read the repo of {recipe}: {detail}",
+        "set": "{recipe}: game file {gameFile}, unpublished.",
+        "doubtful": "{recipe}: doubtful game file ({gameFile}). It stays on its card.",
+        "unknown": "{recipe}: it is not known how it receives the game file. {reason}",
+        "done": "Done: {set} ports with their game file, {doubtful} doubtful on their cards and {unknown} unknown. {left} left."
+      }
+    },
     "emulators": {
       "checking": "Checking recipe {done} of {total}",
       "searching": "Looking for forks in the repos, GitHub and known lists",
@@ -1057,7 +1072,8 @@
       },
       "ports": {
         "refresh": "Download the port list",
-        "search": "Find new ports"
+        "search": "Find new ports",
+        "gamefile": "Decide the game file of ports"
       }
     },
     "status": {
@@ -1419,6 +1435,7 @@
       "installer": "The file of release {tag} is an installer ({pattern}) with no known arguments to install silently: write them in «installer» or pick another file.",
       "installerDetect": "The file of release {tag} is an installer ({pattern}): it already has its arguments. Check that the executable is the one it installs.",
       "installerArgs": "The file of release {tag} is an installer ({pattern}). Arguments for «installer»: {files}.",
+      "gameFile": "Doubtful game file: Claude suggests {pattern}. {files}",
       "proposed": "Suggested pattern: {pattern}",
       "dismiss": "Dismiss the notice"
     },

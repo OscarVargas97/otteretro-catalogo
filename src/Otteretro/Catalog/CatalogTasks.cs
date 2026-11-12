@@ -7,7 +7,7 @@ using Otteretro.Data;
 
 namespace Otteretro.Catalog;
 
-/// <param name="Id">igdb, codes, ports, portSearch, emulators, emulatorsBest, cleanup, routes, iconic, best, translate o images.</param>
+/// <param name="Id">igdb, codes, ports, portSearch, emulators, gameFile, emulatorsBest, cleanup, routes, iconic, best, translate o images.</param>
 /// <param name="Model">El modelo de Claude que usa; null si es un script.</param>
 /// <param name="Auto">Si corre sola en el horario (decisión 284).</param>
 /// <param name="Days">Solo IGDB: cada cuántos días se pone al día.</param>
@@ -40,7 +40,7 @@ public static class CatalogTasks
     }
 
     /// <summary>
-    /// Todas, en el orden de la noche: IGDB → códigos → buscar ports → ports → emuladores → depurar → icónico → rutas → mejor versión → traducir → imágenes. Icónico va
+    /// Todas, en el orden de la noche: IGDB → códigos → buscar ports → ports → emuladores → archivo del juego → depurar → icónico → rutas → mejor versión → traducir → imágenes. Icónico va
     /// antes que rutas porque historia y comunidad se piden solo para las icónicas (#54). Buscar ports va antes que ports para que las
     /// recetas de los repos que encuentra salgan esa misma noche (#161).
     /// </summary>
@@ -55,6 +55,9 @@ public static class CatalogTasks
         // Emuladores (#97, decisiones 357 y 371): una sola tarea revisa las recetas y busca forks; el contador es lo que espera en Revisar.
         new("emulators", EmulatorCheck.Model, [EmulatorCheck.PromptName], (db, _) => EmulatorCheck.Enqueue(db), (kind, _) => kind == EmulatorCheck.Kind,
             EmulatorCheck.Pending),
+        // Archivo del juego (#198): el gameFile de los ports que no lo tienen; lo ya visto no se vuelve a pedir hasta que cambie su asset.
+        new("gameFile", GameFileCheck.Model, [GameFileCheck.PromptName], (db, _) => GameFileCheck.Enqueue(db), (kind, _) => kind == GameFileCheck.Kind,
+            GameFileCheck.Pending),
         // Mejor emulador (#130): solo por juego, con POST /games/{id}/best-emulator; nunca todo el catálogo, así que ni la noche ni «Ejecutar» la encolan.
         new("emulatorsBest", BestEmulator.Model, [BestEmulator.PromptName], (_, _) => null, (kind, _) => kind == BestEmulator.Kind),
         new("cleanup", "haiku", [CatalogCleanup.PromptName], (db, _) => CatalogCleanup.Enqueue(db), (kind, _) => kind == CatalogCleanup.Kind),
@@ -75,7 +78,7 @@ public static class CatalogTasks
     ];
 
     /// <summary>Los tipos que no son de Claude y van en la fila del catálogo, de a una (#161); las de Claude (`claude.*`) ya van ahí.</summary>
-    public static readonly HashSet<string> InOrder = ["igdb.refresh", GameCodes.Kind, PortSearch.Kind, Ports.Kind, EmulatorCheck.Kind];
+    public static readonly HashSet<string> InOrder = ["igdb.refresh", GameCodes.Kind, PortSearch.Kind, Ports.Kind, EmulatorCheck.Kind, GameFileCheck.Kind];
 
     static string Setting(string id) => $"task.auto.{id}";
     static string LastSetting(string id) => $"task.last.{id}";

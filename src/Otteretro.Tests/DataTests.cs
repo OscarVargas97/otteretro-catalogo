@@ -255,7 +255,7 @@ public class PortMigrationTests
                 VALUES (7, 'n64', 'Super Mario 64', 'sm64coopdx', 'decomp', 'complete', 'https://github.com/coop-deluxe/sm64coopdx', 'extra', '2026-10-14', 'ares', NULL, 42, 1)
                 """);
 
-        Assert.Equal(9, Migrations.Apply(db)); // de la 0029 a la 0037 (detect_seen, otteretro-catalogo#174)
+        Assert.Equal(10, Migrations.Apply(db)); // de la 0029 a la 0038 (gamefile_seen, otteretro-catalogo#198)
 
         using var after = db.Open();
         Assert.Equal(("sm64coopdx", "complete", 42L, true, false), after.QuerySingle<(string, string, long, bool, bool)>(
