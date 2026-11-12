@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:58535/"
+      "url": "http://127.0.0.1:54754/"
     }
   ],
   "paths": {
@@ -6975,6 +6975,15 @@
         "properties": {
           "json": {
             "type": "string"
+          },
+          "exes": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            }
           }
         }
       },

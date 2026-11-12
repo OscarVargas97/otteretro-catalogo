@@ -107,7 +107,7 @@ public static class PortRecipes
             }
             var data = new Data(p.Id, p.Game, p.Project, p.Console, p.Folder, source, host, repo, $"https://{host ?? "github.com"}/{repo}", latest!.Tag,
                 latest.PublishedAt, windows, p.Link);
-            if (await Create(db, data, windows, linux) is { } error)
+            if (await Create(db, data, windows, linux, latest.Urls, ct) is { } error)
             {
                 run.Log(ApiError.Of("ports.log.recipeFailed", ("repo", repo), ("detail", error.Code)), "warn");
                 continue;
@@ -135,24 +135,38 @@ public static class PortRecipes
     /// <summary>
     /// Crea la receta con el archivo claro de cada sistema. Si de alguno hay varios sin uno claro, deja en su tarjeta el aviso «Elegir el
     /// archivo» con todos los de la release (otteretro-catalogo#153). Los archivos salieron de la release recién leída: no se vuelve a pedir.
+    /// El <c>detect</c> sale de lo que trae el archivo de Windows (otteretro-catalogo#174); si no trae un .exe claro, el aviso «Elegir el
+    /// ejecutable» con los que trae. Solo si no se puede saber (un 7z, sin su URL) queda el supuesto: el nombre del repo.
     /// </summary>
-    static async Task<ApiError?> Create(Database db, Data d, List<string> windows, List<string> linux)
+    static async Task<ApiError?> Create(Database db, Data d, List<string> windows, List<string> linux, Dictionary<string, string>? urls = null, CancellationToken ct = default)
     {
         var newId = NewId(db, d.Project);
         var (win, lin) = (Pick(windows), Pick(linux));
-        if (await Recipes.Save(db, newId, Build(d, newId, win, lin).ToJsonString(), true, null, checkRelease: false) is { } error) return error;
+        var name = d.Repo.Split('/')[1];
+        List<string>? files = null;
+        if (win is not null && urls?.GetValueOrDefault(win) is { } url)
+            try { files = await AssetFiles.List(win, url, ct); }
+            catch (Exception e) when (e is HttpRequestException or TaskCanceledException && !ct.IsCancellationRequested) { } // no se pudo saber: queda el supuesto
+        var exe = files is null ? null : AssetFiles.Pick(files, name);
+        var detect = exe ?? (win is not null && win.EndsWith(".exe", StringComparison.OrdinalIgnoreCase) ? win : name + ".exe");
+        if (await Recipes.Save(db, newId, Build(d, newId, win, lin, detect).ToJsonString(), true, null, checkRelease: false) is { } error) return error;
         if (windows.Count > 0 && win is null || linux.Count > 0 && lin is null)
-        {
-            var notice = new JsonObject
-            {
-                ["recipe"] = newId, ["reason"] = "pickFile", ["repo"] = d.Repo, ["tag"] = d.Tag,
-                ["files"] = new JsonArray([.. windows.Concat(linux).Select(f => JsonValue.Create(f))]),
-            };
-            using var c = db.Open();
-            c.Execute("INSERT INTO review_item (kind, entity, data, created_at) VALUES ('doubtful', 'recipe', @data, @now)",
-                new { data = notice.ToJsonString(), now = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture) });
-        }
+            Notice(db, newId, "pickFile", d, [.. windows.Concat(linux)]);
+        if (files is not null && exe is null && AssetFiles.Exes(files) is var exes)
+            Notice(db, newId, exes.Count > 0 ? "pickExe" : "noExe", d, exes);
         return null;
+    }
+
+    static void Notice(Database db, string recipe, string reason, Data d, List<string> files)
+    {
+        var notice = new JsonObject
+        {
+            ["recipe"] = recipe, ["reason"] = reason, ["repo"] = d.Repo, ["tag"] = d.Tag,
+            ["files"] = new JsonArray([.. files.Select(f => JsonValue.Create(f))]),
+        };
+        using var c = db.Open();
+        c.Execute("INSERT INTO review_item (kind, entity, data, created_at) VALUES ('doubtful', 'recipe', @data, @now)",
+            new { data = notice.ToJsonString(), now = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture) });
     }
 
     static void Seen(Database db, string repo, string? tag, string result)
@@ -167,15 +181,14 @@ public static class PortRecipes
     static Data Read(string json) => JsonSerializer.Deserialize<Data>(json, JsonSerializerOptions.Web)!;
 
     /// <summary>
-    /// La receta mínima: lo que se puede sacar del port y su release. El ejecutable es un supuesto (el archivo si es un .exe, si no el
-    /// nombre del repo), como en «Crear desde su repo»; lo demás (partidas, opciones, <c>detect</c> real) se completa en el editor.
+    /// La receta mínima: lo que se puede sacar del port y su release, con el <c>detect</c> que eligió <see cref="Create"/>; lo demás
+    /// (partidas, opciones) se completa en el editor.
     /// </summary>
-    static JsonObject Build(Data d, string id, string? file, string? linux)
+    static JsonObject Build(Data d, string id, string? file, string? linux, string exe)
     {
         var updates = new JsonObject { ["source"] = d.Source };
         if (d.Host is not null) updates["host"] = d.Host;
         updates["repo"] = d.Repo;
-        var exe = file is not null && file.EndsWith(".exe", StringComparison.OrdinalIgnoreCase) ? file : d.Repo.Split('/')[1] + ".exe";
         var r = new JsonObject
         {
             ["id"] = id,

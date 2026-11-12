@@ -21,7 +21,8 @@ public record GameRecipe(string Id, string Name, string Kind, string? Source, Li
 /// <summary>El recomendado de un juego en una consola, elegido a mano en su ficha (#132); la fuente es opcional.</summary>
 public record RecommendRequest(string Recipe, string? Source = null);
 /// <summary>Una receta entera, como JSON.</summary>
-public record RecipeText(string Json);
+/// <param name="Exes">«Crear desde su repo» (otteretro-catalogo#174): los .exe del archivo, si no hay uno claro para el <c>detect</c> (vacía: no trae ninguno).</param>
+public record RecipeText(string Json, List<string>? Exes = null);
 /// <summary>
 /// Lo que muestra la tarjeta de una receta (#108, decisión 365): su última release (sin borradores) y su fecha, si el patrón calza con
 /// algún archivo de ella, y si está publicada (igual que en main), cambiada sin publicar o es local (de Otteretro, todavía sin traer).
@@ -498,22 +499,29 @@ public static partial class Recipes
 
     /// <summary>
     /// «Crear desde su repo»: una receta para completar a partir de la release más nueva con un archivo de Windows. Lleva su fuente, el
-    /// patrón del archivo y un ejecutable supuesto; la consola, la carpeta y lo demás se completan en el formulario. No se guarda.
+    /// patrón del archivo y el ejecutable que trae el archivo (otteretro-catalogo#174); la consola, la carpeta y lo demás se completan en el
+    /// formulario. No se guarda. Si el archivo no trae un .exe claro, el <c>detect</c> va vacío y Exes lleva los que trae, para elegir; si
+    /// no se puede saber (un 7z), queda el supuesto: el nombre del repo.
     /// </summary>
-    public static async Task<(string? Json, ApiError? Error)> Draft(string url, string? token, CancellationToken ct = default, string? chosen = null)
+    public static async Task<(string? Json, ApiError? Error, List<string>? Exes)> Draft(string url, string? token, CancellationToken ct = default, string? chosen = null)
     {
-        if (Source(url) is not { } parsed) return (null, ApiError.Of("recipes.badRepo"));
+        if (Source(url) is not { } parsed) return (null, ApiError.Of("recipes.badRepo"), null);
         var (source, repo, host) = parsed;
         List<Release> releases;
         try { releases = await Releases(source, host, repo, token, ct); }
         catch (Exception e) when (e is HttpRequestException or JsonException or TaskCanceledException && !ct.IsCancellationRequested)
         {
-            return (null, ApiError.Of("recipes.sourceFailed", ("repo", repo), ("detail", e.Message)));
+            return (null, ApiError.Of("recipes.sourceFailed", ("repo", repo), ("detail", e.Message)), null);
         }
         var file = chosen ?? releases.Select(r => r.Assets.Where(a => !NotWindows().IsMatch(a)).OrderBy(a => a.Contains("win", StringComparison.OrdinalIgnoreCase) ? 0 : 1).FirstOrDefault())
             .FirstOrDefault(a => a is not null);
-        if (file is null) return (null, ApiError.Of("recipes.noRelease", ("repo", repo)));
+        if (file is null) return (null, ApiError.Of("recipes.noRelease", ("repo", repo)), null);
         var name = repo.Split('/')[1];
+        List<string>? files = null;
+        if (releases.FirstOrDefault(r => r.Assets.Contains(file))?.Urls?.GetValueOrDefault(file) is { } asset)
+            try { files = await AssetFiles.List(file, asset, ct); }
+            catch (Exception e) when (e is HttpRequestException or TaskCanceledException && !ct.IsCancellationRequested) { } // no se pudo saber: queda el supuesto
+        var exe = files is null ? null : AssetFiles.Pick(files, name);
         var updates = new JsonObject { ["source"] = source, ["repo"] = repo };
         if (host is not null) updates["host"] = host;
         var recipe = new JsonObject
@@ -522,11 +530,11 @@ public static partial class Recipes
             ["name"] = name,
             ["kind"] = "emulator",
             ["folder"] = "",
-            ["detect"] = file.EndsWith(".exe", StringComparison.OrdinalIgnoreCase) ? file : name + ".exe",
+            ["detect"] = exe ?? (files is not null ? "" : file.EndsWith(".exe", StringComparison.OrdinalIgnoreCase) ? file : name + ".exe"),
             ["consoles"] = new JsonArray(),
             ["updates"] = updates,
             ["asset"] = AssetPattern(file),
         };
-        return (recipe.ToJsonString(Indented).ReplaceLineEndings("\n") + "\n", null);
+        return (recipe.ToJsonString(Indented).ReplaceLineEndings("\n") + "\n", null, files is not null && exe is null ? AssetFiles.Exes(files) : null);
     }
 }

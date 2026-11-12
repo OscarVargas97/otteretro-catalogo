@@ -141,7 +141,7 @@ public class RecipesTests
     public async Task ADraftComesFromTheRepo()
     {
         Recipes.Http = new HttpClient(new FakeReleases(new() { [Releases] = MgbaReleases }));
-        var (json, error) = await Recipes.Draft("github.com/mgba-emu/mgba/releases", token: null);
+        var (json, error, _) = await Recipes.Draft("github.com/mgba-emu/mgba/releases", token: null);
         Assert.Null(error);
         Assert.True(json!.Contains("\"asset\": \"^mGBA-[0-9.]+-win64\\\\.7z$\""), json);
         Assert.Contains("\"repo\": \"mgba-emu/mgba\"", json);
@@ -188,7 +188,7 @@ public class RecipesTests
         Assert.Null(error);
         var release = Assert.Single(list!);
         Assert.Equal([false, true], release.Files.Select(f => f.Windows));
-        var (json, _) = await Recipes.Draft("github.com/mgba-emu/mgba", token: null, chosen: "mGBA-0.10.5-macos.dmg");
+        var (json, _, _) = await Recipes.Draft("github.com/mgba-emu/mgba", token: null, chosen: "mGBA-0.10.5-macos.dmg");
         Assert.Contains("macos", json);
     }
 

@@ -189,7 +189,35 @@ public static partial class EmulatorCheck
                 ["proposed"] = windows.Count == 1 ? Recipes.AssetPattern(windows[0]) : null,
             });
         }
+        if (await CheckDetect(db, run, r, latest, file, ct) is { } problem) return problem;
         return await AddDownload(db, run, r, latest, file, ct) || linux ? true : null;
+    }
+
+    /// <summary>
+    /// Que el archivo de la release traiga el <c>detect</c> de la receta (otteretro-catalogo#174), como lo busca Otteretro al instalar: si
+    /// no, a Revisar con los .exe que sí trae. Un complemento no lleva ejecutable. Lo comprobado (receta, release y detect) queda en
+    /// <c>detect_seen</c> y no se vuelve a pedir; lo que no se puede saber (un 7z) también.
+    /// </summary>
+    static async Task<bool?> CheckDetect(Database db, TaskRun run, Recipe r, Recipes.Release latest, string file, CancellationToken ct)
+    {
+        if (r.Kind == "complement" || (string?)r.Json["detect"] is not { } detect || latest.Urls?.GetValueOrDefault(file) is not { } url) return null;
+        using (var c = db.Open())
+            if (c.ExecuteScalar<long>("SELECT count(*) FROM detect_seen WHERE recipe = @Id AND tag = @Tag AND detect = @detect", new { r.Id, latest.Tag, detect }) > 0)
+                return null;
+        var files = await AssetFiles.List(file, url, ct, (string?)r.Json["saveAs"]);
+        using (var c = db.Open())
+            c.Execute("""
+                INSERT INTO detect_seen (recipe, tag, detect, checked_at) VALUES (@Id, @Tag, @detect, @now)
+                ON CONFLICT (recipe) DO UPDATE SET tag = excluded.tag, detect = excluded.detect, checked_at = excluded.checked_at
+                """, new { r.Id, latest.Tag, detect, now = DateTime.UtcNow.ToString("O") });
+        if (files is null || AssetFiles.Has(files, detect)) return null;
+        return Problem(db, run, r, "detectMissing", new()
+        {
+            ["repo"] = r.Repo,
+            ["tag"] = latest.Tag,
+            ["pattern"] = detect,
+            ["files"] = new JsonArray([.. AssetFiles.Exes(files).Select(a => JsonValue.Create(a))]),
+        });
     }
 
     static bool SetLinux(Database db, TaskRun run, Recipe r, string file)

@@ -439,6 +439,10 @@
     "addPick": "Pick the Windows file of a release: the pattern is built from its name, replacing the version with a wildcard.",
     "addWindows": "Windows",
     "addUse": "Use this file",
+    "addExes": "The file has no clear executable. Pick the recipe's one:",
+    "addNoExe": "The file has no .exe: Otteretro won't be able to open it. Pick another file or continue and type the executable.",
+    "addUseExe": "Use this executable",
+    "addContinue": "Continue without picking",
     "addNoDate": "No date",
     "total": "{count, plural, one {# recipe} other {# recipes}}",
     "empty": "This catalog has no recipes yet.",
@@ -521,7 +525,8 @@
         "rejected": "Discarded: {repo}. {reason}",
         "candidate": "Possible fork of {recipe}: {repo}.",
         "forkFailed": "Could not create the recipe for fork {repo}: it is discarded.",
-        "linux": "{recipe}: adds the Linux file {file}, unpublished."
+        "linux": "{recipe}: adds the Linux file {file}, unpublished.",
+        "detectMissing": "{recipe}: the file of release {tag} lacks {pattern}. Shown on its card."
       },
       "best": {
         "searching": "Claude is looking for the best emulator for {game} on {consoles, plural, one {# console} other {# consoles}}",
@@ -1377,6 +1382,9 @@
       "noRelease": "The repo {repo} has no releases.",
       "noAsset": "No file in release {tag} matches {pattern}.",
       "pickFile": "Pick the file: release {tag} has several and none is clear ({files}).",
+      "pickExe": "Pick the executable: the file of release {tag} has several and none is clear ({files}).",
+      "noExe": "The file of release {tag} has no .exe: pick another file or flag the recipe.",
+      "detectMissing": "The file of release {tag} lacks {pattern}. The .exe files it has: {files}.",
       "proposed": "Suggested pattern: {pattern}",
       "dismiss": "Dismiss the notice"
     },
