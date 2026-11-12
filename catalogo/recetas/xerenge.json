@@ -12,5 +12,13 @@
     "repo": "shipa-2/Xerenge"
   },
   "asset": "^Burnout_Revenge_Installer-win-amd64\\.exe$",
-  "assetLinux": "^Burnout_Revenge_Installer-x86_64\\.AppImage$"
+  "assetLinux": "^Burnout_Revenge_Installer-x86_64\\.AppImage$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }

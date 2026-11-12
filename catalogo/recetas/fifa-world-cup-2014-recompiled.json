@@ -11,5 +11,13 @@
     "source": "github",
     "repo": "HossEz/fifa-world-cup-2014-recompiled"
   },
-  "asset": "^fifa-world-cup-2014-recompiled-[0-9.]+-setup\\.exe$"
+  "asset": "^fifa-world-cup-2014-recompiled-[0-9.]+-setup\\.exe$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }
