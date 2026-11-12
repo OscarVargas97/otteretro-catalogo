@@ -28,9 +28,17 @@ public class EmulatorCheckTests : IAsyncDisposable
     sealed class Net : HttpMessageHandler
     {
         public readonly Dictionary<string, string> Bodies = [];
+        /// <summary>Archivos de releases, enteros (sin Range), y cuántas veces se pidió cada uno.</summary>
+        public readonly Dictionary<string, byte[]> Files = [];
+        public readonly Dictionary<string, int> Asked = [];
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
         {
             var url = Uri.UnescapeDataString(request.RequestUri!.AbsoluteUri);
+            if (Files.TryGetValue(url, out var file))
+            {
+                Asked[url] = Asked.GetValueOrDefault(url) + 1;
+                return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent(file) });
+            }
             if (url.StartsWith("https://dl/", StringComparison.Ordinal)) return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent([1, 2, 3]) });
             var body = Bodies.FirstOrDefault(b => url.Contains(b.Key, StringComparison.Ordinal)).Value;
             return Task.FromResult(body is null ? new HttpResponseMessage(HttpStatusCode.NotFound) : new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(body, Encoding.UTF8) });
@@ -116,6 +124,34 @@ public class EmulatorCheckTests : IAsyncDisposable
         using (var c = f.Db.Open()) id = c.ExecuteScalar<long>("SELECT max(id) FROM task WHERE kind = @Kind", new { EmulatorCheck.Kind });
         var task = await f.Run(id);
         Assert.True(task.Status == "done", $"{task.Status}: {JsonSerializer.Serialize(task.Detail)}");
+    }
+
+    /// <summary>otteretro-catalogo#174: un detect que no está en el archivo de la última release va a Revisar con los .exe que trae, una vez.</summary>
+    [Fact]
+    public async Task ADetectMissingFromTheAssetGoesToReviewOnce()
+    {
+        const string gh = "https://api.github.com/repos/", zip = "https://dl/nx-app-1.0.zip";
+        net.Bodies[gh + "t/nx/releases"] = Release("1.0", 3, "nx-app-1.0.zip", "nx-Setup-1.0.exe");
+        net.Bodies[gh + "t/nx"] = Repo("t/nx", 10);
+        using (var ms = new MemoryStream())
+        {
+            using (var a = new System.IO.Compression.ZipArchive(ms, System.IO.Compression.ZipArchiveMode.Create))
+                foreach (var name in new[] { "nx/main.py", "nx/helper.exe" }) a.CreateEntry(name);
+            net.Files[zip] = ms.ToArray();
+        }
+        using (var c = f.Db.Open())
+            c.Execute("INSERT INTO recipe (id, kind, json) VALUES ('nx', 'tool', @json)", new
+            {
+                json = """{ "id": "nx", "name": "nx", "kind": "tool", "folder": "x", "detect": "nx.exe", "updates": { "source": "github", "repo": "t/nx" }, "asset": "^nx-app-[0-9.]+\\.zip$" }""",
+            });
+
+        await Done();
+        await Done();
+        using var db = f.Db.Open();
+        var data = Assert.Single(db.Query<string>("SELECT data FROM review_item WHERE entity = 'recipe' AND json_extract(data, '$.recipe') = 'nx'"));
+        Assert.Contains("\"reason\":\"detectMissing\"", data);
+        Assert.Contains("\"files\":[\"helper.exe\"]", data);
+        Assert.Equal(1, net.Asked[zip]); // la segunda vez no se vuelve a pedir
     }
 
     [Fact]

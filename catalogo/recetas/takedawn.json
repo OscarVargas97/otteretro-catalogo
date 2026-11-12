@@ -12,5 +12,13 @@
     "repo": "xenophobentx/takedawn"
   },
   "asset": "^Takedawn-[0-9.]+-windows-x64-setup\\.exe$",
-  "assetLinux": "^Takedawn-[0-9.]+-linux-x86_64\\.AppImage$"
+  "assetLinux": "^Takedawn-[0-9.]+-linux-x86_64\\.AppImage$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }

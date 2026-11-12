@@ -5,12 +5,13 @@
   "folder": "Wii",
   "game": "Pandora's Tower",
   "port": "https://github.com/RecompPort/pandora-tower-pc",
-  "detect": "PandorasTower-PC-v1.2.exe",
+  "detect": "pandora-tower-pc.exe",
   "experimental": true,
   "updates": {
     "source": "github",
     "repo": "RecompPort/pandora-tower-pc"
   },
   "asset": "^PandorasTower-PC-v[0-9.]+\\.exe$",
-  "assetLinux": "^pandoras-tower-pc-v[0-9.]+-linux-\\.tar\\.gz$"
+  "assetLinux": "^pandoras-tower-pc-v[0-9.]+-linux-\\.tar\\.gz$",
+  "saveAs": "pandora-tower-pc.exe"
 }

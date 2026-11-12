@@ -16,8 +16,8 @@ import { ClearTasks, TaskRows, upsertTask, useTasks } from "./Tasks";
 import { Empty, useAppState } from "./Shell";
 import { PublishButton } from "./Publish";
 
-/** Título de la pantalla (en Saga y Juego, el camino), búsqueda global (Ctrl+K) y panel de tareas en segundo plano. Fija al bajar (#169). */
-export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/game" }) {
+/** Título de la pantalla (en Saga y Juego, el camino; en Revisar, el enlace al Historial, #164), búsqueda global (Ctrl+K) y panel de tareas en segundo plano. Fija al bajar (#169). */
+export function TopBar({ title, crumbs, action }: { title: string; crumbs?: "/saga" | "/game"; action?: React.ReactNode }) {
   const t = useTranslations("topBar");
   const [searching, setSearching] = useState(false);
   const [tasksOpen, setTasksOpen] = useState(false);
@@ -65,6 +65,7 @@ export function TopBar({ title, crumbs }: { title: string; crumbs?: "/saga" | "/
     <header className="top" ref={header}>
       <h1 className={crumbs ? "sr-only" : undefined}>{title}</h1>
       {crumbs && <Suspense fallback={null}><Crumbs path={crumbs} /></Suspense>}
+      {action}
       <button className="search" type="button" onClick={() => setSearching(true)}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <circle cx="11" cy="11" r="7" />

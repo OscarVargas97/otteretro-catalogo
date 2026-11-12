@@ -18,7 +18,8 @@
     "pending": "{count, plural, one {# to review} other {# to review}}",
     "comingIn": "Coming in phase {phase}",
     "collapse": "Collapse menu",
-    "expand": "Expand menu"
+    "expand": "Expand menu",
+    "history": "Change history"
   },
   "topBar": {
     "catchUpConflicts": "{count} conflicts left from the last version",
@@ -477,6 +478,10 @@
     "addPick": "Pick the Windows file of a release: the pattern is built from its name, replacing the version with a wildcard.",
     "addWindows": "Windows",
     "addUse": "Use this file",
+    "addExes": "The file has no clear executable. Pick the recipe's one:",
+    "addNoExe": "The file has no .exe: Otteretro won't be able to open it. Pick another file or continue and type the executable.",
+    "addUseExe": "Use this executable",
+    "addContinue": "Continue without picking",
     "addNoDate": "No date",
     "empty": "This catalog has no recipes yet.",
     "importMain": "Bring the recipes from main",
@@ -556,7 +561,10 @@
         "rejected": "Discarded: {repo}. {reason}",
         "candidate": "Possible fork of {recipe}: {repo}.",
         "forkFailed": "Could not create the recipe for fork {repo}: it is discarded.",
-        "linux": "{recipe}: adds the Linux file {file}, unpublished."
+        "linux": "{recipe}: adds the Linux file {file}, unpublished.",
+        "detectMissing": "{recipe}: the file of release {tag} lacks {pattern}. Shown on its card.",
+        "installer": "{recipe}: the file of release {tag} is an installer ({pattern}). It stays on its card.",
+        "installerArgs": "{recipe}: the file of release {tag} is an installer ({pattern}). It stays on its card."
       },
       "best": {
         "searching": "Claude is looking for the best emulator for {game} on {consoles, plural, one {# console} other {# consoles}}",
@@ -1390,20 +1398,13 @@
     "openReview": "Open Review"
   },
   "review": {
-    "tabs": "Review sections",
-    "tab": {
-      "pending": "To approve ({count})",
-      "doubtful": "Doubtful ({count})",
-      "unidentified": "Unidentified ({count})",
-      "learnings": "Learnings ({count})",
-      "picks": "Emulator per game ({count})"
-    },
-    "picksEmptyTitle": "No emulators to review",
-    "picksEmptyText": "A game's «Find the best emulator» leaves here what Claude recommends.",
     "pick": {
-      "noRecipe": "No recipe: {repo}", "source": "Source", "accept": "Accept", "addRecipe": "Add the recipe",
+      "noRecipe": "No recipe: {repo}",
+      "source": "Source",
+      "addRecipe": "Add the recipe",
       "acceptHint": "It becomes the recipe's recommendation for this game and console, and leaves the one that had it. It goes out with «Publish all».",
-      "addHint": "This emulator has no recipe: add it, then accept.", "openRepo": "Open the repo", "dismiss": "Dismiss"
+      "addHint": "This emulator has no recipe: add it, then accept.",
+      "openRepo": "Open the repo"
     },
     "notice": {
       "gone": "The repo {repo} no longer exists.",
@@ -1412,11 +1413,15 @@
       "noRelease": "The repo {repo} has no releases.",
       "noAsset": "No file in release {tag} matches {pattern}.",
       "pickFile": "Pick the file: release {tag} has several and none is clear ({files}).",
+      "pickExe": "Pick the executable: the file of release {tag} has several and none is clear ({files}).",
+      "noExe": "The file of release {tag} has no .exe: pick another file or flag the recipe.",
+      "detectMissing": "The file of release {tag} lacks {pattern}. The .exe files it has: {files}.",
+      "installer": "The file of release {tag} is an installer ({pattern}) with no known arguments to install silently: write them in «installer» or pick another file.",
+      "installerDetect": "The file of release {tag} is an installer ({pattern}): it already has its arguments. Check that the executable is the one it installs.",
+      "installerArgs": "The file of release {tag} is an installer ({pattern}). Arguments for «installer»: {files}.",
       "proposed": "Suggested pattern: {pattern}",
       "dismiss": "Dismiss the notice"
     },
-    "pendingEmptyTitle": "Nothing to approve",
-    "pendingEmptyText": "When Claude prepares a saga's routes, what's iconic or the best version, they'll show up here for you to approve.",
     "learningsEmptyTitle": "No learnings",
     "learningsEmptyText": "The changes Claude made to the catalog stay here, with their reason, so you can undo them.",
     "prompt": {
@@ -1428,15 +1433,7 @@
       "identificar-juego": "Identify file"
     },
     "approve": "Approve",
-    "approveAll": "Approve all ({count})",
-    "acceptAll": "Accept all",
-    "acceptAllConfirm": "Accept all? To approve: {pending}. Emulator per game (with a recipe): {picks}. Files and learnings are reviewed one by one.",
-    "approveAllConfirm": "Approve all {count} pending results? Each one is applied as if you approved it.",
-    "groupHint": "{count, plural, one {# result} other {# results}} · open it to see them one by one",
     "reject": "Reject",
-    "change": "Change",
-    "reason": "Why",
-    "date": "Date",
     "undo": "Undo",
     "undone": "Undone",
     "learning": {
@@ -1469,10 +1466,10 @@
     "correctPlaceholder": "What is wrong (Claude reads it in the next cleanup)",
     "send": "Undo and send to Claude",
     "cancel": "Cancel",
-    "rule": "Your correction: {text}",
+    "rule": "Learned rule: {text}",
     "openSaga": "Open saga",
     "count": "{count, plural, one {# change} other {# changes}}",
-    "edit": "Edit",
+    "edit": "Change the order",
     "approveEdited": "Approve as edited",
     "stepUp": "Move step {step} up",
     "stepDown": "Move step {step} down",
@@ -1480,18 +1477,38 @@
     "openClaude": "Open Settings › Claude",
     "aliased": "“{text}” is {game}",
     "files": {
-      "doubtfulEmptyTitle": "Nothing doubtful",
-      "doubtfulEmptyText": "When Claude assigns a file the scan did not recognize, it shows up here for you to confirm.",
-      "unidentifiedEmptyTitle": "Everything identified",
-      "unidentifiedEmptyText": "Files that neither the scan nor Claude recognize show up here for you to pick their game.",
-      "openCollection": "Open Collection",
       "proposed": "Claude says: {name}",
       "noProposal": "Claude did not know: {reason}",
       "assigned": "Assigned to",
-      "confirm": "Confirm",
       "change": "Change game",
       "search": "Search for the game",
       "noResults": "No {console} game with that name."
+    },
+    "intro": "What Claude proposed. Nothing changes in the catalog until you approve it; what you approve or reject can be undone for a few seconds.",
+    "filterType": "Type",
+    "all": "All",
+    "list": "To review",
+    "detail": "Detail",
+    "skip": "Skip",
+    "approveType": "Approve all {count} of {type}",
+    "type": {
+      "picks": "Emulator",
+      "doubtful": "Doubtful file",
+      "unidentified": "Unidentified"
+    },
+    "done": {
+      "approved": "Approved: {title}.",
+      "rejected": "Rejected: {title}.",
+      "resolved": "Game chosen for {title}.",
+      "approvedType": "Approved {count} of {type}."
+    },
+    "emptyTitle": "All reviewed",
+    "emptyText": "Claude's tasks will leave new things here: routes, iconic games, the best version and emulators.",
+    "history": {
+      "back": "Review",
+      "intro": "What Claude already changed in the catalog. Click a change to see why. If something is wrong, undo it or correct it with a note and Claude won't repeat it.",
+      "byClaude": "Claude, without going through Review",
+      "undoneByYou": "undone by you"
     }
   },
   "home": {

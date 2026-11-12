@@ -12,5 +12,13 @@
     "repo": "zer0ducksgiven/Forza-Motorsport-2-ReGPU"
   },
   "asset": "^FM2-Setup-[0-9.]+\\.exe$",
-  "assetLinux": "^FM2-Linux-[0-9.]+\\.tar\\.gz$"
+  "assetLinux": "^FM2-Linux-[0-9.]+\\.tar\\.gz$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }
