@@ -439,6 +439,10 @@
     "addPick": "Elige el archivo de Windows de una release: el patrón se arma con su nombre, cambiando la versión por un comodín.",
     "addWindows": "Windows",
     "addUse": "Usar este archivo",
+    "addExes": "El archivo no trae un ejecutable claro. Elige el de la receta:",
+    "addNoExe": "El archivo no trae ningún .exe: Otteretro no podrá abrirlo. Elige otro archivo o sigue y escribe el ejecutable.",
+    "addUseExe": "Usar este ejecutable",
+    "addContinue": "Seguir sin elegir",
     "addNoDate": "Sin fecha",
     "total": "{count, plural, one {# receta} other {# recetas}}",
     "empty": "Todavía no hay recetas en este catálogo.",
@@ -521,7 +525,10 @@
         "rejected": "Descartado: {repo}. {reason}",
         "candidate": "Posible fork de {recipe}: {repo}.",
         "forkFailed": "No se pudo crear la receta del fork {repo}: queda descartado.",
-        "linux": "{recipe}: suma el archivo de Linux {file}, sin publicar."
+        "linux": "{recipe}: suma el archivo de Linux {file}, sin publicar.",
+        "detectMissing": "{recipe}: el archivo de la release {tag} no trae {pattern}. Queda en su tarjeta.",
+        "installer": "{recipe}: el archivo de la release {tag} es un instalador ({pattern}). Queda en su tarjeta.",
+        "installerArgs": "{recipe}: el archivo de la release {tag} es un instalador ({pattern}). Queda en su tarjeta."
       },
       "best": {
         "searching": "Claude busca el mejor emulador de {game} en {consoles, plural, one {# consola} other {# consolas}}",
@@ -1377,6 +1384,12 @@
       "noRelease": "El repo {repo} no tiene releases.",
       "noAsset": "Ningún archivo de la release {tag} calza con {pattern}.",
       "pickFile": "Elegir el archivo: la release {tag} trae varios sin uno claro ({files}).",
+      "pickExe": "Elegir el ejecutable: el archivo de la release {tag} trae varios sin uno claro ({files}).",
+      "noExe": "El archivo de la release {tag} no trae ningún .exe: elegir otro archivo o marcar la receta.",
+      "detectMissing": "El archivo de la release {tag} no trae {pattern}. Los .exe que trae: {files}.",
+      "installer": "El archivo de la release {tag} es un instalador ({pattern}) sin argumentos conocidos para instalar sin preguntar: escribirlos en «installer» o elegir otro archivo.",
+      "installerDetect": "El archivo de la release {tag} es un instalador ({pattern}): ya lleva sus argumentos. Revisar que el ejecutable sea el que deja al instalar.",
+      "installerArgs": "El archivo de la release {tag} es un instalador ({pattern}). Argumentos para «installer»: {files}.",
       "proposed": "Patrón propuesto: {pattern}",
       "dismiss": "Descartar el aviso"
     },

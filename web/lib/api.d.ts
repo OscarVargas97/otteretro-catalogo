@@ -5571,6 +5571,7 @@ export interface components {
         };
         RecipeText: {
             json: string;
+            exes?: null | string[];
         };
         RecommendRequest: {
             recipe: string;
