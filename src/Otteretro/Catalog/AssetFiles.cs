@@ -19,9 +19,17 @@ public static partial class AssetFiles
     const long WholeMax = 64L << 20;
     const int MaxDirectory = 16 << 20;
 
-    /// <summary>Los mismos que en Otteretro (Installs.Installer).</summary>
-    [GeneratedRegex(@"^(vc_?redist|unins|setup|install|crashpad|updater)", RegexOptions.IgnoreCase)]
-    private static partial Regex Installer();
+    /// <summary>
+    /// Lo que no es el juego aunque sea un .exe (otteretro-catalogo#179, docs/reglas-empaquetado.md): instaladores y desinstaladores en
+    /// cualquier parte del nombre (TotK-Setup.exe), actualizadores, reportes de fallos, servidores, herramientas de extracción o de ajustes,
+    /// y las variantes sin ventana, de consola o de desarrollo.
+    /// </summary>
+    [GeneratedRegex(@"vc_?redist|unins|setup|install|update|crash|report|serve|relay|headless|settings|shadereditor|extract|probe|capabilit|check|cache|(?<![a-z])ded(?![a-z])|(^|[-_ ])(room|cli|dev)\.exe$", RegexOptions.IgnoreCase)]
+    private static partial Regex Helper();
+
+    /// <summary>Un instalador por su nombre: si no tiene una firma conocida, igual lo es.</summary>
+    [GeneratedRegex("setup|install", RegexOptions.IgnoreCase)]
+    private static partial Regex SetupName();
 
     /// <summary>
     /// Los archivos (rutas con /) como quedan instalados: un zip, por su directorio central y, si todo viene en una sola carpeta, desde ella;
@@ -96,12 +104,83 @@ public static partial class AssetFiles
         files.Where(f => f.EndsWith(".exe", StringComparison.OrdinalIgnoreCase)).Order(StringComparer.OrdinalIgnoreCase).ToList();
 
     /// <summary>
-    /// El ejecutable claro: el único .exe de la raíz que no es un instalador o, entre varios, el que se llama como el repo
-    /// (<paramref name="repoName"/>). Null si no hay uno claro.
+    /// El ejecutable claro (docs/reglas-empaquetado.md), entre los .exe que no son ayudantes (<see cref="Helper"/>) de la raíz o, si la raíz
+    /// no trae ningún .exe, de las subcarpetas: el único de la raíz; el que se llama como el repo (<paramref name="repoName"/>, sin contar
+    /// guiones, espacios ni mayúsculas); o el único que no es un lanzador («Play X.exe», «X Launcher.exe»), porque el lanzador abre ese mismo
+    /// juego; en un emulador, en cambio, el lanzador es su interfaz y no se descarta (<paramref name="emulator"/>). Null si no hay uno claro:
+    /// lo elige la persona.
     /// </summary>
-    public static string? Pick(List<string> files, string repoName) =>
-        files.Where(f => !f.Contains('/') && f.EndsWith(".exe", StringComparison.OrdinalIgnoreCase) && !Installer().IsMatch(f)).ToList() is var root && root is [var only]
-            ? only : root.FirstOrDefault(f => f.Equals(repoName + ".exe", StringComparison.OrdinalIgnoreCase));
+    public static string? Pick(List<string> files, string repoName, bool emulator = false)
+    {
+        var all = files.Where(f => f.EndsWith(".exe", StringComparison.OrdinalIgnoreCase)).ToList();
+        var exes = all.Where(f => !Helper().IsMatch(f[(f.LastIndexOf('/') + 1)..])).ToList();
+        var root = exes.Where(f => !f.Contains('/')).ToList();
+        if (root is [var only]) return only;
+        var pool = root.Count > 0 ? root : all.Any(f => !f.Contains('/')) ? [] : exes; // un instalador en la raíz: lo de adentro es suyo
+        bool Named(string f) => Key(Path.GetFileNameWithoutExtension(f)) == Key(repoName);
+        if (pool.Where(Named).ToList() is [var named]) return named;
+        return !emulator && pool.Count > 1 && pool.Where(f => !Launcher().IsMatch(f[(f.LastIndexOf('/') + 1)..])).ToList() is [var game] ? game : null;
+    }
+
+    [GeneratedRegex("launcher|^play ", RegexOptions.IgnoreCase)]
+    private static partial Regex Launcher();
+
+    static string Key(string name) => new([.. name.Where(char.IsLetterOrDigit).Select(char.ToLowerInvariant)]);
+
+    /// <summary>
+    /// Si un .exe es un instalador y con qué se armó: inno, nsis, 7zsfx, o «setup» si solo el nombre lo dice. Null si es el juego mismo.
+    /// Las firmas van en el cabezal, antes de lo empaquetado: basta con los primeros 2 MB.
+    /// </summary>
+    public static async Task<string?> Packer(string name, string url, CancellationToken ct)
+    {
+        if (!name.EndsWith(".exe", StringComparison.OrdinalIgnoreCase)) return null;
+        var head = await Get(url, 0, 2 << 20, ct) is { } got ? got.Bytes : Array.Empty<byte>();
+        if (head.AsSpan().IndexOf("Inno Setup"u8) >= 0) return "inno";
+        if (head.AsSpan().IndexOf("NullsoftInst"u8) >= 0) return "nsis";
+        if (head.AsSpan().IndexOf(new byte[] { 0x37, 0x7A, 0xBC, 0xAF, 0x27, 0x1C }) >= 0) return "7zsfx";
+        return SetupName().IsMatch(name) ? "setup" : null;
+    }
+
+    /// <summary>
+    /// Los argumentos para instalar sin preguntar en {dir}, si se conocen: los de Inno Setup. NSIS pide /D= al final y sin comillas, y
+    /// Otteretro pone comillas a un argumento con espacios (otteretro#445); los demás no tienen argumentos comunes.
+    /// </summary>
+    public static List<string>? InstallerArgs(string? packer) =>
+        packer == "inno" ? ["/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/SP-", "/NOICONS", "/DIR={dir}"] : null;
+
+    [GeneratedRegex(@"\d+\.\d+")]
+    private static partial Regex Version();
+
+    /// <summary>Lo que una receta nueva saca de su archivo de Windows según las reglas de empaquetado (docs/reglas-empaquetado.md).</summary>
+    /// <param name="Exe">El ejecutable claro, o null si hay que elegirlo o no se puede saber.</param>
+    /// <param name="Files">Lo que trae el archivo; null si no se puede saber (un 7z, un instalador).</param>
+    /// <param name="Packer">Si es un instalador, con qué se armó (<see cref="Packer"/>).</param>
+    /// <param name="Installer">Los argumentos del instalador, si se conocen.</param>
+    /// <param name="SaveAs">Un .exe suelto con la versión en el nombre se guarda con el del repo, que no cambia entre versiones.</param>
+    public sealed record Resolved(string? Exe, List<string>? Files, string? Packer, List<string>? Installer, string? SaveAs);
+
+    /// <summary>
+    /// Aplica las reglas a un archivo: un zip, por lo que trae (<see cref="Pick"/>); un .exe, por su firma: instalador (con sus argumentos si
+    /// son de Inno) o el juego mismo. Un error de red queda como «no se puede saber».
+    /// </summary>
+    public static async Task<Resolved> Resolve(string name, string url, string repoName, bool emulator, CancellationToken ct)
+    {
+        try
+        {
+            if (name.EndsWith(".exe", StringComparison.OrdinalIgnoreCase))
+            {
+                if (await Packer(name, url, ct) is { } packer) return new(null, null, packer, InstallerArgs(packer), null);
+                var saveAs = Version().IsMatch(name) ? repoName + ".exe" : null;
+                return new(saveAs ?? name, [saveAs ?? name], null, null, saveAs);
+            }
+            var files = await List(name, url, ct);
+            return new(files is null ? null : Pick(files, repoName, emulator), files, null, null, null);
+        }
+        catch (Exception e) when (e is HttpRequestException or TaskCanceledException && !ct.IsCancellationRequested)
+        {
+            return new(null, null, null, null, null);
+        }
+    }
 
     /// <summary>Si trae el <c>detect</c> de la receta (una ruta relativa a la instalación, como la busca Otteretro).</summary>
     public static bool Has(List<string> files, string detect) =>

@@ -517,11 +517,9 @@ public static partial class Recipes
             .FirstOrDefault(a => a is not null);
         if (file is null) return (null, ApiError.Of("recipes.noRelease", ("repo", repo)), null);
         var name = repo.Split('/')[1];
-        List<string>? files = null;
-        if (releases.FirstOrDefault(r => r.Assets.Contains(file))?.Urls?.GetValueOrDefault(file) is { } asset)
-            try { files = await AssetFiles.List(file, asset, ct); }
-            catch (Exception e) when (e is HttpRequestException or TaskCanceledException && !ct.IsCancellationRequested) { } // no se pudo saber: queda el supuesto
-        var exe = files is null ? null : AssetFiles.Pick(files, name);
+        var got = releases.FirstOrDefault(r => r.Assets.Contains(file))?.Urls?.GetValueOrDefault(file) is { } asset
+            ? await AssetFiles.Resolve(file, asset, name, true, ct) : new(null, null, null, null, null);
+        var (exe, files) = (got.Exe, got.Files);
         var updates = new JsonObject { ["source"] = source, ["repo"] = repo };
         if (host is not null) updates["host"] = host;
         var recipe = new JsonObject
@@ -530,11 +528,13 @@ public static partial class Recipes
             ["name"] = name,
             ["kind"] = "emulator",
             ["folder"] = "",
-            ["detect"] = exe ?? (files is not null ? "" : file.EndsWith(".exe", StringComparison.OrdinalIgnoreCase) ? file : name + ".exe"),
+            ["detect"] = exe ?? (files is not null ? "" : name + ".exe"),
             ["consoles"] = new JsonArray(),
             ["updates"] = updates,
             ["asset"] = AssetPattern(file),
         };
+        if (got.Installer is { } args) recipe["installer"] = new JsonArray([.. args.Select(a => JsonValue.Create(a))]);
+        if (got.SaveAs is { } saveAs) recipe["saveAs"] = saveAs;
         return (recipe.ToJsonString(Indented).ReplaceLineEndings("\n") + "\n", null, files is not null && exe is null ? AssetFiles.Exes(files) : null);
     }
 }

@@ -143,25 +143,25 @@ public static class PortRecipes
         var newId = NewId(db, d.Project);
         var (win, lin) = (Pick(windows), Pick(linux));
         var name = d.Repo.Split('/')[1];
-        List<string>? files = null;
-        if (win is not null && urls?.GetValueOrDefault(win) is { } url)
-            try { files = await AssetFiles.List(win, url, ct); }
-            catch (Exception e) when (e is HttpRequestException or TaskCanceledException && !ct.IsCancellationRequested) { } // no se pudo saber: queda el supuesto
-        var exe = files is null ? null : AssetFiles.Pick(files, name);
-        var detect = exe ?? (win is not null && win.EndsWith(".exe", StringComparison.OrdinalIgnoreCase) ? win : name + ".exe");
-        if (await Recipes.Save(db, newId, Build(d, newId, win, lin, detect).ToJsonString(), true, null, checkRelease: false) is { } error) return error;
+        var got = win is not null && urls?.GetValueOrDefault(win) is { } url ? await AssetFiles.Resolve(win, url, name, false, ct) : new(null, null, null, null, null);
+        var recipe = Build(d, newId, win, lin, got.Exe ?? name + ".exe"); // sin uno claro, el supuesto: el nombre del repo
+        if (got.Installer is { } args) recipe["installer"] = new JsonArray([.. args.Select(a => JsonValue.Create(a))]);
+        if (got.SaveAs is { } saveAs) recipe["saveAs"] = saveAs;
+        if (await Recipes.Save(db, newId, recipe.ToJsonString(), true, null, checkRelease: false) is { } error) return error;
         if (windows.Count > 0 && win is null || linux.Count > 0 && lin is null)
             Notice(db, newId, "pickFile", d, [.. windows.Concat(linux)]);
-        if (files is not null && exe is null && AssetFiles.Exes(files) is var exes)
+        if (got.Files is { } files && got.Exe is null && AssetFiles.Exes(files) is var exes)
             Notice(db, newId, exes.Count > 0 ? "pickExe" : "noExe", d, exes);
+        if (got.Packer is { } packer)
+            Notice(db, newId, got.Installer is null ? "installer" : "installerDetect", d, [], packer);
         return null;
     }
 
-    static void Notice(Database db, string recipe, string reason, Data d, List<string> files)
+    static void Notice(Database db, string recipe, string reason, Data d, List<string> files, string? pattern = null)
     {
         var notice = new JsonObject
         {
-            ["recipe"] = recipe, ["reason"] = reason, ["repo"] = d.Repo, ["tag"] = d.Tag,
+            ["recipe"] = recipe, ["reason"] = reason, ["repo"] = d.Repo, ["tag"] = d.Tag, ["pattern"] = pattern,
             ["files"] = new JsonArray([.. files.Select(f => JsonValue.Create(f))]),
         };
         using var c = db.Open();

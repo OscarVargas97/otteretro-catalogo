@@ -526,7 +526,9 @@
         "candidate": "Possible fork of {recipe}: {repo}.",
         "forkFailed": "Could not create the recipe for fork {repo}: it is discarded.",
         "linux": "{recipe}: adds the Linux file {file}, unpublished.",
-        "detectMissing": "{recipe}: the file of release {tag} lacks {pattern}. Shown on its card."
+        "detectMissing": "{recipe}: the file of release {tag} lacks {pattern}. Shown on its card.",
+        "installer": "{recipe}: the file of release {tag} is an installer ({pattern}). It stays on its card.",
+        "installerArgs": "{recipe}: the file of release {tag} is an installer ({pattern}). It stays on its card."
       },
       "best": {
         "searching": "Claude is looking for the best emulator for {game} on {consoles, plural, one {# console} other {# consoles}}",
@@ -1385,6 +1387,9 @@
       "pickExe": "Pick the executable: the file of release {tag} has several and none is clear ({files}).",
       "noExe": "The file of release {tag} has no .exe: pick another file or flag the recipe.",
       "detectMissing": "The file of release {tag} lacks {pattern}. The .exe files it has: {files}.",
+      "installer": "The file of release {tag} is an installer ({pattern}) with no known arguments to install silently: write them in «installer» or pick another file.",
+      "installerDetect": "The file of release {tag} is an installer ({pattern}): it already has its arguments. Check that the executable is the one it installs.",
+      "installerArgs": "The file of release {tag} is an installer ({pattern}). Arguments for «installer»: {files}.",
       "proposed": "Suggested pattern: {pattern}",
       "dismiss": "Dismiss the notice"
     },
