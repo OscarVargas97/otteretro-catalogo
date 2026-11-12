@@ -182,3 +182,90 @@ test("Ajustes tiene claves, consolas, tareas y general", async () => {
   await expect(page.getByRole("tab", { name: en.settings.general })).toBeVisible();
   await page.getByRole("button", { name: es.languageName }).click();
 });
+
+test("Revisar es una bandeja: A, R y S con el teclado, Deshacer y «Aprobar las N» por tipo (#164)", async () => {
+  const { DatabaseSync } = await import("node:sqlite");
+  let db = new DatabaseSync(join(dataDir("data"), "catalogo", "catalogo.db"));
+  db.exec("INSERT INTO game (id, saga_id, name_es, year) VALUES (503, NULL, 'Sword of Mana', 2003)");
+  db.close();
+  const own = join(dataDir("data"), "data", "otteretro.db");
+  db = new DatabaseSync(own);
+  const now = new Date().toISOString();
+  for (const [id, game] of [[9001, 500], [9002, 502], [9003, 503]])
+    db.exec(`INSERT INTO review_item (id, kind, entity, entity_id, data, created_at) VALUES (${id}, 'pending_approval', 'game', ${game},
+      '{"prompt":"traducir-descripcion","result":{"text":"Texto ${id}"}}', '${now}')`);
+  db.close();
+  const status = () => {
+    const d = new DatabaseSync(own);
+    const rows = d.prepare("SELECT id, status FROM review_item WHERE id >= 9001 ORDER BY id").all() as { id: number; status: string }[];
+    d.close();
+    return rows.map((r) => r.status);
+  };
+  const t = es.review;
+
+  await page.goto(`${base()}/review/`);
+  const rows = page.getByRole("list", { name: t.list }).getByRole("button");
+  const detail = page.getByRole("region", { name: t.detail }).getByRole("heading", { level: 2 });
+  await expect(rows).toHaveCount(3);
+  await expect(detail).toHaveText("Secret of Mana");
+  await page.keyboard.press("s");
+  await expect(detail).toHaveText("Legend of Mana");
+  await page.keyboard.press("ArrowUp");
+  await expect(detail).toHaveText("Secret of Mana");
+  await page.keyboard.press("ArrowDown");
+
+  // Aprobar con A pasa al siguiente; Deshacer lo trae de vuelta sin haber tocado el catálogo.
+  await page.keyboard.press("a");
+  await expect(page.getByRole("status").filter({ hasText: "Aprobado: Legend of Mana." })).toBeVisible();
+  await expect(rows).toHaveCount(2);
+  await expect(detail).toHaveText("Sword of Mana");
+  await page.getByRole("button", { name: t.undo }).click();
+  await expect(rows).toHaveCount(3);
+  await expect(detail).toHaveText("Legend of Mana");
+  expect(status()).toEqual(["open", "open", "open"]);
+
+  // R rechaza; al hacer lo siguiente, lo anterior se manda.
+  await page.keyboard.press("r");
+  await expect(rows).toHaveCount(2);
+  await page.getByRole("group", { name: t.filterType }).getByRole("button", { name: /^Descripción en español/ }).click();
+  await page.getByRole("button", { name: t.approveType.replace("{count}", "2").replace("{type}", t.prompt["traducir-descripcion"]) }).click();
+  await expect(page.getByRole("heading", { name: t.emptyTitle })).toBeVisible();
+  await expect.poll(status).toEqual(["open", "rejected", "open"]);
+
+  // Al salir de la pantalla también se manda lo que esperaba.
+  await page.getByRole("link", { name: es.nav.history }).click();
+  await expect(page.locator(".top h1")).toHaveText(es.nav.history);
+  await expect.poll(status).toEqual(["approved", "rejected", "approved"]);
+});
+
+test("el Historial de cambios agrupa por noche y tarea, y deja deshacer y corregir con nota (#164)", async () => {
+  const { DatabaseSync } = await import("node:sqlite");
+  const file = join(dataDir("data"), "catalogo", "catalogo.db");
+  const db = new DatabaseSync(file);
+  const saga = (db.prepare("SELECT id FROM saga WHERE name = 'Saga de Mana'").get() as { id: number }).id;
+  const now = new Date().toISOString();
+  for (const [id, name] of [[9101, "Mana I"], [9102, "Mana II"]])
+    db.exec(`INSERT INTO learning (id, kind, content, created_at, task_id) VALUES (${id}, 'rule',
+      '{"prompt":"depurar-sagas","change":{"kind":"rename","reason":"Motivo ${id}","sagaId":${saga},"name":"${name}"},"before":{"saga":${saga},"claude":null}}', '${now}', 77)`);
+  db.close();
+  const t = es.review;
+
+  await page.goto(`${base()}/review/history/`);
+  const group = page.locator("section.panel", { has: page.getByText(t.task.replace("{id}", "77")) });
+  const changes = group.locator(".change-row");
+  await expect(changes).toHaveCount(2);
+  // El porqué se ve al pulsar el cambio.
+  await expect(changes.nth(0).getByText("Motivo 9102")).toBeHidden();
+  await changes.nth(0).getByText(/Mana II/).click();
+  await expect(changes.nth(0).getByText("Motivo 9102")).toBeVisible();
+
+  await changes.nth(0).getByRole("button", { name: t.undo }).click();
+  await expect(changes.nth(0).getByText(t.undone, { exact: true })).toBeVisible();
+
+  await changes.nth(1).getByRole("button", { name: t.correct }).click();
+  await changes.nth(1).getByLabel(t.correct).fill("Mana no lleva número");
+  await changes.nth(1).getByRole("button", { name: t.send }).click();
+  await expect(changes.nth(1).getByText(t.undone, { exact: true })).toBeVisible();
+  await changes.nth(1).getByText(/Mana I/).first().click();
+  await expect(changes.nth(1).getByText(t.rule.replace("{text}", "Mana no lleva número"))).toBeVisible();
+});

@@ -3,6 +3,7 @@
 import { QueryClient, QueryClientProvider, useQuery, useQueryClient } from "@tanstack/react-query";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { Suspense, useEffect, useLayoutEffect, useSyncExternalStore, type ReactNode } from "react";
 import { request } from "@/lib/client";
 import { prefetchLink } from "@/lib/queries";
@@ -20,6 +21,7 @@ const TITLES = {
   "/saga": "saga",
   "/game": "game",
   "/review": "review",
+  "/review/history": "history",
   "/emulators": "emulators",
   "/settings": "settings",
 } as const;
@@ -83,7 +85,8 @@ function Content({ children }: { children: ReactNode }) {
       <Sidebar />
       <main className="app-main">
         {/* En Saga y Juego el título es el del héroe; la barra lleva el camino (#169). */}
-        <TopBar title={title ? t(`nav.${title}`) : "Otteretro Catálogo"} crumbs={path === "/saga" || path === "/game" ? path : undefined} />
+        <TopBar title={title ? t(`nav.${title}`) : "Otteretro Catálogo"} crumbs={path === "/saga" || path === "/game" ? path : undefined}
+          action={path === "/review" ? <Link className="ot-btn ot-btn-ghost" href="/review/history/">{t("nav.history")}</Link> : undefined} />
         <UpdateNotice />
         {/* El marco va primero (#105); la pantalla, cuando se sabe que hay carpeta de datos (sin ella sus consultas fallan). */}
         {state.data?.configured && children}
