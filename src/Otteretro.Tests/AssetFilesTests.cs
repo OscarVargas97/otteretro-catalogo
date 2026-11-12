@@ -15,7 +15,7 @@ public class AssetFilesTests : IDisposable
     public AssetFilesTests() => Recipes.Http = new HttpClient(server);
     public void Dispose() => Recipes.Http = realHttp;
 
-    /// <summary>Sirve archivos con Range (o enteros, sin <see cref="Ranges"/>) y cuenta los bytes que manda.</summary>
+    /// <summary>Sirve archivos con Range (o enteros, sin <see cref="Ranges"/>) y cuenta los bytes que manda. Un rango del final da 501, como GitHub.</summary>
     sealed class Server : HttpMessageHandler
     {
         public readonly Dictionary<string, byte[]> Files = [];
@@ -25,8 +25,8 @@ public class AssetFilesTests : IDisposable
         {
             if (!Files.TryGetValue(request.RequestUri!.AbsoluteUri, out var file)) return Task.FromResult(new HttpResponseMessage(HttpStatusCode.NotFound));
             if (!Ranges || request.Headers.Range?.Ranges.Single() is not { } r) { Sent += file.Length; return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent(file) }); }
-            var from = r.From ?? Math.Max(0, file.Length - r.To!.Value);
-            var to = r.From is null ? file.Length - 1 : Math.Min(r.To!.Value, file.Length - 1);
+            if (r.From is not { } from) return Task.FromResult(new HttpResponseMessage(HttpStatusCode.NotImplemented)); // como el CDN de GitHub con bytes=-N
+            var to = Math.Min(r.To!.Value, file.Length - 1);
             var part = file[(int)from..(int)(to + 1)];
             Sent += part.Length;
             var content = new ByteArrayContent(part);

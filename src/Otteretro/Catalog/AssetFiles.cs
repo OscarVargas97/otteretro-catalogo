@@ -32,7 +32,9 @@ public static partial class AssetFiles
     {
         if (name.EndsWith(".exe", StringComparison.OrdinalIgnoreCase)) return [saveAs ?? name];
         if (!name.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) return null;
-        if (await Get(url, null, Tail, ct) is not { } got) return null;
+        // El tamaño primero: el CDN de GitHub no acepta un rango del final (bytes=-N, 501).
+        if (await Get(url, 0, 1, ct) is not { } got) return null;
+        if (got.Bytes.Length < got.Size && await Get(url, Math.Max(0, got.Size - Tail), Math.Min(Tail, got.Size), ct) is { } end) got = end;
         var (tail, start, size) = got;
 
         async Task<byte[]?> At(long offset, long length)
@@ -72,13 +74,13 @@ public static partial class AssetFiles
     }
 
     /// <summary>
-    /// Un pedido Range (<paramref name="from"/> null: los últimos <paramref name="length"/> bytes). Devuelve los bytes, desde dónde
-    /// empiezan y el tamaño del archivo. Un servidor que responde entero: si no es grande, sirve igual; si lo es, null.
+    /// Un pedido Range. Devuelve los bytes, desde dónde empiezan y el tamaño del archivo. Un servidor que responde entero: si no es
+    /// grande, sirve igual; si lo es, null.
     /// </summary>
-    static async Task<(byte[] Bytes, long Start, long Size)?> Get(string url, long? from, long length, CancellationToken ct)
+    static async Task<(byte[] Bytes, long Start, long Size)?> Get(string url, long from, long length, CancellationToken ct)
     {
         using var request = new HttpRequestMessage(HttpMethod.Get, url);
-        request.Headers.Range = from is { } f ? new RangeHeaderValue(f, f + length - 1) : new RangeHeaderValue(null, length);
+        request.Headers.Range = new RangeHeaderValue(from, from + length - 1);
         using var response = await Recipes.Http.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, ct);
         if (response.StatusCode == HttpStatusCode.RequestedRangeNotSatisfiable) return null;
         if (!response.IsSuccessStatusCode) throw new HttpRequestException($"{url}: {(int)response.StatusCode}", null, response.StatusCode);
