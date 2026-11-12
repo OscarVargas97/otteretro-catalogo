@@ -11,5 +11,13 @@
     "source": "github",
     "repo": "undecuple/project-helghast"
   },
-  "asset": "^Project-Helghast-setup\\.exe$"
+  "asset": "^Project-Helghast-setup\\.exe$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }

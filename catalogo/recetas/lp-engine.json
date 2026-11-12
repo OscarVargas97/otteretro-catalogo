@@ -5,12 +5,13 @@
   "folder": "Nintendo DS",
   "game": "LovePlus",
   "port": "https://github.com/gage-marshall/lp-engine",
-  "detect": "LovePlus+-0.1.0-windows-x64.exe",
+  "detect": "lp-engine.exe",
   "experimental": true,
   "updates": {
     "source": "github",
     "repo": "gage-marshall/lp-engine"
   },
   "asset": "^LovePlus\\+-[0-9.]+-windows-x64\\.exe$",
-  "assetLinux": "^LovePlus\\+-[0-9.]+-x86_64\\.AppImage$"
+  "assetLinux": "^LovePlus\\+-[0-9.]+-x86_64\\.AppImage$",
+  "saveAs": "lp-engine.exe"
 }

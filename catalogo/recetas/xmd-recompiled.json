@@ -11,5 +11,13 @@
     "source": "github",
     "repo": "florinp93/xmd-recompiled"
   },
-  "asset": "^xmd_installer\\.exe$"
+  "asset": "^xmd_installer\\.exe$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }

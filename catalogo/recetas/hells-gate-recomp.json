@@ -11,5 +11,13 @@
     "source": "github",
     "repo": "florinp93/hells-gate-recomp"
   },
-  "asset": "^DantesInfernoInstaller\\.exe$"
+  "asset": "^DantesInfernoInstaller\\.exe$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }

@@ -11,5 +11,13 @@
     "source": "github",
     "repo": "Yokimitsuro/khdays-port"
   },
-  "asset": "^KH358-2-Days-Port-Setup-[0-9.]+\\.exe$"
+  "asset": "^KH358-2-Days-Port-Setup-[0-9.]+\\.exe$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }

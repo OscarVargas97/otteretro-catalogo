@@ -5,12 +5,13 @@
   "folder": "PC",
   "game": "Cave Story",
   "port": "https://github.com/doukutsu-rs/doukutsu-rs",
-  "detect": "doukutsu-rs_windows_1.0.0.x86_64.exe",
+  "detect": "doukutsu-rs.exe",
   "experimental": true,
   "updates": {
     "source": "github",
     "repo": "doukutsu-rs/doukutsu-rs"
   },
   "asset": "^doukutsu-rs_windows_[0-9.]+\\.x86_64\\.exe$",
-  "assetLinux": "^doukutsu-rs_linux_[0-9.]+\\.x86_64\\.elf$"
+  "assetLinux": "^doukutsu-rs_linux_[0-9.]+\\.x86_64\\.elf$",
+  "saveAs": "doukutsu-rs.exe"
 }

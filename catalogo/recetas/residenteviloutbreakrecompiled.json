@@ -11,5 +11,13 @@
     "source": "github",
     "repo": "RaccoonRecomp/ResidentEvilOutbreakRecompiled"
   },
-  "asset": "^ResidentEvilOutbreakRecompiled-[0-9.]+-Setup\\.exe$"
+  "asset": "^ResidentEvilOutbreakRecompiled-[0-9.]+-Setup\\.exe$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }

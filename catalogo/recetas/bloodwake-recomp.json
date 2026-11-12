@@ -11,5 +11,13 @@
     "source": "github",
     "repo": "minimalice92/bloodwake-recomp"
   },
-  "asset": "^BloodWakeRecomp-Setup-[0-9.]+\\.exe$"
+  "asset": "^BloodWakeRecomp-Setup-[0-9.]+\\.exe$",
+  "installer": [
+    "/VERYSILENT",
+    "/SUPPRESSMSGBOXES",
+    "/NORESTART",
+    "/SP-",
+    "/NOICONS",
+    "/DIR={dir}"
+  ]
 }
