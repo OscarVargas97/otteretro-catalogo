@@ -204,12 +204,21 @@ public static partial class EmulatorCheck
         using (var c = db.Open())
             if (c.ExecuteScalar<long>("SELECT count(*) FROM detect_seen WHERE recipe = @Id AND tag = @Tag AND detect = @detect", new { r.Id, latest.Tag, detect }) > 0)
                 return null;
-        var files = await AssetFiles.List(file, url, ct, (string?)r.Json["saveAs"]);
+        // Un instalador: lo que deja no se sabe sin correrlo (lo comprueba Otteretro al instalar). Sin sus argumentos, a Revisar.
+        var installs = r.Json["installer"] is not null;
+        var packer = installs ? null : await AssetFiles.Packer(file, url, ct);
+        var files = installs || packer is not null ? null : await AssetFiles.List(file, url, ct, (string?)r.Json["saveAs"]);
         using (var c = db.Open())
             c.Execute("""
                 INSERT INTO detect_seen (recipe, tag, detect, checked_at) VALUES (@Id, @Tag, @detect, @now)
                 ON CONFLICT (recipe) DO UPDATE SET tag = excluded.tag, detect = excluded.detect, checked_at = excluded.checked_at
                 """, new { r.Id, latest.Tag, detect, now = DateTime.UtcNow.ToString("O") });
+        if (packer is not null)
+            return Problem(db, run, r, AssetFiles.InstallerArgs(packer) is null ? "installer" : "installerArgs", new()
+            {
+                ["repo"] = r.Repo, ["tag"] = latest.Tag, ["pattern"] = packer,
+                ["files"] = new JsonArray([.. AssetFiles.InstallerArgs(packer) is { } args ? [JsonValue.Create(string.Join(' ', args))] : Array.Empty<JsonNode>()]),
+            });
         if (files is null || AssetFiles.Has(files, detect)) return null;
         return Problem(db, run, r, "detectMissing", new()
         {

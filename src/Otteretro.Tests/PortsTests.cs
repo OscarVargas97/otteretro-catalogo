@@ -29,6 +29,8 @@ public class PortsTests : IAsyncDisposable
         /// <summary>Las releases de cada repo de GitHub («dueño/repo» → JSON); las que faltan, 404.</summary>
         public readonly Dictionary<string, string> Releases = [];
         public readonly List<string> Asked = [];
+        /// <summary>Los archivos de las releases (URL → bytes), enteros.</summary>
+        public readonly Dictionary<string, byte[]> Files = [];
 
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
         {
@@ -36,6 +38,7 @@ public class PortsTests : IAsyncDisposable
             if (url.Contains("/releases")) Asked.Add(url);
             if (Releases.FirstOrDefault(r => url.Contains($"api.github.com/repos/{r.Key}/releases")).Value is { } release)
                 return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(release, Encoding.UTF8) });
+            if (Files.TryGetValue(url, out var file)) return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent(file) });
             if (url.Contains("codeload.github.com")) return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent(Tar(yaml)) });
             string? body = url switch
             {
@@ -194,7 +197,9 @@ public class PortsTests : IAsyncDisposable
     [Fact]
     public async Task PortsWithAReleaseGetTheirRecipeWithAFilePerSystem()
     {
-        net.Releases["Zelda64Recomp/Zelda64Recomp"] = Release("v1.2.0", "Zelda64Recompiled-1.2.0-Windows.zip", "Zelda64Recompiled-1.2.0-Linux.tar.gz");
+        // otteretro-catalogo#179: el de Windows es un instalador de Inno Setup.
+        net.Releases["Zelda64Recomp/Zelda64Recomp"] = Release("v1.2.0", "Zelda64Recompiled-Setup-1.2.0.exe", "Zelda64Recompiled-1.2.0-Linux.tar.gz");
+        net.Files["https://dl/Zelda64Recompiled-Setup-1.2.0.exe"] = [.. new byte[1000], .. "Inno Setup Setup Data"u8];
         net.Releases["a/prime-recomp"] = Release("v0.3", "prime-0.3-win64.zip", "prime-0.3-win32.zip", "prime-0.3-win64-debug.zip");
         net.Releases["b/nb-recomp"] = Release("v1", "nb-source.tar.gz");
         net.Releases["HarbourMasters/2ship2harkinian"] = Release("v2", "2ship-win64.zip");
@@ -204,7 +209,12 @@ public class PortsTests : IAsyncDisposable
         await Done(Ports.Enqueue(f.Db));
         Assert.DoesNotContain(net.Asked, u => u.Contains("2ship2harkinian")); // ya tiene receta
         var zelda = System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "zelda64recomp")!)!;
-        Assert.Equal(@"^Zelda64Recompiled-[0-9.]+-Windows\.zip$", (string)zelda["asset"]!);
+        Assert.Equal(@"^Zelda64Recompiled-Setup-[0-9.]+\.exe$", (string)zelda["asset"]!);
+        Assert.Equal("/DIR={dir}", (string)zelda["installer"]!.AsArray()[^1]!); // instala sin preguntar
+        Assert.Equal("Zelda64Recomp.exe", (string)zelda["detect"]!); // lo que deja no se sabe: el supuesto, con el aviso
+        var installer = Assert.Single(EmulatorReview.Notices(f.Db));
+        Assert.Equal(("zelda64recomp", "installerDetect", "inno"), (installer.Recipe, installer.Reason, installer.Pattern));
+        Assert.True(EmulatorReview.Dismiss(f.Db, installer.Id));
         Assert.Equal(@"^Zelda64Recompiled-[0-9.]+-Linux\.tar\.gz$", (string)zelda["assetLinux"]!);
         var recipe = System.Text.Json.Nodes.JsonNode.Parse(Recipes.Get(f.Db, "prime-recomp")!)!;
         Assert.Equal(("port", "GameCube", "Metroid Prime", true, "a/prime-recomp", "https://github.com/a/prime-recomp"),

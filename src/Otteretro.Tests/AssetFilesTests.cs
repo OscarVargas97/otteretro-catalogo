@@ -99,4 +99,62 @@ public class AssetFilesTests : IDisposable
         Assert.Equal(0, server.Sent);
         Assert.Null(await List("roto.zip", new byte[100]));
     }
+
+    /// <summary>otteretro-catalogo#179: un caso de docs/reglas-empaquetado.md por línea, con nombres sacados de releases reales.</summary>
+    [Theory]
+    [InlineData("TotK-Setup.exe|totk-pc-recomp.exe", "totk-pc-recomp", "totk-pc-recomp.exe")] // instalador con otro nombre al lado
+    [InlineData("Astral Chain-Setup.exe", "astral-chain-pc-recomp", null)] // solo el instalador: no hay juego que elegir
+    [InlineData("azahar.exe|azahar-room.exe", "azahar", "azahar.exe")] // servidor de salas
+    [InlineData("openMERC.exe|openMerc-ded.exe", "openmerc", "openMERC.exe")] // servidor dedicado
+    [InlineData("eden.exe|eden-cli.exe", "eden", "eden.exe")] // de consola
+    [InlineData("KameoRePowered.exe|KameoBugReporter.exe|KameoCrashDialog.exe|KameoShaderEditor.exe", "x", "KameoRePowered.exe")] // ayudantes
+    [InlineData("condemned2recomp.exe|condemned2recomp_updater.exe|UnityCrashHandler64.exe", "x", "condemned2recomp.exe")]
+    [InlineData("RampageRE.exe|RampageRE-dev.exe|strikers-settings.exe|geow2-extract.exe", "x", "RampageRE.exe")]
+    [InlineData("Play RatchetPort.exe|RatchetPort.exe", "RatchetPort", "RatchetPort.exe")] // juego y lanzador: el que se llama como el repo
+    [InlineData("Play RatchetPort.exe|RatchetPort.exe", "otro", "RatchetPort.exe")] // el lanzador abre el mismo juego
+    [InlineData("Bloodborne.exe|BLauncher.exe|bin/bb-probe.exe|bin/bb-gpu-capabilities.exe", "bloodborne-pc", "Bloodborne.exe")]
+    [InlineData("x/topgear.exe|x/topgear-launcher.exe|leeme.txt", "topgear-pc", "x/topgear.exe")] // sin .exe en la raíz: las subcarpetas
+    [InlineData("kyty_launcher.exe|kyty_emulator.exe", "kytyps5-fork", "kyty_launcher.exe|emu")] // en un emulador, el lanzador es su interfaz
+    [InlineData("Alundra.exe|Alundra_Recompiled.exe", "alundra-recomp", null)] // sin uno claro: lo elige la persona
+    [InlineData("quake3e.x64.exe|quake3e.ded.x64.exe|quake3e-vulkan.x64.exe", "x", null)] // variantes: lo elige la persona
+    [InlineData("Installer.exe|payload/FFTARecomp.exe", "FFTARecomp", null)] // lo de adentro es del instalador
+    [InlineData("Jazz2.exe|Jazz2_sdl2.exe", "jazz2", "Jazz2.exe")]
+    [InlineData("KameoRePowered.exe|KameoLauncher.exe", "Kameo-RePowered", "KameoRePowered.exe")] // sin contar guiones ni mayúsculas
+    [InlineData("bin/warzone2100.exe|bin/tool.exe", "warzone2100", "bin/warzone2100.exe")] // en una subcarpeta, el del repo
+    [InlineData("bin/nx2navi_xlate.exe", "NX2navi", null)] // en una subcarpeta y con otro nombre: no se adivina
+    [InlineData("game.exe|bin/game.exe", "game", "game.exe")] // la raíz manda
+    public void PickSkipsHelpersAndPrefersTheRepoName(string files, string repo, string? exe)
+    {
+        var emulator = exe?.EndsWith("|emu") == true;
+        Assert.Equal(emulator ? null : exe, AssetFiles.Pick([.. files.Split('|')], repo, emulator));
+    }
+
+    [Theory]
+    [InlineData("Game-Setup-1.0.exe", "Inno Setup Setup Data (6.2.0)", "inno")]
+    [InlineData("Game-Installer.exe", "NullsoftInst", "nsis")]
+    [InlineData("game.exe", "7z¼¯'\u001c", "7zsfx")]
+    [InlineData("Nebula-Setup.exe", "PK\u0005\u0006", "setup")] // un instalador propio (como el de NX2navi): solo lo dice el nombre
+    [InlineData("game-1.2.exe", "nada", null)] // el juego mismo
+    public async Task PackerTellsAnInstallerByItsSignature(string name, string mark, string? packer)
+    {
+        var url = "https://dl/" + name;
+        server.Files[url] = [.. new byte[4096], .. System.Text.Encoding.Latin1.GetBytes(mark), .. new byte[4096]];
+        Assert.Equal(packer, await AssetFiles.Packer(name, url, CancellationToken.None));
+    }
+
+    [Fact]
+    public async Task ResolveAppliesTheRules()
+    {
+        server.Files["https://dl/G-Setup-1.0.exe"] = [.. "Inno Setup"u8];
+        var inno = await AssetFiles.Resolve("G-Setup-1.0.exe", "https://dl/G-Setup-1.0.exe", "g", false, CancellationToken.None);
+        Assert.Equal(("inno", "/DIR={dir}"), (inno.Packer, inno.Installer![^1]));
+        Assert.Null(inno.Exe); // lo que deja no se sabe sin correrlo
+
+        server.Files["https://dl/PandorasTower-PC-v1.2.exe"] = new byte[100];
+        var loose = await AssetFiles.Resolve("PandorasTower-PC-v1.2.exe", "https://dl/PandorasTower-PC-v1.2.exe", "pandora-tower-pc", false, CancellationToken.None);
+        Assert.Equal(("pandora-tower-pc.exe", "pandora-tower-pc.exe"), (loose.Exe, loose.SaveAs)); // la versión fuera del nombre
+
+        var zip = await AssetFiles.Resolve("x.zip", "https://dl/no-existe.zip", "x", false, CancellationToken.None);
+        Assert.Equal(new AssetFiles.Resolved(null, null, null, null, null), zip); // un 404: no se puede saber
+    }
 }
