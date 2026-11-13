@@ -15,6 +15,7 @@
     "port": { "type": "string", "description": "Port: el enlace de su fila del catálogo de ports, de la que salen su juego y su consola (otteretro-catalogo#149). Obligatorio en un port" },
     "parent": { "type": "string", "description": "Complemento: id de la receta del emulador o port al que pertenece" },
     "detect": { "type": "string", "description": "Ruta relativa que identifica la instalación (el ejecutable; en un complemento, su carpeta dentro del padre)" },
+    "run": { "type": "string", "description": "Ruta relativa del programa con que se juega, si no es detect (un port cuyo detect es su instalador, #457)" },
     "version": {
       "type": "object", "additionalProperties": false, "required": ["from"],
       "properties": {
