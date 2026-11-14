@@ -4,13 +4,14 @@
   "kind": "port",
   "folder": "Switch 2",
   "game": "The Legend of Zelda: Ocarina of Time",
-  "port": "https://github.com/NotRexed/Hookshot",
+  "port": "https://git.notrexed.dev/Hookshot/Hookshot",
   "detect": "HookshotBuilder.exe",
   "run": "data/bin/hookshot.exe",
   "experimental": true,
   "updates": {
-    "source": "github",
-    "repo": "NotRexed/Hookshot"
+    "source": "forgejo",
+    "repo": "Hookshot/Hookshot",
+    "host": "git.notrexed.dev"
   },
   "asset": "^Hookshot-v[0-9.]+-Windows-x64\\.zip$",
   "assetLinux": "^Hookshot-v[0-9.]+-x86_64\\.AppImage$"
