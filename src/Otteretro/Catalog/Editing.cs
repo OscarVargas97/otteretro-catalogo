@@ -178,6 +178,7 @@ public static class Editing
     static void Remove(SqliteConnection c, SqliteTransaction t, long gameId, long? newId) => c.Execute("""
         DELETE FROM field_value WHERE entity = 'game' AND entity_id = @gameId;
         DELETE FROM game WHERE id = @gameId;
+        UPDATE port SET game_id = @newId WHERE game_id = @gameId;
         UPDATE replaced SET new_id = @newId WHERE kind = 'game' AND new_id = @gameId;
         INSERT OR REPLACE INTO replaced (kind, old_id, new_id) VALUES ('game', @gameId, @newId);
         """, new { gameId, newId }, t);

@@ -83,6 +83,32 @@ public class EditingTests
     }
 
     [Fact]
+    public async Task MergingOrDeletingAGameTakesItsPortsAlong()
+    {
+        await using var f = new Fixture();
+        Fill(f);
+        using (var c = f.Db.Open())
+            c.Execute("""
+                INSERT INTO catalog.port (id, console, game, project, kind, status, link, source, added, game_id) VALUES
+                    (1, 'ps4', 'Final Fantasy X HD', 'FFX', 'recomp', 'playable', 'https://x/ffx', 'extra', '2026-11-01', 11),
+                    (2, 'gb', 'Tetris', 'Tetris', 'decomp', 'playable', 'https://x/tetris', 'extra', '2026-11-01', 12);
+                """);
+
+        Assert.Null(Editing.MergeGame(f.Db, 11, 10));
+        Assert.Null(Editing.DeleteGame(f.Db, 12));
+        // Su nombre ya no coincide con el juego que queda: Ports.Match no lo suelta.
+        Ports.Match(f.Db);
+
+        using (var c = f.Db.Open())
+            Assert.Equal([(1L, (long?)10L), (2L, null)], c.Query<(long, long?)>("SELECT id, game_id FROM port ORDER BY id"));
+
+        // Un port emparejado solo que quedó en un juego ya fusionado (como antes de este arreglo) sigue al que lo reemplazó.
+        using (var c = f.Db.Open()) c.Execute("UPDATE port SET game_id = 11 WHERE id = 1");
+        Ports.Match(f.Db);
+        using (var c = f.Db.Open()) Assert.Equal(10, c.ExecuteScalar<long>("SELECT game_id FROM port WHERE id = 1"));
+    }
+
+    [Fact]
     public async Task ANewSagaGetsTheNextIdAndItsNameIsManual()
     {
         await using var f = new Fixture();
