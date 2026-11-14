@@ -10,7 +10,7 @@
   "license": "MPL-2.0",
   "portable": [{ "type": "file", "path": "portable.ini", "system": "windows" }],
   "config": ["config.ini", "qt.ini"],
-  "perGame": { "config": "config.ini", "apply": "section" },
+  "perGame": { "config": "config.ini", "apply": "section", "args": ["{rom}"] },
   "updates": { "source": "github", "repo": "mgba-emu/mgba" },
   "asset": "^mGBA-[0-9.]+-win64\\.7z$"
 }
