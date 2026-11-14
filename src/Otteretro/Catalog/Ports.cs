@@ -327,8 +327,8 @@ public static partial class Ports
 
     /// <summary>
     /// El cruce (paso 2): cada port sin juego elegido a mano va con el juego de su consola que tiene su ID de IGDB o, si no, su mismo
-    /// nombre (normalizado como los códigos). Solo si hay uno: con dos candidatos queda sin juego. Lo elegido a mano que apunta a un
-    /// juego fusionado sigue al que lo reemplazó.
+    /// nombre (normalizado como los códigos). Solo si hay uno; si no, conserva el juego que ya tenía. Un port que apunta a un juego
+    /// fusionado sigue al que lo reemplazó (#205).
     /// </summary>
     public static (int Total, int Matched) Match(Database db)
     {
@@ -350,16 +350,20 @@ public static partial class Ports
         foreach (var p in c.Query<(long Id, string Console, string Game, long? IgdbId, long? GameId, bool Manual)>(
                      "SELECT id, console, game, igdb_id, game_id, manual FROM port", transaction: t).ToList())
         {
-            long? game;
             var manual = p.Manual;
+            // Un juego fusionado sigue al que lo reemplazó (`replaced`): el nombre del port puede ya no coincidir con el que queda.
+            var followed = p.GameId;
+            for (var hops = 0; followed is { } g && !games.Contains(g) && hops < 10; hops++) followed = replaced.GetValueOrDefault(g);
+            if (followed is { } f && !games.Contains(f)) followed = null;
+            long? game;
             if (p.Manual)
             {
-                game = p.GameId;
-                for (var hops = 0; game is { } g && !games.Contains(g) && hops < 10; hops++) game = replaced.GetValueOrDefault(g);
-                if (game is not { } found || !games.Contains(found)) (game, manual) = (null, false);
+                game = followed;
+                if (game is null) manual = false;
             }
             else game = p.IgdbId is { } i && byIgdb.TryGetValue(i, out var byId) ? byId
-                : byName.TryGetValue((p.Console, GameCodes.Normalize(p.Game)), out var set) && set.Count == 1 ? set.First() : null;
+                : byName.TryGetValue((p.Console, GameCodes.Normalize(p.Game)), out var set) && set.Count == 1 ? set.First()
+                : followed;
             if (game != p.GameId || manual != p.Manual)
                 c.Execute("UPDATE port SET game_id = @game, manual = @manual WHERE id = @Id", new { game, manual, p.Id }, t);
         }

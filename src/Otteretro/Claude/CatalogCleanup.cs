@@ -299,7 +299,8 @@ public static partial class CatalogCleanup
             if (hasProgress && keepHasProgress) continue; // los dos tienen seguimiento: no se pierde ninguno
             var fields = c.Query<(string, string?, string, bool)>(
                 "SELECT field, value, source, manual FROM field_value WHERE entity = 'game' AND entity_id = @id", new { id }, t).ToList();
-            c.Execute("UPDATE version SET game_id = @keep WHERE game_id = @id", new { keep, id }, t);
+            // shortcut: deshacer no devuelve los ports; los emparejados por nombre vuelven solos con Ports.Match, los elegidos a mano no.
+            c.Execute("UPDATE version SET game_id = @keep WHERE game_id = @id; UPDATE port SET game_id = @keep WHERE game_id = @id", new { keep, id }, t);
             if (hasProgress) c.Execute("UPDATE progress SET game_id = @keep WHERE game_id = @id", new { keep, id }, t);
             c.Execute("DELETE FROM field_value WHERE entity = 'game' AND entity_id = @id; DELETE FROM game WHERE id = @id", new { id }, t);
             // Se publica: la app pasa lo de cada persona al juego que queda (#3).
