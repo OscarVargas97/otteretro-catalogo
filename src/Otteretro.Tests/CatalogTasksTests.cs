@@ -22,8 +22,8 @@ public class CatalogTasksTests : IAsyncDisposable
     public void TheyAreListedInTheNightOrder()
     {
         var list = CatalogTasks.List(f.Db);
-        Assert.Equal(["igdb", "codes", "portSearch", "ports", "emulators", "emulatorsBest", "cleanup", "iconic", "routes", "best", "translate", "images"], list.Select(t => t.Id));
-        Assert.Equal(8, list.Count(t => t.Model is not null)); // con Claude
+        Assert.Equal(["igdb", "codes", "portSearch", "ports", "emulators", "gameFile", "emulatorsBest", "cleanup", "iconic", "routes", "best", "translate", "images"], list.Select(t => t.Id));
+        Assert.Equal(9, list.Count(t => t.Model is not null)); // con Claude
         Assert.All(list, t => Assert.True(t.Auto));
         Assert.Equal(7, list[0].Days);
     }
@@ -55,7 +55,7 @@ public class CatalogTasksTests : IAsyncDisposable
 
         Assert.NotNull(CatalogTasks.Nightly(f.Db));
 
-        Assert.Equal(["igdb.refresh", GameCodes.Kind, PortSearch.Kind, Ports.Kind, EmulatorCheck.Kind, CatalogCleanup.Kind, "iconico", "mejor-version", "sgdb.images"],
+        Assert.Equal(["igdb.refresh", GameCodes.Kind, PortSearch.Kind, Ports.Kind, EmulatorCheck.Kind, GameFileCheck.Kind, CatalogCleanup.Kind, "iconico", "mejor-version", "sgdb.images"],
             Queued().Select(q => q.Kind == SagaAnalysis.Kind ? (SagaAnalysis.IsStep(q.Data, SagaAnalysis.Iconic) ? "iconico" : "mejor-version") : q.Kind));
         var list = CatalogTasks.List(f.Db);
         Assert.False(list.Single(t => t.Id == "routes").Auto);
