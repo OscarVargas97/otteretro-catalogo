@@ -2640,6 +2640,22 @@
           "year": 2004,
           "igdbId": 243243,
           "criteria": []
+        },
+        {
+          "id": 96971,
+          "platform": "ps3",
+          "kind": "original",
+          "year": 2011,
+          "igdbId": 21724,
+          "criteria": []
+        },
+        {
+          "id": 96972,
+          "platform": "x360",
+          "kind": "original",
+          "year": 2011,
+          "igdbId": 21724,
+          "criteria": []
         }
       ],
       "images": {
@@ -2660,6 +2676,20 @@
           "source": "recompendium",
           "added": "2026-11-05",
           "emulator": "PCSX2"
+        },
+        {
+          "id": 1113,
+          "platform": "x360",
+          "project": "SF3TSOEReborn",
+          "kind": "recomp",
+          "toolchain": "ReXGlue",
+          "status": "experimental",
+          "fullyPlayable": false,
+          "abandoned": false,
+          "link": "https://github.com/updeshxp/SF3TSOEReborn",
+          "source": "recompendium",
+          "added": "2026-11-05",
+          "emulator": "Xenia Canary"
         }
       ]
     },
@@ -3353,90 +3383,6 @@
       }
     },
     {
-      "id": 40503,
-      "nameEs": "Street Fighter III: 3rd Strike Online Edition",
-      "originalName": "Street Fighter III: 3rd Strike Online Edition",
-      "year": 2011,
-      "igdbId": 21724,
-      "popularity": 16,
-      "iconic": false,
-      "fields": [
-        {
-          "field": "best_version",
-          "value": "96971",
-          "source": "script",
-          "manual": false
-        },
-        {
-          "field": "name_es",
-          "value": "Street Fighter III: 3rd Strike Online Edition",
-          "source": "igdb",
-          "manual": false
-        },
-        {
-          "field": "original_name",
-          "value": "Street Fighter III: 3rd Strike Online Edition",
-          "source": "igdb",
-          "manual": false
-        },
-        {
-          "field": "summary",
-          "value": "The PlayStation Network and Xbox Live Arcade port of Street Fighter III: 3rd Strike. Developed by Iron Galaxy Studios, this version features enhanced visuals, an improved training mode, character-specific combo trials, rollback netcode, and more!",
-          "source": "igdb",
-          "manual": false
-        },
-        {
-          "field": "summary_es",
-          "value": "Versión para PlayStation Network y Xbox Live Arcade de Street Fighter III: 3rd Strike. Desarrollada por Iron Galaxy Studios, esta versión incluye gráficos mejorados, un modo de entrenamiento optimizado, pruebas de combos específicas para cada personaje, netcode de rollback y mucho más.",
-          "source": "claude",
-          "manual": false
-        },
-        {
-          "field": "year",
-          "value": "2011",
-          "source": "igdb",
-          "manual": false
-        }
-      ],
-      "versions": [
-        {
-          "id": 96971,
-          "platform": "ps3",
-          "kind": "original",
-          "year": 2011,
-          "igdbId": 21724,
-          "criteria": []
-        },
-        {
-          "id": 96972,
-          "platform": "x360",
-          "kind": "original",
-          "year": 2011,
-          "igdbId": 21724,
-          "criteria": []
-        }
-      ],
-      "images": {
-        "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1w59.jpg"
-      },
-      "ports": [
-        {
-          "id": 1113,
-          "platform": "x360",
-          "project": "SF3TSOEReborn",
-          "kind": "recomp",
-          "toolchain": "ReXGlue",
-          "status": "experimental",
-          "fullyPlayable": false,
-          "abandoned": false,
-          "link": "https://github.com/updeshxp/SF3TSOEReborn",
-          "source": "recompendium",
-          "added": "2026-11-05",
-          "emulator": "Xenia Canary"
-        }
-      ]
-    },
-    {
       "id": 41630,
       "nameEs": "Street Fighter V",
       "originalName": "Street Fighter V",
@@ -3994,7 +3940,106 @@
   ],
   "routes": [
     {
-      "id": 193,
+      "id": 4021,
+      "kind": "story",
+      "rationale": "Cronología aproximada: Street Fighter, la trilogía Alpha, SF II, IV, V, III y 6. Basada en mi conocimiento, sin fuentes verificadas; los spin-offs, EX y crossovers quedan fuera.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 19847,
+          "reason": "Origen de Ryu y Ken; el torneo inicial."
+        },
+        {
+          "position": 2,
+          "gameId": 6921,
+          "recommendedVersionId": 65407,
+          "reason": "Alpha transcurre antes de SF II; la versión de PS1 es la clásica."
+        },
+        {
+          "position": 3,
+          "gameId": 821,
+          "recommendedVersionId": 64865,
+          "reason": "Continúa Alpha y suma personajes; versión de PS1."
+        },
+        {
+          "position": 4,
+          "gameId": 2420,
+          "recommendedVersionId": 65446,
+          "reason": "Cierra la trilogía Alpha; versión de PS1."
+        },
+        {
+          "position": 5,
+          "gameId": 911,
+          "reason": "El torneo de Shadaloo; se juega mejor en su versión Super Turbo (siguiente paso)."
+        },
+        {
+          "position": 6,
+          "gameId": 1897,
+          "recommendedVersionId": 21665,
+          "reason": "Versión definitiva de SF II; la de Switch es la edición actual."
+        },
+        {
+          "position": 7,
+          "gameId": 39516,
+          "reason": "Ocurre entre SF II y SF III; hay varias ediciones (Super/Ultra), elige la más completa de tu plataforma."
+        },
+        {
+          "position": 8,
+          "gameId": 41630,
+          "recommendedVersionId": 104575,
+          "reason": "Se sitúa entre IV y III; la última edición incluye todo el contenido."
+        },
+        {
+          "position": 9,
+          "gameId": 35016,
+          "recommendedVersionId": 85371,
+          "reason": "Historia de Alex y Yun; versión de PS2 de 3rd Strike."
+        },
+        {
+          "position": 10,
+          "gameId": 43800,
+          "recommendedVersionId": 103575,
+          "reason": "Es el capítulo más reciente; versión de PC."
+        }
+      ]
+    },
+    {
+      "id": 4022,
+      "kind": "community",
+      "rationale": "Recomendación habitual: empezar por los mejores juegos competitivos y terminar en SF6, que es el más accesible hoy. Dejo fuera EX, Puzzle Fighter y los juegos de película. Sin fuentes verificadas.",
+      "sources": "[]",
+      "approved": true,
+      "steps": [
+        {
+          "position": 1,
+          "gameId": 1897,
+          "recommendedVersionId": 21665,
+          "reason": "Es el SF II más equilibrado y jugable; la versión de Switch es la actual."
+        },
+        {
+          "position": 2,
+          "gameId": 2420,
+          "recommendedVersionId": 65446,
+          "reason": "Alpha 3 es la mejor de la trilogía Alpha y tiene mucho contenido."
+        },
+        {
+          "position": 3,
+          "gameId": 35016,
+          "recommendedVersionId": 85371,
+          "reason": "3rd Strike es un clásico del género por su sistema de parry."
+        },
+        {
+          "position": 4,
+          "gameId": 43800,
+          "recommendedVersionId": 103575,
+          "reason": "Es el más moderno, con tutoriales y modos para principiantes; versión de PC."
+        }
+      ]
+    },
+    {
+      "id": 4035,
       "kind": "release",
       "rationale": "Orden de lanzamiento, por año.",
       "sources": "[]",
@@ -4116,138 +4161,39 @@
           "reason": "2008"
         },
         {
-          "position": 25,
+          "position": 24,
           "gameId": 40352,
           "reason": "2011"
         },
         {
-          "position": 26,
-          "gameId": 40503,
-          "reason": "2011"
-        },
-        {
-          "position": 27,
+          "position": 25,
           "gameId": 39636,
           "reason": "2012"
         },
         {
-          "position": 28,
+          "position": 26,
           "gameId": 40448,
           "reason": "2012"
         },
         {
-          "position": 30,
+          "position": 27,
           "gameId": 40354,
           "reason": "2014"
         },
         {
-          "position": 31,
+          "position": 28,
           "gameId": 41630,
           "reason": "2016"
         },
         {
-          "position": 34,
+          "position": 29,
+          "gameId": 50401,
+          "reason": "2017"
+        },
+        {
+          "position": 30,
           "gameId": 43800,
           "reason": "2023"
-        }
-      ]
-    },
-    {
-      "id": 4021,
-      "kind": "story",
-      "rationale": "Cronología aproximada: Street Fighter, la trilogía Alpha, SF II, IV, V, III y 6. Basada en mi conocimiento, sin fuentes verificadas; los spin-offs, EX y crossovers quedan fuera.",
-      "sources": "[]",
-      "approved": true,
-      "steps": [
-        {
-          "position": 1,
-          "gameId": 19847,
-          "reason": "Origen de Ryu y Ken; el torneo inicial."
-        },
-        {
-          "position": 2,
-          "gameId": 6921,
-          "recommendedVersionId": 65407,
-          "reason": "Alpha transcurre antes de SF II; la versión de PS1 es la clásica."
-        },
-        {
-          "position": 3,
-          "gameId": 821,
-          "recommendedVersionId": 64865,
-          "reason": "Continúa Alpha y suma personajes; versión de PS1."
-        },
-        {
-          "position": 4,
-          "gameId": 2420,
-          "recommendedVersionId": 65446,
-          "reason": "Cierra la trilogía Alpha; versión de PS1."
-        },
-        {
-          "position": 5,
-          "gameId": 911,
-          "reason": "El torneo de Shadaloo; se juega mejor en su versión Super Turbo (siguiente paso)."
-        },
-        {
-          "position": 6,
-          "gameId": 1897,
-          "recommendedVersionId": 21665,
-          "reason": "Versión definitiva de SF II; la de Switch es la edición actual."
-        },
-        {
-          "position": 7,
-          "gameId": 39516,
-          "reason": "Ocurre entre SF II y SF III; hay varias ediciones (Super/Ultra), elige la más completa de tu plataforma."
-        },
-        {
-          "position": 8,
-          "gameId": 41630,
-          "recommendedVersionId": 104575,
-          "reason": "Se sitúa entre IV y III; la última edición incluye todo el contenido."
-        },
-        {
-          "position": 9,
-          "gameId": 35016,
-          "recommendedVersionId": 85371,
-          "reason": "Historia de Alex y Yun; versión de PS2 de 3rd Strike."
-        },
-        {
-          "position": 10,
-          "gameId": 43800,
-          "recommendedVersionId": 103575,
-          "reason": "Es el capítulo más reciente; versión de PC."
-        }
-      ]
-    },
-    {
-      "id": 4022,
-      "kind": "community",
-      "rationale": "Recomendación habitual: empezar por los mejores juegos competitivos y terminar en SF6, que es el más accesible hoy. Dejo fuera EX, Puzzle Fighter y los juegos de película. Sin fuentes verificadas.",
-      "sources": "[]",
-      "approved": true,
-      "steps": [
-        {
-          "position": 1,
-          "gameId": 1897,
-          "recommendedVersionId": 21665,
-          "reason": "Es el SF II más equilibrado y jugable; la versión de Switch es la actual."
-        },
-        {
-          "position": 2,
-          "gameId": 2420,
-          "recommendedVersionId": 65446,
-          "reason": "Alpha 3 es la mejor de la trilogía Alpha y tiene mucho contenido."
-        },
-        {
-          "position": 3,
-          "gameId": 35016,
-          "recommendedVersionId": 85371,
-          "reason": "3rd Strike es un clásico del género por su sistema de parry."
-        },
-        {
-          "position": 4,
-          "gameId": 43800,
-          "recommendedVersionId": 103575,
-          "reason": "Es el más moderno, con tutoriales y modos para principiantes; versión de PC."
         }
       ]
     }

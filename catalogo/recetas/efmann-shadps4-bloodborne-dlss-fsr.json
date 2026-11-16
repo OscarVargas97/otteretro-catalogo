@@ -1,0 +1,45 @@
+{
+  "id": "efmann-shadps4-bloodborne-dlss-fsr",
+  "name": "shadPS4 (eFMann)",
+  "kind": "emulator",
+  "folder": "PlayStation 4",
+  "detect": "shadPS4.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps4"
+  ],
+  "license": "GPL-2.0-only",
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config.json",
+    "user/custom_configs"
+  ],
+  "perGame": {
+    "config": "user/custom_configs/{serial}.json",
+    "apply": "file",
+    "mods": [
+      "{game}-mods"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "eFMann/shadPS4-Bloodborne-DLSS-FSR"
+  },
+  "asset": "^shadPS4-Bloodborne-FSR4-addon-win64-v[0-9.]+\\.zip$",
+  "experimental": true,
+  "forkOf": "shadps4",
+  "recommendedFor": [
+    {
+      "game": "Bloodborne",
+      "gameId": 41614,
+      "source": "https://github.com/eFMann/shadPS4-Bloodborne-DLSS-FSR"
+    }
+  ]
+}

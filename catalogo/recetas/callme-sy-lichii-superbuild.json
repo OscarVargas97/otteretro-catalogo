@@ -1,0 +1,45 @@
+{
+  "id": "callme-sy-lichii-superbuild",
+  "name": "Lichii (callme-sy)",
+  "kind": "emulator",
+  "folder": "Switch 2",
+  "detect": "lichii.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "switch2"
+  ],
+  "experimental": true,
+  "devOnly": true,
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config"
+  ],
+  "content": [
+    "user/nand"
+  ],
+  "perGame": {
+    "args": [
+      "-g",
+      "{rom}"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "callme-sy/Lichii-Superbuild"
+  },
+  "asset": "^Lichii-v56-win64-pgo\\.zip$",
+  "formats": [
+    "nsp",
+    "xci",
+    "nca",
+    "nro"
+  ],
+  "forkOf": "lichii"
+}
