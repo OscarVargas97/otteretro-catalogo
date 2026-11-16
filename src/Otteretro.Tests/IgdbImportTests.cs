@@ -210,14 +210,10 @@ public class IgdbImportTests
         Assert.Contains($"\"offset\":{IgdbImport.PopularLimit}", c.ExecuteScalar<string>("SELECT data FROM task"));
     }
 
-    /// <summary>
-    /// F2.13: una consola de IGDB se habilita y carga sus juegos; F2.14: la actualización trae solo lo cambiado desde la
-    /// última vez, de las consolas habilitadas, y se encola sola pasados los días.
-    /// </summary>
-    [Fact]
-    public async Task ConsolesAreAddedFromIgdbAndTheCatalogStaysUpToDate()
+    /// <summary>Dreamcast llega de IGDB, se habilita y carga sus juegos (F2.13).</summary>
+    static async Task<Fixture> WithDreamcast()
     {
-        await using var f = new Fixture(IgdbKeys);
+        var f = new Fixture(IgdbKeys);
         var igdb = new Igdb(new ApiClient(f.Db, IgdbImport.Handler), f.Credentials, IgdbImport.Handler);
         var dreamcast = Assert.Single(await Consoles.Available(f.Db, igdb, CancellationToken.None));
         Assert.Equal(("Sega", (string?)null), (dreamcast.Company, dreamcast.ConsoleId));
@@ -228,12 +224,24 @@ public class IgdbImportTests
         Assert.Equal(0, Consoles.Page(f.Db).Consoles.Single(k => k.Id == "dc").Loading); // en la cola: «Cargando 0 %» (#109)
         var loaded = await f.Run(load);
         Assert.True(loaded.Status == "done", System.Text.Json.JsonSerializer.Serialize(loaded.Detail));
-        var page = Consoles.Page(f.Db);
-        var dc = page.Consoles.Single(k => k.Id == "dc");
+        return f;
+    }
+
+    [Fact]
+    public async Task AConsoleFromIgdbIsEnabledAndLoadsItsGames()
+    {
+        await using var f = await WithDreamcast();
+        var dc = Consoles.Page(f.Db).Consoles.Single(k => k.Id == "dc");
         Assert.Equal((1, true), (dc.Games, dc.Enabled));
         Assert.NotNull(dc.RefreshedAt);
         Assert.Null(dc.Loading);
+    }
 
+    /// <summary>F2.14: la actualización trae solo lo cambiado, de las consolas habilitadas, y se encola sola pasados los días.</summary>
+    [Fact]
+    public async Task TheRefreshBringsWhatChangedAndIsQueuedWhenDue()
+    {
+        await using var f = await WithDreamcast();
         using (var c = f.Db.Open()) c.Execute("UPDATE console SET refreshed_at = '2026-10-01T00:00:00Z'");
         var refresh = await f.Run(IgdbImport.EnqueueRefresh(f.Db));
         Assert.Equal("done", refresh.Status);
@@ -248,7 +256,12 @@ public class IgdbImportTests
         var due = IgdbImport.RefreshIfDue(f.Db, DateTime.UtcNow.AddDays(8));
         Assert.NotNull(due);
         Assert.Equal(due, IgdbImport.RefreshIfDue(f.Db, DateTime.UtcNow.AddDays(8))); // no encola otra
+    }
 
+    [Fact]
+    public async Task AConsoleIsDisabledAndTheRefreshDaysAreValidated()
+    {
+        await using var f = await WithDreamcast();
         Assert.True(Consoles.SetEnabled(f.Db, "dc", false));
         using (var c = f.Db.Open()) Assert.DoesNotContain(23L, IgdbImport.Platforms(c).Keys);
         Assert.Equal("catalog.badRefreshDays", Consoles.SaveRefreshDays(f.Db, 0)?.Code);
