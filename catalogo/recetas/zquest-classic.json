@@ -1,0 +1,16 @@
+{
+  "id": "zquest-classic",
+  "name": "ZQuest Classic",
+  "kind": "port",
+  "folder": "NES",
+  "game": "The Legend of Zelda",
+  "port": "https://zquestclassic.com/releases/",
+  "detect": "ZQuestClassic.exe",
+  "experimental": true,
+  "updates": {
+    "source": "github",
+    "repo": "ZQuestClassic/ZQuestClassic"
+  },
+  "asset": "^[0-9.]+-windows-x64\\.zip$",
+  "assetLinux": "^[0-9.]+-linux\\.tar\\.gz$"
+}

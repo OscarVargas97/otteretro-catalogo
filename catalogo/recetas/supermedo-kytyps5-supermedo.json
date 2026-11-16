@@ -1,0 +1,22 @@
+{
+  "id": "supermedo-kytyps5-supermedo",
+  "name": "KytyPS5 (Supermedo)",
+  "kind": "emulator",
+  "folder": "PlayStation 5",
+  "detect": "kyty_launcher.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ps5"
+  ],
+  "license": "GPL-2.0-only",
+  "experimental": true,
+  "devOnly": true,
+  "updates": {
+    "source": "github",
+    "repo": "Supermedo/KytyPS5-SuperMedo"
+  },
+  "asset": "^KytyPS5-SuperMedo-windows-x64\\.zip$",
+  "forkOf": "kytyps5"
+}

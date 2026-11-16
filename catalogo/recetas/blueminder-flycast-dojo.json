@@ -1,0 +1,68 @@
+{
+  "id": "blueminder-flycast-dojo",
+  "name": "Flycast (blueminder)",
+  "kind": "emulator",
+  "folder": "Dreamcast",
+  "detect": "flycast.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "dc"
+  ],
+  "license": "GPL-2.0-only",
+  "config": [
+    "emu.cfg"
+  ],
+  "perGame": {
+    "config": "emu.cfg",
+    "apply": "section",
+    "mods": [
+      "data/textures/{gameId}"
+    ]
+  },
+  "options": [
+    {
+      "name": "resolution",
+      "file": "emu.cfg",
+      "format": "cfg",
+      "key": "rend.Resolution"
+    },
+    {
+      "name": "aspectRatio",
+      "file": "emu.cfg",
+      "format": "cfg",
+      "key": "rend.WideScreen"
+    },
+    {
+      "name": "vsync",
+      "file": "emu.cfg",
+      "format": "cfg",
+      "key": "rend.vsync"
+    },
+    {
+      "name": "filter",
+      "file": "emu.cfg",
+      "format": "cfg",
+      "key": "rend.TextureFiltering"
+    }
+  ],
+  "updates": {
+    "source": "github",
+    "repo": "blueminder/flycast-dojo"
+  },
+  "asset": "^flycast-dojo-windows\\.zip$",
+  "experimental": true,
+  "forkOf": "flycast",
+  "recommendedFor": [
+    {
+      "game": "The Rumble Fish 2",
+      "gameId": 23296,
+      "source": "https://github.com/blueminder/flycast-dojo"
+    },
+    {
+      "game": "Akatsuki Blitzkampf Ausf. Achse",
+      "source": "https://github.com/blueminder/flycast-dojo"
+    }
+  ]
+}

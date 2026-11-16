@@ -1,0 +1,45 @@
+{
+  "id": "manaclenodisconnect-lichii-enhanced",
+  "name": "Lichii (Manaclenodisconnect)",
+  "kind": "emulator",
+  "folder": "Switch 2",
+  "detect": "lichii.exe",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "switch2"
+  ],
+  "experimental": true,
+  "devOnly": true,
+  "portable": [
+    {
+      "type": "folder",
+      "path": "user"
+    }
+  ],
+  "config": [
+    "user/config"
+  ],
+  "content": [
+    "user/nand"
+  ],
+  "perGame": {
+    "args": [
+      "-g",
+      "{rom}"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "Manaclenodisconnect/Lichii-Enhanced"
+  },
+  "asset": "^Lichii-Enhanced-v[0-9.]+-windows-x64\\.zip$",
+  "formats": [
+    "nsp",
+    "xci",
+    "nca",
+    "nro"
+  ],
+  "forkOf": "lichii"
+}
