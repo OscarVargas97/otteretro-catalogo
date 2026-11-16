@@ -155,6 +155,55 @@ public class CatalogVersionsTests
         Assert.True((await versions.List()).Single().Current); // en el último commit de main, la release más nueva está en uso
     }
 
+    /// <summary>#215: las recetas también se fusionan (por su JSON, no por el texto) y dos ports nuevos con el mismo id quedan los dos.</summary>
+    [Fact]
+    public async Task RecipesMergeAndANewPortWithTheSameIdInBothSidesGetsAnotherId()
+    {
+        await using var f = new Fixture();
+        using (var c = f.Db.Open())
+            c.Execute("""
+                INSERT INTO catalog.saga (id, name) VALUES (33, 'Final Fantasy');
+                INSERT INTO catalog.game (id, saga_id, name_es, year) VALUES (10, 33, 'Final Fantasy X', 2001);
+                INSERT INTO catalog.version (id, game_id, platform, kind) VALUES (20, 10, 'ps2', 'original');
+                INSERT INTO catalog.recipe (id, kind, json) VALUES
+                    ('uno', 'emulator', '{
+                      "id": "uno", "name": "Uno",
+                      "kind": "emulator", "folder": "Uno"
+                    }'),
+                    ('dos', 'emulator', '{"id":"dos","name":"Dos","kind":"emulator","folder":"Dos"}');
+                """);
+        var baseFolder = f.Tmp["base"];
+        Published.Write(f.Db, baseFolder);
+        GitHubPublisher.SetBase(f.Db, "base1");
+
+        // En main: la receta «uno» cambia y entra un port con el id 1.
+        using (var c = f.Db.Open())
+            c.Execute("INSERT INTO catalog.port (id, console, game, project, kind, status, link, source, added, game_id) VALUES (1, 'ps2', 'FFX', 'Main', 'decomp', 'complete', 'https://main', 'extra', '2026-11-01', 10)");
+        var release = f.Tmp["version"];
+        Published.Write(f.Db, release);
+        Edit(Path.Combine(release, "recetas", "uno.json"), n => n["consoles"] = new JsonArray("ps2"));
+        var gzFile = f.Tmp["catalogo.db.gz"];
+        var manifest = Published.Compile(release, gzFile, validate: false);
+
+        // Acá, sin publicar: otro port con el mismo id 1 y un cambio a la receta «dos».
+        using (var c = f.Db.Open())
+            c.Execute("""
+                UPDATE catalog.port SET project = 'Local', link = 'https://local' WHERE id = 1;
+                UPDATE catalog.recipe SET json = '{"id":"dos","name":"Dos local","kind":"emulator","folder":"Dos"}' WHERE id = 'dos';
+                """);
+
+        var github = new FakeGitHub(Zip(baseFolder), File.ReadAllBytes(gzFile), System.Text.Json.JsonSerializer.Serialize(manifest, new System.Text.Json.JsonSerializerOptions(System.Text.Json.JsonSerializerDefaults.Web)));
+        var versions = new CatalogVersions(f.Db, new GitHubPublisher(f.Db, "secreto", github) { Work = f.Tmp["trabajo"] });
+        var result = await versions.Apply(Tag);
+
+        Assert.Equal(0, result.Conflicts);
+        using var db = f.Db.Open();
+        Assert.Equal(["https://local", "https://main"], db.Query<string>("SELECT link FROM port ORDER BY link"));
+        Assert.Equal("https://main", db.ExecuteScalar<string>("SELECT link FROM port WHERE id = 1"));
+        Assert.Equal("ps2", db.ExecuteScalar<string>("SELECT console_id FROM recipe_console WHERE recipe_id = 'uno'"));
+        Assert.Equal("Dos local", db.ExecuteScalar<string>("SELECT json_extract(json, '$.name') FROM recipe WHERE id = 'dos'"));
+    }
+
     [Fact]
     public async Task CatchUpIsQuietWithoutBaseOrOnTheLastCommitOfMain()
     {
