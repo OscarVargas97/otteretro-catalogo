@@ -14,6 +14,8 @@
     "game": { "type": "string", "description": "Port: el juego que cubre (#193). Lo escribe el catálogo desde la fila de su port (otteretro-catalogo#149)" },
     "port": { "type": "string", "description": "Port: el enlace de su fila del catálogo de ports, de la que salen su juego y su consola (otteretro-catalogo#149). Obligatorio en un port" },
     "parent": { "type": "string", "description": "Complemento: id de la receta del emulador o port al que pertenece" },
+    "host": { "type": "string", "description": "Un core: id de la receta con cuyo programa se juega (melonDS DS con RetroArch, #471). {install} en perGame.args es la carpeta del core" },
+    "systemFolder": { "type": "string", "description": "Dónde copiar, relativo al programa, los archivos de sistema de sus consolas que subiste (solo los que faltan)" },
     "detect": { "type": "string", "description": "Ruta relativa que identifica la instalación (el ejecutable; en un complemento, su carpeta dentro del padre)" },
     "run": { "type": "string", "description": "Ruta relativa del programa con que se juega, si no es detect (un port cuyo detect es su instalador, #457)" },
     "version": {
@@ -86,7 +88,7 @@
       "type": "object", "additionalProperties": false, "required": ["source"],
       "description": "Dónde publica sus versiones, para avisar de las nuevas (decisión 294)",
       "properties": {
-        "source": { "enum": ["github", "forgejo", "gitlab", "dolphin"], "description": "github, forgejo y gitlab: sus releases (las prereleases son de desarrollo); dolphin: su servidor de actualizaciones" },
+        "source": { "enum": ["github", "forgejo", "gitlab", "dolphin", "libretro"], "description": "github, forgejo y gitlab: sus releases (las prereleases son de desarrollo); dolphin: su servidor de actualizaciones; libretro: los tags de GitHub de repo, con el archivo de Windows de su buildbot (otteretro#471)" },
         "repo": { "type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$" },
         "host": { "type": "string", "description": "Con forgejo o gitlab: el servidor (codeberg.org, gitlab.com)" },
         "dev": { "type": "boolean", "description": "También avisa de las versiones de desarrollo (como mucho una vez por semana)" },
@@ -114,7 +116,7 @@
         "config": { "type": "string", "description": "Su configuración: el archivo por juego o, con section, el archivo compartido donde va su sección" },
         "apply": { "enum": ["file", "section", "swap", "argument"], "description": "file: archivo por juego; section: solo su sección de un archivo compartido; swap: sin config por juego, se cambia la global al lanzar y se restaura al cerrar; argument: un archivo completo que se pasa con args" },
         "mods": { "type": "array", "items": { "type": "string" }, "description": "Carpetas (o archivos) de mods de ese juego: se enlazan a las del perfil activo" },
-        "args": { "type": "array", "items": { "type": "string" }, "description": "Argumentos al lanzar el juego con su perfil ({rom}: la ROM); también abren el emulador en el juego (#276)" },
+        "args": { "type": "array", "items": { "type": "string" }, "description": "Argumentos al lanzar el juego con su perfil ({rom}: la ROM; {install}: la carpeta de la instalación); también abren el emulador en el juego (#276)" },
         "idCase": { "enum": ["upper", "lower"], "description": "{titleId} en mayúsculas (Eden) o en minúsculas (Ryubing), como lo escribe el emulador" },
         "full": { "type": "boolean", "description": "La configuración del juego es una copia completa de la global (Ryubing), no solo lo que difiere: se crea desde la global" },
         "files": { "type": "array", "items": { "type": "string" }, "description": "Otros archivos del juego que van con el perfil (mods activos, UPD y DLC elegidos)" },
