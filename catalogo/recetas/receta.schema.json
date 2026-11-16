@@ -103,7 +103,8 @@
         "deliver": { "enum": ["arg", "copy", "none", "manual"], "description": "arg: en args; copy: copiado a copyTo; none: no lo necesita; manual: lo pide el port" },
         "args": { "type": "array", "items": { "type": "string" }, "description": "Con arg: los argumentos, con {rom} (el archivo) y {romDir} (su carpeta)" },
         "copyTo": { "type": "string", "description": "Con copy: dónde, relativo a la instalación. Nunca pisa lo que ya está" },
-        "formats": { "type": "array", "items": { "type": "string" }, "description": "Extensiones que acepta, sin punto" }
+        "formats": { "type": "array", "items": { "type": "string" }, "description": "Extensiones que acepta, sin punto" },
+        "extracted": { "type": "boolean", "description": "Switch: pide el juego extraído (exefs/ y romfs/, base + última actualización) en la carpeta del juego; Otteretro lo extrae de los NSP con hactool antes de jugar (#220)" }
       }
     },
     "perGame": {
