@@ -41,7 +41,7 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
     const string Prefix = "catalogo-", DbAsset = "catalogo.db.gz", ManifestAsset = "catalogo.db.gz.json", HistoryAsset = "cambios.json";
 
     /// <summary>Lo publicado (<see cref="InitialCatalog"/>.Shared sin `claude_fingerprint`, que no se publica), padres antes que hijos.</summary>
-    static readonly string[] Tables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced", "version_code", "port"];
+    static readonly string[] Tables = ["console", "console_platform", "saga", "game", "version", "version_criterion", "field_value", "route", "route_step", "image", "replaced", "version_code", "port", "recipe"];
     /// <summary>Columnas que lo publicado rellena con otra cosa: `port.game` es el nombre de la fuente acá y el del juego en lo compilado.</summary>
     static readonly HashSet<string> Ignored = ["port.game"];
 
@@ -230,6 +230,15 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
                         else { Update(c, t, table, columns, key, theirs, Enumerable.Range(key.Count, columns.Count - key.Count).Where(i => theirs[i] != ours[i])); updated++; }
                         continue;
                     }
+                    // #215: un port nuevo en los dos lados con el mismo id y otro enlace son dos ports. El local nunca se publicó: toma un id libre.
+                    if (table == "port" && before is null && theirs is not null && ours is not null && theirs[columns.IndexOf("link")] != ours[columns.IndexOf("link")])
+                    {
+                        var free = 1 + Math.Max(c.ExecuteScalar<long>("SELECT COALESCE(MAX(id), 0) FROM catalog.port", transaction: t), c.ExecuteScalar<long>("SELECT COALESCE(MAX(id), 0) FROM r.port", transaction: t));
+                        c.Execute($"UPDATE catalog.port SET id = @free WHERE {where}", new { free, k0 = Value(ours[0]) }, t);
+                        Insert(c, t, table, columns, theirs);
+                        inserted++;
+                        continue;
+                    }
                     var rowKey = new JsonObject(key.Select((k, i) => KeyValuePair.Create(k, JsonNode.Parse((theirs ?? ours ?? before)![i])))).ToJsonString();
                     if (theirs is null || ours is null)
                     {
@@ -248,6 +257,12 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
                     if (take.Count > 0) { Update(c, t, table, columns, key, theirs, take); updated++; }
                 }
             }
+            // `recipe_console` sale del JSON de cada receta: se rehace con lo fusionado.
+            c.Execute("""
+                DELETE FROM catalog.recipe_console;
+                INSERT INTO catalog.recipe_console (recipe_id, console_id)
+                    SELECT DISTINCT r.id, j.value FROM catalog.recipe r, json_each(r.json, '$.consoles') j WHERE json_valid(r.json);
+                """, transaction: t);
             foreach (var x in conflicts)
                 c.Execute("INSERT INTO catalog_conflict (version, table_name, row_key, field, base, local, remote) VALUES (@Version, @Table, @Key, @Field, @Base, @Local, @Remote)", x, t);
             t.Commit();
@@ -273,6 +288,9 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
         {
             var row = new string[columns.Count];
             for (var i = 0; i < row.Length; i++) row[i] = JsonSerializer.Serialize(reader.IsDBNull(i) ? null : reader.GetValue(i));
+            // #215: la receta se compara por su JSON, no por el texto: lo publicado la guarda compacta y la base local, como el archivo.
+            if (table == "recipe" && columns.IndexOf("json") is >= 0 and var j && !reader.IsDBNull(j))
+                row[j] = JsonSerializer.Serialize(JsonNode.Parse(reader.GetString(j))!.ToJsonString());
             rows[string.Join('\u001f', row[..keys])] = row;
         }
         return rows;
@@ -294,11 +312,13 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
         var n => n.GetDouble(),
     };
 
-    static void Insert(SqliteConnection c, SqliteTransaction t, string table, List<string> columns, string[] row)
+    static void Insert(SqliteConnection c, SqliteTransaction t, string table, List<string> columns, string[] row, bool remoteAttached = true)
     {
         var p = new DynamicParameters();
         for (var i = 0; i < columns.Count; i++) p.Add($"c{i}", Value(row[i]));
-        c.Execute($"INSERT INTO catalog.{table} ({string.Join(", ", columns)}) VALUES ({string.Join(", ", columns.Select((_, i) => $"@c{i}"))})", p, t);
+        // `port.game` no se fusiona (es otra cosa en lo publicado), pero no puede quedar vacío: un port que llega de la versión lleva su nombre de ahí.
+        var (extra, value) = table == "port" && !columns.Contains("game") ? (", game", remoteAttached ? ", COALESCE((SELECT game FROM r.port WHERE id = @c0), '')" : ", ''") : ("", "");
+        c.Execute($"INSERT INTO catalog.{table} ({string.Join(", ", columns)}{extra}) VALUES ({string.Join(", ", columns.Select((_, i) => $"@c{i}"))}{value})", p, t);
     }
 
     static void Update(SqliteConnection c, SqliteTransaction t, string table, List<string> columns, List<string> key, string[] row, IEnumerable<int> changed)
@@ -347,7 +367,7 @@ public sealed class CatalogVersions(Database db, GitHubPublisher github)
                     var columns = row.Select(k => k.Key).ToList();
                     var values = row.Select(k => k.Json).ToArray();
                     // Quitada acá y cambiada en la versión: vuelve con lo de la versión.
-                    if (c.ExecuteScalar<long>($"SELECT count(*) FROM catalog.{x.Table} WHERE {where}", p, t) == 0) Insert(c, t, x.Table, columns, values);
+                    if (c.ExecuteScalar<long>($"SELECT count(*) FROM catalog.{x.Table} WHERE {where}", p, t) == 0) Insert(c, t, x.Table, columns, values, remoteAttached: false);
                     else Update(c, t, x.Table, columns, key.Select(k => k.Key).ToList(), values, Enumerable.Range(0, columns.Count).Where(i => !key.Any(k => k.Key == columns[i])));
                 }
             }
