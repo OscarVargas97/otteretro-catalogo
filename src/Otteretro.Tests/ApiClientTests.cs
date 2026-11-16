@@ -66,7 +66,7 @@ public class ApiClientTests
     {
         using var tmp = new TempDir();
         var server = new FakeServer();
-        var api = new ApiClient(NewDb(tmp), server);
+        var api = new ApiClient(NewDb(tmp), server, paced: true);
 
         await Task.WhenAll(Enumerable.Range(0, 10).Select(i =>
             api.Send("igdb", HttpMethod.Post, "https://api.igdb.com/v4/games", $"where id = {i};", TimeSpan.FromDays(1))));

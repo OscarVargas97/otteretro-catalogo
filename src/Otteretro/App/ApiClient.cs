@@ -9,7 +9,8 @@ namespace Otteretro.App;
 /// Cliente HTTP de las fuentes de datos (F1.3): lo que ya se preguntó sale de `api_cache`, y lo que va a la red
 /// respeta el ritmo de cada fuente aunque lo pidan varias tareas a la vez.
 /// </summary>
-public sealed class ApiClient(Database db, HttpMessageHandler? handler = null)
+/// <param name="paced">Esperar el ritmo de la fuente. Por defecto, solo con la red de verdad: un falso de las pruebas no lo necesita (#218).</param>
+public sealed class ApiClient(Database db, HttpMessageHandler? handler = null, bool? paced = null)
 {
     /// <summary>Tiempo mínimo entre dos llamadas a la misma fuente. IGDB admite 4 por segundo; 260 ms deja margen.</summary>
     public static readonly Dictionary<string, TimeSpan> Spacing = new()
@@ -47,7 +48,7 @@ public sealed class ApiClient(Database db, HttpMessageHandler? handler = null)
         if (body is not null) request.Content = new StringContent(body);
         authorize?.Invoke(request);
 
-        await Limiters.GetOrAdd(source, s => new Limiter(Spacing.GetValueOrDefault(s, DefaultSpacing))).Wait(ct);
+        if (paced ?? handler is null) await Limiters.GetOrAdd(source, s => new Limiter(Spacing.GetValueOrDefault(s, DefaultSpacing))).Wait(ct);
         using var response = await http.SendAsync(request, ct);
         var text = await response.Content.ReadAsStringAsync(ct);
         if (!response.IsSuccessStatusCode)

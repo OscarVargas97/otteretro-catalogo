@@ -43,7 +43,7 @@ sealed class Fixture : IAsyncDisposable
     {
         await Queue.StartAsync(CancellationToken.None);
         TaskInfo? task = null;
-        for (var i = 0; i < 500; i++)
+        for (var i = 0; i < 3000; i++) // hasta 60 s: un runner lento no debe hacer fallar la prueba (#218)
         {
             task = Queue.List().FirstOrDefault(t => t.Id == id);
             if (task?.Status is "done" or "error") break;
