@@ -1,0 +1,20 @@
+{
+  "id": "retroarch",
+  "name": "RetroArch",
+  "kind": "emulator",
+  "folder": "RetroArch",
+  "detect": "retroarch.exe",
+  "version": {
+    "from": "date"
+  },
+  "license": "GPL-3.0-or-later",
+  "saves": [
+    "saves",
+    "states"
+  ],
+  "updates": {
+    "source": "libretro",
+    "repo": "libretro/RetroArch"
+  },
+  "asset": "^RetroArch\\.7z$"
+}

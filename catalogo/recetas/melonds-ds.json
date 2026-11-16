@@ -1,0 +1,28 @@
+{
+  "id": "melonds-ds",
+  "name": "melonDS DS (RetroArch)",
+  "kind": "emulator",
+  "folder": "Nintendo DS",
+  "detect": "cores/melondsds_libretro.dll",
+  "host": "retroarch",
+  "systemFolder": "system",
+  "version": {
+    "from": "date"
+  },
+  "consoles": [
+    "ds"
+  ],
+  "license": "GPL-3.0-only",
+  "perGame": {
+    "args": [
+      "-L",
+      "{install}/cores/melondsds_libretro.dll",
+      "{rom}"
+    ]
+  },
+  "updates": {
+    "source": "github",
+    "repo": "JesseTG/melonds-ds"
+  },
+  "asset": "^melondsds_libretro-win32-x86_64-Release\\.zip$"
+}
